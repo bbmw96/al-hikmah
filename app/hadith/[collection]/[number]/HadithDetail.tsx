@@ -7,6 +7,7 @@ import { ArabicText } from '@/components/ui/ArabicText';
 import { LanguageSelector } from '@/components/ui/LanguageSelector';
 import { cn, SUPPORTED_LANGUAGES } from '@/lib/utils';
 import type { LanguageCode } from '@/lib/utils';
+import { useLanguage } from '@/lib/i18n/context';
 import type { HadithCollection } from '@/lib/data/collections';
 import type { HadithGrade } from '@/lib/hadith-api';
 
@@ -34,6 +35,7 @@ export function HadithDetail({
   arabicText,
   grades,
 }: HadithDetailProps) {
+  const { t } = useLanguage();
   const [activeTab, setActiveTab] = useState<Tab>('meaning');
   const [language, setLanguage] = useState<LanguageCode>('en');
   const [translation, setTranslation] = useState<string | null>(null);
@@ -132,8 +134,8 @@ export function HadithDetail({
         {/* Tabs */}
         <div className="flex rounded-xl border border-forest/20 overflow-hidden flex-1" role="tablist">
           {([
-            { id: 'meaning' as Tab, label: 'English Meaning', icon: BookOpen },
-            { id: 'translation' as Tab, label: 'Translation', icon: Globe },
+            { id: 'meaning' as Tab, label: t('hadith.english'), icon: BookOpen },
+            { id: 'translation' as Tab, label: t('hadith.translation'), icon: Globe },
           ] as const).map(({ id, label, icon: Icon }) => (
             <button
               key={id}
@@ -177,15 +179,13 @@ export function HadithDetail({
         ) : loading ? (
           <div className="flex-1 flex items-center justify-center py-12">
             <Loader2 className="w-6 h-6 text-gold animate-spin" aria-hidden="true" />
-            <span className="ml-2 text-forest/60 text-sm">Loading translation...</span>
+            <span className="ml-2 text-forest/60 text-sm">{t('hadith.loading')}</span>
           </div>
         ) : notAvailable ? (
           <div className="flex-1 flex items-center justify-center py-12 text-center">
             <div>
-              <p className="text-forest/40 text-sm mb-2">
-                This translation is not yet available for {collection.shortName} in the selected language.
-              </p>
-              <p className="text-forest/30 text-xs">Try another language, or read the English meaning above.</p>
+              <p className="text-forest/40 text-sm mb-2">{t('hadith.notavail')}</p>
+              <p className="text-forest/30 text-xs">{t('hadith.tryother')}</p>
             </div>
           </div>
         ) : language === 'en' ? (

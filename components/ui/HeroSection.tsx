@@ -2,6 +2,7 @@
 
 import Link from 'next/link';
 import { motion } from 'framer-motion';
+import { useLanguage } from '@/lib/i18n/context';
 import { IslamicPattern } from '@/components/ui/IslamicPattern';
 
 const EASE = [0.25, 0.1, 0.25, 1] as const;
@@ -15,6 +16,7 @@ function fade(delay: number, y = 24) {
 }
 
 export function HeroSection() {
+  const { t } = useLanguage();
   return (
     <section className="relative bg-forest overflow-hidden min-h-[85vh] flex items-center">
       <IslamicPattern opacity={0.06} />
@@ -50,8 +52,7 @@ export function HeroSection() {
           className="text-cream/70 text-xl md:text-2xl max-w-3xl mx-auto leading-relaxed mb-10 font-light"
           {...fade(0.32)}
         >
-          A scholarly resource for the authentic Islamic tradition: hadith, supplications, the
-          stories of the prophets, and guidance on worship, presented in Arabic with translations in multiple languages.
+          {t('hero.subtitle')}
         </motion.p>
 
         <motion.div
@@ -59,10 +60,10 @@ export function HeroSection() {
           {...fade(0.44)}
         >
           <Link href="/hadith" className="btn-gold text-base px-8 py-3.5">
-            Browse Hadith Collections
+            {t('hero.cta.hadith')}
           </Link>
           <Link href="/about" className="btn-outline-light text-base px-8 py-3.5">
-            About This Resource
+            {t('hero.cta.about')}
           </Link>
         </motion.div>
 

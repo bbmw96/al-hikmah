@@ -3,8 +3,10 @@
 import { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { Menu, X, ChevronDown, BookOpen } from 'lucide-react';
+import { Menu, X, ChevronDown, BookOpen, Globe } from 'lucide-react';
 import { cn } from '@/lib/utils';
+import { useLanguage } from '@/lib/i18n/context';
+import { LANGUAGE_META, type Lang } from '@/lib/i18n/translations';
 
 interface NavItem {
   label: string;
@@ -80,6 +82,58 @@ function DropdownMenu({
           {item.label}
         </Link>
       ))}
+    </div>
+  );
+}
+
+function LangSwitcher() {
+  const { lang, setLang, t } = useLanguage();
+  const [open, setOpen] = useState(false);
+  const ref = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    function handleClick(e: MouseEvent) {
+      if (ref.current && !ref.current.contains(e.target as Node)) setOpen(false);
+    }
+    document.addEventListener('mousedown', handleClick);
+    return () => document.removeEventListener('mousedown', handleClick);
+  }, []);
+
+  return (
+    <div ref={ref} className="relative">
+      <button
+        type="button"
+        onClick={() => setOpen(o => !o)}
+        className="flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg text-cream/80 hover:text-cream hover:bg-white/10 transition-colors text-sm font-medium"
+        aria-label={t('ui.changelang')}
+        aria-expanded={open}
+      >
+        <Globe className="w-4 h-4 text-gold" aria-hidden="true" />
+        <span className="hidden sm:inline">{LANGUAGE_META[lang].nativeLabel}</span>
+        <ChevronDown className={cn('w-3 h-3 text-gold/60 transition-transform', open && 'rotate-180')} aria-hidden="true" />
+      </button>
+
+      {open && (
+        <div className="absolute top-full right-0 mt-2 min-w-[11rem] rounded-xl shadow-2xl border border-gold/20 bg-cream overflow-hidden z-50 fade-up">
+          {(Object.entries(LANGUAGE_META) as [Lang, typeof LANGUAGE_META[Lang]][]).map(([code, meta]) => (
+            <button
+              key={code}
+              type="button"
+              onClick={() => { setLang(code); setOpen(false); }}
+              className={cn(
+                'w-full flex items-center justify-between px-4 py-2.5 text-sm transition-colors',
+                code === lang
+                  ? 'bg-gold/10 text-forest font-semibold'
+                  : 'text-forest/80 hover:bg-gold/5 hover:text-forest',
+              )}
+              aria-pressed={code === lang}
+            >
+              <span>{meta.label}</span>
+              <span className="text-xs text-gold/70" dir={meta.dir} lang={code}>{meta.nativeLabel}</span>
+            </button>
+          ))}
+        </div>
+      )}
     </div>
   );
 }
@@ -197,7 +251,9 @@ export function Navbar() {
             ))}
           </ul>
 
-          {/* Mobile toggle */}
+          {/* Language switcher + mobile toggle */}
+          <div className="flex items-center gap-2">
+            <LangSwitcher />
           <button
             type="button"
             className="lg:hidden p-2 rounded-lg text-cream/80 hover:text-cream hover:bg-white/10 transition-colors"
@@ -211,7 +267,8 @@ export function Navbar() {
               <Menu className="w-6 h-6" aria-hidden="true" />
             )}
           </button>
-        </div>
+          </div>{/* end lang+toggle wrapper */}
+        </div>{/* end h-16 flex row */}
       </nav>
 
       {/* Mobile menu */}
