@@ -45,7 +45,8 @@ export default async function CollectionPage({ params, searchParams }: Props) {
     );
   }
 
-  const { hadiths, total, pages } = paginateHadiths(data, page, PAGE_SIZE);
+  const withText = { ...data, hadiths: data.hadiths.filter(h => h.text?.trim()) };
+  const { hadiths, total, pages } = paginateHadiths(withText, page, PAGE_SIZE);
 
   return (
     <>

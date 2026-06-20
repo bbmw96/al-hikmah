@@ -55,11 +55,14 @@ export async function fetchHadithList(
 /**
  * Fetches a single hadith from a collection by its number.
  * Returns both English and Arabic text simultaneously.
+ * `found` is true when at least one CDN request returned HTTP 200 —
+ * even if the text field is empty. Only false on network/4xx failure,
+ * which means the hadith number is genuinely out of range.
  */
 export async function fetchHadith(
   collection: string,
   number: number,
-): Promise<{ english: string | null; arabic: string | null; grades?: HadithGrade[] }> {
+): Promise<{ english: string | null; arabic: string | null; grades?: HadithGrade[]; found: boolean }> {
   const [engRes, araRes] = await Promise.allSettled([
     fetch(`${CDN_BASE}/editions/eng-${collection}/${number}.min.json`, {
       next: { revalidate: 3600 },
@@ -72,19 +75,22 @@ export async function fetchHadith(
   let english: string | null = null;
   let arabic: string | null = null;
   let grades: HadithGrade[] | undefined;
+  let found = false;
 
   if (engRes.status === 'fulfilled' && engRes.value.ok) {
+    found = true;
     const data: SingleHadithResponse = await engRes.value.json();
-    english = data.text ?? null;
+    english = data.text || null;
     grades = data.grades;
   }
 
   if (araRes.status === 'fulfilled' && araRes.value.ok) {
+    found = true;
     const data: SingleHadithResponse = await araRes.value.json();
-    arabic = data.text ?? null;
+    arabic = data.text || null;
   }
 
-  return { english, arabic, grades };
+  return { english, arabic, grades, found };
 }
 
 /**

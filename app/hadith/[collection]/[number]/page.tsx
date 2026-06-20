@@ -25,8 +25,8 @@ export default async function HadithPage({ params }: Props) {
   const col = getCollectionById(collection);
   if (!col || !col.available || !col.apiCollection || isNaN(hadithNumber)) notFound();
 
-  const { english, arabic, grades } = await fetchHadith(col.apiCollection, hadithNumber);
-  if (!english && !arabic) notFound();
+  const { english, arabic, grades, found } = await fetchHadith(col.apiCollection, hadithNumber);
+  if (!found) notFound();
 
   return (
     <HadithDetail
