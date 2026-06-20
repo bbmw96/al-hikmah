@@ -50,8 +50,8 @@ export function HeroSection() {
           className="text-cream/70 text-xl md:text-2xl max-w-3xl mx-auto leading-relaxed mb-10 font-light"
           {...fade(0.32)}
         >
-          A scholarly resource for the authentic Islamic tradition - hadith, supplications, the
-          stories of the prophets, and guidance on worship, presented in Arabic and seven world languages.
+          A scholarly resource for the authentic Islamic tradition: hadith, supplications, the
+          stories of the prophets, and guidance on worship, presented in Arabic with translations in multiple languages.
         </motion.p>
 
         <motion.div

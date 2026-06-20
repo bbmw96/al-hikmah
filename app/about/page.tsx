@@ -19,7 +19,7 @@ const PRINCIPLES = [
     icon: Globe,
     title: 'Multi-Language Access',
     description:
-      "Content is presented in Arabic alongside contextual - not literal - translations in English, Spanish, Mandarin, Cantonese, Japanese, and Malay, respecting the depth and nuance of each language.",
+      "Content is presented in Arabic alongside contextual translations in English, Malay, Turkish, Urdu, Bengali, and Persian, sourced from the open-access fawazahmed0 Hadith API rather than AI generation, preserving scholarly accuracy.",
   },
   {
     icon: BookOpen,
@@ -90,10 +90,10 @@ export default function AboutPage() {
             Languages
           </h2>
           <p className="text-forest/70 leading-relaxed mb-6">
-            Al-Hikmah provides contextual translations in seven languages. We use idiomatic, natural translations rather than word-for-word renderings, because Islamic texts - especially hadith - carry layers of meaning that literal translation often fails to convey. This is especially important for East Asian languages such as Japanese and Cantonese, where the grammatical structure and cultural context require a thoughtful approach.
+            Al-Hikmah provides translations sourced from the open-access fawazahmed0 Hadith API, which covers major canonical collections in multiple languages. Translations are human-scholarly renderings, not machine-generated, preserving the layers of meaning that literal word-for-word translation often fails to convey.
           </p>
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
-            {['Arabic', 'English', 'Spanish', 'Malay', 'Mandarin', 'Cantonese', 'Japanese'].map(lang => (
+            {['Arabic', 'English', 'Malay', 'Turkish', 'Urdu', 'Bengali', 'Persian'].map(lang => (
               <div key={lang} className="bg-gold/5 border border-gold/20 rounded-lg px-4 py-3 text-center">
                 <span className="text-forest font-medium text-sm">{lang}</span>
               </div>
