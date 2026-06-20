@@ -1,4 +1,4 @@
-'use client';
+﻿'use client';
 
 import Link from 'next/link';
 import { motion } from 'framer-motion';
@@ -23,7 +23,7 @@ export function HeroSection() {
           dir="rtl"
           lang="ar"
           className="arabic-lg text-gold/80 mb-6"
-          aria-label="Bismillah ir-Rahman ir-Raheem — In the name of Allah, the Most Gracious, the Most Merciful"
+          aria-label="Bismillah ir-Rahman ir-Raheem - In the name of Allah, the Most Gracious, the Most Merciful"
           {...fade(0, 16)}
         >
           بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ
@@ -50,7 +50,7 @@ export function HeroSection() {
           className="text-cream/70 text-xl md:text-2xl max-w-3xl mx-auto leading-relaxed mb-10 font-light"
           {...fade(0.32)}
         >
-          A scholarly resource for the authentic Islamic tradition — hadith, supplications, the
+          A scholarly resource for the authentic Islamic tradition - hadith, supplications, the
           stories of the prophets, and guidance on worship, presented in Arabic and seven world languages.
         </motion.p>
 
@@ -58,10 +58,10 @@ export function HeroSection() {
           className="flex flex-col sm:flex-row gap-4 justify-center"
           {...fade(0.44)}
         >
-          <Link href="/hadith" className="btn-primary text-base px-8 py-3.5">
+          <Link href="/hadith" className="btn-gold text-base px-8 py-3.5">
             Browse Hadith Collections
           </Link>
-          <Link href="/about" className="btn-outline text-base px-8 py-3.5">
+          <Link href="/about" className="btn-outline-light text-base px-8 py-3.5">
             About This Resource
           </Link>
         </motion.div>
@@ -78,7 +78,7 @@ export function HeroSection() {
             يُؤْتِي الْحِكْمَةَ مَن يَشَاءُ ۚ وَمَن يُؤْتَ الْحِكْمَةَ فَقَدْ أُوتِيَ خَيْرًا كَثِيرًا
           </p>
           <p className="text-cream/60 text-sm italic">
-            "He gives wisdom to whom He wills, and whoever has been given wisdom has certainly been given much good." — Surah al-Baqarah 2:269
+            "He gives wisdom to whom He wills, and whoever has been given wisdom has certainly been given much good." - Surah al-Baqarah 2:269
           </p>
         </motion.div>
       </div>

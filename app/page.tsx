@@ -1,4 +1,4 @@
-import Link from 'next/link';
+﻿import Link from 'next/link';
 import {
   BookOpen,
   Users,
@@ -20,7 +20,7 @@ const QUICK_ACCESS = [
     title: 'Hadith Collections',
     arabicTitle: 'الأحاديث النبوية',
     description:
-      'Browse authentic hadith from the Six Books, Nine Books, and other major collections — with Arabic originals and contextual translations.',
+      'Browse authentic hadith from the Six Books, Nine Books, and other major collections - with Arabic originals and contextual translations.',
     href: '/hadith',
     colour: 'bg-forest',
   },
@@ -29,7 +29,7 @@ const QUICK_ACCESS = [
     title: 'Prophets of Islam',
     arabicTitle: 'الأنبياء والمرسلون',
     description:
-      'Learn about all 25 prophets mentioned in the Quran — their lineage, the nations they were sent to, their miracles, and their stories.',
+      'Learn about all 25 prophets mentioned in the Quran - their lineage, the nations they were sent to, their miracles, and their stories.',
     href: '/prophets',
     colour: 'bg-midnight',
   },
@@ -38,7 +38,7 @@ const QUICK_ACCESS = [
     title: "Du'as & Supplications",
     arabicTitle: 'الأدعية والأذكار',
     description:
-      "Over 100 authenticated supplications from the Quran and Sunnah, organised by category — morning, evening, prayer, Hajj, distress, and more.",
+      "Over 100 authenticated supplications from the Quran and Sunnah, organised by category - morning, evening, prayer, Hajj, distress, and more.",
     href: '/duas',
     colour: 'bg-forest',
   },
@@ -62,10 +62,10 @@ const QUICK_ACCESS = [
   },
   {
     icon: ScrollText,
-    title: 'Seerah — Life of the Prophet',
+    title: 'Seerah - Life of the Prophet',
     arabicTitle: 'السيرة النبوية',
     description:
-      'The biography of the Prophet Muhammad ﷺ — from his birth in Makkah to the completion of the message of Islam.',
+      'The biography of the Prophet Muhammad ﷺ - from his birth in Makkah to the completion of the message of Islam.',
     href: '/seerah',
     colour: 'bg-midnight',
   },
@@ -192,7 +192,7 @@ export default function HomePage() {
             وَمَا أُوتِيتُم مِّنَ الْعِلْمِ إِلَّا قَلِيلًا
           </p>
           <p className="text-cream/60 italic text-base mb-8">
-            "And of knowledge, you have been given only a little." — Surah al-Isra' 17:85
+            "And of knowledge, you have been given only a little." - Surah al-Isra' 17:85
           </p>
           <Link href="/hadith" className="btn-gold text-base px-8 py-3.5">
             Begin Your Study

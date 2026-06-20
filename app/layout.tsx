@@ -1,4 +1,4 @@
-import type { Metadata } from 'next';
+﻿import type { Metadata } from 'next';
 import { EB_Garamond, Inter } from 'next/font/google';
 import './globals.css';
 import { Navbar } from '@/components/navigation/Navbar';
@@ -19,15 +19,15 @@ const inter = Inter({
 export const metadata: Metadata = {
   title: {
     template: '%s | Al-Hikmah',
-    default: 'Al-Hikmah — Islamic Knowledge & Hadith Resource',
+    default: 'Al-Hikmah - Islamic Knowledge & Hadith Resource',
   },
   description:
-    'A scholarly Islamic resource offering authentic hadith collections, stories of the prophets, supplications (duas), and guidance on worship — in Arabic and seven world languages.',
+    'A scholarly Islamic resource offering authentic hadith collections, stories of the prophets, supplications (duas), and guidance on worship - in Arabic and seven world languages.',
   keywords: ['Islam', 'hadith', 'quran', 'prophets', 'duas', 'hajj', 'umrah', 'Islamic knowledge'],
   openGraph: {
-    title: 'Al-Hikmah — Islamic Knowledge & Hadith Resource',
+    title: 'Al-Hikmah - Islamic Knowledge & Hadith Resource',
     description:
-      'Authentic hadith, stories of the prophets, duas, and guidance on Islamic worship — available in Arabic, English, Spanish, Mandarin, Cantonese, Japanese, and Malay.',
+      'Authentic hadith, stories of the prophets, duas, and guidance on Islamic worship - available in Arabic, English, Spanish, Mandarin, Cantonese, Japanese, and Malay.',
     type: 'website',
     locale: 'en_GB',
   },

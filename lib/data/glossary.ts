@@ -1,4 +1,4 @@
-export interface GlossaryEntry {
+﻿export interface GlossaryEntry {
   id: string;
   term: string;
   arabicTerm: string;
@@ -41,7 +41,7 @@ export const GLOSSARY: GlossaryEntry[] = [
     transliteration: 'Taw-HEED',
     category: 'theology',
     definition:
-      "The absolute monotheism of Islam: the belief that Allah is One, without partner, associate, child, or equal. Tawhid is the foundation of all Islamic belief. Scholars categorise it into three aspects: Tawhid al-Rububiyyah (Oneness in Lordship — Allah alone creates, sustains, and controls), Tawhid al-Uluhiyyah (Oneness in Worship — only Allah deserves to be worshipped), and Tawhid al-Asma wa al-Sifat (Oneness in Names and Attributes — Allah's names and attributes are unique and belong to Him alone).",
+      "The absolute monotheism of Islam: the belief that Allah is One, without partner, associate, child, or equal. Tawhid is the foundation of all Islamic belief. Scholars categorise it into three aspects: Tawhid al-Rububiyyah (Oneness in Lordship - Allah alone creates, sustains, and controls), Tawhid al-Uluhiyyah (Oneness in Worship - only Allah deserves to be worshipped), and Tawhid al-Asma wa al-Sifat (Oneness in Names and Attributes - Allah's names and attributes are unique and belong to Him alone).",
     relatedTerms: ['shirk', 'iman', 'aqeedah'],
   },
   {
@@ -51,7 +51,7 @@ export const GLOSSARY: GlossaryEntry[] = [
     transliteration: 'SHIRK',
     category: 'theology',
     definition:
-      "Associating partners with Allah in any aspect of divinity — in His Lordship, worship, or unique names and attributes. The Quran states that Allah may forgive all sins except dying in a state of shirk (4:48). Major shirk (al-shirk al-akbar) constitutes an exit from Islam. Minor shirk (al-shirk al-asghar) includes acts done to show off (riya') or swearing by other than Allah.",
+      "Associating partners with Allah in any aspect of divinity - in His Lordship, worship, or unique names and attributes. The Quran states that Allah may forgive all sins except dying in a state of shirk (4:48). Major shirk (al-shirk al-akbar) constitutes an exit from Islam. Minor shirk (al-shirk al-asghar) includes acts done to show off (riya') or swearing by other than Allah.",
     relatedTerms: ['tawhid', 'iman'],
   },
   {
@@ -61,7 +61,7 @@ export const GLOSSARY: GlossaryEntry[] = [
     transliteration: 'ee-MAAN',
     category: 'theology',
     definition:
-      "Faith. In Islamic theology, Iman comprises three dimensions: belief in the heart (tasdiq), verbal affirmation with the tongue (iqrar), and righteous actions with the limbs (amal). The six pillars of Iman are: belief in Allah, His angels, His scriptures, His messengers, the Last Day, and divine decree (qadar) — both its good and its apparent ill.",
+      "Faith. In Islamic theology, Iman comprises three dimensions: belief in the heart (tasdiq), verbal affirmation with the tongue (iqrar), and righteous actions with the limbs (amal). The six pillars of Iman are: belief in Allah, His angels, His scriptures, His messengers, the Last Day, and divine decree (qadar) - both its good and its apparent ill.",
     relatedTerms: ['tawhid', 'islam', 'ihsan'],
   },
   {
@@ -133,7 +133,7 @@ export const GLOSSARY: GlossaryEntry[] = [
     transliteration: 'wu-DOO',
     category: 'worship',
     definition:
-      'Ritual ablution using water, required before performing Salah and touching the Quran. Wudu involves washing the hands (three times), rinsing the mouth and nose, washing the face, washing the arms to the elbows, wiping over the head, wiping the ears, and washing the feet to the ankles — each performed three times except the head. The Prophet ﷺ said: "The key to Salah is purity."',
+      'Ritual ablution using water, required before performing Salah and touching the Quran. Wudu involves washing the hands (three times), rinsing the mouth and nose, washing the face, washing the arms to the elbows, wiping over the head, wiping the ears, and washing the feet to the ankles - each performed three times except the head. The Prophet ﷺ said: "The key to Salah is purity."',
     relatedTerms: ['salah', 'ghusl', 'tayammum'],
   },
   {
@@ -163,7 +163,7 @@ export const GLOSSARY: GlossaryEntry[] = [
     transliteration: 'SAWM',
     category: 'worship',
     definition:
-      'Fasting: the fourth pillar of Islam. Fasting in Ramadan is obligatory for every adult Muslim who is mentally and physically able, not travelling, and — for women — not in a state of menstruation or postpartum bleeding. The fast runs from the breaking of dawn (Fajr) until sunset (Maghrib) and requires abstention from food, drink, smoking, sexual relations, and certain other acts. Beyond Ramadan, many additional optional fasts are recommended, including the six days of Shawwal, Mondays and Thursdays, and the Day of Arafah.',
+      'Fasting: the fourth pillar of Islam. Fasting in Ramadan is obligatory for every adult Muslim who is mentally and physically able, not travelling, and - for women - not in a state of menstruation or postpartum bleeding. The fast runs from the breaking of dawn (Fajr) until sunset (Maghrib) and requires abstention from food, drink, smoking, sexual relations, and certain other acts. Beyond Ramadan, many additional optional fasts are recommended, including the six days of Shawwal, Mondays and Thursdays, and the Day of Arafah.',
     relatedTerms: ['ramadan', 'iftar', 'suhoor'],
   },
   {
@@ -173,7 +173,7 @@ export const GLOSSARY: GlossaryEntry[] = [
     transliteration: "du-'AA",
     category: 'worship',
     definition:
-      "Supplication — the act of calling upon Allah directly. The Prophet ﷺ described du'a as 'the essence of worship' (Tirmidhi). Unlike formal Salah, du'a can be made in any language, at any time, and in any physical position. The Quran commands: 'Call upon Me; I will respond to you.' (40:60). Du'a is the most direct expression of the believer's relationship with Allah.",
+      "Supplication - the act of calling upon Allah directly. The Prophet ﷺ described du'a as 'the essence of worship' (Tirmidhi). Unlike formal Salah, du'a can be made in any language, at any time, and in any physical position. The Quran commands: 'Call upon Me; I will respond to you.' (40:60). Du'a is the most direct expression of the believer's relationship with Allah.",
     relatedTerms: ['salah', 'dhikr', 'tawakkul'],
   },
   {
@@ -215,7 +215,7 @@ export const GLOSSARY: GlossaryEntry[] = [
     transliteration: 'SUN-nah',
     category: 'hadith-science',
     definition:
-      "The established practice of the Prophet Muhammad ﷺ — encompassing his words, deeds, and tacit approvals. In a theological sense, the Sunnah is the second source of Islamic legislation after the Quran. In jurisprudence, a sunnah act is one the Prophet ﷺ performed regularly and whose performance is rewarded, while its omission incurs no punishment.",
+      "The established practice of the Prophet Muhammad ﷺ - encompassing his words, deeds, and tacit approvals. In a theological sense, the Sunnah is the second source of Islamic legislation after the Quran. In jurisprudence, a sunnah act is one the Prophet ﷺ performed regularly and whose performance is rewarded, while its omission incurs no punishment.",
     relatedTerms: ['hadith', 'fiqh'],
   },
   {
@@ -225,7 +225,7 @@ export const GLOSSARY: GlossaryEntry[] = [
     transliteration: 'sa-HEEH',
     category: 'hadith-science',
     definition:
-      "Sound or authentic — the highest grade of hadith. A hadith is classified as sahih if: its chain of narrators is unbroken from the Prophet ﷺ to the collector; every narrator in the chain is upright (adl) and precise (dabit); the hadith contains no hidden defect (illah) and no contradiction with more reliable narrations (shudhudh). The two most famous sahih collections are Sahih al-Bukhari and Sahih Muslim.",
+      "Sound or authentic - the highest grade of hadith. A hadith is classified as sahih if: its chain of narrators is unbroken from the Prophet ﷺ to the collector; every narrator in the chain is upright (adl) and precise (dabit); the hadith contains no hidden defect (illah) and no contradiction with more reliable narrations (shudhudh). The two most famous sahih collections are Sahih al-Bukhari and Sahih Muslim.",
     relatedTerms: ['hasan', 'daif', 'hadith', 'isnad'],
   },
   {
@@ -235,7 +235,7 @@ export const GLOSSARY: GlossaryEntry[] = [
     transliteration: 'HA-san',
     category: 'hadith-science',
     definition:
-      "Good — the second grade of hadith authenticity, below sahih. A hasan hadith meets all the conditions of a sahih hadith except that one or more narrators has slightly weaker (though still acceptable) precision. Imam al-Tirmidhi was the first scholar to define and consistently use this grading. A hasan hadith is still acceptable as a legal and theological source.",
+      "Good - the second grade of hadith authenticity, below sahih. A hasan hadith meets all the conditions of a sahih hadith except that one or more narrators has slightly weaker (though still acceptable) precision. Imam al-Tirmidhi was the first scholar to define and consistently use this grading. A hasan hadith is still acceptable as a legal and theological source.",
     relatedTerms: ['sahih', 'daif', 'hadith'],
   },
   {
@@ -245,7 +245,7 @@ export const GLOSSARY: GlossaryEntry[] = [
     transliteration: "da-'EEF",
     category: 'hadith-science',
     definition:
-      "Weak — a hadith that fails to meet the requirements for sahih or hasan classification, usually due to a broken chain, an unreliable narrator, or a hidden defect in the text. Scholars differ on whether weak hadiths can be used for virtuous acts (fada'il al-a'mal). They cannot be used for establishing halal and haram, theological positions, or as evidence in Islamic law.",
+      "Weak - a hadith that fails to meet the requirements for sahih or hasan classification, usually due to a broken chain, an unreliable narrator, or a hidden defect in the text. Scholars differ on whether weak hadiths can be used for virtuous acts (fada'il al-a'mal). They cannot be used for establishing halal and haram, theological positions, or as evidence in Islamic law.",
     relatedTerms: ['sahih', 'hasan', 'isnad'],
   },
   {
@@ -265,7 +265,7 @@ export const GLOSSARY: GlossaryEntry[] = [
     transliteration: 'MATN',
     category: 'hadith-science',
     definition:
-      "The actual text or content of a hadith — the words, actions, or descriptions attributed to the Prophet ﷺ or a Companion. The matn is distinguished from the isnad (chain of narrators). Scholars examine the matn for internal consistency, conformity with the Quran, and absence of anomalies.",
+      "The actual text or content of a hadith - the words, actions, or descriptions attributed to the Prophet ﷺ or a Companion. The matn is distinguished from the isnad (chain of narrators). Scholars examine the matn for internal consistency, conformity with the Quran, and absence of anomalies.",
     relatedTerms: ['isnad', 'hadith'],
   },
 
@@ -339,7 +339,7 @@ export const GLOSSARY: GlossaryEntry[] = [
     transliteration: 'WAA-jib',
     category: 'jurisprudence',
     definition:
-      "Obligatory — an act whose performance is rewarded and whose omission without valid excuse incurs sin. In Hanafi jurisprudence, wajib is a category below fard (absolute obligation), where the evidence, while strong, is slightly less definitive. In the other three schools, wajib and fard are typically synonymous.",
+      "Obligatory - an act whose performance is rewarded and whose omission without valid excuse incurs sin. In Hanafi jurisprudence, wajib is a category below fard (absolute obligation), where the evidence, while strong, is slightly less definitive. In the other three schools, wajib and fard are typically synonymous.",
     relatedTerms: ['fard', 'sunnah', 'makruh', 'haram'],
   },
 
@@ -351,7 +351,7 @@ export const GLOSSARY: GlossaryEntry[] = [
     transliteration: 'na-BEE',
     category: 'prophethood',
     definition:
-      "A prophet — one who receives revelation from Allah. In Islamic theology, a nabi is distinguished from a rasul (messenger) in that a nabi conveys the existing message of a previous messenger, while a rasul brings a new scripture or law. All rasuls are nabis, but not all nabis are rasuls. The Quran mentions 25 prophets by name; Islamic tradition holds that Allah sent approximately 124,000 prophets in total.",
+      "A prophet - one who receives revelation from Allah. In Islamic theology, a nabi is distinguished from a rasul (messenger) in that a nabi conveys the existing message of a previous messenger, while a rasul brings a new scripture or law. All rasuls are nabis, but not all nabis are rasuls. The Quran mentions 25 prophets by name; Islamic tradition holds that Allah sent approximately 124,000 prophets in total.",
     relatedTerms: ['rasul', 'wahy', 'seerah'],
   },
   {
@@ -361,7 +361,7 @@ export const GLOSSARY: GlossaryEntry[] = [
     transliteration: 'ra-SOOL',
     category: 'prophethood',
     definition:
-      "A messenger of Allah — a prophet who was given a new divine scripture or law (shari'ah) to convey to a specific people or to humanity. The five greatest messengers, known as Ulul Azm (those of firm resolve), are: Nuh, Ibrahim, Musa, Isa, and Muhammad ﷺ. The seal of all prophethood is Muhammad ﷺ, after whom no new prophet or messenger will come.",
+      "A messenger of Allah - a prophet who was given a new divine scripture or law (shari'ah) to convey to a specific people or to humanity. The five greatest messengers, known as Ulul Azm (those of firm resolve), are: Nuh, Ibrahim, Musa, Isa, and Muhammad ﷺ. The seal of all prophethood is Muhammad ﷺ, after whom no new prophet or messenger will come.",
     relatedTerms: ['nabi', 'wahy'],
   },
   {
@@ -371,7 +371,7 @@ export const GLOSSARY: GlossaryEntry[] = [
     transliteration: 'WA-hy',
     category: 'prophethood',
     definition:
-      "Divine revelation — the communication of Allah's message to His prophets. Wahy could come in several forms: the ringing of a bell (most intense, leaving behind the deepest knowledge), in the form of a man (through Angel Jibril in human guise), or direct speech from behind a veil (as with Musa on Mount Sinai). The Prophet ﷺ described the first form as the most difficult.",
+      "Divine revelation - the communication of Allah's message to His prophets. Wahy could come in several forms: the ringing of a bell (most intense, leaving behind the deepest knowledge), in the form of a man (through Angel Jibril in human guise), or direct speech from behind a veil (as with Musa on Mount Sinai). The Prophet ﷺ described the first form as the most difficult.",
     relatedTerms: ['quran', 'nabi', 'rasul'],
   },
   {
@@ -391,7 +391,7 @@ export const GLOSSARY: GlossaryEntry[] = [
     transliteration: 'sa-HAA-bah',
     category: 'history',
     definition:
-      "The Companions of the Prophet Muhammad ﷺ — those who believed in him, met him while he was alive, and died as believers. The Sahabah are highly honoured in Islam; the Prophet ﷺ said of them: 'The best of people are my generation.' The most prominent Companions include Abu Bakr al-Siddiq, Umar ibn al-Khattab, Uthman ibn Affan, and Ali ibn Abi Talib (the four Rightly Guided Caliphs), as well as Khadijah, Aisha, Fatimah, and many others.",
+      "The Companions of the Prophet Muhammad ﷺ - those who believed in him, met him while he was alive, and died as believers. The Sahabah are highly honoured in Islam; the Prophet ﷺ said of them: 'The best of people are my generation.' The most prominent Companions include Abu Bakr al-Siddiq, Umar ibn al-Khattab, Uthman ibn Affan, and Ali ibn Abi Talib (the four Rightly Guided Caliphs), as well as Khadijah, Aisha, Fatimah, and many others.",
     relatedTerms: ['seerah', 'tabiin'],
   },
   {
@@ -401,7 +401,7 @@ export const GLOSSARY: GlossaryEntry[] = [
     transliteration: 'HIJ-rah',
     category: 'history',
     definition:
-      "The migration of the Prophet Muhammad ﷺ from Makkah to Madinah in 622 CE, following increasing persecution of the Muslim community by the Quraysh. The Hijra marks the beginning of the Islamic lunar calendar (AH = Anno Hegirae). It represents a pivotal moment in Islamic history — the transition from a persecuted minority to an established community with its own governance and social order.",
+      "The migration of the Prophet Muhammad ﷺ from Makkah to Madinah in 622 CE, following increasing persecution of the Muslim community by the Quraysh. The Hijra marks the beginning of the Islamic lunar calendar (AH = Anno Hegirae). It represents a pivotal moment in Islamic history - the transition from a persecuted minority to an established community with its own governance and social order.",
     relatedTerms: ['seerah', 'sahabah'],
   },
   {
@@ -411,7 +411,7 @@ export const GLOSSARY: GlossaryEntry[] = [
     transliteration: 'TAW-bah',
     category: 'character',
     definition:
-      "Repentance — turning back to Allah after a sin. Sincere tawbah requires: genuine remorse for the sin, immediately ceasing the sinful act, firmly resolving never to return to it, and — if the sin involved another person's rights — restoring those rights. The Prophet ﷺ said: 'All the children of Adam make mistakes, and the best of those who make mistakes are those who repent.' (Tirmidhi)",
+      "Repentance - turning back to Allah after a sin. Sincere tawbah requires: genuine remorse for the sin, immediately ceasing the sinful act, firmly resolving never to return to it, and - if the sin involved another person's rights - restoring those rights. The Prophet ﷺ said: 'All the children of Adam make mistakes, and the best of those who make mistakes are those who repent.' (Tirmidhi)",
     relatedTerms: ['istighfar', 'ihsan'],
   },
   {
@@ -431,7 +431,7 @@ export const GLOSSARY: GlossaryEntry[] = [
     transliteration: 'JAN-nah',
     category: 'afterlife',
     definition:
-      "Paradise or Heaven — the eternal abode of the believers in the afterlife. The Quran describes Jannah in terms of gardens, rivers, magnificent dwellings, and pleasures unlike anything in this world. The highest level is called Jannatul Firdaws. The greatest pleasure of Jannah, according to the Prophet ﷺ, will be the vision of Allah's noble face.",
+      "Paradise or Heaven - the eternal abode of the believers in the afterlife. The Quran describes Jannah in terms of gardens, rivers, magnificent dwellings, and pleasures unlike anything in this world. The highest level is called Jannatul Firdaws. The greatest pleasure of Jannah, according to the Prophet ﷺ, will be the vision of Allah's noble face.",
     relatedTerms: ['akhirah', 'jahannam'],
   },
   {
@@ -441,7 +441,7 @@ export const GLOSSARY: GlossaryEntry[] = [
     transliteration: 'AA-khi-rah',
     category: 'afterlife',
     definition:
-      "The afterlife — the world that begins after this life ends and continues for eternity. Belief in the akhirah is one of the six pillars of Iman. The stages of the akhirah include: death, the grave (barzakh), the resurrection (ba'th), the gathering (hashr), the presentation of deeds (hisab), the weighing of deeds (mizan), the path over Hell (sirat), and finally either Jannah or Jahannam.",
+      "The afterlife - the world that begins after this life ends and continues for eternity. Belief in the akhirah is one of the six pillars of Iman. The stages of the akhirah include: death, the grave (barzakh), the resurrection (ba'th), the gathering (hashr), the presentation of deeds (hisab), the weighing of deeds (mizan), the path over Hell (sirat), and finally either Jannah or Jahannam.",
     relatedTerms: ['jannah', 'jahannam', 'yawm-al-qiyamah'],
   },
   {

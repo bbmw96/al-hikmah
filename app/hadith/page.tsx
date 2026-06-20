@@ -1,4 +1,4 @@
-import type { Metadata } from 'next';
+﻿import type { Metadata } from 'next';
 import Link from 'next/link';
 import { BookOpen, Lock, ExternalLink } from 'lucide-react';
 import { PageHeader } from '@/components/ui/PageHeader';
@@ -7,7 +7,7 @@ import { HADITH_COLLECTIONS, COLLECTION_GROUPS } from '@/lib/data/collections';
 export const metadata: Metadata = {
   title: 'Hadith Collections',
   description:
-    'Browse the Six Books, Nine Books, and other major collections of the Prophet\'s ﷺ traditions — with Arabic originals, contextual translations, and scholarly context.',
+    'Browse the Six Books, Nine Books, and other major collections of the Prophet\'s ﷺ traditions - with Arabic originals, contextual translations, and scholarly context.',
 };
 
 function GradeTag({ grade }: { grade: string }) {
@@ -30,7 +30,7 @@ export default function HadithPage() {
       <PageHeader
         title="Hadith Collections"
         arabicTitle="كتب الحديث النبوي الشريف"
-        subtitle="The recorded sayings, actions, and approvals of the Prophet Muhammad ﷺ — preserved across the centuries by the great scholars of Islam."
+        subtitle="The recorded sayings, actions, and approvals of the Prophet Muhammad ﷺ - preserved across the centuries by the great scholars of Islam."
       />
 
       <div className="max-w-7xl mx-auto px-6 py-16 space-y-16">
@@ -95,7 +95,7 @@ export default function HadithPage() {
             A Note on Hadith Authenticity
           </h3>
           <p className="text-forest/70 leading-relaxed text-sm mb-4">
-            Each hadith in this collection is graded by its level of authenticity (sahih — sound, hasan — good, da'if — weak). Only hadiths of sahih or hasan grading serve as valid evidence in Islamic law and theology. The grades shown reflect the consensus of classical hadith scholars.
+            Each hadith in this collection is graded by its level of authenticity (sahih - sound, hasan - good, da'if - weak). Only hadiths of sahih or hasan grading serve as valid evidence in Islamic law and theology. The grades shown reflect the consensus of classical hadith scholars.
           </p>
           <p className="text-forest/50 text-xs">
             Hadith texts sourced from the open-access Hadith API (fawazahmed0). Scholarly metadata compiled from classical sources.

@@ -1,4 +1,4 @@
-import type { Metadata } from 'next';
+﻿import type { Metadata } from 'next';
 import { PageHeader } from '@/components/ui/PageHeader';
 import { ArabicText } from '@/components/ui/ArabicText';
 
@@ -23,7 +23,7 @@ const PRAYER_STEPS = [
     title: 'Facing the Qibla',
     arabicTitle: 'استقبال القبلة',
     description:
-      "Stand facing the Qibla — the direction of the Ka'bah in Makkah, Saudi Arabia. Your prayer is invalid if you deliberately face the wrong direction. Stand upright, feet shoulder-width apart, with full attentiveness.",
+      "Stand facing the Qibla - the direction of the Ka'bah in Makkah, Saudi Arabia. Your prayer is invalid if you deliberately face the wrong direction. Stand upright, feet shoulder-width apart, with full attentiveness.",
     arabic: null,
     transliteration: null,
     meaning: null,
@@ -63,10 +63,10 @@ const PRAYER_STEPS = [
     title: "Reciting Surah al-Fatihah",
     arabicTitle: "قراءة سورة الفاتحة",
     description:
-      "Recite Ta'awwudh ('A'udhu billahi min al-shaytan al-rajim') and Bismillah, then recite Surah al-Fatihah. This is a pillar of every unit of prayer — prayer without it is invalid. After finishing, say 'Amin' aloud (in congregational prayer) or quietly.",
+      "Recite Ta'awwudh ('A'udhu billahi min al-shaytan al-rajim') and Bismillah, then recite Surah al-Fatihah. This is a pillar of every unit of prayer - prayer without it is invalid. After finishing, say 'Amin' aloud (in congregational prayer) or quietly.",
     arabic: 'الْحَمْدُ لِلَّهِ رَبِّ الْعَالَمِينَ ۝ الرَّحْمَٰنِ الرَّحِيمِ ۝ مَالِكِ يَوْمِ الدِّينِ ۝ إِيَّاكَ نَعْبُدُ وَإِيَّاكَ نَسْتَعِينُ ۝ اهْدِنَا الصِّرَاطَ الْمُسْتَقِيمَ ۝ صِرَاطَ الَّذِينَ أَنْعَمْتَ عَلَيْهِمْ غَيْرِ الْمَغْضُوبِ عَلَيْهِمْ وَلَا الضَّالِّينَ',
     transliteration: "Al-hamdu lillahi rabb il-'alamin. Ar-Rahman ir-Rahim. Maliki yawm id-din. Iyyaka na'budu wa iyyaka nasta'in. Ihdinas-siratal-mustaqim. Siratal-ladhina an'amta 'alayhim, ghayril-maghdubi 'alayhim wa lad-dallin.",
-    meaning: 'All praise is for Allah, Lord of all worlds. The Most Compassionate, the Most Merciful. Master of the Day of Judgement. You alone we worship and You alone we ask for help. Guide us along the straight path — the path of those You have blessed, not those You are displeased with, or those who are astray.',
+    meaning: 'All praise is for Allah, Lord of all worlds. The Most Compassionate, the Most Merciful. Master of the Day of Judgement. You alone we worship and You alone we ask for help. Guide us along the straight path - the path of those You have blessed, not those You are displeased with, or those who are astray.',
   },
   {
     step: 7,
@@ -141,11 +141,11 @@ const PRAYER_STEPS = [
 ];
 
 const PRAYER_TIMES = [
-  { name: 'Fajr', arabicName: 'الفجر', time: 'Dawn — before sunrise', units: 2 },
+  { name: 'Fajr', arabicName: 'الفجر', time: 'Dawn - before sunrise', units: 2 },
   { name: 'Dhuhr', arabicName: 'الظهر', time: 'After midday sun begins to decline', units: 4 },
-  { name: 'Asr', arabicName: 'العصر', time: 'Afternoon — before sunset', units: 4 },
+  { name: 'Asr', arabicName: 'العصر', time: 'Afternoon - before sunset', units: 4 },
   { name: 'Maghrib', arabicName: 'المغرب', time: 'After sunset', units: 3 },
-  { name: 'Isha', arabicName: 'العشاء', time: 'Night — after twilight disappears', units: 4 },
+  { name: 'Isha', arabicName: 'العشاء', time: 'Night - after twilight disappears', units: 4 },
 ];
 
 export default function PrayerPage() {
@@ -154,7 +154,7 @@ export default function PrayerPage() {
       <PageHeader
         title="How to Pray"
         arabicTitle="كيف تصلي"
-        subtitle="Salah — the ritual prayer — is the second pillar of Islam and the most fundamental act of worship. It is performed five times daily."
+        subtitle="Salah - the ritual prayer - is the second pillar of Islam and the most fundamental act of worship. It is performed five times daily."
       />
 
       <div className="max-w-4xl mx-auto px-6 py-16 space-y-14">

@@ -1,4 +1,4 @@
-import type { Metadata } from 'next';
+﻿import type { Metadata } from 'next';
 import { PageHeader } from '@/components/ui/PageHeader';
 import { ArabicText } from '@/components/ui/ArabicText';
 import { HAJJ_STEPS, HAJJ_TYPES, type PilgrimageStep } from '@/lib/data/hajj-steps';
@@ -8,7 +8,7 @@ import { cn } from '@/lib/utils';
 export const metadata: Metadata = {
   title: 'Hajj & Umrah Guide',
   description:
-    "A comprehensive step-by-step guide to Hajj and Umrah — the greater and lesser pilgrimages — with the wisdom, jurisprudence, and supplications behind each rite.",
+    "A comprehensive step-by-step guide to Hajj and Umrah - the greater and lesser pilgrimages - with the wisdom, jurisprudence, and supplications behind each rite.",
 };
 
 const PHASE_COLOURS: Record<string, string> = {
@@ -122,7 +122,7 @@ export default function HajjUmrahPage() {
       <PageHeader
         title="Hajj & Umrah"
         arabicTitle="الحج والعمرة"
-        subtitle="The pilgrimage to the House of Allah — the fifth pillar of Islam and the greatest journey a believer can undertake."
+        subtitle="The pilgrimage to the House of Allah - the fifth pillar of Islam and the greatest journey a believer can undertake."
       />
 
       <div className="max-w-4xl mx-auto px-6 py-16 space-y-20">
@@ -134,7 +134,7 @@ export default function HajjUmrahPage() {
             className="mb-4"
           />
           <p className="text-forest/60 italic text-sm">
-            "And proclaim to the people the Hajj; they will come to you on foot and on every lean camel; they will come from every distant pass." — Surah al-Hajj 22:27
+            "And proclaim to the people the Hajj; they will come to you on foot and on every lean camel; they will come from every distant pass." - Surah al-Hajj 22:27
           </p>
         </div>
 

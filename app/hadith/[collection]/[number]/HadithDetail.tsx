@@ -1,14 +1,16 @@
-'use client';
+﻿'use client';
 
 import { useState } from 'react';
 import Link from 'next/link';
-import { ChevronLeft, ChevronRight, BookOpen, MessageSquare, Loader2 } from 'lucide-react';
+import { ChevronLeft, ChevronRight, BookOpen, Globe, Loader2 } from 'lucide-react';
 import { ArabicText } from '@/components/ui/ArabicText';
 import { LanguageSelector } from '@/components/ui/LanguageSelector';
-import { cn } from '@/lib/utils';
+import { cn, SUPPORTED_LANGUAGES } from '@/lib/utils';
 import type { LanguageCode } from '@/lib/utils';
 import type { HadithCollection } from '@/lib/data/collections';
 import type { HadithGrade } from '@/lib/hadith-api';
+
+const CDN_BASE = 'https://cdn.jsdelivr.net/gh/fawazahmed0/hadith-api@1';
 
 interface HadithDetailProps {
   collection: HadithCollection;
@@ -18,7 +20,12 @@ interface HadithDetailProps {
   grades?: HadithGrade[];
 }
 
-type Tab = 'meaning' | 'translation' | 'context';
+type Tab = 'meaning' | 'translation';
+
+function getApiPrefix(lang: LanguageCode): string | null {
+  const found = SUPPORTED_LANGUAGES.find(l => l.code === lang);
+  return found ? found.apiPrefix : null;
+}
 
 export function HadithDetail({
   collection,
@@ -30,62 +37,57 @@ export function HadithDetail({
   const [activeTab, setActiveTab] = useState<Tab>('meaning');
   const [language, setLanguage] = useState<LanguageCode>('en');
   const [translation, setTranslation] = useState<string | null>(null);
-  const [context, setContext] = useState<string | null>(null);
+  const [translationForLang, setTranslationForLang] = useState<LanguageCode | null>(null);
   const [loading, setLoading] = useState(false);
-  const [error, setError] = useState<string | null>(null);
+  const [notAvailable, setNotAvailable] = useState(false);
 
-  async function loadContent(tab: Tab, lang: LanguageCode) {
-    setActiveTab(tab);
-
-    if (tab === 'meaning') {
-      setError(null);
+  async function fetchTranslation(lang: LanguageCode) {
+    if (lang === 'en') {
+      setTranslation(englishText);
+      setTranslationForLang('en');
+      setNotAvailable(false);
       return;
     }
 
-    if (tab === 'translation' && lang === 'en') {
-      setError(null);
+    const apiPrefix = getApiPrefix(lang);
+    if (!apiPrefix) {
+      setNotAvailable(true);
       return;
     }
 
     setLoading(true);
-    setError(null);
+    setNotAvailable(false);
 
     try {
-      const res = await fetch('/api/translate', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          text: englishText,
-          arabic: arabicText,
-          language: lang,
-          type: tab,
-          collection: collection.englishName,
-          hadithNumber,
-        }),
-      });
-
-      if (!res.ok) throw new Error('Translation unavailable');
+      const url = `${CDN_BASE}/editions/${apiPrefix}-${collection.apiCollection}/${hadithNumber}.min.json`;
+      const res = await fetch(url);
+      if (!res.ok) throw new Error('not-available');
       const data = await res.json();
-
-      if (tab === 'translation') setTranslation(data.result);
-      if (tab === 'context') setContext(data.result);
+      const text: string | null =
+        data?.text ?? data?.hadiths?.[0]?.body ?? data?.hadiths?.[0]?.text ?? null;
+      if (!text) throw new Error('no-text');
+      setTranslation(text);
+      setTranslationForLang(lang);
+      setNotAvailable(false);
     } catch {
-      setError('Unable to load content at this time. Please try again.');
+      setTranslation(null);
+      setNotAvailable(true);
     } finally {
       setLoading(false);
     }
   }
 
   function handleTabChange(tab: Tab) {
-    loadContent(tab, language);
+    setActiveTab(tab);
+    if (tab === 'translation' && translationForLang !== language) {
+      fetchTranslation(language);
+    }
   }
 
   function handleLanguageChange(lang: LanguageCode) {
     setLanguage(lang);
-    setTranslation(null);
-    setContext(null);
-    if (activeTab !== 'meaning') {
-      loadContent(activeTab, lang);
+    if (activeTab === 'translation') {
+      fetchTranslation(lang);
     }
   }
 
@@ -118,7 +120,7 @@ export function HadithDetail({
         )}
       </div>
 
-      {/* Arabic text — always displayed */}
+      {/* Arabic text - always displayed */}
       {arabicText && (
         <div className="bg-forest/5 border border-gold/20 rounded-2xl p-8 mb-8">
           <ArabicText text={arabicText} size="lg" showBismillah={false} />
@@ -130,9 +132,8 @@ export function HadithDetail({
         {/* Tabs */}
         <div className="flex rounded-xl border border-forest/20 overflow-hidden flex-1" role="tablist">
           {([
-            { id: 'meaning' as Tab, label: 'Meaning', icon: BookOpen },
-            { id: 'translation' as Tab, label: 'Translation', icon: null },
-            { id: 'context' as Tab, label: 'Context & Reason', icon: MessageSquare },
+            { id: 'meaning' as Tab, label: 'English Meaning', icon: BookOpen },
+            { id: 'translation' as Tab, label: 'Translation', icon: Globe },
           ] as const).map(({ id, label, icon: Icon }) => (
             <button
               key={id}
@@ -146,34 +147,25 @@ export function HadithDetail({
                   : 'text-forest/60 hover:text-forest hover:bg-forest/5',
               )}
             >
-              {Icon && <Icon className="w-3.5 h-3.5" aria-hidden="true" />}
+              <Icon className="w-3.5 h-3.5" aria-hidden="true" />
               {label}
             </button>
           ))}
         </div>
 
-        {/* Language selector (visible when translation or context tab is active) */}
-        {activeTab !== 'meaning' && (
+        {/* Language selector (visible on translation tab) */}
+        {activeTab === 'translation' && (
           <LanguageSelector
             value={language}
             onChange={handleLanguageChange}
-            label="Translate to"
+            label="Language"
           />
         )}
       </div>
 
       {/* Content area */}
       <div className="card-islamic min-h-[180px] flex flex-col" role="tabpanel">
-        {loading ? (
-          <div className="flex-1 flex items-center justify-center py-12">
-            <Loader2 className="w-6 h-6 text-gold animate-spin" aria-hidden="true" />
-            <span className="ml-2 text-forest/60 text-sm">Loading…</span>
-          </div>
-        ) : error ? (
-          <div className="flex-1 flex items-center justify-center py-12">
-            <p className="text-forest/40 text-sm text-center">{error}</p>
-          </div>
-        ) : activeTab === 'meaning' ? (
+        {activeTab === 'meaning' ? (
           <div>
             <p className="text-xs text-gold/70 uppercase tracking-wider font-medium mb-3">
               English Meaning
@@ -182,39 +174,34 @@ export function HadithDetail({
               {englishText ?? 'English text not available for this hadith.'}
             </p>
           </div>
-        ) : activeTab === 'translation' ? (
-          language === 'en' ? (
+        ) : loading ? (
+          <div className="flex-1 flex items-center justify-center py-12">
+            <Loader2 className="w-6 h-6 text-gold animate-spin" aria-hidden="true" />
+            <span className="ml-2 text-forest/60 text-sm">Loading translation...</span>
+          </div>
+        ) : notAvailable ? (
+          <div className="flex-1 flex items-center justify-center py-12 text-center">
             <div>
-              <p className="text-xs text-gold/70 uppercase tracking-wider font-medium mb-3">
-                English
+              <p className="text-forest/40 text-sm mb-2">
+                This translation is not yet available for {collection.shortName} in the selected language.
               </p>
-              <p className="text-forest/80 leading-relaxed">{englishText}</p>
+              <p className="text-forest/30 text-xs">Try another language, or read the English meaning above.</p>
             </div>
-          ) : translation ? (
-            <div>
-              <p className="text-xs text-gold/70 uppercase tracking-wider font-medium mb-3">
-                Contextual Translation
-              </p>
-              <p className="text-forest/80 leading-relaxed whitespace-pre-line">{translation}</p>
-            </div>
-          ) : (
-            <div className="flex-1 flex items-center justify-center py-12">
-              <p className="text-forest/40 text-sm text-center">
-                Select a language above to load the translation.
-              </p>
-            </div>
-          )
-        ) : context ? (
+          </div>
+        ) : language === 'en' ? (
           <div>
-            <p className="text-xs text-gold/70 uppercase tracking-wider font-medium mb-3">
-              Scholarly Context & Background
-            </p>
-            <p className="text-forest/80 leading-relaxed whitespace-pre-line">{context}</p>
+            <p className="text-xs text-gold/70 uppercase tracking-wider font-medium mb-3">English</p>
+            <p className="text-forest/80 leading-relaxed">{englishText}</p>
+          </div>
+        ) : translation && translationForLang === language ? (
+          <div>
+            <p className="text-xs text-gold/70 uppercase tracking-wider font-medium mb-3">Translation</p>
+            <p className="text-forest/80 leading-relaxed whitespace-pre-line">{translation}</p>
           </div>
         ) : (
           <div className="flex-1 flex items-center justify-center py-12">
             <p className="text-forest/40 text-sm text-center">
-              Click "Context & Reason" to load the scholarly background.
+              Select a language above to load the translation.
             </p>
           </div>
         )}

@@ -1,4 +1,4 @@
-import { NextRequest, NextResponse } from 'next/server';
+﻿import { NextRequest, NextResponse } from 'next/server';
 import Anthropic from '@anthropic-ai/sdk';
 
 const client = new Anthropic();
@@ -36,15 +36,15 @@ Use British English spelling and conventions if writing in English.`;
   return `You are a scholarly translator specialising in Islamic texts. Translate the following hadith text into ${langName}.
 
 CRITICAL GUIDELINES:
-- Produce a CONTEXTUAL, IDIOMATIC translation — not a word-for-word literal one
+- Produce a CONTEXTUAL, IDIOMATIC translation - not a word-for-word literal one
 - The meaning must be natural and clear to a native speaker of ${langName}
-- For Japanese: use appropriate keigo (polite/formal register), honour the cultural sensitivity of religious text, and ensure the sentence structure flows naturally in Japanese — do not force Arabic grammatical structure into Japanese
+- For Japanese: use appropriate keigo (polite/formal register), honour the cultural sensitivity of religious text, and ensure the sentence structure flows naturally in Japanese - do not force Arabic grammatical structure into Japanese
 - For Cantonese: use Traditional Chinese characters appropriate to Cantonese, with natural Cantonese phrasing rather than Mandarin-influenced constructions
 - For Mandarin: use Simplified Chinese characters with clear, contemporary literary prose
 - For Arabic: provide a classical Arabic rendering that respects the original prophetic style
 - Preserve the dignity and reverence appropriate for prophetic speech
-- Keep any technical Islamic terms (e.g. salah, zakat) — you may transliterate them and add a brief parenthetical explanation
-- Do NOT add your own commentary, footnotes, or meta-text — provide only the translation itself
+- Keep any technical Islamic terms (e.g. salah, zakat) - you may transliterate them and add a brief parenthetical explanation
+- Do NOT add your own commentary, footnotes, or meta-text - provide only the translation itself
 - Do NOT mention that you are an AI or that this is a translation
 
 Respond with ONLY the translated text, nothing else.`;

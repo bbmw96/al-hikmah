@@ -1,4 +1,4 @@
-import type { Metadata } from 'next';
+﻿import type { Metadata } from 'next';
 import Link from 'next/link';
 import { PageHeader } from '@/components/ui/PageHeader';
 import { DUA_CATEGORIES } from '@/lib/data/duas';
@@ -6,7 +6,7 @@ import { DUA_CATEGORIES } from '@/lib/data/duas';
 export const metadata: Metadata = {
   title: "Du'as & Supplications",
   description:
-    "Authenticated supplications from the Quran and Sunnah, organised by category — morning, evening, prayer, Hajj, distress, and more.",
+    "Authenticated supplications from the Quran and Sunnah, organised by category - morning, evening, prayer, Hajj, distress, and more.",
 };
 
 export default function DuasPage() {
@@ -28,7 +28,7 @@ export default function DuasPage() {
           >
             الدُّعَاءُ هُوَ الْعِبَادَةُ
           </p>
-          <p className="text-forest/70 italic">"Du'a is worship." — The Prophet Muhammad ﷺ (Tirmidhi)</p>
+          <p className="text-forest/70 italic">"Du'a is worship." - The Prophet Muhammad ﷺ (Tirmidhi)</p>
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">

@@ -1,4 +1,4 @@
-'use client';
+﻿'use client';
 
 import { useState } from 'react';
 import { Search } from 'lucide-react';
@@ -22,7 +22,7 @@ export default function NinetyNineNamesPage() {
       <PageHeader
         title="The 99 Names of Allah"
         arabicTitle="أسماء الله الحسنى"
-        subtitle="Allah — Exalted be He — has beautiful names. The Prophet ﷺ said: 'Allah has ninety-nine names; whoever memorises them all will enter Paradise.' (Bukhari)"
+        subtitle="Allah - Exalted be He - has beautiful names. The Prophet ﷺ said: 'Allah has ninety-nine names; whoever memorises them all will enter Paradise.' (Bukhari)"
       >
         {/* Search */}
         <div className="relative max-w-md mx-auto mt-6">

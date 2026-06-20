@@ -1,4 +1,4 @@
-'use client';
+﻿'use client';
 
 import { useState } from 'react';
 import { Search } from 'lucide-react';
@@ -21,7 +21,7 @@ export default function GlossaryPage() {
       <PageHeader
         title="Islamic Glossary"
         arabicTitle="المصطلحات الإسلامية"
-        subtitle="Key terms in Islamic theology, jurisprudence, hadith science, and history — explained clearly for all readers."
+        subtitle="Key terms in Islamic theology, jurisprudence, hadith science, and history - explained clearly for all readers."
       >
         <div className="relative max-w-md mx-auto mt-6">
           <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-4 h-4 text-gold/60" aria-hidden="true" />

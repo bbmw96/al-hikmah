@@ -1,6 +1,6 @@
-'use client';
+﻿'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { Menu, X, ChevronDown, BookOpen } from 'lucide-react';
@@ -53,9 +53,23 @@ const NAV_ITEMS: NavItem[] = [
   },
 ];
 
-function DropdownMenu({ items, onClose }: { items: NavItem[]; onClose: () => void }) {
+function DropdownMenu({
+  items,
+  onClose,
+  onMouseEnter,
+  onMouseLeave,
+}: {
+  items: NavItem[];
+  onClose: () => void;
+  onMouseEnter?: () => void;
+  onMouseLeave?: () => void;
+}) {
   return (
-    <div className="absolute top-full left-0 mt-2 min-w-[13rem] rounded-xl shadow-2xl border border-gold/20 bg-cream overflow-hidden z-50 fade-up">
+    <div
+      className="absolute top-full left-0 mt-2 min-w-[13rem] rounded-xl shadow-2xl border border-gold/20 bg-cream overflow-hidden z-50 fade-up"
+      onMouseEnter={onMouseEnter}
+      onMouseLeave={onMouseLeave}
+    >
       {items.map(item => (
         <Link
           key={item.label}
@@ -75,6 +89,16 @@ export function Navbar() {
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
   const [scrolled, setScrolled] = useState(false);
   const pathname = usePathname();
+  const closeTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
+
+  function openDropdown(label: string) {
+    if (closeTimer.current) clearTimeout(closeTimer.current);
+    setActiveDropdown(label);
+  }
+
+  function scheduleClose() {
+    closeTimer.current = setTimeout(() => setActiveDropdown(null), 150);
+  }
 
   useEffect(() => {
     const handler = () => setScrolled(window.scrollY > 20);
@@ -102,7 +126,7 @@ export function Navbar() {
           <Link
             href="/"
             className="flex items-center gap-2.5 group"
-            aria-label="Al-Hikmah — Home"
+            aria-label="Al-Hikmah - Home"
           >
             <div className="w-9 h-9 rounded-full bg-gold/20 flex items-center justify-center ring-1 ring-gold/40 group-hover:bg-gold/30 transition-colors">
               <BookOpen className="w-5 h-5 text-gold" aria-hidden="true" />
@@ -128,8 +152,8 @@ export function Navbar() {
               <li
                 key={item.label}
                 className="relative"
-                onMouseEnter={() => item.children && setActiveDropdown(item.label)}
-                onMouseLeave={() => setActiveDropdown(null)}
+                onMouseEnter={() => item.children && openDropdown(item.label)}
+                onMouseLeave={scheduleClose}
               >
                 {item.href && !item.children ? (
                   <Link
@@ -162,7 +186,12 @@ export function Navbar() {
                   </button>
                 )}
                 {item.children && activeDropdown === item.label && (
-                  <DropdownMenu items={item.children} onClose={() => setActiveDropdown(null)} />
+                  <DropdownMenu
+                    items={item.children}
+                    onClose={() => setActiveDropdown(null)}
+                    onMouseEnter={() => closeTimer.current && clearTimeout(closeTimer.current)}
+                    onMouseLeave={scheduleClose}
+                  />
                 )}
               </li>
             ))}

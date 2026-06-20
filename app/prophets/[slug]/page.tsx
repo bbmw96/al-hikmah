@@ -1,4 +1,4 @@
-import type { Metadata } from 'next';
+﻿import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
@@ -19,7 +19,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   if (!prophet) return {};
   return {
     title: `Prophet ${prophet.englishName} (peace be upon him)`,
-    description: `Learn about Prophet ${prophet.englishName} — his lineage, the nation he was sent to, his miracles, and his message.`,
+    description: `Learn about Prophet ${prophet.englishName} - his lineage, the nation he was sent to, his miracles, and his message.`,
   };
 }
 
@@ -111,7 +111,7 @@ export default async function ProphetPage({ params }: Props) {
                       </span>
                     )}
                     {entry.relation && (
-                      <span className="text-forest/40 text-xs ml-2">— {entry.relation}</span>
+                      <span className="text-forest/40 text-xs ml-2">- {entry.relation}</span>
                     )}
                   </div>
                 </li>

@@ -1,4 +1,4 @@
-import type { Metadata } from 'next';
+﻿import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import { getCollectionById } from '@/lib/data/collections';
 import { fetchHadith } from '@/lib/hadith-api';
@@ -14,7 +14,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   if (!col) return {};
   return {
     title: `${col.shortName} Hadith ${number}`,
-    description: `Hadith ${number} from ${col.englishName} — Arabic text with contextual translation and scholarly context.`,
+    description: `Hadith ${number} from ${col.englishName} - Arabic text with contextual translation and scholarly context.`,
   };
 }
 

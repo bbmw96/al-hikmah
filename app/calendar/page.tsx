@@ -1,9 +1,9 @@
-import type { Metadata } from 'next';
+﻿import type { Metadata } from 'next';
 import { PageHeader } from '@/components/ui/PageHeader';
 
 export const metadata: Metadata = {
   title: 'Islamic Calendar',
-  description: 'The Islamic lunar calendar — the twelve months of the Hijri year with their significance and key dates.',
+  description: 'The Islamic lunar calendar - the twelve months of the Hijri year with their significance and key dates.',
 };
 
 const MONTHS = [
@@ -12,8 +12,8 @@ const MONTHS = [
     arabic: 'مُحَرَّم',
     name: 'Muharram',
     significance:
-      "The first month of the Islamic year and one of the four sacred months. The 10th of Muharram (Ashura) is a day of great significance — the Prophet ﷺ fasted on this day and encouraged fasting it and the day before or after. Fasting on Ashura expiates the sins of the previous year.",
-    keyDates: ['10th: Ashura — day of fasting'],
+      "The first month of the Islamic year and one of the four sacred months. The 10th of Muharram (Ashura) is a day of great significance - the Prophet ﷺ fasted on this day and encouraged fasting it and the day before or after. Fasting on Ashura expiates the sins of the previous year.",
+    keyDates: ['10th: Ashura - day of fasting'],
   },
   {
     number: 2,
@@ -28,7 +28,7 @@ const MONTHS = [
     arabic: 'رَبِيعُ الأَوَّل',
     name: "Rabi' al-Awwal",
     significance:
-      "The month of the Prophet's birth ﷺ — according to the most accepted view, he was born on Monday 12 Rabi' al-Awwal in the Year of the Elephant (570 CE). The Prophet ﷺ also passed away in this month in 11 AH.",
+      "The month of the Prophet's birth ﷺ - according to the most accepted view, he was born on Monday 12 Rabi' al-Awwal in the Year of the Elephant (570 CE). The Prophet ﷺ also passed away in this month in 11 AH.",
     keyDates: ["12th: Birth of the Prophet ﷺ (mawlid)"],
   },
   {
@@ -73,7 +73,7 @@ const MONTHS = [
     arabic: 'رَمَضَان',
     name: 'Ramadan',
     significance:
-      "The holiest month of the Islamic year: the month of fasting, the month in which the Quran was first revealed, and the month containing Laylat al-Qadr (the Night of Power) — a night better than a thousand months. Fasting during Ramadan is the fourth pillar of Islam.",
+      "The holiest month of the Islamic year: the month of fasting, the month in which the Quran was first revealed, and the month containing Laylat al-Qadr (the Night of Power) - a night better than a thousand months. Fasting during Ramadan is the fourth pillar of Islam.",
     keyDates: [
       '1st: Beginning of the Ramadan fast',
       'Last ten nights: Laylat al-Qadr (sought on odd nights, especially 27th)',
@@ -85,7 +85,7 @@ const MONTHS = [
     arabic: 'شَوَّال',
     name: 'Shawwal',
     significance:
-      "Eid al-Fitr falls on the 1st of Shawwal — the Festival of Breaking the Fast, one of the two great Islamic celebrations. The six voluntary fasts of Shawwal, combined with Ramadan, carry the reward equivalent to fasting the entire year.",
+      "Eid al-Fitr falls on the 1st of Shawwal - the Festival of Breaking the Fast, one of the two great Islamic celebrations. The six voluntary fasts of Shawwal, combined with Ramadan, carry the reward equivalent to fasting the entire year.",
     keyDates: [
       '1st: Eid al-Fitr',
       '2nd–27th: The six voluntary fasts of Shawwal',
@@ -104,12 +104,12 @@ const MONTHS = [
     arabic: 'ذُو الحِجَّة',
     name: 'Dhu al-Hijjah',
     significance:
-      "The month of Hajj — one of the four sacred months and the month of the greatest annual gathering in Islam. The first ten days are described by the Prophet ﷺ as the most virtuous days of the year. Eid al-Adha (the Festival of Sacrifice) falls on the 10th.",
+      "The month of Hajj - one of the four sacred months and the month of the greatest annual gathering in Islam. The first ten days are described by the Prophet ﷺ as the most virtuous days of the year. Eid al-Adha (the Festival of Sacrifice) falls on the 10th.",
     keyDates: [
       '1st–10th: The ten best days of the year',
-      '8th: Yawm al-Tarwiyah — pilgrims proceed to Mina',
-      '9th: Yawm Arafah — the Day of Arafah (fasting recommended for non-pilgrims)',
-      '10th: Eid al-Adha — the Festival of Sacrifice',
+      '8th: Yawm al-Tarwiyah - pilgrims proceed to Mina',
+      '9th: Yawm Arafah - the Day of Arafah (fasting recommended for non-pilgrims)',
+      '10th: Eid al-Adha - the Festival of Sacrifice',
       '11th–13th: Days of Tashreeq',
     ],
   },
@@ -136,7 +136,7 @@ export default function CalendarPage() {
             إِنَّ عِدَّةَ الشُّهُورِ عِندَ اللَّهِ اثْنَا عَشَرَ شَهْرًا
           </p>
           <p className="text-forest/60 italic text-sm">
-            "Indeed, the number of months with Allah is twelve months in the register of Allah." — Surah al-Tawbah 9:36
+            "Indeed, the number of months with Allah is twelve months in the register of Allah." - Surah al-Tawbah 9:36
           </p>
         </div>
 

@@ -1,11 +1,11 @@
-import type { Metadata } from 'next';
+﻿import type { Metadata } from 'next';
 import Link from 'next/link';
 import { PageHeader } from '@/components/ui/PageHeader';
 import { BookOpen, Globe, Shield, Heart } from 'lucide-react';
 
 export const metadata: Metadata = {
   title: 'About',
-  description: 'About Al-Hikmah — a scholarly Islamic knowledge resource for Muslims and non-Muslims alike.',
+  description: 'About Al-Hikmah - a scholarly Islamic knowledge resource for Muslims and non-Muslims alike.',
 };
 
 const PRINCIPLES = [
@@ -19,7 +19,7 @@ const PRINCIPLES = [
     icon: Globe,
     title: 'Multi-Language Access',
     description:
-      "Content is presented in Arabic alongside contextual — not literal — translations in English, Spanish, Mandarin, Cantonese, Japanese, and Malay, respecting the depth and nuance of each language.",
+      "Content is presented in Arabic alongside contextual - not literal - translations in English, Spanish, Mandarin, Cantonese, Japanese, and Malay, respecting the depth and nuance of each language.",
   },
   {
     icon: BookOpen,
@@ -41,7 +41,7 @@ export default function AboutPage() {
       <PageHeader
         title="About Al-Hikmah"
         arabicTitle="حول الحكمة"
-        subtitle="A scholarly resource for authentic Islamic knowledge — open to all who seek it."
+        subtitle="A scholarly resource for authentic Islamic knowledge - open to all who seek it."
       />
 
       <div className="max-w-4xl mx-auto px-6 py-16 space-y-14">
@@ -52,10 +52,10 @@ export default function AboutPage() {
           </h2>
           <div className="prose-islamic space-y-4">
             <p>
-              Al-Hikmah — the Arabic word for wisdom — exists to make authentic Islamic knowledge accessible to every person who seeks it, regardless of their background or prior understanding of the religion.
+              Al-Hikmah - the Arabic word for wisdom - exists to make authentic Islamic knowledge accessible to every person who seeks it, regardless of their background or prior understanding of the religion.
             </p>
             <p>
-              The Islamic scholarly tradition is one of the most meticulous in human history. For over 1,400 years, scholars have preserved the words and actions of the Prophet Muhammad ﷺ with extraordinary care — verifying chains of narration, scrutinising the character of every narrator, and cross-referencing traditions against one another. Al-Hikmah aims to bring that tradition to a modern audience.
+              The Islamic scholarly tradition is one of the most meticulous in human history. For over 1,400 years, scholars have preserved the words and actions of the Prophet Muhammad ﷺ with extraordinary care - verifying chains of narration, scrutinising the character of every narrator, and cross-referencing traditions against one another. Al-Hikmah aims to bring that tradition to a modern audience.
             </p>
             <p>
               Every hadith presented here comes from established, authenticated collections. Every supplication (du'a) has a verified source. Every story of the prophets draws on classical scholarly commentary. Our goal is clarity, accuracy, and reverence for the tradition.
@@ -90,7 +90,7 @@ export default function AboutPage() {
             Languages
           </h2>
           <p className="text-forest/70 leading-relaxed mb-6">
-            Al-Hikmah provides contextual translations in seven languages. We use idiomatic, natural translations rather than word-for-word renderings, because Islamic texts — especially hadith — carry layers of meaning that literal translation often fails to convey. This is especially important for East Asian languages such as Japanese and Cantonese, where the grammatical structure and cultural context require a thoughtful approach.
+            Al-Hikmah provides contextual translations in seven languages. We use idiomatic, natural translations rather than word-for-word renderings, because Islamic texts - especially hadith - carry layers of meaning that literal translation often fails to convey. This is especially important for East Asian languages such as Japanese and Cantonese, where the grammatical structure and cultural context require a thoughtful approach.
           </p>
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
             {['Arabic', 'English', 'Spanish', 'Malay', 'Mandarin', 'Cantonese', 'Japanese'].map(lang => (
