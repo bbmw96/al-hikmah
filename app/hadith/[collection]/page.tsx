@@ -4,7 +4,7 @@ import Link from 'next/link';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import { PageHeader } from '@/components/ui/PageHeader';
 import { getCollectionById, HADITH_COLLECTIONS } from '@/lib/data/collections';
-import { fetchHadithList, paginateHadiths } from '@/lib/hadith-api';
+import { fetchHadithPage } from '@/lib/hadith-api';
 
 interface Props {
   params: Promise<{ collection: string }>;
@@ -34,19 +34,22 @@ export default async function CollectionPage({ params, searchParams }: Props) {
   const col = getCollectionById(collection);
   if (!col || !col.available || !col.apiCollection) notFound();
 
-  const page = Math.max(1, parseInt(pageParam ?? '1', 10) || 1);
+  const total = col.hadithCount;
+  const pages = Math.ceil(total / PAGE_SIZE);
+  const page = Math.min(Math.max(1, parseInt(pageParam ?? '1', 10) || 1), pages);
 
-  const data = await fetchHadithList(col.apiCollection, 'eng');
-  if (!data) {
+  const startNumber = (page - 1) * PAGE_SIZE + 1;
+  const count = Math.min(PAGE_SIZE, total - (page - 1) * PAGE_SIZE);
+
+  const hadiths = await fetchHadithPage(col.apiCollection, startNumber, count);
+
+  if (hadiths.length === 0) {
     return (
       <div className="max-w-4xl mx-auto px-6 py-24 text-center">
         <p className="text-forest/50">Unable to load hadith at this time. Please try again shortly.</p>
       </div>
     );
   }
-
-  const withText = { ...data, hadiths: data.hadiths.filter(h => h.text?.trim()) };
-  const { hadiths, total, pages } = paginateHadiths(withText, page, PAGE_SIZE);
 
   return (
     <>

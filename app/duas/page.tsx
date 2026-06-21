@@ -3,6 +3,8 @@ import Link from 'next/link';
 import { PageHeader } from '@/components/ui/PageHeader';
 import { DUA_CATEGORIES } from '@/lib/data/duas';
 
+export const dynamic = 'force-static';
+
 export const metadata: Metadata = {
   title: "Du'as & Supplications",
   description:

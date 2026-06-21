@@ -2,6 +2,8 @@ import type { Metadata } from 'next';
 import { PageHeader } from '@/components/ui/PageHeader';
 import { ArabicText } from '@/components/ui/ArabicText';
 
+export const dynamic = 'force-static';
+
 export const metadata: Metadata = {
   title: 'Fiqh: Islamic Jurisprudence',
   description: 'An introduction to Islamic jurisprudence (fiqh): the five categories of ruling (Ahkam al-Shar\'iyyah), the sources of Islamic law, and a brief overview of the four major schools of thought.',

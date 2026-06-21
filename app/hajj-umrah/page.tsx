@@ -5,6 +5,8 @@ import { HAJJ_STEPS, HAJJ_TYPES, type PilgrimageStep } from '@/lib/data/hajj-ste
 import { UMRAH_STEPS, UMRAH_DIFFERENCES_FROM_HAJJ, type UmrahStep } from '@/lib/data/umrah-steps';
 import { cn } from '@/lib/utils';
 
+export const dynamic = 'force-static';
+
 export const metadata: Metadata = {
   title: 'Hajj & Umrah Guide',
   description:

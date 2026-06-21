@@ -2,6 +2,8 @@
 import { PageHeader } from '@/components/ui/PageHeader';
 import { ArabicText } from '@/components/ui/ArabicText';
 
+export const dynamic = 'force-static';
+
 export const metadata: Metadata = {
   title: 'How to Pray',
   description: 'A comprehensive guide to Islamic prayer (Salah): the story of how it was ordained during the Night Journey, complete steps with all authentic extra dhikr from the Sunnah, and after-prayer supplications with their stories and virtues.',

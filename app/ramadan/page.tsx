@@ -2,6 +2,8 @@ import type { Metadata } from 'next';
 import { PageHeader } from '@/components/ui/PageHeader';
 import { ArabicText } from '@/components/ui/ArabicText';
 
+export const dynamic = 'force-static';
+
 export const metadata: Metadata = {
   title: 'Ramadan: The Month of Fasting',
   description: 'A complete guide to Ramadan: the obligation of fasting, conditions, what breaks the fast, Suhur and Iftar, Taraweeh, Laylatul Qadr, Itikaf, Zakat al-Fitr, and the spiritual dimensions of the blessed month.',
@@ -151,7 +153,7 @@ const ITIKAF = {
     'The minimum duration is disputed: some say it can be even a short period, others say a full day and night.',
     "The full Sunnah I'tikaf is the last 10 nights of Ramadan, beginning from the sunset of the 20th night.",
     "One must not leave the mosque except for necessities: using the toilet, ritual bath (ghusl), or medical emergency.",
-    'Food may be brought in. The I'tikaf is not broken by sleeping or eating inside the mosque.',
+    "Food may be brought in. The I'tikaf is not broken by sleeping or eating inside the mosque.",
   ],
 };
 

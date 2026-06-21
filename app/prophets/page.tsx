@@ -3,6 +3,8 @@ import Link from 'next/link';
 import { PageHeader } from '@/components/ui/PageHeader';
 import { PROPHETS } from '@/lib/data/prophets';
 
+export const dynamic = 'force-static';
+
 export const metadata: Metadata = {
   title: 'Prophets of Islam',
   description:

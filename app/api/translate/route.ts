@@ -3,6 +3,12 @@ import Anthropic from '@anthropic-ai/sdk';
 
 const client = new Anthropic();
 
+const translationCache = new Map<string, string>();
+
+function cacheKey(type: string, collection: string | undefined, hadithNumber: number | undefined, language: string): string {
+  return `${type}:${collection ?? ''}:${hadithNumber ?? ''}:${language}`;
+}
+
 const LANGUAGE_NAMES: Record<string, string> = {
   'en': 'English (British)',
   'ar': 'Arabic',
@@ -78,6 +84,10 @@ Please explain the background, context, and reason behind this hadith in ${LANGU
       userMessage = `Translate this hadith text into ${LANGUAGE_NAMES[language] ?? language}:\n\n${text}`;
     }
 
+    const key = cacheKey(type, collection, hadithNumber, language);
+    const cached = translationCache.get(key);
+    if (cached) return NextResponse.json({ result: cached });
+
     const response = await client.messages.create({
       model: 'claude-haiku-4-5-20251001',
       max_tokens: 1024,
@@ -87,6 +97,8 @@ Please explain the background, context, and reason behind this hadith in ${LANGU
 
     const result =
       response.content[0].type === 'text' ? response.content[0].text : '';
+
+    translationCache.set(key, result);
 
     return NextResponse.json({ result });
   } catch (err) {

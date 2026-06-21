@@ -4,6 +4,8 @@ import { getCollectionById } from '@/lib/data/collections';
 import { fetchHadith } from '@/lib/hadith-api';
 import { HadithDetail } from './HadithDetail';
 
+export const revalidate = 3600; // re-render at most once per hour; cached by Next.js CDN between renders
+
 interface Props {
   params: Promise<{ collection: string; number: string }>;
 }

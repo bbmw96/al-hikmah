@@ -7,12 +7,20 @@ import {
   Star,
   ScrollText,
   ArrowRight,
+  BookMarked,
+  Infinity,
+  Moon,
+  Scale,
+  Sparkles,
+  Gem,
 } from 'lucide-react';
 import { IslamicPattern } from '@/components/ui/IslamicPattern';
 import { HeroSection } from '@/components/ui/HeroSection';
 import { FadeIn } from '@/components/ui/FadeIn';
 import { StaggerGroup, StaggerItem } from '@/components/ui/StaggerGroup';
 import { HADITH_COLLECTIONS } from '@/lib/data/collections';
+
+export const dynamic = 'force-static';
 
 const QUICK_ACCESS = [
   {
@@ -67,6 +75,60 @@ const QUICK_ACCESS = [
     description:
       'The biography of the Prophet Muhammad ﷺ - from his birth in Makkah to the completion of the message of Islam.',
     href: '/seerah',
+    colour: 'bg-midnight',
+  },
+  {
+    icon: BookMarked,
+    title: 'The Quran: Revelation & Stories',
+    arabicTitle: 'القرآن الكريم',
+    description:
+      'All 114 surahs with their occasions of revelation (Asbab al-Nuzul), Makki and Madani classification, themes, stories, and the context behind every chapter.',
+    href: '/quran',
+    colour: 'bg-forest',
+  },
+  {
+    icon: Infinity,
+    title: 'Tawheed: Divine Oneness',
+    arabicTitle: 'التوحيد',
+    description:
+      'The foundational doctrine of Islam: the absolute oneness of Allah, the three categories of Tawheed, and why it is the first and most essential matter in the deen.',
+    href: '/tawheed',
+    colour: 'bg-midnight',
+  },
+  {
+    icon: Moon,
+    title: 'Ramadan: The Complete Guide',
+    arabicTitle: 'رمضان',
+    description:
+      'Everything about the blessed month: fasting rulings, Taraweeh, Laylatul Qadr, Zakat al-Fitr, the four schools of thought, and the spiritual dimensions of Ramadan.',
+    href: '/ramadan',
+    colour: 'bg-forest',
+  },
+  {
+    icon: Scale,
+    title: 'Fiqh: Islamic Jurisprudence',
+    arabicTitle: 'الفقه الإسلامي',
+    description:
+      'The science of Islamic law: the five rulings (Ahkam al-Khamsah), the four major madhabs, usul al-fiqh, and how scholars derive rulings from the Quran and Sunnah.',
+    href: '/fiqh',
+    colour: 'bg-midnight',
+  },
+  {
+    icon: Sparkles,
+    title: 'Suluk: The Spiritual Path',
+    arabicTitle: 'السلوك الروحاني',
+    description:
+      'Islamic spirituality and the purification of the soul: the three levels of faith (Islam, Iman, Ihsan), diseases of the heart, dhikr, and the path of Tawbah.',
+    href: '/suluk',
+    colour: 'bg-forest',
+  },
+  {
+    icon: Gem,
+    title: 'Nikah: Islamic Marriage',
+    arabicTitle: 'النِّكَاح',
+    description:
+      'The sacred covenant of marriage in Islam: conditions of a valid Nikah, the Mahr, rights of spouses, marriage duas, forbidden marriages, and the Walimah feast.',
+    href: '/nikah',
     colour: 'bg-midnight',
   },
 ];

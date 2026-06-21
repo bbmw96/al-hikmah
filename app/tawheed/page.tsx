@@ -2,6 +2,8 @@ import type { Metadata } from 'next';
 import { PageHeader } from '@/components/ui/PageHeader';
 import { ArabicText } from '@/components/ui/ArabicText';
 
+export const dynamic = 'force-static';
+
 export const metadata: Metadata = {
   title: 'Tawheed: Islamic Monotheism',
   description: 'A comprehensive guide to Tawheed: the three categories of divine oneness, the shahada and its meaning, the danger of shirk, and why Tawheed is the foundation of all Islam and the decisive matter on the Day of Judgement.',

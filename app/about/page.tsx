@@ -3,6 +3,8 @@ import Link from 'next/link';
 import { PageHeader } from '@/components/ui/PageHeader';
 import { BookOpen, Globe, Shield, Heart } from 'lucide-react';
 
+export const dynamic = 'force-static';
+
 export const metadata: Metadata = {
   title: 'About',
   description: 'About Al-Hikmah - a scholarly Islamic knowledge resource for Muslims and non-Muslims alike.',

@@ -38,15 +38,19 @@ export function HadithDetail({
   const { t } = useLanguage();
   const [activeTab, setActiveTab] = useState<Tab>('meaning');
   const [language, setLanguage] = useState<LanguageCode>('en');
-  const [translation, setTranslation] = useState<string | null>(null);
-  const [translationForLang, setTranslationForLang] = useState<LanguageCode | null>(null);
+  const [translations, setTranslations] = useState<Map<LanguageCode, string>>(() => new Map());
   const [loading, setLoading] = useState(false);
   const [notAvailable, setNotAvailable] = useState(false);
 
   async function fetchTranslation(lang: LanguageCode) {
     if (lang === 'en') {
-      setTranslation(englishText);
-      setTranslationForLang('en');
+      setTranslations(prev => new Map(prev).set('en', englishText ?? ''));
+      setNotAvailable(false);
+      return;
+    }
+
+    const cached = translations.get(lang);
+    if (cached) {
       setNotAvailable(false);
       return;
     }
@@ -68,11 +72,9 @@ export function HadithDetail({
       const text: string | null =
         data?.text ?? data?.hadiths?.[0]?.body ?? data?.hadiths?.[0]?.text ?? null;
       if (!text) throw new Error('no-text');
-      setTranslation(text);
-      setTranslationForLang(lang);
+      setTranslations(prev => new Map(prev).set(lang, text));
       setNotAvailable(false);
     } catch {
-      setTranslation(null);
       setNotAvailable(true);
     } finally {
       setLoading(false);
@@ -81,14 +83,14 @@ export function HadithDetail({
 
   function handleTabChange(tab: Tab) {
     setActiveTab(tab);
-    if (tab === 'translation' && translationForLang !== language) {
+    if (tab === 'translation' && !translations.has(language)) {
       fetchTranslation(language);
     }
   }
 
   function handleLanguageChange(lang: LanguageCode) {
     setLanguage(lang);
-    if (activeTab === 'translation') {
+    if (activeTab === 'translation' && !translations.has(lang)) {
       fetchTranslation(lang);
     }
   }
@@ -193,10 +195,10 @@ export function HadithDetail({
             <p className="text-xs text-gold/70 uppercase tracking-wider font-medium mb-3">{t('hadith.english')}</p>
             <p className="text-forest/80 leading-relaxed">{englishText}</p>
           </div>
-        ) : translation && translationForLang === language ? (
+        ) : translations.has(language) ? (
           <div>
             <p className="text-xs text-gold/70 uppercase tracking-wider font-medium mb-3">{t('hadith.translation')}</p>
-            <p className="text-forest/80 leading-relaxed whitespace-pre-line">{translation}</p>
+            <p className="text-forest/80 leading-relaxed whitespace-pre-line">{translations.get(language)}</p>
           </div>
         ) : (
           <div className="flex-1 flex items-center justify-center py-12">

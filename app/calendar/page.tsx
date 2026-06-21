@@ -1,6 +1,8 @@
 ﻿import type { Metadata } from 'next';
 import { PageHeader } from '@/components/ui/PageHeader';
 
+export const dynamic = 'force-static';
+
 export const metadata: Metadata = {
   title: 'Islamic Calendar',
   description: 'The Islamic lunar calendar - the twelve months of the Hijri year with their significance and key dates.',

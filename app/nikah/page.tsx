@@ -2,6 +2,8 @@ import type { Metadata } from 'next';
 import { PageHeader } from '@/components/ui/PageHeader';
 import { ArabicText } from '@/components/ui/ArabicText';
 
+export const dynamic = 'force-static';
+
 export const metadata: Metadata = {
   title: 'Nikah: Islamic Marriage',
   description: 'A comprehensive guide to Islamic marriage (Nikah): the conditions of a valid contract, the Mahr (dowry), the marriage sermon, duas for the bride and groom, forbidden marriages, rights and responsibilities, and the walimah feast.',

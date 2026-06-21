@@ -35,6 +35,10 @@ export interface SingleHadithResponse {
 }
 
 /**
+ * @deprecated DO NOT USE. Downloads the entire collection JSON (up to 5 MB+).
+ * Use fetchHadithPage() for paginated lists, or col.hadithCount from collections.ts for counts.
+ */
+/**
  * Fetches a list of hadiths from a given collection in a given language.
  * Language 'eng' fetches English text; 'ara' fetches Arabic text.
  */
@@ -94,6 +98,10 @@ export async function fetchHadith(
 }
 
 /**
+ * @deprecated DO NOT USE. Downloads the entire collection JSON just to get the count.
+ * Use col.hadithCount from lib/data/collections.ts instead — it is already correct.
+ */
+/**
  * Fetches the edition index to get the total hadith count for a collection.
  */
 export async function fetchEditionInfo(
@@ -123,4 +131,40 @@ export function paginateHadiths(
   const start = (page - 1) * pageSize;
   const hadiths = data.hadiths.slice(start, start + pageSize);
   return { hadiths, total, pages };
+}
+
+/**
+ * Fetches a page of hadiths using individual numbered CDN endpoints in parallel.
+ * 20 × ~500 B fetches instead of one 5 MB+ full-collection download;
+ * ~100× less data, same wall-clock time thanks to jsDelivr's global CDN.
+ */
+export async function fetchHadithPage(
+  collection: string,
+  startNumber: number,
+  count: number,
+): Promise<HadithEntry[]> {
+  const numbers = Array.from({ length: count }, (_, i) => startNumber + i);
+  const results = await Promise.allSettled(
+    numbers.map(n =>
+      fetch(`${CDN_BASE}/editions/eng-${collection}/${n}.min.json`, {
+        next: { revalidate: 86400 },
+      })
+        .then(r => (r.ok ? (r.json() as Promise<SingleHadithResponse>) : null))
+        .catch(() => null),
+    ),
+  );
+
+  return results.flatMap((r, i) => {
+    if (r.status === 'fulfilled' && r.value?.text) {
+      return [
+        {
+          hadithnumber: numbers[i],
+          text: r.value.text,
+          grades: r.value.grades,
+          reference: r.value.reference,
+        },
+      ];
+    }
+    return [];
+  });
 }

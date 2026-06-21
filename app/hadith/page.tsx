@@ -4,6 +4,8 @@ import { BookOpen, Lock, ExternalLink } from 'lucide-react';
 import { PageHeader } from '@/components/ui/PageHeader';
 import { HADITH_COLLECTIONS, COLLECTION_GROUPS } from '@/lib/data/collections';
 
+export const dynamic = 'force-static';
+
 export const metadata: Metadata = {
   title: 'Hadith Collections',
   description:
