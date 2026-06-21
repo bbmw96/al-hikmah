@@ -55,7 +55,7 @@ export async function fetchHadithList(
 /**
  * Fetches a single hadith from a collection by its number.
  * Returns both English and Arabic text simultaneously.
- * `found` is true when at least one CDN request returned HTTP 200 —
+ * `found` is true when at least one CDN request returned HTTP 200;
  * even if the text field is empty. Only false on network/4xx failure,
  * which means the hadith number is genuinely out of range.
  */

@@ -40,6 +40,11 @@ function useNavItems(): NavItem[] {
       children: [
         { label: t('nav.99names'),  href: '/99-names' },
         { label: t('nav.prayer'),   href: '/prayer' },
+        { label: t('nav.tawheed'),  href: '/tawheed' },
+        { label: t('nav.ramadan'),  href: '/ramadan' },
+        { label: t('nav.fiqh'),     href: '/fiqh' },
+        { label: t('nav.suluk'),    href: '/suluk' },
+        { label: t('nav.nikah'),    href: '/nikah' },
         { label: t('nav.seerah'),   href: '/seerah' },
         { label: t('nav.glossary'), href: '/glossary' },
         { label: t('nav.calendar'), href: '/calendar' },
