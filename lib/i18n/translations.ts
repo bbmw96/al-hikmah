@@ -68,9 +68,39 @@ const UI = {
   'ui.loading':     { en: 'Loading...',      ms: 'Memuatkan...',  tur: 'Yükleniyor...',    urd: 'لوڈ ہو رہا ہے...',  ben: 'লোড হচ্ছে...',  fas: 'در حال بارگیری...', zh: '加载中…',   yue: '載入中…',  ja: '読み込み中…',    ru: 'Загрузка…',            es: 'Cargando…'           },
   'ui.browse':      { en: 'Browse',          ms: 'Semak',         tur: 'Göz At',           urd: 'دیکھیں',           ben: 'দেখুন',         fas: 'مرور',              zh: '浏览',      yue: '瀏覽',     ja: '閲覧',           ru: 'Просмотр',             es: 'Explorar'            },
   'ui.comingsoon':  { en: 'Coming soon',     ms: 'Akan datang',   tur: 'Yakında',          urd: 'جلد آ رہا ہے',     ben: 'শীঘ্রই আসছে',  fas: 'به زودی',           zh: '即将推出',   yue: '即將推出',  ja: '近日公開',       ru: 'Скоро',                es: 'Próximamente'        },
-  'ui.hadiths':     { en: 'hadiths',         ms: 'hadis',         tur: 'hadis',            urd: 'احادیث',           ben: 'হাদিস',         fas: 'احادیث',            zh: '条圣训',    yue: '條聖訓',   ja: '件のハディース',  ru: 'хадисов',              es: 'hadices'             },
+  'ui.hadiths':     { en: 'hadiths',         ms: 'hadis',         tur: 'hadis',            urd: 'احادیث',           ben: 'হাদিস',         fas: 'حدیث',              zh: '圣训',      yue: '聖訓',     ja: 'ハディース',      ru: 'хадисов',              es: 'hadices'             },
   'ui.selectlang':  { en: 'Select language', ms: 'Pilih bahasa',  tur: 'Dil seç',          urd: 'زبان منتخب کریں',  ben: 'ভাষা নির্বাচন করুন', fas: 'انتخاب زبان', zh: '选择语言', yue: '選擇語言', ja: '言語を選択', ru: 'Выбрать язык',         es: 'Seleccionar idioma'  },
   'ui.changelang':  { en: 'Language',        ms: 'Bahasa',        tur: 'Dil',              urd: 'زبان',             ben: 'ভাষা',          fas: 'زبان',              zh: '语言',      yue: '語言',     ja: '言語',           ru: 'Язык',                 es: 'Idioma'              },
+  'ui.explore':     { en: 'Explore',         ms: 'Terokai',       tur: 'Keşfet',           urd: 'دیکھیں',           ben: 'অন্বেষণ',       fas: 'کاوش',              zh: '探索',      yue: '探索',     ja: '探索する',       ru: 'Изучить',              es: 'Explorar'            },
+  'ui.all':         { en: 'All',             ms: 'Semua',         tur: 'Hepsi',            urd: 'سب',               ben: 'সব',            fas: 'همه',               zh: '全部',      yue: '全部',     ja: 'すべて',         ru: 'Все',                  es: 'Todo'                },
+  'ui.makki':       { en: 'Makki',           ms: 'Makkiyyah',     tur: 'Mekki',            urd: 'مکی',              ben: 'মক্কী',         fas: 'مکی',               zh: '麦加章',    yue: '麥加章',   ja: 'マッカ章',       ru: 'Меккийские',           es: 'Mequí'               },
+  'ui.madani':      { en: 'Madani',          ms: 'Madaniyyah',    tur: 'Medeni',           urd: 'مدنی',             ben: 'মাদানী',        fas: 'مدنی',              zh: '麦地那章',  yue: '麥地那章', ja: 'マディーナ章',    ru: 'Мединские',            es: 'Medinés'             },
+  'ui.verses':      { en: 'verses',          ms: 'ayat',          tur: 'ayet',             urd: 'آیات',             ben: 'আয়াত',          fas: 'آیه',               zh: '节',        yue: '節',       ja: '節',             ru: 'аятов',                es: 'versículos'          },
+  'ui.nosurahs':    {
+    en:  'No surahs match your search.',
+    ms:  'Tiada surah yang sepadan.',
+    tur: 'Aramanızla eşleşen sure bulunamadı.',
+    urd: 'آپ کی تلاش سے کوئی سورہ نہیں ملی۔',
+    ben: 'আপনার অনুসন্ধানে কোনো সূরা পাওয়া যায়নি।',
+    fas: 'هیچ سوره‌ای با جستجوی شما مطابقت ندارد.',
+    zh:  '没有找到符合搜索的章节。',
+    yue: '找不到符合搜尋的章節。',
+    ja:  '検索に一致するスーラーが見つかりません。',
+    ru:  'Сур, соответствующих поиску, не найдено.',
+    es:  'No hay suras que coincidan con tu búsqueda.',
+  },
+
+  /* ── Home page sections ──────────────────────────────── */
+  'home.explore':      { en: 'Explore Al-Hikmah',     ms: 'Terokai Al-Hikmah',       tur: "Al-Hikmah'ı Keşfedin",        urd: 'الحکمہ دریافت کریں',         ben: 'আল-হিকমাহ অন্বেষণ করুন',     fas: 'کاوش در الحکمه',          zh: '探索Al-Hikmah',   yue: '探索Al-Hikmah',   ja: 'アル・ヒクマを探索する',    ru: 'Исследуйте Аль-Хикма',           es: 'Explorar Al-Hikmah'             },
+  'home.exploreSub':   { en: "Navigate authentic Islamic knowledge, from the words of the Prophet ﷺ to the wisdom of the ages.", ms: 'Telusuri ilmu Islam yang sahih, dari sabda-sabda Nabi ﷺ hingga hikmah zaman.', tur: "Peygamber'in ﷺ sözlerinden çağların hikmetine kadar özgün İslami bilgiyi keşfedin.", urd: 'مستند اسلامی علم میں سفر کریں، نبی ﷺ کے اقوال سے لے کر صدیوں کی حکمت تک۔', ben: 'নবী ﷺ-এর বাণী থেকে যুগের জ্ঞান পর্যন্ত — খাঁটি ইসলামি জ্ঞানে বিচরণ করুন।', fas: 'از کلمات پیامبر ﷺ تا حکمت اعصار — در دانش اصیل اسلامی مسیر بیابید.', zh: '从先知ﷺ的话语到历代智慧，探索正宗伊斯兰知识。', yue: '從先知ﷺ的話語到歷代智慧，探索正宗伊斯蘭知識。', ja: '預言者ﷺのお言葉から時代の知恵まで、本格的なイスラムの知識を探索してください。', ru: 'Откройте для себя подлинные исламские знания — от слов Пророка ﷺ до мудрости веков.', es: 'Navega por el auténtico conocimiento islámico, desde las palabras del Profeta ﷺ hasta la sabiduría de los siglos.' },
+  'home.featured':     { en: 'Featured Hadith Collections',                     ms: 'Koleksi Hadis Pilihan',                       tur: 'Öne Çıkan Hadis Koleksiyonları',                    urd: 'نمایاں احادیث مجموعے',               ben: 'বিশেষ হাদিস সংকলন',              fas: 'مجموعه‌های برگزیده حدیث',  zh: '精选圣训集',          yue: '精選聖訓集',         ja: '注目のハディース集',          ru: 'Избранные сборники хадисов',               es: 'Colecciones destacadas de Hadith'   },
+  'home.featuredSub':  { en: "The most revered collections of the Prophet's ﷺ words", ms: 'Koleksi paling dihormati bagi sabda-sabda Nabi ﷺ', tur: "Peygamber'in ﷺ sözlerinin en saygın koleksiyonları", urd: 'نبی کریم ﷺ کے اقوال کے سب سے معزز مجموعے', ben: 'নবী ﷺ-এর বাণীর সবচেয়ে সম্মানিত সংকলন', fas: 'معتبرترین مجموعه‌های احادیث پیامبر ﷺ', zh: '先知ﷺ言语最受尊崇的集录', yue: '先知ﷺ言語最受尊崇的集錄', ja: '預言者ﷺの言葉の最も尊ばれる集録', ru: 'Наиболее почитаемые собрания слов Пророка ﷺ', es: 'Las colecciones más veneradas de las palabras del Profeta ﷺ' },
+  'home.allcollections': { en: 'All Collections',  ms: 'Semua Koleksi',   tur: 'Tüm Koleksiyonlar',  urd: 'تمام مجموعے',     ben: 'সব সংকলন',         fas: 'همه مجموعه‌ها',    zh: '所有集录',      yue: '所有集錄',     ja: 'すべてのコレクション', ru: 'Все коллекции',    es: 'Todas las colecciones'   },
+  'home.viewall':        { en: 'View All Collections', ms: 'Lihat Semua Koleksi', tur: 'Tüm Koleksiyonları Gör', urd: 'تمام مجموعے دیکھیں', ben: 'সব সংকলন দেখুন', fas: 'مشاهده همه مجموعه‌ها', zh: '查看所有集录', yue: '查看所有集錄', ja: 'すべてのコレクションを見る', ru: 'Все коллекции', es: 'Ver todas las colecciones' },
+  'home.beginstudy':     { en: 'Begin Your Study',  ms: 'Mulakan Kajian Anda', tur: 'Çalışmanıza Başlayın', urd: 'اپنا مطالعہ شروع کریں', ben: 'আপনার অধ্যয়ন শুরু করুন', fas: 'مطالعه خود را آغاز کنید', zh: '开始学习', yue: '開始學習', ja: '学習を始める', ru: 'Начните учёбу', es: 'Comienza tu estudio' },
+
+  /* ── Prophets page ───────────────────────────────────── */
+  'prophets.sentto':   { en: 'Sent to:',           ms: 'Diutus kepada:',  tur: 'Gönderildiği yer:',  urd: 'بھیجے گئے:',      ben: 'প্রেরিত:',         fas: 'فرستاده به:',      zh: '奉差遣至：', yue: '奉差遣至：', ja: '派遣先：',        ru: 'Послан к:',        es: 'Enviado a:'              },
 
   /* ── Hadith page ─────────────────────────────────────── */
   'hadith.english':     { en: 'English Meaning',        ms: 'Makna Bahasa Inggeris',   tur: 'İngilizce Anlam',       urd: 'انگریزی مفہوم',       ben: 'ইংরেজি অর্থ',        fas: 'معنی انگلیسی',  zh: '英文含义',    yue: '英文含義',   ja: '英語の意味',          ru: 'Значение на английском',    es: 'Significado en Inglés'    },

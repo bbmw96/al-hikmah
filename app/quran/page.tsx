@@ -6,10 +6,12 @@ import { Search, BookOpen } from 'lucide-react';
 import { PageHeader } from '@/components/ui/PageHeader';
 import { SURAHS } from '@/lib/data/quran';
 import { cn } from '@/lib/utils';
+import { useLanguage } from '@/lib/i18n/context';
 
 type Filter = 'all' | 'Makki' | 'Madani';
 
 export default function QuranPage() {
+  const { t } = useLanguage();
   const [query, setQuery] = useState('');
   const [filter, setFilter] = useState<Filter>('all');
 
@@ -69,14 +71,18 @@ export default function QuranPage() {
                   : 'text-forest/70 border-forest/20 hover:border-forest/50',
               )}
             >
-              {f === 'all' ? `All (${SURAHS.length})` : f === 'Makki' ? `Makki (${SURAHS.filter(s => s.classification === 'Makki').length})` : `Madani (${SURAHS.filter(s => s.classification === 'Madani').length})`}
+              {f === 'all'
+                ? `${t('ui.all')} (${SURAHS.length})`
+                : f === 'Makki'
+                  ? `${t('ui.makki')} (${SURAHS.filter(s => s.classification === 'Makki').length})`
+                  : `${t('ui.madani')} (${SURAHS.filter(s => s.classification === 'Madani').length})`}
             </button>
           ))}
         </div>
 
         {/* Surah grid */}
         {displayed.length === 0 ? (
-          <p className="text-center text-forest/50 py-16">No surahs match your search.</p>
+          <p className="text-center text-forest/50 py-16">{t('ui.nosurahs')}</p>
         ) : (
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
             {displayed.map(surah => (
@@ -115,7 +121,7 @@ export default function QuranPage() {
                   <p className="text-gold/60 text-xs italic">{surah.transliteration.split('-').map(w => w.charAt(0).toUpperCase() + w.slice(1)).join('-')}</p>
                 </div>
 
-                <p className="text-forest/50 text-xs mt-auto">{surah.verses} verses · {surah.period}</p>
+                <p className="text-forest/50 text-xs mt-auto">{surah.verses} {t('ui.verses')} · {surah.period}</p>
               </Link>
             ))}
           </div>
