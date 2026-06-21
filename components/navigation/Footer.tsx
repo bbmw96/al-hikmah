@@ -15,7 +15,13 @@ const FOOTER_LINKS = [
   {
     heading: 'Learn',
     links: [
+      { label: 'The Quran (Asbab al-Nuzul)', href: '/quran' },
       { label: 'Prophets of Islam', href: '/prophets' },
+      { label: 'Tawheed: Divine Oneness', href: '/tawheed' },
+      { label: 'Ramadan: Complete Guide', href: '/ramadan' },
+      { label: 'Fiqh: Islamic Law', href: '/fiqh' },
+      { label: 'Suluk: Spiritual Path', href: '/suluk' },
+      { label: 'Nikah: Islamic Marriage', href: '/nikah' },
       { label: "Du'as & Supplications", href: '/duas' },
       { label: 'Hajj & Umrah Guide', href: '/hajj-umrah' },
       { label: '99 Names of Allah', href: '/99-names' },
@@ -25,7 +31,7 @@ const FOOTER_LINKS = [
   {
     heading: 'Reference',
     links: [
-      { label: 'Seerah', href: '/seerah' },
+      { label: 'Seerah: Life of the Prophet', href: '/seerah' },
       { label: 'Islamic Glossary', href: '/glossary' },
       { label: 'Islamic Calendar', href: '/calendar' },
       { label: 'About Al-Hikmah', href: '/about' },

@@ -38,6 +38,7 @@ function useNavItems(): NavItem[] {
     {
       label: t('nav.learn'),
       children: [
+        { label: t('nav.quran'),    href: '/quran' },
         { label: t('nav.99names'),  href: '/99-names' },
         { label: t('nav.prayer'),   href: '/prayer' },
         { label: t('nav.tawheed'),  href: '/tawheed' },
