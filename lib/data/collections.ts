@@ -7,7 +7,7 @@ export interface HadithCollection {
   authorArabic: string;
   authorDates: string;
   hadithCount: number;
-  group: 'six-books' | 'nine-books' | 'saheeh' | 'sunan' | 'musnad' | 'muwatta' | 'musannaf';
+  group: 'six-books' | 'nine-books' | 'saheeh' | 'sunan' | 'musnad' | 'muwatta' | 'musannaf' | 'forty';
   grade: 'Most Authentic' | 'Highly Authentic' | 'Authentic' | 'Major Collection';
   description: string;
   apiCollection: string | null;
@@ -170,6 +170,57 @@ export const HADITH_COLLECTIONS: HadithCollection[] = [
     displayOrder: 9,
   },
   {
+    id: 'nawawi',
+    arabicName: 'الأربعون النووية',
+    englishName: 'Forty Hadith of Imam al-Nawawi',
+    shortName: 'Al-Nawawi',
+    author: 'Imam Yahya ibn Sharaf al-Nawawi',
+    authorArabic: 'الإمام يحيى بن شرف النووي',
+    authorDates: '631 AH - 676 AH / 1233–1277 CE',
+    hadithCount: 42,
+    group: 'forty',
+    grade: 'Highly Authentic',
+    description:
+      'Imam al-Nawawi\'s renowned collection of 42 comprehensive hadiths, each encapsulating a major principle of Islam. Described by scholars as "half of Islam" or more, these hadiths are among the most memorised and studied in the Muslim world, covering belief, worship, ethics, and jurisprudence in concise prophetic statements.',
+    apiCollection: 'nawawi',
+    available: true,
+    displayOrder: 10,
+  },
+  {
+    id: 'qudsi',
+    arabicName: 'الأحاديث القدسية',
+    englishName: 'Forty Hadith Qudsi',
+    shortName: 'Hadith Qudsi',
+    author: 'Various Imams',
+    authorArabic: 'جماعة من الأئمة',
+    authorDates: '—',
+    hadithCount: 40,
+    group: 'forty',
+    grade: 'Highly Authentic',
+    description:
+      'Forty sacred hadiths in which Allah speaks in the first person through the Prophet ﷺ, distinct from the Quran yet carrying a unique divine quality. These narrations address matters of the heart, divine mercy, sin, repentance, and the relationship between the servant and his Lord.',
+    apiCollection: 'qudsi',
+    available: true,
+    displayOrder: 11,
+  },
+  {
+    id: 'dehlawi',
+    arabicName: 'الأربعون الدهلوية',
+    englishName: 'Forty Hadith of Shah Waliullah',
+    shortName: 'Al-Dehlawi',
+    author: 'Shah Waliullah al-Dehlawi',
+    authorArabic: 'الشاه ولي الله الدهلوي',
+    authorDates: '1114 AH - 1176 AH / 1703–1762 CE',
+    hadithCount: 40,
+    group: 'forty',
+    grade: 'Highly Authentic',
+    description:
+      'A selection of forty authenticated hadiths compiled by the renowned 18th-century Indian scholar Shah Waliullah al-Dehlawi, one of the most influential Islamic reformers of the subcontinent. The collection reflects his emphasis on returning to the authentic prophetic tradition as the foundation of Islamic revival.',
+    apiCollection: 'dehlawi',
+    available: true,
+    displayOrder: 12,
+  },
+  {
     id: 'ibn-khuzaymah',
     arabicName: 'صحيح ابن خزيمة',
     englishName: 'Sahih Ibn Khuzaymah',
@@ -184,7 +235,7 @@ export const HADITH_COLLECTIONS: HadithCollection[] = [
       'A rigorously authenticated collection applying conditions nearly as strict as those of the two Sahihs. Imam Ibn Khuzaymah was known as the Imam of Imams (Imamul A\'imma) for his profound knowledge. The collection focuses predominantly on legal topics and is particularly valued in Shafi\'i scholarly circles.',
     apiCollection: null,
     available: false,
-    displayOrder: 10,
+    displayOrder: 13,
   },
   {
     id: 'ibn-hibban',
@@ -201,7 +252,7 @@ export const HADITH_COLLECTIONS: HadithCollection[] = [
       'A substantial collection known for its unique arrangement by subject matter rather than by chapters of law, which Imam Ibn Hibban called al-Taqasim wa al-Anwa\' (Divisions and Types). The collection applies strict authentication criteria and is considered among the highest-grade authentic collections after the two Sahihs.',
     apiCollection: null,
     available: false,
-    displayOrder: 11,
+    displayOrder: 14,
   },
   {
     id: 'humaydi',
@@ -218,7 +269,7 @@ export const HADITH_COLLECTIONS: HadithCollection[] = [
       'One of the earliest Musnad (arranged by Companion) collections, compiled by a student of Imam al-Shafi\'i and a teacher of Imam al-Bukhari. The Musnad al-Humaydi is valued for its early compilation and its reliable chain of narrators, representing some of the finest hadith scholarship of the early Islamic period.',
     apiCollection: null,
     available: false,
-    displayOrder: 12,
+    displayOrder: 15,
   },
   {
     id: 'abd-ibn-humayd',
@@ -235,7 +286,7 @@ export const HADITH_COLLECTIONS: HadithCollection[] = [
       'A hadith collection arranged by Companion that serves as an important reference for scholars, containing narrations from numerous Companions of the Prophet ﷺ. This collection is frequently cited in classical works of hadith science and jurisprudence and contains narrations not found elsewhere.',
     apiCollection: null,
     available: false,
-    displayOrder: 13,
+    displayOrder: 16,
   },
   {
     id: 'abd-al-razzaq',
@@ -252,7 +303,7 @@ export const HADITH_COLLECTIONS: HadithCollection[] = [
       'One of the most significant early collections, containing not only prophetic hadiths but also the rulings and opinions of the Companions and Successors (tabi\'in). The Musannaf is arranged by legal topics and is an indispensable reference for understanding the early development of Islamic law and the juristic opinions of the early Muslim community.',
     apiCollection: null,
     available: false,
-    displayOrder: 14,
+    displayOrder: 17,
   },
   {
     id: 'ibn-abi-shaybah',
@@ -269,7 +320,7 @@ export const HADITH_COLLECTIONS: HadithCollection[] = [
       'One of the largest and most comprehensive early hadith collections, arranged by legal topic. In addition to prophetic traditions, it contains extensive rulings from the Companions and Successors. It was a primary source for both Imam al-Bukhari and Imam Muslim in their own compilations, demonstrating its extraordinary scholarly importance.',
     apiCollection: null,
     available: false,
-    displayOrder: 15,
+    displayOrder: 18,
   },
 ];
 
@@ -277,8 +328,14 @@ export const SIX_BOOKS = HADITH_COLLECTIONS.filter(c => c.group === 'six-books')
 export const NINE_BOOKS = HADITH_COLLECTIONS.filter(
   c => c.group === 'six-books' || c.id === 'malik' || c.id === 'ahmad' || c.id === 'darimi'
 );
+export const FORTY_COLLECTIONS = HADITH_COLLECTIONS.filter(c => c.group === 'forty');
 export const OTHER_COLLECTIONS = HADITH_COLLECTIONS.filter(
-  c => !c.group.includes('six-books') && c.id !== 'malik' && c.id !== 'ahmad' && c.id !== 'darimi'
+  c =>
+    c.group !== 'six-books' &&
+    c.group !== 'forty' &&
+    c.id !== 'malik' &&
+    c.id !== 'ahmad' &&
+    c.id !== 'darimi'
 );
 
 export const COLLECTION_GROUPS = {
@@ -288,6 +345,7 @@ export const COLLECTION_GROUPS = {
     HADITH_COLLECTIONS.find(c => c.id === 'ahmad')!,
     HADITH_COLLECTIONS.find(c => c.id === 'darimi')!,
   ],
+  'Forty Hadith Collections (Arba\'een)': FORTY_COLLECTIONS,
   'Other Major Collections': OTHER_COLLECTIONS,
 } as const;
 

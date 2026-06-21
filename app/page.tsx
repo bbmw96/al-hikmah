@@ -13,6 +13,9 @@ import {
   Scale,
   Sparkles,
   Gem,
+  Sunrise,
+  CalendarDays,
+  Library,
 } from 'lucide-react';
 import { IslamicPattern } from '@/components/ui/IslamicPattern';
 import { HeroSection } from '@/components/ui/HeroSection';
@@ -87,6 +90,15 @@ const QUICK_ACCESS = [
     colour: 'bg-forest',
   },
   {
+    icon: Sunrise,
+    title: 'How to Pray',
+    arabicTitle: 'الصلاة',
+    description:
+      'Complete guide to salah — wudu, the five daily prayers, Arabic recitations, and the Night Journey.',
+    href: '/prayer',
+    colour: 'bg-midnight',
+  },
+  {
     icon: Infinity,
     title: 'Tawheed: Divine Oneness',
     arabicTitle: 'التوحيد',
@@ -129,6 +141,24 @@ const QUICK_ACCESS = [
     description:
       'The sacred covenant of marriage in Islam: conditions of a valid Nikah, the Mahr, rights of spouses, marriage duas, forbidden marriages, and the Walimah feast.',
     href: '/nikah',
+    colour: 'bg-midnight',
+  },
+  {
+    icon: CalendarDays,
+    title: 'Islamic Calendar',
+    arabicTitle: 'التقويم',
+    description:
+      'The twelve months of the Hijri calendar with key Islamic dates and significant events.',
+    href: '/calendar',
+    colour: 'bg-forest',
+  },
+  {
+    icon: Library,
+    title: 'Islamic Glossary',
+    arabicTitle: 'المعجم',
+    description:
+      'Searchable reference of essential Islamic terms, concepts, and scholarly vocabulary.',
+    href: '/glossary',
     colour: 'bg-midnight',
   },
 ];
