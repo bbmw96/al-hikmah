@@ -8,10 +8,12 @@ export function cn(...inputs: ClassValue[]) {
 export const SUPPORTED_LANGUAGES = [
   { code: 'en',  label: 'English',  nativeLabel: 'English',         dir: 'ltr', apiPrefix: 'eng' },
   { code: 'ms',  label: 'Malay',    nativeLabel: 'Bahasa Melayu',   dir: 'ltr', apiPrefix: 'ind' },
-  { code: 'tur', label: 'Turkish',  nativeLabel: 'Türkçe',           dir: 'ltr', apiPrefix: 'tur' },
-  { code: 'urd', label: 'Urdu',     nativeLabel: 'اردو',             dir: 'rtl', apiPrefix: 'urd' },
-  { code: 'ben', label: 'Bengali',  nativeLabel: 'বাংলা',            dir: 'ltr', apiPrefix: 'ben' },
-  { code: 'fas', label: 'Persian',  nativeLabel: 'فارسی',            dir: 'rtl', apiPrefix: 'fas' },
+  { code: 'tur', label: 'Turkish',  nativeLabel: 'Türkçe',          dir: 'ltr', apiPrefix: 'tur' },
+  { code: 'urd', label: 'Urdu',     nativeLabel: 'اردو',            dir: 'rtl', apiPrefix: 'urd' },
+  { code: 'ben', label: 'Bengali',  nativeLabel: 'বাংলা',           dir: 'ltr', apiPrefix: 'ben' },
+  { code: 'fas', label: 'Persian',  nativeLabel: 'فارسی',           dir: 'rtl', apiPrefix: 'fas' },
+  { code: 'es',  label: 'Spanish',  nativeLabel: 'Español',         dir: 'ltr', apiPrefix: 'spa' },
+  { code: 'ru',  label: 'Russian',  nativeLabel: 'Русский',         dir: 'ltr', apiPrefix: 'rus' },
 ] as const;
 
 export type LanguageCode = typeof SUPPORTED_LANGUAGES[number]['code'];

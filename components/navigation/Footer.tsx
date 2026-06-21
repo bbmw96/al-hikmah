@@ -91,6 +91,14 @@ export function Footer() {
             <Heart className="w-3.5 h-3.5 text-gold/60 fill-gold/30" aria-hidden="true" />
             for seekers of knowledge
           </p>
+          <a
+            href="https://bbmw0.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-cream/30 hover:text-gold/60 text-xs transition-colors"
+          >
+            A BBMW0 Technologies project
+          </a>
           <p
             dir="rtl"
             lang="ar"

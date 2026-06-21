@@ -160,7 +160,7 @@ export function HadithDetail({
           <LanguageSelector
             value={language}
             onChange={handleLanguageChange}
-            label="Language"
+            label={t('ui.changelang')}
           />
         )}
       </div>
@@ -170,10 +170,10 @@ export function HadithDetail({
         {activeTab === 'meaning' ? (
           <div>
             <p className="text-xs text-gold/70 uppercase tracking-wider font-medium mb-3">
-              English Meaning
+              {t('hadith.english')}
             </p>
             <p className="text-forest/80 leading-relaxed">
-              {englishText ?? 'English text not available for this hadith.'}
+              {englishText ?? t('hadith.notext')}
             </p>
           </div>
         ) : loading ? (
@@ -190,18 +190,18 @@ export function HadithDetail({
           </div>
         ) : language === 'en' ? (
           <div>
-            <p className="text-xs text-gold/70 uppercase tracking-wider font-medium mb-3">English</p>
+            <p className="text-xs text-gold/70 uppercase tracking-wider font-medium mb-3">{t('hadith.english')}</p>
             <p className="text-forest/80 leading-relaxed">{englishText}</p>
           </div>
         ) : translation && translationForLang === language ? (
           <div>
-            <p className="text-xs text-gold/70 uppercase tracking-wider font-medium mb-3">Translation</p>
+            <p className="text-xs text-gold/70 uppercase tracking-wider font-medium mb-3">{t('hadith.translation')}</p>
             <p className="text-forest/80 leading-relaxed whitespace-pre-line">{translation}</p>
           </div>
         ) : (
           <div className="flex-1 flex items-center justify-center py-12">
             <p className="text-forest/40 text-sm text-center">
-              Select a language above to load the translation.
+              {t('hadith.selectlang')}
             </p>
           </div>
         )}
@@ -215,7 +215,7 @@ export function HadithDetail({
             className="btn-outline flex items-center gap-1.5 text-sm"
           >
             <ChevronLeft className="w-4 h-4" aria-hidden="true" />
-            Previous
+            {t('ui.previous')}
           </Link>
         ) : <div />}
         <Link
@@ -228,7 +228,7 @@ export function HadithDetail({
           href={`/hadith/${collection.id}/${hadithNumber + 1}`}
           className="btn-outline flex items-center gap-1.5 text-sm"
         >
-          Next
+          {t('ui.next')}
           <ChevronRight className="w-4 h-4" aria-hidden="true" />
         </Link>
       </nav>
