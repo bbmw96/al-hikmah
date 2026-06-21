@@ -99,7 +99,7 @@ const QUICK_ACCESS: {
     titleKey: 'nav.prayer',
     arabicTitle: 'الصلاة',
     description:
-      'Complete guide to salah — wudu, the five daily prayers, Arabic recitations, and the Night Journey.',
+      'Complete guide to salah: wudu, the five daily prayers, Arabic recitations, and the Night Journey.',
     href: '/prayer',
     colour: 'bg-midnight',
   },
