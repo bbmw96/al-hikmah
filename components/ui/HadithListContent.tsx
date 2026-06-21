@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import { BookOpen, Lock } from 'lucide-react';
-import { HADITH_COLLECTIONS, COLLECTION_GROUPS } from '@/lib/data/collections';
+import { COLLECTION_GROUPS } from '@/lib/data/collections';
 import { useLanguage } from '@/lib/i18n/context';
 
 function GradeTag({ grade }: { grade: string }) {
