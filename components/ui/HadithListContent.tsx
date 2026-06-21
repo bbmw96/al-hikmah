@@ -88,8 +88,7 @@ export function HadithListContent() {
           theology. The grades shown reflect the consensus of classical hadith scholars.
         </p>
         <p className="text-forest/50 text-xs">
-          Hadith texts sourced from the open-access Hadith API (fawazahmed0). Scholarly metadata compiled from
-          classical sources.
+          Hadith texts and scholarly metadata compiled from classical sources.
         </p>
       </aside>
     </div>

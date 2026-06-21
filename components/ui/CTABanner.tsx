@@ -21,7 +21,8 @@ export function CTABanner() {
           وَمَا أُوتِيتُم مِّنَ الْعِلْمِ إِلَّا قَلِيلًا
         </p>
         <p className="text-cream/60 italic text-base mb-8">
-          "And of knowledge, you have been given only a little." - Surah al-Isra' 17:85
+          {t('cta.verse.text')}{' '}
+          <span className="not-italic text-gold/70">— Surah al-Isra&apos; 17:85</span>
         </p>
         <Link href="/hadith" className="btn-gold text-base px-8 py-3.5">
           {t('home.beginstudy')}

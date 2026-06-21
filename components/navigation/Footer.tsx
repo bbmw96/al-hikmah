@@ -1,45 +1,50 @@
+'use client';
+
 import Link from 'next/link';
 import { BookOpen, Heart } from 'lucide-react';
-
-const FOOTER_LINKS = [
-  {
-    heading: 'Hadith',
-    links: [
-      { label: 'Browse All Collections', href: '/hadith' },
-      { label: 'Sahih al-Bukhari', href: '/hadith/bukhari' },
-      { label: 'Sahih Muslim', href: '/hadith/muslim' },
-      { label: 'Sunan Abu Dawud', href: '/hadith/abudawud' },
-      { label: 'Muwatta Imam Malik', href: '/hadith/malik' },
-    ],
-  },
-  {
-    heading: 'Learn',
-    links: [
-      { label: 'The Quran (Asbab al-Nuzul)', href: '/quran' },
-      { label: 'Prophets of Islam', href: '/prophets' },
-      { label: 'Tawheed: Divine Oneness', href: '/tawheed' },
-      { label: 'Ramadan: Complete Guide', href: '/ramadan' },
-      { label: 'Fiqh: Islamic Law', href: '/fiqh' },
-      { label: 'Suluk: Spiritual Path', href: '/suluk' },
-      { label: 'Nikah: Islamic Marriage', href: '/nikah' },
-      { label: "Du'as & Supplications", href: '/duas' },
-      { label: 'Hajj & Umrah Guide', href: '/hajj-umrah' },
-      { label: '99 Names of Allah', href: '/99-names' },
-      { label: 'How to Pray', href: '/prayer' },
-    ],
-  },
-  {
-    heading: 'Reference',
-    links: [
-      { label: 'Seerah: Life of the Prophet', href: '/seerah' },
-      { label: 'Islamic Glossary', href: '/glossary' },
-      { label: 'Islamic Calendar', href: '/calendar' },
-      { label: 'About Al-Hikmah', href: '/about' },
-    ],
-  },
-];
+import { useLanguage } from '@/lib/i18n/context';
 
 export function Footer() {
+  const { t } = useLanguage();
+
+  const sections = [
+    {
+      heading: t('nav.hadith'),
+      links: [
+        { label: t('nav.browse'), href: '/hadith' },
+        { label: 'Sahih al-Bukhari', href: '/hadith/bukhari' },
+        { label: 'Sahih Muslim', href: '/hadith/muslim' },
+        { label: 'Sunan Abu Dawud', href: '/hadith/abudawud' },
+        { label: 'Muwatta Imam Malik', href: '/hadith/malik' },
+      ],
+    },
+    {
+      heading: t('nav.learn'),
+      links: [
+        { label: t('nav.quran'), href: '/quran' },
+        { label: t('nav.prophets'), href: '/prophets' },
+        { label: t('nav.tawheed'), href: '/tawheed' },
+        { label: t('nav.ramadan'), href: '/ramadan' },
+        { label: t('nav.fiqh'), href: '/fiqh' },
+        { label: t('nav.suluk'), href: '/suluk' },
+        { label: t('nav.nikah'), href: '/nikah' },
+        { label: t('nav.duas'), href: '/duas' },
+        { label: t('nav.hajj'), href: '/hajj-umrah' },
+        { label: t('nav.99names'), href: '/99-names' },
+        { label: t('nav.prayer'), href: '/prayer' },
+      ],
+    },
+    {
+      heading: t('footer.reference'),
+      links: [
+        { label: t('nav.seerah'), href: '/seerah' },
+        { label: t('nav.glossary'), href: '/glossary' },
+        { label: t('nav.calendar'), href: '/calendar' },
+        { label: t('nav.about'), href: '/about' },
+      ],
+    },
+  ];
+
   return (
     <footer className="bg-forest border-t border-gold/20">
       <div className="max-w-7xl mx-auto px-6 py-14">
@@ -54,26 +59,26 @@ export function Footer() {
           <p
             dir="rtl"
             lang="ar"
-            className="arabic text-gold/60"
+            className="arabic text-gold/80"
             aria-label="Al-hikmah: Wisdom"
           >
             الحكمة
           </p>
           <p className="text-cream/50 text-sm leading-relaxed">
-            A scholarly resource for the authentic Islamic tradition, open to all who seek knowledge.
+            {t('footer.brand.desc')}
           </p>
         </div>
 
         {/* Links grid */}
         <div className="grid grid-cols-2 md:grid-cols-3 gap-8 border-t border-gold/15 pt-10 mb-10">
-          {FOOTER_LINKS.map(section => (
+          {sections.map(section => (
             <div key={section.heading}>
               <h3 className="font-garamond text-gold font-semibold text-base mb-4">
                 {section.heading}
               </h3>
               <ul className="space-y-2">
                 {section.links.map(link => (
-                  <li key={link.label}>
+                  <li key={link.href}>
                     <Link
                       href={link.href}
                       className="text-cream/50 hover:text-cream/80 text-sm transition-colors"
@@ -90,12 +95,11 @@ export function Footer() {
         {/* Bottom bar */}
         <div className="border-t border-gold/15 pt-8 flex flex-col sm:flex-row items-center justify-between gap-4">
           <p className="text-cream/40 text-sm">
-            &copy; {new Date().getFullYear()} Al-Hikmah. All rights reserved.
+            &copy; {new Date().getFullYear()} {t('footer.copyright')}
           </p>
           <p className="text-cream/40 text-sm flex items-center gap-1.5">
-            Compiled with
-            <Heart className="w-3.5 h-3.5 text-gold/60 fill-gold/30" aria-hidden="true" />
-            for seekers of knowledge
+            {t('footer.compiled')}
+            <Heart className="w-3.5 h-3.5 text-gold/60 fill-gold/30 ml-1 flex-shrink-0" aria-hidden="true" />
           </p>
           <a
             href="https://bbmw0.com"
@@ -103,7 +107,7 @@ export function Footer() {
             rel="noopener noreferrer"
             className="text-cream/30 hover:text-gold/60 text-xs transition-colors"
           >
-            A BBMW0 Technologies project
+            {t('footer.bbmw0')}
           </a>
           <p
             dir="rtl"

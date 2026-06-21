@@ -67,7 +67,7 @@ body {
   direction: rtl;
   font-size: 1.6rem;
   line-height: 2.8;
-  color: #1C1C1E;
+  font-weight: 700;
   unicode-bidi: embed;
 }
 
@@ -76,7 +76,7 @@ body {
   direction: rtl;
   font-size: 2rem;
   line-height: 3;
-  color: #1C1C1E;
+  font-weight: 700;
   unicode-bidi: embed;
 }
 
@@ -85,7 +85,7 @@ body {
   direction: rtl;
   font-size: 2.5rem;
   line-height: 3.2;
-  color: #1C1C1E;
+  font-weight: 700;
   unicode-bidi: embed;
 }
 
@@ -94,7 +94,16 @@ body {
   direction: rtl;
   font-size: 1.2rem;
   line-height: 2.4;
-  color: #1C1C1E;
+  font-weight: 700;
+  unicode-bidi: embed;
+}
+
+.arabic-hero {
+  font-family: var(--font-arabic);
+  direction: rtl;
+  font-size: clamp(4rem, 12vw, 7rem);
+  line-height: 1.55;
+  font-weight: 700;
   unicode-bidi: embed;
 }
 
@@ -399,6 +408,16 @@ body {
 @keyframes shimmer {
   0% { background-position: -200% 0; }
   100% { background-position: 200% 0; }
+}
+
+@keyframes floatY {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-14px); }
+}
+
+@keyframes pulseRing {
+  0%, 100% { opacity: 0.2; transform: scale(1); }
+  50% { opacity: 0.5; transform: scale(1.05); }
 }
 
 .skeleton {
