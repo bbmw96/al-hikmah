@@ -9,9 +9,8 @@ interface Props {
   params: Promise<{ slug: string }>;
 }
 
-export async function generateStaticParams() {
-  return PROPHETS.map(p => ({ slug: p.id }));
-}
+export const revalidate = 3600;
+export const dynamicParams = true;
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;

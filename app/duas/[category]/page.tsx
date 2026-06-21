@@ -3,15 +3,14 @@ import { notFound } from 'next/navigation';
 import Link from 'next/link';
 import { ChevronLeft } from 'lucide-react';
 import { ArabicText } from '@/components/ui/ArabicText';
-import { getDuasByCategory, getCategoryById, DUA_CATEGORIES } from '@/lib/data/duas';
+import { getDuasByCategory, getCategoryById } from '@/lib/data/duas';
 
 interface Props {
   params: Promise<{ category: string }>;
 }
 
-export async function generateStaticParams() {
-  return DUA_CATEGORIES.map(c => ({ category: c.id }));
-}
+export const revalidate = 3600;
+export const dynamicParams = true;
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { category } = await params;

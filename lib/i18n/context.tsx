@@ -16,7 +16,7 @@ interface LanguageContextValue {
 const LanguageContext = createContext<LanguageContextValue>({
   lang: DEFAULT_LANG,
   setLang: () => {},
-  t: (key) => key as string,
+  t: (key) => translate(key, DEFAULT_LANG),
   dir: 'ltr',
 });
 

@@ -3,7 +3,7 @@ import { notFound } from 'next/navigation';
 import Link from 'next/link';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import { PageHeader } from '@/components/ui/PageHeader';
-import { getCollectionById, HADITH_COLLECTIONS } from '@/lib/data/collections';
+import { getCollectionById } from '@/lib/data/collections';
 import { fetchHadithPage } from '@/lib/hadith-api';
 
 interface Props {
@@ -11,9 +11,8 @@ interface Props {
   searchParams: Promise<{ page?: string }>;
 }
 
-export async function generateStaticParams() {
-  return HADITH_COLLECTIONS.filter(c => c.available).map(c => ({ collection: c.id }));
-}
+export const revalidate = 3600;
+export const dynamicParams = true;
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { collection } = await params;

@@ -3,7 +3,7 @@ import { EB_Garamond, Inter } from 'next/font/google';
 import './globals.css';
 import { Navbar } from '@/components/navigation/Navbar';
 import { Footer } from '@/components/navigation/Footer';
-import { LanguageProvider } from '@/lib/i18n/context';
+import { Providers } from './providers';
 
 const ebGaramond = EB_Garamond({
   variable: '--font-garamond',
@@ -41,11 +41,11 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       className={`${ebGaramond.variable} ${inter.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col bg-cream font-inter text-forest">
-        <LanguageProvider>
+        <Providers>
           <Navbar />
           <main className="flex-1 pt-16">{children}</main>
           <Footer />
-        </LanguageProvider>
+        </Providers>
       </body>
     </html>
   );

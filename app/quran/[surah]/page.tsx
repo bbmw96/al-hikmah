@@ -10,9 +10,10 @@ interface Props {
   params: Promise<{ surah: string }>;
 }
 
-export async function generateStaticParams() {
-  return SURAHS.map(s => ({ surah: s.transliteration }));
-}
+// ISR: render surah pages on first request and cache - avoids parallel Turbopack
+// SSR-worker race condition that occurs when all 114 pages build simultaneously.
+export const revalidate = 3600;
+export const dynamicParams = true;
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { surah: slug } = await params;
