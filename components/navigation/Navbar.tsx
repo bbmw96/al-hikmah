@@ -14,46 +14,40 @@ interface NavItem {
   children?: NavItem[];
 }
 
-const NAV_ITEMS: NavItem[] = [
-  {
-    label: 'Hadith',
-    children: [
-      { label: 'Browse Collections', href: '/hadith' },
-      { label: 'The Six Books', href: '/hadith?group=six-books' },
-      { label: 'The Nine Books', href: '/hadith?group=nine-books' },
-      { label: 'Other Collections', href: '/hadith?group=other' },
-    ],
-  },
-  {
-    label: 'Prophets',
-    href: '/prophets',
-  },
-  {
-    label: "Du'as",
-    href: '/duas',
-  },
-  {
-    label: 'Hajj & Umrah',
-    children: [
-      { label: 'Hajj Guide', href: '/hajj-umrah#hajj' },
-      { label: 'Umrah Guide', href: '/hajj-umrah#umrah' },
-    ],
-  },
-  {
-    label: 'Learn',
-    children: [
-      { label: '99 Names of Allah', href: '/99-names' },
-      { label: 'How to Pray', href: '/prayer' },
-      { label: 'Seerah', href: '/seerah' },
-      { label: 'Glossary', href: '/glossary' },
-      { label: 'Islamic Calendar', href: '/calendar' },
-    ],
-  },
-  {
-    label: 'About',
-    href: '/about',
-  },
-];
+function useNavItems(): NavItem[] {
+  const { t } = useLanguage();
+  return [
+    {
+      label: t('nav.hadith'),
+      children: [
+        { label: t('nav.browse'),    href: '/hadith' },
+        { label: t('nav.sixbooks'),  href: '/hadith?group=six-books' },
+        { label: t('nav.ninebooks'), href: '/hadith?group=nine-books' },
+        { label: t('nav.other'),     href: '/hadith?group=other' },
+      ],
+    },
+    { label: t('nav.prophets'), href: '/prophets' },
+    { label: t('nav.duas'),     href: '/duas' },
+    {
+      label: t('nav.hajj'),
+      children: [
+        { label: t('nav.hajjguide'),  href: '/hajj-umrah#hajj' },
+        { label: t('nav.umrahguide'), href: '/hajj-umrah#umrah' },
+      ],
+    },
+    {
+      label: t('nav.learn'),
+      children: [
+        { label: t('nav.99names'),  href: '/99-names' },
+        { label: t('nav.prayer'),   href: '/prayer' },
+        { label: t('nav.seerah'),   href: '/seerah' },
+        { label: t('nav.glossary'), href: '/glossary' },
+        { label: t('nav.calendar'), href: '/calendar' },
+      ],
+    },
+    { label: t('nav.about'), href: '/about' },
+  ];
+}
 
 function DropdownMenu({
   items,
@@ -139,6 +133,7 @@ function LangSwitcher() {
 }
 
 export function Navbar() {
+  const navItems = useNavItems();
   const [mobileOpen, setMobileOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
   const [scrolled, setScrolled] = useState(false);
@@ -202,7 +197,7 @@ export function Navbar() {
 
           {/* Desktop navigation */}
           <ul className="hidden lg:flex items-center gap-1" role="list">
-            {NAV_ITEMS.map(item => (
+            {navItems.map(item => (
               <li
                 key={item.label}
                 className="relative"
@@ -275,7 +270,7 @@ export function Navbar() {
       {mobileOpen && (
         <div className="lg:hidden border-t border-gold/20 bg-forest/98 backdrop-blur-md">
           <ul className="px-4 py-3 space-y-1 max-h-[70vh] overflow-y-auto" role="list">
-            {NAV_ITEMS.map(item => (
+            {navItems.map(item => (
               <li key={item.label}>
                 {item.href && !item.children ? (
                   <Link
