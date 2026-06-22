@@ -92,31 +92,42 @@ export default async function ProphetPage({ params }: Props) {
           <h2 className="section-title font-garamond text-xl font-semibold text-forest mb-4">
             Lineage
           </h2>
-          <div className="card-islamic">
-            <ol className="space-y-2">
-              {prophet.lineage.map((entry, i) => (
-                <li key={i} className="flex items-start gap-3 text-sm">
-                  <span className="text-gold/50 w-5 text-right flex-shrink-0">{i + 1}.</span>
-                  <div>
-                    <span className="font-medium text-forest">{entry.englishName}</span>
+          {prophet.lineage.length === 0 ? (
+            <div className="card-islamic text-center text-forest/50 text-sm py-6">
+              Adam (peace be upon him) is the first human and first Prophet — he has no human lineage.
+            </div>
+          ) : (
+            <div className="flex flex-col items-center gap-0">
+              {/* Ancestors displayed oldest → newest (reversed from stored order) */}
+              {[...prophet.lineage].reverse().map((entry, i, arr) => (
+                <div key={i} className="flex flex-col items-center w-full max-w-sm">
+                  <div className="w-full border border-gold/30 bg-white rounded-xl px-5 py-3 text-center shadow-sm">
                     {entry.arabicName && (
-                      <span
-                        dir="rtl"
-                        lang="ar"
-                        className="arabic-sm text-forest/50 ml-2"
-                        aria-hidden="true"
-                      >
+                      <p dir="rtl" lang="ar" className="arabic-sm text-forest/60 leading-tight mb-0.5">
                         {entry.arabicName}
-                      </span>
+                      </p>
                     )}
-                    {entry.relation && (
-                      <span className="text-forest/40 text-xs ml-2">- {entry.relation}</span>
-                    )}
+                    <p className="font-garamond font-semibold text-forest text-base">{entry.englishName}</p>
+                    <p className="text-xs text-gold/80 font-medium uppercase tracking-wide mt-0.5">{entry.relation}</p>
                   </div>
-                </li>
+                  {/* Connector line down to next ancestor or to the prophet */}
+                  <div className="flex flex-col items-center">
+                    <div className="w-px h-5 bg-gold/40" />
+                    <div className="w-2 h-2 rounded-full bg-gold/50" />
+                    <div className="w-px h-5 bg-gold/40" />
+                  </div>
+                </div>
               ))}
-            </ol>
-          </div>
+              {/* The prophet at the bottom */}
+              <div className="w-full max-w-sm border-2 border-gold bg-forest rounded-xl px-5 py-4 text-center shadow-md">
+                <p dir="rtl" lang="ar" className="arabic text-gold leading-tight mb-1">
+                  {prophet.arabicName}
+                </p>
+                <p className="font-garamond font-bold text-cream text-lg">{prophet.englishName}</p>
+                <p className="text-gold/80 text-xs font-medium uppercase tracking-wide mt-0.5">Prophet (peace be upon him)</p>
+              </div>
+            </div>
+          )}
         </section>
 
         {/* Miracles */}

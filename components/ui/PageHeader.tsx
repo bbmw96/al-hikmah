@@ -29,7 +29,7 @@ export function PageHeader({ title, arabicTitle, subtitle, className, children }
           <motion.p
             dir="rtl"
             lang="ar"
-            className="arabic text-gold/70 mb-3"
+            className="arabic text-gold mb-3"
             aria-hidden="true"
             {...fadeUp(0)}
           >

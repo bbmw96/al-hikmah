@@ -30,7 +30,7 @@ export function ArabicText({ text, size = 'md', className, showBismillah }: Arab
       <p
         dir="rtl"
         lang="ar"
-        className={cn(sizeClasses[size], 'text-right')}
+        className={cn(sizeClasses[size], 'text-center')}
       >
         {text}
       </p>

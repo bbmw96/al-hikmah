@@ -69,23 +69,31 @@ export function HeroSection() {
           بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ
         </motion.p>
 
-        {/* Arabic — PRIMARY TITLE */}
-        <motion.p
-          dir="rtl"
-          lang="ar"
-          className="arabic-hero text-cream leading-tight mb-2"
-          {...fade(0.14, 28)}
-        >
-          الحكمة
-        </motion.p>
-
-        {/* English — secondary subtitle */}
-        <motion.h1
-          className="text-2xl md:text-3xl font-garamond font-medium text-gold/70 mb-8 tracking-[0.15em] uppercase"
-          {...fade(0.24, 12)}
-        >
-          Al-Hikmah
-        </motion.h1>
+        {/* Title block — English overlaying Arabic */}
+        <div className="relative my-4 mb-8">
+          {/* Arabic backdrop — large calligraphy */}
+          <motion.p
+            dir="rtl"
+            lang="ar"
+            aria-hidden="true"
+            className="arabic-hero text-cream/20 leading-none select-none text-center"
+            {...fade(0.14, 28)}
+          >
+            الحكمة
+          </motion.p>
+          {/* English name — centered over the Arabic */}
+          <motion.h1
+            className="absolute inset-0 flex flex-col items-center justify-center gap-1 pointer-events-none"
+            {...fade(0.22, 10)}
+          >
+            <span className="text-4xl md:text-5xl lg:text-6xl font-garamond font-semibold text-cream tracking-[0.18em] uppercase drop-shadow-[0_2px_12px_rgba(0,0,0,0.6)]">
+              Al-Hikmah
+            </span>
+            <span className="text-gold text-base md:text-lg font-garamond tracking-[0.3em] uppercase opacity-90">
+              الحكمة
+            </span>
+          </motion.h1>
+        </div>
 
         <motion.p
           className="text-cream/70 text-xl md:text-2xl max-w-3xl mx-auto leading-relaxed mb-10 font-light"
