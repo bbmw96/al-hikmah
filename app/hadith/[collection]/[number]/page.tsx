@@ -1,7 +1,7 @@
 ﻿import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import { getCollectionById } from '@/lib/data/collections';
-import { fetchHadith } from '@/lib/hadith-api';
+import { fetchHadithList } from '@/lib/hadith-api';
 import { HadithDetail } from './HadithDetail';
 
 export const revalidate = 3600; // re-render at most once per hour; cached by Next.js CDN between renders
@@ -27,16 +27,25 @@ export default async function HadithPage({ params }: Props) {
   const col = getCollectionById(collection);
   if (!col || !col.available || !col.apiCollection || isNaN(hadithNumber)) notFound();
 
-  const { english, arabic, grades, found } = await fetchHadith(col.apiCollection, hadithNumber);
-  if (!found) notFound();
+  // Reuse the full-collection fetch (cached 24h, proven reliable) instead of the
+  // per-hadith endpoint, which was returning "text not available" on the detail page.
+  const [engList, araList] = await Promise.all([
+    fetchHadithList(col.apiCollection, 'eng'),
+    fetchHadithList(col.apiCollection, 'ara'),
+  ]);
+
+  const engEntry = engList?.hadiths.find(h => h.hadithnumber === hadithNumber);
+  const araEntry = araList?.hadiths.find(h => h.hadithnumber === hadithNumber);
+
+  if (!engEntry && !araEntry) notFound();
 
   return (
     <HadithDetail
       collection={col}
       hadithNumber={hadithNumber}
-      englishText={english}
-      arabicText={arabic}
-      grades={grades}
+      englishText={engEntry?.text ?? null}
+      arabicText={araEntry?.text ?? null}
+      grades={engEntry?.grades}
     />
   );
 }
