@@ -1,6 +1,6 @@
 ﻿'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { ChevronLeft, ChevronRight, BookOpen, Globe, Loader2 } from 'lucide-react';
 import { ArabicText } from '@/components/ui/ArabicText';
@@ -51,12 +51,38 @@ export function HadithDetail({
   arabicText,
   grades,
 }: HadithDetailProps) {
-  const { t } = useLanguage();
-  const [activeTab, setActiveTab] = useState<Tab>('meaning');
-  const [language, setLanguage] = useState<LanguageCode>('en');
+  const { t, lang } = useLanguage();
+  const [activeTab, setActiveTab] = useState<Tab>(() => (lang !== 'en' ? 'translation' : 'meaning'));
+  const [language, setLanguage] = useState<LanguageCode>(() => lang as LanguageCode);
   const [translations, setTranslations] = useState<Map<LanguageCode, string>>(() => new Map());
   const [loading, setLoading] = useState(false);
   const [notAvailable, setNotAvailable] = useState(false);
+
+  useEffect(() => {
+    if (lang === 'en') return;
+    const code = lang as LanguageCode;
+    setLanguage(code);
+    setActiveTab('translation');
+    const apiPrefix = getApiPrefix(code);
+    if (!apiPrefix) { setNotAvailable(true); return; }
+    setNotAvailable(false);
+    setLoading(true);
+    mirrorFetch(`/editions/${apiPrefix}-${collection.apiCollection}/${hadithNumber}.min.json`)
+      .then(res => { if (!res) throw new Error(); return res.json(); })
+      .then((data: Record<string, unknown>) => {
+        const hadiths = data?.hadiths as Array<Record<string, string>> | undefined;
+        const text = (data?.text as string | undefined)
+          ?? hadiths?.[0]?.body
+          ?? hadiths?.[0]?.text
+          ?? null;
+        if (!text) throw new Error();
+        setTranslations(prev => new Map(prev).set(code, text));
+        setNotAvailable(false);
+      })
+      .catch(() => setNotAvailable(true))
+      .finally(() => setLoading(false));
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [lang]);
 
   async function fetchTranslation(lang: LanguageCode) {
     if (lang === 'en') {

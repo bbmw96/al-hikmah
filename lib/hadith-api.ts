@@ -24,6 +24,7 @@ export interface HadithApiResponse {
 export interface HadithEntry {
   hadithnumber: number;
   text: string;
+  arabicText?: string;
   grades?: HadithGrade[];
   reference?: HadithReference;
 }
@@ -126,6 +127,41 @@ export async function fetchEditionInfo(
   } catch {
     return null;
   }
+}
+
+/**
+ * Like fetchHadithPage but fetches Arabic and English simultaneously.
+ * Used by the collection browse page to display Arabic text first.
+ */
+export async function fetchHadithPageBilingual(
+  collection: string,
+  startNumber: number,
+  count: number,
+): Promise<HadithEntry[]> {
+  const numbers = Array.from({ length: count }, (_, i) => startNumber + i);
+  const fetchOne = (lang: string, n: number) =>
+    cdnFetch(`/editions/${lang}-${collection}/${n}.min.json`, { next: { revalidate: 86400 } } as RequestInit)
+      .then(r => (r ? (r.json() as Promise<SingleHadithResponse>) : null))
+      .catch(() => null);
+
+  const [engSettled, araSettled] = await Promise.all([
+    Promise.allSettled(numbers.map(n => fetchOne('eng', n))),
+    Promise.allSettled(numbers.map(n => fetchOne('ara', n))),
+  ]);
+
+  return engSettled.flatMap((r, i) => {
+    if (r.status === 'fulfilled' && r.value?.text) {
+      const ara = araSettled[i];
+      return [{
+        hadithnumber: numbers[i],
+        text: r.value.text,
+        arabicText: ara.status === 'fulfilled' && ara.value?.text ? ara.value.text : undefined,
+        grades: r.value.grades,
+        reference: r.value.reference,
+      }];
+    }
+    return [];
+  });
 }
 
 /**

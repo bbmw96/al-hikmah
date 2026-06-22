@@ -107,7 +107,7 @@ export function TawheedContent() {
         <h2 className="section-title font-garamond text-2xl font-semibold text-forest mb-2">
           {tc('section_whatIs')}
         </h2>
-        <p dir="rtl" lang="ar" className="arabic-sm text-gold/70 mb-6" aria-hidden="true">معنى التوحيد</p>
+        <p dir="rtl" lang="ar" className="arabic text-gold mb-4">معنى التوحيد</p>
         <div className="bg-forest/5 border-l-4 border-gold rounded-r-xl p-5 mb-6">
           <p className="text-forest/80 text-sm leading-relaxed">
             Tawheed is the Arabic word meaning "unification" or "making one." In Islamic theology it refers to affirming the absolute oneness of Allah in every aspect: His Lordship over creation, His exclusive right to be worshipped, and His unique names and attributes. The scholars of Islam divided Tawheed into three inseparable categories; not because these are three separate gods, but because these are three dimensions of the same truth that must all be affirmed.
@@ -120,7 +120,7 @@ export function TawheedContent() {
         <h2 className="section-title font-garamond text-2xl font-semibold text-forest mb-2">
           {tc('section_three')}
         </h2>
-        <p dir="rtl" lang="ar" className="arabic-sm text-gold/70 mb-8" aria-hidden="true">أقسام التوحيد الثلاثة</p>
+        <p dir="rtl" lang="ar" className="arabic text-gold mb-6">أقسام التوحيد الثلاثة</p>
         <div className="space-y-8">
           {TAWHEED_CATEGORIES.map(cat => (
             <article key={cat.number} className="card-islamic">
@@ -129,7 +129,7 @@ export function TawheedContent() {
                   <span className="text-gold font-semibold text-sm">{cat.number}</span>
                 </div>
                 <div>
-                  <p dir="rtl" lang="ar" className="arabic-sm text-gold/70 mb-0.5" aria-hidden="true">{cat.arabic}</p>
+                  <p dir="rtl" lang="ar" className="arabic-sm text-gold mb-1">{cat.arabic}</p>
                   <h3 className="font-garamond text-xl font-semibold text-forest">{tc(cat.nameKey)}</h3>
                   <p className="text-gold/80 text-sm font-medium">{tc(cat.subtitleKey)}</p>
                 </div>
@@ -160,7 +160,7 @@ export function TawheedContent() {
         <h2 className="section-title font-garamond text-2xl font-semibold text-forest mb-2">
           {tc('section_shahada')}
         </h2>
-        <p dir="rtl" lang="ar" className="arabic-sm text-gold/70 mb-6" aria-hidden="true">الشهادة وشروطها</p>
+        <p dir="rtl" lang="ar" className="arabic text-gold mb-4">الشهادة وشروطها</p>
         <div className="card-islamic mb-6">
           <ArabicText text={SHAHADA.arabic} size="lg" />
           <div className="border-t border-gold/10 pt-4 mt-4 space-y-2">
@@ -191,7 +191,7 @@ export function TawheedContent() {
         <h2 className="section-title font-garamond text-2xl font-semibold text-forest mb-2">
           {tc('section_keyVerses')}
         </h2>
-        <p dir="rtl" lang="ar" className="arabic-sm text-gold/70 mb-6" aria-hidden="true">آيات التوحيد</p>
+        <p dir="rtl" lang="ar" className="arabic text-gold mb-4">آيات التوحيد</p>
         <div className="space-y-5">
           {KEY_VERSES.map((v, i) => (
             <article key={i} className="card-islamic">
@@ -214,7 +214,7 @@ export function TawheedContent() {
         <h2 className="section-title font-garamond text-2xl font-semibold text-forest mb-2">
           {tc('section_shirk')}
         </h2>
-        <p dir="rtl" lang="ar" className="arabic-sm text-gold/70 mb-6" aria-hidden="true">الشِّرْك وأقسامه</p>
+        <p dir="rtl" lang="ar" className="arabic text-gold mb-4">الشِّرْك وأقسامه</p>
         <div className="bg-forest/5 border border-gold/20 rounded-xl p-5 mb-6">
           <p className="text-forest/75 text-sm leading-relaxed mb-4">{SHIRK.definition}</p>
           <div className="bg-gold/10 border border-gold/25 rounded-xl p-4">
@@ -259,7 +259,7 @@ export function TawheedContent() {
         <h2 className="section-title font-garamond text-2xl font-semibold text-forest mb-2">
           {tc('section_foundation')}
         </h2>
-        <p dir="rtl" lang="ar" className="arabic-sm text-gold/70 mb-6" aria-hidden="true">أهمية التوحيد</p>
+        <p dir="rtl" lang="ar" className="arabic text-gold mb-4">أهمية التوحيد</p>
         <div className="space-y-5">
           {FOUNDATION_POINTS.map((point, i) => (
             <article key={i} className="card-islamic">

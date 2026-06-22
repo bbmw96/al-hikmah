@@ -1,4 +1,4 @@
-﻿import type { Metadata } from 'next';
+import type { Metadata } from 'next';
 import { PageHeader } from '@/components/ui/PageHeader';
 import { ArabicText } from '@/components/ui/ArabicText';
 
@@ -295,7 +295,7 @@ export default function PrayerPage() {
           <h2 className="section-title font-garamond text-2xl font-semibold text-forest mb-2">
             How Prayer Was Ordained: The Night Journey
           </h2>
-          <p dir="rtl" lang="ar" className="arabic-sm text-gold/70 mb-6" aria-hidden="true">
+          <p dir="rtl" lang="ar" className="arabic text-gold mb-4">
             الإسراء والمعراج
           </p>
           <div className="bg-forest/5 border-l-4 border-gold rounded-r-xl p-5 mb-6">
@@ -327,7 +327,7 @@ export default function PrayerPage() {
           <h2 className="section-title font-garamond text-2xl font-semibold text-forest mb-2">
             Ritual Purification (Wudu) Before Prayer
           </h2>
-          <p dir="rtl" lang="ar" className="arabic-sm text-gold/70 mb-6" aria-hidden="true">
+          <p dir="rtl" lang="ar" className="arabic text-gold mb-4">
             الوضوء
           </p>
           <div className="bg-forest/5 border border-gold/20 rounded-xl p-5 mb-6">
@@ -401,7 +401,7 @@ export default function PrayerPage() {
                     <span className="text-gold font-semibold text-sm">{step.step}</span>
                   </div>
                   <div>
-                    <p dir="rtl" lang="ar" className="arabic-sm text-gold/70 mb-0.5" aria-hidden="true">
+                    <p dir="rtl" lang="ar" className="arabic-sm text-gold mb-1">
                       {step.arabicTitle}
                     </p>
                     <h3 className="font-garamond text-xl font-semibold text-forest">{step.title}</h3>
@@ -441,7 +441,7 @@ export default function PrayerPage() {
           <h2 className="section-title font-garamond text-2xl font-semibold text-forest mb-2">
             After-Prayer Remembrances (Adhkar al-Salah)
           </h2>
-          <p dir="rtl" lang="ar" className="arabic-sm text-gold/70 mb-6" aria-hidden="true">
+          <p dir="rtl" lang="ar" className="arabic text-gold mb-4">
             أذكار ما بعد الصلاة
           </p>
           <p className="text-forest/60 text-sm mb-6">

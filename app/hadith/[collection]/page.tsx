@@ -5,7 +5,7 @@ import { ChevronLeft, ChevronRight } from 'lucide-react';
 import { PageHeader } from '@/components/ui/PageHeader';
 import { HadithSearchBar } from '@/components/ui/HadithSearchBar';
 import { getCollectionById } from '@/lib/data/collections';
-import { fetchHadithPage } from '@/lib/hadith-api';
+import { fetchHadithPageBilingual } from '@/lib/hadith-api';
 
 interface Props {
   params: Promise<{ collection: string }>;
@@ -41,7 +41,7 @@ export default async function CollectionPage({ params, searchParams }: Props) {
   const startNumber = (page - 1) * PAGE_SIZE + 1;
   const count = Math.min(PAGE_SIZE, total - (page - 1) * PAGE_SIZE);
 
-  const hadiths = await fetchHadithPage(col.apiCollection, startNumber, count);
+  const hadiths = await fetchHadithPageBilingual(col.apiCollection, startNumber, count);
 
   if (hadiths.length === 0) {
     return (
@@ -80,11 +80,20 @@ export default async function CollectionPage({ params, searchParams }: Props) {
                 {hadith.hadithnumber}
               </span>
               <div className="flex-1 min-w-0">
-                <p className="text-forest/70 text-sm leading-relaxed line-clamp-3">
+                {hadith.arabicText && (
+                  <p
+                    dir="rtl"
+                    lang="ar"
+                    className="arabic text-forest/80 leading-relaxed line-clamp-2 mb-2 text-right"
+                  >
+                    {hadith.arabicText}
+                  </p>
+                )}
+                <p className="text-forest/60 text-sm leading-relaxed line-clamp-2">
                   {hadith.text}
                 </p>
                 {hadith.grades && hadith.grades.length > 0 && (
-                  <p className="text-xs text-gold/60 mt-2">
+                  <p className="text-xs text-gold/60 mt-1.5">
                     {hadith.grades[0].graded_by}: {hadith.grades[0].grade}
                   </p>
                 )}

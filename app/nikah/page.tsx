@@ -214,7 +214,7 @@ export default function NikahPage() {
           <h2 className="section-title font-garamond text-2xl font-semibold text-forest mb-2">
             Marriage: A Sign of Allah and a Sunnah
           </h2>
-          <p dir="rtl" lang="ar" className="arabic-sm text-gold/70 mb-6" aria-hidden="true">
+          <p dir="rtl" lang="ar" className="arabic text-gold mb-4">
             النكاح سنة وآية
           </p>
 
@@ -239,7 +239,7 @@ export default function NikahPage() {
           <h2 className="section-title font-garamond text-2xl font-semibold text-forest mb-2">
             Conditions of a Valid Nikah
           </h2>
-          <p dir="rtl" lang="ar" className="arabic-sm text-gold/70 mb-6" aria-hidden="true">
+          <p dir="rtl" lang="ar" className="arabic text-gold mb-4">
             شروط عقد النكاح
           </p>
           <div className="space-y-5">
@@ -250,7 +250,7 @@ export default function NikahPage() {
                     <span className="text-forest font-semibold text-xs">{i + 1}</span>
                   </div>
                   <div>
-                    <p dir="rtl" lang="ar" className="arabic-sm text-gold/70 mb-0.5" aria-hidden="true">
+                    <p dir="rtl" lang="ar" className="arabic-sm text-gold mb-1">
                       {cond.arabic}
                     </p>
                     <h3 className="font-garamond text-lg font-semibold text-forest">{cond.name}</h3>
@@ -270,7 +270,7 @@ export default function NikahPage() {
           <h2 className="section-title font-garamond text-2xl font-semibold text-forest mb-2">
             The Mahr: The Obligatory Dowry
           </h2>
-          <p dir="rtl" lang="ar" className="arabic-sm text-gold/70 mb-6" aria-hidden="true">
+          <p dir="rtl" lang="ar" className="arabic text-gold mb-4">
             المَهْر الصَّدَاق
           </p>
 
@@ -312,7 +312,7 @@ export default function NikahPage() {
           <h2 className="section-title font-garamond text-2xl font-semibold text-forest mb-2">
             Khutbah al-Nikah: The Marriage Sermon
           </h2>
-          <p dir="rtl" lang="ar" className="arabic-sm text-gold/70 mb-6" aria-hidden="true">
+          <p dir="rtl" lang="ar" className="arabic text-gold mb-4">
             خطبة النكاح
           </p>
 
@@ -345,7 +345,7 @@ export default function NikahPage() {
           <h2 className="section-title font-garamond text-2xl font-semibold text-forest mb-2">
             Marriage Duas
           </h2>
-          <p dir="rtl" lang="ar" className="arabic-sm text-gold/70 mb-6" aria-hidden="true">
+          <p dir="rtl" lang="ar" className="arabic text-gold mb-4">
             أدعية النكاح
           </p>
           <div className="space-y-5">
@@ -376,7 +376,7 @@ export default function NikahPage() {
           <h2 className="section-title font-garamond text-2xl font-semibold text-forest mb-2">
             Forbidden Marriages: The Mahram Relationships
           </h2>
-          <p dir="rtl" lang="ar" className="arabic-sm text-gold/70 mb-6" aria-hidden="true">
+          <p dir="rtl" lang="ar" className="arabic text-gold mb-4">
             المحرمات من النساء
           </p>
           <div className="space-y-5">
@@ -412,7 +412,7 @@ export default function NikahPage() {
           <h2 className="section-title font-garamond text-2xl font-semibold text-forest mb-2">
             Rights and Responsibilities in Marriage
           </h2>
-          <p dir="rtl" lang="ar" className="arabic-sm text-gold/70 mb-6" aria-hidden="true">
+          <p dir="rtl" lang="ar" className="arabic text-gold mb-4">
             الحقوق والواجبات الزوجية
           </p>
 
@@ -465,7 +465,7 @@ export default function NikahPage() {
           <h2 className="section-title font-garamond text-2xl font-semibold text-forest mb-2">
             The Walimah: The Wedding Feast
           </h2>
-          <p dir="rtl" lang="ar" className="arabic-sm text-gold/70 mb-6" aria-hidden="true">
+          <p dir="rtl" lang="ar" className="arabic text-gold mb-4">
             الوَلِيمَة
           </p>
           <div className="bg-forest/5 border-l-4 border-gold rounded-r-xl p-5 mb-5">

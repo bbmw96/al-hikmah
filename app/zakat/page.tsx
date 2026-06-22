@@ -199,7 +199,7 @@ export default function ZakatPage() {
                   <p
                     dir="rtl"
                     lang="ar"
-                    className="arabic-sm text-gold/70 mb-1"
+                    className="arabic-sm text-gold mb-1.5"
                     aria-hidden="true"
                   >
                     {r.arabic}

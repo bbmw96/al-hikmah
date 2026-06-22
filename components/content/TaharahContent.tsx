@@ -208,7 +208,7 @@ export function TaharahContent() {
                 <p
                   dir="rtl"
                   lang="ar"
-                  className="arabic-sm text-gold/70"
+                  className="arabic-sm text-gold"
                   aria-hidden="true"
                 >
                   {n.arabic}

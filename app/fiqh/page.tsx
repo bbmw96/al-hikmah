@@ -205,7 +205,7 @@ export default function FiqhPage() {
           <h2 className="section-title font-garamond text-2xl font-semibold text-forest mb-2">
             What is Fiqh?
           </h2>
-          <p dir="rtl" lang="ar" className="arabic-sm text-gold/70 mb-6" aria-hidden="true">
+          <p dir="rtl" lang="ar" className="arabic text-gold mb-4">
             تعريف الفقه
           </p>
           <div className="bg-forest/5 border-l-4 border-gold rounded-r-xl p-5">
@@ -218,7 +218,7 @@ export default function FiqhPage() {
           <h2 className="section-title font-garamond text-2xl font-semibold text-forest mb-2">
             The Five Categories of Ruling (Ahkam al-Shar'iyyah)
           </h2>
-          <p dir="rtl" lang="ar" className="arabic-sm text-gold/70 mb-8" aria-hidden="true">
+          <p dir="rtl" lang="ar" className="arabic text-gold mb-6">
             الأحكام الشرعية الخمسة
           </p>
           <div className="space-y-8">
@@ -229,7 +229,7 @@ export default function FiqhPage() {
                     <span className="text-gold font-semibold text-sm">{ahkam.number}</span>
                   </div>
                   <div>
-                    <p dir="rtl" lang="ar" className="arabic-sm text-gold/70 mb-0.5" aria-hidden="true">
+                    <p dir="rtl" lang="ar" className="arabic-sm text-gold mb-1">
                       {ahkam.arabic}
                     </p>
                     <h3 className="font-garamond text-xl font-semibold text-forest">{ahkam.name}</h3>
@@ -294,7 +294,7 @@ export default function FiqhPage() {
           <h2 className="section-title font-garamond text-2xl font-semibold text-forest mb-2">
             The Sources of Islamic Law (Usul al-Fiqh)
           </h2>
-          <p dir="rtl" lang="ar" className="arabic-sm text-gold/70 mb-6" aria-hidden="true">
+          <p dir="rtl" lang="ar" className="arabic text-gold mb-4">
             مصادر الفقه الإسلامي
           </p>
           <div className="bg-forest/5 border border-gold/20 rounded-xl p-5 mb-6">
@@ -310,7 +310,7 @@ export default function FiqhPage() {
                     <span className="text-forest font-semibold text-xs">{source.number}</span>
                   </div>
                   <div>
-                    <p dir="rtl" lang="ar" className="arabic-sm text-gold/70 mb-0.5" aria-hidden="true">
+                    <p dir="rtl" lang="ar" className="arabic-sm text-gold mb-1">
                       {source.arabic}
                     </p>
                     <h3 className="font-garamond text-lg font-semibold text-forest">{source.name}</h3>
@@ -328,7 +328,7 @@ export default function FiqhPage() {
           <h2 className="section-title font-garamond text-2xl font-semibold text-forest mb-2">
             The Four Schools of Jurisprudence (al-Madhahib al-Arba'ah)
           </h2>
-          <p dir="rtl" lang="ar" className="arabic-sm text-gold/70 mb-6" aria-hidden="true">
+          <p dir="rtl" lang="ar" className="arabic text-gold mb-4">
             المذاهب الفقهية الأربعة
           </p>
           <div className="bg-forest/5 border border-gold/20 rounded-xl p-5 mb-6">

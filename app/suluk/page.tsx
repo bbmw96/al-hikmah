@@ -199,7 +199,7 @@ export default function SulukPage() {
           <h2 className="section-title font-garamond text-2xl font-semibold text-forest mb-2">
             What is Suluk?
           </h2>
-          <p dir="rtl" lang="ar" className="arabic-sm text-gold/70 mb-6" aria-hidden="true">
+          <p dir="rtl" lang="ar" className="arabic text-gold mb-4">
             معنى السلوك
           </p>
           <div className="bg-forest/5 border-l-4 border-gold rounded-r-xl p-5">
@@ -212,7 +212,7 @@ export default function SulukPage() {
           <h2 className="section-title font-garamond text-2xl font-semibold text-forest mb-2">
             Tazkiyah al-Nafs: Purification of the Soul
           </h2>
-          <p dir="rtl" lang="ar" className="arabic-sm text-gold/70 mb-6" aria-hidden="true">
+          <p dir="rtl" lang="ar" className="arabic text-gold mb-4">
             تزكية النفس
           </p>
 
@@ -255,7 +255,7 @@ export default function SulukPage() {
           <h2 className="section-title font-garamond text-2xl font-semibold text-forest mb-2">
             The Three Levels of the Deen: Islam, Iman, Ihsan
           </h2>
-          <p dir="rtl" lang="ar" className="arabic-sm text-gold/70 mb-6" aria-hidden="true">
+          <p dir="rtl" lang="ar" className="arabic text-gold mb-4">
             الإسلام والإيمان والإحسان
           </p>
 
@@ -292,7 +292,7 @@ export default function SulukPage() {
           <h2 className="section-title font-garamond text-2xl font-semibold text-forest mb-2">
             Diseases of the Heart and Their Cures
           </h2>
-          <p dir="rtl" lang="ar" className="arabic-sm text-gold/70 mb-6" aria-hidden="true">
+          <p dir="rtl" lang="ar" className="arabic text-gold mb-4">
             أمراض القلوب وعلاجها
           </p>
           <p className="text-forest/60 text-sm mb-8">
@@ -306,7 +306,7 @@ export default function SulukPage() {
                     <span className="text-forest font-semibold text-xs">{i + 1}</span>
                   </div>
                   <div>
-                    <p dir="rtl" lang="ar" className="arabic-sm text-gold/70 mb-0.5" aria-hidden="true">
+                    <p dir="rtl" lang="ar" className="arabic-sm text-gold mb-1">
                       {disease.arabic}
                     </p>
                     <h3 className="font-garamond text-xl font-semibold text-forest">{disease.name}</h3>
@@ -337,7 +337,7 @@ export default function SulukPage() {
           <h2 className="section-title font-garamond text-2xl font-semibold text-forest mb-2">
             The Virtues of Dhikr: Remembrance of Allah
           </h2>
-          <p dir="rtl" lang="ar" className="arabic-sm text-gold/70 mb-6" aria-hidden="true">
+          <p dir="rtl" lang="ar" className="arabic text-gold mb-4">
             فضل الذكر
           </p>
 
@@ -378,7 +378,7 @@ export default function SulukPage() {
           <h2 className="section-title font-garamond text-2xl font-semibold text-forest mb-2">
             Key Practices for the Spiritual Path
           </h2>
-          <p dir="rtl" lang="ar" className="arabic-sm text-gold/70 mb-6" aria-hidden="true">
+          <p dir="rtl" lang="ar" className="arabic text-gold mb-4">
             أعمال تزكية النفس
           </p>
           <div className="space-y-5">
@@ -401,7 +401,7 @@ export default function SulukPage() {
           <h2 className="section-title font-garamond text-2xl font-semibold text-forest mb-2">
             Tawbah: Returning to Allah
           </h2>
-          <p dir="rtl" lang="ar" className="arabic-sm text-gold/70 mb-6" aria-hidden="true">
+          <p dir="rtl" lang="ar" className="arabic text-gold mb-4">
             التَّوْبَة إِلَى اللَّهِ
           </p>
 

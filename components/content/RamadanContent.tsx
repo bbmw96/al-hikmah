@@ -201,7 +201,7 @@ export function RamadanContent() {
         <h2 className="section-title font-garamond text-2xl font-semibold text-forest mb-2">
           {tc('section_prescribed')}
         </h2>
-        <p dir="rtl" lang="ar" className="arabic-sm text-gold/70 mb-6" aria-hidden="true">
+        <p dir="rtl" lang="ar" className="arabic text-gold mb-4">
           فريضة الصيام
         </p>
         <article className="card-islamic">
@@ -221,7 +221,7 @@ export function RamadanContent() {
         <h2 className="section-title font-garamond text-2xl font-semibold text-forest mb-2">
           {tc('section_hilal')}
         </h2>
-        <p dir="rtl" lang="ar" className="arabic-sm text-gold/70 mb-6" aria-hidden="true">
+        <p dir="rtl" lang="ar" className="arabic text-gold mb-4">
           رؤية الهلال
         </p>
         <div className="bg-forest/5 border-l-4 border-gold rounded-r-xl p-5 mb-5">
@@ -242,7 +242,7 @@ export function RamadanContent() {
         <h2 className="section-title font-garamond text-2xl font-semibold text-forest mb-2">
           {tc('section_conditions')}
         </h2>
-        <p dir="rtl" lang="ar" className="arabic-sm text-gold/70 mb-6" aria-hidden="true">
+        <p dir="rtl" lang="ar" className="arabic text-gold mb-4">
           شروط وجوب الصيام
         </p>
         <div className="space-y-3">
@@ -265,7 +265,7 @@ export function RamadanContent() {
         <h2 className="section-title font-garamond text-2xl font-semibold text-forest mb-2">
           {tc('section_invalidators')}
         </h2>
-        <p dir="rtl" lang="ar" className="arabic-sm text-gold/70 mb-6" aria-hidden="true">
+        <p dir="rtl" lang="ar" className="arabic text-gold mb-4">
           مفسدات الصوم وما لا يفسده
         </p>
         <div className="grid md:grid-cols-2 gap-6">
@@ -303,7 +303,7 @@ export function RamadanContent() {
         <h2 className="section-title font-garamond text-2xl font-semibold text-forest mb-2">
           {tc('section_suhur_iftar')}
         </h2>
-        <p dir="rtl" lang="ar" className="arabic-sm text-gold/70 mb-6" aria-hidden="true">
+        <p dir="rtl" lang="ar" className="arabic text-gold mb-4">
           السحور والإفطار
         </p>
         <div className="space-y-6">
@@ -356,7 +356,7 @@ export function RamadanContent() {
         <h2 className="section-title font-garamond text-2xl font-semibold text-forest mb-2">
           {tc('section_taraweeh')}
         </h2>
-        <p dir="rtl" lang="ar" className="arabic-sm text-gold/70 mb-6" aria-hidden="true">
+        <p dir="rtl" lang="ar" className="arabic text-gold mb-4">
           صلاة التراويح
         </p>
         <div className="bg-forest/5 border border-gold/20 rounded-xl p-5 mb-6">
@@ -380,7 +380,7 @@ export function RamadanContent() {
         <h2 className="section-title font-garamond text-2xl font-semibold text-forest mb-2">
           {tc('section_laylatul_qadr')}
         </h2>
-        <p dir="rtl" lang="ar" className="arabic-sm text-gold/70 mb-6" aria-hidden="true">
+        <p dir="rtl" lang="ar" className="arabic text-gold mb-4">
           لَيْلَةُ الْقَدْر
         </p>
         <div className="bg-forest/5 border-l-4 border-gold rounded-r-xl p-5 mb-6">
@@ -427,7 +427,7 @@ export function RamadanContent() {
         <h2 className="section-title font-garamond text-2xl font-semibold text-forest mb-2">
           {tc('section_itikaf')}
         </h2>
-        <p dir="rtl" lang="ar" className="arabic-sm text-gold/70 mb-6" aria-hidden="true">
+        <p dir="rtl" lang="ar" className="arabic text-gold mb-4">
           الاعتكاف
         </p>
         <div className="bg-forest/5 border border-gold/20 rounded-xl p-5 mb-5">
@@ -449,7 +449,7 @@ export function RamadanContent() {
         <h2 className="section-title font-garamond text-2xl font-semibold text-forest mb-2">
           {tc('section_zakat_fitr')}
         </h2>
-        <p dir="rtl" lang="ar" className="arabic-sm text-gold/70 mb-6" aria-hidden="true">
+        <p dir="rtl" lang="ar" className="arabic text-gold mb-4">
           زكاة الفطر
         </p>
         <div className="space-y-4">
@@ -472,7 +472,7 @@ export function RamadanContent() {
         <h2 className="section-title font-garamond text-2xl font-semibold text-forest mb-2">
           {tc('section_eid')}
         </h2>
-        <p dir="rtl" lang="ar" className="arabic-sm text-gold/70 mb-6" aria-hidden="true">
+        <p dir="rtl" lang="ar" className="arabic text-gold mb-4">
           عيد الفطر
         </p>
         <div className="bg-gold/10 border border-gold/25 rounded-xl p-5 mb-5">
@@ -496,7 +496,7 @@ export function RamadanContent() {
         <h2 className="section-title font-garamond text-2xl font-semibold text-forest mb-2">
           {tc('section_spiritual')}
         </h2>
-        <p dir="rtl" lang="ar" className="arabic-sm text-gold/70 mb-6" aria-hidden="true">
+        <p dir="rtl" lang="ar" className="arabic text-gold mb-4">
           الحكمة من الصيام
         </p>
         <div className="space-y-5">

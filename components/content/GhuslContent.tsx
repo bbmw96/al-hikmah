@@ -133,7 +133,7 @@ export function GhuslContent() {
                 {cause.n}
               </span>
               <div>
-                <p dir="rtl" lang="ar" className="arabic-sm text-gold/70 mb-1" aria-hidden="true">
+                <p dir="rtl" lang="ar" className="arabic text-gold mb-1.5">
                   {cause.arabic}
                 </p>
                 <h3 className="font-garamond text-lg font-semibold text-forest mb-1">
@@ -163,7 +163,7 @@ export function GhuslContent() {
                 {step.step}
               </div>
               <div>
-                <p dir="rtl" lang="ar" className="arabic-sm text-gold/70 mb-1" aria-hidden="true">
+                <p dir="rtl" lang="ar" className="arabic text-gold mb-1.5">
                   {step.arabic}
                 </p>
                 <h3 className="font-garamond text-lg font-semibold text-forest mb-1">

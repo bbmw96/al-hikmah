@@ -102,8 +102,7 @@ export default async function SurahPage({ params }: Props) {
           <p
             dir="rtl"
             lang="ar"
-            className="arabic-sm text-gold/70 mb-1"
-            aria-hidden="true"
+            className="arabic-sm text-gold mb-1.5"
           >
             أسباب النزول
           </p>

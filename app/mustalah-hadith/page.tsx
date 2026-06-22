@@ -259,7 +259,7 @@ export default function MustalahhHadithPage() {
                   <p
                     dir="rtl"
                     lang="ar"
-                    className="arabic-sm text-gold/70 mb-1"
+                    className="arabic-sm text-gold mb-1.5"
                     aria-hidden="true"
                   >
                     {c.arabic}
@@ -287,7 +287,7 @@ export default function MustalahhHadithPage() {
                   <p
                     dir="rtl"
                     lang="ar"
-                    className="arabic-sm text-gold/70"
+                    className="arabic-sm text-gold"
                     aria-hidden="true"
                   >
                     {g.arabic}
@@ -356,7 +356,7 @@ export default function MustalahhHadithPage() {
                   <p
                     dir="rtl"
                     lang="ar"
-                    className="arabic-sm text-gold/70 mb-1"
+                    className="arabic-sm text-gold mb-1.5"
                     aria-hidden="true"
                   >
                     {book.arabic}
@@ -381,7 +381,7 @@ export default function MustalahhHadithPage() {
                 <p
                   dir="rtl"
                   lang="ar"
-                  className="arabic-sm text-gold/70 mb-1"
+                  className="arabic-sm text-gold mb-1.5"
                   aria-hidden="true"
                 >
                   {s.arabic}
