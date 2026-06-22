@@ -1,6 +1,6 @@
 'use client';
 
-import { useLanguage } from '@/lib/i18n/useLanguage';
+import { useLanguage } from '@/lib/i18n/context';
 import { RAMADAN_CONTENT, type RamadanContentKey } from '@/lib/i18n/content/ramadan-content';
 import { ArabicText } from '@/components/ui/ArabicText';
 
