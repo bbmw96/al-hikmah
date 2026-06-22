@@ -4,8 +4,24 @@ import Link from 'next/link';
 import { BookOpen, Lock } from 'lucide-react';
 import { COLLECTION_GROUPS } from '@/lib/data/collections';
 import { useLanguage } from '@/lib/i18n/context';
+import { PageHeader } from '@/components/ui/PageHeader';
+import { HADITH_LIST_UI, HADITH_DESCRIPTIONS } from '@/lib/i18n/content/hadith-list-content';
 
-function GradeTag({ grade }: { grade: string }) {
+const GROUP_KEY: Record<string, keyof typeof HADITH_LIST_UI> = {
+  'The Six Books (Kutub al-Sittah)': 'group_six',
+  "Completing the Nine Books (Kutub al-Tis'ah)": 'group_nine',
+  "Forty Hadith Collections (Arba'een)": 'group_forty',
+  'Other Major Collections': 'group_other',
+};
+
+const GRADE_KEY: Record<string, keyof typeof HADITH_LIST_UI> = {
+  'Most Authentic': 'grade_most',
+  'Highly Authentic': 'grade_highly',
+  'Authentic': 'grade_authentic',
+  'Major Collection': 'grade_major',
+};
+
+function GradeTag({ grade, label }: { grade: string; label: string }) {
   const colour =
     grade === 'Most Authentic'
       ? 'bg-gold/15 text-gold border-gold/30'
@@ -14,20 +30,28 @@ function GradeTag({ grade }: { grade: string }) {
       : 'bg-midnight/10 text-midnight border-midnight/20';
   return (
     <span className={`inline-flex items-center px-2 py-0.5 rounded text-xs border font-medium ${colour}`}>
-      {grade}
+      {label}
     </span>
   );
 }
 
 export function HadithListContent() {
-  const { t } = useLanguage();
+  const { t, lang } = useLanguage();
+  const ui = (key: keyof typeof HADITH_LIST_UI) => HADITH_LIST_UI[key][lang] ?? HADITH_LIST_UI[key].en;
+  const desc = (id: string, fallback: string) => HADITH_DESCRIPTIONS[id]?.[lang] ?? fallback;
 
   return (
-    <div className="max-w-7xl mx-auto px-6 py-16 space-y-16">
+    <>
+      <PageHeader
+        title={ui('page_title')}
+        arabicTitle="كتب الحديث النبوي الشريف"
+        subtitle={ui('page_subtitle')}
+      />
+      <div className="max-w-7xl mx-auto px-6 py-16 space-y-16">
       {Object.entries(COLLECTION_GROUPS).map(([groupName, collections]) => (
         <section key={groupName}>
           <h2 className="section-title font-garamond text-2xl md:text-3xl font-semibold text-forest mb-8">
-            {groupName}
+            {ui(GROUP_KEY[groupName])}
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-5">
             {collections.map(col => (
@@ -51,10 +75,10 @@ export function HadithListContent() {
                     )}
                   </div>
                   <p className="text-forest/50 text-sm mb-2">{col.author} ({col.authorDates})</p>
-                  <GradeTag grade={col.grade} />
+                  <GradeTag grade={col.grade} label={ui(GRADE_KEY[col.grade])} />
                 </div>
 
-                <p className="text-forest/60 text-sm leading-relaxed flex-1">{col.description}</p>
+                <p className="text-forest/60 text-sm leading-relaxed flex-1">{desc(col.id, col.description)}</p>
 
                 <div className="flex items-center justify-between mt-auto pt-3 border-t border-gold/10">
                   <span className="text-forest/40 text-xs">
@@ -80,17 +104,16 @@ export function HadithListContent() {
 
       <aside className="bg-gold/5 border border-gold/20 rounded-2xl p-8">
         <h3 className="font-garamond text-xl font-semibold text-forest mb-3">
-          A Note on Hadith Authenticity
+          {ui('aside_title')}
         </h3>
         <p className="text-forest/70 leading-relaxed text-sm mb-4">
-          Each hadith in this collection is graded by its level of authenticity (sahih - sound, hasan - good,
-          da&apos;if - weak). Only hadiths of sahih or hasan grading serve as valid evidence in Islamic law and
-          theology. The grades shown reflect the consensus of classical hadith scholars.
+          {ui('aside_body')}
         </p>
         <p className="text-forest/50 text-xs">
-          Hadith texts and scholarly metadata compiled from classical sources.
+          {ui('aside_note')}
         </p>
       </aside>
-    </div>
+      </div>
+    </>
   );
 }

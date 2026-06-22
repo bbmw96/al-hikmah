@@ -92,15 +92,23 @@ export async function fetchHadith(
 
   if (engRes.status === 'fulfilled' && engRes.value) {
     found = true;
-    const data: SingleHadithResponse = await engRes.value.json();
-    english = data.text || null;
-    grades = data.grades;
+    const data = await engRes.value.json() as Record<string, unknown>;
+    const hadiths = data?.hadiths as Array<Record<string, string>> | undefined;
+    english = (data?.text as string | undefined)
+      ?? hadiths?.[0]?.text
+      ?? hadiths?.[0]?.body
+      ?? null;
+    grades = (data?.grades ?? hadiths?.[0]?.grades) as HadithGrade[] | undefined;
   }
 
   if (araRes.status === 'fulfilled' && araRes.value) {
     found = true;
-    const data: SingleHadithResponse = await araRes.value.json();
-    arabic = data.text || null;
+    const data = await araRes.value.json() as Record<string, unknown>;
+    const hadiths = data?.hadiths as Array<Record<string, string>> | undefined;
+    arabic = (data?.text as string | undefined)
+      ?? hadiths?.[0]?.text
+      ?? hadiths?.[0]?.body
+      ?? null;
   }
 
   return { english, arabic, grades, found };
