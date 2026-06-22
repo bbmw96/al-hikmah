@@ -1,4 +1,4 @@
-export type Lang = 'en' | 'ms' | 'tur' | 'urd' | 'ben' | 'fas' | 'zh' | 'yue' | 'ja' | 'ru' | 'es' | 'ko';
+export type Lang = 'en' | 'ms' | 'tur' | 'urd' | 'ben' | 'fas' | 'zh' | 'yue' | 'ja' | 'ru' | 'es' | 'ko' | 'ta' | 'si';
 
 export const LANGUAGE_META: Record<Lang, { label: string; nativeLabel: string; dir: 'ltr' | 'rtl'; htmlLang: string }> = {
   en:  { label: 'English',   nativeLabel: 'English',        dir: 'ltr', htmlLang: 'en-GB'       },
@@ -13,35 +13,37 @@ export const LANGUAGE_META: Record<Lang, { label: string; nativeLabel: string; d
   ru:  { label: 'Russian',   nativeLabel: 'Русский',        dir: 'ltr', htmlLang: 'ru'          },
   es:  { label: 'Spanish',   nativeLabel: 'Español',        dir: 'ltr', htmlLang: 'es'          },
   ko:  { label: 'Korean',    nativeLabel: '한국어',          dir: 'ltr', htmlLang: 'ko'          },
+  ta:  { label: 'Tamil',     nativeLabel: 'தமிழ்',          dir: 'ltr', htmlLang: 'ta'          },
+  si:  { label: 'Sinhala',   nativeLabel: 'සිංහල',          dir: 'ltr', htmlLang: 'si'          },
 };
 
 export type TranslationKey = keyof typeof UI;
 
 const UI = {
   /* ── Navigation ─────────────────────────────────────── */
-  'nav.hadith':         { en: 'Hadith',             ms: 'Hadis',           tur: 'Hadis',                  urd: 'حدیث',             ben: 'হাদিস',             fas: 'حدیث',          zh: '圣训',          yue: '聖訓',         ja: 'ハディース',      ru: 'Хадис',                es: 'Hadiz',              ko: '하디스'              },
-  'nav.prophets':       { en: 'Prophets',           ms: 'Para Nabi',       tur: 'Peygamberler',           urd: 'انبیاء',           ben: 'নবীগণ',             fas: 'پیامبران',      zh: '先知',          yue: '先知',         ja: '預言者',          ru: 'Пророки',              es: 'Profetas',           ko: '예언자'              },
-  'nav.duas':           { en: "Du'as",              ms: 'Doa',             tur: 'Dualar',                 urd: 'دعائیں',           ben: 'দোয়া',              fas: 'دعاها',         zh: '祈祷',          yue: '祈禱',         ja: 'ドゥア',          ru: 'Дуа',                  es: "Du'as",              ko: '두아'                },
-  'nav.hajj':           { en: 'Hajj & Umrah',      ms: 'Haji & Umrah',    tur: 'Hac & Umre',             urd: 'حج و عمرہ',        ben: 'হজ ও উমরাহ',       fas: 'حج و عمره',     zh: '朝觐与副朝',     yue: '朝覲與副朝',   ja: 'ハッジ・ウムラ',  ru: 'Хадж и Умра',          es: 'Hayy y Umra',        ko: '하즈 & 우므라'       },
-  'nav.learn':          { en: 'Learn',              ms: 'Belajar',         tur: 'Öğren',                  urd: 'سیکھیں',           ben: 'শিখুন',             fas: 'یاد بگیرید',   zh: '学习',          yue: '學習',         ja: '学ぶ',            ru: 'Изучить',              es: 'Aprender',           ko: '배우기'              },
-  'nav.about':          { en: 'About',              ms: 'Tentang',         tur: 'Hakkında',               urd: 'بارے میں',         ben: 'সম্পর্কে',          fas: 'درباره',        zh: '关于',          yue: '關於',         ja: 'について',        ru: 'О нас',                es: 'Acerca de',          ko: '소개'                },
-  'nav.99names':        { en: '99 Names of Allah',  ms: '99 Nama Allah',   tur: "Allah'ın 99 İsmi",       urd: 'اللہ کے 99 نام',   ben: 'আল্লাহর ৯৯টি নাম', fas: '۹۹ نام خداوند', zh: '安拉的99个名字', yue: '真主的99個名字', ja: 'アッラーの99の御名', ru: '99 имён Аллаха',    es: '99 Nombres de Alá', ko: '알라의 99가지 이름'   },
-  'nav.prayer':         { en: 'How to Pray',        ms: 'Cara Solat',      tur: 'Namaz Nasıl Kılınır',    urd: 'نماز کا طریقہ',    ben: 'নামাজ পড়ার পদ্ধতি', fas: 'چگونه نماز بخوانیم', zh: '如何礼拜', yue: '如何禮拜', ja: 'サラーの仕方', ru: 'Как молиться',       es: 'Cómo Rezar',     ko: '예배 방법'           },
-  'nav.seerah':         { en: 'Seerah',             ms: 'Sirah',           tur: 'Siyer',                  urd: 'سیرت',             ben: 'সীরাত',             fas: 'سیره',          zh: '先知传记',      yue: '先知傳記',     ja: 'スィーラ',        ru: 'Сира',                 es: 'Sira',               ko: '시라'                },
-  'nav.glossary':       { en: 'Glossary',           ms: 'Glosari',         tur: 'Sözlük',                 urd: 'لغت',              ben: 'পরিভাষা',           fas: 'واژه‌نامه',     zh: '术语表',        yue: '術語表',       ja: '用語集',          ru: 'Словарь',              es: 'Glosario',           ko: '용어집'              },
-  'nav.calendar':       { en: 'Islamic Calendar',   ms: 'Kalendar Islam',  tur: 'İslam Takvimi',          urd: 'اسلامی کیلنڈر',    ben: 'ইসলামি ক্যালেন্ডার', fas: 'تقویم اسلامی', zh: '伊斯兰历', yue: '伊斯蘭曆', ja: 'イスラム暦',      ru: 'Исламский календарь', es: 'Calendario Islámico', ko: '이슬람 달력'         },
-  'nav.tawheed':        { en: 'Tawheed',            ms: 'Tauhid',          tur: 'Tevhid',                 urd: 'توحید',            ben: 'তাওহিদ',            fas: 'توحید',         zh: '认主独一',      yue: '認主獨一',     ja: 'タウヒード',      ru: 'Таухид',               es: 'Tauhid',             ko: '타우히드'            },
-  'nav.ramadan':        { en: 'Ramadan',            ms: 'Ramadan',         tur: 'Ramazan',                urd: 'رمضان',            ben: 'রমজান',             fas: 'رمضان',         zh: '斋月',          yue: '齋戒月',       ja: 'ラマダン',        ru: 'Рамадан',              es: 'Ramadán',            ko: '라마단'              },
-  'nav.fiqh':           { en: 'Fiqh',               ms: 'Fiqh',            tur: 'Fıkıh',                  urd: 'فقہ',              ben: 'ফিকহ',              fas: 'فقه',           zh: '伊斯兰法学',     yue: '伊斯蘭法學',   ja: 'フィクフ',        ru: 'Фикх',                 es: 'Fiqh',               ko: '피크흐'              },
-  'nav.suluk':          { en: 'Suluk',              ms: 'Suluk',           tur: 'Sülûk',                  urd: 'سلوک',             ben: 'সুলুক',             fas: 'سلوک',          zh: '精神修行',      yue: '精神修行',     ja: 'スルーク',        ru: 'Сулук',                es: 'Suluk',              ko: '술루크'              },
-  'nav.nikah':          { en: 'Nikah',              ms: 'Nikah',           tur: 'Nikah',                  urd: 'نکاح',             ben: 'নিকাহ',             fas: 'نکاح',          zh: '婚姻',          yue: '婚姻',         ja: 'ニカー',          ru: 'Никах',                es: 'Nikah',              ko: '니카흐'              },
-  'nav.quran':          { en: 'The Quran',          ms: 'Al-Quran',        tur: 'Kuran-ı Kerim',          urd: 'قرآن کریم',        ben: 'আল-কুরআন',          fas: 'قرآن کریم',     zh: '古兰经',        yue: '古蘭經',       ja: 'クルアーン',      ru: 'Коран',                es: 'El Corán',           ko: '꾸란'                },
-  'nav.browse':         { en: 'Browse Collections', ms: 'Semak Koleksi',   tur: 'Koleksiyonlara Göz At',  urd: 'مجموعے دیکھیں',    ben: 'সংগ্রহ দেখুন',      fas: 'مرور مجموعه‌ها', zh: '浏览圣训集', yue: '瀏覽聖訓集', ja: 'コレクションを見る', ru: 'Просмотр коллекций', es: 'Ver Colecciones',  ko: '컬렉션 보기'         },
-  'nav.sixbooks':       { en: 'The Six Books',      ms: 'Enam Kitab',      tur: 'Altı Kitap',             urd: 'چھ کتابیں',        ben: 'ছয়টি কিতাব',       fas: 'شش کتاب',       zh: '六大圣训集',     yue: '六大聖訓集',   ja: '六大ハディース書',  ru: 'Шесть книг',           es: 'Los Seis Libros',    ko: '6대 성전'            },
-  'nav.ninebooks':      { en: 'The Nine Books',     ms: 'Sembilan Kitab',  tur: 'Dokuz Kitap',            urd: 'نو کتابیں',        ben: 'নয়টি কিতাব',       fas: 'نه کتاب',       zh: '九大圣训集',     yue: '九大聖訓集',   ja: '九大ハディース書',  ru: 'Девять книг',          es: 'Los Nueve Libros',   ko: '9대 성전'            },
-  'nav.other':          { en: 'Other Collections',  ms: 'Koleksi Lain',    tur: 'Diğer Koleksiyonlar',    urd: 'دیگر مجموعے',      ben: 'অন্যান্য সংগ্রহ',  fas: 'مجموعه‌های دیگر', zh: '其他圣训集', yue: '其他聖訓集', ja: 'その他のコレクション', ru: 'Другие коллекции', es: 'Otras Colecciones', ko: '기타 컬렉션'         },
-  'nav.hajjguide':      { en: 'Hajj Guide',         ms: 'Panduan Haji',    tur: 'Hac Rehberi',            urd: 'حج گائیڈ',         ben: 'হজ গাইড',           fas: 'راهنمای حج',    zh: '朝觐指南',      yue: '朝覲指南',     ja: 'ハッジガイド',    ru: 'Руководство по Хаджу', es: 'Guía del Hayy',   ko: '하즈 안내'           },
-  'nav.umrahguide':     { en: 'Umrah Guide',        ms: 'Panduan Umrah',   tur: 'Umre Rehberi',           urd: 'عمرہ گائیڈ',       ben: 'উমরাহ গাইড',        fas: 'راهنمای عمره',  zh: '副朝指南',      yue: '副朝指南',     ja: 'ウムラガイド',    ru: 'Руководство по Умре',  es: 'Guía de Umra',    ko: '우므라 안내'          },
+  'nav.hadith':         { en: 'Hadith',             ms: 'Hadis',           tur: 'Hadis',                  urd: 'حدیث',             ben: 'হাদিস',             fas: 'حدیث',          zh: '圣训',          yue: '聖訓',         ja: 'ハディース',      ru: 'Хадис',                es: 'Hadiz',              ko: '하디스',              ta: 'ஹதீஸ்',           si: 'හදීස්'            },
+  'nav.prophets':       { en: 'Prophets',           ms: 'Para Nabi',       tur: 'Peygamberler',           urd: 'انبیاء',           ben: 'নবীগণ',             fas: 'پیامبران',      zh: '先知',          yue: '先知',         ja: '預言者',          ru: 'Пророки',              es: 'Profetas',           ko: '예언자',              ta: 'நபிமார்கள்',      si: 'නබිවරු'           },
+  'nav.duas':           { en: "Du'as",              ms: 'Doa',             tur: 'Dualar',                 urd: 'دعائیں',           ben: 'দোয়া',              fas: 'دعاها',         zh: '祈祷',          yue: '祈禱',         ja: 'ドゥア',          ru: 'Дуа',                  es: "Du'as",              ko: '두아',                ta: 'துஆக்கள்',        si: 'දුආ'              },
+  'nav.hajj':           { en: 'Hajj & Umrah',      ms: 'Haji & Umrah',    tur: 'Hac & Umre',             urd: 'حج و عمرہ',        ben: 'হজ ও উমরাহ',       fas: 'حج و عمره',     zh: '朝觐与副朝',     yue: '朝覲與副朝',   ja: 'ハッジ・ウムラ',  ru: 'Хадж и Умра',          es: 'Hayy y Umra',        ko: '하즈 & 우므라',       ta: 'ஹஜ் & உம்ரா',    si: 'හජ් සහ උම්රා'     },
+  'nav.learn':          { en: 'Learn',              ms: 'Belajar',         tur: 'Öğren',                  urd: 'سیکھیں',           ben: 'শিখুন',             fas: 'یاد بگیرید',   zh: '学习',          yue: '學習',         ja: '学ぶ',            ru: 'Изучить',              es: 'Aprender',           ko: '배우기',              ta: 'கற்றல்',          si: 'ඉගෙනීම'          },
+  'nav.about':          { en: 'About',              ms: 'Tentang',         tur: 'Hakkında',               urd: 'بارے میں',         ben: 'সম্পর্কে',          fas: 'درباره',        zh: '关于',          yue: '關於',         ja: 'について',        ru: 'О нас',                es: 'Acerca de',          ko: '소개',                ta: 'பற்றி',           si: 'ගැන'              },
+  'nav.99names':        { en: '99 Names of Allah',  ms: '99 Nama Allah',   tur: "Allah'ın 99 İsmi",       urd: 'اللہ کے 99 نام',   ben: 'আল্লাহর ৯৯টি নাম', fas: '۹۹ نام خداوند', zh: '安拉的99个名字', yue: '真主的99個名字', ja: 'アッラーの99の御名', ru: '99 имён Аллаха', es: '99 Nombres de Alá', ko: '알라의 99가지 이름', ta: 'அல்லாஹ்வின் 99 பெயர்கள்', si: 'අල්ලාහ්ගේ නාම 99' },
+  'nav.prayer':         { en: 'How to Pray',        ms: 'Cara Solat',      tur: 'Namaz Nasıl Kılınır',    urd: 'نماز کا طریقہ',    ben: 'নামাজ পড়ার পদ্ধতি', fas: 'چگونه نماز بخوانیم', zh: '如何礼拜', yue: '如何禮拜', ja: 'サラーの仕方', ru: 'Как молиться', es: 'Cómo Rezar', ko: '예배 방법', ta: 'தொழுகை முறை', si: 'යාඥා කිරීම'      },
+  'nav.seerah':         { en: 'Seerah',             ms: 'Sirah',           tur: 'Siyer',                  urd: 'سیرت',             ben: 'সীরাত',             fas: 'سیره',          zh: '先知传记',      yue: '先知傳記',     ja: 'スィーラ',        ru: 'Сира',                 es: 'Sira',               ko: '시라',                ta: 'சீரத்',           si: 'සීරා'             },
+  'nav.glossary':       { en: 'Glossary',           ms: 'Glosari',         tur: 'Sözlük',                 urd: 'لغت',              ben: 'পরিভাষা',           fas: 'واژه‌نامه',     zh: '术语表',        yue: '術語表',       ja: '用語集',          ru: 'Словарь',              es: 'Glosario',           ko: '용어집',              ta: 'சொல்லகராதி',      si: 'ශබ්ද කෝෂය'        },
+  'nav.calendar':       { en: 'Islamic Calendar',   ms: 'Kalendar Islam',  tur: 'İslam Takvimi',          urd: 'اسلامی کیلنڈر',    ben: 'ইসলামি ক্যালেন্ডার', fas: 'تقویم اسلامی', zh: '伊斯兰历', yue: '伊斯蘭曆', ja: 'イスラム暦', ru: 'Исламский календарь', es: 'Calendario Islámico', ko: '이슬람 달력', ta: 'இஸ்லாமிய காலண்டர்', si: 'ඉස්ලාම් දිනදර්ශිනය' },
+  'nav.tawheed':        { en: 'Tawheed',            ms: 'Tauhid',          tur: 'Tevhid',                 urd: 'توحید',            ben: 'তাওহিদ',            fas: 'توحید',         zh: '认主独一',      yue: '認主獨一',     ja: 'タウヒード',      ru: 'Таухид',               es: 'Tauhid',             ko: '타우히드',            ta: 'தவ்ஹீத்',         si: 'තව්හීද්'          },
+  'nav.ramadan':        { en: 'Ramadan',            ms: 'Ramadan',         tur: 'Ramazan',                urd: 'رمضان',            ben: 'রমজান',             fas: 'رمضان',         zh: '斋月',          yue: '齋戒月',       ja: 'ラマダン',        ru: 'Рамадан',              es: 'Ramadán',            ko: '라마단',              ta: 'ரமழான்',          si: 'රමදාන්'           },
+  'nav.fiqh':           { en: 'Fiqh',               ms: 'Fiqh',            tur: 'Fıkıh',                  urd: 'فقہ',              ben: 'ফিকহ',              fas: 'فقه',           zh: '伊斯兰法学',     yue: '伊斯蘭法學',   ja: 'フィクフ',        ru: 'Фикх',                 es: 'Fiqh',               ko: '피크흐',              ta: 'ஃபிக்ஹ்',         si: 'ෆිකහ්'            },
+  'nav.suluk':          { en: 'Suluk',              ms: 'Suluk',           tur: 'Sülûk',                  urd: 'سلوک',             ben: 'সুলুক',             fas: 'سلوک',          zh: '精神修行',      yue: '精神修行',     ja: 'スルーク',        ru: 'Сулук',                es: 'Suluk',              ko: '술루크',              ta: 'சுலூக்',          si: 'සුලූක්'           },
+  'nav.nikah':          { en: 'Nikah',              ms: 'Nikah',           tur: 'Nikah',                  urd: 'نکاح',             ben: 'নিকাহ',             fas: 'نکاح',          zh: '婚姻',          yue: '婚姻',         ja: 'ニカー',          ru: 'Никах',                es: 'Nikah',              ko: '니카흐',              ta: 'நிகாஹ்',          si: 'නිකාහ්'           },
+  'nav.quran':          { en: 'The Quran',          ms: 'Al-Quran',        tur: 'Kuran-ı Kerim',          urd: 'قرآن کریم',        ben: 'আল-কুরআন',          fas: 'قرآن کریم',     zh: '古兰经',        yue: '古蘭經',       ja: 'クルアーン',      ru: 'Коран',                es: 'El Corán',           ko: '꾸란',                ta: 'திருக்குர்ஆன்',  si: 'කුර්ආනය'          },
+  'nav.browse':         { en: 'Browse Collections', ms: 'Semak Koleksi',   tur: 'Koleksiyonlara Göz At',  urd: 'مجموعے دیکھیں',    ben: 'সংগ্রহ দেখুন',      fas: 'مرور مجموعه‌ها', zh: '浏览圣训集', yue: '瀏覽聖訓集', ja: 'コレクションを見る', ru: 'Просмотр коллекций', es: 'Ver Colecciones', ko: '컬렉션 보기', ta: 'தொகுப்புகள் பார்க்க', si: 'එකතු බලන්න'    },
+  'nav.sixbooks':       { en: 'The Six Books',      ms: 'Enam Kitab',      tur: 'Altı Kitap',             urd: 'چھ کتابیں',        ben: 'ছয়টি কিতাব',       fas: 'شش کتاب',       zh: '六大圣训集',     yue: '六大聖訓集',   ja: '六大ハディース書',  ru: 'Шесть книг',           es: 'Los Seis Libros',    ko: '6대 성전',            ta: 'ஆறு நூல்கள்',     si: 'හය ග්‍රන්ථ'       },
+  'nav.ninebooks':      { en: 'The Nine Books',     ms: 'Sembilan Kitab',  tur: 'Dokuz Kitap',            urd: 'نو کتابیں',        ben: 'নয়টি কিতাব',       fas: 'نه کتاب',       zh: '九大圣训集',     yue: '九大聖訓集',   ja: '九大ハディース書',  ru: 'Девять книг',          es: 'Los Nueve Libros',   ko: '9대 성전',            ta: 'ஒன்பது நூல்கள்',  si: 'නව ග්‍රන්ථ'       },
+  'nav.other':          { en: 'Other Collections',  ms: 'Koleksi Lain',    tur: 'Diğer Koleksiyonlar',    urd: 'دیگر مجموعے',      ben: 'অন্যান্য সংগ্রহ',  fas: 'مجموعه‌های دیگر', zh: '其他圣训集', yue: '其他聖訓集', ja: 'その他のコレクション', ru: 'Другие коллекции', es: 'Otras Colecciones', ko: '기타 컬렉션', ta: 'பிற தொகுப்புகள்', si: 'වෙනත් එකතු'     },
+  'nav.hajjguide':      { en: 'Hajj Guide',         ms: 'Panduan Haji',    tur: 'Hac Rehberi',            urd: 'حج گائیڈ',         ben: 'হজ গাইড',           fas: 'راهنمای حج',    zh: '朝觐指南',      yue: '朝覲指南',     ja: 'ハッジガイド',    ru: 'Руководство по Хаджу', es: 'Guía del Hayy',   ko: '하즈 안내',           ta: 'ஹஜ் வழிகாட்டி',  si: 'හජ් මාර්ගෝපදේශය' },
+  'nav.umrahguide':     { en: 'Umrah Guide',        ms: 'Panduan Umrah',   tur: 'Umre Rehberi',           urd: 'عمرہ گائیڈ',       ben: 'উমরাহ গাইড',        fas: 'راهنمای عمره',  zh: '副朝指南',      yue: '副朝指南',     ja: 'ウムラガイド',    ru: 'Руководство по Умре',  es: 'Guía de Umra',    ko: '우므라 안내',         ta: 'உம்ரா வழிகாட்டி', si: 'උම්රා මාර්ගෝපදේශය' },
 
   /* ── Hero ───────────────────────────────────────────── */
   'hero.subtitle': {
@@ -57,27 +59,29 @@ const UI = {
     ru:  'Научный ресурс по подлинной исламской традиции: хадисы, мольбы, истории пророков и руководство по поклонению, представленные на арабском языке с переводами на несколько языков.',
     es:  'Un recurso académico para la tradición islámica auténtica: hadices, súplicas, historias de los profetas y orientación para el culto, presentados en árabe con traducciones en múltiples idiomas.',
     ko:  '정통 이슬람 전통을 위한 학문적 자료: 하디스, 두아, 예언자들의 이야기와 예배 안내를 아랍어와 여러 언어 번역으로 제공합니다.',
+    ta:  'உண்மையான இஸ்லாமிய மரபுக்கான ஒரு அறிவியல் மூலம்: ஹதீஸ்கள், துஆக்கள், நபிமார்களின் கதைகள் மற்றும் வழிபாட்டு வழிகாட்டுதல் — அரபியில் பல மொழிகளில் மொழிபெயர்ப்புகளுடன் வழங்கப்படுகிறது.',
+    si:  'සත්‍ය ඉස්ලාම් ආදර්ශය සඳහා විද්‍යාත්මක මූලාශ්‍රයක්: හදීස්, දුආ, නබිවරුන්ගේ කතා සහ ඉබාදත් මාර්ගෝපදේශය — ආරාබි භාෂාවෙන් බහු භාෂා පරිවර්තන සමඟ.',
   },
-  'hero.cta.hadith': { en: 'Browse Hadith Collections', ms: 'Semak Koleksi Hadis',  tur: 'Hadis Koleksiyonlarına Göz At', urd: 'حدیث کے مجموعے دیکھیں', ben: 'হাদিস সংগ্রহ দেখুন', fas: 'مرور مجموعه‌های حدیث', zh: '浏览圣训集', yue: '瀏覽聖訓集', ja: 'ハディース集を見る', ru: 'Просмотр хадисов', es: 'Ver Colecciones de Hadices', ko: '하디스 컬렉션 보기' },
-  'hero.cta.about':  { en: 'About This Resource',       ms: 'Tentang Sumber Ini',   tur: 'Bu Kaynak Hakkında',           urd: 'اس ماخذ کے بارے میں',   ben: 'এই উৎস সম্পর্কে',    fas: 'درباره این منبع',       zh: '关于本资源', yue: '關於本資源', ja: 'このリソースについて', ru: 'Об этом ресурсе', es: 'Acerca de Este Recurso', ko: '이 자료에 대해' },
+  'hero.cta.hadith': { en: 'Browse Hadith Collections', ms: 'Semak Koleksi Hadis',  tur: 'Hadis Koleksiyonlarına Göz At', urd: 'حدیث کے مجموعے دیکھیں', ben: 'হাদিস সংগ্রহ দেখুন', fas: 'مرور مجموعه‌های حدیث', zh: '浏览圣训集', yue: '瀏覽聖訓集', ja: 'ハディース集を見る', ru: 'Просмотр хадисов', es: 'Ver Colecciones de Hadices', ko: '하디스 컬렉션 보기', ta: 'ஹதீஸ் தொகுப்புகளை பார்க்க', si: 'හදීස් එකතු බලන්න' },
+  'hero.cta.about':  { en: 'About This Resource',       ms: 'Tentang Sumber Ini',   tur: 'Bu Kaynak Hakkında',           urd: 'اس ماخذ کے بارے میں',   ben: 'এই উৎস সম্পর্কে',    fas: 'درباره این منبع',       zh: '关于本资源', yue: '關於本資源', ja: 'このリソースについて', ru: 'Об этом ресурсе', es: 'Acerca de Este Recurso', ko: '이 자료에 대해', ta: 'இந்த மூலம் பற்றி', si: 'මෙම මූලාශ්‍රය ගැන' },
 
   /* ── UI Controls ─────────────────────────────────────── */
-  'ui.previous':    { en: 'Previous',        ms: 'Sebelumnya',    tur: 'Önceki',           urd: 'پچھلا',            ben: 'পূর্ববর্তী',    fas: 'قبلی',              zh: '上一页',    yue: '上一頁',   ja: '前へ',           ru: 'Назад',                es: 'Anterior',           ko: '이전'                },
-  'ui.next':        { en: 'Next',            ms: 'Seterusnya',    tur: 'Sonraki',          urd: 'اگلا',             ben: 'পরবর্তী',       fas: 'بعدی',              zh: '下一页',    yue: '下一頁',   ja: '次へ',           ru: 'Вперёд',               es: 'Siguiente',          ko: '다음'                },
-  'ui.page':        { en: 'Page',            ms: 'Halaman',       tur: 'Sayfa',            urd: 'صفحہ',             ben: 'পৃষ্ঠা',        fas: 'صفحه',              zh: '第',        yue: '第',       ja: 'ページ',         ru: 'Страница',             es: 'Página',             ko: '페이지'              },
-  'ui.of':          { en: 'of',              ms: 'daripada',      tur: '/',                urd: 'کا',               ben: 'এর',            fas: 'از',                zh: '页，共',    yue: '頁，共',   ja: '/',              ru: 'из',                   es: 'de',                 ko: '/'                   },
-  'ui.search':      { en: 'Search',          ms: 'Cari',          tur: 'Ara',              urd: 'تلاش',             ben: 'অনুসন্ধান',     fas: 'جستجو',             zh: '搜索',      yue: '搜尋',     ja: '検索',           ru: 'Поиск',                es: 'Buscar',             ko: '검색'                },
-  'ui.loading':     { en: 'Loading...',      ms: 'Memuatkan...',  tur: 'Yükleniyor...',    urd: 'لوڈ ہو رہا ہے...',  ben: 'লোড হচ্ছে...',  fas: 'در حال بارگیری...', zh: '加载中…',   yue: '載入中…',  ja: '読み込み中…',    ru: 'Загрузка…',            es: 'Cargando…',          ko: '로딩 중…'            },
-  'ui.browse':      { en: 'Browse',          ms: 'Semak',         tur: 'Göz At',           urd: 'دیکھیں',           ben: 'দেখুন',         fas: 'مرور',              zh: '浏览',      yue: '瀏覽',     ja: '閲覧',           ru: 'Просмотр',             es: 'Explorar',           ko: '탐색'                },
-  'ui.comingsoon':  { en: 'Coming soon',     ms: 'Akan datang',   tur: 'Yakında',          urd: 'جلد آ رہا ہے',     ben: 'শীঘ্রই আসছে',  fas: 'به زودی',           zh: '即将推出',   yue: '即將推出',  ja: '近日公開',       ru: 'Скоро',                es: 'Próximamente',       ko: '곧 출시'             },
-  'ui.hadiths':     { en: 'hadiths',         ms: 'hadis',         tur: 'hadis',            urd: 'احادیث',           ben: 'হাদিস',         fas: 'حدیث',              zh: '圣训',      yue: '聖訓',     ja: 'ハディース',      ru: 'хадисов',              es: 'hadices',            ko: '하디스'              },
-  'ui.selectlang':  { en: 'Select language', ms: 'Pilih bahasa',  tur: 'Dil seç',          urd: 'زبان منتخب کریں',  ben: 'ভাষা নির্বাচন করুন', fas: 'انتخاب زبان', zh: '选择语言', yue: '選擇語言', ja: '言語を選択', ru: 'Выбрать язык',         es: 'Seleccionar idioma', ko: '언어 선택'           },
-  'ui.changelang':  { en: 'Language',        ms: 'Bahasa',        tur: 'Dil',              urd: 'زبان',             ben: 'ভাষা',          fas: 'زبان',              zh: '语言',      yue: '語言',     ja: '言語',           ru: 'Язык',                 es: 'Idioma',             ko: '언어'                },
-  'ui.explore':     { en: 'Explore',         ms: 'Terokai',       tur: 'Keşfet',           urd: 'دیکھیں',           ben: 'অন্বেষণ',       fas: 'کاوش',              zh: '探索',      yue: '探索',     ja: '探索する',       ru: 'Изучить',              es: 'Explorar',           ko: '탐색'                },
-  'ui.all':         { en: 'All',             ms: 'Semua',         tur: 'Hepsi',            urd: 'سب',               ben: 'সব',            fas: 'همه',               zh: '全部',      yue: '全部',     ja: 'すべて',         ru: 'Все',                  es: 'Todo',               ko: '전체'                },
-  'ui.makki':       { en: 'Makki',           ms: 'Makkiyyah',     tur: 'Mekki',            urd: 'مکی',              ben: 'মক্কী',         fas: 'مکی',               zh: '麦加章',    yue: '麥加章',   ja: 'マッカ章',       ru: 'Меккийские',           es: 'Mequí',              ko: '마키'                },
-  'ui.madani':      { en: 'Madani',          ms: 'Madaniyyah',    tur: 'Medeni',           urd: 'مدنی',             ben: 'মাদানী',        fas: 'مدنی',              zh: '麦地那章',  yue: '麥地那章', ja: 'マディーナ章',    ru: 'Мединские',            es: 'Medinés',            ko: '마다니'              },
-  'ui.verses':      { en: 'verses',          ms: 'ayat',          tur: 'ayet',             urd: 'آیات',             ben: 'আয়াত',          fas: 'آیه',               zh: '节',        yue: '節',       ja: '節',             ru: 'аятов',                es: 'versículos',         ko: '절'                  },
+  'ui.previous':    { en: 'Previous',        ms: 'Sebelumnya',    tur: 'Önceki',           urd: 'پچھلا',            ben: 'পূর্ববর্তী',    fas: 'قبلی',              zh: '上一页',    yue: '上一頁',   ja: '前へ',           ru: 'Назад',                es: 'Anterior',           ko: '이전',                ta: 'முந்தைய',         si: 'පෙර'              },
+  'ui.next':        { en: 'Next',            ms: 'Seterusnya',    tur: 'Sonraki',          urd: 'اگلا',             ben: 'পরবর্তী',       fas: 'بعدی',              zh: '下一页',    yue: '下一頁',   ja: '次へ',           ru: 'Вперёд',               es: 'Siguiente',          ko: '다음',                ta: 'அடுத்த',          si: 'ඊළඟ'              },
+  'ui.page':        { en: 'Page',            ms: 'Halaman',       tur: 'Sayfa',            urd: 'صفحہ',             ben: 'পৃষ্ঠা',        fas: 'صفحه',              zh: '第',        yue: '第',       ja: 'ページ',         ru: 'Страница',             es: 'Página',             ko: '페이지',              ta: 'பக்கம்',          si: 'පිටුව'            },
+  'ui.of':          { en: 'of',              ms: 'daripada',      tur: '/',                urd: 'کا',               ben: 'এর',            fas: 'از',                zh: '页，共',    yue: '頁，共',   ja: '/',              ru: 'из',                   es: 'de',                 ko: '/',                   ta: '/',               si: '/'                },
+  'ui.search':      { en: 'Search',          ms: 'Cari',          tur: 'Ara',              urd: 'تلاش',             ben: 'অনুসন্ধান',     fas: 'جستجو',             zh: '搜索',      yue: '搜尋',     ja: '検索',           ru: 'Поиск',                es: 'Buscar',             ko: '검색',                ta: 'தேடல்',           si: 'සෙවීම'            },
+  'ui.loading':     { en: 'Loading...',      ms: 'Memuatkan...',  tur: 'Yükleniyor...',    urd: 'لوڈ ہو رہا ہے...',  ben: 'লোড হচ্ছে...',  fas: 'در حال بارگیری...', zh: '加载中…',   yue: '載入中…',  ja: '読み込み中…',    ru: 'Загрузка…',            es: 'Cargando…',          ko: '로딩 중…',            ta: 'ஏற்றுகிறது...',   si: 'පූරණය...'         },
+  'ui.browse':      { en: 'Browse',          ms: 'Semak',         tur: 'Göz At',           urd: 'دیکھیں',           ben: 'দেখুন',         fas: 'مرور',              zh: '浏览',      yue: '瀏覽',     ja: '閲覧',           ru: 'Просмотр',             es: 'Explorar',           ko: '탐색',                ta: 'பார்க்க',         si: 'බලන්න'            },
+  'ui.comingsoon':  { en: 'Coming soon',     ms: 'Akan datang',   tur: 'Yakında',          urd: 'جلد آ رہا ہے',     ben: 'শীঘ্রই আসছে',  fas: 'به زودی',           zh: '即将推出',   yue: '即將推出',  ja: '近日公開',       ru: 'Скоро',                es: 'Próximamente',       ko: '곧 출시',             ta: 'விரைவில்',        si: 'ළඟදීම'            },
+  'ui.hadiths':     { en: 'hadiths',         ms: 'hadis',         tur: 'hadis',            urd: 'احادیث',           ben: 'হাদিস',         fas: 'حدیث',              zh: '圣训',      yue: '聖訓',     ja: 'ハディース',      ru: 'хадисов',              es: 'hadices',            ko: '하디스',              ta: 'ஹதீஸ்கள்',        si: 'හදීස්'            },
+  'ui.selectlang':  { en: 'Select language', ms: 'Pilih bahasa',  tur: 'Dil seç',          urd: 'زبان منتخب کریں',  ben: 'ভাষা নির্বাচন করুন', fas: 'انتخاب زبان', zh: '选择语言', yue: '選擇語言', ja: '言語を選択', ru: 'Выбрать язык', es: 'Seleccionar idioma', ko: '언어 선택', ta: 'மொழி தேர்வு', si: 'භාෂාව තෝරන්න'    },
+  'ui.changelang':  { en: 'Language',        ms: 'Bahasa',        tur: 'Dil',              urd: 'زبان',             ben: 'ভাষা',          fas: 'زبان',              zh: '语言',      yue: '語言',     ja: '言語',           ru: 'Язык',                 es: 'Idioma',             ko: '언어',                ta: 'மொழி',            si: 'භාෂාව'            },
+  'ui.explore':     { en: 'Explore',         ms: 'Terokai',       tur: 'Keşfet',           urd: 'دیکھیں',           ben: 'অন্বেষণ',       fas: 'کاوش',              zh: '探索',      yue: '探索',     ja: '探索する',       ru: 'Изучить',              es: 'Explorar',           ko: '탐색',                ta: 'ஆராய்க',          si: 'ගවේෂණය'           },
+  'ui.all':         { en: 'All',             ms: 'Semua',         tur: 'Hepsi',            urd: 'سب',               ben: 'সব',            fas: 'همه',               zh: '全部',      yue: '全部',     ja: 'すべて',         ru: 'Все',                  es: 'Todo',               ko: '전체',                ta: 'அனைத்தும்',       si: 'සියල්ල'           },
+  'ui.makki':       { en: 'Makki',           ms: 'Makkiyyah',     tur: 'Mekki',            urd: 'مکی',              ben: 'মক্কী',         fas: 'مکی',               zh: '麦加章',    yue: '麥加章',   ja: 'マッカ章',       ru: 'Меккийские',           es: 'Mequí',              ko: '마키',                ta: 'மக்கி',           si: 'මක්කි'            },
+  'ui.madani':      { en: 'Madani',          ms: 'Madaniyyah',    tur: 'Medeni',           urd: 'مدنی',             ben: 'মাদানী',        fas: 'مدنی',              zh: '麦地那章',  yue: '麥地那章', ja: 'マディーナ章',    ru: 'Мединские',            es: 'Medinés',            ko: '마다니',              ta: 'மதனி',            si: 'මදනී'             },
+  'ui.verses':      { en: 'verses',          ms: 'ayat',          tur: 'ayet',             urd: 'آیات',             ben: 'আয়াত',          fas: 'آیه',               zh: '节',        yue: '節',       ja: '節',             ru: 'аятов',                es: 'versículos',         ko: '절',                  ta: 'வசனங்கள்',        si: 'ආයත්'             },
   'ui.nosurahs':    {
     en:  'No surahs match your search.',
     ms:  'Tiada surah yang sepadan.',
@@ -91,24 +95,26 @@ const UI = {
     ru:  'Сур, соответствующих поиску, не найдено.',
     es:  'No hay suras que coincidan con tu búsqueda.',
     ko:  '검색과 일치하는 수라가 없습니다.',
+    ta:  'உங்கள் தேடலுக்கு பொருந்தும் சூரா இல்லை.',
+    si:  'ඔබේ සෙවීමට ගැළපෙන සූරා නැත.',
   },
 
   /* ── Home page sections ──────────────────────────────── */
-  'home.explore':      { en: 'Explore Al-Hikmah',     ms: 'Terokai Al-Hikmah',       tur: "Al-Hikmah'ı Keşfedin",        urd: 'الحکمہ دریافت کریں',         ben: 'আল-হিকমাহ অন্বেষণ করুন',     fas: 'کاوش در الحکمه',          zh: '探索Al-Hikmah',   yue: '探索Al-Hikmah',   ja: 'アル・ヒクマを探索する',    ru: 'Исследуйте Аль-Хикма',           es: 'Explorar Al-Hikmah',            ko: 'Al-Hikmah 탐색'              },
-  'home.exploreSub':   { en: "Navigate authentic Islamic knowledge, from the words of the Prophet ﷺ to the wisdom of the ages.", ms: 'Telusuri ilmu Islam yang sahih, dari sabda-sabda Nabi ﷺ hingga hikmah zaman.', tur: "Peygamber'in ﷺ sözlerinden çağların hikmetine kadar özgün İslami bilgiyi keşfedin.", urd: 'مستند اسلامی علم میں سفر کریں، نبی ﷺ کے اقوال سے لے کر صدیوں کی حکمت تک۔', ben: 'নবী ﷺ-এর বাণী থেকে যুগের জ্ঞান পর্যন্ত — খাঁটি ইসলামি জ্ঞানে বিচরণ করুন।', fas: 'از کلمات پیامبر ﷺ تا حکمت اعصار — در دانش اصیل اسلامی مسیر بیابید.', zh: '从先知ﷺ的话语到历代智慧，探索正宗伊斯兰知识。', yue: '從先知ﷺ的話語到歷代智慧，探索正宗伊斯蘭知識。', ja: '預言者ﷺのお言葉から時代の知恵まで、本格的なイスラムの知識を探索してください。', ru: 'Откройте для себя подлинные исламские знания — от слов Пророка ﷺ до мудрости веков.', es: 'Navega por el auténtico conocimiento islámico, desde las palabras del Profeta ﷺ hasta la sabiduría de los siglos.', ko: '예언자 ﷺ의 말씀부터 시대의 지혜까지 — 정통 이슬람 지식을 탐색하세요.' },
-  'home.featured':     { en: 'Featured Hadith Collections',                     ms: 'Koleksi Hadis Pilihan',                       tur: 'Öne Çıkan Hadis Koleksiyonları',                    urd: 'نمایاں احادیث مجموعے',               ben: 'বিশেষ হাদিস সংকলন',              fas: 'مجموعه‌های برگزیده حدیث',  zh: '精选圣训集',          yue: '精選聖訓集',         ja: '注目のハディース集',          ru: 'Избранные сборники хадисов',               es: 'Colecciones destacadas de Hadith',  ko: '주요 하디스 컬렉션'          },
-  'home.featuredSub':  { en: "The most revered collections of the Prophet's ﷺ words", ms: 'Koleksi paling dihormati bagi sabda-sabda Nabi ﷺ', tur: "Peygamber'in ﷺ sözlerinin en saygın koleksiyonları", urd: 'نبی کریم ﷺ کے اقوال کے سب سے معزز مجموعے', ben: 'নবী ﷺ-এর বাণীর সবচেয়ে সম্মানিত সংকলন', fas: 'معتبرترین مجموعه‌های احادیث پیامبر ﷺ', zh: '先知ﷺ言语最受尊崇的集录', yue: '先知ﷺ言語最受尊崇的集錄', ja: '預言者ﷺの言葉の最も尊ばれる集録', ru: 'Наиболее почитаемые собрания слов Пророка ﷺ', es: 'Las colecciones más veneradas de las palabras del Profeta ﷺ', ko: '예언자 ﷺ 말씀의 가장 권위 있는 컬렉션' },
-  'home.allcollections': { en: 'All Collections',  ms: 'Semua Koleksi',   tur: 'Tüm Koleksiyonlar',  urd: 'تمام مجموعے',     ben: 'সব সংকলন',         fas: 'همه مجموعه‌ها',    zh: '所有集录',      yue: '所有集錄',     ja: 'すべてのコレクション', ru: 'Все коллекции',    es: 'Todas las colecciones',  ko: '모든 컬렉션'            },
-  'home.viewall':        { en: 'View All Collections', ms: 'Lihat Semua Koleksi', tur: 'Tüm Koleksiyonları Gör', urd: 'تمام مجموعے دیکھیں', ben: 'সব সংকলন দেখুন', fas: 'مشاهده همه مجموعه‌ها', zh: '查看所有集录', yue: '查看所有集錄', ja: 'すべてのコレクションを見る', ru: 'Все коллекции', es: 'Ver todas las colecciones', ko: '모든 컬렉션 보기' },
-  'home.beginstudy':     { en: 'Begin Your Study',  ms: 'Mulakan Kajian Anda', tur: 'Çalışmanıza Başlayın', urd: 'اپنا مطالعہ شروع کریں', ben: 'আপনার অধ্যয়ন শুরু করুন', fas: 'مطالعه خود را آغاز کنید', zh: '开始学习', yue: '開始學習', ja: '学習を始める', ru: 'Начните учёбу', es: 'Comienza tu estudio', ko: '학습 시작' },
+  'home.explore':      { en: 'Explore Al-Hikmah', ms: 'Terokai Al-Hikmah', tur: "Al-Hikmah'ı Keşfedin", urd: 'الحکمہ دریافت کریں', ben: 'আল-হিকমাহ অন্বেষণ করুন', fas: 'کاوش در الحکمه', zh: '探索Al-Hikmah', yue: '探索Al-Hikmah', ja: 'アル・ヒクマを探索する', ru: 'Исследуйте Аль-Хикма', es: 'Explorar Al-Hikmah', ko: 'Al-Hikmah 탐색', ta: 'அல்-ஹிக்மா ஆராய்க', si: 'Al-Hikmah ගවේෂණය' },
+  'home.exploreSub':   { en: "Navigate authentic Islamic knowledge, from the words of the Prophet ﷺ to the wisdom of the ages.", ms: 'Telusuri ilmu Islam yang sahih, dari sabda-sabda Nabi ﷺ hingga hikmah zaman.', tur: "Peygamber'in ﷺ sözlerinden çağların hikmetine kadar özgün İslami bilgiyi keşfedin.", urd: 'مستند اسلامی علم میں سفر کریں، نبی ﷺ کے اقوال سے لے کر صدیوں کی حکمت تک۔', ben: 'নবী ﷺ-এর বাণী থেকে যুগের জ্ঞান পর্যন্ত — খাঁটি ইসলামি জ্ঞানে বিচরণ করুন।', fas: 'از کلمات پیامبر ﷺ تا حکمت اعصار — در دانش اصیل اسلامی مسیر بیابید.', zh: '从先知ﷺ的话语到历代智慧，探索正宗伊斯兰知识。', yue: '從先知ﷺ的話語到歷代智慧，探索正宗伊斯蘭知識。', ja: '預言者ﷺのお言葉から時代の知恵まで、本格的なイスラムの知識を探索してください。', ru: 'Откройте для себя подлинные исламские знания — от слов Пророка ﷺ до мудрости веков.', es: 'Navega por el auténtico conocimiento islámico, desde las palabras del Profeta ﷺ hasta la sabiduría de los siglos.', ko: '예언자 ﷺ의 말씀부터 시대의 지혜까지 — 정통 이슬람 지식을 탐색하세요.', ta: 'நபி ﷺ யின் வார்த்தைகளிலிருந்து யுகங்களின் ஞானம் வரை — உண்மையான இஸ்லாமிய அறிவை ஆராய்க.', si: 'නබිﷺ ගේ වදනින් සිට යුගවල ප්‍රඥාව දක්වා — සැබෑ ඉස්ලාම් දැනුම ගවේෂණය කරන්න.' },
+  'home.featured':     { en: 'Featured Hadith Collections', ms: 'Koleksi Hadis Pilihan', tur: 'Öne Çıkan Hadis Koleksiyonları', urd: 'نمایاں احادیث مجموعے', ben: 'বিশেষ হাদিস সংকলন', fas: 'مجموعه‌های برگزیده حدیث', zh: '精选圣训集', yue: '精選聖訓集', ja: '注目のハディース集', ru: 'Избранные сборники хадисов', es: 'Colecciones destacadas de Hadith', ko: '주요 하디스 컬렉션', ta: 'சிறப்பு ஹதீஸ் தொகுப்புகள்', si: 'ශ්‍රේෂ්ඨ හදීස් එකතු' },
+  'home.featuredSub':  { en: "The most revered collections of the Prophet's ﷺ words", ms: 'Koleksi paling dihormati bagi sabda-sabda Nabi ﷺ', tur: "Peygamber'in ﷺ sözlerinin en saygın koleksiyonları", urd: 'نبی کریم ﷺ کے اقوال کے سب سے معزز مجموعے', ben: 'নবী ﷺ-এর বাণীর সবচেয়ে সম্মানিত সংকলন', fas: 'معتبرترین مجموعه‌های احادیث پیامبر ﷺ', zh: '先知ﷺ言语最受尊崇的集录', yue: '先知ﷺ言語最受尊崇的集錄', ja: '預言者ﷺの言葉の最も尊ばれる集録', ru: 'Наиболее почитаемые собрания слов Пророка ﷺ', es: 'Las colecciones más veneradas de las palabras del Profeta ﷺ', ko: '예언자 ﷺ 말씀의 가장 권위 있는 컬렉션', ta: 'நபி ﷺ யின் வார்த்தைகளின் மிக மதிப்பிற்குரிய தொகுப்புகள்', si: 'නබිﷺ ගේ වචනවල වඩාත් ගරු කළ එකතු' },
+  'home.allcollections': { en: 'All Collections', ms: 'Semua Koleksi', tur: 'Tüm Koleksiyonlar', urd: 'تمام مجموعے', ben: 'সব সংকলন', fas: 'همه مجموعه‌ها', zh: '所有集录', yue: '所有集錄', ja: 'すべてのコレクション', ru: 'Все коллекции', es: 'Todas las colecciones', ko: '모든 컬렉션', ta: 'அனைத்து தொகுப்புகள்', si: 'සියලු එකතු' },
+  'home.viewall':        { en: 'View All Collections', ms: 'Lihat Semua Koleksi', tur: 'Tüm Koleksiyonları Gör', urd: 'تمام مجموعے دیکھیں', ben: 'সব সংকলন দেখুন', fas: 'مشاهده همه مجموعه‌ها', zh: '查看所有集录', yue: '查看所有集錄', ja: 'すべてのコレクションを見る', ru: 'Все коллекции', es: 'Ver todas las colecciones', ko: '모든 컬렉션 보기', ta: 'அனைத்து தொகுப்புகளும் பார்க்க', si: 'සියලු එකතු බලන්න' },
+  'home.beginstudy':     { en: 'Begin Your Study', ms: 'Mulakan Kajian Anda', tur: 'Çalışmanıza Başlayın', urd: 'اپنا مطالعہ شروع کریں', ben: 'আপনার অধ্যয়ন শুরু করুন', fas: 'مطالعه خود را آغاز کنید', zh: '开始学习', yue: '開始學習', ja: '学習を始める', ru: 'Начните учёбу', es: 'Comienza tu estudio', ko: '학습 시작', ta: 'உங்கள் படிப்பை தொடங்குங்கள்', si: 'ඔබේ අධ්‍යයනය ආරම්භ කරන්න' },
 
   /* ── Prophets page ───────────────────────────────────── */
-  'prophets.sentto':   { en: 'Sent to:',           ms: 'Diutus kepada:',  tur: 'Gönderildiği yer:',  urd: 'بھیجے گئے:',      ben: 'প্রেরিত:',         fas: 'فرستاده به:',      zh: '奉差遣至：', yue: '奉差遣至：', ja: '派遣先：',        ru: 'Послан к:',        es: 'Enviado a:',             ko: '파견된 곳:'          },
+  'prophets.sentto':   { en: 'Sent to:',           ms: 'Diutus kepada:',  tur: 'Gönderildiği yer:',  urd: 'بھیجے گئے:',      ben: 'প্রেরিত:',         fas: 'فرستاده به:',      zh: '奉差遣至：', yue: '奉差遣至：', ja: '派遣先：',        ru: 'Послан к:',        es: 'Enviado a:',             ko: '파견된 곳:',          ta: 'அனுப்பப்பட்டது:', si: 'යවා ඇත:'         },
 
   /* ── Hadith page ─────────────────────────────────────── */
-  'hadith.english':     { en: 'English Meaning',        ms: 'Makna Bahasa Inggeris',   tur: 'İngilizce Anlam',       urd: 'انگریزی مفہوم',       ben: 'ইংরেজি অর্থ',        fas: 'معنی انگلیسی',  zh: '英文含义',    yue: '英文含義',   ja: '英語の意味',          ru: 'Значение на английском',    es: 'Significado en Inglés',   ko: '영어 의미'               },
-  'hadith.translation': { en: 'Translation',            ms: 'Terjemahan',              tur: 'Çeviri',                urd: 'ترجمہ',               ben: 'অনুবাদ',             fas: 'ترجمه',         zh: '翻译',        yue: '翻譯',       ja: '翻訳',                ru: 'Перевод',                   es: 'Traducción',              ko: '번역'                    },
-  'hadith.loading':     { en: 'Loading translation...', ms: 'Memuatkan terjemahan...', tur: 'Çeviri yükleniyor...', urd: 'ترجمہ لوڈ ہو رہا ہے...', ben: 'অনুবাদ লোড হচ্ছে...', fas: 'در حال بارگیری ترجمه...', zh: '正在加载翻译…', yue: '正在載入翻譯…', ja: '翻訳を読み込み中…', ru: 'Загрузка перевода…', es: 'Cargando traducción…', ko: '번역 로딩 중…' },
+  'hadith.english':     { en: 'English Meaning', ms: 'Makna Bahasa Inggeris', tur: 'İngilizce Anlam', urd: 'انگریزی مفہوم', ben: 'ইংরেজি অর্থ', fas: 'معنی انگلیسی', zh: '英文含义', yue: '英文含義', ja: '英語の意味', ru: 'Значение на английском', es: 'Significado en Inglés', ko: '영어 의미', ta: 'ஆங்கில அர்த்தம்', si: 'ඉංග්‍රීසි අර්ථය' },
+  'hadith.translation': { en: 'Translation', ms: 'Terjemahan', tur: 'Çeviri', urd: 'ترجمہ', ben: 'অনুবাদ', fas: 'ترجمه', zh: '翻译', yue: '翻譯', ja: '翻訳', ru: 'Перевод', es: 'Traducción', ko: '번역', ta: 'மொழிபெயர்ப்பு', si: 'පරිවර්තනය' },
+  'hadith.loading':     { en: 'Loading translation...', ms: 'Memuatkan terjemahan...', tur: 'Çeviri yükleniyor...', urd: 'ترجمہ لوڈ ہو رہا ہے...', ben: 'অনুবাদ লোড হচ্ছে...', fas: 'در حال بارگیری ترجمه...', zh: '正在加载翻译…', yue: '正在載入翻譯…', ja: '翻訳を読み込み中…', ru: 'Загрузка перевода…', es: 'Cargando traducción…', ko: '번역 로딩 중…', ta: 'மொழிபெயர்ப்பு ஏற்றுகிறது...', si: 'පරිවර්තනය පූරණය...' },
   'hadith.notavail':    {
     en:  'This translation is not yet available for this collection in the selected language.',
     ms:  'Terjemahan ini belum tersedia untuk koleksi ini dalam bahasa yang dipilih.',
@@ -122,6 +128,8 @@ const UI = {
     ru:  'Этот перевод пока недоступен для данной коллекции на выбранном языке.',
     es:  'Esta traducción aún no está disponible para esta colección en el idioma seleccionado.',
     ko:  '선택한 언어로는 이 컬렉션의 번역을 아직 이용할 수 없습니다.',
+    ta:  'தேர்ந்தெடுக்கப்பட்ட மொழியில் இந்த தொகுப்பிற்கான மொழிபெயர்ப்பு இன்னும் கிடைக்கவில்லை.',
+    si:  'තෝරාගත් භාෂාවෙන් මෙම එකතුව සඳහා පරිවර්තනය තවමත් ලබා ගත නොහැක.',
   },
   'hadith.tryother': {
     en:  'Try another language, or read the English meaning above.',
@@ -136,6 +144,8 @@ const UI = {
     ru:  'Попробуйте другой язык или прочитайте значение на английском выше.',
     es:  'Pruebe otro idioma, o lea el significado en inglés arriba.',
     ko:  '다른 언어를 선택하거나 위의 영어 의미를 읽으세요.',
+    ta:  'வேறு மொழியை முயலுங்கள், அல்லது மேலே ஆங்கில அர்த்தத்தை படிக்கவும்.',
+    si:  'වෙනත් භාෂාවක් උත්සාහ කරන්න, නැතහොත් ඉහත ඉංග්‍රීසි අර්ථය කියවන්න.',
   },
   'hadith.selectlang': {
     en:  'Select a language above to load the translation.',
@@ -150,6 +160,8 @@ const UI = {
     ru:  'Выберите язык выше для загрузки перевода.',
     es:  'Seleccione un idioma arriba para cargar la traducción.',
     ko:  '번역을 로드하려면 위에서 언어를 선택하세요.',
+    ta:  'மொழிபெயர்ப்பை ஏற்ற மேலே மொழியைத் தேர்வு செய்க.',
+    si:  'පරිවර්තනය පූරණය කිරීමට ඉහතින් භාෂාවක් තෝරන්න.',
   },
   'hadith.notext': {
     en:  'Text not available for this hadith.',
@@ -164,37 +176,39 @@ const UI = {
     ru:  'Текст для этого хадиса недоступен.',
     es:  'Texto no disponible para este hadiz.',
     ko:  '이 하디스의 본문을 이용할 수 없습니다.',
+    ta:  'இந்த ஹதீஸுக்கு உரை கிடைக்கவில்லை.',
+    si:  'මෙම හදීස් සඳහා පෙළ ලබා ගත නොහැක.',
   },
-  'hadith.grade.sahih': { en: 'Authentic (Sahih)', ms: 'Sahih', tur: 'Sahih (Güvenilir)', urd: 'صحیح', ben: 'সহিহ (বিশুদ্ধ)', fas: 'صحیح', zh: '真实可靠 (Sahih)', yue: '真實可靠 (Sahih)', ja: '真正 (サヒーフ)', ru: 'Достоверный (Сахих)', es: 'Auténtico (Sahih)', ko: '진실한 (사히흐)' },
+  'hadith.grade.sahih': { en: 'Authentic (Sahih)', ms: 'Sahih', tur: 'Sahih (Güvenilir)', urd: 'صحیح', ben: 'সহিহ (বিশুদ্ধ)', fas: 'صحیح', zh: '真实可靠 (Sahih)', yue: '真實可靠 (Sahih)', ja: '真正 (サヒーフ)', ru: 'Достоверный (Сахих)', es: 'Auténtico (Sahih)', ko: '진실한 (사히흐)', ta: 'நம்பகமான (சஹீஹ்)', si: 'සත්‍යාපිත (සහීහ්)' },
 
   /* ── Page headings ───────────────────────────────────── */
-  'page.hadith.title':   { en: 'Hadith Collections',            ms: 'Koleksi Hadis',          tur: 'Hadis Koleksiyonları',       urd: 'حدیث کے مجموعے',      ben: 'হাদিস সংগ্রহ',        fas: 'مجموعه‌های حدیث',  zh: '圣训集',          yue: '聖訓集',         ja: 'ハディース集',          ru: 'Коллекции хадисов',            es: 'Colecciones de Hadices',   ko: '하디스 컬렉션'          },
-  'page.prophets.title': { en: 'Prophets of Islam',             ms: 'Nabi-Nabi Islam',        tur: "İslam'ın Peygamberleri",     urd: 'اسلام کے انبیاء',     ben: 'ইসলামের নবীগণ',      fas: 'پیامبران اسلام',   zh: '伊斯兰的先知们',   yue: '伊斯蘭的先知們',  ja: 'イスラムの預言者たち',  ru: 'Пророки ислама',               es: 'Profetas del Islam',       ko: '이슬람의 예언자들'      },
-  'page.duas.title':     { en: "Du'as & Supplications",         ms: 'Doa & Permohonan',       tur: 'Dualar ve Niyazlar',         urd: 'دعائیں اور التجائیں', ben: 'দোয়া ও প্রার্থনা',  fas: 'دعاها و مناجات‌ها', zh: '祈祷与祈求',      yue: '祈禱與祈求',     ja: 'ドゥアと祈り',          ru: 'Дуа и мольбы',                 es: "Du'as y Súplicas",         ko: '두아 & 기도'             },
-  'page.99.title':       { en: 'The 99 Names of Allah',         ms: '99 Nama Allah',          tur: "Allah'ın 99 İsmi",           urd: 'اللہ کے 99 نام',      ben: 'আল্লাহর ৯৯টি নাম',  fas: '۹۹ نام خداوند',    zh: '安拉的99个名字',   yue: '真主的99個名字',  ja: 'アッラーの99の御名',    ru: '99 имён Аллаха',               es: 'Los 99 Nombres de Alá',    ko: '알라의 99가지 이름'     },
-  'page.prayer.title':   { en: 'How to Pray',                   ms: 'Cara Solat',             tur: 'Namaz Nasıl Kılınır',        urd: 'نماز کا طریقہ',       ben: 'নামাজ পড়ার পদ্ধতি', fas: 'چگونه نماز بخوانیم', zh: '如何礼拜',       yue: '如何禮拜',       ja: 'サラーの仕方',          ru: 'Как совершать молитву',        es: 'Cómo Rezar',               ko: '예배 방법'               },
-  'page.seerah.title':   { en: 'Seerah - Life of the Prophet',  ms: 'Sirah Nabi',             tur: "Siyer - Peygamberin Hayatı", urd: 'سیرت النبی',          ben: 'সীরাতুন নবী',        fas: 'سیره پیامبر',      zh: '先知传记',        yue: '先知傳記',       ja: 'スィーラ - 預言者の生涯', ru: 'Сира - Жизнь Пророка',       es: 'Sira - Vida del Profeta',  ko: '시라 - 예언자의 생애'   },
-  'page.hajj.title':     { en: 'Hajj & Umrah Guide',            ms: 'Panduan Haji & Umrah',   tur: 'Hac ve Umre Rehberi',        urd: 'حج و عمرہ گائیڈ',     ben: 'হজ ও উমরাহ গাইড',   fas: 'راهنمای حج و عمره', zh: '朝觐与副朝指南',  yue: '朝覲與副朝指南', ja: 'ハッジ・ウムラガイド',   ru: 'Руководство по Хаджу и Умре', es: 'Guía del Hayy y la Umra', ko: '하즈 & 우므라 안내'     },
-  'page.glossary.title': { en: 'Islamic Glossary',              ms: 'Glosari Islam',          tur: 'İslam Sözlüğü',             urd: 'اسلامی لغت',          ben: 'ইসলামি পরিভাষা',     fas: 'واژه‌نامه اسلامی', zh: '伊斯兰术语表',    yue: '伊斯蘭術語表',   ja: 'イスラム用語集',        ru: 'Исламский словарь',            es: 'Glosario Islámico',        ko: '이슬람 용어집'          },
-  'page.calendar.title': { en: 'Islamic Calendar',              ms: 'Kalendar Islam',         tur: 'İslam Takvimi',              urd: 'اسلامی کیلنڈر',       ben: 'ইসলামি ক্যালেন্ডার', fas: 'تقویم اسلامی',     zh: '伊斯兰历',       yue: '伊斯蘭曆',       ja: 'イスラム暦',            ru: 'Исламский календарь',          es: 'Calendario Islámico',      ko: '이슬람 달력'            },
-  'page.about.title':    { en: 'About Al-Hikmah',               ms: 'Tentang Al-Hikmah',      tur: 'Al-Hikmah Hakkında',         urd: 'الحکمہ کے بارے میں',  ben: 'আল-হিকমাহ সম্পর্কে', fas: 'درباره الحکمه',    zh: '关于Al-Hikmah',  yue: '關於Al-Hikmah',  ja: 'アル・ヒクマについて',  ru: 'Об Аль-Хикма',                 es: 'Acerca de Al-Hikmah',      ko: 'Al-Hikmah 소개'         },
+  'page.hadith.title':   { en: 'Hadith Collections', ms: 'Koleksi Hadis', tur: 'Hadis Koleksiyonları', urd: 'حدیث کے مجموعے', ben: 'হাদিস সংগ্রহ', fas: 'مجموعه‌های حدیث', zh: '圣训集', yue: '聖訓集', ja: 'ハディース集', ru: 'Коллекции хадисов', es: 'Colecciones de Hadices', ko: '하디스 컬렉션', ta: 'ஹதீஸ் தொகுப்புகள்', si: 'හදීස් එකතු' },
+  'page.prophets.title': { en: 'Prophets of Islam', ms: 'Nabi-Nabi Islam', tur: "İslam'ın Peygamberleri", urd: 'اسلام کے انبیاء', ben: 'ইসলামের নবীগণ', fas: 'پیامبران اسلام', zh: '伊斯兰的先知们', yue: '伊斯蘭的先知們', ja: 'イスラムの預言者たち', ru: 'Пророки ислама', es: 'Profetas del Islam', ko: '이슬람의 예언자들', ta: 'இஸ்லாமிய நபிமார்கள்', si: 'ඉස්ලාම් නබිවරු' },
+  'page.duas.title':     { en: "Du'as & Supplications", ms: 'Doa & Permohonan', tur: 'Dualar ve Niyazlar', urd: 'دعائیں اور التجائیں', ben: 'দোয়া ও প্রার্থনা', fas: 'دعاها و مناجات‌ها', zh: '祈祷与祈求', yue: '祈禱與祈求', ja: 'ドゥアと祈り', ru: 'Дуа и мольбы', es: "Du'as y Súplicas", ko: '두아 & 기도', ta: 'துஆக்கள் மற்றும் வேண்டுதல்கள்', si: 'දුආ සහ ඉල්ලීම්' },
+  'page.99.title':       { en: 'The 99 Names of Allah', ms: '99 Nama Allah', tur: "Allah'ın 99 İsmi", urd: 'اللہ کے 99 نام', ben: 'আল্লাহর ৯৯টি নাম', fas: '۹۹ نام خداوند', zh: '安拉的99个名字', yue: '真主的99個名字', ja: 'アッラーの99の御名', ru: '99 имён Аллаха', es: 'Los 99 Nombres de Alá', ko: '알라의 99가지 이름', ta: 'அல்லாஹ்வின் 99 பெயர்கள்', si: 'අල්ලාහ්ගේ නාම 99' },
+  'page.prayer.title':   { en: 'How to Pray', ms: 'Cara Solat', tur: 'Namaz Nasıl Kılınır', urd: 'نماز کا طریقہ', ben: 'নামাজ পড়ার পদ্ধতি', fas: 'چگونه نماز بخوانیم', zh: '如何礼拜', yue: '如何禮拜', ja: 'サラーの仕方', ru: 'Как совершать молитву', es: 'Cómo Rezar', ko: '예배 방법', ta: 'தொழுகை முறை', si: 'යාඥා කිරීම' },
+  'page.seerah.title':   { en: 'Seerah - Life of the Prophet', ms: 'Sirah Nabi', tur: "Siyer - Peygamberin Hayatı", urd: 'سیرت النبی', ben: 'সীরাতুন নবী', fas: 'سیره پیامبر', zh: '先知传记', yue: '先知傳記', ja: 'スィーラ - 預言者の生涯', ru: 'Сира - Жизнь Пророка', es: 'Sira - Vida del Profeta', ko: '시라 - 예언자의 생애', ta: 'சீரத் - நபியின் வாழ்க்கை', si: 'සීරා - නබිවරයාගේ ජීවිතය' },
+  'page.hajj.title':     { en: 'Hajj & Umrah Guide', ms: 'Panduan Haji & Umrah', tur: 'Hac ve Umre Rehberi', urd: 'حج و عمرہ گائیڈ', ben: 'হজ ও উমরাহ গাইড', fas: 'راهنمای حج و عمره', zh: '朝觐与副朝指南', yue: '朝覲與副朝指南', ja: 'ハッジ・ウムラガイド', ru: 'Руководство по Хаджу и Умре', es: 'Guía del Hayy y la Umra', ko: '하즈 & 우므라 안내', ta: 'ஹஜ் மற்றும் உம்ரா வழிகாட்டி', si: 'හජ් සහ උම්රා මාර්ගෝපදේශය' },
+  'page.glossary.title': { en: 'Islamic Glossary', ms: 'Glosari Islam', tur: 'İslam Sözlüğü', urd: 'اسلامی لغت', ben: 'ইসলামি পরিভাষা', fas: 'واژه‌نامه اسلامی', zh: '伊斯兰术语表', yue: '伊斯蘭術語表', ja: 'イスラム用語集', ru: 'Исламский словарь', es: 'Glosario Islámico', ko: '이슬람 용어집', ta: 'இஸ்லாமிய அகராதி', si: 'ඉස්ලාම් ශබ්ද කෝෂය' },
+  'page.calendar.title': { en: 'Islamic Calendar', ms: 'Kalendar Islam', tur: 'İslam Takvimi', urd: 'اسلامی کیلنڈر', ben: 'ইসলামি ক্যালেন্ডার', fas: 'تقویم اسلامی', zh: '伊斯兰历', yue: '伊斯蘭曆', ja: 'イスラム暦', ru: 'Исламский календарь', es: 'Calendario Islámico', ko: '이슬람 달력', ta: 'இஸ்லாமிய காலண்டர்', si: 'ඉස්ලාම් දිනදර්ශිනය' },
+  'page.about.title':    { en: 'About Al-Hikmah', ms: 'Tentang Al-Hikmah', tur: 'Al-Hikmah Hakkında', urd: 'الحکمہ کے بارے میں', ben: 'আল-হিকমাহ সম্পর্কে', fas: 'درباره الحکمه', zh: '关于Al-Hikmah', yue: '關於Al-Hikmah', ja: 'アル・ヒクマについて', ru: 'Об Аль-Хикма', es: 'Acerca de Al-Hikmah', ko: 'Al-Hikmah 소개', ta: 'அல்-ஹிக்மா பற்றி', si: 'Al-Hikmah ගැන' },
 
   /* ── Card descriptions (home page quick-access grid) ── */
-  'card.hadith.desc':    { en: 'Explore authenticated Prophetic narrations across the major collections.', ko: '주요 컬렉션에 걸쳐 검증된 예언자 전승을 탐색하세요.', zh: '探索各主要圣训集中经过验证的先知叙述。', yue: '探索各主要聖訓集中經過驗證的先知敘述。', ja: '主要なコレクション全体にわたる認証済みの預言者の語りを探索してください。', ms: 'Jelajahi naratif kenabian yang disahkan merentas koleksi utama.', tur: 'Ana koleksiyonlardaki doğrulanmış Nebevî rivayetleri keşfedin.', urd: 'بڑے مجموعوں میں مستند نبوی روایات تلاش کریں۔', ben: 'প্রধান সংকলনে প্রামাণিক নবুওয়াতী বর্ণনা অন্বেষণ করুন।', fas: 'روایات نبوی معتبر را در مجموعه‌های اصلی جستجو کنید.', ru: 'Исследуйте достоверные пророческие предания из основных сборников.', es: 'Explore narraciones proféticas autenticadas de las principales colecciones.' },
-  'card.quran.desc':     { en: 'Browse all 114 surahs with Arabic text, themes, and revelation context.', ko: '아랍어 본문, 주제, 계시 배경과 함께 114개 수라 전체를 탐색하세요.', zh: '浏览全部114章，含阿拉伯语原文、主题及降示背景。', yue: '瀏覽全部114章，含阿拉伯語原文、主題及降示背景。', ja: 'アラビア語テキスト、テーマ、啓示の文脈とともに114章すべてを閲覧。', ms: 'Semak imbas kesemua 114 surah dengan teks Arab, tema, dan konteks wahyu.', tur: 'Arapça metin, temalar ve nüzul bağlamıyla 114 surenin tamamına göz atın.', urd: 'عربی متن، موضوعات اور نزول کے پس منظر کے ساتھ تمام 114 سورتیں دیکھیں۔', ben: 'আরবি পাঠ্য, বিষয়বস্তু এবং অবতরণ প্রেক্ষাপট সহ সমস্ত ১১৪টি সূরা দেখুন।', fas: 'همه ۱۱۴ سوره را با متن عربی، موضوعات و زمینه نزول مرور کنید.', ru: 'Просмотрите все 114 сур с арабским текстом, темами и контекстом откровения.', es: 'Explore las 114 suras con texto árabe, temas y contexto de la revelación.' },
-  'card.prophets.desc':  { en: 'The 25 prophets of Islam: lineage, miracles, and Quranic mentions.', ko: '이슬람의 25명 예언자: 혈통, 기적, 꾸란 언급.', zh: '伊斯兰的25位先知：谱系、奇迹与古兰经记载。', yue: '伊斯蘭的25位先知：譜系、奇跡與古蘭經記載。', ja: 'イスラムの25人の預言者: 系譜、奇跡、クルアーンの言及。', ms: '25 nabi Islam: silsilah, mukjizat, dan sebutan Al-Quran.', tur: "İslam'ın 25 peygamberi: soy, mucizeler ve Kur'an'daki ifadeler.", urd: 'اسلام کے 25 نبی: نسب، معجزات اور قرآنی ذکر۔', ben: 'ইসলামের ২৫ জন নবী: বংশ, মিরাকেল এবং কুরআনিক উল্লেখ।', fas: '۲۵ پیامبر اسلام: نسب، معجزات و اشارات قرآنی.', ru: '25 пророков ислама: родословная, чудеса и упоминания в Коране.', es: 'Los 25 profetas del Islam: linaje, milagros y menciones coránicas.' },
-  'card.duas.desc':      { en: "Authenticated supplications from the Quran and Sunnah for every occasion.", ko: '모든 상황을 위한 꾸란과 순나에서 검증된 기도문.', zh: '来自古兰经和圣训的经过验证的各种场合祈祷文。', yue: '來自古蘭經和聖訓的各種場合祈禱文。', ja: 'クルアーンとスンナからのすべての機会のための認証済みの祈り。', ms: "Doa-doa yang disahkan dari Al-Quran dan Sunnah untuk setiap majlis.", tur: "Her vesile için Kur'an ve Sünnet'ten doğrulanmış dualar.", urd: 'ہر موقع کے لیے قرآن اور سنت سے مستند دعائیں۔', ben: 'প্রতিটি উপলক্ষের জন্য কুরআন ও সুন্নাহ থেকে প্রামাণিক দোয়া।', fas: 'دعاهای معتبر از قرآن و سنت برای هر مناسبت.', ru: 'Достоверные дуа из Корана и Сунны для каждого случая.', es: 'Súplicas autenticadas del Corán y la Sunna para toda ocasión.' },
-  'card.99names.desc':   { en: 'The Divine Names and Attributes of Allah with meanings and reflection.', ko: '의미와 성찰이 담긴 알라의 신성한 이름과 속성.', zh: '真主的神圣名称与属性，含含义与思考。', yue: '真主的神聖名稱與屬性，含含義與思考。', ja: 'アッラーの神聖な名前と属性、意味と省察とともに。', ms: 'Nama-nama dan Sifat-sifat Ilahi Allah beserta makna dan renungan.', tur: "Allah'ın İlahi İsimleri ve Sıfatları anlamları ve tefekkürüyle.", urd: 'اللہ کے الہی نام اور صفات معنی اور تفکر کے ساتھ۔', ben: 'আল্লাহর ঐশ্বরিক নাম ও গুণাবলি অর্থ ও চিন্তন সহ।', fas: 'اسماء و صفات الهی خداوند با معانی و تأمل.', ru: 'Божественные Имена и Атрибуты Аллаха с толкованиями и размышлениями.', es: 'Los Nombres y Atributos Divinos de Alá con significados y reflexión.' },
-  'card.prayer.desc':    { en: 'A complete step-by-step guide to salah with Arabic recitations.', ko: '아랍어 낭독과 함께하는 살라의 단계별 완전 가이드.', zh: '含阿拉伯语诵读的礼拜完整分步指南。', yue: '含阿拉伯語誦讀的禮拜完整分步指南。', ja: 'アラビア語の朗誦を含むサラーの完全な段階的ガイド。', ms: 'Panduan langkah demi langkah yang lengkap untuk solat dengan bacaan Arab.', tur: 'Arapça tilavetlerle namazın eksiksiz adım adım kılavuzu.', urd: 'عربی تلاوت کے ساتھ نماز کی مکمل مرحلہ وار رہنما۔', ben: 'আরবি তেলাওয়াত সহ সালাহর সম্পূর্ণ ধাপে ধাপে গাইড।', fas: 'راهنمای کامل گام‌به‌گام نماز با تلاوت عربی.', ru: 'Полное пошаговое руководство по намазу с арабскими чтениями.', es: 'Una guía completa paso a paso para el salah con recitaciones árabes.' },
-  'card.hajj.desc':      { en: 'The rituals of Hajj and Umrah explained with wisdom and guidance.', ko: '지혜와 안내와 함께 설명된 하즈와 우므라의 의식.', zh: '朝觐与副朝仪式，含智慧与指引说明。', yue: '朝覲與副朝儀式，含智慧與指引說明。', ja: '知恵と指導を交えて解説されたハッジとウムラの儀礼。', ms: 'Ritual Haji dan Umrah dijelaskan dengan hikmah dan panduan.', tur: 'Hac ve Umre ritüelleri hikmet ve rehberlikle açıklandı.', urd: 'حج اور عمرہ کے ارکان حکمت اور رہنمائی کے ساتھ بیان کیے گئے۔', ben: 'হজ ও উমরাহর আনুষ্ঠানিকতা জ্ঞান ও নির্দেশনা সহ ব্যাখ্যা করা হয়েছে।', fas: 'مناسک حج و عمره با حکمت و راهنمایی توضیح داده شده است.', ru: 'Ритуалы Хаджа и Умры, объяснённые с мудростью и наставлением.', es: 'Los rituales del Hayy y la Umra explicados con sabiduría y orientación.' },
-  'card.seerah.desc':    { en: "The life of the Prophet Muhammad ﷺ from birth to his passing.", ko: '탄생부터 서거까지 예언자 무함마드 ﷺ의 생애.', zh: '先知穆罕默德ﷺ从诞生到辞世的生平。', yue: '先知穆罕默德ﷺ從誕生到辭世的生平。', ja: '誕生から帰天まで、預言者ムハンマド ﷺ の生涯。', ms: 'Kehidupan Nabi Muhammad ﷺ dari kelahiran hingga kewafatan baginda.', tur: 'Hz. Muhammed ﷺ\'nin doğumundan vefatına kadar hayatı.', urd: 'نبی محمد ﷺ کی ولادت سے وفات تک کی زندگی۔', ben: 'জন্ম থেকে ইন্তেকাল পর্যন্ত নবী মুহাম্মাদ ﷺ-এর জীবন।', fas: 'زندگی حضرت محمد ﷺ از تولد تا وفات.', ru: 'Жизнь Пророка Мухаммада ﷺ от рождения до смерти.', es: 'La vida del Profeta Muhammad ﷺ desde su nacimiento hasta su muerte.' },
-  'card.glossary.desc':  { en: 'Key Islamic terms and concepts explained for scholars and students alike.', ko: '학자와 학생 모두를 위해 설명된 주요 이슬람 용어와 개념.', zh: '为学者和学生解释的伊斯兰关键术语与概念。', yue: '為學者和學生解釋的伊斯蘭關鍵術語與概念。', ja: '学者と学生のために解説されたイスラムの主要な用語と概念。', ms: 'Istilah dan konsep Islam utama yang dijelaskan untuk ulama dan pelajar.', tur: 'Alimler ve öğrenciler için İslami temel terimler ve kavramlar açıklandı.', urd: 'علماء اور طلباء دونوں کے لیے اسلامی اہم اصطلاحات و تصورات بیان کیے گئے۔', ben: 'পণ্ডিত ও শিক্ষার্থী উভয়ের জন্য মূল ইসলামি পরিভাষা ও ধারণা ব্যাখ্যা করা হয়েছে।', fas: 'اصطلاحات و مفاهیم کلیدی اسلامی برای دانشمندان و دانش‌آموزان توضیح داده شده است.', ru: 'Ключевые исламские термины и концепции, объяснённые для учёных и студентов.', es: 'Términos y conceptos islámicos clave explicados para eruditos y estudiantes.' },
-  'card.calendar.desc':  { en: 'The Islamic Hijri calendar with sacred months, fasts, and commemorations.', ko: '신성한 달, 금식, 기념일이 포함된 이슬람 히즈리 달력.', zh: '含神圣月份、封斋与纪念日的伊斯兰希吉来历。', yue: '含神聖月份、封齋與紀念日的伊斯蘭希吉來曆。', ja: '神聖な月、断食、記念日を含むイスラムのヒジュラ暦。', ms: 'Kalendar Hijri Islam dengan bulan suci, puasa, dan peringatan.', tur: 'Kutsal aylar, oruçlar ve anma günleriyle İslami Hicri takvim.', urd: 'مقدس مہینوں، روزوں اور تقریبات کے ساتھ اسلامی ہجری کیلنڈر۔', ben: 'পবিত্র মাস, রোজা এবং স্মরণীয় অনুষ্ঠান সহ ইসলামি হিজরি ক্যালেন্ডার।', fas: 'تقویم هجری اسلامی با ماه‌های مقدس، روزه‌ها و مناسبت‌ها.', ru: 'Исламский календарь Хиджры со священными месяцами, постами и памятными датами.', es: 'El calendario islámico Hiyri con meses sagrados, ayunos y conmemoraciones.' },
-  'card.tawheed.desc':   { en: "The Islamic doctrine of Divine Oneness — the foundation of all belief.", ko: '모든 신앙의 기초인 이슬람 신성한 유일성 교리.', zh: '神圣独一性的伊斯兰教义——所有信仰的基础。', yue: '神聖獨一性的伊斯蘭教義——所有信仰的基礎。', ja: '神の唯一性のイスラムの教義 — すべての信仰の基盤。', ms: 'Doktrin Islam tentang Keesaan Ilahi — asas kepada semua kepercayaan.', tur: "İlahi Birlik'in İslami doktrini — tüm inancın temeli.", urd: 'توحید الہی کا اسلامی عقیدہ — تمام ایمان کی بنیاد۔', ben: 'ঐশ্বরিক একত্বের ইসলামি মতবাদ — সকল বিশ্বাসের ভিত্তি।', fas: 'عقیده اسلامی وحدانیت الهی — پایه همه ایمان.', ru: 'Исламская доктрина Божественного Единства — основа всякой веры.', es: 'La doctrina islámica de la Unicidad Divina — el fundamento de toda creencia.' },
-  'card.ramadan.desc':   { en: 'The blessed month of fasting, prayer, and spiritual renewal.', ko: '금식, 기도, 영적 쇄신의 축복받은 달.', zh: '封斋、礼拜与精神更新的吉祥月份。', yue: '封齋、禮拜與精神更新的吉祥月份。', ja: '断食、礼拝、精神的刷新の祝福された月。', ms: 'Bulan puasa, solat, dan pembaharuan rohani yang diberkati.', tur: 'Oruç, namaz ve manevi yenilenmenin mübarek ayı.', urd: 'روزے، نماز اور روحانی تجدید کا بابرکت مہینہ۔', ben: 'রোজা, নামাজ ও আধ্যাত্মিক নবায়নের বরকতময় মাস।', fas: 'ماه مبارک روزه، نماز و تجدید روحانی.', ru: 'Благословенный месяц поста, молитвы и духовного обновления.', es: 'El bendito mes de ayuno, oración y renovación espiritual.' },
-  'card.fiqh.desc':      { en: 'Islamic jurisprudence: the rulings that govern worship and daily life.', ko: '이슬람 법학: 예배와 일상생활을 규정하는 판결.', zh: '伊斯兰法学：管理礼拜与日常生活的法令。', yue: '伊斯蘭法學：管理禮拜與日常生活的法令。', ja: 'イスラム法学: 礼拝と日常生活を規定する裁定。', ms: 'Fiqh Islam: hukum-hukum yang mengawal ibadat dan kehidupan harian.', tur: 'İslam fıkhı: ibadeti ve günlük hayatı düzenleyen hükümler.', urd: 'اسلامی فقہ: عبادت اور روزمرہ زندگی کو منظم کرنے والے احکام۔', ben: 'ইসলামি ফিকহ: ইবাদত ও দৈনন্দিন জীবন পরিচালনার বিধানসমূহ।', fas: 'فقه اسلامی: احکامی که عبادت و زندگی روزمره را تنظیم می‌کنند.', ru: 'Исламское правоведение: постановления, регулирующие поклонение и повседневную жизнь.', es: 'Jurisprudencia islámica: las normas que rigen la adoración y la vida cotidiana.' },
-  'card.suluk.desc':     { en: 'The path of spiritual wayfaring: purifying the heart and drawing near to Allah.', ko: '영적 여정의 길: 마음을 정화하고 알라에게 가까이 나아가기.', zh: '灵性旅程之道：净化心灵，亲近真主。', yue: '靈性旅程之道：淨化心靈，親近真主。', ja: '精神的な旅の道: 心を清め、アッラーに近づく。', ms: 'Jalan suluk kerohanian: menyucikan hati dan mendekatkan diri kepada Allah.', tur: "Manevi yolculuğun yolu: kalbi arındırmak ve Allah'a yaklaşmak.", urd: 'روحانی سلوک کا راستہ: دل کو پاک کرنا اور اللہ کے قریب ہونا۔', ben: 'আধ্যাত্মিক পথিকের পথ: হৃদয় পরিশুদ্ধ করা ও আল্লাহর নিকটবর্তী হওয়া।', fas: 'مسیر سلوک روحانی: تزکیه دل و تقرب به خداوند.', ru: 'Путь духовного странствия: очищение сердца и приближение к Аллаху.', es: 'El camino del viaje espiritual: purificar el corazón y acercarse a Alá.' },
-  'card.nikah.desc':     { en: 'The Islamic marriage contract: rights, responsibilities, and blessings.', ko: '이슬람 혼인 계약: 권리, 책임, 축복.', zh: '伊斯兰婚姻契约：权利、责任与祝福。', yue: '伊斯蘭婚姻契約：權利、責任與祝福。', ja: 'イスラムの婚姻契約: 権利、責任、祝福。', ms: 'Kontrak perkahwinan Islam: hak, tanggungjawab, dan keberkatan.', tur: 'İslami evlilik akdi: haklar, sorumluluklar ve berekeler.', urd: 'اسلامی عقد نکاح: حقوق، ذمہ داریاں اور برکات۔', ben: 'ইসলামি বিবাহ চুক্তি: অধিকার, দায়িত্ব ও আশীর্বাদ।', fas: 'عقد نکاح اسلامی: حقوق، مسئولیت‌ها و برکات.', ru: 'Исламский брачный договор: права, обязанности и благодать.', es: 'El contrato matrimonial islámico: derechos, responsabilidades y bendiciones.' },
+  'card.hadith.desc':    { en: 'Explore authenticated Prophetic narrations across the major collections.', ms: 'Jelajahi naratif kenabian yang disahkan merentas koleksi utama.', tur: 'Ana koleksiyonlardaki doğrulanmış Nebevî rivayetleri keşfedin.', urd: 'بڑے مجموعوں میں مستند نبوی روایات تلاش کریں۔', ben: 'প্রধান সংকলনে প্রামাণিক নবুওয়াতী বর্ণনা অন্বেষণ করুন।', fas: 'روایات نبوی معتبر را در مجموعه‌های اصلی جستجو کنید.', zh: '探索各主要圣训集中经过验证的先知叙述。', yue: '探索各主要聖訓集中經過驗證的先知敘述。', ja: '主要なコレクション全体にわたる認証済みの預言者の語りを探索してください。', ru: 'Исследуйте достоверные пророческие предания из основных сборников.', es: 'Explore narraciones proféticas autenticadas de las principales colecciones.', ko: '주요 컬렉션에 걸쳐 검증된 예언자 전승을 탐색하세요.', ta: 'முக்கிய தொகுப்புகளில் உண்மையான நபியின் மரபுகளை ஆராய்க.', si: 'ප්‍රධාන එකතු හරහා සත්‍යාපිත නබිවාක්‍ය ගවේෂණය කරන්න.' },
+  'card.quran.desc':     { en: 'Browse all 114 surahs with Arabic text, themes, and revelation context.', ms: 'Semak imbas kesemua 114 surah dengan teks Arab, tema, dan konteks wahyu.', tur: 'Arapça metin, temalar ve nüzul bağlamıyla 114 surenin tamamına göz atın.', urd: 'عربی متن، موضوعات اور نزول کے پس منظر کے ساتھ تمام 114 سورتیں دیکھیں۔', ben: 'আরবি পাঠ্য, বিষয়বস্তু এবং অবতরণ প্রেক্ষাপট সহ সমস্ত ১১৪টি সূরা দেখুন।', fas: 'همه ۱۱۴ سوره را با متن عربی، موضوعات و زمینه نزول مرور کنید.', zh: '浏览全部114章，含阿拉伯语原文、主题及降示背景。', yue: '瀏覽全部114章，含阿拉伯語原文、主題及降示背景。', ja: 'アラビア語テキスト、テーマ、啓示の文脈とともに114章すべてを閲覧。', ru: 'Просмотрите все 114 сур с арабским текстом, темами и контекстом откровения.', es: 'Explore las 114 suras con texto árabe, temas y contexto de la revelación.', ko: '아랍어 본문, 주제, 계시 배경과 함께 114개 수라 전체를 탐색하세요.', ta: 'அரபு உரை, தொனிகள் மற்றும் வெளிப்பாட்டு சூழலுடன் அனைத்து 114 சூராக்களையும் பார்க்க.', si: 'ආරාබි පෙළ, මාතෘකා සහ ද්‍රෂ්ටාන්ත සන්දර්භය සමඟ සූරා 114 ම බලන්න.' },
+  'card.prophets.desc':  { en: 'The 25 prophets of Islam: lineage, miracles, and Quranic mentions.', ms: '25 nabi Islam: silsilah, mukjizat, dan sebutan Al-Quran.', tur: "İslam'ın 25 peygamberi: soy, mucizeler ve Kur'an'daki ifadeler.", urd: 'اسلام کے 25 نبی: نسب، معجزات اور قرآنی ذکر۔', ben: 'ইসলামের ২৫ জন নবী: বংশ, মিরাকেল এবং কুরআনিক উল্লেখ।', fas: '۲۵ پیامبر اسلام: نسب، معجزات و اشارات قرآنی.', zh: '伊斯兰的25位先知：谱系、奇迹与古兰经记载。', yue: '伊斯蘭的25位先知：譜系、奇跡與古蘭經記載。', ja: 'イスラムの25人の預言者: 系譜、奇跡、クルアーンの言及。', ru: '25 пророков ислама: родословная, чудеса и упоминания в Коране.', es: 'Los 25 profetas del Islam: linaje, milagros y menciones coránicas.', ko: '이슬람의 25명 예언자: 혈통, 기적, 꾸란 언급.', ta: 'இஸ்லாமின் 25 நபிமார்கள்: வம்சாவளி, அற்புதங்கள் மற்றும் குர்ஆனிக் குறிப்புகள்.', si: 'ඉස්ලාමේ නබිවරු 25: පෙළපත, අද්භූත, කුර්ආනේ සඳහන්.' },
+  'card.duas.desc':      { en: "Authenticated supplications from the Quran and Sunnah for every occasion.", ms: "Doa-doa yang disahkan dari Al-Quran dan Sunnah untuk setiap majlis.", tur: "Her vesile için Kur'an ve Sünnet'ten doğrulanmış dualar.", urd: 'ہر موقع کے لیے قرآن اور سنت سے مستند دعائیں۔', ben: 'প্রতিটি উপলক্ষের জন্য কুরআন ও সুন্নাহ থেকে প্রামাণিক দোয়া।', fas: 'دعاهای معتبر از قرآن و سنت برای هر مناسبت.', zh: '来自古兰经和圣训的经过验证的各种场合祈祷文。', yue: '來自古蘭經和聖訓的各種場合祈禱文。', ja: 'クルアーンとスンナからのすべての機会のための認証済みの祈り。', ru: 'Достоверные дуа из Корана и Сунны для каждого случая.', es: 'Súplicas autenticadas del Corán y la Sunna para toda ocasión.', ko: '모든 상황을 위한 꾸란과 순나에서 검증된 기도문.', ta: 'ஒவ்வொரு சந்தர்ப்பத்திற்கும் குர்ஆன் மற்றும் சுன்னாவிலிருந்து உண்மையான துஆக்கள்.', si: 'සෑම අවස්ථාවකටම කුර්ආනය සහ සුන්නාවෙන් සත්‍යාපිත දුආ.' },
+  'card.99names.desc':   { en: 'The Divine Names and Attributes of Allah with meanings and reflection.', ms: 'Nama-nama dan Sifat-sifat Ilahi Allah beserta makna dan renungan.', tur: "Allah'ın İlahi İsimleri ve Sıfatları anlamları ve tefekkürüyle.", urd: 'اللہ کے الہی نام اور صفات معنی اور تفکر کے ساتھ۔', ben: 'আল্লাহর ঐশ্বরিক নাম ও গুণাবলি অর্থ ও চিন্তন সহ।', fas: 'اسماء و صفات الهی خداوند با معانی و تأمل.', zh: '真主的神圣名称与属性，含含义与思考。', yue: '真主的神聖名稱與屬性，含含義與思考。', ja: 'アッラーの神聖な名前と属性、意味と省察とともに。', ru: 'Божественные Имена и Атрибуты Аллаха с толкованиями и размышлениями.', es: 'Los Nombres y Atributos Divinos de Alá con significados y reflexión.', ko: '의미와 성찰이 담긴 알라의 신성한 이름과 속성.', ta: 'அல்லாஹ்வின் ஐயமில்லா பெயர்கள் மற்றும் குணாதிசயங்கள் அர்த்தங்கள் மற்றும் தியானத்துடன்.', si: 'අල්ලාහ්ගේ දිව්‍ය නාම සහ ගුණාංග අර්ථය සහ නිරීක්ෂණය සමඟ.' },
+  'card.prayer.desc':    { en: 'A complete step-by-step guide to salah with Arabic recitations.', ms: 'Panduan langkah demi langkah yang lengkap untuk solat dengan bacaan Arab.', tur: 'Arapça tilavetlerle namazın eksiksiz adım adım kılavuzu.', urd: 'عربی تلاوت کے ساتھ نماز کی مکمل مرحلہ وار رہنما۔', ben: 'আরবি তেলাওয়াত সহ সালাহর সম্পূর্ণ ধাপে ধাপে গাইড।', fas: 'راهنمای کامل گام‌به‌گام نماز با تلاوت عربی.', zh: '含阿拉伯语诵读的礼拜完整分步指南。', yue: '含阿拉伯語誦讀的禮拜完整分步指南。', ja: 'アラビア語の朗誦を含むサラーの完全な段階的ガイド。', ru: 'Полное пошаговое руководство по намазу с арабскими чтениями.', es: 'Una guía completa paso a paso para el salah con recitaciones árabes.', ko: '아랍어 낭독과 함께하는 살라의 단계별 완전 가이드.', ta: 'அரபு ஓதல்களுடன் சலாத்திற்கான முழுமையான படிப்படியான வழிகாட்டி.', si: 'ආරාබි පාරායනය සමඟ සලාහ් සඳහා සම්පූර්ණ පියවරෙන් පියවර මාර්ගෝපදේශය.' },
+  'card.hajj.desc':      { en: 'The rituals of Hajj and Umrah explained with wisdom and guidance.', ms: 'Ritual Haji dan Umrah dijelaskan dengan hikmah dan panduan.', tur: 'Hac ve Umre ritüelleri hikmet ve rehberlikle açıklandı.', urd: 'حج اور عمرہ کے ارکان حکمت اور رہنمائی کے ساتھ بیان کیے گئے۔', ben: 'হজ ও উমরাহর আনুষ্ঠানিকতা জ্ঞান ও নির্দেশনা সহ ব্যাখ্যা করা হয়েছে।', fas: 'مناسک حج و عمره با حکمت و راهنمایی توضیح داده شده است.', zh: '朝觐与副朝仪式，含智慧与指引说明。', yue: '朝覲與副朝儀式，含智慧與指引說明。', ja: '知恵と指導を交えて解説されたハッジとウムラの儀礼。', ru: 'Ритуалы Хаджа и Умры, объяснённые с мудростью и наставлением.', es: 'Los rituales del Hayy y la Umra explicados con sabiduría y orientación.', ko: '지혜와 안내와 함께 설명된 하즈와 우므라의 의식.', ta: 'ஹஜ் மற்றும் உம்ராவின் சடங்குகள் ஞானம் மற்றும் வழிகாட்டுதலுடன் விளக்கப்பட்டுள்ளன.', si: 'ප්‍රඥාව සහ මාර්ගෝපදේශය සමඟ හජ් සහ උම්රාවේ චාරිත්‍ර පැහැදිලි කිරීම.' },
+  'card.seerah.desc':    { en: "The life of the Prophet Muhammad ﷺ from birth to his passing.", ms: 'Kehidupan Nabi Muhammad ﷺ dari kelahiran hingga kewafatan baginda.', tur: "Hz. Muhammed ﷺ'nin doğumundan vefatına kadar hayatı.", urd: 'نبی محمد ﷺ کی ولادت سے وفات تک کی زندگی۔', ben: 'জন্ম থেকে ইন্তেকাল পর্যন্ত নবী মুহাম্মাদ ﷺ-এর জীবন।', fas: 'زندگی حضرت محمد ﷺ از تولد تا وفات.', zh: '先知穆罕默德ﷺ从诞生到辞世的生平。', yue: '先知穆罕默德ﷺ從誕生到辭世的生平。', ja: '誕生から帰天まで、預言者ムハンマド ﷺ の生涯。', ru: 'Жизнь Пророка Мухаммада ﷺ от рождения до смерти.', es: 'La vida del Profeta Muhammad ﷺ desde su nacimiento hasta su muerte.', ko: '탄생부터 서거까지 예언자 무함마드 ﷺ의 생애.', ta: 'நபி முஹம்மது ﷺ அவர்களின் வாழ்க்கை பிறப்பிலிருந்து மரணம் வரை.', si: 'නබි මුහම්මද් ﷺ ගේ ජීවිතය ජனனයේ සිට මරණය දක්වා.' },
+  'card.glossary.desc':  { en: 'Key Islamic terms and concepts explained for scholars and students alike.', ms: 'Istilah dan konsep Islam utama yang dijelaskan untuk ulama dan pelajar.', tur: 'Alimler ve öğrenciler için İslami temel terimler ve kavramlar açıklandı.', urd: 'علماء اور طلباء دونوں کے لیے اسلامی اہم اصطلاحات و تصورات بیان کیے گئے۔', ben: 'পণ্ডিত ও শিক্ষার্থী উভয়ের জন্য মূল ইসলামি পরিভাষা ও ধারণা ব্যাখ্যা করা হয়েছে।', fas: 'اصطلاحات و مفاهیم کلیدی اسلامی برای دانشمندان و دانش‌آموزان توضیح داده شده است.', zh: '为学者和学生解释的伊斯兰关键术语与概念。', yue: '為學者和學生解釋的伊斯蘭關鍵術語與概念。', ja: '学者と学生のために解説されたイスラムの主要な用語と概念。', ru: 'Ключевые исламские термины и концепции, объяснённые для учёных и студентов.', es: 'Términos y conceptos islámicos clave explicados para eruditos y estudiantes.', ko: '학자와 학생 모두를 위해 설명된 주요 이슬람 용어와 개념.', ta: 'அறிஞர்கள் மற்றும் மாணவர்கள் இருவருக்கும் விளக்கப்பட்ட முக்கிய இஸ்லாமிய சொற்கள் மற்றும் கருத்துக்கள்.', si: 'විද්‍යාඥයන් සහ සිසුන් දෙකටම පැහැදිලි ඉස්ලාම් ප්‍රධාන යෙදුම් සහ සංකල්ප.' },
+  'card.calendar.desc':  { en: 'The Islamic Hijri calendar with sacred months, fasts, and commemorations.', ms: 'Kalendar Hijri Islam dengan bulan suci, puasa, dan peringatan.', tur: 'Kutsal aylar, oruçlar ve anma günleriyle İslami Hicri takvim.', urd: 'مقدس مہینوں، روزوں اور تقریبات کے ساتھ اسلامی ہجری کیلنڈر۔', ben: 'পবিত্র মাস, রোজা এবং স্মরণীয় অনুষ্ঠান সহ ইসলামি হিজরি ক্যালেন্ডার।', fas: 'تقویم هجری اسلامی با ماه‌های مقدس، روزه‌ها و مناسبت‌ها.', zh: '含神圣月份、封斋与纪念日的伊斯兰希吉来历。', yue: '含神聖月份、封齋與紀念日的伊斯蘭希吉來曆。', ja: '神聖な月、断食、記念日を含むイスラムのヒジュラ暦。', ru: 'Исламский календарь Хиджры со священными месяцами, постами и памятными датами.', es: 'El calendario islámico Hiyri con meses sagrados, ayunos y conmemoraciones.', ko: '신성한 달, 금식, 기념일이 포함된 이슬람 히즈리 달력.', ta: 'புனித மாதங்கள், நோன்புகள் மற்றும் நினைவு விழாக்களுடன் இஸ்லாமிய ஹிஜ்ரி காலண்டர்.', si: 'ශුද්ධ මාස, නිරාහාර හා සැමරුම් සහිත ඉස්ලාම් හිජ්රි දිනදර්ශිනය.' },
+  'card.tawheed.desc':   { en: "The Islamic doctrine of Divine Oneness — the foundation of all belief.", ms: 'Doktrin Islam tentang Keesaan Ilahi — asas kepada semua kepercayaan.', tur: "İlahi Birlik'in İslami doktrini — tüm inancın temeli.", urd: 'توحید الہی کا اسلامی عقیدہ — تمام ایمان کی بنیاد۔', ben: 'ঐশ্বরিক একত্বের ইসলামি মতবাদ — সকল বিশ্বাসের ভিত্তি।', fas: 'عقیده اسلامی وحدانیت الهی — پایه همه ایمان.', zh: '神圣独一性的伊斯兰教义——所有信仰的基础。', yue: '神聖獨一性的伊斯蘭教義——所有信仰的基礎。', ja: '神の唯一性のイスラムの教義 — すべての信仰の基盤。', ru: 'Исламская доктрина Божественного Единства — основа всякой веры.', es: 'La doctrina islámica de la Unicidad Divina — el fundamento de toda creencia.', ko: '모든 신앙의 기초인 이슬람 신성한 유일성 교리.', ta: 'இஸ்லாமிய ஐயமில்லா ஒருமை கோட்பாடு — அனைத்து நம்பிக்கையின் அடித்தளம்.', si: 'දිව්‍ය ඒකාකාරිත්වයේ ඉස්ලාම් ධර්ම ශිෂ්ඨාචාරය — සෑම විශ්වාසයකටම පදනම.' },
+  'card.ramadan.desc':   { en: 'The blessed month of fasting, prayer, and spiritual renewal.', ms: 'Bulan puasa, solat, dan pembaharuan rohani yang diberkati.', tur: 'Oruç, namaz ve manevi yenilenmenin mübarek ayı.', urd: 'روزے، نماز اور روحانی تجدید کا بابرکت مہینہ۔', ben: 'রোজা, নামাজ ও আধ্যাত্মিক নবায়নের বরকতময় মাস।', fas: 'ماه مبارک روزه، نماز و تجدید روحانی.', zh: '封斋、礼拜与精神更新的吉祥月份。', yue: '封齋、禮拜與精神更新的吉祥月份。', ja: '断食、礼拝、精神的刷新の祝福された月。', ru: 'Благословенный месяц поста, молитвы и духовного обновления.', es: 'El bendito mes de ayuno, oración y renovación espiritual.', ko: '금식, 기도, 영적 쇄신의 축복받은 달.', ta: 'நோன்பு, தொழுகை மற்றும் ஆன்மீக புதுப்பிப்பின் பரக்கத்தான மாதம்.', si: 'නිරාහාරය, යාඥාව සහ අධ්‍යාත්මික ප්‍රතිනවීකරණයේ ශුභ මාසය.' },
+  'card.fiqh.desc':      { en: 'Islamic jurisprudence: the rulings that govern worship and daily life.', ms: 'Fiqh Islam: hukum-hukum yang mengawal ibadat dan kehidupan harian.', tur: 'İslam fıkhı: ibadeti ve günlük hayatı düzenleyen hükümler.', urd: 'اسلامی فقہ: عبادت اور روزمرہ زندگی کو منظم کرنے والے احکام۔', ben: 'ইসলামি ফিকহ: ইবাদত ও দৈনন্দিন জীবন পরিচালনার বিধানসমূহ।', fas: 'فقه اسلامی: احکامی که عبادت و زندگی روزمره را تنظیم می‌کنند.', zh: '伊斯兰法学：管理礼拜与日常生活的法令。', yue: '伊斯蘭法學：管理禮拜與日常生活的法令。', ja: 'イスラム法学: 礼拝と日常生活を規定する裁定。', ru: 'Исламское правоведение: постановления, регулирующие поклонение и повседневную жизнь.', es: 'Jurisprudencia islámica: las normas que rigen la adoración y la vida cotidiana.', ko: '이슬람 법학: 예배와 일상생활을 규정하는 판결.', ta: 'இஸ்லாமிய சட்டவியல்: வழிபாடு மற்றும் அன்றாட வாழ்க்கையை நிர்வகிக்கும் தீர்ப்புகள்.', si: 'ඉස්ලාම් නීතිශාස්ත්‍රය: ඉබාදත් සහ දෛනික ජීවිතය හැසිරවෙන නිෂ්ඨා.' },
+  'card.suluk.desc':     { en: 'The path of spiritual wayfaring: purifying the heart and drawing near to Allah.', ms: 'Jalan suluk kerohanian: menyucikan hati dan mendekatkan diri kepada Allah.', tur: "Manevi yolculuğun yolu: kalbi arındırmak ve Allah'a yaklaşmak.", urd: 'روحانی سلوک کا راستہ: دل کو پاک کرنا اور اللہ کے قریب ہونا۔', ben: 'আধ্যাত্মিক পথিকের পথ: হৃদয় পরিশুদ্ধ করা ও আল্লাহর নিকটবর্তী হওয়া।', fas: 'مسیر سلوک روحانی: تزکیه دل و تقرب به خداوند.', zh: '灵性旅程之道：净化心灵，亲近真主。', yue: '靈性旅程之道：淨化心靈，親近真主。', ja: '精神的な旅の道: 心を清め、アッラーに近づく。', ru: 'Путь духовного странствия: очищение сердца и приближение к Аллаху.', es: 'El camino del viaje espiritual: purificar el corazón y acercarse a Alá.', ko: '영적 여정의 길: 마음을 정화하고 알라에게 가까이 나아가기.', ta: 'ஆன்மீக பயணத்தின் பாதை: இதயத்தை சுத்திகரித்து அல்லாஹ்வை நெருங்குதல்.', si: 'ආධ්‍යාත්මික ගමනේ මාර්ගය: හදවත පිරිසිදු කිරීම සහ අල්ලාහ් ළඟා වීම.' },
+  'card.nikah.desc':     { en: 'The Islamic marriage contract: rights, responsibilities, and blessings.', ms: 'Kontrak perkahwinan Islam: hak, tanggungjawab, dan keberkatan.', tur: 'İslami evlilik akdi: haklar, sorumluluklar ve berekeler.', urd: 'اسلامی عقد نکاح: حقوق، ذمہ داریاں اور برکات۔', ben: 'ইসলামি বিবাহ চুক্তি: অধিকার, দায়িত্ব ও আশীর্বাদ।', fas: 'عقد نکاح اسلامی: حقوق، مسئولیت‌ها و برکات.', zh: '伊斯兰婚姻契约：权利、责任与祝福。', yue: '伊斯蘭婚姻契約：權利、責任與祝福。', ja: 'イスラムの婚姻契約: 権利、責任、祝福。', ru: 'Исламский брачный договор: права, обязанности и благодать.', es: 'El contrato matrimonial islámico: derechos, responsabilidades y bendiciones.', ko: '이슬람 혼인 계약: 권리, 책임, 축복.', ta: 'இஸ்லாமிய திருமண ஒப்பந்தம்: உரிமைகள், பொறுப்புகள் மற்றும் ஆசீர்வாதங்கள்.', si: 'ඉස්ලාම් විවාහ ගිවිසුම: අයිතිවාසිකම්, වගකීම් සහ ආශීර්වාද.' },
 
   /* ── Verse translations (hero + CTA quotes) ─────────── */
   'hero.verse.text': {
@@ -210,6 +224,8 @@ const UI = {
     ru:  '"Он дарует мудрость, кому пожелает, и тот, кому дарована мудрость, воистину, получил великое благо."',
     es:  '"Él concede sabiduría a quien Él quiere, y quien ha recibido sabiduría ha recibido ciertamente un gran bien."',
     ko:  '"그분은 원하시는 자에게 지혜를 주시나니, 지혜를 받은 자는 참으로 많은 선을 받은 것이니라."',
+    ta:  '"அவன் யாரையும் நாடினாலும் ஞானம் வழங்குகிறான்; ஞானம் வழங்கப்பட்டவருக்கு நிச்சயமாக மிகுந்த நன்மை வழங்கப்பட்டது."',
+    si:  '"ඔහු කැමති අයෙකුට ප්‍රඥාව ලබා දෙයි; ප්‍රඥාව ලබා ගත් අය නියත වශයෙන් බොහෝ යහපත ලැබ ඇත."',
   },
   'cta.verse.text': {
     en:  '"And of knowledge, you have been given only a little."',
@@ -224,6 +240,8 @@ const UI = {
     ru:  '"Вам даровано лишь немного знания."',
     es:  '"Y del conocimiento, sólo se os ha dado un poco."',
     ko:  '"그리고 너희에게 지식 가운데 오직 조금만이 주어졌느니라."',
+    ta:  '"உங்களுக்கு அறிவிலிருந்து கொஞ்சம் மட்டுமே வழங்கப்பட்டுள்ளது."',
+    si:  '"ඔබට දැනුමෙන් ලබා දී ඇත්තේ ඉතා සාවද්‍ය කොටසක් පමණි."',
   },
 
   /* ── Footer ─────────────────────────────────────────── */
@@ -240,11 +258,13 @@ const UI = {
     ru:  'Научный ресурс по подлинной исламской традиции, открытый для всех ищущих знания.',
     es:  'Un recurso académico para la tradición islámica auténtica, abierto a todos los que buscan conocimiento.',
     ko:  '정통 이슬람 전통을 위한 학문적 자료로, 지식을 구하는 모든 이에게 열려 있습니다.',
+    ta:  'உண்மையான இஸ்லாமிய மரபுக்கான ஒரு அறிவியல் மூலம், அறிவை தேடும் அனைவருக்கும் திறந்தது.',
+    si:  'සත්‍ය ඉස්ලාම් ආදර්ශය සඳහා විද්‍යාත්මක මූලාශ්‍රයක්, දැනුම සොයන සෑම දෙනෙකුටම විවෘතයි.',
   },
   'footer.reference': {
     en:  'Reference',    ms:  'Rujukan',      tur: 'Referans',      urd: 'حوالہ',         ben: 'রেফারেন্স',
     fas: 'مرجع',         zh:  '参考',          yue: '參考',          ja:  '参考',           ru:  'Справочник',
-    es:  'Referencia',   ko:  '참고자료',
+    es:  'Referencia',   ko:  '참고자료',       ta:  'குறிப்பு',      si:  'යොමු',
   },
   'footer.copyright': {
     en:  'Al-Hikmah. All rights reserved.',           ms:  'Al-Hikmah. Hak cipta terpelihara.',
@@ -253,6 +273,8 @@ const UI = {
     zh:  'Al-Hikmah。保留所有权利。',                   yue: 'Al-Hikmah。保留所有權利。',
     ja:  'Al-Hikmah。全著作権所有。',                   ru:  'Al-Hikmah. Все права защищены.',
     es:  'Al-Hikmah. Todos los derechos reservados.',  ko:  'Al-Hikmah. 모든 권리 보유.',
+    ta:  'Al-Hikmah. அனைத்து உரிமைகளும் பாதுகாக்கப்பட்டவை.',
+    si:  'Al-Hikmah. සියලු හිමිකම් ආරක්ෂිතයි.',
   },
   'footer.compiled': {
     en:  'Compiled with love for seekers of knowledge',      ms:  'Disusun dengan kasih untuk pencari ilmu',
@@ -261,6 +283,7 @@ const UI = {
     zh:  '为知识的求索者倾心编纂',                            yue: '為知識的求索者傾心編纂',
     ja:  '知識を求める者のために愛を込めて編纂',               ru:  'Составлено с любовью для ищущих знания',
     es:  'Compilado con amor para los buscadores de conocimiento', ko: '지식을 구하는 이들을 위해 사랑으로 편찬',
+    ta:  'அறிவை தேடுவோருக்காக அன்புடன் தொகுக்கப்பட்டது',   si:  'දැනුම සොයන්නන් සඳහා ආදරයෙන් සම්පාදනය කරන ලදී',
   },
   'footer.bbmw0': {
     en:  'A BBMW0 Technologies project',    ms:  'Sebuah projek BBMW0 Technologies',
@@ -269,6 +292,7 @@ const UI = {
     zh:  'BBMW0 Technologies 旗下项目',      yue: 'BBMW0 Technologies 旗下項目',
     ja:  'BBMW0 Technologies プロジェクト',  ru:  'Проект BBMW0 Technologies',
     es:  'Un proyecto de BBMW0 Technologies', ko: 'BBMW0 Technologies 프로젝트',
+    ta:  'ஒரு BBMW0 Technologies திட்டம்',  si:  'BBMW0 Technologies ව්‍යාපෘතියකි',
   },
 
   /* ── Tayamum page ────────────────────────────────────── */
@@ -276,6 +300,7 @@ const UI = {
     en: 'Tayamum', ms: 'Tayamum', tur: 'Teyemmüm', urd: 'تیمم',
     ben: 'তায়াম্মুম', fas: 'تیمم', zh: '土净礼', yue: '土淨禮',
     ja: 'タヤンムム', ru: 'Таяммум', es: 'Tayamum', ko: '타야뭄',
+    ta: 'தயம்மும்', si: 'තයම්මුම්',
   },
   'card.tayamum.desc': {
     en:  'Dry purification with clean earth: the story of its revelation, when it is permitted, how to perform it, and what it achieves.',
@@ -290,6 +315,8 @@ const UI = {
     ru:  'Сухое очищение чистой землёй: история ниспослания, когда разрешён, как совершать и чего он достигает.',
     es:  'Purificación seca con tierra limpia: la historia de su revelación, cuándo está permitido, cómo realizarlo y qué logra.',
     ko:  '깨끗한 흙으로 건식 정화: 계시의 이야기, 허용되는 때, 수행 방법, 그리고 달성하는 것.',
+    ta:  'சுத்தமான மண்ணால் உலர் தூய்மை: அதன் வெளிப்பாட்டின் கதை, எப்போது அனுமதிக்கப்படுகிறது, எப்படி செய்வது மற்றும் அது என்ன அடைகிறது.',
+    si:  'පිරිසිදු පස් සමඟ ශුෂ්ක පිරිසිදු කිරීම: එහි ද්‍රෂ්ටාන්තයේ කතාව, අනුමත කරන්නේ කවදාද, ඉටු කරන ආකාරය සහ ළඟා කරගන්නේ කුමක්ද.',
   },
 
   /* ── Search UI ─────────────────────────────────────── */
@@ -297,6 +324,7 @@ const UI = {
     en: 'results found', ms: 'keputusan ditemui', tur: 'sonuç bulundu', urd: 'نتائج ملے',
     ben: 'ফলাফল পাওয়া গেছে', fas: 'نتیجه یافت شد', zh: '条结果', yue: '條結果',
     ja: '件見つかりました', ru: 'результатов найдено', es: 'resultados encontrados', ko: '개 결과 발견',
+    ta: 'முடிவுகள் கண்டுபிடிக்கப்பட்டன', si: 'ප්‍රතිඵල හමු විය',
   },
   'ui.noresults': {
     en:  'No results found. Try different keywords.',
@@ -311,11 +339,14 @@ const UI = {
     ru:  'Результаты не найдены. Попробуйте другие ключевые слова.',
     es:  'No se encontraron resultados. Prueba con otras palabras.',
     ko:  '결과를 찾을 수 없습니다. 다른 키워드를 사용해 보세요.',
+    ta:  'எந்த முடிவும் கிடைக்கவில்லை. வேறு முக்கியவார்த்தைகளை முயலுங்கள்.',
+    si:  'ප්‍රතිඵල හමු නොවිය. වෙනත් මූල පද උත්සාහ කරන්න.',
   },
   'ui.searching': {
     en: 'Searching…', ms: 'Mencari…', tur: 'Aranıyor…', urd: 'تلاش جاری ہے…',
     ben: 'অনুসন্ধান করা হচ্ছে…', fas: 'در حال جستجو…', zh: '正在搜索…', yue: '正在搜尋…',
     ja: '検索中…', ru: 'Поиск…', es: 'Buscando…', ko: '검색 중…',
+    ta: 'தேடுகிறது…', si: 'සෙවෙමින්…',
   },
   'ui.searchplaceholder': {
     en:  'Search by narrator, topic, keyword…',
@@ -330,6 +361,8 @@ const UI = {
     ru:  'Поиск по передатчику, теме или ключевому слову…',
     es:  'Busca por narrador, tema o palabra clave…',
     ko:  '전달자, 주제 또는 키워드로 검색…',
+    ta:  'அர்வி, தொனி அல்லது முக்கியவார்த்தையால் தேடுங்கள்…',
+    si:  'රාවි, මාතෘකාව හෝ මූල පදය අනුව සොයන්න…',
   },
 
   /* ── Zakat page ────────────────────────────────────── */
@@ -337,6 +370,7 @@ const UI = {
     en: 'Zakat', ms: 'Zakat', tur: 'Zekât', urd: 'زکاۃ',
     ben: 'যাকাত', fas: 'زکات', zh: '天课', yue: '天課',
     ja: 'ザカート', ru: 'Закят', es: 'Zakat', ko: '자카트',
+    ta: 'ஜகாத்', si: 'සකාත්',
   },
   'card.zakat.desc': {
     en:  'The Third Pillar of Islam: obligatory almsgiving, its Quranic basis, nisab, who must pay, the eight categories of eligible recipients, and purifying wealth.',
@@ -351,6 +385,8 @@ const UI = {
     ru:  'Третий столп Ислама: обязательная закят, её кораническая основа, нисаб, кто должен платить, восемь категорий получателей и очищение богатства.',
     es:  'El Tercer Pilar del Islam: zakat obligatorio, su base coránica, el nisab, quién debe pagarlo, las ocho categorías de beneficiarios y la purificación de la riqueza.',
     ko:  '이슬람의 세 번째 기둥: 의무적인 자카트, 쿠란적 근거, 니사브, 지불해야 하는 사람, 여덟 가지 수혜자 범주, 그리고 재산 정화.',
+    ta:  'இஸ்லாமின் மூன்றாவது தூண்: கடமையான ஜகாத், அதன் குர்ஆனிக் அடிப்படை, நிசாப், யார் செலுத்த வேண்டும், எட்டு தகுதியான பிரிவினர் மற்றும் செல்வத்தை தூய்மைப்படுத்துதல்.',
+    si:  'ඉස්ලාමේ තෙවන ස්ථම්භය: අනිවාර්ය සකාත්, කුර්ආන් පදනම, නිසාබ්, ගෙවිය යුත්තේ කවුද, ලාභ ලබන්නන්ගේ කාණ්ඩ අට සහ ධනය පිරිසිදු කිරීම.',
   },
 
   /* ── Ghusl page ─────────────────────────────────────── */
@@ -358,6 +394,7 @@ const UI = {
     en: 'Ghusl', ms: 'Mandi Wajib', tur: 'Gusül', urd: 'غسل',
     ben: 'গোসল', fas: 'غسل', zh: '大净', yue: '大淨',
     ja: 'グスル', ru: 'Гусль', es: 'Ghusl', ko: '구슬',
+    ta: 'குஸல்', si: 'ගුස්ල්',
   },
   'card.ghusl.desc': {
     en:  'Full-body ritual purification: what makes it obligatory, the correct method according to the Sunnah, what it permits, and its spiritual significance.',
@@ -372,6 +409,8 @@ const UI = {
     ru:  'Полное ритуальное омовение тела: что делает его обязательным, правильный метод по Сунне, что оно разрешает и его духовное значение.',
     es:  'Purificación ritual de todo el cuerpo: qué la hace obligatoria, el método correcto según la Sunnah, qué permite y su significado espiritual.',
     ko:  '전신 의례적 정화: 무엇이 의무화하는지, 순나에 따른 올바른 방법, 허용되는 것, 그리고 영적 의미.',
+    ta:  'முழு உடல் சடங்கு தூய்மை: எது கட்டாயமாக்குகிறது, சுன்னாவின் படி சரியான முறை, எது அனுமதிக்கப்படுகிறது மற்றும் அதன் ஆன்மீக முக்கியத்துவம்.',
+    si:  'සම්පූර්ණ ශරීර චාරිත්‍ර පිරිසිදු කිරීම: අනිවාර්ය කරවන්නේ කුමක්ද, සුන්නාහ් අනුව නිවැරදි ක්‍රමය, අවසර ලැබෙන්නේ කුමක්ද සහ ආධ්‍යාත්මික වැදගත්කම.',
   },
 
   /* ── Taharah page ──────────────────────────────────── */
@@ -379,6 +418,7 @@ const UI = {
     en: 'Taharah', ms: 'Taharah', tur: 'Taharet', urd: 'طہارت',
     ben: 'তাহারাত', fas: 'طهارت', zh: '洁净', yue: '潔淨',
     ja: 'タハーラ', ru: 'Тахара', es: 'Taharah', ko: '타하라',
+    ta: 'தஹாரா', si: 'තහාරා',
   },
   'card.taharah.desc': {
     en:  'The complete guide to ritual purity: wudu, ghusl, and tayamum explained together, what nullifies each, and how purity is the gate to worship.',
@@ -393,6 +433,8 @@ const UI = {
     ru:  'Полное руководство по ритуальной чистоте: омовение, полное омовение и таяммум, объяснённые вместе, что нарушает каждое из них и чистота как врата поклонения.',
     es:  'Guía completa de pureza ritual: wudu, ghusl y tayamum explicados juntos, qué anula cada uno y cómo la pureza es la puerta al culto.',
     ko:  '의례적 순결의 완전한 가이드: 우두, 구슬, 타야뭄을 함께 설명하고, 각각을 무효화하는 것, 그리고 순결이 예배의 문인 방법.',
+    ta:  'சடங்கு தூய்மைக்கான முழுமையான வழிகாட்டி: வுழு, குஸல் மற்றும் தயம்மும் ஒன்றாக விளக்கப்பட்டுள்ளன, ஒவ்வொன்றையும் செல்லாததாக்குவது மற்றும் தூய்மை வழிபாட்டின் வாயிலாக இருக்கும் விதம்.',
+    si:  'චාරිත්‍ර පිරිසිදු බවේ සම්පූර්ණ මාර්ගෝපදේශය: වුදූ, ගුස්ල් සහ තයම්මුම් එකට විස්තර කරන ලද, ඒ ඒ ශූන්‍ය කරවන්නේ කුමක්ද, සහ පිරිසිදු බව ඉබාදත්හි දොරටුව ලෙස.',
   },
 
   /* ── Jumu'ah page ──────────────────────────────────── */
@@ -400,6 +442,7 @@ const UI = {
     en: "Jumu'ah", ms: 'Solat Jumaat', tur: 'Cuma Namazı', urd: 'جمعہ',
     ben: "জুমু'আ", fas: 'نماز جمعه', zh: '主麻日', yue: '主麻日',
     ja: "ジュムア", ru: 'Джума', es: "Jumu'ah", ko: '주마',
+    ta: "ஜும்உவா", si: 'ජුමුආ',
   },
   "card.jumuah.desc": {
     en:  "Friday Prayer: its Quranic command, who it is obligatory upon, the two khutbahs, the two-rak'ah prayer, etiquettes, and the blessed moments unique to Friday.",
@@ -414,6 +457,8 @@ const UI = {
     ru:  "Пятничная молитва: коранический приказ, на кого она обязательна, две хутбы, молитва из двух ракаатов, этикет и благословенные моменты, уникальные для пятницы.",
     es:  "Oración del viernes: su mandato coránico, sobre quién es obligatoria, los dos jutbas, la oración de dos rak'ahs, etiquetas y los momentos bendecidos únicos del viernes.",
     ko:  "주마 기도: 쿠란적 명령, 누구에게 의무인지, 두 개의 쿠트바, 두 라카아트 기도, 예절, 그리고 금요일만의 특별한 축복의 순간들.",
+    ta:  "வெள்ளிக்கிழமை தொழுகை: அதன் குர்ஆன் கட்டளை, யாரின் மீது கடமை, இரண்டு குத்பாக்கள், இரண்டு ரக்அத் தொழுகை, ஆசாரங்கள் மற்றும் வெள்ளிக்கிழமைக்கு தனிப்பட்ட பாக்கியமான தருணங்கள்.",
+    si:  "සිකුරාදා නමාස්කාරය: එහි කුර්ආනික නියෝගය, යමෙකු කෙරෙහි අනිවාර්ය, දෙකක් කුත්බාස්, රකාත් දෙකේ නමාස්කාරය, ආචාර ධර්ම සහ සිකුරාදාවට අදාළ ශුභ මොහොත්.",
   },
 
   /* ── Eid page ──────────────────────────────────────── */
@@ -421,6 +466,7 @@ const UI = {
     en: 'Eid Prayers', ms: 'Solat Eid', tur: 'Bayram Namazı', urd: 'عید کی نماز',
     ben: 'ঈদের নামায', fas: 'نماز عید', zh: '会礼', yue: '會禮',
     ja: 'イード礼拝', ru: 'Намаз Ид', es: 'Oraciones del Eid', ko: '이드 기도',
+    ta: 'ஈத் தொழுகைகள்', si: 'ඊඩ් නමාස්කාරය',
   },
   'card.eid.desc': {
     en:  "The two celebrations of Islam: Eid al-Fitr and Eid al-Adha, their prayers, additional takbeers, rulings, Zakat al-Fitr, Qurbani sacrifice, and the joy of the blessed days.",
@@ -435,6 +481,8 @@ const UI = {
     ru:  'Два праздника Ислама: Ид аль-Фитр и Ид аль-Адха, их молитвы, дополнительные такбиры, правила, закят аль-фитр, жертвоприношение Курбан и радость благословенных дней.',
     es:  'Las dos celebraciones del Islam: Eid al-Fitr y Eid al-Adha, sus oraciones, takbeers adicionales, normas, Zakat al-Fitr, sacrificio Qurbani y la alegría de los días benditos.',
     ko:  '이슬람의 두 축제: 이드 알 피트르와 이드 알 아드하, 기도, 추가 타크비르, 규정, 자카트 알 피트르, 쿠르바니 희생, 그리고 복된 날의 기쁨.',
+    ta:  'இஸ்லாமின் இரண்டு கொண்டாட்டங்கள்: ஈத் அல்-ஃபித்ர் மற்றும் ஈத் அல்-அத்ஹா, அவற்றின் தொழுகைகள், கூடுதல் தக்பீர்கள், சட்டங்கள், ஜகாத் அல்-ஃபித்ர், குர்பானி மற்றும் பாக்கியமான நாட்களின் மகிழ்ச்சி.',
+    si:  'ඉස්ලාමේ සැමරුම් දෙක: ඊදුල් ෆිත්ර් සහ ඊදුල් අල්හා, ඒවායේ නමාස්කාර, අතිරේක තක්බීර්, නියෝග, ෆිත්ර් සකාත්, කුර්බානි සහ ශුභ දිනවල ප්‍රීතිය.',
   },
 
   /* ── Ulum al-Quran page ─────────────────────────────── */
@@ -442,6 +490,7 @@ const UI = {
     en: "Ulum al-Quran", ms: "Ulum al-Quran", tur: "Ulumul Kuran", urd: 'علوم القرآن',
     ben: 'উলূমুল কুরআন', fas: 'علوم القرآن', zh: '古兰经科学', yue: '古蘭經科學',
     ja: 'クルアーン諸科学', ru: 'Улюм аль-Коран', es: "Ulum al-Quran", ko: '울룸 알 쿠란',
+    ta: 'உலூம் அல்-குர்ஆன்', si: 'උලූම් අල්-කුර්ආන්',
   },
   'card.ulumquran.desc': {
     en:  "The sciences of the Quran: how it was revealed and preserved, compilation history, Makki and Madani divisions, the seven Qira'at, Asbab al-Nuzul, and Tajweed.",
@@ -456,6 +505,8 @@ const UI = {
     ru:  "Науки Корана: как он был ниспослан и сохранён, история компиляции, мекканские и мединские суры, семь чтений, поводы ниспослания и таджвид.",
     es:  "Las ciencias del Corán: cómo fue revelado y preservado, historia de compilación, divisiones mequí y medinense, las siete Qira'at, Asbab al-Nuzul y Tajweed.",
     ko:  "쿠란의 과학: 어떻게 계시되고 보존되었는지, 편찬 역사, 마키와 마다니 구분, 일곱 가지 키라아트, 아스밥 알 누줄, 그리고 타즈위드.",
+    ta:  "குர்ஆனின் அறிவியல்கள்: அது எவ்வாறு அருளப்பட்டு பாதுகாக்கப்பட்டது, தொகுப்பு வரலாறு, மக்கி மற்றும் மதனி பிரிவுகள், ஏழு கிராஅத்கள், அஸ்பாப் அல்-நுஜுல் மற்றும் தஜ்வீத்.",
+    si:  "කුර්ආනේ විද්‍යාවන්: එය කෙසේ අනාවරණය කර ආරක්ෂා කරන ලද්ද, සම්පාදන ඉතිහාසය, මක්කි සහ මදනි කොටස්, සිව් කිරාඅත්, අස්බාබ් අල්-නුසූල් සහ තජ්වීද්.",
   },
 
   /* ── Mustalah al-Hadith page ──────────────────────── */
@@ -463,6 +514,7 @@ const UI = {
     en: "Mustalah al-Hadith", ms: "Mustalah al-Hadith", tur: "Hadis Usulü", urd: 'مصطلح الحدیث',
     ben: 'মুস্তালাহুল হাদিস', fas: 'مصطلح الحدیث', zh: '圣训术语学', yue: '聖訓術語學',
     ja: 'ハディース学術用語', ru: 'Мусталах аль-хадис', es: "Mustalah al-Hadith", ko: '무스탈라흐 알 하디스',
+    ta: 'முஸ்தலஹ் அல்-ஹதீஸ்', si: 'මුස්තලහ් අල්-හදීස්',
   },
   'card.mustalah.desc': {
     en:  "The science of Hadith: the isnad chain of narrators, rijal criticism, grading into Sahih, Hasan and Da'if, the Six Books, and how scholars authenticate the Prophet's ﷺ words.",
@@ -477,6 +529,8 @@ const UI = {
     ru:  "Наука хадисов: цепочка передатчиков (иснад), критика передатчиков (риджаль), оценка как достоверный, хороший и слабый, Шесть книг и методы аутентификации слов Пророка ﷺ.",
     es:  "La ciencia del Hadith: la cadena de transmisores (isnad), crítica de narradores (rijal), clasificación en Sahih, Hasan y Da'if, los Seis Libros y cómo los eruditos autentican las palabras del Profeta ﷺ.",
     ko:  "하디스의 과학: 전달자 사슬(이스나드), 리잘 비평, 사히흐, 하산 및 다이프 등급 분류, 여섯 권의 책, 그리고 학자들이 예언자 ﷺ의 말씀을 인증하는 방법.",
+    ta:  "ஹதீஸின் அறிவியல்: அறிவிப்பாளர்களின் சங்கிலி (இஸ்னாத்), ரிஜால் விமர்சனம், சஹீஹ், ஹஸன் மற்றும் தஈஃப் வகைப்பாடு, ஆறு கிதாப்கள் மற்றும் அறிஞர்கள் நபி ﷺ அவர்களின் வார்த்தைகளை சரிபார்க்கும் முறை.",
+    si:  "හදීස්හි විද්‍යාව: කථිකයන්ගේ දාමය (ඉස්නාද්), රිජාල් විචාරය, සහීහ්, හසන් සහ දාඊෆ් ශ්‍රේණිගත කිරීම, කිතාබ් හය සහ විද්වතුන් නබි ﷺ ගේ වචන සත්‍යාපනය කරන ආකාරය.",
   },
 } as const;
 

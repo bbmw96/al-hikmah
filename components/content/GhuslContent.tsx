@@ -8,7 +8,10 @@ import type { Lang } from '@/lib/i18n/translations';
 
 function useGhusl() {
   const { lang } = useLanguage();
-  return (key: GhuslContentKey): string => GHUSL_CONTENT[key][lang as Lang];
+  return (key: GhuslContentKey): string => {
+    const entry = GHUSL_CONTENT[key] as Record<string, string | undefined>;
+    return entry[lang] ?? entry['en'] ?? key;
+  };
 }
 
 const OBLIGATORY_CAUSES = [

@@ -2,8 +2,8 @@ import type { Lang } from '@/lib/i18n/translations';
 
 type ML = Record<Lang, string>;
 
-function ml(en: string, ms: string, tur: string, urd: string, ben: string, fas: string, zh: string, yue: string, ja: string, ru: string, es: string, ko: string): ML {
-  return { en, ms, tur, urd, ben, fas, zh, yue, ja, ru, es, ko };
+function ml(en: string, ms: string, tur: string, urd: string, ben: string, fas: string, zh: string, yue: string, ja: string, ru: string, es: string, ko: string, ta?: string, si?: string): ML {
+  return { en, ms, tur, urd, ben, fas, zh, yue, ja, ru, es, ko, ta: ta ?? en, si: si ?? en };
 }
 
 export const TAHARAH_CONTENT = {

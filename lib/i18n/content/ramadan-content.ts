@@ -1,4 +1,4 @@
-type LangMap = { en: string; ms: string; tur: string; urd: string; ben: string; fas: string; zh: string; yue: string; ja: string; ru: string; es: string; ko: string };
+type LangMap = { en: string; ms: string; tur: string; urd: string; ben: string; fas: string; zh: string; yue: string; ja: string; ru: string; es: string; ko: string; ta?: string; si?: string };
 export type RamadanContentKey = keyof typeof RAMADAN_CONTENT;
 
 export const RAMADAN_CONTENT = {

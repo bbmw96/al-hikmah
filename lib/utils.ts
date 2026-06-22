@@ -14,6 +14,8 @@ export const SUPPORTED_LANGUAGES = [
   { code: 'fas', label: 'Persian',  nativeLabel: 'فارسی',           dir: 'rtl', apiPrefix: 'fas' },
   { code: 'es',  label: 'Spanish',  nativeLabel: 'Español',         dir: 'ltr', apiPrefix: 'spa' },
   { code: 'ru',  label: 'Russian',  nativeLabel: 'Русский',         dir: 'ltr', apiPrefix: 'rus' },
+  { code: 'ta',  label: 'Tamil',    nativeLabel: 'தமிழ்',           dir: 'ltr', apiPrefix: 'tam' },
+  { code: 'si',  label: 'Sinhala',  nativeLabel: 'සිංහල',           dir: 'ltr', apiPrefix: 'sin' },
 ] as const;
 
 export type LanguageCode = typeof SUPPORTED_LANGUAGES[number]['code'];

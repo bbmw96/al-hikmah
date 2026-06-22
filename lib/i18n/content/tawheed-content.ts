@@ -1,4 +1,4 @@
-type LangMap = { en: string; ms: string; tur: string; urd: string; ben: string; fas: string; zh: string; yue: string; ja: string; ru: string; es: string; ko: string };
+type LangMap = { en: string; ms: string; tur: string; urd: string; ben: string; fas: string; zh: string; yue: string; ja: string; ru: string; es: string; ko: string; ta?: string; si?: string };
 export type TawheedContentKey = keyof typeof TAWHEED_CONTENT;
 
 export const TAWHEED_CONTENT = {
