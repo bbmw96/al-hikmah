@@ -270,6 +270,27 @@ const UI = {
     ja:  'BBMW0 Technologies プロジェクト',  ru:  'Проект BBMW0 Technologies',
     es:  'Un proyecto de BBMW0 Technologies', ko: 'BBMW0 Technologies 프로젝트',
   },
+
+  /* ── Tayamum page ────────────────────────────────────── */
+  'nav.tayamum': {
+    en: 'Tayamum', ms: 'Tayamum', tur: 'Teyemmüm', urd: 'تیمم',
+    ben: 'তায়াম্মুম', fas: 'تیمم', zh: '土净礼', yue: '土淨禮',
+    ja: 'タヤンムム', ru: 'Таяммум', es: 'Tayamum', ko: '타야뭄',
+  },
+  'card.tayamum.desc': {
+    en:  'Dry purification with clean earth: the story of its revelation, when it is permitted, how to perform it, and what it achieves.',
+    ms:  'Penyucian kering dengan tanah bersih: kisah pewahyuannya, bila dibenarkan, cara melaksanakannya, dan apa yang dicapainya.',
+    tur: 'Temiz toprakla kuru taharet: vahyinin hikâyesi, ne zaman caiz olduğu, nasıl yapılacağı ve ne sağladığı.',
+    urd: 'پاک مٹی سے خشک طہارت: اس کے نزول کی کہانی، کب جائز ہے، کیسے ادا کریں، اور اس کی افادیت۔',
+    ben: 'পরিষ্কার মাটি দিয়ে শুকনো পবিত্রতা: এর অবতরণের কাহিনি, কখন অনুমতিযোগ্য, কীভাবে করবেন এবং এটি কী অর্জন করে।',
+    fas: 'تطهیر خشک با خاک پاک: داستان نزول آن، زمانی که مجاز است، نحوه انجام آن، و آنچه به دست می‌آید.',
+    zh:  '以清洁土地干净礼：其启示的故事、何时可以行礼、如何进行，以及它所达成的目的。',
+    yue: '以清潔土地乾淨禮：其啟示的故事、何時可以行禮、如何進行，以及它所達成的目的。',
+    ja:  '清潔な土による乾燥礼：啓示の物語、許可される状況、行い方、そして達成されること。',
+    ru:  'Сухое очищение чистой землёй: история ниспослания, когда разрешён, как совершать и чего он достигает.',
+    es:  'Purificación seca con tierra limpia: la historia de su revelación, cuándo está permitido, cómo realizarlo y qué logra.',
+    ko:  '깨끗한 흙으로 건식 정화: 계시의 이야기, 허용되는 때, 수행 방법, 그리고 달성하는 것.',
+  },
 } as const;
 
 export type T = typeof UI;

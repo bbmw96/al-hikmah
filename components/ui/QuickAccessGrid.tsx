@@ -18,6 +18,7 @@ import {
   Sunrise,
   CalendarDays,
   Library,
+  Layers,
 } from 'lucide-react';
 import { StaggerGroup, StaggerItem } from '@/components/ui/StaggerGroup';
 import { useLanguage } from '@/lib/i18n/context';
@@ -46,6 +47,7 @@ const QUICK_ACCESS: {
   { icon: Gem,         titleKey: 'nav.nikah',    descKey: 'card.nikah.desc',    arabicTitle: 'النِّكَاح',        href: '/nikah',      colour: 'bg-forest'   },
   { icon: CalendarDays,titleKey: 'nav.calendar', descKey: 'card.calendar.desc', arabicTitle: 'التقويم',          href: '/calendar',   colour: 'bg-midnight' },
   { icon: Library,     titleKey: 'nav.glossary', descKey: 'card.glossary.desc', arabicTitle: 'المعجم',           href: '/glossary',   colour: 'bg-forest'   },
+  { icon: Layers,     titleKey: 'nav.tayamum', descKey: 'card.tayamum.desc', arabicTitle: 'التَّيَمُّم',       href: '/tayamum',    colour: 'bg-midnight' },
 ];
 
 export function QuickAccessGrid() {

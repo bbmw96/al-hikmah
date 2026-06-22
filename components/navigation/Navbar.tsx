@@ -46,6 +46,7 @@ function useNavItems(): NavItem[] {
         { label: t('nav.fiqh'),     href: '/fiqh' },
         { label: t('nav.suluk'),    href: '/suluk' },
         { label: t('nav.nikah'),    href: '/nikah' },
+        { label: t('nav.tayamum'), href: '/tayamum' },
         { label: t('nav.seerah'),   href: '/seerah' },
         { label: t('nav.glossary'), href: '/glossary' },
         { label: t('nav.calendar'), href: '/calendar' },
