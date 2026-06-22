@@ -148,8 +148,8 @@ export const HADITH_COLLECTIONS: HadithCollection[] = [
     grade: 'Major Collection',
     description:
       'One of the largest collections of hadith, compiled by Imam Ahmad ibn Hanbal, the founder of the Hanbali school of jurisprudence. He reportedly selected these hadiths from a pool of 750,000 narrations. The Musnad is arranged by Companion (the person who narrated the hadith from the Prophet ﷺ), making it a comprehensive encyclopaedia of prophetic traditions.',
-    apiCollection: 'ahmed',
-    available: true,
+    apiCollection: null,
+    available: false,
     displayOrder: 8,
   },
   {
@@ -165,8 +165,8 @@ export const HADITH_COLLECTIONS: HadithCollection[] = [
     grade: 'Highly Authentic',
     description:
       'A distinguished hadith collection arranged similarly to the Six Books, covering the major chapters of Islamic law. The Sunan al-Darimi is notable for its introduction, which contains valuable information about the Prophet\'s characteristics and manners, as well as chapters on the merits of knowledge and the Quran.',
-    apiCollection: 'darimi',
-    available: true,
+    apiCollection: null,
+    available: false,
     displayOrder: 9,
   },
   {
@@ -182,7 +182,7 @@ export const HADITH_COLLECTIONS: HadithCollection[] = [
     grade: 'Highly Authentic',
     description:
       'Imam al-Nawawi\'s renowned collection of 42 comprehensive hadiths, each encapsulating a major principle of Islam. Described by scholars as "half of Islam" or more, these hadiths are among the most memorised and studied in the Muslim world, covering belief, worship, ethics, and jurisprudence in concise prophetic statements.',
-    apiCollection: 'nawawi40',
+    apiCollection: 'nawawi',
     available: true,
     displayOrder: 10,
   },
@@ -199,7 +199,7 @@ export const HADITH_COLLECTIONS: HadithCollection[] = [
     grade: 'Highly Authentic',
     description:
       'Forty sacred hadiths in which Allah speaks in the first person through the Prophet ﷺ, distinct from the Quran yet carrying a unique divine quality. These narrations address matters of the heart, divine mercy, sin, repentance, and the relationship between the servant and his Lord.',
-    apiCollection: 'qudsi40',
+    apiCollection: 'qudsi',
     available: true,
     displayOrder: 11,
   },
