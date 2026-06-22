@@ -1,4 +1,4 @@
-import type { Metadata } from 'next';
+﻿import type { Metadata } from 'next';
 import { PageHeader } from '@/components/ui/PageHeader';
 import { TaharahContent } from '@/components/content/TaharahContent';
 
@@ -16,7 +16,7 @@ export default function TaharahPage() {
       <PageHeader
         title="Taharah: Ritual Purity"
         arabicTitle="الطَّهَارَة"
-        subtitle="The foundation of Islamic worship — the condition of ritual cleanliness that opens the door to prayer and the presence of Allah"
+        subtitle="The foundation of Islamic worship  –  the condition of ritual cleanliness that opens the door to prayer and the presence of Allah"
       />
       <TaharahContent />
     </>

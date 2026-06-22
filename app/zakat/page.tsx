@@ -1,4 +1,4 @@
-import type { Metadata } from 'next';
+﻿import type { Metadata } from 'next';
 import { PageHeader } from '@/components/ui/PageHeader';
 import { ArabicText } from '@/components/ui/ArabicText';
 
@@ -100,7 +100,7 @@ export default function ZakatPage() {
       <PageHeader
         title="Zakat: Obligatory Almsgiving"
         arabicTitle="الزَّكَاة"
-        subtitle="The Third Pillar of Islam — purifying wealth by giving its due right to those in need"
+        subtitle="The Third Pillar of Islam  –  purifying wealth by giving its due right to those in need"
       />
 
       <div className="max-w-4xl mx-auto px-6 py-14 space-y-16">
@@ -138,9 +138,9 @@ export default function ZakatPage() {
               { title: 'Muslim', detail: 'Zakat is an obligation on every Muslim who meets the conditions. Non-Muslims are not obligated.' },
               { title: 'Adult (Baligh)', detail: 'The majority of scholars hold that Zakat is obligatory on adults. The Shafi\'i and Hanbali schools also require it on a child\'s wealth, paid by the guardian.' },
               { title: 'Free Person', detail: 'Historically, enslaved persons had no independent ownership. This condition is moot in the contemporary context.' },
-              { title: 'Owns Nisab', detail: 'The person must own wealth equal to or exceeding the nisab threshold — the minimum amount that triggers Zakat liability.' },
+              { title: 'Owns Nisab', detail: 'The person must own wealth equal to or exceeding the nisab threshold  –  the minimum amount that triggers Zakat liability.' },
               { title: 'Hawl Completed', detail: 'One full lunar year (hawl) must have passed with the wealth continuously at or above nisab. Exception: agricultural produce and treasure (rikaz) have no hawl.' },
-              { title: 'Full Ownership', detail: 'The wealth must be in full, stable possession — not borrowed, not encumbered by debts that would reduce it below nisab.' },
+              { title: 'Full Ownership', detail: 'The wealth must be in full, stable possession  –  not borrowed, not encumbered by debts that would reduce it below nisab.' },
             ].map(item => (
               <div key={item.title} className="card-islamic">
                 <h3 className="font-garamond text-lg font-semibold text-forest mb-2">{item.title}</h3>
@@ -186,7 +186,7 @@ export default function ZakatPage() {
               size="md"
             />
             <p className="text-cream/80 text-sm mt-4 leading-relaxed">
-              "Indeed, Zakat expenditures are only for the poor and for the needy and for those employed to collect [Zakat] and for bringing hearts together [for Islam] and for freeing captives [or slaves] and for those in debt and for the cause of Allah and for the [stranded] traveller — an obligation [imposed] by Allah." (At-Tawbah 9:60)
+              "Indeed, Zakat expenditures are only for the poor and for the needy and for those employed to collect [Zakat] and for bringing hearts together [for Islam] and for freeing captives [or slaves] and for those in debt and for the cause of Allah and for the [stranded] traveller  –  an obligation [imposed] by Allah." (At-Tawbah 9:60)
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
@@ -227,7 +227,7 @@ export default function ZakatPage() {
                   Zakat al-Fitr is a separate, mandatory charitable payment due at the end of Ramadan. It purifies the fasting person of any lapses or indecent speech during the fast, and provides food for the poor on Eid day.
                 </p>
                 <p className="text-forest/70 text-sm leading-relaxed mb-3">
-                  The Prophet ﷺ said: <em>"The Messenger of Allah ﷺ ordained Zakat al-Fitr [to be given] on behalf of every free or enslaved person, male or female, young or old, from among the Muslims — one sa' of dried dates or one sa' of barley."</em> (Bukhari 1503, Muslim 984)
+                  The Prophet ﷺ said: <em>"The Messenger of Allah ﷺ ordained Zakat al-Fitr [to be given] on behalf of every free or enslaved person, male or female, young or old, from among the Muslims  –  one sa' of dried dates or one sa' of barley."</em> (Bukhari 1503, Muslim 984)
                 </p>
                 <p className="text-forest/70 text-sm leading-relaxed">
                   <strong>Timing:</strong> It must be paid before the Eid prayer. Paying it a day or two early is permitted; paying it after the Eid prayer renders it an ordinary charity (sadaqah), not Zakat al-Fitr. The quantity is one sa' (approximately 2.5 kg) of the local staple food per member of the household. A cash equivalent is accepted in the Hanafi and some other schools.

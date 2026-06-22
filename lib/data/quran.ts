@@ -1,4 +1,4 @@
-export interface SurahData {
+﻿export interface SurahData {
   number: number;
   arabicName: string;
   englishName: string;
@@ -989,7 +989,7 @@ export const SURAHS: SurahData[] = [
     classification: 'Makki',
     period: 'Middle Makkan',
     overview: 'Named after the wise man Luqman, a figure renowned in Arab tradition for his wisdom and moral teaching. The surah presents his counsels to his son as a model of practical and spiritual guidance: to worship Allah alone, to honour parents while holding firm to monotheism, to maintain prayer, to enjoin good and forbid evil, and to cultivate humility. The surah situates this ethical framework within a broader meditation on divine signs in creation and the reality of the Day of Judgement.',
-    asbabalNuzul: 'Luqman was revealed in Makkah during a period when the Quraysh challenged the Prophet about the source of his wisdom and questioned the doctrine of resurrection. Several verses were revealed in response to questions about the nature of the soul and the certainty of the Hour. The portrayal of Luqman—a man of wisdom not from the prophetic lineage—served to demonstrate that true wisdom always leads to the same monotheistic truth preached by the Prophet.',
+    asbabalNuzul: 'Luqman was revealed in Makkah during a period when the Quraysh challenged the Prophet about the source of his wisdom and questioned the doctrine of resurrection. Several verses were revealed in response to questions about the nature of the soul and the certainty of the Hour. The portrayal of Luqman – a man of wisdom not from the prophetic lineage – served to demonstrate that true wisdom always leads to the same monotheistic truth preached by the Prophet.',
     keyThemes: [
       'Divine wisdom and gratitude',
       'Parental guidance rooted in tawhid',
@@ -1013,7 +1013,7 @@ export const SURAHS: SurahData[] = [
       {
         reference: '31:34',
         arabic: 'إِنَّ ٱللَّهَ عِندَهُۥ عِلْمُ ٱلسَّاعَةِ وَيُنَزِّلُ ٱلْغَيْثَ وَيَعْلَمُ مَا فِى ٱلْأَرْحَامِ',
-        translation: 'Indeed, Allah—with Him is knowledge of the Hour, and He sends down the rain, and He knows what is in the wombs.',
+        translation: 'Indeed, Allah – with Him is knowledge of the Hour, and He sends down the rain, and He knows what is in the wombs.',
         context: 'The five matters known only to Allah (al-mafatih al-ghayb), often cited in Islamic theology as definitive boundaries of divine exclusive knowledge.'
       }
     ]
@@ -1098,7 +1098,7 @@ export const SURAHS: SurahData[] = [
     classification: 'Makki',
     period: 'Middle Makkan',
     overview: 'Named after the ancient South Arabian kingdom of Sheba (Saba\'), this surah addresses the core Meccan objections to the Prophet\'s message: the denial of resurrection, the mockery of the Prophet\'s warnings, and the arrogance of wealth. It recounts the blessings granted to Dawud and Sulayman as evidence of divine favour, and contrasts them with the people of Saba\', who rejected gratitude and were destroyed. The surah warns that worldly prosperity is a trial, not a sign of divine approval.',
-    asbabalNuzul: 'Revealed in the middle Makkan period in response to the Quraysh\'s continuous ridicule of the Prophet and their denial of resurrection. The story of Saba\'—a people given every blessing yet ungrateful—was a direct warning to the prosperous Quraysh. References to the power given to Dawud and Sulayman reinforced the argument that Allah rewards the faithful and holds the arrogant to account.',
+    asbabalNuzul: 'Revealed in the middle Makkan period in response to the Quraysh\'s continuous ridicule of the Prophet and their denial of resurrection. The story of Saba\' – a people given every blessing yet ungrateful – was a direct warning to the prosperous Quraysh. References to the power given to Dawud and Sulayman reinforced the argument that Allah rewards the faithful and holds the arrogant to account.',
     keyThemes: [
       'Divine knowledge encompassing all creation',
       'Gratitude and the fate of ungrateful nations',
@@ -1129,7 +1129,7 @@ export const SURAHS: SurahData[] = [
     verses: 45,
     classification: 'Makki',
     period: 'Middle Makkan',
-    overview: 'Also known as Al-Mala\'ikah (The Angels), Fatir opens with the majestic image of Allah as the Originator of the heavens and earth who appoints angels with two, three, or four wings as messengers. The surah systematically refutes polytheism by demonstrating the complete inability of idols to create, provide, or even hear. It distinguishes between those who believe and act righteously and those who persist in ingratitude. The diversity within creation—mountains, colours, water, and peoples—is presented as signs pointing to a single Creator.',
+    overview: 'Also known as Al-Mala\'ikah (The Angels), Fatir opens with the majestic image of Allah as the Originator of the heavens and earth who appoints angels with two, three, or four wings as messengers. The surah systematically refutes polytheism by demonstrating the complete inability of idols to create, provide, or even hear. It distinguishes between those who believe and act righteously and those who persist in ingratitude. The diversity within creation – mountains, colours, water, and peoples – is presented as signs pointing to a single Creator.',
     asbabalNuzul: 'Revealed in the middle Makkan period as part of the sustained Quranic argument against polytheism. The Quraysh\'s attachment to intermediary deities is addressed by demonstrating that these cannot intercede, cannot create, and cannot benefit. The verses consoling the Prophet (35:8) were revealed to ease his distress over the persistent rejection he faced from his people.',
     keyThemes: [
       'Allah as the sole Originator and Creator',
@@ -1174,7 +1174,7 @@ export const SURAHS: SurahData[] = [
       {
         reference: '36:36',
         arabic: 'سُبْحَٰنَ ٱلَّذِى خَلَقَ ٱلْأَزْوَٰجَ كُلَّهَا مِمَّا تُنۢبِتُ ٱلْأَرْضُ وَمِنْ أَنفُسِهِمْ وَمِمَّا لَا يَعْلَمُونَ',
-        translation: 'Exalted is He who created all pairs—from what the earth grows and from themselves and from that which they do not know.',
+        translation: 'Exalted is He who created all pairs – from what the earth grows and from themselves and from that which they do not know.',
         context: 'A verse praised for anticipating the discovery that all living things come in pairs, cited as one of the Quran\'s scientific indications.'
       },
       {
@@ -1194,7 +1194,7 @@ export const SURAHS: SurahData[] = [
     verses: 182,
     classification: 'Makki',
     period: 'Middle Makkan',
-    overview: 'As-Saffat opens with three oaths by the angels who stand in ranks before Allah, setting the tone of heavenly order and divine sovereignty. The surah then narrates in sequence the stories of Nuh, Ibrahim, Ismail (and the great trial of sacrifice), Musa, Harun, Ilyas, Lut, and Yunus—each demonstrating the consistent pattern of divine support for prophets and destruction for their rejecters. The surah closes with a resounding declaration that Allah\'s servants will be victorious and His messengers will be aided.',
+    overview: 'As-Saffat opens with three oaths by the angels who stand in ranks before Allah, setting the tone of heavenly order and divine sovereignty. The surah then narrates in sequence the stories of Nuh, Ibrahim, Ismail (and the great trial of sacrifice), Musa, Harun, Ilyas, Lut, and Yunus – each demonstrating the consistent pattern of divine support for prophets and destruction for their rejecters. The surah closes with a resounding declaration that Allah\'s servants will be victorious and His messengers will be aided.',
     asbabalNuzul: 'Revealed in the middle Makkan period when the Prophet and early believers were under intense pressure. The surah\'s long sequence of prophetic narratives served to assure the Prophet that he stood in an unbroken line of divinely supported messengers, and that just as each prophet was ultimately vindicated, so too would he be. The story of Ibrahim and Ismail\'s trial (37:100-111) was particularly significant in establishing the Quranic account of the sacrifice.',
     keyThemes: [
       'Angelic order and divine sovereignty',
@@ -1208,7 +1208,7 @@ export const SURAHS: SurahData[] = [
         reference: '37:102',
         arabic: 'قَالَ يَٰٓأَبَتِ ٱفْعَلْ مَا تُؤْمَرُ ۖ سَتَجِدُنِىٓ إِن شَآءَ ٱللَّهُ مِنَ ٱلصَّٰبِرِينَ',
         translation: 'He said, "O my father, do what you are commanded. You will find me, if Allah wills, of the steadfast."',
-        context: 'Ismail\'s sublime response to his father Ibrahim when informed of the divine command to sacrifice him—a model of voluntary submission celebrated as the spirit of Eid al-Adha.'
+        context: 'Ismail\'s sublime response to his father Ibrahim when informed of the divine command to sacrifice him – a model of voluntary submission celebrated as the spirit of Eid al-Adha.'
       },
       {
         reference: '37:180',
@@ -1226,7 +1226,7 @@ export const SURAHS: SurahData[] = [
     verses: 88,
     classification: 'Makki',
     period: 'Middle Makkan',
-    overview: 'Named after the single Arabic letter Sad with which it opens, this surah addresses the arrogance of the Quraysh leaders who rejected the Prophet out of tribal jealousy and pride. It presents the stories of Dawud, Sulayman, and Ayyub as models of prophetic character—power combined with gratitude, and suffering met with patience. The surah also contains the extended account of Iblis\'s refusal to prostrate to Adam and his vow to mislead humanity, setting the stage for the cosmic conflict between guidance and misguidance.',
+    overview: 'Named after the single Arabic letter Sad with which it opens, this surah addresses the arrogance of the Quraysh leaders who rejected the Prophet out of tribal jealousy and pride. It presents the stories of Dawud, Sulayman, and Ayyub as models of prophetic character – power combined with gratitude, and suffering met with patience. The surah also contains the extended account of Iblis\'s refusal to prostrate to Adam and his vow to mislead humanity, setting the stage for the cosmic conflict between guidance and misguidance.',
     asbabalNuzul: 'Scholars report that leading Qurayshi elders, including Abu Jahl and Abu Lahab, visited Abu Talib to pressure him to withdraw his support from the Prophet, claiming that a man from the tribe of Makhzum or Abd Shams was more deserving of prophethood. This tribal rejection prompted the revelation of the surah\'s opening verses on the arrogance of disbelievers. The story of Dawud (38:21-25) was revealed regarding a specific incident requiring prophetic self-examination.',
     keyThemes: [
       'Arrogance as the root of disbelief',
@@ -1258,7 +1258,7 @@ export const SURAHS: SurahData[] = [
     verses: 75,
     classification: 'Makki',
     period: 'Late Makkan',
-    overview: 'Az-Zumar takes its name from the groups (zumar) of people who will be driven to the Fire and to Paradise on the Day of Judgement. The surah presents a powerful theological argument for sincere worship (ikhlas): Allah does not need any associates, yet people stubbornly invent intermediaries. It addresses those who have wronged themselves with an extraordinary verse of hope—that Allah forgives all sins—and closes with the majestic scene of the final judgement. The surah is noted for the beauty and depth of its theological content.',
+    overview: 'Az-Zumar takes its name from the groups (zumar) of people who will be driven to the Fire and to Paradise on the Day of Judgement. The surah presents a powerful theological argument for sincere worship (ikhlas): Allah does not need any associates, yet people stubbornly invent intermediaries. It addresses those who have wronged themselves with an extraordinary verse of hope – that Allah forgives all sins – and closes with the majestic scene of the final judgement. The surah is noted for the beauty and depth of its theological content.',
     asbabalNuzul: 'Revealed in the late Makkan period, the surah addressed the practice of the Quraysh who worshipped idols as intercessors with Allah (39:3). The famous verse of hope (39:53) was revealed in response to companions who feared that their pre-Islamic sins were too great for forgiveness, assuring them of the boundless mercy of Allah. The surah\'s meditation on the Quran as a healing and warning was revealed as the believers were confronting intense persecution.',
     keyThemes: [
       'Sincere worship (ikhlas) as the essence of Islam',
@@ -1290,7 +1290,7 @@ export const SURAHS: SurahData[] = [
     verses: 85,
     classification: 'Makki',
     period: 'Late Makkan',
-    overview: 'Also known as Al-Mu\'min (The Believer), Ghafir is the first of the seven Hawamim surahs (40–46), all of which begin with the letters Ha Mim. The surah takes its primary name from the divine attribute of Al-Ghafir (The Forgiver) mentioned in verse 3. Its central narrative is the speech of the Believer of Pharaoh\'s family—a man who had concealed his faith—who rose to defend Musa with a passionate theological argument. The surah demonstrates that truthful voices will always arise, even in the courts of tyrants.',
+    overview: 'Also known as Al-Mu\'min (The Believer), Ghafir is the first of the seven Hawamim surahs (40–46), all of which begin with the letters Ha Mim. The surah takes its primary name from the divine attribute of Al-Ghafir (The Forgiver) mentioned in verse 3. Its central narrative is the speech of the Believer of Pharaoh\'s family – a man who had concealed his faith – who rose to defend Musa with a passionate theological argument. The surah demonstrates that truthful voices will always arise, even in the courts of tyrants.',
     asbabalNuzul: 'Revealed in the late Makkan period when the Prophet and believers faced deadly threats from Qurayshi leaders who plotted to silence the message. The story of the Believing Man of Pharaoh\'s family (40:28-45) offered the Prophet and his companions an example of how a solitary voice of faith can challenge an entire court of disbelief. The repeated divine name Al-Ghafir offered consolation that Allah forgives and accepts repentance even from those who had strayed.',
     keyThemes: [
       'Divine forgiveness and acceptance of repentance',
@@ -1335,14 +1335,14 @@ export const SURAHS: SurahData[] = [
       {
         reference: '41:30',
         arabic: 'إِنَّ ٱلَّذِينَ قَالُوا۟ رَبُّنَا ٱللَّهُ ثُمَّ ٱسْتَقَٰمُوا۟ تَتَنَزَّلُ عَلَيْهِمُ ٱلْمَلَٰٓئِكَةُ',
-        translation: 'Indeed, those who have said, "Our Lord is Allah," and then remained steadfast—the angels will descend upon them.',
+        translation: 'Indeed, those who have said, "Our Lord is Allah," and then remained steadfast – the angels will descend upon them.',
         context: 'A celebrated verse on istiqamah (steadfastness) and the angelic assurance given to those who combine belief with consistent practice, promising them tranquillity in this life and the next.'
       },
       {
         reference: '41:53',
         arabic: 'سَنُرِيهِمْ ءَايَٰتِنَا فِى ٱلْءَافَاقِ وَفِىٓ أَنفُسِهِمْ حَتَّىٰ يَتَبَيَّنَ لَهُمْ أَنَّهُ ٱلْحَقُّ',
         translation: 'We will show them Our signs in the horizons and within themselves until it becomes clear to them that it is the truth.',
-        context: 'A forward-looking verse promising that the external universe and the human interior will both yield ever-clearer evidence of divine truth—often cited in the context of scientific inquiry and self-reflection.'
+        context: 'A forward-looking verse promising that the external universe and the human interior will both yield ever-clearer evidence of divine truth – often cited in the context of scientific inquiry and self-reflection.'
       }
     ]
   },
@@ -1354,7 +1354,7 @@ export const SURAHS: SurahData[] = [
     verses: 53,
     classification: 'Makki',
     period: 'Late Makkan',
-    overview: 'Ash-Shura takes its name from the principle of mutual consultation (shura) mentioned as a characteristic of the believers in verse 38. The surah opens with two sets of disconnected letters (Ha Mim, \'Ain Sin Qaf) and moves through an extended meditation on divine unity, prophetic succession, the diversity of religious communities, and the modes by which Allah communicates with human beings—through revelation, from behind a veil, or through a messenger. The surah establishes that all the prophets brought the same essential religion.',
+    overview: 'Ash-Shura takes its name from the principle of mutual consultation (shura) mentioned as a characteristic of the believers in verse 38. The surah opens with two sets of disconnected letters (Ha Mim, \'Ain Sin Qaf) and moves through an extended meditation on divine unity, prophetic succession, the diversity of religious communities, and the modes by which Allah communicates with human beings – through revelation, from behind a veil, or through a messenger. The surah establishes that all the prophets brought the same essential religion.',
     asbabalNuzul: 'Revealed in the late Makkan period, the surah addressed the Quraysh\'s bewilderment at the idea of revelation coming to a human being. The extended discussion of how Allah communicates (42:51) was particularly important in clarifying the nature of prophethood. The principle of shura, while stated briefly, was expanded in the Madinan legislation and became a cornerstone of Islamic political thought.',
     keyThemes: [
       'Unity of the prophetic message across all communities',
@@ -1418,8 +1418,8 @@ export const SURAHS: SurahData[] = [
     verses: 59,
     classification: 'Makki',
     period: 'Late Makkan',
-    overview: 'Ad-Dukhan takes its name from the smoke (dukhan) mentioned in verse 10 as one of the signs of the approaching Last Hour. The surah celebrates the revelation of the Quran on the blessed night of Laylat al-Qadr and presents this as the definitive sign of divine mercy and guidance. It then moves through the story of Musa and Pharaoh—specifically Pharaoh\'s belated faith at the moment of drowning—and closes with a vivid description of the tree of Zaqqum in Hell and the joys of the Garden awaiting the righteous.',
-    asbabalNuzul: 'Revealed in the late Makkan period during a severe drought that afflicted the Quraysh, which the Prophet had prayed for as a consequence of their persistent rejection. Verse 10 (the smoke) refers either to the literal haze seen during the famine or to an eschatological sign. The story of Pharaoh\'s false faith (44:27-29) was a warning that belated belief at the moment of destruction is not accepted—directed at those who similarly delayed accepting the truth.',
+    overview: 'Ad-Dukhan takes its name from the smoke (dukhan) mentioned in verse 10 as one of the signs of the approaching Last Hour. The surah celebrates the revelation of the Quran on the blessed night of Laylat al-Qadr and presents this as the definitive sign of divine mercy and guidance. It then moves through the story of Musa and Pharaoh – specifically Pharaoh\'s belated faith at the moment of drowning – and closes with a vivid description of the tree of Zaqqum in Hell and the joys of the Garden awaiting the righteous.',
+    asbabalNuzul: 'Revealed in the late Makkan period during a severe drought that afflicted the Quraysh, which the Prophet had prayed for as a consequence of their persistent rejection. Verse 10 (the smoke) refers either to the literal haze seen during the famine or to an eschatological sign. The story of Pharaoh\'s false faith (44:27-29) was a warning that belated belief at the moment of destruction is not accepted – directed at those who similarly delayed accepting the truth.',
     keyThemes: [
       'The Quran as a mercy revealed on a blessed night',
       'The smoke as a sign of the Last Hour',
@@ -1450,7 +1450,7 @@ export const SURAHS: SurahData[] = [
     verses: 37,
     classification: 'Makki',
     period: 'Late Makkan',
-    overview: 'Al-Jathiyah takes its name from the scene in verse 28 where every community will crouch on their knees before Allah on the Day of Judgement. The surah presents a sustained argument that the signs in creation—the heavens, the earth, human beings themselves, and the alternation of night and day—are sufficient evidence for any who choose to reflect. It then addresses those who reduce truth to mere conjecture and follow their desires, contrasting them with those who hold firm to revealed guidance. The Book given to the Children of Israel is mentioned as a precedent for the Quran.',
+    overview: 'Al-Jathiyah takes its name from the scene in verse 28 where every community will crouch on their knees before Allah on the Day of Judgement. The surah presents a sustained argument that the signs in creation – the heavens, the earth, human beings themselves, and the alternation of night and day – are sufficient evidence for any who choose to reflect. It then addresses those who reduce truth to mere conjecture and follow their desires, contrasting them with those who hold firm to revealed guidance. The Book given to the Children of Israel is mentioned as a precedent for the Quran.',
     asbabalNuzul: 'Revealed in the late Makkan period as part of the Hawamim sequence. The surah responded to the Qurayshi materialists who denied any divine plan or afterlife. The reference to the Children of Israel receiving the Book (45:16-17) was intended to show the Quraysh that revealed scripture was the norm of divine communication with human communities, and that the Quran continued this tradition.',
     keyThemes: [
       'Signs of divine power in creation',
@@ -1482,8 +1482,8 @@ export const SURAHS: SurahData[] = [
     verses: 35,
     classification: 'Makki',
     period: 'Late Makkan',
-    overview: 'Al-Ahqaf is the final surah of the Hawamim group and takes its name from the sandy region of Al-Ahqaf in southern Arabia where the \'Ad people lived before their destruction. The surah addresses the Quraysh\'s rejection of the Quran by inviting them to compare it with previous scriptures, narrating the destruction of \'Ad as a warning, and remarkably recounting the episode of the jinn who listened to the Quran and immediately believed—a contrast that shamed the human disbelievers. It also affirms the obligations of children towards parents.',
-    asbabalNuzul: 'Revealed in the late Makkan period as the final surah of the Hawamim sequence. The episode of the jinn listening to the Quran (46:29-32) is reported to have occurred during the Prophet\'s return from Ta\'if, where he had been rejected and stoned. While human beings rejected his message, unseen beings accepted it—a powerful consolation and a humbling contrast for the Quraysh.',
+    overview: 'Al-Ahqaf is the final surah of the Hawamim group and takes its name from the sandy region of Al-Ahqaf in southern Arabia where the \'Ad people lived before their destruction. The surah addresses the Quraysh\'s rejection of the Quran by inviting them to compare it with previous scriptures, narrating the destruction of \'Ad as a warning, and remarkably recounting the episode of the jinn who listened to the Quran and immediately believed – a contrast that shamed the human disbelievers. It also affirms the obligations of children towards parents.',
+    asbabalNuzul: 'Revealed in the late Makkan period as the final surah of the Hawamim sequence. The episode of the jinn listening to the Quran (46:29-32) is reported to have occurred during the Prophet\'s return from Ta\'if, where he had been rejected and stoned. While human beings rejected his message, unseen beings accepted it – a powerful consolation and a humbling contrast for the Quraysh.',
     keyThemes: [
       'The Quran as confirmation of previous scriptures',
       'Honouring and dutiful treatment of parents',
@@ -1528,13 +1528,13 @@ export const SURAHS: SurahData[] = [
         reference: '47:7',
         arabic: 'يَٰٓأَيُّهَا ٱلَّذِينَ ءَامَنُوٓا۟ إِن تَنصُرُوا۟ ٱللَّهَ يَنصُرْكُمْ وَيُثَبِّتْ أَقْدَامَكُمْ',
         translation: 'O you who have believed, if you support Allah, He will support you and plant firmly your feet.',
-        context: 'A conditional promise of divine support: that those who uphold Allah\'s religion will receive divine assistance and be established firmly in their affairs—one of the most cited verses of motivation.'
+        context: 'A conditional promise of divine support: that those who uphold Allah\'s religion will receive divine assistance and be established firmly in their affairs – one of the most cited verses of motivation.'
       },
       {
         reference: '47:15',
         arabic: 'مَّثَلُ ٱلْجَنَّةِ ٱلَّتِى وُعِدَ ٱلْمُتَّقُونَ ۖ فِيهَا أَنْهَٰرٌ مِّن مَّآءٍ غَيْرِ ءَاسِنٍ',
         translation: 'Is the description of Paradise promised to the righteous [that of a place] in which are rivers of water unaltered...',
-        context: 'Opens the celebrated description of Paradise\'s four rivers—water, milk, wine, and honey—contrasted with the boiling water given to the people of the Fire.'
+        context: 'Opens the celebrated description of Paradise\'s four rivers – water, milk, wine, and honey – contrasted with the boiling water given to the people of the Fire.'
       }
     ]
   },
@@ -1546,7 +1546,7 @@ export const SURAHS: SurahData[] = [
     verses: 29,
     classification: 'Madani',
     period: 'Madinan',
-    overview: 'Al-Fath celebrates the Treaty of Hudaybiyyah (6 AH/628 CE), which Allah describes as a manifest conquest (fath mubeen) despite appearing at the time as a humiliation. The surah validates the Prophet\'s vision of entering the Sacred Mosque in peace, describes the pledge of allegiance taken under the tree (Bay\'at al-Ridwan), exposes the hypocrites who stayed behind, and closes with a description of the companions as firm against disbelievers and merciful amongst themselves—like a plant that strengthens and awes those who see it.',
+    overview: 'Al-Fath celebrates the Treaty of Hudaybiyyah (6 AH/628 CE), which Allah describes as a manifest conquest (fath mubeen) despite appearing at the time as a humiliation. The surah validates the Prophet\'s vision of entering the Sacred Mosque in peace, describes the pledge of allegiance taken under the tree (Bay\'at al-Ridwan), exposes the hypocrites who stayed behind, and closes with a description of the companions as firm against disbelievers and merciful amongst themselves – like a plant that strengthens and awes those who see it.',
     asbabalNuzul: 'Revealed after the Treaty of Hudaybiyyah when the Prophet and companions were returning to Madinah. Many companions were distressed by the treaty\'s seemingly unfavourable terms. The surah was revealed entirely during the journey home to reframe the treaty as a divine victory and to explain its deeper strategic wisdom. The final verse (48:29) praising the companions was later cited by the Prophet as the description of his community in the Torah and Gospel.',
     keyThemes: [
       'The Treaty of Hudaybiyyah as a divine conquest',
@@ -1566,7 +1566,7 @@ export const SURAHS: SurahData[] = [
         reference: '48:29',
         arabic: 'مُّحَمَّدٌ رَّسُولُ ٱللَّهِ ۚ وَٱلَّذِينَ مَعَهُۥٓ أَشِدَّآءُ عَلَى ٱلْكُفَّارِ رُحَمَآءُ بَيْنَهُمْ',
         translation: 'Muhammad is the Messenger of Allah; and those with him are firm against the disbelievers, merciful among themselves.',
-        context: 'The celebrated description of the companions: combining steadfastness against opposition with tenderness within the community—cited as the defining character of the Muslim ummah.'
+        context: 'The celebrated description of the companions: combining steadfastness against opposition with tenderness within the community – cited as the defining character of the Muslim ummah.'
       }
     ]
   },
@@ -1592,7 +1592,7 @@ export const SURAHS: SurahData[] = [
         reference: '49:6',
         arabic: 'يَٰٓأَيُّهَا ٱلَّذِينَ ءَامَنُوٓا۟ إِن جَآءَكُمْ فَاسِقٌۢ بِنَبَإٍ فَتَبَيَّنُوٓا۟',
         translation: 'O you who have believed, if there comes to you a disobedient one with information, investigate.',
-        context: 'The Quranic foundation for the principle of verifying sources before acting on information—one of the central methodological principles of hadith scholarship and Islamic jurisprudence.'
+        context: 'The Quranic foundation for the principle of verifying sources before acting on information – one of the central methodological principles of hadith scholarship and Islamic jurisprudence.'
       },
       {
         reference: '49:13',
@@ -1610,7 +1610,7 @@ export const SURAHS: SurahData[] = [
     verses: 45,
     classification: 'Makki',
     period: 'Early Makkan',
-    overview: 'Named after the solitary Arabic letter Qaf, this surah addresses the central Meccan denial: that resurrection is impossible. With a rapid, rhythmic style, it argues from the signs of creation—rain, plant growth, celestial orbits—that the same creative power can restore human life after death. It introduces the two recording angels who accompany every person, and describes the swift events of the Day of Judgement: the blast of the Trumpet, the soul\'s confrontation with its own record, and the drive of people to their final destinations.',
+    overview: 'Named after the solitary Arabic letter Qaf, this surah addresses the central Meccan denial: that resurrection is impossible. With a rapid, rhythmic style, it argues from the signs of creation – rain, plant growth, celestial orbits – that the same creative power can restore human life after death. It introduces the two recording angels who accompany every person, and describes the swift events of the Day of Judgement: the blast of the Trumpet, the soul\'s confrontation with its own record, and the drive of people to their final destinations.',
     asbabalNuzul: 'Revealed in the early Makkan period, Qaf addresses the stubbornness of those who found the idea of resurrection after decomposition absurd. The surah was particularly beloved by the Prophet: it is reported that he recited it regularly in the Fajr prayer and on Fridays. Its focus on death, recording of deeds, and the Day of Judgement made it suitable for regular communal recitation as a reminder.',
     keyThemes: [
       'Rational proof for resurrection from natural signs',
@@ -1624,7 +1624,7 @@ export const SURAHS: SurahData[] = [
         reference: '50:16',
         arabic: 'وَلَقَدْ خَلَقْنَا ٱلْإِنسَٰنَ وَنَعْلَمُ مَا تُوَسْوِسُ بِهِۦ نَفْسُهُۥ ۖ وَنَحْنُ أَقْرَبُ إِلَيْهِ مِنْ حَبْلِ ٱلْوَرِيدِ',
         translation: 'And We have already created man and know what his soul whispers to him, and We are closer to him than his jugular vein.',
-        context: 'A profound verse of divine nearness and omniscience: Allah is closer to the human being than their own life-vein, knowing even unexpressed thoughts—one of the most cited verses on divine intimacy.'
+        context: 'A profound verse of divine nearness and omniscience: Allah is closer to the human being than their own life-vein, knowing even unexpressed thoughts – one of the most cited verses on divine intimacy.'
       },
       {
         reference: '50:19',
@@ -1643,7 +1643,7 @@ export const SURAHS: SurahData[] = [
     verses: 60,
     classification: 'Makki',
     period: 'Middle Makkan',
-    overview: 'Adh-Dhariyat opens with four powerful oaths by natural phenomena—the winnowing winds, the cloud-bearing winds, the easily running ships, and the angels distributing provision—all attesting to the truth of the divine promise of judgement. The surah then narrates the hospitality of Ibrahim to the angelic visitors and the story of the people of Lut, followed by accounts of Musa, \'Ad, Thamud, and Nuh as warnings. It closes with a declaration of the purpose of creation: worship of Allah alone, who is self-sufficient and requires nothing from His creation.',
+    overview: 'Adh-Dhariyat opens with four powerful oaths by natural phenomena – the winnowing winds, the cloud-bearing winds, the easily running ships, and the angels distributing provision – all attesting to the truth of the divine promise of judgement. The surah then narrates the hospitality of Ibrahim to the angelic visitors and the story of the people of Lut, followed by accounts of Musa, \'Ad, Thamud, and Nuh as warnings. It closes with a declaration of the purpose of creation: worship of Allah alone, who is self-sufficient and requires nothing from His creation.',
     asbabalNuzul: 'Revealed in the middle Makkan period as part of the sustained effort to convince the Quraysh of the reality of resurrection and the truthfulness of the Prophet. The opening oaths by atmospheric and cosmic phenomena were typical of the Meccan surahs that used observable natural realities as witnesses to divine truth. The closing verse (51:56) on the purpose of creation is among the most cited Quranic statements in Islamic theology.',
     keyThemes: [
       'Oaths by natural phenomena affirming divine promise',
@@ -1675,7 +1675,7 @@ export const SURAHS: SurahData[] = [
     verses: 49,
     classification: 'Makki',
     period: 'Middle Makkan',
-    overview: 'At-Tur opens with six solemn oaths, the first being by Mount Sinai (Al-Tur)—the sacred mountain of Musa\'s revelation—attesting that divine punishment is inevitable. The surah then vividly describes the terrors of the Day of Judgement, the joys of Paradise, the fellowship of families in the Garden, and the ridicule that will meet those who mocked the believers in this world. It closes by commanding the Prophet to persevere in worship and to trust that Allah is sufficient against those who mock him.',
+    overview: 'At-Tur opens with six solemn oaths, the first being by Mount Sinai (Al-Tur) – the sacred mountain of Musa\'s revelation – attesting that divine punishment is inevitable. The surah then vividly describes the terrors of the Day of Judgement, the joys of Paradise, the fellowship of families in the Garden, and the ridicule that will meet those who mocked the believers in this world. It closes by commanding the Prophet to persevere in worship and to trust that Allah is sufficient against those who mock him.',
     asbabalNuzul: 'Revealed in the middle Makkan period. It is reported that \'Umar ibn al-Khattab heard a man reciting this surah and was so struck by its verses on the Day of Judgement that he remained ill for a month. The surah\'s powerful oaths and vivid descriptions of the afterlife served as a direct challenge to the Quraysh who dismissed warnings of punishment as mere stories.',
     keyThemes: [
       'Six solemn oaths attesting to divine punishment',
@@ -1688,14 +1688,14 @@ export const SURAHS: SurahData[] = [
       {
         reference: '52:21',
         arabic: 'وَٱلَّذِينَ ءَامَنُوا۟ وَٱتَّبَعَتْهُمْ ذُرِّيَّتُهُم بِإِيمَٰنٍ أَلْحَقْنَا بِهِمْ ذُرِّيَّتَهُمْ',
-        translation: 'And those who believed and whose descendants followed them in faith—We will join with them their descendants.',
+        translation: 'And those who believed and whose descendants followed them in faith – We will join with them their descendants.',
         context: 'A verse of immense consolation: that the children of believers will be joined with their parents in Paradise by divine grace, even if their own deeds alone would not have merited this elevated station.'
       },
       {
         reference: '52:35',
         arabic: 'أَمْ خُلِقُوا۟ مِنْ غَيْرِ شَىْءٍ أَمْ هُمُ ٱلْخَٰلِقُونَ',
         translation: 'Or were they created by nothing, or were they the creators [of themselves]?',
-        context: 'A celebrated rational argument for the existence of God: things cannot come from nothing, nor can they create themselves—so a Creator must exist. Reported to have struck Jubayr ibn Mut\'im so profoundly that he later became Muslim.'
+        context: 'A celebrated rational argument for the existence of God: things cannot come from nothing, nor can they create themselves – so a Creator must exist. Reported to have struck Jubayr ibn Mut\'im so profoundly that he later became Muslim.'
       }
     ]
   },
@@ -1707,8 +1707,8 @@ export const SURAHS: SurahData[] = [
     verses: 62,
     classification: 'Makki',
     period: 'Early Makkan',
-    overview: 'An-Najm opens with an oath by the star as it descends, immediately attesting to the truthfulness of the Prophet and the divine origin of his message. The surah provides the Quranic account of the Prophet\'s two great visions—one near the Lote Tree of the Utmost Boundary (sidr al-muntaha) and one at a descent described as being "at the distance of two bows\' lengths or nearer." It then decisively refutes the Quraysh\'s belief in the three goddesses al-Lat, al-\'Uzza, and Manat, and closes with a series of divine attributes affirming Allah as the only Lord of everything.',
-    asbabalNuzul: 'Among the earliest revelations in Makkah. It is reported that this was the first surah recited publicly by the Prophet before the Quraysh, and that when he reached the final verse commanding prostration, all present—believer and disbeliever alike—prostrated, so overwhelming was the impact of the recitation. The verses addressing the Gharaniq incident (53:19-23) categorically reject any compromise with polytheism.',
+    overview: 'An-Najm opens with an oath by the star as it descends, immediately attesting to the truthfulness of the Prophet and the divine origin of his message. The surah provides the Quranic account of the Prophet\'s two great visions – one near the Lote Tree of the Utmost Boundary (sidr al-muntaha) and one at a descent described as being "at the distance of two bows\' lengths or nearer." It then decisively refutes the Quraysh\'s belief in the three goddesses al-Lat, al-\'Uzza, and Manat, and closes with a series of divine attributes affirming Allah as the only Lord of everything.',
+    asbabalNuzul: 'Among the earliest revelations in Makkah. It is reported that this was the first surah recited publicly by the Prophet before the Quraysh, and that when he reached the final verse commanding prostration, all present – believer and disbeliever alike – prostrated, so overwhelming was the impact of the recitation. The verses addressing the Gharaniq incident (53:19-23) categorically reject any compromise with polytheism.',
     keyThemes: [
       'The divine origin of the Quran confirmed by the Prophet\'s visions',
       'The account of the Prophet\'s ascent and vision',
@@ -1721,7 +1721,7 @@ export const SURAHS: SurahData[] = [
         reference: '53:3',
         arabic: 'وَمَا يَنطِقُ عَنِ ٱلْهَوَىٰٓ',
         translation: 'Nor does he speak from [his own] inclination.',
-        context: 'A key verse establishing that the Prophet\'s utterances—including the Quran and the Sunnah—originate from divine inspiration rather than personal desire, foundational to Islamic epistemology.'
+        context: 'A key verse establishing that the Prophet\'s utterances – including the Quran and the Sunnah – originate from divine inspiration rather than personal desire, foundational to Islamic epistemology.'
       },
       {
         reference: '53:39',
@@ -1739,7 +1739,7 @@ export const SURAHS: SurahData[] = [
     verses: 55,
     classification: 'Makki',
     period: 'Middle Makkan',
-    overview: 'Al-Qamar opens with a reference to the splitting of the moon—one of the most discussed signs of the Prophet\'s prophethood—and the stubbornness of those who still dismissed it as magic. The surah then recounts in rapid succession the stories of Nuh, \'Ad, Thamud, Lut, and Pharaoh—each ending with the refrain "And We have certainly made the Quran easy for remembrance, so is there any who will remember?" The rhythmic parallel structure and the repeated refrain create a powerful cumulative effect of warning.',
+    overview: 'Al-Qamar opens with a reference to the splitting of the moon – one of the most discussed signs of the Prophet\'s prophethood – and the stubbornness of those who still dismissed it as magic. The surah then recounts in rapid succession the stories of Nuh, \'Ad, Thamud, Lut, and Pharaoh – each ending with the refrain "And We have certainly made the Quran easy for remembrance, so is there any who will remember?" The rhythmic parallel structure and the repeated refrain create a powerful cumulative effect of warning.',
     asbabalNuzul: 'Revealed in the middle Makkan period. The opening verses (54:1-2) are understood to refer to the actual splitting of the moon that the Prophet performed as a miracle when challenged by the Quraysh. The repeated refrain (54:17, 22, 32, 40) was revealed as an ongoing challenge to the Quraysh: despite the clarity and accessibility of the Quran, they continued to reject it.',
     keyThemes: [
       'The splitting of the moon as a prophetic sign',
@@ -1771,7 +1771,7 @@ export const SURAHS: SurahData[] = [
     verses: 78,
     classification: 'Madani',
     period: 'Madinan',
-    overview: 'Ar-Rahman is one of the most celebrated and beautiful surahs of the Quran, named after the divine attribute of boundless mercy. Its distinctive feature is the refrain "So which of the favours of your Lord will you deny?" which appears thirty-one times, challenging both mankind and jinn to acknowledge divine blessings. The surah surveys creation—from the rising of the sun and moon to the meeting of the two seas—and contrasts the terrible scenes of the Day of Judgement with the magnificent descriptions of two pairs of paradisiacal gardens awaiting the righteous.',
+    overview: 'Ar-Rahman is one of the most celebrated and beautiful surahs of the Quran, named after the divine attribute of boundless mercy. Its distinctive feature is the refrain "So which of the favours of your Lord will you deny?" which appears thirty-one times, challenging both mankind and jinn to acknowledge divine blessings. The surah surveys creation – from the rising of the sun and moon to the meeting of the two seas – and contrasts the terrible scenes of the Day of Judgement with the magnificent descriptions of two pairs of paradisiacal gardens awaiting the righteous.',
     asbabalNuzul: 'Scholars disagree on whether this is Makkan or Madinan; the majority view leans towards Medinan revelation though some scholars argue for a Makkan origin. It is reported that the Prophet recited this surah to the companions who were moved to respond to each refrain with "And none of Your favours do we deny, our Lord." A celebrated tradition states that the Prophet recited it to the jinn who responded appropriately to each refrain.',
     keyThemes: [
       'The divine attribute of boundless mercy as the surah\'s foundation',
@@ -1817,7 +1817,7 @@ export const SURAHS: SurahData[] = [
       {
         reference: '56:10',
         arabic: 'وَٱلسَّٰبِقُونَ ٱلسَّٰبِقُونَ',
-        translation: 'And the forerunners, the forerunners—',
+        translation: 'And the forerunners, the forerunners – ',
         context: 'The arresting introduction of the highest category of people in the hereafter, repeated for emphasis. The "forerunners" are understood as those who hastened to faith, good deeds, and closeness to Allah.'
       },
       {
@@ -1837,8 +1837,8 @@ export const SURAHS: SurahData[] = [
     verses: 29,
     classification: 'Madani',
     period: 'Madinan',
-    overview: 'Al-Hadid opens with a magnificent hymn of divine glorification—everything in the heavens and earth glorifies Allah. It was revealed to motivate the Madinan believers to spend generously in the path of Allah, and addresses those who are hesitant about financial sacrifice for the community\'s defence. The surah develops a profound philosophy of the hereafter: that worldly life is like a brief burst of vegetation that quickly withers, while the permanent life is the next. It also addresses the People of the Book regarding the nature of true faith and the continuity of prophethood, and mentions that Allah sent down iron containing great might and benefit for humanity.',
-    asbabalNuzul: 'Revealed in the Madinan period, primarily to address the believers\' reluctance to spend generously in the path of Allah during a period of military and financial pressure. The reference to iron (57:25) was understood both literally—as a material of war and civilisation—and metaphorically as the force that implements divine justice. The surah\'s critique of those who failed to spend before the conquest was directed at those who waited until after the major battles to commit their resources.',
+    overview: 'Al-Hadid opens with a magnificent hymn of divine glorification – everything in the heavens and earth glorifies Allah. It was revealed to motivate the Madinan believers to spend generously in the path of Allah, and addresses those who are hesitant about financial sacrifice for the community\'s defence. The surah develops a profound philosophy of the hereafter: that worldly life is like a brief burst of vegetation that quickly withers, while the permanent life is the next. It also addresses the People of the Book regarding the nature of true faith and the continuity of prophethood, and mentions that Allah sent down iron containing great might and benefit for humanity.',
+    asbabalNuzul: 'Revealed in the Madinan period, primarily to address the believers\' reluctance to spend generously in the path of Allah during a period of military and financial pressure. The reference to iron (57:25) was understood both literally – as a material of war and civilisation – and metaphorically as the force that implements divine justice. The surah\'s critique of those who failed to spend before the conquest was directed at those who waited until after the major battles to commit their resources.',
     keyThemes: [
       'Divine omniscience encompassing all of creation',
       'Call to spend generously in the path of Allah',
@@ -1851,7 +1851,7 @@ export const SURAHS: SurahData[] = [
         reference: '57:3',
         arabic: 'هُوَ ٱلْأَوَّلُ وَٱلْءَاخِرُ وَٱلظَّٰهِرُ وَٱلْبَاطِنُ وَهُوَ بِكُلِّ شَىْءٍ عَلِيمٌ',
         translation: 'He is the First and the Last, the Ascendant and the Intimate, and He is, of all things, Knowing.',
-        context: 'The verse of the four divine names—Al-Awwal, Al-Akhir, Al-Zahir, Al-Batin—beloved by scholars of Islamic theology for its comprehensive statement of divine transcendence and immanence.'
+        context: 'The verse of the four divine names – Al-Awwal, Al-Akhir, Al-Zahir, Al-Batin – beloved by scholars of Islamic theology for its comprehensive statement of divine transcendence and immanence.'
       },
       {
         reference: '57:20',
@@ -1869,7 +1869,7 @@ export const SURAHS: SurahData[] = [
     verses: 22,
     classification: 'Madani',
     period: 'Madinan',
-    overview: 'Al-Mujadila takes its name from the woman who pleaded with the Prophet about the pre-Islamic practice of zihar — a form of divorce by which a husband declared his wife to be as forbidden to him as his mother\'s back. The surah abolishes this unjust custom, mandates expiation for it, and then addresses the broader themes of the hypocrites\' secret counsel, the etiquette of gatherings, and the obligation to support Allah and His Messenger above all worldly ties.',
+    overview: 'Al-Mujadila takes its name from the woman who pleaded with the Prophet about the pre-Islamic practice of zihar  –  a form of divorce by which a husband declared his wife to be as forbidden to him as his mother\'s back. The surah abolishes this unjust custom, mandates expiation for it, and then addresses the broader themes of the hypocrites\' secret counsel, the etiquette of gatherings, and the obligation to support Allah and His Messenger above all worldly ties.',
     asbabalNuzul: 'The opening verses were revealed in response to Khawlah bint Tha\'labah, whose husband Aws ibn al-Samit pronounced zihar against her. She came to the Prophet distressed, and her complaint rose to Allah. The surah then reveals divine rulings on the expiation required for zihar. Later verses were revealed addressing the secret whisperings (najwa) of the hypocrites and Jews, which caused distress to the believers, and the proper conduct Muslims should observe in gatherings and consultations.',
     keyThemes: [
       'Abolition of the pre-Islamic zihar divorce and its expiation',
@@ -1889,7 +1889,7 @@ export const SURAHS: SurahData[] = [
         reference: '58:7',
         arabic: 'مَا يَكُونُ مِن نَّجْوَىٰ ثَلَاثَةٍ إِلَّا هُوَ رَابِعُهُمْ',
         translation: 'There is no private conversation of three except that He is the fourth of them.',
-        context: 'A foundational statement of Allah\'s omniscience — He is intimately aware of every secret counsel, instilling taqwa and guiding believers to transparency and integrity.'
+        context: 'A foundational statement of Allah\'s omniscience  –  He is intimately aware of every secret counsel, instilling taqwa and guiding believers to transparency and integrity.'
       }
     ]
   },
@@ -1915,7 +1915,7 @@ export const SURAHS: SurahData[] = [
         reference: '59:18',
         arabic: 'يَا أَيُّهَا الَّذِينَ آمَنُوا اتَّقُوا اللَّهَ وَلْتَنظُرْ نَفْسٌ مَّا قَدَّمَتْ لِغَدٍ',
         translation: 'O you who have believed, fear Allah. And let every soul look to what it has put forth for tomorrow.',
-        context: 'A foundational verse of moral accountability — every individual must audit their deeds in light of the Day of Judgement, making self-reckoning (muhasabah) a daily practice.'
+        context: 'A foundational verse of moral accountability  –  every individual must audit their deeds in light of the Day of Judgement, making self-reckoning (muhasabah) a daily practice.'
       },
       {
         reference: '59:22',
@@ -1934,7 +1934,7 @@ export const SURAHS: SurahData[] = [
     classification: 'Madani',
     period: 'Madinan',
     overview: 'Al-Mumtahanah was revealed around the conquest of Makkah and addresses the critical question of loyalty: believers must not take as intimate allies those who are enemies of Allah and His Messenger, even if they are family. It then establishes the procedure for examining Muslim women who migrate from enemy territory, outlines conditions for peaceful relations with non-hostile non-Muslims, and provides the model of Ibrahim\'s disavowal of his father\'s idolatry as a template for the community.',
-    asbabalNuzul: 'The opening verses were revealed when Hatib ibn Abi Balta\'ah sent a letter to the Quraysh in Makkah warning them of the imminent Muslim march — an act of apparent betrayal. The Prophet was informed by revelation. Hatib explained he had kinsmen in Makkah he wished to protect; the Prophet accepted his explanation due to his participation in Badr. Further verses were revealed addressing the status of women who emigrated from Makkah and the terms of peaceful co-existence with non-combatant non-Muslims.',
+    asbabalNuzul: 'The opening verses were revealed when Hatib ibn Abi Balta\'ah sent a letter to the Quraysh in Makkah warning them of the imminent Muslim march  –  an act of apparent betrayal. The Prophet was informed by revelation. Hatib explained he had kinsmen in Makkah he wished to protect; the Prophet accepted his explanation due to his participation in Badr. Further verses were revealed addressing the status of women who emigrated from Makkah and the terms of peaceful co-existence with non-combatant non-Muslims.',
     keyThemes: [
       'Prohibition of intimate alliance with enemies of the faith',
       'Ibrahim\'s model of disavowal from polytheism as the Muslim exemplar',
@@ -1952,7 +1952,7 @@ export const SURAHS: SurahData[] = [
       {
         reference: '60:8',
         arabic: 'لَّا يَنْهَاكُمُ اللَّهُ عَنِ الَّذِينَ لَمْ يُقَاتِلُوكُمْ فِي الدِّينِ',
-        translation: 'Allah does not forbid you from those who do not fight you because of religion and do not expel you from your homes — from being righteous toward them and acting justly toward them.',
+        translation: 'Allah does not forbid you from those who do not fight you because of religion and do not expel you from your homes  –  from being righteous toward them and acting justly toward them.',
         context: 'A foundational verse in Islamic ethics of inter-communal relations, establishing that justice and goodness toward peaceful non-Muslims is not merely permitted but mandated.'
       }
     ]
@@ -1965,7 +1965,7 @@ export const SURAHS: SurahData[] = [
     verses: 14,
     classification: 'Madani',
     period: 'Madinan',
-    overview: 'As-Saff calls the believers to align their words with their deeds, warns against the hypocrisy of promising what one does not fulfil, and presents the example of the Israelites\' rejection of Musa and then of \'Isa. The surah emphasises that \'Isa gave glad tidings of a coming prophet named Ahmad (another name of Muhammad), and culminates in a powerful call to strive in Allah\'s cause with wealth and life — the trade that guarantees salvation.',
+    overview: 'As-Saff calls the believers to align their words with their deeds, warns against the hypocrisy of promising what one does not fulfil, and presents the example of the Israelites\' rejection of Musa and then of \'Isa. The surah emphasises that \'Isa gave glad tidings of a coming prophet named Ahmad (another name of Muhammad), and culminates in a powerful call to strive in Allah\'s cause with wealth and life  –  the trade that guarantees salvation.',
     asbabalNuzul: 'Revealed to address the gap between the believers\' verbal commitment to jihad and their actual resolve when the call came. Some companions had asked the Prophet what deeds were most beloved to Allah, and when the answer involved striving in His cause, some fell short of their promise. The reference to \'Isa\'s announcement of Ahmad was also revealed to confirm the authenticity of the Prophet\'s mission against Jewish and Christian claims.',
     keyThemes: [
       'The obligation to match word with deed',
@@ -1985,7 +1985,7 @@ export const SURAHS: SurahData[] = [
         reference: '61:10-11',
         arabic: 'يَا أَيُّهَا الَّذِينَ آمَنُوا هَلْ أَدُلُّكُمْ عَلَىٰ تِجَارَةٍ تُنجِيكُم مِّنْ عَذَابٍ أَلِيمٍ',
         translation: 'O you who have believed, shall I guide you to a transaction that will save you from a painful punishment?',
-        context: 'The divine offer of a spiritual transaction — belief and striving with wealth and life — framed as the most profitable of all commerce, leading to forgiveness and eternal gardens.'
+        context: 'The divine offer of a spiritual transaction  –  belief and striving with wealth and life  –  framed as the most profitable of all commerce, leading to forgiveness and eternal gardens.'
       }
     ]
   },
@@ -1997,7 +1997,7 @@ export const SURAHS: SurahData[] = [
     verses: 11,
     classification: 'Madani',
     period: 'Madinan',
-    overview: 'Al-Jumuah opens by affirming Allah\'s sending of an unlettered prophet to the Arabs — a mercy to those who had no previous scripture — and criticises those among the Jews who were entrusted with the Torah yet did not act by it, comparing them to a donkey carrying books. The surah then legislates the obligation of the Friday congregational prayer and prohibits trade and worldly activity during the call to prayer, affirming that the prayer takes precedence over commerce.',
+    overview: 'Al-Jumuah opens by affirming Allah\'s sending of an unlettered prophet to the Arabs  –  a mercy to those who had no previous scripture  –  and criticises those among the Jews who were entrusted with the Torah yet did not act by it, comparing them to a donkey carrying books. The surah then legislates the obligation of the Friday congregational prayer and prohibits trade and worldly activity during the call to prayer, affirming that the prayer takes precedence over commerce.',
     asbabalNuzul: 'The final verses were revealed when a trading caravan arrived in Madinah during a Friday sermon and the congregation largely dispersed to meet it, leaving only a handful with the Prophet. Allah responded with a mild rebuke and a clarification of priorities. The opening verses addressing the unlettered prophet were part of the original revelation establishing the universal mission of Muhammad.',
     keyThemes: [
       'The mission of the Prophet to the unlettered Arabs as divine grace',
@@ -2017,7 +2017,7 @@ export const SURAHS: SurahData[] = [
         reference: '62:2',
         arabic: 'هُوَ الَّذِي بَعَثَ فِي الْأُمِّيِّينَ رَسُولًا مِّنْهُمْ',
         translation: 'It is He who has sent among the unlettered a Messenger from themselves.',
-        context: 'Affirming the miraculous nature of the Prophet\'s mission — an unlettered man bringing a profound scripture to a people without a revealed book, as fulfilment of Ibrahim\'s prayer.'
+        context: 'Affirming the miraculous nature of the Prophet\'s mission  –  an unlettered man bringing a profound scripture to a people without a revealed book, as fulfilment of Ibrahim\'s prayer.'
       }
     ]
   },
@@ -2029,8 +2029,8 @@ export const SURAHS: SurahData[] = [
     verses: 11,
     classification: 'Madani',
     period: 'Madinan',
-    overview: 'Al-Munafiqun exposes the characteristics and speech of the hypocrites in Madinah, most notably their false oath-taking and their statement — attributed to Ibn Ubayy ibn Salul — that when they returned to Madinah, "the more honourable would expel the more humble," meaning the hypocrites would drive out the Muslims. The surah strips away the outward elegance of their speech to reveal hollow hearts, and concludes by urging the believers not to let wealth and children distract them from the remembrance of Allah.',
-    asbabalNuzul: 'Primarily revealed after the expedition of Banu Mustaliq (5 or 6 AH) during which Abdullah ibn Ubayy made his infamous statement disparaging the Muhajirun. His son — also named Abdullah — a sincere believer, came to the Prophet and offered to kill his own father to spare the Prophet the task. The Prophet declined. The surah confirmed the revelation of these hypocrites\' words and reinforced the distinction between outward profession and inward reality.',
+    overview: 'Al-Munafiqun exposes the characteristics and speech of the hypocrites in Madinah, most notably their false oath-taking and their statement  –  attributed to Ibn Ubayy ibn Salul  –  that when they returned to Madinah, "the more honourable would expel the more humble," meaning the hypocrites would drive out the Muslims. The surah strips away the outward elegance of their speech to reveal hollow hearts, and concludes by urging the believers not to let wealth and children distract them from the remembrance of Allah.',
+    asbabalNuzul: 'Primarily revealed after the expedition of Banu Mustaliq (5 or 6 AH) during which Abdullah ibn Ubayy made his infamous statement disparaging the Muhajirun. His son  –  also named Abdullah  –  a sincere believer, came to the Prophet and offered to kill his own father to spare the Prophet the task. The Prophet declined. The surah confirmed the revelation of these hypocrites\' words and reinforced the distinction between outward profession and inward reality.',
     keyThemes: [
       'The defining traits of hypocrisy: false oaths and deception',
       'The hardened, sealed hearts of confirmed hypocrites',
@@ -2043,13 +2043,13 @@ export const SURAHS: SurahData[] = [
         reference: '63:1',
         arabic: 'إِذَا جَاءَكَ الْمُنَافِقُونَ قَالُوا نَشْهَدُ إِنَّكَ لَرَسُولُ اللَّهِ',
         translation: 'When the hypocrites come to you, they say, "We testify that you are the Messenger of Allah."',
-        context: 'The surah opens by immediately contrasting their verbal testimony with divine knowledge of their falseness — establishing that verbal profession without sincerity is meaningless before Allah.'
+        context: 'The surah opens by immediately contrasting their verbal testimony with divine knowledge of their falseness  –  establishing that verbal profession without sincerity is meaningless before Allah.'
       },
       {
         reference: '63:9',
         arabic: 'يَا أَيُّهَا الَّذِينَ آمَنُوا لَا تُلْهِكُمْ أَمْوَالُكُمْ وَلَا أَوْلَادُكُمْ عَن ذِكْرِ اللَّهِ',
         translation: 'O you who have believed, let not your wealth and your children divert you from remembrance of Allah.',
-        context: 'A universal warning addressed to all believers, not just hypocrites — the love of wealth and children can gradually displace divine remembrance, producing spiritual blindness without outright rejection of faith.'
+        context: 'A universal warning addressed to all believers, not just hypocrites  –  the love of wealth and children can gradually displace divine remembrance, producing spiritual blindness without outright rejection of faith.'
       }
     ]
   },
@@ -2061,8 +2061,8 @@ export const SURAHS: SurahData[] = [
     verses: 18,
     classification: 'Madani',
     period: 'Madinan',
-    overview: 'At-Taghabun takes its name from the Day of Judgement, which is described as the Day of Mutual Disillusion — when every person will fully grasp what they gained and lost. The surah begins by glorifying Allah and affirming His creative sovereignty, addresses the reality of unbelief and belief, and then speaks directly to the trials that believers face from within their own households — spouses and children who may be their enemies — while counselling forgiveness, charity, and patient trust in Allah.',
-    asbabalNuzul: 'Revealed in the Madinan period to address the community\'s ongoing challenges with sincere commitment. Several verses were revealed specifically about those whose families — wives or children — dissuaded them from emigrating to Madinah. The verse "your wives and children may be enemies to you" startled some companions, and the subsequent call to forgiveness and generosity assured them that family loyalty need not become spiritual compromise.',
+    overview: 'At-Taghabun takes its name from the Day of Judgement, which is described as the Day of Mutual Disillusion  –  when every person will fully grasp what they gained and lost. The surah begins by glorifying Allah and affirming His creative sovereignty, addresses the reality of unbelief and belief, and then speaks directly to the trials that believers face from within their own households  –  spouses and children who may be their enemies  –  while counselling forgiveness, charity, and patient trust in Allah.',
+    asbabalNuzul: 'Revealed in the Madinan period to address the community\'s ongoing challenges with sincere commitment. Several verses were revealed specifically about those whose families  –  wives or children  –  dissuaded them from emigrating to Madinah. The verse "your wives and children may be enemies to you" startled some companions, and the subsequent call to forgiveness and generosity assured them that family loyalty need not become spiritual compromise.',
     keyThemes: [
       'Allah\'s sovereignty, creation, and omniscience',
       'The Day of Mutual Disillusion as the ultimate reckoning',
@@ -2074,14 +2074,14 @@ export const SURAHS: SurahData[] = [
       {
         reference: '64:9',
         arabic: 'يَوْمَ يَجْمَعُكُمْ لِيَوْمِ الْجَمْعِ ذَٰلِكَ يَوْمُ التَّغَابُنِ',
-        translation: 'The Day He will assemble you for the Day of Assembly — that is the Day of Mutual Disillusion.',
-        context: 'The central image of the surah — all humanity assembled and the full extent of their choices revealed, producing a comprehensive reckoning of gains and losses that no worldly audit can match.'
+        translation: 'The Day He will assemble you for the Day of Assembly  –  that is the Day of Mutual Disillusion.',
+        context: 'The central image of the surah  –  all humanity assembled and the full extent of their choices revealed, producing a comprehensive reckoning of gains and losses that no worldly audit can match.'
       },
       {
         reference: '64:11',
         arabic: 'مَا أَصَابَ مِن مُّصِيبَةٍ إِلَّا بِإِذْنِ اللَّهِ',
-        translation: 'No disaster strikes except by permission of Allah. And whoever believes in Allah — He will guide his heart.',
-        context: 'A profound consolation — every trial occurs by divine permission, and the one who responds with faith finds that Allah guides the heart through the loss rather than leaving it in confusion.'
+        translation: 'No disaster strikes except by permission of Allah. And whoever believes in Allah  –  He will guide his heart.',
+        context: 'A profound consolation  –  every trial occurs by divine permission, and the one who responds with faith finds that Allah guides the heart through the loss rather than leaving it in confusion.'
       }
     ]
   },
@@ -2094,7 +2094,7 @@ export const SURAHS: SurahData[] = [
     classification: 'Madani',
     period: 'Madinan',
     overview: 'At-Talaq provides detailed legislation on the Islamic procedure for divorce, including the obligation to observe the prescribed waiting period (\'iddah), the rights of divorced women regarding housing and maintenance, and the rulings on breastfeeding after divorce. Running through these practical rulings is a recurring call to taqwa and reliance on Allah, framing family law within a wider moral consciousness. The surah concludes with a magnificent vision of the seven heavens and the all-encompassing divine command.',
-    asbabalNuzul: 'Several verses were revealed in response to Abdullah ibn Umar\'s divorce of his wife during her menstrual period — which the Prophet declared invalid and commanded him to take her back and wait for the lawful period. This incident prompted the revelation of the detailed divorce regulations. Other verses addressed the broader community\'s need for clear guidance on marriage dissolution, which was a source of social conflict in early Madinah.',
+    asbabalNuzul: 'Several verses were revealed in response to Abdullah ibn Umar\'s divorce of his wife during her menstrual period  –  which the Prophet declared invalid and commanded him to take her back and wait for the lawful period. This incident prompted the revelation of the detailed divorce regulations. Other verses addressed the broader community\'s need for clear guidance on marriage dissolution, which was a source of social conflict in early Madinah.',
     keyThemes: [
       'Prescribed waiting periods and their legal wisdom',
       'Rights of divorced women: housing, maintenance, and breastfeeding compensation',
@@ -2106,14 +2106,14 @@ export const SURAHS: SurahData[] = [
       {
         reference: '65:2-3',
         arabic: 'وَمَن يَتَّقِ اللَّهَ يَجْعَل لَّهُ مَخْرَجًا ۝ وَيَرْزُقْهُ مِنْ حَيْثُ لَا يَحْتَسِبُ',
-        translation: 'And whoever fears Allah — He will make for him a way out. And will provide for him from where he does not expect.',
-        context: 'One of the most beloved verses in the Quran — embedded in family law legislation, it universalises the promise that taqwa always opens a path forward and that divine provision comes from unexpected sources.'
+        translation: 'And whoever fears Allah  –  He will make for him a way out. And will provide for him from where he does not expect.',
+        context: 'One of the most beloved verses in the Quran  –  embedded in family law legislation, it universalises the promise that taqwa always opens a path forward and that divine provision comes from unexpected sources.'
       },
       {
         reference: '65:3',
         arabic: 'وَمَن يَتَوَكَّلْ عَلَى اللَّهِ فَهُوَ حَسْبُهُ',
-        translation: 'And whoever relies upon Allah — then He is sufficient for him.',
-        context: 'A foundational statement of tawakkul — complete reliance on Allah as the ultimate sufficiency, whether in the crisis of divorce or any other life difficulty.'
+        translation: 'And whoever relies upon Allah  –  then He is sufficient for him.',
+        context: 'A foundational statement of tawakkul  –  complete reliance on Allah as the ultimate sufficiency, whether in the crisis of divorce or any other life difficulty.'
       }
     ]
   },
@@ -2125,8 +2125,8 @@ export const SURAHS: SurahData[] = [
     verses: 12,
     classification: 'Madani',
     period: 'Madinan',
-    overview: 'At-Tahrim opens with a gentle rebuke of the Prophet for prohibiting something lawful to himself — generally understood to relate to honey or a particular matter with one of his wives — to please his wives, and then reveals that two of his wives disclosed a secret. The surah calls for repentance and commands the Prophet and believers to guard themselves and their families from the Fire. It concludes with four examples of women as moral paradigms: the wives of Nuh and Lut (warning), and Maryam and the wife of Pharaoh (models of faith).',
-    asbabalNuzul: 'The opening was revealed in response to an incident involving the Prophet and his wives — either his vow to avoid honey at Hafsah\'s request or a more complex matter narrated differently by scholars. Two wives — identified in most narrations as Hafsah and A\'ishah — were involved in a private matter that became known. The concluding verses about exemplary women were revealed to establish that righteousness is individual and not inherited from one\'s spouse, whether pious or wicked.',
+    overview: 'At-Tahrim opens with a gentle rebuke of the Prophet for prohibiting something lawful to himself  –  generally understood to relate to honey or a particular matter with one of his wives  –  to please his wives, and then reveals that two of his wives disclosed a secret. The surah calls for repentance and commands the Prophet and believers to guard themselves and their families from the Fire. It concludes with four examples of women as moral paradigms: the wives of Nuh and Lut (warning), and Maryam and the wife of Pharaoh (models of faith).',
+    asbabalNuzul: 'The opening was revealed in response to an incident involving the Prophet and his wives  –  either his vow to avoid honey at Hafsah\'s request or a more complex matter narrated differently by scholars. Two wives  –  identified in most narrations as Hafsah and A\'ishah  –  were involved in a private matter that became known. The concluding verses about exemplary women were revealed to establish that righteousness is individual and not inherited from one\'s spouse, whether pious or wicked.',
     keyThemes: [
       'The obligation not to forbid what Allah has made lawful',
       'Sincerity and the expiation of broken oaths',
@@ -2139,13 +2139,13 @@ export const SURAHS: SurahData[] = [
         reference: '66:6',
         arabic: 'يَا أَيُّهَا الَّذِينَ آمَنُوا قُوا أَنفُسَكُمْ وَأَهْلِيكُمْ نَارًا',
         translation: 'O you who have believed, protect yourselves and your families from a Fire.',
-        context: 'The Quranic basis for the Islamic concept of family religious education — parents bear a spiritual responsibility not merely for their own souls but for the spiritual formation of those in their care.'
+        context: 'The Quranic basis for the Islamic concept of family religious education  –  parents bear a spiritual responsibility not merely for their own souls but for the spiritual formation of those in their care.'
       },
       {
         reference: '66:11',
         arabic: 'وَضَرَبَ اللَّهُ مَثَلًا لِّلَّذِينَ آمَنُوا امْرَأَتَ فِرْعَوْنَ',
         translation: 'And Allah presents an example of those who believed: the wife of Pharaoh.',
-        context: 'Asiyah bint Muzahim, wife of the greatest tyrant in the Quran, is upheld as a supreme model of faith — demonstrating that proximity to evil does not prevent salvation, only one\'s own choices matter.'
+        context: 'Asiyah bint Muzahim, wife of the greatest tyrant in the Quran, is upheld as a supreme model of faith  –  demonstrating that proximity to evil does not prevent salvation, only one\'s own choices matter.'
       }
     ]
   },
@@ -2171,16 +2171,16 @@ export const SURAHS: SurahData[] = [
         reference: '67:1-2',
         arabic: 'تَبَارَكَ الَّذِي بِيَدِهِ الْمُلْكُ وَهُوَ عَلَىٰ كُلِّ شَيْءٍ قَدِيرٌ ۝ الَّذِي خَلَقَ الْمَوْتَ وَالْحَيَاةَ لِيَبْلُوَكُمْ أَيُّكُمْ أَحْسَنُ عَمَلًا',
         translation: 'Blessed is He in whose hand is dominion, and He is over all things competent. He who created death and life to test you as to which of you is best in deed.',
-        context: 'The opening verses frame the entire human experience as a test of deeds — life and death are both created for the purpose of examining moral excellence, not merely biological existence.'
+        context: 'The opening verses frame the entire human experience as a test of deeds  –  life and death are both created for the purpose of examining moral excellence, not merely biological existence.'
       },
       {
         reference: '67:30',
         arabic: 'قُلْ أَرَأَيْتُمْ إِنْ أَصْبَحَ مَاؤُكُمْ غَوْرًا فَمَن يَأْتِيكُم بِمَاءٍ مَّعِينٍ',
-        translation: 'Say: Have you considered — if your water was to become sunken into the earth, who then could bring you flowing water?',
-        context: 'The surah\'s closing challenge — a single rhetorical question about water demolishes any claim to human self-sufficiency and redirects all gratitude to the one Source of sustenance.'
+        translation: 'Say: Have you considered  –  if your water was to become sunken into the earth, who then could bring you flowing water?',
+        context: 'The surah\'s closing challenge  –  a single rhetorical question about water demolishes any claim to human self-sufficiency and redirects all gratitude to the one Source of sustenance.'
       }
     ],
-    virtues: 'The Prophet (peace be upon him) said: "There is a surah in the Quran of thirty verses that interceded for a man until he was forgiven — it is \'Blessed is He in Whose Hand is the dominion.\'" (Reported by Abu Dawud and at-Tirmidhi)'
+    virtues: 'The Prophet (peace be upon him) said: "There is a surah in the Quran of thirty verses that interceded for a man until he was forgiven  –  it is \'Blessed is He in Whose Hand is the dominion.\'" (Reported by Abu Dawud and at-Tirmidhi)'
   },
   {
     number: 68,
@@ -2190,7 +2190,7 @@ export const SURAHS: SurahData[] = [
     verses: 52,
     classification: 'Makki',
     period: 'Early Makkan',
-    overview: 'Al-Qalam is among the very earliest Quranic revelations, beginning with the mysterious letter Nun and the oath by the pen. It directly defends the Prophet\'s sanity and moral character against Makkan accusations of madness, promises him an immense reward, and warns those who oppose him. The surah then narrates the parable of the owners of a garden who resolved to harvest their crops without paying the poor\'s share, only to find the garden destroyed overnight — a cautionary tale against ingratitude and exclusion of the needy.',
+    overview: 'Al-Qalam is among the very earliest Quranic revelations, beginning with the mysterious letter Nun and the oath by the pen. It directly defends the Prophet\'s sanity and moral character against Makkan accusations of madness, promises him an immense reward, and warns those who oppose him. The surah then narrates the parable of the owners of a garden who resolved to harvest their crops without paying the poor\'s share, only to find the garden destroyed overnight  –  a cautionary tale against ingratitude and exclusion of the needy.',
     asbabalNuzul: 'Among the first five revelations, revealed immediately after Surah Al-\'Alaq when the Makkan leaders began their campaign of mockery and slander against the Prophet, calling him majnun (a madman). The divine response reassures the Prophet and turns the accusation back onto his accusers by questioning who among them truly has moral standing. The parable of the garden was revealed as a warning to the Makkan elite who controlled wealth and excluded the poor.',
     keyThemes: [
       'The dignity and honour of the Prophet against slander',
@@ -2203,14 +2203,14 @@ export const SURAHS: SurahData[] = [
       {
         reference: '68:1-2',
         arabic: 'نۚ وَالْقَلَمِ وَمَا يَسْطُرُونَ ۝ مَا أَنتَ بِنِعْمَةِ رَبِّكَ بِمَجْنُونٍ',
-        translation: 'Nun. By the pen and what they inscribe — you are not, by the favour of your Lord, a madman.',
-        context: 'Among the earliest revelations — Allah swears by the pen itself to refute the charge of madness levelled at the Prophet, elevating literacy and reason as divine witnesses to his sanity.'
+        translation: 'Nun. By the pen and what they inscribe  –  you are not, by the favour of your Lord, a madman.',
+        context: 'Among the earliest revelations  –  Allah swears by the pen itself to refute the charge of madness levelled at the Prophet, elevating literacy and reason as divine witnesses to his sanity.'
       },
       {
         reference: '68:4',
         arabic: 'وَإِنَّكَ لَعَلَىٰ خُلُقٍ عَظِيمٍ',
         translation: 'And indeed, you are of a great moral character.',
-        context: 'The divine testimonial to the Prophet\'s character — A\'ishah narrated that his character was the Quran itself, and this verse is the scriptural foundation for the Islamic understanding of prophetic moral exemplarity.'
+        context: 'The divine testimonial to the Prophet\'s character  –  A\'ishah narrated that his character was the Quran itself, and this verse is the scriptural foundation for the Islamic understanding of prophetic moral exemplarity.'
       }
     ]
   },
@@ -2222,7 +2222,7 @@ export const SURAHS: SurahData[] = [
     verses: 52,
     classification: 'Makki',
     period: 'Makkan',
-    overview: 'Al-Haqqah opens with a triple rhetorical question about the Inevitable Reality (the Day of Judgement) before narrating the destruction of \'Ad, Thamud, Pharaoh, and the people of Lut as historical proof that divine punishment is real. It then describes the terrors and rewards of the Day itself in vivid detail — the trumpet blast, the record books, the scales, the righteous in gardens, the condemned in chains. The surah concludes by defending the Quran as genuine divine revelation and warning of the consequences of rejecting it.',
+    overview: 'Al-Haqqah opens with a triple rhetorical question about the Inevitable Reality (the Day of Judgement) before narrating the destruction of \'Ad, Thamud, Pharaoh, and the people of Lut as historical proof that divine punishment is real. It then describes the terrors and rewards of the Day itself in vivid detail  –  the trumpet blast, the record books, the scales, the righteous in gardens, the condemned in chains. The surah concludes by defending the Quran as genuine divine revelation and warning of the consequences of rejecting it.',
     asbabalNuzul: 'Revealed in the Makkan period as part of the Quran\'s sustained effort to make the reality of the Day of Judgement vivid and inescapable for an audience that treated it with contempt. The historical examples of destroyed nations were particularly resonant for Arabs who knew the ruins of \'Ad and Thamud from their trade routes.',
     keyThemes: [
       'The Day of Judgement as the inevitable, undeniable reality',
@@ -2235,14 +2235,14 @@ export const SURAHS: SurahData[] = [
       {
         reference: '69:1-3',
         arabic: 'الْحَاقَّةُ ۝ مَا الْحَاقَّةُ ۝ وَمَا أَدْرَاكَ مَا الْحَاقَّةُ',
-        translation: 'The Inevitable Reality — what is the Inevitable Reality? And what would make you know what the Inevitable Reality is?',
-        context: 'The triple rhetorical structure signals the magnitude of what is being described — the Day of Judgement is so consequential that even the question of what it is carries dramatic weight.'
+        translation: 'The Inevitable Reality  –  what is the Inevitable Reality? And what would make you know what the Inevitable Reality is?',
+        context: 'The triple rhetorical structure signals the magnitude of what is being described  –  the Day of Judgement is so consequential that even the question of what it is carries dramatic weight.'
       },
       {
         reference: '69:19',
         arabic: 'فَأَمَّا مَنْ أُوتِيَ كِتَابَهُ بِيَمِينِهِ فَيَقُولُ هَاؤُمُ اقْرَءُوا كِتَابِيَهْ',
         translation: 'So as for he who is given his record in his right hand, he will say, "Here, read my record!"',
-        context: 'The joyful exclamation of the saved soul, whose eagerness to share his record of deeds contrasts sharply with the shame of the condemned — capturing the essence of the Day in a single human moment.'
+        context: 'The joyful exclamation of the saved soul, whose eagerness to share his record of deeds contrasts sharply with the shame of the condemned  –  capturing the essence of the Day in a single human moment.'
       }
     ]
   },
@@ -2254,7 +2254,7 @@ export const SURAHS: SurahData[] = [
     verses: 44,
     classification: 'Makki',
     period: 'Makkan',
-    overview: 'Al-Maarij opens with an account of a questioner who demanded the punishment he was warned about, and describes the ascent of angels and the Spirit to Allah in a Day whose measure is fifty thousand years. The surah then portrays the deeply human traits of anxiety, miserliness, and panic — inherent in the human condition — and how prayer and trust in Allah transform them. The believers who guard their prayers, give charity, and honour their trusts are contrasted with those who race toward the disbelievers in the Hereafter.',
+    overview: 'Al-Maarij opens with an account of a questioner who demanded the punishment he was warned about, and describes the ascent of angels and the Spirit to Allah in a Day whose measure is fifty thousand years. The surah then portrays the deeply human traits of anxiety, miserliness, and panic  –  inherent in the human condition  –  and how prayer and trust in Allah transform them. The believers who guard their prayers, give charity, and honour their trusts are contrasted with those who race toward the disbelievers in the Hereafter.',
     asbabalNuzul: 'The opening verses were revealed in response to al-Nadr ibn al-Harith or another Makkan leader who mockingly demanded the punishment be sent down if the Quran was true. The surah affirms that divine punishment has its own timing and the Day of Reckoning is certain. The central section on human psychological traits was revealed to describe the universal human condition and the role of faith in elevating it.',
     keyThemes: [
       'The certainty of divine punishment despite its seeming delay',
@@ -2267,13 +2267,13 @@ export const SURAHS: SurahData[] = [
       {
         reference: '70:19-21',
         arabic: 'إِنَّ الْإِنسَانَ خُلِقَ هَلُوعًا ۝ إِذَا مَسَّهُ الشَّرُّ جَزُوعًا ۝ وَإِذَا مَسَّهُ الْخَيْرُ مَنُوعًا',
-        translation: 'Indeed, mankind was created anxious — when adversity touches him, impatient, and when good touches him, withholding.',
-        context: 'A profound psychological observation on the human condition — anxiety, impatience under hardship, and miserliness in prosperity are presented as innate tendencies that faith disciplines and transforms.'
+        translation: 'Indeed, mankind was created anxious  –  when adversity touches him, impatient, and when good touches him, withholding.',
+        context: 'A profound psychological observation on the human condition  –  anxiety, impatience under hardship, and miserliness in prosperity are presented as innate tendencies that faith disciplines and transforms.'
       },
       {
         reference: '70:22-23',
         arabic: 'إِلَّا الْمُصَلِّينَ ۝ الَّذِينَ هُمْ عَلَىٰ صَلَاتِهِمْ دَائِمُونَ',
-        translation: 'Except the observers of prayer — those who are constant in their prayer.',
+        translation: 'Except the observers of prayer  –  those who are constant in their prayer.',
         context: 'The exception to the human condition: those who maintain prayer consistently are liberated from the cycle of anxiety and miserliness, illustrating prayer as the central discipline of the spiritual life.'
       }
     ]
@@ -2286,8 +2286,8 @@ export const SURAHS: SurahData[] = [
     verses: 28,
     classification: 'Makki',
     period: 'Makkan',
-    overview: 'Surah Nuh narrates the entire prophetic mission of Nuh in his own words, as he reports to Allah the nine hundred and fifty years of his call, his methods — public and private, day and night — and the stubborn resistance of his people. He details their obstinate refusal and their leaders\' manipulation of the people through their idols. Finally, Nuh supplicates for the destruction of the disbelievers and the forgiveness of the believers. The surah is a sustained meditation on prophetic patience, divine justice, and the ecology of faith.',
-    asbabalNuzul: 'Revealed in the Makkan period as a consolation to the Prophet Muhammad, who faced sustained rejection from the Quraysh after years of preaching. Nuh\'s story — the longest single-figure narrative in Makkan suwar — was revealed to demonstrate that the pattern of rejection is ancient, that patient perseverance is the prophetic model, and that divine support ultimately vindicates the messenger.',
+    overview: 'Surah Nuh narrates the entire prophetic mission of Nuh in his own words, as he reports to Allah the nine hundred and fifty years of his call, his methods  –  public and private, day and night  –  and the stubborn resistance of his people. He details their obstinate refusal and their leaders\' manipulation of the people through their idols. Finally, Nuh supplicates for the destruction of the disbelievers and the forgiveness of the believers. The surah is a sustained meditation on prophetic patience, divine justice, and the ecology of faith.',
+    asbabalNuzul: 'Revealed in the Makkan period as a consolation to the Prophet Muhammad, who faced sustained rejection from the Quraysh after years of preaching. Nuh\'s story  –  the longest single-figure narrative in Makkan suwar  –  was revealed to demonstrate that the pattern of rejection is ancient, that patient perseverance is the prophetic model, and that divine support ultimately vindicates the messenger.',
     keyThemes: [
       'The patient, multi-method prophetic call across nine and a half centuries',
       'The stubbornness and psychological manipulation of rejectors',
@@ -2299,14 +2299,14 @@ export const SURAHS: SurahData[] = [
       {
         reference: '71:10-12',
         arabic: 'فَقُلْتُ اسْتَغْفِرُوا رَبَّكُمْ إِنَّهُ كَانَ غَفَّارًا ۝ يُرْسِلِ السَّمَاءَ عَلَيْكُم مِّدْرَارًا',
-        translation: 'I said: Ask forgiveness of your Lord — He is indeed Forgiving. He will send the sky upon you in showers and give you increase in wealth and children.',
-        context: 'Nuh\'s call links repentance to material and ecological blessing — a scriptural basis for the Islamic understanding that divine forgiveness has worldly as well as spiritual consequences.'
+        translation: 'I said: Ask forgiveness of your Lord  –  He is indeed Forgiving. He will send the sky upon you in showers and give you increase in wealth and children.',
+        context: 'Nuh\'s call links repentance to material and ecological blessing  –  a scriptural basis for the Islamic understanding that divine forgiveness has worldly as well as spiritual consequences.'
       },
       {
         reference: '71:28',
         arabic: 'رَّبِّ اغْفِرْ لِي وَلِوَالِدَيَّ وَلِمَن دَخَلَ بَيْتِيَ مُؤْمِنًا وَلِلْمُؤْمِنِينَ وَالْمُؤْمِنَاتِ',
         translation: 'My Lord, forgive me and my parents and whoever enters my house as a believer and the believing men and believing women.',
-        context: 'Nuh\'s closing supplication — after centuries of rejection he prays not for himself alone but for all believers across time, modelling the expansive compassion of the prophetic heart.'
+        context: 'Nuh\'s closing supplication  –  after centuries of rejection he prays not for himself alone but for all believers across time, modelling the expansive compassion of the prophetic heart.'
       }
     ]
   },
@@ -2332,13 +2332,13 @@ export const SURAHS: SurahData[] = [
         reference: '72:1-2',
         arabic: 'قُلْ أُوحِيَ إِلَيَّ أَنَّهُ اسْتَمَعَ نَفَرٌ مِّنَ الْجِنِّ فَقَالُوا إِنَّا سَمِعْنَا قُرْآنًا عَجَبًا ۝ يَهْدِي إِلَى الرُّشْدِ فَآمَنَّا بِهِ',
         translation: 'Say: It has been revealed to me that a group of jinn listened and said: Indeed we have heard a wondrous Quran. It guides to right conduct, and we have believed in it.',
-        context: 'The jinn\'s spontaneous recognition of the Quran\'s wonder and guidance — without the benefit of seeing miracles or meeting the Prophet — illustrates the Quran\'s innate power to convince pure hearts.'
+        context: 'The jinn\'s spontaneous recognition of the Quran\'s wonder and guidance  –  without the benefit of seeing miracles or meeting the Prophet  –  illustrates the Quran\'s innate power to convince pure hearts.'
       },
       {
         reference: '72:26',
         arabic: 'عَالِمُ الْغَيْبِ فَلَا يُظْهِرُ عَلَىٰ غَيْبِهِ أَحَدًا',
         translation: 'He is the Knower of the unseen, and He does not disclose His knowledge of the unseen to anyone.',
-        context: 'A definitive statement on the monopoly of divine knowledge — the unseen belongs exclusively to Allah, closing any claim to occult knowledge by jinn, soothsayers, or any other being.'
+        context: 'A definitive statement on the monopoly of divine knowledge  –  the unseen belongs exclusively to Allah, closing any claim to occult knowledge by jinn, soothsayers, or any other being.'
       }
     ]
   },
@@ -2350,11 +2350,11 @@ export const SURAHS: SurahData[] = [
     verses: 20,
     classification: 'Makki',
     period: 'Early Makkan',
-    overview: 'Al-Muzzammil addresses the Prophet wrapped in his garments — one of the earliest images of prophetic life — and commands him to rise for the night prayer, recite the Quran with measured recitation (tartil), and bear patiently with the opposition of the Makkans. It describes the heavy word of revelation and the spiritual power of night prayer to prepare the Prophet for his mission. The closing verse moderates the night prayer obligation for the community, acknowledging human limitation and the demands of daily life.',
-    asbabalNuzul: 'Among the earliest revelations. The Prophet had received the first revelation in the cave and returned trembling to Khadijah. The surah was revealed as the follow-up charge — the Prophet must now prepare himself through the discipline of night prayer for the immense task ahead. The final verse, which moderates the obligatory night prayer to a voluntary one, was revealed much later in Madinah after the companions found the extended night prayer burdensome.',
+    overview: 'Al-Muzzammil addresses the Prophet wrapped in his garments  –  one of the earliest images of prophetic life  –  and commands him to rise for the night prayer, recite the Quran with measured recitation (tartil), and bear patiently with the opposition of the Makkans. It describes the heavy word of revelation and the spiritual power of night prayer to prepare the Prophet for his mission. The closing verse moderates the night prayer obligation for the community, acknowledging human limitation and the demands of daily life.',
+    asbabalNuzul: 'Among the earliest revelations. The Prophet had received the first revelation in the cave and returned trembling to Khadijah. The surah was revealed as the follow-up charge  –  the Prophet must now prepare himself through the discipline of night prayer for the immense task ahead. The final verse, which moderates the obligatory night prayer to a voluntary one, was revealed much later in Madinah after the companions found the extended night prayer burdensome.',
     keyThemes: [
       'Night prayer (tahajjud) as spiritual preparation for the prophetic mission',
-      'Tartil — careful, measured Quran recitation as an act of worship',
+      'Tartil  –  careful, measured Quran recitation as an act of worship',
       'Patient endurance in the face of rejection',
       'The heavy weight and profound responsibility of divine revelation',
       'Divine compassion in moderating religious obligations'
@@ -2363,14 +2363,14 @@ export const SURAHS: SurahData[] = [
       {
         reference: '73:1-4',
         arabic: 'يَا أَيُّهَا الْمُزَّمِّلُ ۝ قُمِ اللَّيْلَ إِلَّا قَلِيلًا ۝ نِّصْفَهُ أَوِ انقُصْ مِنْهُ قَلِيلًا ۝ أَوْ زِدْ عَلَيْهِ وَرَتِّلِ الْقُرْآنَ تَرْتِيلًا',
-        translation: 'O you who wraps himself, arise for prayer the night — except for a little — half of it or subtract from it a little, or add to it, and recite the Quran with measured recitation.',
-        context: 'The formative command to the Prophet — the night vigil is the primary spiritual discipline that prepares the soul for the weight of prophethood, and tartil transforms recitation into contemplative prayer.'
+        translation: 'O you who wraps himself, arise for prayer the night  –  except for a little  –  half of it or subtract from it a little, or add to it, and recite the Quran with measured recitation.',
+        context: 'The formative command to the Prophet  –  the night vigil is the primary spiritual discipline that prepares the soul for the weight of prophethood, and tartil transforms recitation into contemplative prayer.'
       },
       {
         reference: '73:5',
         arabic: 'إِنَّا سَنُلْقِي عَلَيْكَ قَوْلًا ثَقِيلًا',
         translation: 'Indeed, We will cast upon you a heavy word.',
-        context: 'A frank acknowledgement of the weight of prophetic responsibility — the Quran is not merely information but a transformative burden that reshapes the recipient\'s entire being and mission.'
+        context: 'A frank acknowledgement of the weight of prophetic responsibility  –  the Quran is not merely information but a transformative burden that reshapes the recipient\'s entire being and mission.'
       }
     ]
   },
@@ -2382,8 +2382,8 @@ export const SURAHS: SurahData[] = [
     verses: 56,
     classification: 'Makki',
     period: 'Early Makkan',
-    overview: 'Al-Muddaththir is widely regarded as the second or third revelation, when the Prophet was commanded to rise and warn. The surah sets out the core requirements of prophethood: warn, glorify Allah, purify the garments and soul, shun idols, and be patient. It then narrates the fate of a specific opponent who heard the Quran, acknowledged its power privately, but publicly called it magic — and was thereafter condemned. The surah introduces the nineteen guardians of Hell and the purpose of their number as a test for the disbelievers.',
-    asbabalNuzul: 'After the initial revelation of Al-\'Alaq, a period of silence in revelation followed (the fatra). When revelation resumed, Al-Muddaththir was revealed — some accounts place it as the second surah. The specific condemnation verses (11-25) were revealed in response to al-Walid ibn al-Mughirah who, after hearing the Quran, declared privately it was unlike any human poetry or magic, but then publicly called it "al-sihr" (magic) to sway the Makkans against the Prophet.',
+    overview: 'Al-Muddaththir is widely regarded as the second or third revelation, when the Prophet was commanded to rise and warn. The surah sets out the core requirements of prophethood: warn, glorify Allah, purify the garments and soul, shun idols, and be patient. It then narrates the fate of a specific opponent who heard the Quran, acknowledged its power privately, but publicly called it magic  –  and was thereafter condemned. The surah introduces the nineteen guardians of Hell and the purpose of their number as a test for the disbelievers.',
+    asbabalNuzul: 'After the initial revelation of Al-\'Alaq, a period of silence in revelation followed (the fatra). When revelation resumed, Al-Muddaththir was revealed  –  some accounts place it as the second surah. The specific condemnation verses (11-25) were revealed in response to al-Walid ibn al-Mughirah who, after hearing the Quran, declared privately it was unlike any human poetry or magic, but then publicly called it "al-sihr" (magic) to sway the Makkans against the Prophet.',
     keyThemes: [
       'The command to rise, warn, and begin the public mission',
       'Purification of the soul as prerequisite for prophetic work',
@@ -2395,14 +2395,14 @@ export const SURAHS: SurahData[] = [
       {
         reference: '74:1-5',
         arabic: 'يَا أَيُّهَا الْمُدَّثِّرُ ۝ قُمْ فَأَنذِرْ ۝ وَرَبَّكَ فَكَبِّرْ ۝ وَثِيَابَكَ فَطَهِّرْ ۝ وَالرُّجْزَ فَاهْجُرْ',
-        translation: 'O you who covers himself — arise and warn, and your Lord glorify, and your clothing purify, and uncleanliness avoid.',
+        translation: 'O you who covers himself  –  arise and warn, and your Lord glorify, and your clothing purify, and uncleanliness avoid.',
         context: 'The prophetic commissioning in five commands: rise, warn, glorify, purify, abandon. This sequence captures the entire programme of prophetic mission in a set of brief imperatives.'
       },
       {
         reference: '74:31',
         arabic: 'وَمَا جَعَلْنَا أَصْحَابَ النَّارِ إِلَّا مَلَائِكَةً',
         translation: 'And We have not made the keepers of the Fire except angels.',
-        context: 'Part of the divine explanation of the nineteen guardians — chosen to be angels rather than humans so that no claim of overpowering them could be entertained, and their number serves as a trial of faith.'
+        context: 'Part of the divine explanation of the nineteen guardians  –  chosen to be angels rather than humans so that no claim of overpowering them could be entertained, and their number serves as a trial of faith.'
       }
     ]
   },
@@ -2414,8 +2414,8 @@ export const SURAHS: SurahData[] = [
     verses: 40,
     classification: 'Makki',
     period: 'Makkan',
-    overview: 'Al-Qiyamah opens with two oaths — by the Day of Resurrection and by the self-accusing soul — to affirm the reality of resurrection against the denial of the disbelievers. The surah describes the terrifying signs of the Last Hour: the blinding of sight, the eclipsing of the moon, the joining of moon and sun. It then addresses the Prophet directly, reassuring him that Allah will make him memorise and recite the Quran, before turning to the moment of death and the faces of the righteous and condemned. The origin of the human being from a fluid is cited as proof of Allah\'s power to resurrect.',
-    asbabalNuzul: 'Revealed in the Makkan period primarily to address the Quraysh\'s denial of bodily resurrection. The opening oath by the "self-accusing soul" introduces the Quranic psychology of conscience — the innate moral voice that accuses the self. The parenthetical verses (16-19) assuring the Prophet of divine memorisation were revealed because early in his prophethood he would repeat words of revelation as they came, fearing he might forget.',
+    overview: 'Al-Qiyamah opens with two oaths  –  by the Day of Resurrection and by the self-accusing soul  –  to affirm the reality of resurrection against the denial of the disbelievers. The surah describes the terrifying signs of the Last Hour: the blinding of sight, the eclipsing of the moon, the joining of moon and sun. It then addresses the Prophet directly, reassuring him that Allah will make him memorise and recite the Quran, before turning to the moment of death and the faces of the righteous and condemned. The origin of the human being from a fluid is cited as proof of Allah\'s power to resurrect.',
+    asbabalNuzul: 'Revealed in the Makkan period primarily to address the Quraysh\'s denial of bodily resurrection. The opening oath by the "self-accusing soul" introduces the Quranic psychology of conscience  –  the innate moral voice that accuses the self. The parenthetical verses (16-19) assuring the Prophet of divine memorisation were revealed because early in his prophethood he would repeat words of revelation as they came, fearing he might forget.',
     keyThemes: [
       'The certainty of resurrection against the denials of the materialists',
       'The cosmic signs of the Last Hour',
@@ -2428,13 +2428,13 @@ export const SURAHS: SurahData[] = [
         reference: '75:16-17',
         arabic: 'لَا تُحَرِّكْ بِهِ لِسَانَكَ لِتَعْجَلَ بِهِ ۝ إِنَّ عَلَيْنَا جَمْعَهُ وَقُرْآنَهُ',
         translation: 'Do not move your tongue with it to hasten it. Indeed, upon Us is its collection and recitation.',
-        context: 'The divine reassurance to the Prophet not to rush the recitation of revelation — Allah Himself guarantees its preservation in the Prophet\'s memory, laying the foundation of the Quran\'s oral transmission tradition.'
+        context: 'The divine reassurance to the Prophet not to rush the recitation of revelation  –  Allah Himself guarantees its preservation in the Prophet\'s memory, laying the foundation of the Quran\'s oral transmission tradition.'
       },
       {
         reference: '75:36',
         arabic: 'أَيَحْسَبُ الْإِنسَانُ أَن يُتْرَكَ سُدًى',
         translation: 'Does man think that he will be left neglected?',
-        context: 'A piercing rhetorical challenge — the assumption that human beings are morally unaccountable is demolished in a single question, affirming that purposeful creation implies purposeful judgement.'
+        context: 'A piercing rhetorical challenge  –  the assumption that human beings are morally unaccountable is demolished in a single question, affirming that purposeful creation implies purposeful judgement.'
       }
     ]
   },
@@ -2446,8 +2446,8 @@ export const SURAHS: SurahData[] = [
     verses: 31,
     classification: 'Madani',
     period: 'Madinan',
-    overview: 'Al-Insan traces the human being from a period of non-existence, through the creation as a compound of fluids, to the test of this life, and then to the rewards of Paradise. It describes the righteous who fulfil their vows, feed the poor and orphan and prisoner for the sake of Allah alone without seeking thanks, and their extraordinary reward in the gardens of Paradise — the pure drink, the silken garments, the thrones, and the companionship of divine favour. The surah closes by affirming that the Quran is a reminder for those who will to remember.',
-    asbabalNuzul: 'The circumstances of revelation are linked by some accounts to Ali ibn Abi Talib and Fatimah who, along with their servant, gave away their iftar meal for three consecutive nights to a poor person, an orphan, and a captive, saying on each occasion: "We feed you for the sake of Allah — we desire from you neither reward nor thanks." The Quran then revealed verses in honour of their selfless act. Other scholars hold the surah is wholly Makkan; the scholarly debate on its classification is notable.',
+    overview: 'Al-Insan traces the human being from a period of non-existence, through the creation as a compound of fluids, to the test of this life, and then to the rewards of Paradise. It describes the righteous who fulfil their vows, feed the poor and orphan and prisoner for the sake of Allah alone without seeking thanks, and their extraordinary reward in the gardens of Paradise  –  the pure drink, the silken garments, the thrones, and the companionship of divine favour. The surah closes by affirming that the Quran is a reminder for those who will to remember.',
+    asbabalNuzul: 'The circumstances of revelation are linked by some accounts to Ali ibn Abi Talib and Fatimah who, along with their servant, gave away their iftar meal for three consecutive nights to a poor person, an orphan, and a captive, saying on each occasion: "We feed you for the sake of Allah  –  we desire from you neither reward nor thanks." The Quran then revealed verses in honour of their selfless act. Other scholars hold the surah is wholly Makkan; the scholarly debate on its classification is notable.',
     keyThemes: [
       'Human creation from nothingness and the resulting responsibility',
       'The test of this life and the dual paths of gratitude and ingratitude',
@@ -2459,14 +2459,14 @@ export const SURAHS: SurahData[] = [
       {
         reference: '76:8-9',
         arabic: 'وَيُطْعِمُونَ الطَّعَامَ عَلَىٰ حُبِّهِ مِسْكِينًا وَيَتِيمًا وَأَسِيرًا ۝ إِنَّمَا نُطْعِمُكُمْ لِوَجْهِ اللَّهِ لَا نُرِيدُ مِنكُمْ جَزَاءً وَلَا شُكُورًا',
-        translation: 'And they give food in spite of love for it to the needy, the orphan, and the captive, saying: We feed you only for the sake of Allah — we wish not from you reward or gratitude.',
-        context: 'The highest articulation of selfless charity in the Quran — giving not for human recognition, societal reward, or even the recipient\'s gratitude, but purely for the face of Allah.'
+        translation: 'And they give food in spite of love for it to the needy, the orphan, and the captive, saying: We feed you only for the sake of Allah  –  we wish not from you reward or gratitude.',
+        context: 'The highest articulation of selfless charity in the Quran  –  giving not for human recognition, societal reward, or even the recipient\'s gratitude, but purely for the face of Allah.'
       },
       {
         reference: '76:1',
         arabic: 'هَلْ أَتَىٰ عَلَى الْإِنسَانِ حِينٌ مِّنَ الدَّهْرِ لَمْ يَكُن شَيْئًا مَّذْكُورًا',
         translation: 'Has there not been upon man a period of time when he was not a thing even mentioned?',
-        context: 'The surah opens by anchoring human existence in its fragile origin — there was a period when the individual human did not exist at all, establishing the gift of existence as the first basis of gratitude.'
+        context: 'The surah opens by anchoring human existence in its fragile origin  –  there was a period when the individual human did not exist at all, establishing the gift of existence as the first basis of gratitude.'
       }
     ]
   },
@@ -2478,7 +2478,7 @@ export const SURAHS: SurahData[] = [
     verses: 50,
     classification: 'Makki',
     period: 'Makkan',
-    overview: 'Al-Mursalat opens with a series of five oaths by the emissaries — winds, angels, or surahs — that perform sequential cosmic functions: blowing in succession, spreading, separating, delivering reminders, and establishing divine argument. The surah then pronounces woe upon the deniers in ten powerful refrains (waylun yawma\'idhin lil-mukadhdhibin), interweaving cosmic signs of creation with warnings about the Day of Judgement. The bounties of creation and the terrors of the Day are set side by side as an unanswerable argument for accountability.',
+    overview: 'Al-Mursalat opens with a series of five oaths by the emissaries  –  winds, angels, or surahs  –  that perform sequential cosmic functions: blowing in succession, spreading, separating, delivering reminders, and establishing divine argument. The surah then pronounces woe upon the deniers in ten powerful refrains (waylun yawma\'idhin lil-mukadhdhibin), interweaving cosmic signs of creation with warnings about the Day of Judgement. The bounties of creation and the terrors of the Day are set side by side as an unanswerable argument for accountability.',
     asbabalNuzul: 'Revealed in the Makkan period. The companions reported that this was one of the last surahs the Prophet recited in an evening prayer before the assassination attempt in Mina, and that they could tell from its content the nature of what was being revealed. The repeated refrain "woe that day to the deniers" was designed to pierce through the Makkan culture of comfortable denial.',
     keyThemes: [
       'The cosmic emissaries and their functions in creation and revelation',
@@ -2492,13 +2492,13 @@ export const SURAHS: SurahData[] = [
         reference: '77:1-5',
         arabic: 'وَالْمُرْسَلَاتِ عُرْفًا ۝ فَالْعَاصِفَاتِ عَصْفًا ۝ وَالنَّاشِرَاتِ نَشْرًا ۝ فَالْفَارِقَاتِ فَرْقًا ۝ فَالْمُلْقِيَاتِ ذِكْرًا',
         translation: 'By those sent forth in succession. And those who blow violently. And those who spread widely. And those who differentiate clearly. And those who deliver a reminder.',
-        context: 'The five-fold oath opening — whether interpreted as winds, angels, or Quranic verses, each image builds a sense of cumulative, purposeful divine activity underlying all of creation and revelation.'
+        context: 'The five-fold oath opening  –  whether interpreted as winds, angels, or Quranic verses, each image builds a sense of cumulative, purposeful divine activity underlying all of creation and revelation.'
       },
       {
         reference: '77:46',
         arabic: 'كُلُوا وَتَمَتَّعُوا قَلِيلًا إِنَّكُمْ مُّجْرِمُونَ',
-        translation: 'Eat and enjoy yourselves a little — indeed, you are criminals.',
-        context: 'The bitter irony of divine address — a brief concession to temporary pleasure frames the gravity of criminal rejection of truth, the enjoyment being finite against an infinite reckoning.'
+        translation: 'Eat and enjoy yourselves a little  –  indeed, you are criminals.',
+        context: 'The bitter irony of divine address  –  a brief concession to temporary pleasure frames the gravity of criminal rejection of truth, the enjoyment being finite against an infinite reckoning.'
       }
     ]
   },
@@ -2510,8 +2510,8 @@ export const SURAHS: SurahData[] = [
     verses: 40,
     classification: 'Makki',
     period: 'Makkan',
-    overview: 'An-Naba opens by addressing the great news — the Day of Resurrection — that the Makkans disputed. The surah then presents the case: Allah set the earth as a bed, the mountains as pegs, created human beings in pairs, made sleep for rest, the night as a covering, the day for livelihood, built the seven firm heavens and the blazing sun. All this creative power makes resurrection inescapable. The surah then describes the terrors of the Day and the reward of the righteous in gardens before concluding with the solemn warning: the disbeliever will wish he were dust.',
-    asbabalNuzul: 'Revealed in the Makkan period in response to the Quraysh\'s disputing among themselves about the "great news" — the Day of Resurrection and the Quran\'s message. The surah frames natural creation as the first argument that the One who built the universe can certainly rebuild human bodies for judgement. The vivid imagery of comfort — sleep, night, day, rain, gardens — contrasts with the terrifying imagery of the Day to create a profound rhetorical argument.',
+    overview: 'An-Naba opens by addressing the great news  –  the Day of Resurrection  –  that the Makkans disputed. The surah then presents the case: Allah set the earth as a bed, the mountains as pegs, created human beings in pairs, made sleep for rest, the night as a covering, the day for livelihood, built the seven firm heavens and the blazing sun. All this creative power makes resurrection inescapable. The surah then describes the terrors of the Day and the reward of the righteous in gardens before concluding with the solemn warning: the disbeliever will wish he were dust.',
+    asbabalNuzul: 'Revealed in the Makkan period in response to the Quraysh\'s disputing among themselves about the "great news"  –  the Day of Resurrection and the Quran\'s message. The surah frames natural creation as the first argument that the One who built the universe can certainly rebuild human bodies for judgement. The vivid imagery of comfort  –  sleep, night, day, rain, gardens  –  contrasts with the terrifying imagery of the Day to create a profound rhetorical argument.',
     keyThemes: [
       'The great news of the Day of Resurrection as the central dispute',
       'Signs of creation as proofs of divine power to resurrect',
@@ -2523,14 +2523,14 @@ export const SURAHS: SurahData[] = [
       {
         reference: '78:1-3',
         arabic: 'عَمَّ يَتَسَاءَلُونَ ۝ عَنِ النَّبَإِ الْعَظِيمِ ۝ الَّذِي هُمْ فِيهِ مُخْتَلِفُونَ',
-        translation: 'About what are they asking one another? About the great news — that over which they are in disagreement.',
+        translation: 'About what are they asking one another? About the great news  –  that over which they are in disagreement.',
         context: 'The surah opens on the Makkan street-level dispute about the Quran\'s teaching, anchoring the cosmic revelation in the immediate social reality of people arguing about the Day of Judgement.'
       },
       {
         reference: '78:40',
         arabic: 'إِنَّا أَنذَرْنَاكُمْ عَذَابًا قَرِيبًا يَوْمَ يَنظُرُ الْمَرْءُ مَا قَدَّمَتْ يَدَاهُ وَيَقُولُ الْكَافِرُ يَا لَيْتَنِي كُنتُ تُرَابًا',
         translation: 'Indeed, We have warned you of a near punishment on the Day when a man will observe what his hands have put forth and the disbeliever will say: "Oh, I wish that I were dust!"',
-        context: 'The surah\'s devastating conclusion — the disbeliever\'s wish to be reduced to the same dust that animals become, preferring non-existence to the prospect of judgement, captures the ultimate regret of the heedless.'
+        context: 'The surah\'s devastating conclusion  –  the disbeliever\'s wish to be reduced to the same dust that animals become, preferring non-existence to the prospect of judgement, captures the ultimate regret of the heedless.'
       }
     ]
   },
@@ -2542,7 +2542,7 @@ export const SURAHS: SurahData[] = [
     verses: 46,
     classification: 'Makki',
     period: 'Makkan',
-    overview: 'An-Naziat opens with five oaths by angels performing their duties — extracting souls, drawing them gently, swimming through the heavens, racing ahead, and managing divine affairs. The surah then affirms the certainty of the Day of Judgement before narrating the story of Musa\'s confrontation with Pharaoh — his signs, Pharaoh\'s arrogance and denial, and his ultimate destruction. Creation signs — the spread earth, the mountains, the darkened night, and the bright day — are then cited as evidence that the One who created all this can certainly resurrect human beings.',
+    overview: 'An-Naziat opens with five oaths by angels performing their duties  –  extracting souls, drawing them gently, swimming through the heavens, racing ahead, and managing divine affairs. The surah then affirms the certainty of the Day of Judgement before narrating the story of Musa\'s confrontation with Pharaoh  –  his signs, Pharaoh\'s arrogance and denial, and his ultimate destruction. Creation signs  –  the spread earth, the mountains, the darkened night, and the bright day  –  are then cited as evidence that the One who created all this can certainly resurrect human beings.',
     asbabalNuzul: 'Revealed in the Makkan period to address the question that recurs in many Makkan surahs: the disbelievers\' denial of resurrection. The opening oaths by the angels performing their duties in the unseen are meant to awaken the listeners to the vast activity of the angelic world that surrounds them, and the example of Pharaoh\'s destruction serves as a political warning to the Makkan leaders who were persecuting the Muslims.',
     keyThemes: [
       'The angels\' functions in managing cosmic affairs and human souls',
@@ -2555,14 +2555,14 @@ export const SURAHS: SurahData[] = [
       {
         reference: '79:17-19',
         arabic: 'اذْهَبْ إِلَىٰ فِرْعَوْنَ إِنَّهُ طَغَىٰ ۝ فَقُل هَل لَّكَ إِلَىٰ أَن تَزَكَّىٰ ۝ وَأَهْدِيَكَ إِلَىٰ رَبِّكَ فَتَخْشَىٰ',
-        translation: 'Go to Pharaoh — indeed he has transgressed. And say to him: "Would you like to purify yourself? And let me guide you to your Lord so you might fear Him?"',
-        context: 'The gentleness of the prophetic invitation even to the greatest tyrant — Musa is commanded to offer Pharaoh the path of purification before any threat, modelling the priority of da\'wah over condemnation.'
+        translation: 'Go to Pharaoh  –  indeed he has transgressed. And say to him: "Would you like to purify yourself? And let me guide you to your Lord so you might fear Him?"',
+        context: 'The gentleness of the prophetic invitation even to the greatest tyrant  –  Musa is commanded to offer Pharaoh the path of purification before any threat, modelling the priority of da\'wah over condemnation.'
       },
       {
         reference: '79:40-41',
         arabic: 'وَأَمَّا مَنْ خَافَ مَقَامَ رَبِّهِ وَنَهَى النَّفْسَ عَنِ الْهَوَىٰ ۝ فَإِنَّ الْجَنَّةَ هِيَ الْمَأْوَىٰ',
-        translation: 'But as for one who feared the standing before his Lord and restrained the self from vain desire — then indeed Paradise is the refuge.',
-        context: 'The surah\'s positive climax — the one who masters the ego\'s desires through awareness of divine presence earns the ultimate refuge, presenting self-discipline as the path to Paradise.'
+        translation: 'But as for one who feared the standing before his Lord and restrained the self from vain desire  –  then indeed Paradise is the refuge.',
+        context: 'The surah\'s positive climax  –  the one who masters the ego\'s desires through awareness of divine presence earns the ultimate refuge, presenting self-discipline as the path to Paradise.'
       }
     ]
   },
@@ -2574,8 +2574,8 @@ export const SURAHS: SurahData[] = [
     verses: 42,
     classification: 'Makki',
     period: 'Makkan',
-    overview: 'Abasa opens with a remarkable self-correcting divine rebuke of the Prophet\'s momentary inattention to a blind man, Ibn Umm Maktum, in favour of engaging with a leading Makkan figure. The surah establishes the foundational principle that the sincere seeker of guidance must never be neglected for those who show no interest. It then moves to a meditation on the human being\'s ingratitude — created from a drop, made to grow, then given death and resurrection — and the food chain as a sign of divine provision. The Day of Judgement closes the surah.',
-    asbabalNuzul: 'Revealed when the Prophet was engaged in a meeting with a group of Makkan nobility, hoping to win them to Islam, and Abdullah ibn Umm Maktum — a blind man — came repeatedly seeking knowledge. The Prophet frowned and turned away. Allah immediately revealed this surah, gently but clearly correcting the Prophet\'s action and establishing the universal principle of equity in da\'wah: the sincere poor seeker is more deserving of attention than the wealthy indifferent.',
+    overview: 'Abasa opens with a remarkable self-correcting divine rebuke of the Prophet\'s momentary inattention to a blind man, Ibn Umm Maktum, in favour of engaging with a leading Makkan figure. The surah establishes the foundational principle that the sincere seeker of guidance must never be neglected for those who show no interest. It then moves to a meditation on the human being\'s ingratitude  –  created from a drop, made to grow, then given death and resurrection  –  and the food chain as a sign of divine provision. The Day of Judgement closes the surah.',
+    asbabalNuzul: 'Revealed when the Prophet was engaged in a meeting with a group of Makkan nobility, hoping to win them to Islam, and Abdullah ibn Umm Maktum  –  a blind man  –  came repeatedly seeking knowledge. The Prophet frowned and turned away. Allah immediately revealed this surah, gently but clearly correcting the Prophet\'s action and establishing the universal principle of equity in da\'wah: the sincere poor seeker is more deserving of attention than the wealthy indifferent.',
     keyThemes: [
       'Equity in preaching: the sincere seeker must not be neglected',
       'Human ingratitude toward the Creator who formed and fashioned us',
@@ -2587,14 +2587,14 @@ export const SURAHS: SurahData[] = [
       {
         reference: '80:1-4',
         arabic: 'عَبَسَ وَتَوَلَّىٰ ۝ أَن جَاءَهُ الْأَعْمَىٰ ۝ وَمَا يُدْرِيكَ لَعَلَّهُ يَزَّكَّىٰ ۝ أَوْ يَذَّكَّرُ فَتَنفَعَهُ الذِّكْرَىٰ',
-        translation: 'He frowned and turned away because the blind man came to him. But what would make you know — perhaps he might be purified, or he might be reminded and the reminder benefit him?',
-        context: 'The divine correction is phrased as a question, not a condemnation — inviting the Prophet to see the blind man\'s potential and affirming the Quran\'s authenticity since no human author would fabricate divine criticism of himself.'
+        translation: 'He frowned and turned away because the blind man came to him. But what would make you know  –  perhaps he might be purified, or he might be reminded and the reminder benefit him?',
+        context: 'The divine correction is phrased as a question, not a condemnation  –  inviting the Prophet to see the blind man\'s potential and affirming the Quran\'s authenticity since no human author would fabricate divine criticism of himself.'
       },
       {
         reference: '80:34-37',
         arabic: 'يَوْمَ يَفِرُّ الْمَرْءُ مِنْ أَخِيهِ ۝ وَأُمِّهِ وَأَبِيهِ ۝ وَصَاحِبَتِهِ وَبَنِيهِ',
         translation: 'On the Day a man will flee from his brother and his mother and his father and his wife and his children.',
-        context: 'The most intimate human bonds are shattered by the terror of the Day — the very relationships that defined earthly identity become irrelevant before individual accountability.'
+        context: 'The most intimate human bonds are shattered by the terror of the Day  –  the very relationships that defined earthly identity become irrelevant before individual accountability.'
       }
     ]
   },
@@ -2606,7 +2606,7 @@ export const SURAHS: SurahData[] = [
     verses: 29,
     classification: 'Makki',
     period: 'Makkan',
-    overview: 'At-Takwir describes the unravelling of the cosmic order at the end of time in a rapid sequence of twelve "when" clauses: the sun is dimmed, stars fall, mountains set in motion, pregnant camels are abandoned, wild beasts are gathered, seas overflow, souls are paired, the infant girl buried alive is asked for what sin she was killed, scrolls are unrolled, the sky is stripped away, Hell is set ablaze, Paradise is brought near. The surah then defends the Quran\'s divine origin, affirming that Jibril — not the Prophet — is the one who brought it.',
+    overview: 'At-Takwir describes the unravelling of the cosmic order at the end of time in a rapid sequence of twelve "when" clauses: the sun is dimmed, stars fall, mountains set in motion, pregnant camels are abandoned, wild beasts are gathered, seas overflow, souls are paired, the infant girl buried alive is asked for what sin she was killed, scrolls are unrolled, the sky is stripped away, Hell is set ablaze, Paradise is brought near. The surah then defends the Quran\'s divine origin, affirming that Jibril  –  not the Prophet  –  is the one who brought it.',
     asbabalNuzul: 'Revealed in the Makkan period when the Quraysh accused the Prophet of being possessed or of inventing the Quran. The rapid-fire imagery of cosmic dissolution was designed to jolt listeners out of their comfortable certainties. The verse about the infant girl killed at birth (wa\'d) was a direct confrontation of the pre-Islamic practice of female infanticide, making the Day of Judgement the moment of justice for the most voiceless victims.',
     keyThemes: [
       'The cosmic dissolution at the end of time through twelve sequential signs',
@@ -2619,14 +2619,14 @@ export const SURAHS: SurahData[] = [
       {
         reference: '81:8-9',
         arabic: 'وَإِذَا الْمَوْءُودَةُ سُئِلَتْ ۝ بِأَيِّ ذَنبٍ قُتِلَتْ',
-        translation: 'And when the infant girl who was buried alive is asked — for what sin was she killed?',
-        context: 'Among the most powerful verses against female infanticide in the Quran — the question is directed not at the murderer but at the victim, as an act of divine honour: the Day of Judgement will speak for those who had no voice.'
+        translation: 'And when the infant girl who was buried alive is asked  –  for what sin was she killed?',
+        context: 'Among the most powerful verses against female infanticide in the Quran  –  the question is directed not at the murderer but at the victim, as an act of divine honour: the Day of Judgement will speak for those who had no voice.'
       },
       {
         reference: '81:28-29',
         arabic: 'لِمَن شَاءَ مِنكُمْ أَن يَسْتَقِيمَ ۝ وَمَا تَشَاءُونَ إِلَّا أَن يَشَاءَ اللَّهُ رَبُّ الْعَالَمِينَ',
-        translation: 'For whoever wills among you to take a right course. And you do not will except that Allah wills — Lord of the worlds.',
-        context: 'The surah\'s theological close — human will is real but situated within divine will, affirming both human moral responsibility and divine sovereignty without eliminating either.'
+        translation: 'For whoever wills among you to take a right course. And you do not will except that Allah wills  –  Lord of the worlds.',
+        context: 'The surah\'s theological close  –  human will is real but situated within divine will, affirming both human moral responsibility and divine sovereignty without eliminating either.'
       }
     ]
   },
@@ -2638,8 +2638,8 @@ export const SURAHS: SurahData[] = [
     verses: 19,
     classification: 'Makki',
     period: 'Makkan',
-    overview: 'Al-Infitar describes the cosmic cleaving apart at the end of time — the sky splits, stars scatter, the seas burst open, and graves are overturned — and then turns directly to the human being to ask what deceived him about his Generous Lord. The surah affirms that the honoured scribes (kiraman katibin) record every deed. It concludes with a description of the Day of Judgement on which no soul can help another except by divine permission, and the righteous enjoy bliss while the wicked suffer.',
-    asbabalNuzul: 'Revealed in the Makkan period, part of the cluster of short eschatological surahs designed to make the Day of Judgement vivid and immediate. The question "what has deceived you about your Generous Lord?" directly addresses the psychological root of human ingratitude and arrogance — the subconscious assumption that divine generosity means divine tolerance of sin.',
+    overview: 'Al-Infitar describes the cosmic cleaving apart at the end of time  –  the sky splits, stars scatter, the seas burst open, and graves are overturned  –  and then turns directly to the human being to ask what deceived him about his Generous Lord. The surah affirms that the honoured scribes (kiraman katibin) record every deed. It concludes with a description of the Day of Judgement on which no soul can help another except by divine permission, and the righteous enjoy bliss while the wicked suffer.',
+    asbabalNuzul: 'Revealed in the Makkan period, part of the cluster of short eschatological surahs designed to make the Day of Judgement vivid and immediate. The question "what has deceived you about your Generous Lord?" directly addresses the psychological root of human ingratitude and arrogance  –  the subconscious assumption that divine generosity means divine tolerance of sin.',
     keyThemes: [
       'The cosmic dissolution as the context for human accountability',
       'The question of what deceives the human being about Allah\'s nature',
@@ -2651,14 +2651,14 @@ export const SURAHS: SurahData[] = [
       {
         reference: '82:6-8',
         arabic: 'يَا أَيُّهَا الْإِنسَانُ مَا غَرَّكَ بِرَبِّكَ الْكَرِيمِ ۝ الَّذِي خَلَقَكَ فَسَوَّاكَ فَعَدَلَكَ ۝ فِي أَيِّ صُورَةٍ مَّا شَاءَ رَكَّبَكَ',
-        translation: 'O mankind — what has deceived you concerning your Lord, the Generous, who created you, proportioned you, and assembled you in whatever form He willed?',
-        context: 'The most direct of Quranic self-examinations — Allah asks the human being what rationalisation led to forgetfulness of the One who fashioned him with such precision and generosity.'
+        translation: 'O mankind  –  what has deceived you concerning your Lord, the Generous, who created you, proportioned you, and assembled you in whatever form He willed?',
+        context: 'The most direct of Quranic self-examinations  –  Allah asks the human being what rationalisation led to forgetfulness of the One who fashioned him with such precision and generosity.'
       },
       {
         reference: '82:10-12',
         arabic: 'وَإِنَّ عَلَيْكُمْ لَحَافِظِينَ ۝ كِرَامًا كَاتِبِينَ ۝ يَعْلَمُونَ مَا تَفْعَلُونَ',
-        translation: 'And indeed over you are appointed keepers — noble and recording, who know whatever you do.',
-        context: 'The scriptural foundation for the doctrine of kiraman katibin — the honoured scribes whose ceaseless recording forms the basis of the heavenly ledger that will be opened on the Day of Judgement.'
+        translation: 'And indeed over you are appointed keepers  –  noble and recording, who know whatever you do.',
+        context: 'The scriptural foundation for the doctrine of kiraman katibin  –  the honoured scribes whose ceaseless recording forms the basis of the heavenly ledger that will be opened on the Day of Judgement.'
       }
     ]
   },
@@ -2670,12 +2670,12 @@ export const SURAHS: SurahData[] = [
     verses: 36,
     classification: 'Makki',
     period: 'Makkan',
-    overview: 'Al-Mutaffifin opens with a condemnation of those who take full measure for themselves but give short measure and weight to others — a commercial fraud that the surah elevates into a spiritual disease. After pronouncing woe upon them, the surah describes the heavenly register (\'Illiyyun) where the record of the righteous is kept, and the hellish register (Sijjin) where the records of the wicked are stored. It then portrays the delights of the righteous in Paradise — a sealed nectar — and the mockery the wicked will face in the Hereafter, reversing the earthly dynamic where they mocked the believers.',
+    overview: 'Al-Mutaffifin opens with a condemnation of those who take full measure for themselves but give short measure and weight to others  –  a commercial fraud that the surah elevates into a spiritual disease. After pronouncing woe upon them, the surah describes the heavenly register (\'Illiyyun) where the record of the righteous is kept, and the hellish register (Sijjin) where the records of the wicked are stored. It then portrays the delights of the righteous in Paradise  –  a sealed nectar  –  and the mockery the wicked will face in the Hereafter, reversing the earthly dynamic where they mocked the believers.',
     asbabalNuzul: 'The opening verses were revealed when the Prophet arrived in Madinah and found that the people of Madinah were among the most notorious short-changers in trade. The revelation immediately addressed this commercial dishonesty within the religious framework of accountability. The surah was likely among the last Makkan revelations or earliest Madinan ones, and scholars differ on its classification.',
     keyThemes: [
       'Commercial fraud as a spiritual crime against divine justice',
       'The cosmic registers of deeds: Sijjin for the wicked, \'Illiyyun for the righteous',
-      'The seal of Tasnim — a drink from the highest spring of Paradise',
+      'The seal of Tasnim  –  a drink from the highest spring of Paradise',
       'The reversal of mockery on the Day of Judgement',
       'The hardening of the heart through accumulation of sin'
     ],
@@ -2683,14 +2683,14 @@ export const SURAHS: SurahData[] = [
       {
         reference: '83:1-3',
         arabic: 'وَيْلٌ لِّلْمُطَفِّفِينَ ۝ الَّذِينَ إِذَا اكْتَالُوا عَلَى النَّاسِ يَسْتَوْفُونَ ۝ وَإِذَا كَالُوهُمْ أَو وَّزَنُوهُمْ يُخْسِرُونَ',
-        translation: 'Woe to those who give less than due — who, when they take a measure from people, take it in full. But if they give by measure or by weight to them, they cause loss.',
-        context: 'The foundational Islamic teaching on commercial ethics — defrauding in weights and measures is not merely a regulatory offence but a spiritual crime meriting divine condemnation.'
+        translation: 'Woe to those who give less than due  –  who, when they take a measure from people, take it in full. But if they give by measure or by weight to them, they cause loss.',
+        context: 'The foundational Islamic teaching on commercial ethics  –  defrauding in weights and measures is not merely a regulatory offence but a spiritual crime meriting divine condemnation.'
       },
       {
         reference: '83:26',
         arabic: 'خِتَامُهُ مِسْكٌ وَفِي ذَٰلِكَ فَلْيَتَنَافَسِ الْمُتَنَافِسُونَ',
-        translation: 'Its end is musk — and for that let the competitors compete.',
-        context: 'The divine invitation to compete for the highest — the pure drink sealed with musk in Paradise is the only prize worth racing toward, reorienting human ambition from worldly competition to spiritual striving.'
+        translation: 'Its end is musk  –  and for that let the competitors compete.',
+        context: 'The divine invitation to compete for the highest  –  the pure drink sealed with musk in Paradise is the only prize worth racing toward, reorienting human ambition from worldly competition to spiritual striving.'
       }
     ]
   },
@@ -2702,7 +2702,7 @@ export const SURAHS: SurahData[] = [
     verses: 25,
     classification: 'Makki',
     period: 'Makkan',
-    overview: 'Al-Inshiqaq opens with the sky splitting open in obedience to its Lord, and the earth spreading out and casting forth what it contains — images of cosmic submission to the divine command. The surah then addresses the human being who is labouring toward his Lord and will meet his reckoning — either receiving his book in the right hand for a light reckoning, or in the left hand behind his back for a calling to perdition. The surah closes by asking why the Makkans do not prostrate before the Quran, and affirms the reality of their development through stage after stage.',
+    overview: 'Al-Inshiqaq opens with the sky splitting open in obedience to its Lord, and the earth spreading out and casting forth what it contains  –  images of cosmic submission to the divine command. The surah then addresses the human being who is labouring toward his Lord and will meet his reckoning  –  either receiving his book in the right hand for a light reckoning, or in the left hand behind his back for a calling to perdition. The surah closes by asking why the Makkans do not prostrate before the Quran, and affirms the reality of their development through stage after stage.',
     asbabalNuzul: 'Revealed in the Makkan period, associated with a famous incident where a Makkan leader refused to prostrate when the concluding verses were recited (or when Surah An-Najm was recited). This refusal led to the revelation affirming that those who hear the Quran and turn away will face a painful punishment. The verse on human development through stages was revealed to address the Makkan denial of resurrection by pointing to embryological development as evidence of divine creative stages.',
     keyThemes: [
       'The cosmic submission of sky and earth to the divine command',
@@ -2715,8 +2715,8 @@ export const SURAHS: SurahData[] = [
       {
         reference: '84:6',
         arabic: 'يَا أَيُّهَا الْإِنسَانُ إِنَّكَ كَادِحٌ إِلَىٰ رَبِّكَ كَدْحًا فَمُلَاقِيهِ',
-        translation: 'O mankind — indeed you are labouring toward your Lord with exertion and will meet Him.',
-        context: 'A profound summary of the human condition — all of human effort, however directed, is a journey toward the encounter with the Lord; the only question is the nature of that meeting.'
+        translation: 'O mankind  –  indeed you are labouring toward your Lord with exertion and will meet Him.',
+        context: 'A profound summary of the human condition  –  all of human effort, however directed, is a journey toward the encounter with the Lord; the only question is the nature of that meeting.'
       },
       {
         reference: '84:19',
@@ -2734,8 +2734,8 @@ export const SURAHS: SurahData[] = [
     verses: 22,
     classification: 'Makki',
     period: 'Makkan',
-    overview: 'Al-Buruj opens with a majestic oath by the sky with its great constellations, the promised Day, and the witness and witnessed. It then narrates the People of the Trench — believers who were burned alive by tyrannical rulers for their faith — as history\'s most devastating example of religious persecution. Allah\'s response is to promise that those who torment believers will be punished by the Fire of Hell. The surah then affirms the indestructible nature of the Quran on a preserved tablet, and cites the destruction of Pharaoh and Thamud as warnings to the persecutors.',
-    asbabalNuzul: 'Revealed in the Makkan period when the Muslims were enduring severe persecution. The story of the People of the Trench was cited to demonstrate that unjust rulers who persecute believers for their faith are not a new phenomenon — and that divine justice, though it may seem delayed, is inevitable. The surah provides profound consolation to persecuted believers across all times.',
+    overview: 'Al-Buruj opens with a majestic oath by the sky with its great constellations, the promised Day, and the witness and witnessed. It then narrates the People of the Trench  –  believers who were burned alive by tyrannical rulers for their faith  –  as history\'s most devastating example of religious persecution. Allah\'s response is to promise that those who torment believers will be punished by the Fire of Hell. The surah then affirms the indestructible nature of the Quran on a preserved tablet, and cites the destruction of Pharaoh and Thamud as warnings to the persecutors.',
+    asbabalNuzul: 'Revealed in the Makkan period when the Muslims were enduring severe persecution. The story of the People of the Trench was cited to demonstrate that unjust rulers who persecute believers for their faith are not a new phenomenon  –  and that divine justice, though it may seem delayed, is inevitable. The surah provides profound consolation to persecuted believers across all times.',
     keyThemes: [
       'The People of the Trench as history\'s paradigm of religious persecution',
       'Divine wrath against those who torment believers without cause',
@@ -2747,14 +2747,14 @@ export const SURAHS: SurahData[] = [
       {
         reference: '85:4-7',
         arabic: 'قُتِلَ أَصْحَابُ الْأُخْدُودِ ۝ النَّارِ ذَاتِ الْوَقُودِ ۝ إِذْ هُمْ عَلَيْهَا قُعُودٌ ۝ وَهُمْ عَلَىٰ مَا يَفْعَلُونَ بِالْمُؤْمِنِينَ شُهُودٌ',
-        translation: 'Cursed were the companions of the trench — of the fire full of fuel — when they were sitting over it and they were witnesses to what they were doing to the believers.',
-        context: 'The Quranic record of one of history\'s most heinous crimes — rulers who watched believers burn in trenches for refusing to recant their faith, and the divine pronouncement of curse upon them.'
+        translation: 'Cursed were the companions of the trench  –  of the fire full of fuel  –  when they were sitting over it and they were witnesses to what they were doing to the believers.',
+        context: 'The Quranic record of one of history\'s most heinous crimes  –  rulers who watched believers burn in trenches for refusing to recant their faith, and the divine pronouncement of curse upon them.'
       },
       {
         reference: '85:21-22',
         arabic: 'بَلْ هُوَ قُرْآنٌ مَّجِيدٌ ۝ فِي لَوْحٍ مَّحْفُوظٍ',
         translation: 'But this is an honoured Quran, inscribed in a Preserved Tablet.',
-        context: 'The foundational statement of the Quran\'s preservation — its origin and protection lie beyond human possibility, inscribed in the Preserved Tablet before creation, guaranteeing its eternal integrity.'
+        context: 'The foundational statement of the Quran\'s preservation  –  its origin and protection lie beyond human possibility, inscribed in the Preserved Tablet before creation, guaranteeing its eternal integrity.'
       }
     ]
   },
@@ -2766,7 +2766,7 @@ export const SURAHS: SurahData[] = [
     verses: 17,
     classification: 'Makki',
     period: 'Makkan',
-    overview: 'At-Tariq opens with a majestic oath by the sky and the nightly piercing star — identified as the morning star or a brilliant star — followed by the reminder that over every soul is an appointed guardian. The surah then presents the origin of the human being from a fluid to prove the power of resurrection, describes the Day when secret things are examined, and closes by affirming that the Quran is a decisive word and that the disbelievers\' plots against it will avail them nothing.',
+    overview: 'At-Tariq opens with a majestic oath by the sky and the nightly piercing star  –  identified as the morning star or a brilliant star  –  followed by the reminder that over every soul is an appointed guardian. The surah then presents the origin of the human being from a fluid to prove the power of resurrection, describes the Day when secret things are examined, and closes by affirming that the Quran is a decisive word and that the disbelievers\' plots against it will avail them nothing.',
     asbabalNuzul: 'Revealed in the Makkan period as another powerful argument against the denial of resurrection. The nightly star piercing the darkness of the sky serves as a metaphor for the Quran piercing the darkness of ignorance, and the human being\'s origin from a fluid serves as the surah\'s central argument: the same God who built the human from a drop can certainly return the bones to life. The final verses were revealed as a counter to the Makkan leaders\' plots against the Prophet.',
     keyThemes: [
       'The nightly star as a divine sign of precision and power',
@@ -2779,14 +2779,14 @@ export const SURAHS: SurahData[] = [
       {
         reference: '86:1-3',
         arabic: 'وَالسَّمَاءِ وَالطَّارِقِ ۝ وَمَا أَدْرَاكَ مَا الطَّارِقُ ۝ النَّجْمُ الثَّاقِبُ',
-        translation: 'By the sky and the nightly visitor — and what would make you know what the nightly visitor is? It is the piercing star.',
-        context: 'The dramatic triple structure — oath, rhetorical question, answer — draws the listener into a moment of discovery, using the brilliance of a piercing star to establish a sense of divine precision in creation.'
+        translation: 'By the sky and the nightly visitor  –  and what would make you know what the nightly visitor is? It is the piercing star.',
+        context: 'The dramatic triple structure  –  oath, rhetorical question, answer  –  draws the listener into a moment of discovery, using the brilliance of a piercing star to establish a sense of divine precision in creation.'
       },
       {
         reference: '86:13-14',
         arabic: 'إِنَّهُ لَقَوْلٌ فَصْلٌ ۝ وَمَا هُوَ بِالْهَزْلِ',
         translation: 'Indeed the Quran is a decisive word, and it is not amusement.',
-        context: 'The surah\'s definitive description of the Quran\'s nature — it is not poetry, entertainment, or magic, but a definitive and serious word from the Lord of all creation, demanding a definitive response.'
+        context: 'The surah\'s definitive description of the Quran\'s nature  –  it is not poetry, entertainment, or magic, but a definitive and serious word from the Lord of all creation, demanding a definitive response.'
       }
     ]
   },
@@ -2813,7 +2813,7 @@ export const SURAHS: SurahData[] = [
         reference: '87:1',
         arabic: 'سَبِّحِ اسْمَ رَبِّكَ الْأَعْلَى',
         translation: 'Glorify the name of your Lord, the Most High.',
-        context: 'The opening command gave the Muslims the phrase for sajdah (prostration) in prayer — "Subhana Rabbiyal-Ala" — establishing a living connection between Quranic revelation and daily worship.'
+        context: 'The opening command gave the Muslims the phrase for sajdah (prostration) in prayer  –  "Subhana Rabbiyal-Ala"  –  establishing a living connection between Quranic revelation and daily worship.'
       },
       {
         reference: '87:16-17',
@@ -2833,7 +2833,7 @@ export const SURAHS: SurahData[] = [
     verses: 26,
     classification: 'Makki',
     period: 'Early Makkan',
-    overview: 'Al-Ghashiyah — "The Overwhelming Event" — opens with a stark question about the Day of Judgement that will come over all people. The surah vividly portrays two contrasting groups: the humiliated faces of those who rejected faith, exhausted and given scorching drink, and the radiant faces of the believers resting in high gardens. It then pivots to ask the disbelievers to reflect on creation — the camel, the sky, the mountains, the earth — as proofs of the Creator\'s power and the Prophet\'s role as a reminder, not a compeller.',
+    overview: 'Al-Ghashiyah  –  "The Overwhelming Event"  –  opens with a stark question about the Day of Judgement that will come over all people. The surah vividly portrays two contrasting groups: the humiliated faces of those who rejected faith, exhausted and given scorching drink, and the radiant faces of the believers resting in high gardens. It then pivots to ask the disbelievers to reflect on creation  –  the camel, the sky, the mountains, the earth  –  as proofs of the Creator\'s power and the Prophet\'s role as a reminder, not a compeller.',
     asbabalNuzul: 'Revealed in the early Meccan period when the Prophet was calling people to Islam amid mockery and rejection. The vivid contrast between the two groups in the Hereafter was intended to awaken the Quraysh to the gravity of their choice. Like Al-Ala, this surah was recited by the Prophet in the Friday and Eid prayers.',
     keyThemes: [
       'The Day of Judgement as an overwhelming, inescapable event',
@@ -2847,12 +2847,12 @@ export const SURAHS: SurahData[] = [
         reference: '88:1-2',
         arabic: 'هَلْ أَتَاكَ حَدِيثُ الْغَاشِيَةِ ۚ وُجُوهٌ يَوْمَئِذٍ خَاشِعَةٌ',
         translation: 'Has there reached you the report of the Overwhelming Event? Faces that Day will be downcast.',
-        context: 'The dramatic rhetorical opening — "Has there reached you?" — creates urgency and draws the listener into witnessing the scene of Judgement as though it were already happening.'
+        context: 'The dramatic rhetorical opening  –  "Has there reached you?"  –  creates urgency and draws the listener into witnessing the scene of Judgement as though it were already happening.'
       },
       {
         reference: '88:21-22',
         arabic: 'فَذَكِّرْ إِنَّمَا أَنتَ مُذَكِّرٌ ۚ لَّسْتَ عَلَيْهِم بِمُصَيْطِرٍ',
-        translation: 'So remind — you are only a reminder. You are not over them a controller.',
+        translation: 'So remind  –  you are only a reminder. You are not over them a controller.',
         context: 'A foundational verse defining the prophetic role: reminding is the duty; compulsion is not. This verse is key to understanding Islamic ethics of da\'wah.'
       }
     ]
@@ -2865,7 +2865,7 @@ export const SURAHS: SurahData[] = [
     verses: 30,
     classification: 'Makki',
     period: 'Early Makkan',
-    overview: 'Al-Fajr opens with a series of solemn oaths by the dawn and the ten nights, then recounts the fates of \'Ad, Thamud, and Pharaoh — three civilisations destroyed for their arrogance and oppression — as warnings to the Quraysh. The surah then addresses a fundamental human error: judging divine favour and disfavour by material wealth and poverty. It concludes with a majestic scene of the Last Day and an invitation to the righteous soul to return to its Lord in peace and enter His Garden.',
+    overview: 'Al-Fajr opens with a series of solemn oaths by the dawn and the ten nights, then recounts the fates of \'Ad, Thamud, and Pharaoh  –  three civilisations destroyed for their arrogance and oppression  –  as warnings to the Quraysh. The surah then addresses a fundamental human error: judging divine favour and disfavour by material wealth and poverty. It concludes with a majestic scene of the Last Day and an invitation to the righteous soul to return to its Lord in peace and enter His Garden.',
     asbabalNuzul: 'Revealed in the early Meccan period as the Prophet faced the Quraysh\'s material pride and their dismissal of accountability. The destruction of ancient civilisations was invoked as tangible proof that Allah brings down the arrogant. The "ten nights" of the oath have been interpreted by scholars as the first ten nights of Dhul-Hijjah, giving the surah a connection to the sacred season of Hajj.',
     keyThemes: [
       'Divine oaths by sacred times of creation',
@@ -2879,7 +2879,7 @@ export const SURAHS: SurahData[] = [
         reference: '89:27-30',
         arabic: 'يَا أَيَّتُهَا النَّفْسُ الْمُطْمَئِنَّةُ ارْجِعِي إِلَىٰ رَبِّكِ رَاضِيَةً مَّرْضِيَّةً',
         translation: 'O tranquil soul, return to your Lord, well-pleased and pleasing to Him.',
-        context: 'One of the most beloved verses of the Quran, describing the blessed state of the righteous soul at death and on the Day of Judgement — mutual contentment between the servant and Allah.'
+        context: 'One of the most beloved verses of the Quran, describing the blessed state of the righteous soul at death and on the Day of Judgement  –  mutual contentment between the servant and Allah.'
       },
       {
         reference: '89:15-16',
@@ -2897,7 +2897,7 @@ export const SURAHS: SurahData[] = [
     verses: 20,
     classification: 'Makki',
     period: 'Early Makkan',
-    overview: 'Al-Balad opens with an oath by the sacred city of Makkah, invoking the Prophet\'s special relationship to it, and by the father and his offspring. The surah describes the human being as created in struggle and effort, before confronting the arrogance of those who boast of squandering wealth. It introduces the concept of "the steep path" (al-aqabah) — the difficult moral climb of freeing captives, feeding the hungry, and believing — contrasting those who take this path with the wretched who reject it.',
+    overview: 'Al-Balad opens with an oath by the sacred city of Makkah, invoking the Prophet\'s special relationship to it, and by the father and his offspring. The surah describes the human being as created in struggle and effort, before confronting the arrogance of those who boast of squandering wealth. It introduces the concept of "the steep path" (al-aqabah)  –  the difficult moral climb of freeing captives, feeding the hungry, and believing  –  contrasting those who take this path with the wretched who reject it.',
     asbabalNuzul: 'Revealed in the early Meccan period, this surah addresses the Qurayshi elite who prided themselves on wealth and tribal generosity while persecuting the weak and enslaved. The "steep path" is understood by scholars as the essential moral duties that the Quraysh were neglecting: freeing slaves, feeding the poor, and exercising patience and compassion.',
     keyThemes: [
       'The sanctity of Makkah and the Prophet\'s special standing',
@@ -2917,7 +2917,7 @@ export const SURAHS: SurahData[] = [
         reference: '90:11-13',
         arabic: 'فَلَا اقْتَحَمَ الْعَقَبَةَ ۖ وَمَا أَدْرَاكَ مَا الْعَقَبَةُ ۖ فَكُّ رَقَبَةٍ',
         translation: 'But he has not attempted the steep path. And what can make you know what the steep path is? It is the freeing of a slave.',
-        context: 'The pivotal passage of the surah: the "steep path" of moral courage begins with the most demanding social act of the time — emancipating an enslaved person.'
+        context: 'The pivotal passage of the surah: the "steep path" of moral courage begins with the most demanding social act of the time  –  emancipating an enslaved person.'
       }
     ]
   },
@@ -2929,7 +2929,7 @@ export const SURAHS: SurahData[] = [
     verses: 15,
     classification: 'Makki',
     period: 'Early Meccan',
-    overview: 'Ash-Shams is distinguished by its remarkable chain of eleven consecutive oaths — by the sun, the moon, the day, the night, the sky, the earth, and finally the human soul — all culminating in a single moral truth: the one who purifies their soul succeeds, and the one who corrupts it fails. The surah then narrates the story of Thamud and their she-camel as a cautionary tale of what befalls a people who corrupt themselves collectively and defy divine commands.',
+    overview: 'Ash-Shams is distinguished by its remarkable chain of eleven consecutive oaths  –  by the sun, the moon, the day, the night, the sky, the earth, and finally the human soul  –  all culminating in a single moral truth: the one who purifies their soul succeeds, and the one who corrupts it fails. The surah then narrates the story of Thamud and their she-camel as a cautionary tale of what befalls a people who corrupt themselves collectively and defy divine commands.',
     asbabalNuzul: 'Revealed in the early Meccan period, this surah uses the most expansive oath-sequence in the Quran to drive home one pivotal moral point about the soul. The story of Thamud, who hamstrung the she-camel in open defiance of Allah\'s command, was presented to the Quraysh as the archetype of collective moral corruption leading to collective destruction.',
     keyThemes: [
       'The grandeur of divine oaths drawn from cosmic and human creation',
@@ -2943,7 +2943,7 @@ export const SURAHS: SurahData[] = [
         reference: '91:9-10',
         arabic: 'قَدْ أَفْلَحَ مَن زَكَّاهَا ۖ وَقَدْ خَابَ مَن دَسَّاهَا',
         translation: 'He has succeeded who purifies it, and he has failed who instils it with corruption.',
-        context: 'The single conclusion toward which eleven oaths build — the entire moral architecture of human life pivots on the purification or corruption of the soul.'
+        context: 'The single conclusion toward which eleven oaths build  –  the entire moral architecture of human life pivots on the purification or corruption of the soul.'
       }
     ]
   },
@@ -2955,7 +2955,7 @@ export const SURAHS: SurahData[] = [
     verses: 21,
     classification: 'Makki',
     period: 'Early Meccan',
-    overview: 'Al-Layl opens with oaths by the contrasting phenomena of night and day, and male and female, before presenting two contrasting human paths: the one who gives, is conscious of Allah, and affirms the good, versus the one who withholds, is self-sufficient, and denies. The surah declares that Allah will ease each person toward their chosen path — ease toward goodness or hardship toward misguidance. It concludes with praise of the generous believer who spends seeking the pleasure of his Lord, and promises him contentment.',
+    overview: 'Al-Layl opens with oaths by the contrasting phenomena of night and day, and male and female, before presenting two contrasting human paths: the one who gives, is conscious of Allah, and affirms the good, versus the one who withholds, is self-sufficient, and denies. The surah declares that Allah will ease each person toward their chosen path  –  ease toward goodness or hardship toward misguidance. It concludes with praise of the generous believer who spends seeking the pleasure of his Lord, and promises him contentment.',
     asbabalNuzul: 'This surah was revealed partly in response to the generosity of Abu Bakr al-Siddiq, who had purchased and freed several slaves including Bilal ibn Rabah and Amir ibn Fuhayrah from the Qurayshi torturers. The concluding verses about the one who gives his wealth to purify himself are among the clearest Quranic tributes to Abu Bakr, though the surah addresses a universal moral law.',
     keyThemes: [
       'The cosmic contrasts of night and day as signs',
@@ -2968,13 +2968,13 @@ export const SURAHS: SurahData[] = [
       {
         reference: '92:5-7',
         arabic: 'فَأَمَّا مَنْ أَعْطَىٰ وَاتَّقَىٰ ۝ وَصَدَّقَ بِالْحُسْنَىٰ ۝ فَسَنُيَسِّرُهُ لِلْيُسْرَىٰ',
-        translation: 'As for he who gives and fears Allah, and believes in the best reward — We will ease him toward ease.',
+        translation: 'As for he who gives and fears Allah, and believes in the best reward  –  We will ease him toward ease.',
         context: 'The three conditions of the righteous path: giving, God-consciousness, and affirming divine goodness. Allah\'s response is to further ease them along the path of good.'
       },
       {
         reference: '92:20-21',
         arabic: 'وَمَا لِأَحَدٍ عِندَهُ مِن نِّعْمَةٍ تُجْزَىٰ ۝ إِلَّا ابْتِغَاءَ وَجْهِ رَبِّهِ الْأَعْلَىٰ',
-        translation: 'And not for anyone who has done him a favour to be rewarded — but only seeking the face of his Lord, the Most High.',
+        translation: 'And not for anyone who has done him a favour to be rewarded  –  but only seeking the face of his Lord, the Most High.',
         context: 'The purest description of sincerity (ikhlas) in giving: spending not for gratitude, reputation, or return, but solely for the pleasure of Allah.'
       }
     ]
@@ -2987,8 +2987,8 @@ export const SURAHS: SurahData[] = [
     verses: 11,
     classification: 'Makki',
     period: 'Early Meccan',
-    overview: 'Ad-Duha was revealed after a period in which the revelation had paused, causing the Prophet deep anxiety and giving the enemies of Islam occasion to taunt him. The surah opens with oaths by the brightening morning and the peaceful night, assuring the Prophet that his Lord has not abandoned him nor grown displeased. It reminds him of divine care through past hardship — finding him orphaned, lost, and in need — before commanding him to care for others and proclaim the blessings of his Lord.',
-    asbabalNuzul: 'The revelation had ceased for a period (the fatra), causing distress to the Prophet and prompting the Quraysh to mock: "His Lord has abandoned him." Ad-Duha was revealed as a direct consolation, reminding the Prophet of the three stages of divine grace in his own life — orphanhood resolved, being lost guided, and poverty enriched — to assure him of Allah\'s ongoing care.',
+    overview: 'Ad-Duha was revealed after a period in which the revelation had paused, causing the Prophet deep anxiety and giving the enemies of Islam occasion to taunt him. The surah opens with oaths by the brightening morning and the peaceful night, assuring the Prophet that his Lord has not abandoned him nor grown displeased. It reminds him of divine care through past hardship  –  finding him orphaned, lost, and in need  –  before commanding him to care for others and proclaim the blessings of his Lord.',
+    asbabalNuzul: 'The revelation had ceased for a period (the fatra), causing distress to the Prophet and prompting the Quraysh to mock: "His Lord has abandoned him." Ad-Duha was revealed as a direct consolation, reminding the Prophet of the three stages of divine grace in his own life  –  orphanhood resolved, being lost guided, and poverty enriched  –  to assure him of Allah\'s ongoing care.',
     keyThemes: [
       'Divine reassurance after a period of silence in revelation',
       'Allah\'s care through the three trials of orphanhood, loss, and poverty',
@@ -3007,7 +3007,7 @@ export const SURAHS: SurahData[] = [
         reference: '93:11',
         arabic: 'وَأَمَّا بِنِعْمَةِ رَبِّكَ فَحَدِّثْ',
         translation: 'And as for the favour of your Lord, proclaim it.',
-        context: 'The concluding command: gratitude is expressed not only in the heart but in speech — publicly acknowledging and sharing the blessings of Allah is itself an act of worship.'
+        context: 'The concluding command: gratitude is expressed not only in the heart but in speech  –  publicly acknowledging and sharing the blessings of Allah is itself an act of worship.'
       }
     ]
   },
@@ -3019,7 +3019,7 @@ export const SURAHS: SurahData[] = [
     verses: 8,
     classification: 'Makki',
     period: 'Early Meccan',
-    overview: 'Ash-Sharh, also known as Alam Nashrah, continues the consolation of Ad-Duha. The surah recalls three gifts bestowed on the Prophet: the expansion of his chest (spiritual and moral capacity), the lifting of his burden, and the raising of his remembrance. It then delivers a universal principle of divine grace — repeated twice for emphasis — that with every hardship comes ease. The surah closes by directing the Prophet to turn entirely to his Lord in worship upon completing his work.',
+    overview: 'Ash-Sharh, also known as Alam Nashrah, continues the consolation of Ad-Duha. The surah recalls three gifts bestowed on the Prophet: the expansion of his chest (spiritual and moral capacity), the lifting of his burden, and the raising of his remembrance. It then delivers a universal principle of divine grace  –  repeated twice for emphasis  –  that with every hardship comes ease. The surah closes by directing the Prophet to turn entirely to his Lord in worship upon completing his work.',
     asbabalNuzul: 'Revealed sequentially after Ad-Duha as a continuation of divine comfort to the Prophet. The "burden" is understood by scholars as the weight of his pre-prophetic period of spiritual searching, and the "raising of remembrance" refers to the Prophet\'s name being joined with Allah\'s in the shahada and in the adhan. The repetition of "with hardship comes ease" is understood in hadith to indicate that one hardship cannot overcome two easements.',
     keyThemes: [
       'Divine expansion of the heart for the prophetic mission',
@@ -3046,8 +3046,8 @@ export const SURAHS: SurahData[] = [
     verses: 8,
     classification: 'Makki',
     period: 'Early Meccan',
-    overview: 'At-Tin opens with oaths by the fig, the olive, Mount Sinai, and this secure city (Makkah) — sacred symbols spanning the prophetic missions of Isa, Musa, and Muhammad — before declaring that Allah created the human being in the best stature. The surah then warns that those who do not believe and do righteous deeds are reduced to the lowest of the low. It closes by questioning: who could deny Judgement after these proofs, for Allah is the Wisest of judges.',
-    asbabalNuzul: 'Revealed in the early Meccan period, this brief surah addresses the Quraysh\'s denial of resurrection and accountability through the lens of creation itself. The "fig and olive" are associated by scholars with the sacred lands of the Levant and the prophets Isa and Ibrahim; the oaths thus span three prophetic geographies — Syria, Sinai, and Makkah — to show the continuity of the divine message.',
+    overview: 'At-Tin opens with oaths by the fig, the olive, Mount Sinai, and this secure city (Makkah)  –  sacred symbols spanning the prophetic missions of Isa, Musa, and Muhammad  –  before declaring that Allah created the human being in the best stature. The surah then warns that those who do not believe and do righteous deeds are reduced to the lowest of the low. It closes by questioning: who could deny Judgement after these proofs, for Allah is the Wisest of judges.',
+    asbabalNuzul: 'Revealed in the early Meccan period, this brief surah addresses the Quraysh\'s denial of resurrection and accountability through the lens of creation itself. The "fig and olive" are associated by scholars with the sacred lands of the Levant and the prophets Isa and Ibrahim; the oaths thus span three prophetic geographies  –  Syria, Sinai, and Makkah  –  to show the continuity of the divine message.',
     keyThemes: [
       'Oaths by sacred prophetic geographies linking three divine missions',
       'Human creation in the best and noblest form',
@@ -3072,7 +3072,7 @@ export const SURAHS: SurahData[] = [
     verses: 19,
     classification: 'Makki',
     period: 'Early Meccan',
-    overview: 'Al-Alaq holds the distinction of containing the first verses ever revealed to the Prophet — the opening five verses commanding him to read in the name of his Lord who created. These verses establish that Allah taught humanity through the pen and revealed what they did not know. The remainder of the surah was revealed later, addressing Abu Jahl\'s attempts to stop the Prophet from praying at the Kaaba, condemning his arrogance and commanding the Prophet to prostrate and draw near to Allah.',
+    overview: 'Al-Alaq holds the distinction of containing the first verses ever revealed to the Prophet  –  the opening five verses commanding him to read in the name of his Lord who created. These verses establish that Allah taught humanity through the pen and revealed what they did not know. The remainder of the surah was revealed later, addressing Abu Jahl\'s attempts to stop the Prophet from praying at the Kaaba, condemning his arrogance and commanding the Prophet to prostrate and draw near to Allah.',
     asbabalNuzul: 'The first five verses were revealed in the Cave of Hira on the Night of Power in Ramadan, when the angel Jibril embraced the Prophet and commanded him to read. The Prophet said "I am not one who reads," whereupon Jibril embraced him again and again until the verses flowed. The later verses (6-19) were revealed in response to Abu Jahl\'s public threats to prevent the Prophet from prostrating in prayer.',
     keyThemes: [
       'The first revelation and the command to read in Allah\'s name',
@@ -3085,14 +3085,14 @@ export const SURAHS: SurahData[] = [
       {
         reference: '96:1-2',
         arabic: 'اقْرَأْ بِاسْمِ رَبِّكَ الَّذِي خَلَقَ ۝ خَلَقَ الْإِنسَانَ مِنْ عَلَقٍ',
-        translation: 'Read in the name of your Lord who created — created man from a clinging clot.',
+        translation: 'Read in the name of your Lord who created  –  created man from a clinging clot.',
         context: 'The first words of divine revelation to the Prophet Muhammad, beginning the final prophetic mission. The command to read established knowledge, learning, and the name of Allah as the foundation of Islam.'
       },
       {
         reference: '96:19',
         arabic: 'كَلَّا لَا تُطِعْهُ وَاسْجُدْ وَاقْتَرِب',
         translation: 'No! Do not obey him. But prostrate and draw near.',
-        context: 'The surah\'s concluding command to the Prophet against Abu Jahl: the response to intimidation is not retreat but prostration — drawing ever closer to Allah through worship.'
+        context: 'The surah\'s concluding command to the Prophet against Abu Jahl: the response to intimidation is not retreat but prostration  –  drawing ever closer to Allah through worship.'
       }
     ],
     virtues: 'Al-Alaq has the unique distinction of being the first surah to be revealed, making its opening verses the very beginning of the Quran\'s descent upon the Prophet Muhammad (peace be upon him).',
@@ -3120,7 +3120,7 @@ export const SURAHS: SurahData[] = [
         reference: '97:1-3',
         arabic: 'إِنَّا أَنزَلْنَاهُ فِي لَيْلَةِ الْقَدْرِ ۝ وَمَا أَدْرَاكَ مَا لَيْلَةُ الْقَدْرِ ۝ لَيْلَةُ الْقَدْرِ خَيْرٌ مِّنْ أَلْفِ شَهْرٍ',
         translation: 'Indeed, We sent it down during the Night of Power. And what can make you know what the Night of Power is? The Night of Power is better than a thousand months.',
-        context: 'The entire theological weight of this surah rests in these three verses: the Quran\'s origin on this night, the rhetorical wonder at its greatness, and the staggering arithmetic of its reward — over eighty-three years compressed into one night.'
+        context: 'The entire theological weight of this surah rests in these three verses: the Quran\'s origin on this night, the rhetorical wonder at its greatness, and the staggering arithmetic of its reward  –  over eighty-three years compressed into one night.'
       }
     ],
     virtues: 'The Prophet (peace be upon him) said: "Whoever stands in prayer during the Night of Power out of faith and hoping for reward, all of his previous sins will be forgiven." (Bukhari and Muslim)'
@@ -3133,7 +3133,7 @@ export const SURAHS: SurahData[] = [
     verses: 8,
     classification: 'Madani',
     period: 'Early Madinan',
-    overview: 'Al-Bayyinah addresses the People of the Book and the polytheists who, despite being in a state of expectation for a messenger with clear proofs, continued in their ways once he arrived. The surah clarifies that the People of the Scripture only divided after the clear evidence came to them, not before. It then states the essence of the true religion — worship Allah sincerely, establish prayer, and give zakah — before declaring the two outcomes: the disbelievers as the worst of creatures and the believers who do righteous deeds as the best of creatures, eternally dwelling in the gardens of Eden.',
+    overview: 'Al-Bayyinah addresses the People of the Book and the polytheists who, despite being in a state of expectation for a messenger with clear proofs, continued in their ways once he arrived. The surah clarifies that the People of the Scripture only divided after the clear evidence came to them, not before. It then states the essence of the true religion  –  worship Allah sincerely, establish prayer, and give zakah  –  before declaring the two outcomes: the disbelievers as the worst of creatures and the believers who do righteous deeds as the best of creatures, eternally dwelling in the gardens of Eden.',
     asbabalNuzul: 'Revealed in Madinah after the Prophet had established relations with the Jewish and Christian communities there. The surah addresses the paradox that despite centuries of prophetic anticipation and scriptural knowledge, many of the People of the Book refused to follow the final messenger when he arrived. The phrase "the best of creatures" became a celebrated title for believers and was applied by the Companions to themselves.',
     keyThemes: [
       'The People of the Book and polytheists awaiting clear evidence',
@@ -3152,8 +3152,8 @@ export const SURAHS: SurahData[] = [
       {
         reference: '98:7-8',
         arabic: 'إِنَّ الَّذِينَ آمَنُوا وَعَمِلُوا الصَّالِحَاتِ أُولَٰئِكَ هُمْ خَيْرُ الْبَرِيَّةِ',
-        translation: 'Indeed, those who have believed and done righteous deeds — those are the best of creatures.',
-        context: 'The Companions quoted this verse with joy. The Prophet confirmed to Ibn Abi Rawaha that "you and your companions are the best of creatures" — but scholarly consensus is that the description applies to all true believers throughout time.'
+        translation: 'Indeed, those who have believed and done righteous deeds  –  those are the best of creatures.',
+        context: 'The Companions quoted this verse with joy. The Prophet confirmed to Ibn Abi Rawaha that "you and your companions are the best of creatures"  –  but scholarly consensus is that the description applies to all true believers throughout time.'
       }
     ]
   },
@@ -3165,7 +3165,7 @@ export const SURAHS: SurahData[] = [
     verses: 8,
     classification: 'Madani',
     period: 'Madinan',
-    overview: 'Az-Zalzalah paints a vivid scene of the final earthquake that will shake the earth to its core, causing it to disgorge all its secrets and burdens. The earth itself, inspired by its Lord, will testify to all that was done upon it. Then humanity will come forth in scattered groups to be shown their deeds — with the unshakeable principle that anyone who does an atom\'s weight of good or evil will see it. This surah is considered equivalent in reward to a quarter of the Quran.',
+    overview: 'Az-Zalzalah paints a vivid scene of the final earthquake that will shake the earth to its core, causing it to disgorge all its secrets and burdens. The earth itself, inspired by its Lord, will testify to all that was done upon it. Then humanity will come forth in scattered groups to be shown their deeds  –  with the unshakeable principle that anyone who does an atom\'s weight of good or evil will see it. This surah is considered equivalent in reward to a quarter of the Quran.',
     asbabalNuzul: 'Scholars differ on whether this surah is Meccan or Madinan, with the majority opinion leaning Madinan. The Prophet described it as equivalent to a quarter of the Quran in reward due to the comprehensive moral principle it contains. Ibn Masud reported that when this surah was revealed, the Companions were astonished at the precision of its final principle regarding even an atom\'s weight of good and evil.',
     keyThemes: [
       'The final cosmic earthquake that will shatter the earth',
@@ -3179,7 +3179,7 @@ export const SURAHS: SurahData[] = [
         reference: '99:7-8',
         arabic: 'فَمَن يَعْمَلْ مِثْقَالَ ذَرَّةٍ خَيْرًا يَرَهُ ۝ وَمَن يَعْمَلْ مِثْقَالَ ذَرَّةٍ شَرًّا يَرَهُ',
         translation: 'So whoever does an atom\'s weight of good will see it, and whoever does an atom\'s weight of evil will see it.',
-        context: 'Arguably the most comprehensive statement of divine justice in the Quran. Abdullah ibn Masud called these the most important verses of the whole Quran. They confirm that no act — however small — is beyond Allah\'s knowledge and record.'
+        context: 'Arguably the most comprehensive statement of divine justice in the Quran. Abdullah ibn Masud called these the most important verses of the whole Quran. They confirm that no act  –  however small  –  is beyond Allah\'s knowledge and record.'
       }
     ],
     virtues: 'The Prophet (peace be upon him) said this surah is equivalent to a quarter of the Quran. It is also known as "the surah that makes one cautious" because of the precision of divine accountability it describes.',
@@ -3193,7 +3193,7 @@ export const SURAHS: SurahData[] = [
     verses: 11,
     classification: 'Makki',
     period: 'Early Meccan',
-    overview: 'Al-Adiyat opens with powerful oaths by war horses — their panting breath, their hooves striking sparks, their dawn raids, the dust they raise, and their penetration through the enemy host — before pivoting to a stark indictment: the human being is ungrateful to his Lord. The surah argues that this ingratitude is proven by the human being\'s own testimony: his passionate love for wealth. It closes with the reminder that on the Day of Judgement, when graves are turned over and hearts\' secrets revealed, Allah\'s full knowledge of every soul will be manifest.',
+    overview: 'Al-Adiyat opens with powerful oaths by war horses  –  their panting breath, their hooves striking sparks, their dawn raids, the dust they raise, and their penetration through the enemy host  –  before pivoting to a stark indictment: the human being is ungrateful to his Lord. The surah argues that this ingratitude is proven by the human being\'s own testimony: his passionate love for wealth. It closes with the reminder that on the Day of Judgement, when graves are turned over and hearts\' secrets revealed, Allah\'s full knowledge of every soul will be manifest.',
     asbabalNuzul: 'Revealed in the early Meccan period. Scholars including Ali ibn Abi Talib held that the oaths refer to horses of jihad (warfare), while Ibn Abbas held they refer to horses of Hajj rushing between Muzdalifah and Mina. The Meccan context strongly favours the warfare interpretation as a metaphor for energy and sacrifice, contrasted with human ingratitude. The surah\'s vivid imagery was designed to arrest the attention of the Quraysh, who prized horses highly.',
     keyThemes: [
       'Solemn oaths by the war-horse in battle as symbols of loyalty and sacrifice',
@@ -3207,7 +3207,7 @@ export const SURAHS: SurahData[] = [
         reference: '100:6-8',
         arabic: 'إِنَّ الْإِنسَانَ لِرَبِّهِ لَكَنُودٌ ۝ وَإِنَّهُ عَلَىٰ ذَٰلِكَ لَشَهِيدٌ ۝ وَإِنَّهُ لِحُبِّ الْخَيْرِ لَشَدِيدٌ',
         translation: 'Indeed man, to his Lord, is ungrateful. And indeed he is, to that, a witness. And indeed he is, in love of wealth, intense.',
-        context: 'The moral core of the surah: ingratitude (kufr in its primary sense of covering over blessing) is not merely a theological claim but is proven by the human being\'s own behaviour — his passionate pursuit of wealth over gratitude.'
+        context: 'The moral core of the surah: ingratitude (kufr in its primary sense of covering over blessing) is not merely a theological claim but is proven by the human being\'s own behaviour  –  his passionate pursuit of wealth over gratitude.'
       }
     ]
   },
@@ -3219,7 +3219,7 @@ export const SURAHS: SurahData[] = [
     verses: 11,
     classification: 'Makki',
     period: 'Early Meccan',
-    overview: 'Al-Qariah opens with three rhetorical repetitions of "the Striking Calamity" to build anticipation before describing the Day of Judgement: humanity will be like scattered moths and mountains like carded wool. The surah then introduces the scales of deeds — those whose scales are heavy with good will be in a pleasing life; those whose scales are light will fall into the Pit (Hawiyah), described as a blazing fire. The surah is a concentrated meditation on the finality and justice of the Last Day.',
+    overview: 'Al-Qariah opens with three rhetorical repetitions of "the Striking Calamity" to build anticipation before describing the Day of Judgement: humanity will be like scattered moths and mountains like carded wool. The surah then introduces the scales of deeds  –  those whose scales are heavy with good will be in a pleasing life; those whose scales are light will fall into the Pit (Hawiyah), described as a blazing fire. The surah is a concentrated meditation on the finality and justice of the Last Day.',
     asbabalNuzul: 'Revealed in the early Meccan period as part of the sustained campaign of Quranic revelation on the reality of the Day of Judgement, countering the Quraysh\'s denial of resurrection. The triple repetition "Al-Qariah, what is Al-Qariah, what can make you know what is Al-Qariah" (verses 1-3) mirrors the rhetorical technique of Al-Haqqah and Al-Waqi\'ah, building suspense before unveiling the answer.',
     keyThemes: [
       'The Striking Calamity as a name and reality for the Day of Judgement',
@@ -3232,8 +3232,8 @@ export const SURAHS: SurahData[] = [
       {
         reference: '101:6-9',
         arabic: 'فَأَمَّا مَن ثَقُلَتْ مَوَازِينُهُ ۝ فَهُوَ فِي عِيشَةٍ رَّاضِيَةٍ ۝ وَأَمَّا مَنْ خَفَّتْ مَوَازِينُهُ ۝ فَأُمُّهُ هَاوِيَةٌ',
-        translation: 'As for one whose scales are heavy, he will be in a pleasant life. But as for one whose scales are light — his refuge is an abyss.',
-        context: 'The binary outcome of the scales of deeds, presented with stark simplicity. The word "ummuhu" (his mother/refuge) for the Pit is a devastating irony — the place that should offer comfort and shelter instead devours.'
+        translation: 'As for one whose scales are heavy, he will be in a pleasant life. But as for one whose scales are light  –  his refuge is an abyss.',
+        context: 'The binary outcome of the scales of deeds, presented with stark simplicity. The word "ummuhu" (his mother/refuge) for the Pit is a devastating irony  –  the place that should offer comfort and shelter instead devours.'
       }
     ]
   },
@@ -3245,8 +3245,8 @@ export const SURAHS: SurahData[] = [
     verses: 8,
     classification: 'Makki',
     period: 'Early Meccan',
-    overview: 'At-Takathur is a sharp rebuke of the human obsession with competing in the accumulation of worldly possessions, status, and numbers — a rivalry that preoccupies people until they reach their graves. The surah warns that soon they will know the consequence of this heedlessness, repeating the warning for emphasis. It invokes the certainty of Hell-sight and the certainty of the questioning about pleasure: "You will surely be questioned that Day about pleasure."',
-    asbabalNuzul: 'The surah is generally understood as addressing the boastful rivalry between Meccan tribes who competed by counting their numbers, wealth, and even the graves of their ancestors to prove superiority. The Prophet said that this surah is equivalent to a thousand verses of the Torah. It was also narrated that the Prophet recited: "The son of Adam says: My wealth, my wealth — but what is your wealth except what you ate and consumed, what you wore and wore out, or what you gave in charity and sent forward?" in connection with this surah.',
+    overview: 'At-Takathur is a sharp rebuke of the human obsession with competing in the accumulation of worldly possessions, status, and numbers  –  a rivalry that preoccupies people until they reach their graves. The surah warns that soon they will know the consequence of this heedlessness, repeating the warning for emphasis. It invokes the certainty of Hell-sight and the certainty of the questioning about pleasure: "You will surely be questioned that Day about pleasure."',
+    asbabalNuzul: 'The surah is generally understood as addressing the boastful rivalry between Meccan tribes who competed by counting their numbers, wealth, and even the graves of their ancestors to prove superiority. The Prophet said that this surah is equivalent to a thousand verses of the Torah. It was also narrated that the Prophet recited: "The son of Adam says: My wealth, my wealth  –  but what is your wealth except what you ate and consumed, what you wore and wore out, or what you gave in charity and sent forward?" in connection with this surah.',
     keyThemes: [
       'The human disease of competing in material accumulation',
       'Preoccupation with worldly rivalry until death',
@@ -3259,7 +3259,7 @@ export const SURAHS: SurahData[] = [
         reference: '102:1-2',
         arabic: 'أَلْهَاكُمُ التَّكَاثُرُ ۝ حَتَّىٰ زُرْتُمُ الْمَقَابِرَ',
         translation: 'Competition in worldly increase diverts you until you visit the graveyards.',
-        context: 'An incisive two-verse indictment of a universal human trap: the accumulation race occupies people until death itself — the visit to the graveyard — finally ends the competition. The use of "visit" (zurtum) for death is bleakly ironic.'
+        context: 'An incisive two-verse indictment of a universal human trap: the accumulation race occupies people until death itself  –  the visit to the graveyard  –  finally ends the competition. The use of "visit" (zurtum) for death is bleakly ironic.'
       }
     ],
     virtues: 'The Prophet (peace be upon him) said: "Would any of you be unable to recite a thousand verses each night?" When the Companions expressed difficulty, he said: "Is one of you unable to recite At-Takathur?" indicating its reward is equivalent to a thousand Quranic verses. (Reported by Al-Bayhaqi)'
@@ -3272,8 +3272,8 @@ export const SURAHS: SurahData[] = [
     verses: 3,
     classification: 'Makki',
     period: 'Early Meccan',
-    overview: 'Al-Asr, despite being only three verses, encapsulates the complete framework of human salvation according to Imam al-Shafi\'i, who said: "If people reflected only on this surah, it would suffice them." By an oath by Time itself, the surah declares all humanity in loss — except those who possess four qualities: faith, righteous deeds, mutual counselling toward truth, and mutual counselling toward patience. These four form the complete personal and social architecture of the righteous life.',
-    asbabalNuzul: 'Revealed in the early Meccan period. The Companions held this surah in exceptional reverence. It is reported that when two Companions met, they would not part until one had recited Al-Asr to the other, then they would greet with salam — indicating how central this surah was to their communal understanding of purpose and loss.',
+    overview: 'Al-Asr, despite being only three verses, encapsulates the complete framework of human salvation according to Imam al-Shafi\'i, who said: "If people reflected only on this surah, it would suffice them." By an oath by Time itself, the surah declares all humanity in loss  –  except those who possess four qualities: faith, righteous deeds, mutual counselling toward truth, and mutual counselling toward patience. These four form the complete personal and social architecture of the righteous life.',
+    asbabalNuzul: 'Revealed in the early Meccan period. The Companions held this surah in exceptional reverence. It is reported that when two Companions met, they would not part until one had recited Al-Asr to the other, then they would greet with salam  –  indicating how central this surah was to their communal understanding of purpose and loss.',
     keyThemes: [
       'Time as a witness to human loss and waste',
       'The universal condition of humanity in loss',
@@ -3285,7 +3285,7 @@ export const SURAHS: SurahData[] = [
       {
         reference: '103:1-3',
         arabic: 'وَالْعَصْرِ ۝ إِنَّ الْإِنسَانَ لَفِي خُسْرٍ ۝ إِلَّا الَّذِينَ آمَنُوا وَعَمِلُوا الصَّالِحَاتِ وَتَوَاصَوْا بِالْحَقِّ وَتَوَاصَوْا بِالصَّبْرِ',
-        translation: 'By time — indeed, mankind is in loss, except for those who have believed and done righteous deeds and advised each other to truth and advised each other to patience.',
+        translation: 'By time  –  indeed, mankind is in loss, except for those who have believed and done righteous deeds and advised each other to truth and advised each other to patience.',
         context: 'The entire surah is a single argument: humanity is in loss unless it possesses all four qualities simultaneously. Imam al-Shafi\'i declared this alone sufficient for human salvation if properly reflected upon.'
       }
     ],
@@ -3299,20 +3299,20 @@ export const SURAHS: SurahData[] = [
     verses: 9,
     classification: 'Makki',
     period: 'Early Meccan',
-    overview: 'Al-Humazah pronounces a severe woe against the habitual slanderer who mocks with words and gestures, who hoards wealth obsessively believing it will make him immortal. The surah then describes the punishment awaiting such a person: the crushing Fire of Allah (Hutamah), which breaks everything thrown into it, rising over the hearts. The fire is closed upon them in extended columns — a vivid image of perpetual, inescapable torment as the consequence of perpetual, socially harmful arrogance.',
-    asbabalNuzul: 'While the Quran does not name individuals, classical commentators including Ibn Ishaq identified individuals who were notorious in Makkah for slander and mockery of the Prophet and the believers, such as Walid ibn al-Mughirah and Akhnas ibn Shariq. However, the surah\'s condemnation is universal — it addresses the type, not a specific person — making it applicable to any person of arrogant, slanderous wealth in any era.',
+    overview: 'Al-Humazah pronounces a severe woe against the habitual slanderer who mocks with words and gestures, who hoards wealth obsessively believing it will make him immortal. The surah then describes the punishment awaiting such a person: the crushing Fire of Allah (Hutamah), which breaks everything thrown into it, rising over the hearts. The fire is closed upon them in extended columns  –  a vivid image of perpetual, inescapable torment as the consequence of perpetual, socially harmful arrogance.',
+    asbabalNuzul: 'While the Quran does not name individuals, classical commentators including Ibn Ishaq identified individuals who were notorious in Makkah for slander and mockery of the Prophet and the believers, such as Walid ibn al-Mughirah and Akhnas ibn Shariq. However, the surah\'s condemnation is universal  –  it addresses the type, not a specific person  –  making it applicable to any person of arrogant, slanderous wealth in any era.',
     keyThemes: [
       'Condemnation of habitual slander and mockery',
       'The delusion that hoarded wealth provides immortality',
       'The Hutamah: the crushing, consuming fire',
-      'Fire that reaches into the heart — spiritual torment',
+      'Fire that reaches into the heart  –  spiritual torment',
       'Perpetual, sealed punishment for arrogant, harmful conduct'
     ],
     notableVerses: [
       {
         reference: '104:1-3',
         arabic: 'وَيْلٌ لِّكُلِّ هُمَزَةٍ لُّمَزَةٍ ۝ الَّذِي جَمَعَ مَالًا وَعَدَّدَهُ ۝ يَحْسَبُ أَنَّ مَالَهُ أَخْلَدَهُ',
-        translation: 'Woe to every scorner and mocker — who collects wealth and counts it. He thinks that his wealth will make him immortal.',
+        translation: 'Woe to every scorner and mocker  –  who collects wealth and counts it. He thinks that his wealth will make him immortal.',
         context: 'The double condemnation (humaza + lumaza) covers both verbal slander and physical mockery. The connection to wealth-hoarding reveals the surah\'s target: those whose material security breeds contemptuous cruelty toward others.'
       }
     ]
@@ -3326,7 +3326,7 @@ export const SURAHS: SurahData[] = [
     classification: 'Makki',
     period: 'Early Meccan',
     overview: 'Al-Fil recalls the miraculous event of the Year of the Elephant (570 CE), the year of the Prophet\'s birth, when Abraha al-Ashram of Yemen led an army with war elephants to destroy the Kaaba. Allah sent flocks of birds (Ababeel) that pelted the army with stones of baked clay, destroying them utterly and leaving them like devoured stalks of grain. The surah serves as a reminder to the Quraysh that the Kaaba is under divine protection and that no earthly power can prevail against Allah\'s will.',
-    asbabalNuzul: 'The event was well within living memory for the Quraysh at the time of revelation. Abraha\'s defeat was witnessed by the elders of Makkah and was commemorated as a sign of divine favour on the Kaaba. The surah\'s rhetorical question — "Have you not seen how your Lord dealt with the companions of the elephant?" — presupposes their knowledge of the event and uses it as proof of Allah\'s power to protect His house.',
+    asbabalNuzul: 'The event was well within living memory for the Quraysh at the time of revelation. Abraha\'s defeat was witnessed by the elders of Makkah and was commemorated as a sign of divine favour on the Kaaba. The surah\'s rhetorical question  –  "Have you not seen how your Lord dealt with the companions of the elephant?"  –  presupposes their knowledge of the event and uses it as proof of Allah\'s power to protect His house.',
     keyThemes: [
       'The miraculous destruction of Abraha\'s elephant army',
       'Divine protection of the Sacred House (the Kaaba)',
@@ -3339,7 +3339,7 @@ export const SURAHS: SurahData[] = [
         reference: '105:1-2',
         arabic: 'أَلَمْ تَرَ كَيْفَ فَعَلَ رَبُّكَ بِأَصْحَابِ الْفِيلِ ۝ أَلَمْ يَجْعَلْ كَيْدَهُمْ فِي تَضْلِيلٍ',
         translation: 'Have you not considered how your Lord dealt with the companions of the elephant? Did He not make their plan into misguidance?',
-        context: 'The rhetorical opening assumes that the Quraysh know this history well — it was fifty years before the revelation. The question transforms a political-military memory into a theological proof: Allah thwarted the greatest army of its day to protect His House.'
+        context: 'The rhetorical opening assumes that the Quraysh know this history well  –  it was fifty years before the revelation. The question transforms a political-military memory into a theological proof: Allah thwarted the greatest army of its day to protect His House.'
       }
     ]
   },
@@ -3351,8 +3351,8 @@ export const SURAHS: SurahData[] = [
     verses: 4,
     classification: 'Makki',
     period: 'Early Meccan',
-    overview: 'Quraysh is among the shortest surahs, directed specifically at the tribe of Quraysh. It reminds them of the two blessings that sustained their tribal prosperity: the winter trade journey to Yemen and the summer trade journey to Syria — both made safe by Allah\'s protection. On account of this protection and provision, they are commanded to worship the Lord of this House (the Kaaba) who fed them from hunger and gave them security from fear. Many scholars read this surah as a continuation of Al-Fil, with both sharing a connected argument.',
-    asbabalNuzul: 'The Quraysh had a unique status among Arab tribes as the custodians of the Kaaba, which granted them safe passage throughout the Arabian Peninsula and the privilege of conducting lucrative trade caravans. The surah was revealed to remind them that these privileges — and their very security and prosperity — were gifts from Allah, the Lord of the House they served, creating an obligation of gratitude through worship.',
+    overview: 'Quraysh is among the shortest surahs, directed specifically at the tribe of Quraysh. It reminds them of the two blessings that sustained their tribal prosperity: the winter trade journey to Yemen and the summer trade journey to Syria  –  both made safe by Allah\'s protection. On account of this protection and provision, they are commanded to worship the Lord of this House (the Kaaba) who fed them from hunger and gave them security from fear. Many scholars read this surah as a continuation of Al-Fil, with both sharing a connected argument.',
+    asbabalNuzul: 'The Quraysh had a unique status among Arab tribes as the custodians of the Kaaba, which granted them safe passage throughout the Arabian Peninsula and the privilege of conducting lucrative trade caravans. The surah was revealed to remind them that these privileges  –  and their very security and prosperity  –  were gifts from Allah, the Lord of the House they served, creating an obligation of gratitude through worship.',
     keyThemes: [
       'The unique privilege of the Quraysh as the Kaaba\'s custodians',
       'The two trade journeys as divine blessings',
@@ -3365,7 +3365,7 @@ export const SURAHS: SurahData[] = [
         reference: '106:3-4',
         arabic: 'فَلْيَعْبُدُوا رَبَّ هَٰذَا الْبَيْتِ ۝ الَّذِي أَطْعَمَهُم مِّن جُوعٍ وَآمَنَهُم مِّنْ خَوْفٍ',
         translation: 'Let them worship the Lord of this House, who fed them, preventing hunger, and made them safe, shielding them from fear.',
-        context: 'The surah\'s conclusion delivers both command and argument simultaneously: worship is obligated because of the two gifts of provision (food) and safety — the material foundations of Qurayshi civilization, both sourced entirely from Allah.'
+        context: 'The surah\'s conclusion delivers both command and argument simultaneously: worship is obligated because of the two gifts of provision (food) and safety  –  the material foundations of Qurayshi civilization, both sourced entirely from Allah.'
       }
     ]
   },
@@ -3377,7 +3377,7 @@ export const SURAHS: SurahData[] = [
     verses: 7,
     classification: 'Makki',
     period: 'Early Meccan',
-    overview: 'Al-Maun asks pointedly: do you see the one who denies the religion? It identifies him not by creed alone but by two behavioural markers: he drives away the orphan and does not encourage feeding the poor. The surah then turns to the insincere worshipper — those who pray but are heedless of their prayer, who pray for show, and who refuse to give small kindnesses (al-maun: daily utensils, small acts of help). This surah draws a direct line between theological denial and social cruelty, and between religious hypocrisy and petty meanness.',
+    overview: 'Al-Maun asks pointedly: do you see the one who denies the religion? It identifies him not by creed alone but by two behavioural markers: he drives away the orphan and does not encourage feeding the poor. The surah then turns to the insincere worshipper  –  those who pray but are heedless of their prayer, who pray for show, and who refuse to give small kindnesses (al-maun: daily utensils, small acts of help). This surah draws a direct line between theological denial and social cruelty, and between religious hypocrisy and petty meanness.',
     asbabalNuzul: 'The early Meccan occasion links the surah to prominent Meccans known for mistreating orphans and withholding from the poor. The second half, however, is considered by some scholars to address Madinan hypocrites, making this one of a few surahs possibly with dual revelation contexts. Whether entirely Meccan or mixed, the core message is unified: genuine faith is inseparable from social generosity and sincere worship.',
     keyThemes: [
       'Denial of the religion as manifest in treatment of the orphan and poor',
@@ -3403,10 +3403,10 @@ export const SURAHS: SurahData[] = [
     verses: 3,
     classification: 'Makki',
     period: 'Early Meccan',
-    overview: 'Al-Kawthar is the shortest surah in the Quran. It was revealed as a divine response to the enemies of the Prophet who mocked him as "abtar" (one without male progeny, thus cut off from legacy) after the death of his son. Allah reveals that He has given the Prophet Al-Kawthar — an abundance of good, understood as a river in Paradise, countless blessings, and an everlasting legacy — and commands him to pray and sacrifice. It is his enemies who are the truly cut off.',
+    overview: 'Al-Kawthar is the shortest surah in the Quran. It was revealed as a divine response to the enemies of the Prophet who mocked him as "abtar" (one without male progeny, thus cut off from legacy) after the death of his son. Allah reveals that He has given the Prophet Al-Kawthar  –  an abundance of good, understood as a river in Paradise, countless blessings, and an everlasting legacy  –  and commands him to pray and sacrifice. It is his enemies who are the truly cut off.',
     asbabalNuzul: 'Al-Kawthar was revealed when Al-As ibn Wa\'il and others mocked the Prophet, calling him "abtar" (cut off, without heirs) after the death of his sons. The surah\'s three verses directly invert the mockery: the Prophet has been given boundless abundance, while his mockers are the ones who will be cut off from legacy, remembrance, and good. The Prophet\'s remembrance has indeed proven eternal through the Quran, hadith, and the global Muslim community.',
     keyThemes: [
-      'Divine gift of Al-Kawthar — boundless abundance — to the Prophet',
+      'Divine gift of Al-Kawthar  –  boundless abundance  –  to the Prophet',
       'The command to pray and sacrifice as gratitude',
       'The enemies of the Prophet as truly "abtar" (cut off)',
       'The inversion of mockery: the scorned one is the truly blessed',
@@ -3417,10 +3417,10 @@ export const SURAHS: SurahData[] = [
         reference: '108:1',
         arabic: 'إِنَّا أَعْطَيْنَاكَ الْكَوْثَرَ',
         translation: 'Indeed, We have granted you al-Kawthar.',
-        context: 'The river Al-Kawthar in Paradise is described in hadith as whiter than milk, sweeter than honey, and cooler than ice. Its vessels number more than the stars of the sky. Beyond the literal river, Al-Kawthar represents the boundless good — prophetic legacy, the Quran, the intercession — bestowed on the Prophet.'
+        context: 'The river Al-Kawthar in Paradise is described in hadith as whiter than milk, sweeter than honey, and cooler than ice. Its vessels number more than the stars of the sky. Beyond the literal river, Al-Kawthar represents the boundless good  –  prophetic legacy, the Quran, the intercession  –  bestowed on the Prophet.'
       }
     ],
-    virtues: 'The shortest surah in the Quran by both verse count and word count, yet among the most profound in theological meaning — demonstrating that Quranic brevity does not diminish depth.'
+    virtues: 'The shortest surah in the Quran by both verse count and word count, yet among the most profound in theological meaning  –  demonstrating that Quranic brevity does not diminish depth.'
   },
   {
     number: 109,
@@ -3430,7 +3430,7 @@ export const SURAHS: SurahData[] = [
     verses: 6,
     classification: 'Makki',
     period: 'Early Meccan',
-    overview: 'Al-Kafirun is a surah of definitive and absolute separation between Islamic monotheism and polytheism. Revealed when the Quraysh proposed a compromise — the Prophet worships their gods for a year and they worship Allah for a year — the surah is an unequivocal refusal. The Prophet declares that he does not and will not worship what they worship, and they do not and will not worship what he worships, concluding with the principle of religious non-compromise: "For you is your religion, and for me is my religion."',
+    overview: 'Al-Kafirun is a surah of definitive and absolute separation between Islamic monotheism and polytheism. Revealed when the Quraysh proposed a compromise  –  the Prophet worships their gods for a year and they worship Allah for a year  –  the surah is an unequivocal refusal. The Prophet declares that he does not and will not worship what they worship, and they do not and will not worship what he worships, concluding with the principle of religious non-compromise: "For you is your religion, and for me is my religion."',
     asbabalNuzul: 'The Quraysh made several proposals for religious compromise, the most notable being: worship our gods for a year and we will worship your God for a year, or touch our idols and we will believe in you. Al-Kafirun was revealed as an emphatic rejection of every such proposal. The surah is called "the surah of bara\'ah (disavowal)" from all forms of shirk and is recommended to be recited before sleeping as a protection.',
     keyThemes: [
       'Complete and uncompromising separation from polytheism',
@@ -3444,7 +3444,7 @@ export const SURAHS: SurahData[] = [
         reference: '109:6',
         arabic: 'لَكُمْ دِينُكُمْ وَلِيَ دِينِ',
         translation: 'For you is your religion, and for me is my religion.',
-        context: 'The concluding verse has been cited in interfaith discourse for fourteen centuries. Scholars clarify it is not relativism but a declaration of absolute non-compromise: I will not adopt your religion, you will not adopt mine — peaceful separation, not doctrinal equivalence.'
+        context: 'The concluding verse has been cited in interfaith discourse for fourteen centuries. Scholars clarify it is not relativism but a declaration of absolute non-compromise: I will not adopt your religion, you will not adopt mine  –  peaceful separation, not doctrinal equivalence.'
       }
     ],
     virtues: 'The Prophet (peace be upon him) called this surah "the surah of disavowal from shirk" and recommended reciting it before sleeping, saying it is equivalent to a quarter of the Quran. He recited it in the two rak\'ahs of Fajr sunnah and tawaf prayer.',
@@ -3458,7 +3458,7 @@ export const SURAHS: SurahData[] = [
     verses: 3,
     classification: 'Madani',
     period: 'Late Madinan',
-    overview: 'An-Nasr was the last complete surah to be revealed to the Prophet, understood by the Companions as a sign that his mission was complete and his departure from the world was near. It announces the coming of Allah\'s victory and the conquest of Makkah, describes people entering Islam in multitudes, and commands the Prophet to glorify and praise his Lord and seek His forgiveness — for Allah is ever-accepting of repentance. When Umar saw the Prophet weeping upon hearing it, he understood its profound meaning.',
+    overview: 'An-Nasr was the last complete surah to be revealed to the Prophet, understood by the Companions as a sign that his mission was complete and his departure from the world was near. It announces the coming of Allah\'s victory and the conquest of Makkah, describes people entering Islam in multitudes, and commands the Prophet to glorify and praise his Lord and seek His forgiveness  –  for Allah is ever-accepting of repentance. When Umar saw the Prophet weeping upon hearing it, he understood its profound meaning.',
     asbabalNuzul: 'Revealed at the Farewell Hajj (10 AH) or shortly before, this surah was understood by Ibn Abbas and Umar ibn al-Khattab as the announcement of the Prophet\'s imminent passing. When the Prophet recited it, he said: "The soul has been informed of its death." He thereafter increased in saying "Subhanak Allahumma wa bihamdika, Astaghfiruka wa atubu ilayk" (Glory and praise be to You, O Allah; I seek Your forgiveness and repent to You), in fulfilment of this surah\'s command.',
     keyThemes: [
       'The divine promise of victory and the Conquest of Makkah',
@@ -3472,7 +3472,7 @@ export const SURAHS: SurahData[] = [
         reference: '110:1-2',
         arabic: 'إِذَا جَاءَ نَصْرُ اللَّهِ وَالْفَتْحُ ۝ وَرَأَيْتَ النَّاسَ يَدْخُلُونَ فِي دِينِ اللَّهِ أَفْوَاجًا',
         translation: 'When the victory of Allah has come and the conquest, and you see the people entering into the religion of Allah in multitudes...',
-        context: 'The prophecy of the Conquest of Makkah (8 AH) and the mass conversions across Arabia — fulfilled within two years of the surah\'s revelation. The phrase "afwajan" (in multitudes/crowds) captured the historical reality of tens of thousands embracing Islam.'
+        context: 'The prophecy of the Conquest of Makkah (8 AH) and the mass conversions across Arabia  –  fulfilled within two years of the surah\'s revelation. The phrase "afwajan" (in multitudes/crowds) captured the historical reality of tens of thousands embracing Islam.'
       }
     ],
     virtues: 'The last complete surah revealed to the Prophet. Ibn Abbas said: "It is the announcement of the Prophet\'s death." Omar ibn al-Khattab understood this and wept when the Prophet recited it to the senior Companions.',
@@ -3486,7 +3486,7 @@ export const SURAHS: SurahData[] = [
     verses: 5,
     classification: 'Makki',
     period: 'Early Meccan',
-    overview: 'Al-Masad is one of the most direct and personal condemnations in the Quran, directed at Abu Lahab — the Prophet\'s uncle and one of his most bitter enemies — and his wife Umm Jamil, who used to scatter thorns on the Prophet\'s path. The surah declares that Abu Lahab\'s wealth and efforts will not save him, and that he will enter a blazing fire. His wife will carry firewood (as she did in life in a different sense) with a rope of twisted palm fibre around her neck. The surah is remarkable for naming a specific individual and predicting his death in disbelief.',
+    overview: 'Al-Masad is one of the most direct and personal condemnations in the Quran, directed at Abu Lahab  –  the Prophet\'s uncle and one of his most bitter enemies  –  and his wife Umm Jamil, who used to scatter thorns on the Prophet\'s path. The surah declares that Abu Lahab\'s wealth and efforts will not save him, and that he will enter a blazing fire. His wife will carry firewood (as she did in life in a different sense) with a rope of twisted palm fibre around her neck. The surah is remarkable for naming a specific individual and predicting his death in disbelief.',
     asbabalNuzul: 'When the Prophet climbed Mount Safa and called the Quraysh to faith, Abu Lahab responded: "May you perish! Is it for this you gathered us?" Surah Al-Masad was revealed in response. Abu Lahab died after the Battle of Badr (624 CE) in a state of unbelief, fulfilling the prophecy. His wife Umm Jamil was known to spread malicious rumours and scatter thorns on the Prophet\'s paths, earning her the title "carrier of firewood."',
     keyThemes: [
       'The condemnation of Abu Lahab\'s hostility to the Prophet',
@@ -3500,7 +3500,7 @@ export const SURAHS: SurahData[] = [
         reference: '111:1-3',
         arabic: 'تَبَّتْ يَدَا أَبِي لَهَبٍ وَتَبَّ ۝ مَا أَغْنَىٰ عَنْهُ مَالُهُ وَمَا كَسَبَ ۝ سَيَصْلَىٰ نَارًا ذَاتَ لَهَبٍ',
         translation: 'May the hands of Abu Lahab be ruined, and ruined is he. His wealth and his earnings will not avail him. He will burn in a flaming Fire.',
-        context: 'The early revelation of this condemnation and Abu Lahab\'s subsequent death in disbelief (having never accepted Islam) is cited by scholars as one of the Quran\'s own internal proofs of prophethood — a direct, named prediction fulfilled precisely.'
+        context: 'The early revelation of this condemnation and Abu Lahab\'s subsequent death in disbelief (having never accepted Islam) is cited by scholars as one of the Quran\'s own internal proofs of prophethood  –  a direct, named prediction fulfilled precisely.'
       }
     ],
     alternativeNames: ['Al-Lahab', 'Al-Masad']
@@ -3513,8 +3513,8 @@ export const SURAHS: SurahData[] = [
     verses: 4,
     classification: 'Makki',
     period: 'Early Meccan',
-    overview: 'Al-Ikhlas is the surah of pure monotheism, revealed in direct response to those who asked the Prophet to describe his Lord. It delivers four comprehensive theological statements: Allah is One, Allah is the Eternal Refuge (As-Samad), He neither begot nor was begotten, and nothing is comparable to Him. These four verses systematically deny all forms of shirk — attributing partners, children, parents, or equals to Allah. The Prophet said this surah is equivalent to one-third of the Quran because it encompasses the doctrine of tawhid completely.',
-    asbabalNuzul: 'The Quraysh asked the Prophet to describe the lineage or nature of his Lord ("what is He made of?" — as they categorised their gods). Al-Ikhlas was revealed as a comprehensive response that transcends the category of their question entirely. The surah is also connected to responses given to the Jews of Madinah and the Christians, who attributed offspring and human characteristics to the divine.',
+    overview: 'Al-Ikhlas is the surah of pure monotheism, revealed in direct response to those who asked the Prophet to describe his Lord. It delivers four comprehensive theological statements: Allah is One, Allah is the Eternal Refuge (As-Samad), He neither begot nor was begotten, and nothing is comparable to Him. These four verses systematically deny all forms of shirk  –  attributing partners, children, parents, or equals to Allah. The Prophet said this surah is equivalent to one-third of the Quran because it encompasses the doctrine of tawhid completely.',
+    asbabalNuzul: 'The Quraysh asked the Prophet to describe the lineage or nature of his Lord ("what is He made of?"  –  as they categorised their gods). Al-Ikhlas was revealed as a comprehensive response that transcends the category of their question entirely. The surah is also connected to responses given to the Jews of Madinah and the Christians, who attributed offspring and human characteristics to the divine.',
     keyThemes: [
       'The absolute oneness (Ahad) of Allah',
       'Allah as As-Samad: the self-sufficient Refuge upon whom all depend',
@@ -3541,20 +3541,20 @@ export const SURAHS: SurahData[] = [
     verses: 5,
     classification: 'Makki',
     period: 'Early Meccan',
-    overview: 'Al-Falaq is the first of the two Mu\'awwidhatayn (the two surahs of seeking refuge). It commands the Prophet and all believers to seek refuge in the Lord of the daybreak from four categories of evil: the evil of everything He created, the evil of darkness when it settles, the evil of those who blow on knots (practitioners of magic), and the evil of the envier when he envies. The surah covers the full spectrum of external harms — natural, cosmic, occult, and interpersonal.',
+    overview: 'Al-Falaq is the first of the two Mu\'awwidhatayn (the two surahs of seeking refuge). It commands the Prophet and all believers to seek refuge in the Lord of the daybreak from four categories of evil: the evil of everything He created, the evil of darkness when it settles, the evil of those who blow on knots (practitioners of magic), and the evil of the envier when he envies. The surah covers the full spectrum of external harms  –  natural, cosmic, occult, and interpersonal.',
     asbabalNuzul: 'Al-Falaq and An-Nas were revealed together, according to the narration of Uqbah ibn Amir, who reported that the Prophet said these two surahs were revealed to him and nothing like them had ever been seen. They were revealed in response to a magic spell (sihr) cast on the Prophet by Labid ibn al-A\'sam, which the Prophet was experiencing as illness and confusion. Jibril informed him of the spell, and upon reciting these surahs the Prophet recovered.',
     keyThemes: [
       'Seeking refuge in the Lord of the daybreak (rabb al-falaq)',
       'Protection from the evil inherent in created things',
       'Protection from the evil of encroaching darkness',
-      'Protection from occult harm — those who blow on knots',
+      'Protection from occult harm  –  those who blow on knots',
       'Protection from the destructive force of envy'
     ],
     notableVerses: [
       {
         reference: '113:1-2',
         arabic: 'قُلْ أَعُوذُ بِرَبِّ الْفَلَقِ ۝ مِن شَرِّ مَا خَلَقَ',
-        translation: 'Say: I seek refuge in the Lord of daybreak — from the evil of that which He created.',
+        translation: 'Say: I seek refuge in the Lord of daybreak  –  from the evil of that which He created.',
         context: 'The surah grounds refuge in a specific divine attribute: "Rabb al-Falaq" (Lord of the breaking dawn), pointing to Allah\'s power over the transition from darkness to light as the foundation for all protection from evil.'
       }
     ],
@@ -3569,8 +3569,8 @@ export const SURAHS: SurahData[] = [
     verses: 6,
     classification: 'Makki',
     period: 'Early Meccan',
-    overview: 'An-Nas is the final surah of the Quran, the second of the Mu\'awwidhatayn. It commands seeking refuge in the Lord, King, and God of mankind from the evil of the retreating whisperer (al-waswas al-khannas) — who whispers into the hearts of mankind, whether he be from the jinn or from human beings. The triple designation of Allah — Rabb (Sustainer), Malik (King), Ilah (Deity) — covers the complete dimensions of divine authority, providing comprehensive spiritual protection against the internal enemy of the soul.',
-    asbabalNuzul: 'Revealed alongside Al-Falaq in response to the same sihr incident involving Labid ibn al-A\'sam. While Al-Falaq addresses external evils, An-Nas addresses the internal enemy: the whisperer who retreats upon the remembrance of Allah and then creeps back. This surah identifies the whisperer as potentially from both jinn and human beings — covering all sources of internal spiritual corruption and evil suggestion.',
+    overview: 'An-Nas is the final surah of the Quran, the second of the Mu\'awwidhatayn. It commands seeking refuge in the Lord, King, and God of mankind from the evil of the retreating whisperer (al-waswas al-khannas)  –  who whispers into the hearts of mankind, whether he be from the jinn or from human beings. The triple designation of Allah  –  Rabb (Sustainer), Malik (King), Ilah (Deity)  –  covers the complete dimensions of divine authority, providing comprehensive spiritual protection against the internal enemy of the soul.',
+    asbabalNuzul: 'Revealed alongside Al-Falaq in response to the same sihr incident involving Labid ibn al-A\'sam. While Al-Falaq addresses external evils, An-Nas addresses the internal enemy: the whisperer who retreats upon the remembrance of Allah and then creeps back. This surah identifies the whisperer as potentially from both jinn and human beings  –  covering all sources of internal spiritual corruption and evil suggestion.',
     keyThemes: [
       'Seeking refuge in the threefold authority of Allah over mankind',
       'The nature of al-waswas: the retreating, returning whisperer',
@@ -3582,8 +3582,8 @@ export const SURAHS: SurahData[] = [
       {
         reference: '114:1-4',
         arabic: 'قُلْ أَعُوذُ بِرَبِّ النَّاسِ ۝ مَلِكِ النَّاسِ ۝ إِلَٰهِ النَّاسِ ۝ مِن شَرِّ الْوَسْوَاسِ الْخَنَّاسِ',
-        translation: 'Say: I seek refuge in the Lord of mankind, the Sovereign of mankind, the God of mankind — from the evil of the retreating whisperer.',
-        context: 'The threefold designation — Rabb (Sustainer who nurtures), Malik (King with authority), and Ilah (Deity deserving worship) — presents the complete case for why Allah alone is the sufficient refuge against every internal whisperer and doubt.'
+        translation: 'Say: I seek refuge in the Lord of mankind, the Sovereign of mankind, the God of mankind  –  from the evil of the retreating whisperer.',
+        context: 'The threefold designation  –  Rabb (Sustainer who nurtures), Malik (King with authority), and Ilah (Deity deserving worship)  –  presents the complete case for why Allah alone is the sufficient refuge against every internal whisperer and doubt.'
       }
     ],
     virtues: 'The Prophet (peace be upon him) used to recite Al-Falaq and An-Nas to seek protection each night before sleeping, wiping his body three times. The Quran closes with this surah as a fitting seal: the final message to humanity is to seek refuge in the Lord of humanity against the eternal internal enemy.',

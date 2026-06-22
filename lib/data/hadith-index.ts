@@ -1,4 +1,4 @@
-export interface HadithEntry {
+﻿export interface HadithEntry {
   col: string;
   num: number;
   narrator: string;
@@ -49,7 +49,7 @@ export const HADITH_INDEX: HadithEntry[] = [
     excerpt: 'The Prophet sent Muadh to Yemen and said: Inform them that Allah has made zakat obligatory, to be taken from the rich and given to the poor.' },
 
   { col: 'bukhari', num: 1521, narrator: 'Abu Hurayra',
-    topic: 'Hajj mabrur — reward is paradise',
+    topic: 'Hajj mabrur  –  reward is paradise',
     keywords: ['hajj', 'pilgrimage', 'mecca', 'mabrur', 'paradise', 'jannah', 'umrah'],
     excerpt: 'The reward for an accepted Hajj (Hajj Mabrur) is nothing but paradise.' },
 
@@ -136,7 +136,7 @@ export const HADITH_INDEX: HadithEntry[] = [
   { col: 'muslim', num: 2999, narrator: 'Suhayb',
     topic: 'The believer\'s affair is always good',
     keywords: ['gratitude', 'shukr', 'patience', 'sabr', 'believer', 'affairs', 'good', 'wonderful'],
-    excerpt: 'How wonderful is the case of a believer; his affairs are all good. If something good happens, he is thankful; if something harmful happens, he is patient — and both are good for him.' },
+    excerpt: 'How wonderful is the case of a believer; his affairs are all good. If something good happens, he is thankful; if something harmful happens, he is patient  –  and both are good for him.' },
 
   { col: 'tirmidhi', num: 1956, narrator: 'Abu Dharr',
     topic: 'Smiling at your brother is charity',
@@ -169,7 +169,7 @@ export const HADITH_INDEX: HadithEntry[] = [
     excerpt: 'Allah is Beautiful and loves beauty. Arrogance is rejecting the truth and looking down on people.' },
 
   { col: 'bukhari', num: 5641, narrator: 'Abu Said al-Khudri',
-    topic: 'Patience — no gift more expansive than patience',
+    topic: 'Patience  –  no gift more expansive than patience',
     keywords: ['patience', 'sabr', 'endurance', 'reward', 'test', 'trial', 'gift'],
     excerpt: 'Whoever shows patience, Allah will give him patience, and no one is given a better or more expansive gift than patience.' },
 

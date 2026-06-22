@@ -1,4 +1,20 @@
-const CDN_BASE = 'https://cdn.jsdelivr.net/gh/fawazahmed0/hadith-api@1';
+﻿const CDN_BASES = [
+  'https://cdn.jsdelivr.net/gh/fawazahmed0/hadith-api@1',
+  'https://cdn.jsdelivr.net/gh/fawazahmed0/hadith-api@main',
+  'https://raw.githubusercontent.com/fawazahmed0/hadith-api/1',
+];
+
+async function cdnFetch(path: string, opts?: RequestInit): Promise<Response | null> {
+  for (const base of CDN_BASES) {
+    try {
+      const res = await fetch(`${base}${path}`, { signal: AbortSignal.timeout(8000), ...opts });
+      if (res.ok) return res;
+    } catch {
+      // try next mirror
+    }
+  }
+  return null;
+}
 
 export interface HadithApiResponse {
   hadiths: HadithEntry[];
@@ -46,10 +62,9 @@ export async function fetchHadithList(
   collection: string,
   language: 'eng' | 'ara' = 'eng',
 ): Promise<HadithApiResponse | null> {
-  const url = `${CDN_BASE}/editions/${language}-${collection}.min.json`;
   try {
-    const res = await fetch(url, { next: { revalidate: 86400 } });
-    if (!res.ok) return null;
+    const res = await cdnFetch(`/editions/${language}-${collection}.min.json`, { next: { revalidate: 86400 } } as RequestInit);
+    if (!res) return null;
     return res.json();
   } catch {
     return null;
@@ -68,12 +83,8 @@ export async function fetchHadith(
   number: number,
 ): Promise<{ english: string | null; arabic: string | null; grades?: HadithGrade[]; found: boolean }> {
   const [engRes, araRes] = await Promise.allSettled([
-    fetch(`${CDN_BASE}/editions/eng-${collection}/${number}.min.json`, {
-      next: { revalidate: 3600 },
-    }),
-    fetch(`${CDN_BASE}/editions/ara-${collection}/${number}.min.json`, {
-      next: { revalidate: 3600 },
-    }),
+    cdnFetch(`/editions/eng-${collection}/${number}.min.json`, { next: { revalidate: 3600 } } as RequestInit),
+    cdnFetch(`/editions/ara-${collection}/${number}.min.json`, { next: { revalidate: 3600 } } as RequestInit),
   ]);
 
   let english: string | null = null;
@@ -81,14 +92,14 @@ export async function fetchHadith(
   let grades: HadithGrade[] | undefined;
   let found = false;
 
-  if (engRes.status === 'fulfilled' && engRes.value.ok) {
+  if (engRes.status === 'fulfilled' && engRes.value) {
     found = true;
     const data: SingleHadithResponse = await engRes.value.json();
     english = data.text || null;
     grades = data.grades;
   }
 
-  if (araRes.status === 'fulfilled' && araRes.value.ok) {
+  if (araRes.status === 'fulfilled' && araRes.value) {
     found = true;
     const data: SingleHadithResponse = await araRes.value.json();
     arabic = data.text || null;
@@ -99,7 +110,7 @@ export async function fetchHadith(
 
 /**
  * @deprecated DO NOT USE. Downloads the entire collection JSON just to get the count.
- * Use col.hadithCount from lib/data/collections.ts instead — it is already correct.
+ * Use col.hadithCount from lib/data/collections.ts instead  –  it is already correct.
  */
 /**
  * Fetches the edition index to get the total hadith count for a collection.
@@ -107,10 +118,9 @@ export async function fetchHadith(
 export async function fetchEditionInfo(
   collection: string,
 ): Promise<{ count: number } | null> {
-  const url = `${CDN_BASE}/editions/eng-${collection}.min.json`;
   try {
-    const res = await fetch(url, { next: { revalidate: 86400 } });
-    if (!res.ok) return null;
+    const res = await cdnFetch(`/editions/eng-${collection}.min.json`, { next: { revalidate: 86400 } } as RequestInit);
+    if (!res) return null;
     const data: HadithApiResponse = await res.json();
     return { count: data.hadiths?.length ?? 0 };
   } catch {
@@ -146,10 +156,8 @@ export async function fetchHadithPage(
   const numbers = Array.from({ length: count }, (_, i) => startNumber + i);
   const results = await Promise.allSettled(
     numbers.map(n =>
-      fetch(`${CDN_BASE}/editions/eng-${collection}/${n}.min.json`, {
-        next: { revalidate: 86400 },
-      })
-        .then(r => (r.ok ? (r.json() as Promise<SingleHadithResponse>) : null))
+      cdnFetch(`/editions/eng-${collection}/${n}.min.json`, { next: { revalidate: 86400 } } as RequestInit)
+        .then(r => (r ? (r.json() as Promise<SingleHadithResponse>) : null))
         .catch(() => null),
     ),
   );

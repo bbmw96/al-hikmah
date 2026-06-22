@@ -148,7 +148,7 @@ export const HADITH_COLLECTIONS: HadithCollection[] = [
     grade: 'Major Collection',
     description:
       'One of the largest collections of hadith, compiled by Imam Ahmad ibn Hanbal, the founder of the Hanbali school of jurisprudence. He reportedly selected these hadiths from a pool of 750,000 narrations. The Musnad is arranged by Companion (the person who narrated the hadith from the Prophet ﷺ), making it a comprehensive encyclopaedia of prophetic traditions.',
-    apiCollection: 'ahmad',
+    apiCollection: 'ahmed',
     available: true,
     displayOrder: 8,
   },
@@ -182,7 +182,7 @@ export const HADITH_COLLECTIONS: HadithCollection[] = [
     grade: 'Highly Authentic',
     description:
       'Imam al-Nawawi\'s renowned collection of 42 comprehensive hadiths, each encapsulating a major principle of Islam. Described by scholars as "half of Islam" or more, these hadiths are among the most memorised and studied in the Muslim world, covering belief, worship, ethics, and jurisprudence in concise prophetic statements.',
-    apiCollection: 'nawawi',
+    apiCollection: 'nawawi40',
     available: true,
     displayOrder: 10,
   },
@@ -193,13 +193,13 @@ export const HADITH_COLLECTIONS: HadithCollection[] = [
     shortName: 'Hadith Qudsi',
     author: 'Various Imams',
     authorArabic: 'جماعة من الأئمة',
-    authorDates: '—',
+    authorDates: 'Various periods',
     hadithCount: 40,
     group: 'forty',
     grade: 'Highly Authentic',
     description:
       'Forty sacred hadiths in which Allah speaks in the first person through the Prophet ﷺ, distinct from the Quran yet carrying a unique divine quality. These narrations address matters of the heart, divine mercy, sin, repentance, and the relationship between the servant and his Lord.',
-    apiCollection: 'qudsi',
+    apiCollection: 'qudsi40',
     available: true,
     displayOrder: 11,
   },

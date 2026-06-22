@@ -1,4 +1,4 @@
-import type { Metadata } from 'next';
+﻿import type { Metadata } from 'next';
 import { PageHeader } from '@/components/ui/PageHeader';
 import { ArabicText } from '@/components/ui/ArabicText';
 
@@ -24,17 +24,17 @@ const PERMITTED_CONDITIONS = [
   {
     n: '03',
     title: 'Extreme Cold Without Means of Heating',
-    body: "When one is in severe cold without any way to heat water, and using cold water would cause genuine harm to the body — not mere discomfort, but actual risk of illness or injury. The majority of scholars require this risk to be real and substantiated.",
+    body: "When one is in severe cold without any way to heat water, and using cold water would cause genuine harm to the body  –  not mere discomfort, but actual risk of illness or injury. The majority of scholars require this risk to be real and substantiated.",
   },
   {
     n: '04',
     title: 'Water Needed for Drinking or Cooking',
-    body: "When water is available but is required for drinking or cooking — for oneself, travelling companions, or even animals. The preservation of life takes precedence over ritual purification. Tayamum is performed and the water is protected for essential use.",
+    body: "When water is available but is required for drinking or cooking  –  for oneself, travelling companions, or even animals. The preservation of life takes precedence over ritual purification. Tayamum is performed and the water is protected for essential use.",
   },
   {
     n: '05',
     title: 'Fear of Missing an Irreplaceable Prayer',
-    body: "According to the Hanafi school, Tayamum is also permitted when searching for water would cause one to miss a prayer that cannot be made up — such as Jumu'ah (Friday prayer), either Eid prayer, or the Janazah (funeral prayer), which has no qada'.",
+    body: "According to the Hanafi school, Tayamum is also permitted when searching for water would cause one to miss a prayer that cannot be made up  –  such as Jumu'ah (Friday prayer), either Eid prayer, or the Janazah (funeral prayer), which has no qada'.",
   },
 ];
 
@@ -49,15 +49,15 @@ const NOT_VALID_CONDITIONS = [
   },
   {
     title: 'The permitting condition has ended',
-    body: 'The moment the illness heals, water becomes available, the cold abates, or any other permitting condition ends — Tayamum is invalidated immediately.',
+    body: 'The moment the illness heals, water becomes available, the cold abates, or any other permitting condition ends  –  Tayamum is invalidated immediately.',
   },
   {
     title: 'Deliberate disposal of water to avoid purification',
-    body: "If a person intentionally disposed of water specifically to avoid the obligation of wudu or ghusl, the majority of scholars hold that Tayamum is not valid — a person cannot manufacture their own concession through deliberate negligence.",
+    body: "If a person intentionally disposed of water specifically to avoid the obligation of wudu or ghusl, the majority of scholars hold that Tayamum is not valid  –  a person cannot manufacture their own concession through deliberate negligence.",
   },
   {
     title: 'Using an impure or non-earth substance',
-    body: "Tayamum must be performed on sa'id tayyib — clean earth or a surface of the earth. Impure soil, or materials not derived from the earth (metal, wood, plastic without dust), do not make Tayamum valid.",
+    body: "Tayamum must be performed on sa'id tayyib  –  clean earth or a surface of the earth. Impure soil, or materials not derived from the earth (metal, wood, plastic without dust), do not make Tayamum valid.",
   },
 ];
 
@@ -72,7 +72,7 @@ const STEPS = [
     step: 2,
     title: 'Say Bismillah',
     arabic: 'بِسْمِ اللَّهِ',
-    body: "Begin by saying 'Bismillah' — as with all acts of worship. This is a confirmed sunnah according to the majority, and obligatory according to the Hanbali school.",
+    body: "Begin by saying 'Bismillah'  –  as with all acts of worship. This is a confirmed sunnah according to the majority, and obligatory according to the Hanbali school.",
   },
   {
     step: 3,
@@ -84,7 +84,7 @@ const STEPS = [
     step: 4,
     title: 'Wipe the Entire Face',
     arabic: null,
-    body: "Using both palms together, wipe the entire face once — from the hairline (where hair begins) down to the chin, and from earlobe to earlobe. Ensure the full face is covered in one smooth motion.",
+    body: "Using both palms together, wipe the entire face once  –  from the hairline (where hair begins) down to the chin, and from earlobe to earlobe. Ensure the full face is covered in one smooth motion.",
   },
   {
     step: 5,
@@ -97,15 +97,15 @@ const STEPS = [
 const INVALIDATORS = [
   {
     title: 'Finding or accessing water',
-    body: "The moment clean water becomes available and accessible, Tayamum is invalidated — even during prayer, according to the Maliki and Shafi'i schools.",
+    body: "The moment clean water becomes available and accessible, Tayamum is invalidated  –  even during prayer, according to the Maliki and Shafi'i schools.",
   },
   {
     title: 'The permitting condition ending',
-    body: "Recovery from illness, the journey ending, the cold becoming safe — whenever the excuse that permitted Tayamum is removed, the Tayamum ends.",
+    body: "Recovery from illness, the journey ending, the cold becoming safe  –  whenever the excuse that permitted Tayamum is removed, the Tayamum ends.",
   },
   {
     title: 'Anything that breaks wudu',
-    body: "When Tayamum replaced wudu, all the same nullifiers — urination, defecation, deep sleep, unconsciousness, certain bodily emissions — also break Tayamum.",
+    body: "When Tayamum replaced wudu, all the same nullifiers  –  urination, defecation, deep sleep, unconsciousness, certain bodily emissions  –  also break Tayamum.",
   },
   {
     title: 'Anything that necessitates ghusl',
@@ -119,7 +119,7 @@ export default function TayamumPage() {
       <PageHeader
         title="Tayamum: Dry Ablution"
         arabicTitle="التَّيَمُّم"
-        subtitle="Allah's mercy for the traveller, the ill, and those without water — purification through clean earth when water cannot be used."
+        subtitle="Allah's mercy for the traveller, the ill, and those without water  –  purification through clean earth when water cannot be used."
       />
 
       <div className="max-w-4xl mx-auto px-6 py-16 space-y-16">
@@ -134,7 +134,7 @@ export default function TayamumPage() {
           <p className="text-forest/70 italic text-sm leading-relaxed">
             &ldquo;...seek clean earth and wipe over your faces and your hands with it.
             Allah does not intend to place difficulty upon you...&rdquo;
-            <span className="not-italic text-forest/50 ml-1">— Surah al-Mā&apos;idah 5:6</span>
+            <span className="not-italic text-forest/50 ml-1"> –  Surah al-Mā&apos;idah 5:6</span>
           </p>
         </div>
 
@@ -145,14 +145,14 @@ export default function TayamumPage() {
           </h2>
           <div className="space-y-4 text-forest/80 leading-relaxed">
             <p>
-              <strong>Tayamum</strong> (التَّيَمُّم) is the Islamic ritual of dry purification — a
+              <strong>Tayamum</strong> (التَّيَمُّم) is the Islamic ritual of dry purification  –  a
               divinely-sanctioned substitute for wudu (minor ablution) and ghusl (full-body
               purification) when water is unavailable, inaccessible, or when its use would cause
               genuine harm. The word comes from the Arabic root meaning &ldquo;to intend&rdquo; or
               &ldquo;to direct oneself towards something good.&rdquo;
             </p>
             <p>
-              Tayamum is performed using <em>ṣa&apos;īd ṭayyib</em> (صَعِيدًا طَيِّبًا) — clean
+              Tayamum is performed using <em>ṣa&apos;īd ṭayyib</em> (صَعِيدًا طَيِّبًا)  –  clean
               earth, sand, stone, or any clean surface of the earth carrying fine particles. It stands
               as one of the most profound mercies (<em>rukhṣah</em>) Allah has bestowed upon this
               ummah: no matter the circumstances, a Muslim is never cut off from prayer.
@@ -166,14 +166,14 @@ export default function TayamumPage() {
             The Night of the Lost Necklace
           </h2>
           <p className="font-garamond italic text-gold text-sm mb-6">
-            How Tayamum was revealed — the incident that prompted its divine permission
+            How Tayamum was revealed  –  the incident that prompted its divine permission
           </p>
 
           <div className="bg-cream border border-gold/20 rounded-xl p-6 mb-6">
             <p className="text-forest/75 text-sm leading-relaxed italic mb-3">
               &ldquo;We set out with the Messenger of Allah ﷺ on one of his journeys. When we were
               at a place called al-Bayda&apos;, my necklace broke and fell. The Prophet ﷺ halted to
-              search for it, and all the people halted with him — and there was no water with anyone.
+              search for it, and all the people halted with him  –  and there was no water with anyone.
             </p>
             <p className="text-forest/75 text-sm leading-relaxed italic mb-3">
               The people went to Abu Bakr al-Siddiq and said: &lsquo;Do you not see what Aisha has
@@ -194,7 +194,7 @@ export default function TayamumPage() {
 
           <div className="space-y-3 text-forest/80 text-sm leading-relaxed">
             <p>
-              This incident took place during one of the early military expeditions — approximately
+              This incident took place during one of the early military expeditions  –  approximately
               in the fifth or sixth year of the Hijra. The entire Muslim army was encamped far from
               any water source; Fajr was approaching and many were in a state of impurity with no
               means of performing wudu or ghusl.
@@ -203,7 +203,7 @@ export default function TayamumPage() {
               What could have been a crisis became a moment of divine generosity. Through one night
               of distress, a concession was granted not only to those Companions, but to every Muslim
               until the Day of Judgement. The spontaneous praise of Usayd ibn Hudayr captured what
-              the Companions felt: this was not merely a logistical solution — it was a mercy
+              the Companions felt: this was not merely a logistical solution  –  it was a mercy
               embedded permanently in the religion.
             </p>
           </div>
@@ -230,7 +230,7 @@ export default function TayamumPage() {
               />
               <p className="text-forest/70 text-sm italic leading-relaxed">
                 &ldquo;But if you are ill or on a journey, or one of you comes from the place of
-                relieving himself, or you have been in contact with women and find no water — then
+                relieving himself, or you have been in contact with women and find no water  –  then
                 seek clean earth and wipe over your faces and your hands with it. Allah does not
                 intend to place difficulty upon you; He intends to purify you and to complete His
                 favour upon you that you may be grateful.&rdquo;
@@ -251,7 +251,7 @@ export default function TayamumPage() {
               />
               <p className="text-forest/70 text-sm italic leading-relaxed">
                 &ldquo;But if you are ill or on a journey, or one of you comes from the place of
-                relieving himself, or you have touched women and find no water — then seek clean
+                relieving himself, or you have touched women and find no water  –  then seek clean
                 earth and wipe your faces and your hands with it. Indeed, Allah is ever Pardoning
                 and Forgiving.&rdquo;
               </p>
@@ -314,7 +314,7 @@ export default function TayamumPage() {
           <div className="bg-gold/8 border border-gold/20 rounded-xl p-5 mb-8">
             <p className="text-forest/80 text-sm leading-relaxed">
               <strong>The established method:</strong> The Prophet ﷺ corrected Ammar ibn Yasir
-              when he rolled his entire body in the earth — demonstrating that one single firm
+              when he rolled his entire body in the earth  –  demonstrating that one single firm
               strike of the palms onto clean earth, followed by wiping the face and the hands, is
               sufficient. This is the position supported by the clearest hadith evidence and adopted
               by Imam Ahmad and the majority of hadith scholars.
@@ -372,7 +372,7 @@ export default function TayamumPage() {
               <p className="text-forest/70 text-sm leading-relaxed">
                 Tayamum performed in place of ghusl (after janabah, menstruation, or postpartum
                 bleeding) allows one to pray. Once water becomes available, ghusl must still be
-                performed — Tayamum is a temporary substitute, not a permanent one.
+                performed  –  Tayamum is a temporary substitute, not a permanent one.
               </p>
             </div>
           </div>
@@ -422,8 +422,8 @@ export default function TayamumPage() {
               </p>
               <p className="text-forest/65 text-sm leading-relaxed">
                 This is one of five blessings granted exclusively to the Prophet Muhammad ﷺ and
-                his ummah that were not given to previous nations. The earth itself — in all its
-                forms — is a means of purification for every Muslim until the end of time.
+                his ummah that were not given to previous nations. The earth itself  –  in all its
+                forms  –  is a means of purification for every Muslim until the end of time.
               </p>
             </div>
 
@@ -436,7 +436,7 @@ export default function TayamumPage() {
               <p className="text-forest/70 text-sm italic leading-relaxed mb-2">
                 Ammar ibn Yasir (RA) narrates: &ldquo;I became junub and found no water, so I
                 rolled in the dust as an animal rolls. I then mentioned this to the Prophet ﷺ, and
-                he said: &lsquo;This would have been sufficient for you&rsquo; — and he struck the
+                he said: &lsquo;This would have been sufficient for you&rsquo;  –  and he struck the
                 earth with both hands once, then wiped the left hand over the right and the outer
                 surface of his palms and his face.&rdquo;
               </p>
@@ -445,8 +445,8 @@ export default function TayamumPage() {
               </p>
               <p className="text-forest/65 text-sm leading-relaxed">
                 This is the foundational hadith for the method of Tayamum. The Prophet&apos;s
-                correction of Ammar establishes that one single strike — not rolling in the earth
-                or multiple strikes — is what is required. This narration is relied upon by Imam
+                correction of Ammar establishes that one single strike  –  not rolling in the earth
+                or multiple strikes  –  is what is required. This narration is relied upon by Imam
                 Ahmad, Imam al-Bukhari, and the majority of hadith scholars.
               </p>
             </div>
@@ -466,8 +466,8 @@ export default function TayamumPage() {
                 al-Tirmidhi 124 (Hasan Sahih)
               </p>
               <p className="text-forest/65 text-sm leading-relaxed">
-                Tayamum is not time-limited. A person on a prolonged journey — or in any lasting
-                situation without water access — may continue performing Tayamum for every prayer
+                Tayamum is not time-limited. A person on a prolonged journey  –  or in any lasting
+                situation without water access  –  may continue performing Tayamum for every prayer
                 indefinitely, for as long as the permitting condition persists.
               </p>
             </div>
@@ -483,7 +483,7 @@ export default function TayamumPage() {
           />
           <p className="text-cream/70 italic text-sm">
             &ldquo;And He has not placed upon you in the religion any difficulty.&rdquo;
-            <span className="not-italic ml-1">— Surah al-Hajj 22:78</span>
+            <span className="not-italic ml-1"> –  Surah al-Hajj 22:78</span>
           </p>
         </div>
 

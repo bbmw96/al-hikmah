@@ -1,4 +1,4 @@
-'use client';
+﻿'use client';
 
 import { ArabicText } from '@/components/ui/ArabicText';
 import { useLanguage } from '@/lib/i18n/context';
@@ -19,13 +19,13 @@ const OBLIGATORY_CAUSES = [
     n: 1,
     titleKey: 'cause_1_title' as GhuslContentKey,
     arabic: 'الجنابة',
-    body: "The most common cause. Sexual intercourse between spouses — regardless of whether ejaculation occurs — makes ghusl obligatory on both parties. The Prophet ﷺ said: 'When he sits between her four limbs and the two circumcised parts meet, ghusl becomes obligatory.' (Bukhari 291, Muslim 348)",
+    body: "The most common cause. Sexual intercourse between spouses  –  regardless of whether ejaculation occurs  –  makes ghusl obligatory on both parties. The Prophet ﷺ said: 'When he sits between her four limbs and the two circumcised parts meet, ghusl becomes obligatory.' (Bukhari 291, Muslim 348)",
   },
   {
     n: 2,
     titleKey: 'cause_2_title' as GhuslContentKey,
     arabic: 'الإنزال',
-    body: "Discharge of semen, whether during sleep (wet dream — ihtilam) or waking, makes ghusl obligatory. The Prophet ﷺ said: 'Water [ghusl] is only required because of water [ejaculation].' (Muslim 343) A woman who experiences an orgasm and discharge also requires ghusl.",
+    body: "Discharge of semen, whether during sleep (wet dream  –  ihtilam) or waking, makes ghusl obligatory. The Prophet ﷺ said: 'Water [ghusl] is only required because of water [ejaculation].' (Muslim 343) A woman who experiences an orgasm and discharge also requires ghusl.",
   },
   {
     n: 3,
@@ -43,7 +43,7 @@ const OBLIGATORY_CAUSES = [
     n: 5,
     titleKey: 'cause_5_title' as GhuslContentKey,
     arabic: 'الإسلام',
-    body: "When a person takes their shahada and embraces Islam, most scholars — particularly Shafi'is and Hanbalis — hold that ghusl is required as part of their ritual purification and new beginning.",
+    body: "When a person takes their shahada and embraces Islam, most scholars  –  particularly Shafi'is and Hanbalis  –  hold that ghusl is required as part of their ritual purification and new beginning.",
   },
   {
     n: 6,

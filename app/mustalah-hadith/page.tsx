@@ -1,4 +1,4 @@
-import type { Metadata } from 'next';
+﻿import type { Metadata } from 'next';
 import { PageHeader } from '@/components/ui/PageHeader';
 import { ArabicText } from '@/components/ui/ArabicText';
 
@@ -17,7 +17,7 @@ const GRADES = [
     colour: "bg-gold/15 text-gold border-gold/30",
     definition: "Authentic. The hadith is narrated by a trustworthy narrator from trustworthy narrators in an unbroken chain going back to the Prophet ﷺ, without shudhdudh (anomaly) and without 'illah (hidden defect).",
     subtypes: [
-      { name: "Sahih li-Dhatihi", detail: "Authentic in itself — meets all five conditions with the highest degree of narrator reliability." },
+      { name: "Sahih li-Dhatihi", detail: "Authentic in itself  –  meets all five conditions with the highest degree of narrator reliability." },
       { name: "Sahih li-Ghayrihi", detail: "Elevated to sahih because of corroborating chains. Each individual chain is hasan, but together they raise the grade." },
     ],
   },
@@ -27,7 +27,7 @@ const GRADES = [
     colour: "bg-teal-50 text-teal-700 border-teal-200",
     definition: "Good. All conditions of sahih are met, but at least one narrator's accuracy (dabt) is slightly less precise than the highest standard. It is a valid source for Islamic rulings.",
     subtypes: [
-      { name: "Hasan li-Dhatihi", detail: "Good in itself — the chain contains a narrator of slightly lower precision than sahih standard." },
+      { name: "Hasan li-Dhatihi", detail: "Good in itself  –  the chain contains a narrator of slightly lower precision than sahih standard." },
       { name: "Hasan li-Ghayrihi", detail: "Elevated from da'if to hasan by corroborating chains. The weakness is minor and the support compensates." },
     ],
   },
@@ -37,18 +37,18 @@ const GRADES = [
     colour: "bg-red-50 text-red-700 border-red-200",
     definition: "Weak. Fails to meet one or more of the five conditions for sahih. Cannot be used as primary evidence in fiqh, though some scholars permit using weak hadiths for encouragement (fada'il al-a'mal) under specific conditions.",
     subtypes: [
-      { name: "Mawdu' (Fabricated)", detail: "The worst category — a hadith invented by a liar and falsely attributed to the Prophet ﷺ. Acting on a mawdu' hadith is impermissible." },
+      { name: "Mawdu' (Fabricated)", detail: "The worst category  –  a hadith invented by a liar and falsely attributed to the Prophet ﷺ. Acting on a mawdu' hadith is impermissible." },
       { name: "Munkar (Denounced)", detail: "Narrated by a weak narrator in a way that contradicts what a reliable narrator has said." },
     ],
   },
 ];
 
 const FIVE_CONDITIONS = [
-  { n: 1, condition: "Ittisal al-Sanad", arabic: "اتصال السند", detail: "The chain must be unbroken — every narrator must have met and received the hadith directly from the one above him." },
+  { n: 1, condition: "Ittisal al-Sanad", arabic: "اتصال السند", detail: "The chain must be unbroken  –  every narrator must have met and received the hadith directly from the one above him." },
   { n: 2, condition: "'Adalah (Uprightness)", arabic: "العدالة", detail: "Every narrator in the chain must be a trustworthy Muslim free from major sins and acts that compromise character." },
-  { n: 3, condition: "Dabt (Precision)", arabic: "الضبط", detail: "Every narrator must have an accurate memory — either preserving the hadith in their chest (hafiz) or in reliable written records (kitab)." },
-  { n: 4, condition: "Shudhudh (No Anomaly)", arabic: "عدم الشذوذ", detail: "The hadith must not contradict a more reliable narration from a stronger narrator — the rule of the majority over the lone narrator." },
-  { n: 5, condition: "'Illah (No Hidden Defect)", arabic: "عدم العلة", detail: "There must be no subtle, concealed defect that undermines authenticity — discoverable only by master hadith critics (naqad al-hadith)." },
+  { n: 3, condition: "Dabt (Precision)", arabic: "الضبط", detail: "Every narrator must have an accurate memory  –  either preserving the hadith in their chest (hafiz) or in reliable written records (kitab)." },
+  { n: 4, condition: "Shudhudh (No Anomaly)", arabic: "عدم الشذوذ", detail: "The hadith must not contradict a more reliable narration from a stronger narrator  –  the rule of the majority over the lone narrator." },
+  { n: 5, condition: "'Illah (No Hidden Defect)", arabic: "عدم العلة", detail: "There must be no subtle, concealed defect that undermines authenticity  –  discoverable only by master hadith critics (naqad al-hadith)." },
 ];
 
 const SIX_BOOKS = [
@@ -64,7 +64,7 @@ const SIX_BOOKS = [
     arabic: "صحيح مسلم",
     author: "Muslim ibn al-Hajjaj (d. 261 AH / 875 CE)",
     count: "~7,500 hadiths",
-    note: "Second only to Bukhari in authority. Praised for its superior arrangement — Muslim gathers all chains for a single hadith in one place, whereas Bukhari distributes them across chapters.",
+    note: "Second only to Bukhari in authority. Praised for its superior arrangement  –  Muslim gathers all chains for a single hadith in one place, whereas Bukhari distributes them across chapters.",
   },
   {
     name: "Sunan Abu Dawud",
@@ -137,7 +137,7 @@ const KEY_SCHOLARS = [
     arabic: "الإمام ابن الصلاح",
     title: "Sheikh al-Muhaddithin bi al-Sham",
     dates: "577-643 AH / 1181-1245 CE",
-    note: "Author of Muqaddimah Ibn al-Salah (Ulum al-Hadith) — the foundational text in the science of hadith terminology. He codified the disciplines that every student of mustalah studies to this day.",
+    note: "Author of Muqaddimah Ibn al-Salah (Ulum al-Hadith)  –  the foundational text in the science of hadith terminology. He codified the disciplines that every student of mustalah studies to this day.",
   },
 ];
 
@@ -169,10 +169,10 @@ export default function MustalahhHadithPage() {
               size="md"
             />
             <p className="text-cream/80 text-sm mt-4 leading-relaxed">
-              "Whoever deliberately lies about me — let him take his seat in the Fire." (Bukhari 110, Muslim 4)
+              "Whoever deliberately lies about me  –  let him take his seat in the Fire." (Bukhari 110, Muslim 4)
             </p>
             <p className="text-cream/60 text-xs mt-2">
-              This hadith, narrated by over 80 Companions, is the driving motivation behind the entire science of hadith criticism — to protect the Prophet's ﷺ legacy from fabrication.
+              This hadith, narrated by over 80 Companions, is the driving motivation behind the entire science of hadith criticism  –  to protect the Prophet's ﷺ legacy from fabrication.
             </p>
           </div>
         </section>
@@ -194,7 +194,7 @@ export default function MustalahhHadithPage() {
               </p>
               <h3 className="font-garamond text-lg font-semibold text-forest mb-2">Isnad (Chain of Narrators)</h3>
               <p className="text-forest/60 text-sm leading-relaxed">
-                The sequence of narrators through which the hadith was transmitted from the Prophet ﷺ. A typical isnad reads: "A told us, from B, from C, from D (a Companion), that the Prophet ﷺ said..." The isnad is the cornerstone of hadith authentication — it is what distinguishes Islamic hadith criticism from all other ancient historical traditions.
+                The sequence of narrators through which the hadith was transmitted from the Prophet ﷺ. A typical isnad reads: "A told us, from B, from C, from D (a Companion), that the Prophet ﷺ said..." The isnad is the cornerstone of hadith authentication  –  it is what distinguishes Islamic hadith criticism from all other ancient historical traditions.
               </p>
             </div>
             <div className="card-islamic">
@@ -208,7 +208,7 @@ export default function MustalahhHadithPage() {
               </p>
               <h3 className="font-garamond text-lg font-semibold text-forest mb-2">Matn (Text)</h3>
               <p className="text-forest/60 text-sm leading-relaxed">
-                The actual content of the hadith — what the Prophet ﷺ said, did, or approved. The matn is evaluated against: (1) the Quran, (2) other mutawatir (mass-transmitted) hadiths, (3) established principles of Islamic law, and (4) historical reality. A text that contradicts these is suspect even with a sound isnad.
+                The actual content of the hadith  –  what the Prophet ﷺ said, did, or approved. The matn is evaluated against: (1) the Quran, (2) other mutawatir (mass-transmitted) hadiths, (3) established principles of Islamic law, and (4) historical reality. A text that contradicts these is suspect even with a sound isnad.
               </p>
             </div>
           </div>
@@ -225,7 +225,7 @@ export default function MustalahhHadithPage() {
             Rijal Criticism: Ilm al-Jarh wa al-Ta'dil
           </h2>
           <p className="text-forest/70 leading-relaxed text-sm mb-5">
-            Ilm al-Rijal ("the science of narrators") is the biographical study of every person who ever narrated a hadith. Ilm al-Jarh wa al-Ta'dil ("the science of disparagement and accreditation") is its evaluative branch — scholars would investigate the memory, character, reliability, and consistency of each narrator and issue rulings ranging from "most reliable" to "fabricator."
+            Ilm al-Rijal ("the science of narrators") is the biographical study of every person who ever narrated a hadith. Ilm al-Jarh wa al-Ta'dil ("the science of disparagement and accreditation") is its evaluative branch  –  scholars would investigate the memory, character, reliability, and consistency of each narrator and issue rulings ranging from "most reliable" to "fabricator."
           </p>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-5">
             {[
@@ -324,7 +324,7 @@ export default function MustalahhHadithPage() {
               </p>
               <h3 className="font-garamond text-lg font-semibold text-forest mb-2">Mutawatir</h3>
               <p className="text-forest/60 text-sm leading-relaxed">
-                Mass-transmitted: a hadith narrated by such a large number of people at every level of the chain that collusion or error is inconceivable. Mutawatir hadiths produce certain (qat'i) knowledge — scholars are unanimously bound by them. Example: "Whoever lies about me deliberately, let him take his seat in the Fire." — narrated by 80+ Companions.
+                Mass-transmitted: a hadith narrated by such a large number of people at every level of the chain that collusion or error is inconceivable. Mutawatir hadiths produce certain (qat'i) knowledge  –  scholars are unanimously bound by them. Example: "Whoever lies about me deliberately, let him take his seat in the Fire."  –  narrated by 80+ Companions.
               </p>
             </div>
             <div className="card-islamic">
@@ -338,7 +338,7 @@ export default function MustalahhHadithPage() {
               </p>
               <h3 className="font-garamond text-lg font-semibold text-forest mb-2">Khabar al-Ahad</h3>
               <p className="text-forest/60 text-sm leading-relaxed">
-                Transmitted by one, two, or a small number of narrators at one or more levels. The vast majority of hadiths are ahad. They produce probable (zanni) knowledge, which is still binding in Islamic law if they are sahih or hasan — this is the position of the overwhelming majority of scholars.
+                Transmitted by one, two, or a small number of narrators at one or more levels. The vast majority of hadiths are ahad. They produce probable (zanni) knowledge, which is still binding in Islamic law if they are sahih or hasan  –  this is the position of the overwhelming majority of scholars.
               </p>
             </div>
           </div>

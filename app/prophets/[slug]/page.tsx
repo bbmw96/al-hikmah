@@ -94,7 +94,7 @@ export default async function ProphetPage({ params }: Props) {
           </h2>
           {prophet.lineage.length === 0 ? (
             <div className="card-islamic text-center text-forest/50 text-sm py-6">
-              Adam (peace be upon him) is the first human and first Prophet — he has no human lineage.
+              Adam (peace be upon him) is the first human and first Prophet  –  he has no human lineage.
             </div>
           ) : (
             <div className="flex flex-col items-center gap-0">

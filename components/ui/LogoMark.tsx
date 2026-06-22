@@ -1,4 +1,4 @@
-'use client';
+﻿'use client';
 
 import Link from 'next/link';
 import { BookOpen } from 'lucide-react';
@@ -10,7 +10,7 @@ export function LogoMark({ className, size = 'md' }: { className?: string; size?
     <Link
       href="/"
       className={cn('flex items-center gap-2.5 group', className)}
-      aria-label="Al-Hikmah — Home"
+      aria-label="Al-Hikmah  –  Home"
     >
       <div
         className={cn(
@@ -29,7 +29,7 @@ export function LogoMark({ className, size = 'md' }: { className?: string; size?
         className="relative flex-shrink-0"
         style={{ width: isSmall ? '126px' : '148px', height: isSmall ? '28px' : '34px' }}
       >
-        {/* Arabic — decorative layer, larger, low opacity */}
+        {/* Arabic  –  decorative layer, larger, low opacity */}
         <span
           dir="rtl"
           lang="ar"
@@ -43,7 +43,7 @@ export function LogoMark({ className, size = 'md' }: { className?: string; size?
         >
           الحكمة
         </span>
-        {/* English — primary layer, solid */}
+        {/* English  –  primary layer, solid */}
         <span
           className={cn(
             'absolute inset-0 flex items-center justify-center font-garamond font-semibold text-cream whitespace-nowrap',

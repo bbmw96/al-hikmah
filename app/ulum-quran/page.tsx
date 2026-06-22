@@ -1,4 +1,4 @@
-import type { Metadata } from 'next';
+﻿import type { Metadata } from 'next';
 import { PageHeader } from '@/components/ui/PageHeader';
 import { ArabicText } from '@/components/ui/ArabicText';
 
@@ -45,12 +45,12 @@ const COMPILATION_STAGES = [
     detail: "Revelation was recorded immediately by Companions known as the 'kuttab al-wahy' (scribes of revelation), including Zayd ibn Thabit, Ubayy ibn Ka'b, and Ali ibn Abi Talib (ra). The text was written on palm leaves, flat stones, bones, and leather. The Prophet ﷺ himself designated the order of the surahs through divine guidance.",
   },
   {
-    caliph: "Abu Bakr al-Siddiq (ra) — 1st Caliph",
+    caliph: "Abu Bakr al-Siddiq (ra)  –  1st Caliph",
     arabic: 'أبو بكر الصديق',
     detail: "After the Battle of Yamama (11 AH / 633 CE), in which 70 huffaz (memorisers) were martyred, Umar ibn al-Khattab urged Abu Bakr to compile the Quran into a single manuscript. Zayd ibn Thabit was appointed to lead the effort. He accepted only verified written material that had two witnesses confirming they had heard it from the Prophet ﷺ himself. The compiled mushaf was preserved with Abu Bakr, then Umar, then Hafsa bint Umar (ra).",
   },
   {
-    caliph: "Uthman ibn Affan (ra) — 3rd Caliph",
+    caliph: "Uthman ibn Affan (ra)  –  3rd Caliph",
     arabic: 'عثمان بن عفان',
     detail: "As Islam spread to Persia, Azerbaijan, and Armenia, Hudhayfah ibn al-Yaman reported to Uthman that Muslims were reading the Quran in differing dialects. Uthman commissioned Zayd ibn Thabit and three senior Qurayshi Companions to produce a standardised master copy in the Qurayshi dialect (the dialect in which the Quran was primarily revealed). Copies were sent to each province, and other manuscripts were destroyed to prevent confusion. This became the definitive Uthmanic codex (al-Mushaf al-Uthmani), which is the Quran as it exists today.",
   },
@@ -225,7 +225,7 @@ export default function UlumQuranPage() {
           </p>
           <div className="gold-border-left pl-5">
             <p className="text-forest/70 text-sm leading-relaxed">
-              The foundational principle of tafsir: <em>"al-ibra bi umum al-lafz la bi khusus al-sabab"</em> — the ruling is determined by the generality of the wording, not merely the specific cause of revelation. A verse revealed in response to a specific incident carries a ruling that applies generally, not only to that one incident.
+              The foundational principle of tafsir: <em>"al-ibra bi umum al-lafz la bi khusus al-sabab"</em>  –  the ruling is determined by the generality of the wording, not merely the specific cause of revelation. A verse revealed in response to a specific incident carries a ruling that applies generally, not only to that one incident.
             </p>
           </div>
         </section>

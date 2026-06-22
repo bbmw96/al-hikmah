@@ -1,4 +1,4 @@
-import type { Metadata } from 'next';
+﻿import type { Metadata } from 'next';
 import { PageHeader } from '@/components/ui/PageHeader';
 import { ArabicText } from '@/components/ui/ArabicText';
 
@@ -7,13 +7,13 @@ export const dynamic = 'force-static';
 export const metadata: Metadata = {
   title: "Jumu'ah: The Friday Prayer | Al-Hikmah",
   description:
-    "Jumu'ah is the congregational Friday Prayer — the weekly act of collective worship that distinguishes the Muslim community. Learn its Quranic command, who it is obligatory upon, the two khutbahs, the prayer's structure, etiquettes of the day, and the blessed moments unique to Friday.",
+    "Jumu'ah is the congregational Friday Prayer  –  the weekly act of collective worship that distinguishes the Muslim community. Learn its Quranic command, who it is obligatory upon, the two khutbahs, the prayer's structure, etiquettes of the day, and the blessed moments unique to Friday.",
 };
 
 const CONDITIONS_VALID = [
   {
     title: 'The Islamic settlement (misr)',
-    detail: "Jumu'ah must be performed in a settlement — a town or city with permanent residents. It cannot be performed by travellers in the open desert, though many scholars permit it wherever forty eligible men gather.",
+    detail: "Jumu'ah must be performed in a settlement  –  a town or city with permanent residents. It cannot be performed by travellers in the open desert, though many scholars permit it wherever forty eligible men gather.",
   },
   {
     title: 'Minimum number of worshippers',
@@ -180,7 +180,7 @@ export default function JumuahPage() {
           </div>
           <div className="gold-border-left pl-5">
             <p className="text-forest/70 text-sm leading-relaxed">
-              The khutbah should be in a language the congregation understands for the advice and du'a portions, though the opening praise of Allah and the salawat must be in Arabic. Listening to the khutbah is obligatory; speaking during it — even to tell another to be quiet — is prohibited while the imam is addressing the congregation. (Bukhari 934, Muslim 851)
+              The khutbah should be in a language the congregation understands for the advice and du'a portions, though the opening praise of Allah and the salawat must be in Arabic. Listening to the khutbah is obligatory; speaking during it  –  even to tell another to be quiet  –  is prohibited while the imam is addressing the congregation. (Bukhari 934, Muslim 851)
             </p>
           </div>
         </section>

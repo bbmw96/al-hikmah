@@ -11,7 +11,23 @@ import { useLanguage } from '@/lib/i18n/context';
 import type { HadithCollection } from '@/lib/data/collections';
 import type { HadithGrade } from '@/lib/hadith-api';
 
-const CDN_BASE = 'https://cdn.jsdelivr.net/gh/fawazahmed0/hadith-api@1';
+const CDN_MIRRORS = [
+  'https://cdn.jsdelivr.net/gh/fawazahmed0/hadith-api@1',
+  'https://cdn.jsdelivr.net/gh/fawazahmed0/hadith-api@main',
+  'https://raw.githubusercontent.com/fawazahmed0/hadith-api/1',
+];
+
+async function mirrorFetch(path: string): Promise<Response | null> {
+  for (const base of CDN_MIRRORS) {
+    try {
+      const res = await fetch(`${base}${path}`);
+      if (res.ok) return res;
+    } catch {
+      // try next mirror
+    }
+  }
+  return null;
+}
 
 interface HadithDetailProps {
   collection: HadithCollection;
@@ -65,9 +81,8 @@ export function HadithDetail({
     setNotAvailable(false);
 
     try {
-      const url = `${CDN_BASE}/editions/${apiPrefix}-${collection.apiCollection}/${hadithNumber}.min.json`;
-      const res = await fetch(url);
-      if (!res.ok) throw new Error('not-available');
+      const res = await mirrorFetch(`/editions/${apiPrefix}-${collection.apiCollection}/${hadithNumber}.min.json`);
+      if (!res) throw new Error('not-available');
       const data = await res.json();
       const text: string | null =
         data?.text ?? data?.hadiths?.[0]?.body ?? data?.hadiths?.[0]?.text ?? null;

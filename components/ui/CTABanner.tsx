@@ -1,4 +1,4 @@
-'use client';
+﻿'use client';
 
 import Link from 'next/link';
 import { IslamicPattern } from '@/components/ui/IslamicPattern';
@@ -22,7 +22,7 @@ export function CTABanner() {
         </p>
         <p className="text-cream/60 italic text-base mb-8">
           {t('cta.verse.text')}{' '}
-          <span className="not-italic text-gold/70">— Surah al-Isra&apos; 17:85</span>
+          <span className="not-italic text-gold/70"> –  Surah al-Isra&apos; 17:85</span>
         </p>
         <Link href="/hadith" className="btn-gold text-base px-8 py-3.5">
           {t('home.beginstudy')}

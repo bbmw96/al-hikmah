@@ -1,4 +1,4 @@
-import type { Metadata } from 'next';
+﻿import type { Metadata } from 'next';
 import { PageHeader } from '@/components/ui/PageHeader';
 import { ArabicText } from '@/components/ui/ArabicText';
 
@@ -80,7 +80,7 @@ export default function EidPage() {
       <PageHeader
         title="Eid: The Two Celebrations"
         arabicTitle="العِيدَان"
-        subtitle="Eid al-Fitr and Eid al-Adha — the two annual occasions of joy, gratitude, charity, and communal worship"
+        subtitle="Eid al-Fitr and Eid al-Adha  –  the two annual occasions of joy, gratitude, charity, and communal worship"
       />
 
       <div className="max-w-4xl mx-auto px-6 py-14 space-y-16">
@@ -100,7 +100,7 @@ export default function EidPage() {
             </p>
           </div>
           <p className="text-forest/70 leading-relaxed text-sm">
-            The two Eids are unique in Islam: they are not merely cultural festivals but acts of worship commanded by Allah, expressing gratitude after the major acts of devotion — Ramadan (Eid al-Fitr) and Hajj (Eid al-Adha). The Prophet ﷺ himself led the Eid prayers in the open musalla (prayer ground), and the whole Muslim community — men, women, children, and even menstruating women who did not pray but came for the communal gathering — attended.
+            The two Eids are unique in Islam: they are not merely cultural festivals but acts of worship commanded by Allah, expressing gratitude after the major acts of devotion  –  Ramadan (Eid al-Fitr) and Hajj (Eid al-Adha). The Prophet ﷺ himself led the Eid prayers in the open musalla (prayer ground), and the whole Muslim community  –  men, women, children, and even menstruating women who did not pray but came for the communal gathering  –  attended.
           </p>
         </section>
 
@@ -188,7 +188,7 @@ export default function EidPage() {
           </h2>
           <div className="card-islamic mb-5">
             <p className="text-forest/70 text-sm leading-relaxed mb-3">
-              The Prophet ﷺ made Zakat al-Fitr obligatory on every Muslim before the Eid prayer — one sa' (approximately 2.5 kg) of the local staple food, paid on behalf of every member of the household. The Prophet ﷺ said:
+              The Prophet ﷺ made Zakat al-Fitr obligatory on every Muslim before the Eid prayer  –  one sa' (approximately 2.5 kg) of the local staple food, paid on behalf of every member of the household. The Prophet ﷺ said:
             </p>
             <div className="gold-border-left pl-5">
               <p className="text-forest/70 text-sm leading-relaxed italic">
@@ -239,7 +239,7 @@ export default function EidPage() {
               "Take a different route returning home than the one taken going (Sunnah of the Prophet ﷺ)",
               "Exchange Eid greetings: 'Taqabbalallahu minna wa minkum' (May Allah accept from us and from you)",
               "Visit relatives and strengthen family ties on Eid",
-              "Express joy and gratitude — this is a day of worship through happiness",
+              "Express joy and gratitude  –  this is a day of worship through happiness",
             ].map(item => (
               <div key={item} className="card-islamic flex items-start gap-3">
                 <div className="w-2 h-2 rounded-full bg-gold mt-2 flex-shrink-0" />
