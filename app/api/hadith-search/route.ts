@@ -1,4 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server';
+
+export const runtime = 'edge';
 import { HADITH_INDEX, MULTILINGUAL_KEYWORDS } from '@/lib/data/hadith-index';
 
 function resolveQuery(raw: string, lang: string): string[] {
@@ -59,5 +61,8 @@ export async function GET(request: NextRequest) {
     text: h.excerpt,
   }));
 
-  return NextResponse.json({ hadiths: matches, query: q, total: matches.length });
+  return NextResponse.json(
+    { hadiths: matches, query: q, total: matches.length },
+    { headers: { 'Cache-Control': 'public, s-maxage=300, stale-while-revalidate=3600' } },
+  );
 }

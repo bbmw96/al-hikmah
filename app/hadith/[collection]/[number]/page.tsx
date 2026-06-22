@@ -1,10 +1,21 @@
 ﻿import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
-import { getCollectionById } from '@/lib/data/collections';
+import { HADITH_COLLECTIONS, getCollectionById } from '@/lib/data/collections';
 import { fetchHadith } from '@/lib/hadith-api';
 import { HadithDetail } from './HadithDetail';
 
 export const revalidate = 3600; // re-render at most once per hour; cached by Next.js CDN between renders
+
+export async function generateStaticParams(): Promise<{ collection: string; number: string }[]> {
+  const params: { collection: string; number: string }[] = [];
+  for (const col of HADITH_COLLECTIONS.filter(c => c.available && c.apiCollection)) {
+    const limit = col.hadithCount <= 100 ? col.hadithCount : 20;
+    for (let i = 1; i <= limit; i++) {
+      params.push({ collection: col.id, number: String(i) });
+    }
+  }
+  return params;
+}
 
 interface Props {
   params: Promise<{ collection: string; number: string }>;

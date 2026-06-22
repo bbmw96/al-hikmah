@@ -5,15 +5,16 @@
 ];
 
 async function cdnFetch(path: string, opts?: RequestInit, timeoutMs = 4000): Promise<Response | null> {
-  for (const base of CDN_BASES) {
-    try {
-      const res = await fetch(`${base}${path}`, { signal: AbortSignal.timeout(timeoutMs), ...opts });
-      if (res.ok) return res;
-    } catch {
-      // try next mirror
-    }
+  try {
+    return await Promise.any(
+      CDN_BASES.map(base =>
+        fetch(`${base}${path}`, { signal: AbortSignal.timeout(timeoutMs), ...opts })
+          .then(res => { if (!res.ok) throw new Error(`HTTP ${res.status}`); return res; })
+      )
+    );
+  } catch {
+    return null;
   }
-  return null;
 }
 
 export interface HadithApiResponse {
@@ -134,6 +135,15 @@ export async function fetchEditionInfo(
   }
 }
 
+function extractHadithData(raw: Record<string, unknown>): { text: string | null; grades?: HadithGrade[]; reference?: HadithReference } {
+  const hadiths = raw?.hadiths as Array<Record<string, unknown>> | undefined;
+  return {
+    text: (raw?.text as string | undefined) ?? (hadiths?.[0]?.text as string | undefined) ?? (hadiths?.[0]?.body as string | undefined) ?? null,
+    grades: (raw?.grades ?? hadiths?.[0]?.grades) as HadithGrade[] | undefined,
+    reference: (raw?.reference ?? hadiths?.[0]?.reference) as HadithReference | undefined,
+  };
+}
+
 /**
  * Like fetchHadithPage but fetches Arabic and English simultaneously.
  * Used by the collection browse page to display Arabic text first.
@@ -144,10 +154,10 @@ export async function fetchHadithPageBilingual(
   count: number,
 ): Promise<HadithEntry[]> {
   const numbers = Array.from({ length: count }, (_, i) => startNumber + i);
-  const fetchOne = (lang: string, n: number) =>
-    cdnFetch(`/editions/${lang}-${collection}/${n}.min.json`, { next: { revalidate: 86400 } } as RequestInit)
-      .then(r => (r ? (r.json() as Promise<SingleHadithResponse>) : null))
-      .catch(() => null);
+  const fetchOne = async (lang: string, n: number): Promise<Record<string, unknown> | null> => {
+    const res = await cdnFetch(`/editions/${lang}-${collection}/${n}.min.json`, { next: { revalidate: 86400 } } as RequestInit);
+    return res ? (res.json() as Promise<Record<string, unknown>>) : null;
+  };
 
   const [engSettled, araSettled] = await Promise.all([
     Promise.allSettled(numbers.map(n => fetchOne('eng', n))),
@@ -155,17 +165,18 @@ export async function fetchHadithPageBilingual(
   ]);
 
   return engSettled.flatMap((r, i) => {
-    if (r.status === 'fulfilled' && r.value?.text) {
-      const ara = araSettled[i];
-      return [{
-        hadithnumber: numbers[i],
-        text: r.value.text,
-        arabicText: ara.status === 'fulfilled' && ara.value?.text ? ara.value.text : undefined,
-        grades: r.value.grades,
-        reference: r.value.reference,
-      }];
-    }
-    return [];
+    if (r.status !== 'fulfilled' || !r.value) return [];
+    const { text, grades, reference } = extractHadithData(r.value);
+    if (!text) return [];
+    const ara = araSettled[i];
+    const araData = ara.status === 'fulfilled' && ara.value ? extractHadithData(ara.value) : null;
+    return [{
+      hadithnumber: numbers[i],
+      text,
+      arabicText: araData?.text ?? undefined,
+      grades,
+      reference,
+    }];
   });
 }
 
@@ -196,24 +207,16 @@ export async function fetchHadithPage(
 ): Promise<HadithEntry[]> {
   const numbers = Array.from({ length: count }, (_, i) => startNumber + i);
   const results = await Promise.allSettled(
-    numbers.map(n =>
-      cdnFetch(`/editions/eng-${collection}/${n}.min.json`, { next: { revalidate: 86400 } } as RequestInit)
-        .then(r => (r ? (r.json() as Promise<SingleHadithResponse>) : null))
-        .catch(() => null),
-    ),
+    numbers.map(async n => {
+      const res = await cdnFetch(`/editions/eng-${collection}/${n}.min.json`, { next: { revalidate: 86400 } } as RequestInit);
+      return res ? (res.json() as Promise<Record<string, unknown>>) : null;
+    }),
   );
 
   return results.flatMap((r, i) => {
-    if (r.status === 'fulfilled' && r.value?.text) {
-      return [
-        {
-          hadithnumber: numbers[i],
-          text: r.value.text,
-          grades: r.value.grades,
-          reference: r.value.reference,
-        },
-      ];
-    }
-    return [];
+    if (r.status !== 'fulfilled' || !r.value) return [];
+    const { text, grades, reference } = extractHadithData(r.value);
+    if (!text) return [];
+    return [{ hadithnumber: numbers[i], text, grades, reference }];
   });
 }

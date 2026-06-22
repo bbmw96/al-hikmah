@@ -1,5 +1,5 @@
 ﻿import type { Metadata } from 'next';
-import { EB_Garamond, Inter } from 'next/font/google';
+import { EB_Garamond, Inter, Scheherazade_New } from 'next/font/google';
 import './globals.css';
 import { Navbar } from '@/components/navigation/Navbar';
 import { Footer } from '@/components/navigation/Footer';
@@ -14,6 +14,13 @@ const ebGaramond = EB_Garamond({
 const inter = Inter({
   variable: '--font-inter',
   subsets: ['latin'],
+  display: 'swap',
+});
+
+const scheherazade = Scheherazade_New({
+  variable: '--font-scheherazade',
+  subsets: ['arabic', 'latin'],
+  weight: ['400', '500', '700'],
   display: 'swap',
 });
 
@@ -38,8 +45,13 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html
       lang="en-GB"
-      className={`${ebGaramond.variable} ${inter.variable} h-full antialiased`}
+      className={`${ebGaramond.variable} ${inter.variable} ${scheherazade.variable} h-full antialiased`}
     >
+      <head>
+        <link rel="preconnect" href="https://cdn.jsdelivr.net" />
+        <link rel="preconnect" href="https://fastly.jsdelivr.net" />
+        <link rel="dns-prefetch" href="https://raw.githubusercontent.com" />
+      </head>
       <body className="min-h-full flex flex-col bg-cream font-inter text-forest">
         <Providers>
           <Navbar />

@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
+import { useRouter } from 'next/navigation';
 import { ChevronLeft, ChevronRight, BookOpen, Globe, Loader2 } from 'lucide-react';
 import { ArabicText } from '@/components/ui/ArabicText';
 import { LanguageSelector } from '@/components/ui/LanguageSelector';
@@ -18,15 +19,15 @@ const CDN_MIRRORS = [
 ];
 
 async function mirrorFetch(path: string): Promise<Response | null> {
-  for (const base of CDN_MIRRORS) {
-    try {
-      const res = await fetch(`${base}${path}`);
-      if (res.ok) return res;
-    } catch {
-      // try next mirror
-    }
+  try {
+    return await Promise.any(
+      CDN_MIRRORS.map(base =>
+        fetch(`${base}${path}`).then(res => { if (!res.ok) throw new Error('not ok'); return res; })
+      )
+    );
+  } catch {
+    return null;
   }
-  return null;
 }
 
 interface HadithDetailProps {
@@ -51,12 +52,18 @@ export function HadithDetail({
   arabicText,
   grades,
 }: HadithDetailProps) {
+  const router = useRouter();
   const { t, lang } = useLanguage();
   const [activeTab, setActiveTab] = useState<Tab>(() => (lang !== 'en' ? 'translation' : 'meaning'));
   const [language, setLanguage] = useState<LanguageCode>(() => lang as LanguageCode);
   const [translations, setTranslations] = useState<Map<LanguageCode, string>>(() => new Map());
   const [loading, setLoading] = useState(false);
   const [notAvailable, setNotAvailable] = useState(false);
+
+  useEffect(() => {
+    if (hadithNumber > 1) router.prefetch(`/hadith/${collection.id}/${hadithNumber - 1}`);
+    if (hadithNumber < collection.hadithCount) router.prefetch(`/hadith/${collection.id}/${hadithNumber + 1}`);
+  }, [collection.id, collection.hadithCount, hadithNumber, router]);
 
   useEffect(() => {
     if (lang === 'en') return;
