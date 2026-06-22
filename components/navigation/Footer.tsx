@@ -1,8 +1,9 @@
 'use client';
 
 import Link from 'next/link';
-import { BookOpen, Heart } from 'lucide-react';
+import { Heart } from 'lucide-react';
 import { useLanguage } from '@/lib/i18n/context';
+import { LogoMark } from '@/components/ui/LogoMark';
 
 export function Footer() {
   const { t } = useLanguage();
@@ -58,20 +59,7 @@ export function Footer() {
       <div className="max-w-7xl mx-auto px-6 py-14">
         {/* Brand */}
         <div className="mb-10 flex flex-col items-start gap-3 max-w-xs">
-          <div className="flex items-center gap-2.5">
-            <div className="w-9 h-9 rounded-full bg-gold/20 flex items-center justify-center ring-1 ring-gold/40">
-              <BookOpen className="w-5 h-5 text-gold" aria-hidden="true" />
-            </div>
-            <span className="font-garamond text-xl font-semibold text-cream">Al-Hikmah</span>
-          </div>
-          <p
-            dir="rtl"
-            lang="ar"
-            className="arabic text-gold/80"
-            aria-label="Al-hikmah: Wisdom"
-          >
-            الحكمة
-          </p>
+          <LogoMark />
           <p className="text-cream/50 text-sm leading-relaxed">
             {t('footer.brand.desc')}
           </p>

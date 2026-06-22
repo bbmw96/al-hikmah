@@ -12,7 +12,7 @@ interface SearchHadith {
 }
 
 export function HadithSearchBar({ collection }: { collection: string }) {
-  const { t } = useLanguage();
+  const { t, lang } = useLanguage();
   const [query, setQuery] = useState('');
   const [results, setResults] = useState<SearchHadith[] | null>(null);
   const [searching, setSearching] = useState(false);
@@ -23,7 +23,9 @@ export function HadithSearchBar({ collection }: { collection: string }) {
     if (trimmed.length < 2) { setResults(null); setSearched(false); return; }
     setSearching(true);
     try {
-      const res = await fetch(`/api/hadith-search?collection=${collection}&q=${encodeURIComponent(trimmed)}`);
+      const res = await fetch(
+        `/api/hadith-search?collection=${collection}&q=${encodeURIComponent(trimmed)}&lang=${lang}`,
+      );
       const data = await res.json();
       setResults(data.hadiths ?? []);
       setSearched(true);

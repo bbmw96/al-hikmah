@@ -3,10 +3,11 @@
 import { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { Menu, X, ChevronDown, BookOpen, Globe } from 'lucide-react';
+import { Menu, X, ChevronDown, Globe } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import { useLanguage } from '@/lib/i18n/context';
 import { LANGUAGE_META, type Lang } from '@/lib/i18n/translations';
+import { LogoMark } from '@/components/ui/LogoMark';
 
 interface NavItem {
   label: string;
@@ -186,28 +187,7 @@ export function Navbar() {
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" aria-label="Main navigation">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <Link
-            href="/"
-            className="flex items-center gap-2.5 group"
-            aria-label="Al-Hikmah - Home"
-          >
-            <div className="w-9 h-9 rounded-full bg-gold/20 flex items-center justify-center ring-1 ring-gold/40 group-hover:bg-gold/30 transition-colors">
-              <BookOpen className="w-5 h-5 text-gold" aria-hidden="true" />
-            </div>
-            <div>
-              <span className="font-garamond text-xl font-semibold text-cream tracking-wide">
-                Al-Hikmah
-              </span>
-              <span
-                dir="rtl"
-                lang="ar"
-                className="block text-xs text-gold/70 leading-none arabic-sm"
-                aria-hidden="true"
-              >
-                الحكمة
-              </span>
-            </div>
-          </Link>
+          <LogoMark />
 
           {/* Desktop navigation */}
           <ul className="hidden lg:flex items-center gap-1" role="list">
