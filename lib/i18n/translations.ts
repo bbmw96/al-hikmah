@@ -291,6 +291,193 @@ const UI = {
     es:  'Purificación seca con tierra limpia: la historia de su revelación, cuándo está permitido, cómo realizarlo y qué logra.',
     ko:  '깨끗한 흙으로 건식 정화: 계시의 이야기, 허용되는 때, 수행 방법, 그리고 달성하는 것.',
   },
+
+  /* ── Search UI ─────────────────────────────────────── */
+  'ui.searchresults': {
+    en: 'results found', ms: 'keputusan ditemui', tur: 'sonuç bulundu', urd: 'نتائج ملے',
+    ben: 'ফলাফল পাওয়া গেছে', fas: 'نتیجه یافت شد', zh: '条结果', yue: '條結果',
+    ja: '件見つかりました', ru: 'результатов найдено', es: 'resultados encontrados', ko: '개 결과 발견',
+  },
+  'ui.noresults': {
+    en:  'No results found. Try different keywords.',
+    ms:  'Tiada keputusan. Cuba kata kunci yang lain.',
+    tur: 'Sonuç bulunamadı. Farklı anahtar kelimeler deneyin.',
+    urd: 'کوئی نتیجہ نہیں ملا۔ مختلف الفاظ آزمائیں۔',
+    ben: 'কোনো ফলাফল পাওয়া যায়নি। ভিন্ন কীওয়ার্ড চেষ্টা করুন।',
+    fas: 'نتیجه‌ای یافت نشد. کلیدواژه‌های دیگری امتحان کنید.',
+    zh:  '未找到结果。请尝试其他关键词。',
+    yue: '未找到結果。請嘗試其他關鍵詞。',
+    ja:  '結果が見つかりませんでした。別のキーワードをお試しください。',
+    ru:  'Результаты не найдены. Попробуйте другие ключевые слова.',
+    es:  'No se encontraron resultados. Prueba con otras palabras.',
+    ko:  '결과를 찾을 수 없습니다. 다른 키워드를 사용해 보세요.',
+  },
+  'ui.searching': {
+    en: 'Searching…', ms: 'Mencari…', tur: 'Aranıyor…', urd: 'تلاش جاری ہے…',
+    ben: 'অনুসন্ধান করা হচ্ছে…', fas: 'در حال جستجو…', zh: '正在搜索…', yue: '正在搜尋…',
+    ja: '検索中…', ru: 'Поиск…', es: 'Buscando…', ko: '검색 중…',
+  },
+  'ui.searchplaceholder': {
+    en:  'Search by narrator, topic, keyword…',
+    ms:  'Cari mengikut perawi, topik, kata kunci…',
+    tur: 'Ravi, konu veya anahtar kelimeyle ara…',
+    urd: 'راوی، موضوع، یا کلیدی لفظ سے تلاش کریں…',
+    ben: 'বর্ণনাকারী, বিষয় বা কীওয়ার্ড দিয়ে অনুসন্ধান করুন…',
+    fas: 'جستجو بر اساس راوی، موضوع یا کلیدواژه…',
+    zh:  '按叙述者、主题或关键词搜索…',
+    yue: '按敘述者、主題或關鍵詞搜索…',
+    ja:  '伝達者、トピック、またはキーワードで検索…',
+    ru:  'Поиск по передатчику, теме или ключевому слову…',
+    es:  'Busca por narrador, tema o palabra clave…',
+    ko:  '전달자, 주제 또는 키워드로 검색…',
+  },
+
+  /* ── Zakat page ────────────────────────────────────── */
+  'nav.zakat': {
+    en: 'Zakat', ms: 'Zakat', tur: 'Zekât', urd: 'زکاۃ',
+    ben: 'যাকাত', fas: 'زکات', zh: '天课', yue: '天課',
+    ja: 'ザカート', ru: 'Закят', es: 'Zakat', ko: '자카트',
+  },
+  'card.zakat.desc': {
+    en:  'The Third Pillar of Islam: obligatory almsgiving, its Quranic basis, nisab, who must pay, the eight categories of eligible recipients, and purifying wealth.',
+    ms:  'Rukun Islam Ketiga: zakat wajib, asas al-Qurannya, nisab, siapa yang wajib membayar, lapan golongan penerima, dan menyucikan harta.',
+    tur: "İslam'ın Üçüncü Şartı: farz zekat, Kur'anî dayanağı, nisap, kimlerin ödemesi gerektiği, sekiz müstahak sınıf ve malı temizlemek.",
+    urd: 'اسلام کا تیسرا رکن: واجب زکاۃ، قرآنی بنیاد، نصاب، کون ادا کرے، آٹھ مستحق گروہ اور مال کی پاکیزگی۔',
+    ben: 'ইসলামের তৃতীয় স্তম্ভ: বাধ্যতামূলক যাকাত, এর কুরআনিক ভিত্তি, নিসাব, কে দিতে হবে, আটটি যোগ্য শ্রেণী এবং সম্পদ পবিত্র করা।',
+    fas: 'رکن سوم اسلام: زکات واجب، مبنای قرآنی، نصاب، چه کسانی باید بدهند، هشت گروه مستحق و تطهیر مال.',
+    zh:  '伊斯兰第三功课：法定天课、其《古兰经》依据、纳税门槛、谁须缴纳、八类受益人，以及财富的净化。',
+    yue: '伊斯蘭第三功課：法定天課、其《古蘭經》依據、納稅門檻、誰須繳納、八類受益人，以及財富的淨化。',
+    ja:  'イスラームの第三の柱：義務的な喜捨、クルアーンの根拠、ニサーブ、誰が支払うべきか、八つの受給者カテゴリー、そして富の浄化。',
+    ru:  'Третий столп Ислама: обязательная закят, её кораническая основа, нисаб, кто должен платить, восемь категорий получателей и очищение богатства.',
+    es:  'El Tercer Pilar del Islam: zakat obligatorio, su base coránica, el nisab, quién debe pagarlo, las ocho categorías de beneficiarios y la purificación de la riqueza.',
+    ko:  '이슬람의 세 번째 기둥: 의무적인 자카트, 쿠란적 근거, 니사브, 지불해야 하는 사람, 여덟 가지 수혜자 범주, 그리고 재산 정화.',
+  },
+
+  /* ── Ghusl page ─────────────────────────────────────── */
+  'nav.ghusl': {
+    en: 'Ghusl', ms: 'Mandi Wajib', tur: 'Gusül', urd: 'غسل',
+    ben: 'গোসল', fas: 'غسل', zh: '大净', yue: '大淨',
+    ja: 'グスル', ru: 'Гусль', es: 'Ghusl', ko: '구슬',
+  },
+  'card.ghusl.desc': {
+    en:  'Full-body ritual purification: what makes it obligatory, the correct method according to the Sunnah, what it permits, and its spiritual significance.',
+    ms:  'Penyucian ritual seluruh badan: apa yang mewajibkannya, kaedah yang betul mengikut Sunnah, apa yang diharuskan, dan kepentingan rohaninya.',
+    tur: "Tam vücut ritüel arınması: nelerin onu zorunlu kıldığı, Sünnet'e göre doğru yöntem, nelere izin verdiği ve manevi önemi.",
+    urd: 'پورے جسم کی رسمی طہارت: کیا چیز اسے واجب بناتی ہے، سنت کے مطابق صحیح طریقہ، کیا جائز ہوتا ہے، اور اس کی روحانی اہمیت۔',
+    ben: 'সম্পূর্ণ শরীরের আচার পবিত্রতা: কী এটিকে বাধ্যতামূলক করে, সুন্নাহ অনুযায়ী সঠিক পদ্ধতি, এটি কী অনুমতি দেয়, এবং এর আধ্যাত্মিক তাৎপর্য।',
+    fas: 'طهارت کامل بدن: چه چیزی آن را واجب می‌کند، روش صحیح طبق سنت، چه چیزهایی را مجاز می‌سازد، و اهمیت روحانی آن.',
+    zh:  '全身仪式性净化：何时成为必须、正确的圣行方法、许可的事项，以及其灵性意义。',
+    yue: '全身儀式性淨化：何時成為必須、正確的聖行方法、許可的事項，以及其靈性意義。',
+    ja:  '全身の儀式的清めの沐浴：義務となる理由、スンナに基づく正しい方法、許可されること、そして霊的意義。',
+    ru:  'Полное ритуальное омовение тела: что делает его обязательным, правильный метод по Сунне, что оно разрешает и его духовное значение.',
+    es:  'Purificación ritual de todo el cuerpo: qué la hace obligatoria, el método correcto según la Sunnah, qué permite y su significado espiritual.',
+    ko:  '전신 의례적 정화: 무엇이 의무화하는지, 순나에 따른 올바른 방법, 허용되는 것, 그리고 영적 의미.',
+  },
+
+  /* ── Taharah page ──────────────────────────────────── */
+  'nav.taharah': {
+    en: 'Taharah', ms: 'Taharah', tur: 'Taharet', urd: 'طہارت',
+    ben: 'তাহারাত', fas: 'طهارت', zh: '洁净', yue: '潔淨',
+    ja: 'タハーラ', ru: 'Тахара', es: 'Taharah', ko: '타하라',
+  },
+  'card.taharah.desc': {
+    en:  'The complete guide to ritual purity: wudu, ghusl, and tayamum explained together, what nullifies each, and how purity is the gate to worship.',
+    ms:  'Panduan lengkap kesucian ritual: wudu, mandi wajib, dan tayamum dijelaskan bersama, apa yang membatalkan masing-masing, dan bagaimana kesucian adalah pintu ibadah.',
+    tur: "Ritüel temizliğe tam rehber: abdest, gusül ve teyemmüm birlikte açıklandı, her birini bozanlar ve temizliğin ibadetin kapısı olması.",
+    urd: 'رسمی طہارت کی مکمل رہنمائی: وضو، غسل اور تیمم ایک ساتھ، ہر ایک کو توڑنے والی چیزیں، اور طہارت کا عبادت کا دروازہ ہونا۔',
+    ben: 'আচার পবিত্রতার সম্পূর্ণ গাইড: ওযু, গোসল এবং তায়াম্মুম একসাথে ব্যাখ্যা করা, প্রতিটি বাতিলকারী এবং পবিত্রতা ইবাদতের প্রবেশদ্বার।',
+    fas: 'راهنمای کامل طهارت: وضو، غسل و تیمم با هم توضیح داده شده، آنچه هر یک را باطل می‌کند، و طهارت به عنوان دروازه عبادت.',
+    zh:  '仪式净洁完整指南：小净、大净和干净礼共同解释，各自的破洁之事，以及净洁如何是礼拜的大门。',
+    yue: '儀式潔淨完整指南：小淨、大淨和乾淨禮共同解釋，各自的破潔之事，以及潔淨如何是禮拜的大門。',
+    ja:  '儀式的清浄の完全ガイド：ウドゥー、グスル、タヤンムムを一緒に解説し、各々を無効にするもの、そして清浄が礼拝への門である理由。',
+    ru:  'Полное руководство по ритуальной чистоте: омовение, полное омовение и таяммум, объяснённые вместе, что нарушает каждое из них и чистота как врата поклонения.',
+    es:  'Guía completa de pureza ritual: wudu, ghusl y tayamum explicados juntos, qué anula cada uno y cómo la pureza es la puerta al culto.',
+    ko:  '의례적 순결의 완전한 가이드: 우두, 구슬, 타야뭄을 함께 설명하고, 각각을 무효화하는 것, 그리고 순결이 예배의 문인 방법.',
+  },
+
+  /* ── Jumu'ah page ──────────────────────────────────── */
+  "nav.jumuah": {
+    en: "Jumu'ah", ms: 'Solat Jumaat', tur: 'Cuma Namazı', urd: 'جمعہ',
+    ben: "জুমু'আ", fas: 'نماز جمعه', zh: '主麻日', yue: '主麻日',
+    ja: "ジュムア", ru: 'Джума', es: "Jumu'ah", ko: '주마',
+  },
+  "card.jumuah.desc": {
+    en:  "Friday Prayer: its Quranic command, who it is obligatory upon, the two khutbahs, the two-rak'ah prayer, etiquettes, and the blessed moments unique to Friday.",
+    ms:  "Solat Jumaat: perintah al-Qurannya, siapa yang wajib menunaikannya, dua khutbah, solat dua rakaat, adab-adab, dan saat-saat yang diberkati pada hari Jumaat.",
+    tur: "Cuma Namazı: Kur'anî emri, kimlerin üzerine farz olduğu, iki hutbe, iki rekâtlı namaz, âdâplar ve Cuma'ya özgü bereketli anlar.",
+    urd: 'جمعہ کی نماز: اس کا قرآنی حکم، کن پر فرض ہے، دو خطبے، دو رکعت نماز، آداب، اور جمعہ کے دن کے خاص بابرکت لمحات۔',
+    ben: "জুমুআর নামায: এর কুরআনিক আদেশ, কার উপর ফরয, দুটি খুতবা, দুই রাকাত নামায, আদব এবং জুমুআর দিনের বিশেষ মুবারক মুহূর্ত।",
+    fas: 'نماز جمعه: فرمان قرآنی، بر چه کسی واجب است، دو خطبه، نماز دو رکعتی، آداب، و لحظات مبارک منحصر به روز جمعه.',
+    zh:  '主麻聚礼：其古兰经命令、谁须履行、两段讲道、两拜礼拜、礼仪，以及主麻日特有的吉祥时刻。',
+    yue: '主麻聚禮：其古蘭經命令、誰須履行、兩段講道、兩拜禮拜、禮儀，以及主麻日特有的吉祥時刻。',
+    ja:  'ジュムア礼拝：クルアーンの命令、誰に義務か、二つのフトバ、二ラカートの礼拝、礼儀作法、そして金曜日だけの特別な祝福の時間。',
+    ru:  "Пятничная молитва: коранический приказ, на кого она обязательна, две хутбы, молитва из двух ракаатов, этикет и благословенные моменты, уникальные для пятницы.",
+    es:  "Oración del viernes: su mandato coránico, sobre quién es obligatoria, los dos jutbas, la oración de dos rak'ahs, etiquetas y los momentos bendecidos únicos del viernes.",
+    ko:  "주마 기도: 쿠란적 명령, 누구에게 의무인지, 두 개의 쿠트바, 두 라카아트 기도, 예절, 그리고 금요일만의 특별한 축복의 순간들.",
+  },
+
+  /* ── Eid page ──────────────────────────────────────── */
+  'nav.eid': {
+    en: 'Eid Prayers', ms: 'Solat Eid', tur: 'Bayram Namazı', urd: 'عید کی نماز',
+    ben: 'ঈদের নামায', fas: 'نماز عید', zh: '会礼', yue: '會禮',
+    ja: 'イード礼拝', ru: 'Намаз Ид', es: 'Oraciones del Eid', ko: '이드 기도',
+  },
+  'card.eid.desc': {
+    en:  "The two celebrations of Islam: Eid al-Fitr and Eid al-Adha, their prayers, additional takbeers, rulings, Zakat al-Fitr, Qurbani sacrifice, and the joy of the blessed days.",
+    ms:  "Dua perayaan Islam: Eid al-Fitr dan Eid al-Adha, solat-solat mereka, takbir tambahan, hukum-hukum, Zakat al-Fitr, korban Qurbani, dan kegembiraan hari-hari yang diberkati.",
+    tur: "İslam'ın iki bayramı: Ramazan ve Kurban Bayramı, namazları, ek tekbirler, hükümler, Sadaka-i Fıtr, kurban kesimi ve mübarek günlerin sevinci.",
+    urd: 'اسلام کے دو جشن: عید الفطر اور عید الاضحی، ان کی نمازیں، اضافی تکبیرات، احکام، صدقہ فطر، قربانی، اور مبارک دنوں کی خوشی۔',
+    ben: 'ইসলামের দুটি উদযাপন: ঈদুল ফিতর ও ঈদুল আযহা, তাদের নামায, অতিরিক্ত তাকবীর, বিধান, যাকাতুল ফিতর, কুরবানি এবং মুবারক দিনের আনন্দ।',
+    fas: 'دو جشن اسلام: عید الفطر و عید الاضحی، نمازها، تکبیرهای اضافی، احکام، زکات الفطر، قربانی، و شادی روزهای مبارک.',
+    zh:  '伊斯兰的两大节日：开斋节和宰牲节，其礼拜、额外赞词、规定、开斋捐、宰牲，以及吉祥日子的欢庆。',
+    yue: '伊斯蘭的兩大節日：開齋節和宰牲節，其禮拜、額外贊詞、規定、開齋捐、宰牲，以及吉祥日子的歡慶。',
+    ja:  'イスラームの二つの祝祭：イード・アル＝フィトルとイード・アル＝アドハー、その礼拝、追加のタクビール、規定、フィトルのザカート、クルバーニーの犠牲、そして祝福された日の喜び。',
+    ru:  'Два праздника Ислама: Ид аль-Фитр и Ид аль-Адха, их молитвы, дополнительные такбиры, правила, закят аль-фитр, жертвоприношение Курбан и радость благословенных дней.',
+    es:  'Las dos celebraciones del Islam: Eid al-Fitr y Eid al-Adha, sus oraciones, takbeers adicionales, normas, Zakat al-Fitr, sacrificio Qurbani y la alegría de los días benditos.',
+    ko:  '이슬람의 두 축제: 이드 알 피트르와 이드 알 아드하, 기도, 추가 타크비르, 규정, 자카트 알 피트르, 쿠르바니 희생, 그리고 복된 날의 기쁨.',
+  },
+
+  /* ── Ulum al-Quran page ─────────────────────────────── */
+  'nav.ulumquran': {
+    en: "Ulum al-Quran", ms: "Ulum al-Quran", tur: "Ulumul Kuran", urd: 'علوم القرآن',
+    ben: 'উলূমুল কুরআন', fas: 'علوم القرآن', zh: '古兰经科学', yue: '古蘭經科學',
+    ja: 'クルアーン諸科学', ru: 'Улюм аль-Коран', es: "Ulum al-Quran", ko: '울룸 알 쿠란',
+  },
+  'card.ulumquran.desc': {
+    en:  "The sciences of the Quran: how it was revealed and preserved, compilation history, Makki and Madani divisions, the seven Qira'at, Asbab al-Nuzul, and Tajweed.",
+    ms:  "Ilmu-ilmu al-Quran: bagaimana ia diwahyukan dan dipelihara, sejarah penyusunan, pembahagian Makkiyyah dan Madaniyyah, tujuh Qira'at, Asbab al-Nuzul, dan Tajwid.",
+    tur: "Kur'an ilimleri: nasıl vahyedilip korunduğu, derleme tarihi, Mekkî ve Medenî kısımlar, yedi Kıraat, Esbâb-ı Nüzûl ve Tecvid.",
+    urd: "علوم القرآن: یہ کیسے نازل ہوا اور محفوظ کیا گیا، ترتیب کی تاریخ، مکی اور مدنی تقسیم، سات قراءات، اسباب نزول، اور تجوید۔",
+    ben: "কুরআনের বিজ্ঞান: এটি কীভাবে অবতীর্ণ ও সংরক্ষিত হয়েছিল, সংকলনের ইতিহাস, মক্কি ও মাদানি বিভাজন, সাত কিরাআত, আসবাবুন নুযুল, এবং তাজবীদ।",
+    fas: "علوم القرآن: چگونه نازل و حفظ شد، تاریخ گردآوری، تقسیم مکی و مدنی، هفت قرائت، اسباب نزول، و تجوید.",
+    zh:  "古兰经学科：它如何被启示和保存、汇编史、麦加和麦地那章的划分、七种读法、降示缘由，以及《古兰经》朗读规则。",
+    yue: "古蘭經學科：它如何被啟示和保存、彙編史、麥加和麥地那章的劃分、七種讀法、降示緣由，以及《古蘭經》朗讀規則。",
+    ja:  "クルアーン諸科学：啓示と保存の方法、編纂の歴史、マッカとマディーナの区分、七つのキラーア、ナズルの機会、そしてタジュウィード。",
+    ru:  "Науки Корана: как он был ниспослан и сохранён, история компиляции, мекканские и мединские суры, семь чтений, поводы ниспослания и таджвид.",
+    es:  "Las ciencias del Corán: cómo fue revelado y preservado, historia de compilación, divisiones mequí y medinense, las siete Qira'at, Asbab al-Nuzul y Tajweed.",
+    ko:  "쿠란의 과학: 어떻게 계시되고 보존되었는지, 편찬 역사, 마키와 마다니 구분, 일곱 가지 키라아트, 아스밥 알 누줄, 그리고 타즈위드.",
+  },
+
+  /* ── Mustalah al-Hadith page ──────────────────────── */
+  'nav.mustalah': {
+    en: "Mustalah al-Hadith", ms: "Mustalah al-Hadith", tur: "Hadis Usulü", urd: 'مصطلح الحدیث',
+    ben: 'মুস্তালাহুল হাদিস', fas: 'مصطلح الحدیث', zh: '圣训术语学', yue: '聖訓術語學',
+    ja: 'ハディース学術用語', ru: 'Мусталах аль-хадис', es: "Mustalah al-Hadith", ko: '무스탈라흐 알 하디스',
+  },
+  'card.mustalah.desc': {
+    en:  "The science of Hadith: the isnad chain of narrators, rijal criticism, grading into Sahih, Hasan and Da'if, the Six Books, and how scholars authenticate the Prophet's ﷺ words.",
+    ms:  "Ilmu Hadith: rantaian sanad perawi, kritikan rijal, penggredan kepada Sahih, Hasan dan Daif, Enam Kitab, dan cara ulama mengesahkan sabda Nabi ﷺ.",
+    tur: "Hadis ilmi: ravi zinciri isnâd, rical tenkidi, Sahih, Hasen ve Zayıf derecelerine göre sınıflandırma, Altı Kitap ve alimlerin Peygamber'in ﷺ sözlerini doğrulama yöntemi.",
+    urd: 'علم حدیث: سند کا سلسلہ راویان، رجال کی نقد، صحیح، حسن اور ضعیف میں درجہ بندی، چھ کتب، اور علماء نبی ﷺ کے اقوال کی تصدیق کیسے کرتے ہیں۔',
+    ben: "হাদিসের বিজ্ঞান: সনদের রাবীর শৃঙ্খল, রিজাল সমালোচনা, সহীহ, হাসান ও দ'ঈফে গ্রেডিং, ছয়টি কিতাব, এবং পণ্ডিতরা কীভাবে নবী ﷺ-এর বাণী প্রামাণিক করেন।",
+    fas: 'علم حدیث: زنجیره سند راویان، نقد رجال، درجه‌بندی به صحیح، حسن و ضعیف، شش کتاب، و نحوه احراز اعتبار اقوال پیامبر ﷺ توسط علما.',
+    zh:  "圣训学：传述者链（伊斯纳德）、传述者批评（里贾勒）、分类为可靠、良好与软弱、六大圣训集，以及学者如何鉴定先知ﷺ言语的真实性。",
+    yue: "聖訓學：傳述者鏈（伊斯納德）、傳述者批評（里賈勒）、分類為可靠、良好與軟弱、六大聖訓集，以及學者如何鑒定先知ﷺ言語的真實性。",
+    ja:  "ハディース学：伝達者の鎖（イスナード）、語り手批判（リジャール）、サヒーフ・ハサン・ダイーフへの格付け、六大ハディース集、そして学者たちが預言者ﷺの言葉を認証する方法。",
+    ru:  "Наука хадисов: цепочка передатчиков (иснад), критика передатчиков (риджаль), оценка как достоверный, хороший и слабый, Шесть книг и методы аутентификации слов Пророка ﷺ.",
+    es:  "La ciencia del Hadith: la cadena de transmisores (isnad), crítica de narradores (rijal), clasificación en Sahih, Hasan y Da'if, los Seis Libros y cómo los eruditos autentican las palabras del Profeta ﷺ.",
+    ko:  "하디스의 과학: 전달자 사슬(이스나드), 리잘 비평, 사히흐, 하산 및 다이프 등급 분류, 여섯 권의 책, 그리고 학자들이 예언자 ﷺ의 말씀을 인증하는 방법.",
+  },
 } as const;
 
 export type T = typeof UI;

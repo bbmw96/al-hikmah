@@ -1,45 +1,73 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useMemo } from 'react';
 import Link from 'next/link';
-import { Search, BookOpen } from 'lucide-react';
-import { SURAHS } from '@/lib/data/quran';
+import { Search } from 'lucide-react';
+import { SURAHS, type SurahData } from '@/lib/data/quran';
 import { cn } from '@/lib/utils';
 import { useLanguage } from '@/lib/i18n/context';
 
 type Filter = 'all' | 'Makki' | 'Madani';
+
+function scoreSurah(s: SurahData, ql: string): number {
+  let score = 0;
+  if (String(s.number) === ql) score += 100;
+  if (s.arabicName.includes(ql)) score += 90;
+  if (s.englishName.toLowerCase().startsWith(ql)) score += 80;
+  if (s.transliteration.toLowerCase().startsWith(ql)) score += 75;
+  if (s.englishName.toLowerCase().includes(ql)) score += 60;
+  if (s.transliteration.toLowerCase().includes(ql)) score += 55;
+  if (s.alternativeNames?.some(n => n.toLowerCase().includes(ql))) score += 45;
+  if (s.keyThemes?.some(kw => kw.toLowerCase().includes(ql))) score += 35;
+  if (s.notableVerses?.some(v =>
+    v.translation.toLowerCase().includes(ql) ||
+    v.context.toLowerCase().includes(ql) ||
+    v.reference.toLowerCase().includes(ql)
+  )) score += 30;
+  if (s.overview.toLowerCase().includes(ql)) score += 22;
+  if (s.asbabalNuzul?.toLowerCase().includes(ql)) score += 18;
+  if (s.virtues?.toLowerCase().includes(ql)) score += 18;
+  if (s.period.toLowerCase().includes(ql)) score += 12;
+  return score;
+}
 
 export function QuranListContent() {
   const { t } = useLanguage();
   const [query, setQuery] = useState('');
   const [filter, setFilter] = useState<Filter>('all');
 
-  const displayed = SURAHS.filter(s => {
-    const matchesFilter = filter === 'all' || s.classification === filter;
-    const q = query.toLowerCase();
-    const matchesQuery =
-      !q ||
-      s.englishName.toLowerCase().includes(q) ||
-      s.transliteration.toLowerCase().includes(q) ||
-      s.arabicName.includes(q) ||
-      String(s.number).includes(q);
-    return matchesFilter && matchesQuery;
-  });
+  const ql = query.trim().toLowerCase();
+
+  const displayed = useMemo(() => {
+    const base = filter === 'all' ? SURAHS : SURAHS.filter(s => s.classification === filter);
+    if (!ql) return base;
+    return base
+      .map(s => ({ s, score: scoreSurah(s, ql) }))
+      .filter(({ score }) => score > 0)
+      .sort((a, b) => b.score - a.score)
+      .map(({ s }) => s);
+  }, [ql, filter]);
 
   return (
     <div className="max-w-7xl mx-auto px-6 py-12">
       {/* Search */}
-      <div className="relative max-w-md mx-auto mb-10">
+      <div className="relative max-w-xl mx-auto mb-4">
         <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-4 h-4 text-forest/40" aria-hidden="true" />
         <input
           type="search"
           value={query}
           onChange={e => setQuery(e.target.value)}
-          placeholder="Search by name or number..."
+          placeholder={t('ui.searchplaceholder')}
           className="w-full pl-11 pr-4 py-3 rounded-full bg-white border border-gold/30 text-forest placeholder:text-forest/30 text-sm focus:outline-none focus:ring-2 focus:ring-gold/50"
-          aria-label="Search surahs"
+          aria-label={t('ui.search')}
         />
       </div>
+      {ql && (
+        <p className="text-center text-forest/50 text-sm mb-6">
+          {displayed.length} {t('ui.searchresults')}
+        </p>
+      )}
+      {!ql && <div className="mb-6" />}
 
       {/* Filter tabs */}
       <div className="flex gap-2 mb-8">

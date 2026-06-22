@@ -19,6 +19,13 @@ import {
   CalendarDays,
   Library,
   Layers,
+  Coins,
+  Droplets,
+  ShieldCheck,
+  Sun,
+  Gift,
+  Telescope,
+  Network,
 } from 'lucide-react';
 import { StaggerGroup, StaggerItem } from '@/components/ui/StaggerGroup';
 import { useLanguage } from '@/lib/i18n/context';
@@ -47,7 +54,14 @@ const QUICK_ACCESS: {
   { icon: Gem,         titleKey: 'nav.nikah',    descKey: 'card.nikah.desc',    arabicTitle: 'النِّكَاح',        href: '/nikah',      colour: 'bg-forest'   },
   { icon: CalendarDays,titleKey: 'nav.calendar', descKey: 'card.calendar.desc', arabicTitle: 'التقويم',          href: '/calendar',   colour: 'bg-midnight' },
   { icon: Library,     titleKey: 'nav.glossary', descKey: 'card.glossary.desc', arabicTitle: 'المعجم',           href: '/glossary',   colour: 'bg-forest'   },
-  { icon: Layers,     titleKey: 'nav.tayamum', descKey: 'card.tayamum.desc', arabicTitle: 'التَّيَمُّم',       href: '/tayamum',    colour: 'bg-midnight' },
+  { icon: Layers,      titleKey: 'nav.tayamum',   descKey: 'card.tayamum.desc',   arabicTitle: 'التَّيَمُّم',        href: '/tayamum',         colour: 'bg-midnight' },
+  { icon: Coins,       titleKey: 'nav.zakat',     descKey: 'card.zakat.desc',     arabicTitle: 'الزَّكَاة',          href: '/zakat',           colour: 'bg-forest'   },
+  { icon: Droplets,    titleKey: 'nav.ghusl',     descKey: 'card.ghusl.desc',     arabicTitle: 'الغُسْل',            href: '/ghusl',           colour: 'bg-midnight' },
+  { icon: ShieldCheck, titleKey: 'nav.taharah',   descKey: 'card.taharah.desc',   arabicTitle: 'الطَّهَارَة',        href: '/taharah',         colour: 'bg-forest'   },
+  { icon: Sun,         titleKey: 'nav.jumuah',    descKey: 'card.jumuah.desc',    arabicTitle: 'صَلَاةُ الجُمُعَة',  href: '/jumuah',          colour: 'bg-midnight' },
+  { icon: Gift,        titleKey: 'nav.eid',       descKey: 'card.eid.desc',       arabicTitle: 'العِيدَان',          href: '/eid',             colour: 'bg-forest'   },
+  { icon: Telescope,   titleKey: 'nav.ulumquran', descKey: 'card.ulumquran.desc', arabicTitle: 'عُلُوم القُرْآن',    href: '/ulum-quran',      colour: 'bg-midnight' },
+  { icon: Network,     titleKey: 'nav.mustalah',  descKey: 'card.mustalah.desc',  arabicTitle: 'مُصْطَلَح الحَدِيث', href: '/mustalah-hadith', colour: 'bg-forest'   },
 ];
 
 export function QuickAccessGrid() {

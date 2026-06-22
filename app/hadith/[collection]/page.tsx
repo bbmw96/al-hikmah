@@ -3,6 +3,7 @@ import { notFound } from 'next/navigation';
 import Link from 'next/link';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import { PageHeader } from '@/components/ui/PageHeader';
+import { HadithSearchBar } from '@/components/ui/HadithSearchBar';
 import { getCollectionById } from '@/lib/data/collections';
 import { fetchHadithPage } from '@/lib/hadith-api';
 
@@ -63,6 +64,9 @@ export default async function CollectionPage({ params, searchParams }: Props) {
         <div className="card-islamic mb-10">
           <p className="text-forest/70 leading-relaxed text-sm">{col.description}</p>
         </div>
+
+        {/* Search */}
+        <HadithSearchBar collection={collection} />
 
         {/* Hadith list */}
         <div className="space-y-4">
