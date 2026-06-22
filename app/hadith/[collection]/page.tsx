@@ -5,7 +5,7 @@ import { ChevronLeft, ChevronRight } from 'lucide-react';
 import { PageHeader } from '@/components/ui/PageHeader';
 import { HadithSearchBar } from '@/components/ui/HadithSearchBar';
 import { getCollectionById } from '@/lib/data/collections';
-import { fetchHadithPageBilingual } from '@/lib/hadith-api';
+import { fetchHadithList, paginateHadiths } from '@/lib/hadith-api';
 
 interface Props {
   params: Promise<{ collection: string }>;
@@ -34,22 +34,35 @@ export default async function CollectionPage({ params, searchParams }: Props) {
   const col = getCollectionById(collection);
   if (!col || !col.available || !col.apiCollection) notFound();
 
-  const total = col.hadithCount;
-  const pages = Math.ceil(total / PAGE_SIZE);
-  const page = Math.min(Math.max(1, parseInt(pageParam ?? '1', 10) || 1), pages);
+  // Fetch both language collections in parallel — each response is cached for 24 hours,
+  // so the CDN is only hit once per day, not on every page view.
+  const [engList, araList] = await Promise.all([
+    fetchHadithList(col.apiCollection, 'eng'),
+    fetchHadithList(col.apiCollection, 'ara'),
+  ]);
 
-  const startNumber = (page - 1) * PAGE_SIZE + 1;
-  const count = Math.min(PAGE_SIZE, total - (page - 1) * PAGE_SIZE);
-
-  const hadiths = await fetchHadithPageBilingual(col.apiCollection, startNumber, count);
-
-  if (hadiths.length === 0) {
+  if (!engList || engList.hadiths.length === 0) {
     return (
       <div className="max-w-4xl mx-auto px-6 py-24 text-center">
         <p className="text-forest/50">Unable to load hadith at this time. Please try again shortly.</p>
       </div>
     );
   }
+
+  const totalFromApi = engList.hadiths.length;
+  const pages = Math.ceil(totalFromApi / PAGE_SIZE);
+  const page = Math.min(Math.max(1, parseInt(pageParam ?? '1', 10) || 1), pages);
+
+  const { hadiths: engPage } = paginateHadiths(engList, page, PAGE_SIZE);
+
+  const araLookup = new Map<number, string>(
+    (araList?.hadiths ?? []).map(h => [h.hadithnumber, h.text]),
+  );
+
+  const hadiths = engPage.map(h => ({
+    ...h,
+    arabicText: araLookup.get(h.hadithnumber),
+  }));
 
   return (
     <>
@@ -118,7 +131,7 @@ export default async function CollectionPage({ params, searchParams }: Props) {
               <div />
             )}
             <p className="text-forest/50 text-sm">
-              Page {page} of {pages} &middot; {total.toLocaleString()} hadiths
+              Page {page} of {pages} &middot; {totalFromApi.toLocaleString()} hadiths
             </p>
             {page < pages ? (
               <Link

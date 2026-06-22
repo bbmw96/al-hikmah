@@ -1,13 +1,13 @@
 ﻿const CDN_BASES = [
   'https://cdn.jsdelivr.net/gh/fawazahmed0/hadith-api@1',
-  'https://cdn.jsdelivr.net/gh/fawazahmed0/hadith-api@main',
+  'https://fastly.jsdelivr.net/gh/fawazahmed0/hadith-api@1',
   'https://raw.githubusercontent.com/fawazahmed0/hadith-api/1',
 ];
 
-async function cdnFetch(path: string, opts?: RequestInit): Promise<Response | null> {
+async function cdnFetch(path: string, opts?: RequestInit, timeoutMs = 4000): Promise<Response | null> {
   for (const base of CDN_BASES) {
     try {
-      const res = await fetch(`${base}${path}`, { signal: AbortSignal.timeout(8000), ...opts });
+      const res = await fetch(`${base}${path}`, { signal: AbortSignal.timeout(timeoutMs), ...opts });
       if (res.ok) return res;
     } catch {
       // try next mirror
@@ -52,11 +52,8 @@ export interface SingleHadithResponse {
 }
 
 /**
- * @deprecated DO NOT USE. Downloads the entire collection JSON (up to 5 MB+).
- * Use fetchHadithPage() for paginated lists, or col.hadithCount from collections.ts for counts.
- */
-/**
- * Fetches a list of hadiths from a given collection in a given language.
+ * Fetches the full hadith collection JSON for a given language.
+ * Response is cached by Next.js for 24 hours — CDN is only hit once per day per collection.
  * Language 'eng' fetches English text; 'ara' fetches Arabic text.
  */
 export async function fetchHadithList(
@@ -64,7 +61,7 @@ export async function fetchHadithList(
   language: 'eng' | 'ara' = 'eng',
 ): Promise<HadithApiResponse | null> {
   try {
-    const res = await cdnFetch(`/editions/${language}-${collection}.min.json`, { next: { revalidate: 86400 } } as RequestInit);
+    const res = await cdnFetch(`/editions/${language}-${collection}.min.json`, { next: { revalidate: 86400 } } as RequestInit, 8000);
     if (!res) return null;
     return res.json();
   } catch {

@@ -13,7 +13,7 @@ import type { HadithGrade } from '@/lib/hadith-api';
 
 const CDN_MIRRORS = [
   'https://cdn.jsdelivr.net/gh/fawazahmed0/hadith-api@1',
-  'https://cdn.jsdelivr.net/gh/fawazahmed0/hadith-api@main',
+  'https://fastly.jsdelivr.net/gh/fawazahmed0/hadith-api@1',
   'https://raw.githubusercontent.com/fawazahmed0/hadith-api/1',
 ];
 
