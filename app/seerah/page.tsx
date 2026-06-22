@@ -117,8 +117,7 @@ export default function SeerahPage() {
                   <p
                     dir="rtl"
                     lang="ar"
-                    className="arabic-sm text-gold/60"
-                    aria-hidden="true"
+                    className="arabic-sm text-gold"
                   >
                     {event.arabicLabel}
                   </p>
