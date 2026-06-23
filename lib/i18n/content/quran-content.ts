@@ -1,3 +1,5 @@
+import { QURAN_112 } from './quran-112';
+
 type LangMap = { en: string; ms: string; tur: string; urd: string; ben: string; fas: string; zh: string; yue: string; ja: string; ru: string; es: string; ko: string; ta: string; si: string };
 
 export type QuranUiKey = keyof typeof QURAN_UI;
@@ -379,6 +381,7 @@ export interface SurahI18n {
 const EMPTY: LangMap = { en: ``, ms: ``, tur: ``, urd: ``, ben: ``, fas: ``, zh: ``, yue: ``, ja: ``, ru: ``, es: ``, ko: ``, ta: ``, si: `` };
 
 export const SURAH_CONTENT: Record<number, SurahI18n> = {
+  ...QURAN_112,
   1: {
     name: {
       en: `The Opening`,
