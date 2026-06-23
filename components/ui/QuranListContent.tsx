@@ -2,10 +2,12 @@
 
 import { useState, useMemo } from 'react';
 import Link from 'next/link';
-import { Search } from 'lucide-react';
+import { Search, BookOpen } from 'lucide-react';
+import { PageHeader } from '@/components/ui/PageHeader';
 import { SURAHS, type SurahData } from '@/lib/data/quran';
 import { cn } from '@/lib/utils';
 import { useLanguage } from '@/lib/i18n/context';
+import { QURAN_UI, type QuranUiKey } from '@/lib/i18n/content/quran-content';
 
 type Filter = 'all' | 'Makki' | 'Madani';
 
@@ -32,7 +34,8 @@ function scoreSurah(s: SurahData, ql: string): number {
 }
 
 export function QuranListContent() {
-  const { t } = useLanguage();
+  const { t, lang } = useLanguage();
+  const tc = (k: QuranUiKey) => QURAN_UI[k][lang] ?? QURAN_UI[k].en;
   const [query, setQuery] = useState('');
   const [filter, setFilter] = useState<Filter>('all');
 
@@ -49,7 +52,21 @@ export function QuranListContent() {
   }, [ql, filter]);
 
   return (
-    <div className="max-w-7xl mx-auto px-6 py-12">
+    <>
+      <PageHeader
+        title={tc('list_title')}
+        arabicTitle="القرآن الكريم"
+        subtitle={tc('list_subtitle')}
+      />
+
+      <div className="max-w-3xl mx-auto px-6 pt-12 pb-0">
+        <div className="bg-gold/8 border border-gold/25 rounded-xl p-6 text-center">
+          <p className="text-forest/80 text-sm leading-relaxed mb-2">{tc('intro_phases')}</p>
+          <p className="text-forest/60 text-xs italic">{tc('intro_asbab')}</p>
+        </div>
+      </div>
+
+      <div className="max-w-7xl mx-auto px-6 py-12">
       {/* Search */}
       <div className="relative max-w-xl mx-auto mb-4">
         <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-4 h-4 text-forest/40" aria-hidden="true" />
@@ -141,6 +158,15 @@ export function QuranListContent() {
           ))}
         </div>
       )}
-    </div>
+      </div>
+
+      <div className="bg-forest/5 border-t border-gold/10 py-12 mt-8">
+        <div className="max-w-3xl mx-auto px-6 text-center">
+          <BookOpen className="w-8 h-8 text-gold/60 mx-auto mb-4" aria-hidden="true" />
+          <p dir="rtl" lang="ar" className="arabic-lg text-forest mb-3" aria-hidden="true">إِنَّهُ لَقُرْآنٌ كَرِيمٌ</p>
+          <p className="text-forest/60 italic text-sm">&ldquo;{tc('banner_verse')}&rdquo; (Surah Al-Waqi&apos;ah 56:77)</p>
+        </div>
+      </div>
+    </>
   );
 }

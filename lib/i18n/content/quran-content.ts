@@ -10,6 +10,7 @@ export type QuranUiKey = keyof typeof QURAN_UI;
  * ────────────────────────────────────────────────────────────────────────── */
 export const QURAN_UI = {
   /* ── List page ──────────────────────────────────────── */
+  banner_verse: { en: `Indeed, it is a noble Quran.`, ms: `Sesungguhnya ia adalah al-Quran yang mulia.`, tur: `Şüphesiz o, şerefli bir Kur'an'dır.`, urd: `بے شک یہ ایک باعزت قرآن ہے۔`, ben: `নিশ্চয়ই এটি এক সম্মানিত কুরআন।`, fas: `همانا این قرآنی گرامی است.`, zh: `这确是一部尊贵的《古兰经》。`, yue: `這確是一部尊貴的《古蘭經》。`, ja: `本当にこれは高貴なクルアーンである。`, ru: `Воистину, это благородный Коран.`, es: `En verdad, es un Corán noble.`, ko: `진실로 이것은 고귀한 꾸란이라.`, ta: `நிச்சயமாக இது கண்ணியமிக்க குர்ஆன் ஆகும்.`, si: `සැබැවින්ම මෙය උතුම් කුර්ආනයකි.` },
   list_title: {
     en: `The Quran: Revelation & Context`,
     ms: `Al-Quran: Wahyu & Konteks`,
