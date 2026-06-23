@@ -1,16 +1,11 @@
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
-import dynamic from 'next/dynamic';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import { PageHeader } from '@/components/ui/PageHeader';
+import { HadithSearchBar } from '@/components/ui/HadithSearchBar';
 import { HADITH_COLLECTIONS, getCollectionById } from '@/lib/data/collections';
 import { fetchHadithPageBilingual } from '@/lib/hadith-api';
-
-const HadithSearchBar = dynamic(
-  () => import('@/components/ui/HadithSearchBar').then(m => ({ default: m.HadithSearchBar })),
-  { ssr: false, loading: () => <div className="h-[56px] mb-10" /> },
-);
 
 interface Props {
   params: Promise<{ collection: string }>;
