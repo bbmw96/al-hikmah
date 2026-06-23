@@ -2,8 +2,8 @@
 
 type ML = Record<Lang, string>;
 
-function ml(en: string, ms: string, tur: string, urd: string, ben: string, fas: string, zh: string, yue: string, ja: string, ru: string, es: string, ko: string, ta?: string, si?: string): ML {
-  return { en, ms, tur, urd, ben, fas, zh, yue, ja, ru, es, ko, ta: ta ?? en, si: si ?? en };
+function ml(en: string, ms: string, tur: string, urd: string, ben: string, fas: string, zh: string, yue: string, ja: string, ru: string, es: string, ko: string, ta: string, si: string): ML {
+  return { en, ms, tur, urd, ben, fas, zh, yue, ja, ru, es, ko, ta, si };
 }
 
 export const TAHARAH_CONTENT = {
@@ -22,6 +22,8 @@ export const TAHARAH_CONTENT = {
     'Тахара: Ритуальная чистота',
     'Taharah: Pureza Ritual',
     '타하라: 의례적 정결',
+    'தஹாரா: சடங்கு தூய்மை',
+    'තහාරා: චාරිත්‍රානුකූල පවිත්‍රත්වය',
   ),
   'header.subtitle': ml(
     'The foundation of Islamic worship  –  the condition of ritual cleanliness that opens the door to prayer and the presence of Allah',
@@ -36,6 +38,8 @@ export const TAHARAH_CONTENT = {
     'Основа исламского поклонения  –  состояние ритуальной чистоты, открывающее дверь к молитве и присутствию Аллаха',
     'El fundamento de la adoración islámica  –  el estado de limpieza ritual que abre la puerta a la oración y a la presencia de Alá',
     '이슬람 예배의 토대  –  예배와 알라의 임재로 나아가는 문을 여는 의례적 청결의 상태',
+    'இஸ்லாமிய வழிபாட்டின் அடித்தளம்  –  தொழுகைக்கும் அல்லாஹ்வின் சந்நிதிக்கும் கதவைத் திறக்கும் சடங்கு தூய்மையின் நிலை',
+    'ඉස්ලාමීය නැමදුමේ පදනම  –  යාඥාවට හා අල්ලාහ්ගේ සන්නිධානයට දොර විවර කරන චාරිත්‍රානුකූල පවිත්‍රත්වයේ තත්ත්වය',
   ),
 
   /* ── Section: Quranic basis ──────────────────────────────── */
@@ -52,6 +56,8 @@ export const TAHARAH_CONTENT = {
     'Тахара в Коране',
     'Taharah en el Corán',
     '꾸란에서의 타하라',
+    'குர்ஆனில் தஹாரா',
+    'කුර්ආනයේ තහාරා',
   ),
   'quran.verse.translation': ml(
     '"O you who have believed, when you rise to [perform] prayer, wash your faces and your hands to the elbows and wipe over your heads and wash your feet to the ankles." (Al-Ma\'idah 5:6)',
@@ -66,6 +72,8 @@ export const TAHARAH_CONTENT = {
     '"О те, которые уверовали! Когда вы встаёте на намаз, умойте ваши лица и ваши руки до локтей, оботрите ваши головы и умойте ваши ноги до щиколоток." (Трапеза 5:6)',
     '"¡Oh creyentes! Cuando os dispongáis a hacer la oración, lavaos la cara y los brazos hasta los codos, pasad la mano por la cabeza y lavaos los pies hasta los tobillos." (Al-Ma\'idah 5:6)',
     '"믿는 자들이여! 예배를 위해 일어날 때에는 얼굴을 씻고 팔꿈치까지 손을 씻으며 머리를 닦고 발목까지 발을 씻으라." (마이다 5:6)',
+    '"நம்பிக்கை கொண்டோரே! நீங்கள் தொழுகைக்கு எழும்போது, உங்கள் முகங்களையும் முழங்கைகள் வரை கைகளையும் கழுவி, தலைகளை மஸஹ் செய்து, கணுக்கால்கள் வரை கால்களையும் கழுவுங்கள்." (அல்-மாஇதா 5:6)',
+    '"විශ්වාස කළවුනි! ඔබ යාඥාවට නැඟී සිටින විට, ඔබේ මුහුණු සෝදා, මැණික් කටුව දක්වා අත් සෝදා, හිස පිරිමැද, වළලුකර දක්වා පාද සෝදා ගනිත්වා." (අල්-මාඉදා 5:6)',
   ),
   'quran.follow.text': ml(
     "The same verse of Al-Ma'idah continues to prescribe ghusl for janabah and tayamum when water is unavailable, establishing all three forms of purification in a single verse  –  the foundational text of Islamic fiqh al-taharah.",
@@ -80,6 +88,8 @@ export const TAHARAH_CONTENT = {
     "Тот же аят суры «Трапеза» продолжает предписывать гусль при осквернении (джанаба) и таяммум при отсутствии воды, устанавливая все три формы очищения в одном аяте  –  основополагающем тексте исламского фикха ат-тахары.",
     "El mismo versículo de Al-Ma'idah continúa prescribiendo el ghusl para la janabah y el tayamum cuando no hay agua, estableciendo las tres formas de purificación en un solo versículo  –  el texto fundacional del fiqh al-taharah islámico.",
     "알-마이다의 같은 절은 계속해서 자나바를 위한 구슬과 물이 없을 때의 타야뭄을 규정하여, 이슬람 피크흐 알-타하라의 근본 텍스트인 하나의 절 안에 세 가지 정결 형식 모두를 확립하고 있습니다.",
+    "அல்-மாஇதாவின் அதே வசனம் ஜனாபாவுக்கான குஸ்லையும், தண்ணீர் கிடைக்காதபோது தயம்மத்தையும் தொடர்ந்து விதிக்கிறது; இவ்வாறு ஒரே வசனத்தில் மூன்று வகையான தூய்மைகளையும் நிறுவுகிறது  –  இது இஸ்லாமிய ஃபிக்ஹ் அல்-தஹாராவின் அடிப்படை மூலபாடம்.",
+    "අල්-මාඉදාහි එම වැකියම ජනාබා සඳහා ගුස්ල් සහ ජලය නොමැති විට තයම්මුම් නියම කරමින් ඉදිරියට යයි; මෙසේ එක් වැකියකම පවිත්‍රත්ව ආකාර තුනම ස්ථාපිත කරයි  –  එය ඉස්ලාමීය ෆික්හ් අල්-තහාරාහි මූලික පාඨයයි.",
   ),
   'quran.hadith.text': ml(
     'The Prophet ﷺ declared: "Purity is half of faith." (Muslim 223) This hadith elevates taharah from mere cleanliness to an act of worship and an expression of iman, for the one who purifies himself is enacting the command of Allah with deliberate intention.',
@@ -94,6 +104,8 @@ export const TAHARAH_CONTENT = {
     'Пророк ﷺ провозгласил: «Чистота  –  половина веры». (Муслим 223) Этот хадис возвышает тахару от простой чистоплотности до акта поклонения и выражения иман, ибо очищающий себя исполняет повеление Аллаха с осознанным намерением.',
     'El Profeta ﷺ declaró: "La pureza es la mitad de la fe." (Muslim 223) Este hadiz eleva la taharah de la mera limpieza a un acto de adoración y una expresión del iman, pues quien se purifica está cumpliendo el mandato de Alá con intención deliberada.',
     '예언자 ﷺ께서 선언하셨습니다: "정결함은 신앙의 절반이니라." (무슬림 223) 이 하디스는 타하라를 단순한 청결에서 예배 행위와 이만의 표현으로 승화시킵니다. 스스로를 정결케 하는 자는 의도적으로 알라의 명령을 수행하고 있기 때문입니다.',
+    'நபி ﷺ அறிவித்தார்கள்: "தூய்மை ஈமானின் பாதி." (முஸ்லிம் 223) இந்த ஹதீஸ் தஹாராவை வெறும் சுத்தத்திலிருந்து ஒரு வழிபாட்டுச் செயலாகவும் ஈமானின் வெளிப்பாடாகவும் உயர்த்துகிறது; ஏனெனில் தன்னைத் தூய்மைப்படுத்திக் கொள்பவர் தெளிவான எண்ணத்துடன் அல்லாஹ்வின் கட்டளையை நிறைவேற்றுகிறார்.',
+    'නබි ﷺ ප්‍රකාශ කළහ: "පවිත්‍රත්වය ඊමානයේ අඩකි." (මුස්ලිම් 223) මෙම හදීසය තහාරා හුදෙක් පිරිසිදුකමින් ඔබ්බට නැමදුම් ක්‍රියාවක් හා ඊමානයේ ප්‍රකාශනයක් දක්වා උසස් කරයි; මන්ද තමන් පවිත්‍ර කර ගන්නා තැනැත්තා දැනුවත් චේතනාවකින් අල්ලාහ්ගේ නියෝගය ඉටු කරයි.',
   ),
 
   /* ── Section: Physical vs Ritual ────────────────────────── */
@@ -110,6 +122,8 @@ export const TAHARAH_CONTENT = {
     'Физическая и ритуальная чистота',
     'Pureza física vs. ritual',
     '물리적 정결 대 의례적 정결',
+    'உடல் தூய்மை எதிர் சடங்கு தூய்மை',
+    'භෞතික පවිත්‍රත්වය එදිරිව චාරිත්‍රානුකූල පවිත්‍රත්වය',
   ),
   'types.physical.heading': ml(
     'Physical Purity (Taharah Hissiyyah)',
@@ -124,6 +138,8 @@ export const TAHARAH_CONTENT = {
     'Физическая чистота (Тахара хиссиййа)',
     'Pureza física (Taharah Hissiyyah)',
     '물리적 정결 (타하라 히시야)',
+    'உடல் தூய்மை (தஹாரா ஹிஸ்ஸிய்யா)',
+    'භෞතික පවිත්‍රත්වය (තහාරා හිස්සිය්යා)',
   ),
   'types.physical.body': ml(
     'Removing physical impurities (najasah) from the body, clothing, and place of prayer. This is a precondition for the validity of salah. Physical impurity can be removed by water, or in certain cases by other means (such as rubbing dry soil on leather, or drying in the sun).',
@@ -138,6 +154,8 @@ export const TAHARAH_CONTENT = {
     'Удаление физических нечистот (наджаса) с тела, одежды и места молитвы. Это предварительное условие действительности намаза. Физическая нечистота может быть устранена водой или, в отдельных случаях, иными способами (например, протиранием кожи сухой землёй или высушиванием на солнце).',
     'Eliminar las impurezas físicas (najasah) del cuerpo, la ropa y el lugar de oración. Es una condición previa para la validez del salah. La impureza física puede eliminarse con agua o, en ciertos casos, por otros medios (como frotar tierra seca en el cuero o secar al sol).',
     '신체, 의복, 예배 장소에서 물리적 불순물(나자사)을 제거하는 것. 이는 살라의 유효성을 위한 전제 조건입니다. 물리적 불순물은 물로, 또는 특정 경우에는 다른 방법으로(예: 가죽에 마른 흙 문지르기, 햇볕에 말리기) 제거할 수 있습니다.',
+    'உடல், ஆடை மற்றும் தொழும் இடத்திலிருந்து உடல் அசுத்தங்களை (நஜாஸா) நீக்குதல். இது தொழுகையின் செல்லுபடித்தன்மைக்கு முன்நிபந்தனை. உடல் அசுத்தத்தை தண்ணீரால், அல்லது சில சந்தர்ப்பங்களில் வேறு வழிகளால் (தோலில் உலர்ந்த மண்ணைத் தேய்த்தல், வெயிலில் உலர்த்துதல் போன்றவை) நீக்கலாம்.',
+    'සිරුර, ඇඳුම් සහ යාඥා කරන ස්ථානයෙන් භෞතික අපවිත්‍රතා (නජාසා) ඉවත් කිරීම. මෙය සලාතයේ වලංගුභාවය සඳහා පූර්ව කොන්දේසියකි. භෞතික අපවිත්‍රතාව ජලයෙන්, නැතහොත් සමහර අවස්ථාවල වෙනත් ක්‍රමවලින් (සමට වියළි පස් අතගෑම, හිරු එළියේ වියළීම වැනි) ඉවත් කළ හැකිය.',
   ),
   'types.ritual.heading': ml(
     'Ritual Purity (Taharah Hukmiyyah)',
@@ -152,6 +170,8 @@ export const TAHARAH_CONTENT = {
     'Правовая чистота (Тахара хукмиййа)',
     'Pureza ritual (Taharah Hukmiyyah)',
     '율법적 정결 (타하라 후크미야)',
+    'சட்டப்பூர்வ தூய்மை (தஹாரா ஹுக்மிய்யா)',
+    'නෛතික පවිත්‍රත්වය (තහාරා හුක්මිය්යා)',
   ),
   'types.ritual.body': ml(
     "The legal state of ritual cleanliness that enables prayer and other acts of worship. This is a specifically Islamic concept with no visible impurity  –  the person's body may be spotlessly clean, yet ritual impurity (hadath) blocks prayer until wudu or ghusl is performed. It is a spiritual state as much as a physical one.",
@@ -166,6 +186,8 @@ export const TAHARAH_CONTENT = {
     'Юридическое состояние ритуальной чистоты, делающее возможным намаз и другие виды поклонения. Это специфически исламское понятие, при котором отсутствует видимое загрязнение  –  тело человека может быть безупречно чистым, однако ритуальное осквернение (хадас) препятствует намазу до совершения вуду или гусля. Это состояние столь же духовное, сколь и физическое.',
     'El estado legal de limpieza ritual que permite la oración y otros actos de adoración. Este es un concepto específicamente islámico sin impureza visible  –  el cuerpo de la persona puede estar impecablemente limpio, pero la impureza ritual (hadath) impide la oración hasta que se realiza el wudu o el ghusl. Es un estado espiritual tanto como físico.',
     '예배와 다른 예배 행위를 가능하게 하는 의례적 청결의 법적 상태. 이것은 가시적인 불순물이 없는 이슬람 고유의 개념입니다. 사람의 몸이 완벽하게 깨끗할 수 있지만, 의례적 불순(하다스)은 우두나 구슬이 수행될 때까지 예배를 막습니다. 이것은 물리적 상태만큼이나 영적인 상태입니다.',
+    'தொழுகையையும் பிற வழிபாட்டுச் செயல்களையும் சாத்தியமாக்கும் சடங்கு தூய்மையின் சட்டப்பூர்வ நிலை. இது புலப்படும் அசுத்தம் இல்லாத, இஸ்லாத்திற்கே உரிய ஒரு கருத்து  –  ஒருவரின் உடல் மாசற்ற தூய்மையாக இருக்கலாம், ஆயினும் சடங்கு அசுத்தம் (ஹதஸ்) வுளூ அல்லது குஸ்ல் செய்யப்படும் வரை தொழுகையைத் தடுக்கிறது. இது உடல் நிலையைப் போலவே ஆன்மீக நிலையும் ஆகும்.',
+    'නැමදුමට සහ අනෙකුත් නැමදුම් ක්‍රියාවන්ට ඉඩ සලසන චාරිත්‍රානුකූල පවිත්‍රත්වයේ නෛතික තත්ත්වය. මෙය දෘශ්‍ය අපවිත්‍රතාවක් නැති, ඉස්ලාමයට ම ආවේණික සංකල්පයකි  –  පුද්ගලයෙකුගේ සිරුර නිර්මල ලෙස පිරිසිදු විය හැකි නමුත්, චාරිත්‍රානුකූල අපවිත්‍රතාව (හදස්) වුළූ හෝ ගුස්ල් ඉටු කරන තෙක් නැමදුම අවහිර කරයි. එය භෞතික තත්ත්වයක් මෙන්ම ආත්මික තත්ත්වයක්ද වේ.',
   ),
 
   /* ── Section: Three Forms ────────────────────────────────── */
@@ -182,6 +204,8 @@ export const TAHARAH_CONTENT = {
     'Три формы очищения',
     'Las tres formas de purificación',
     '정결의 세 가지 형태',
+    'தூய்மையின் மூன்று வடிவங்கள்',
+    'පවිත්‍රත්වයේ ආකාර තුන',
   ),
   'three.nullifiers.label': ml(
     'Nullifiers',
@@ -196,6 +220,8 @@ export const TAHARAH_CONTENT = {
     'Нарушители',
     'Anuladores',
     '무효화 요인',
+    'செல்லாதாக்கும் காரணிகள்',
+    'අවලංගු කරන සාධක',
   ),
   'three.wudu.subtitle': ml(
     'Minor Ritual Purification',
@@ -210,6 +236,8 @@ export const TAHARAH_CONTENT = {
     'Малое ритуальное очищение',
     'Purificación ritual menor',
     '소 의례적 정결',
+    'சிறிய சடங்கு தூய்மை',
+    'සුළු චාරිත්‍රානුකූල පවිත්‍රත්වය',
   ),
   'three.wudu.description': ml(
     "The partial ablution performed to remove minor ritual impurity (hadath asghar). Required before each prayer and other acts of worship. Involves washing the face, hands to the elbows, wiping the head, and washing the feet to the ankles  –  established in Al-Ma'idah 5:6.",
@@ -224,6 +252,8 @@ export const TAHARAH_CONTENT = {
     'Частичное омовение, совершаемое для снятия малого ритуального осквернения (хадас асгар). Обязательно перед каждым намазом и другими видами поклонения. Включает умывание лица, рук до локтей, протирание головы и умывание ног до щиколоток  –  установлено в суре «Трапеза» 5:6.',
     "La ablución parcial realizada para eliminar la impureza ritual menor (hadath asghar). Requerida antes de cada oración y otros actos de adoración. Implica lavar el rostro, las manos hasta los codos, pasar la mano por la cabeza y lavar los pies hasta los tobillos  –  establecido en Al-Ma'idah 5:6.",
     '소 의례적 불순(하다스 아스가르)을 제거하기 위해 수행하는 부분적 정결. 각 예배와 다른 예배 행위 전에 필요합니다. 얼굴 씻기, 팔꿈치까지 손 씻기, 머리 닦기, 발목까지 발 씻기를 포함합니다  –  마이다 5:6에 확립되었습니다.',
+    "சிறிய சடங்கு அசுத்தத்தை (ஹதஸ் அஸ்கர்) நீக்க செய்யப்படும் பகுதி தூய்மை. ஒவ்வொரு தொழுகைக்கும் பிற வழிபாட்டுச் செயல்களுக்கும் முன் தேவை. முகத்தைக் கழுவுதல், முழங்கைகள் வரை கைகளைக் கழுவுதல், தலையை மஸஹ் செய்தல், கணுக்கால்கள் வரை கால்களைக் கழுவுதல் ஆகியவை அடங்கும்  –  அல்-மாஇதா 5:6 இல் நிறுவப்பட்டது.",
+    "සුළු චාරිත්‍රානුකූල අපවිත්‍රතාව (හදස් අස්ගර්) ඉවත් කිරීමට ඉටු කරන අර්ධ පවිත්‍රකරණය. සෑම යාඥාවකට හා අනෙකුත් නැමදුම් ක්‍රියාවලට පෙර අවශ්‍ය වේ. මුහුණ සේදීම, මැණික් කටුව දක්වා අත් සේදීම, හිස පිරිමැදීම, වළලුකර දක්වා පාද සේදීම ඇතුළත් වේ  –  අල්-මාඉදා 5:6 හි ස්ථාපිත කර ඇත.",
   ),
   'three.wudu.linkLabel': ml(
     'Learn about Prayer & Wudu',
@@ -238,6 +268,8 @@ export const TAHARAH_CONTENT = {
     'Узнайте о намазе и вуду',
     'Aprende sobre la oración y el wudu',
     '예배와 우두에 대해 알아보기',
+    'தொழுகை மற்றும் வுளூ பற்றி அறிக',
+    'යාඥාව හා වුළූ ගැන දැනගන්න',
   ),
   'three.ghusl.subtitle': ml(
     'Full-Body Purification',
@@ -252,6 +284,8 @@ export const TAHARAH_CONTENT = {
     'Полное телесное очищение',
     'Purificación corporal completa',
     '전신 정결',
+    'முழு உடல் தூய்மை',
+    'සම්පූර්ණ ශරීර පවිත්‍රත්වය',
   ),
   'three.ghusl.description': ml(
     'The full ritual bath required to remove major ritual impurity (hadath akbar). Obligatory after sexual intercourse, ejaculation, the end of menstruation or postnatal bleeding, and  –  according to many scholars  –  upon embracing Islam.',
@@ -266,6 +300,8 @@ export const TAHARAH_CONTENT = {
     'Полное ритуальное омовение, необходимое для снятия большого ритуального осквернения (хадас акбар). Обязательно после половой близости, семяизвержения, окончания менструации или послеродового кровотечения, а  –  по мнению многих учёных  –  также и при принятии ислама.',
     'El baño ritual completo necesario para eliminar la impureza ritual mayor (hadath akbar). Obligatorio después del coito, la eyaculación, el fin de la menstruación o el sangrado posparto y, según muchos eruditos, al abrazar el Islam.',
     '대 의례적 불순(하다스 아크바르)을 제거하기 위해 필요한 완전한 의례적 목욕. 성관계, 사정, 월경 또는 산후 출혈 종료 후, 그리고 많은 학자들에 따르면 이슬람을 받아들일 때 의무입니다.',
+    'பெரிய சடங்கு அசுத்தத்தை (ஹதஸ் அக்பர்) நீக்க தேவையான முழுமையான சடங்கு நீராடல். உடலுறவு, விந்து வெளியேற்றம், மாதவிடாய் அல்லது பிரசவத்திற்குப் பிந்தைய இரத்தப்போக்கு முடிந்த பிறகு, மேலும்  –  பல அறிஞர்களின் கருத்துப்படி  –  இஸ்லாத்தைத் தழுவும்போது கடமையாகும்.',
+    'මහා චාරිත්‍රානුකූල අපවිත්‍රතාව (හදස් අක්බර්) ඉවත් කිරීමට අවශ්‍ය සම්පූර්ණ චාරිත්‍රානුකූල ස්නානය. ලිංගික සංසර්ගය, ශුක්‍රාණු පිටවීම, ඔසප් වීම හෝ ප්‍රසූතියෙන් පසු රුධිර වහනය අවසන් වූ පසු, තවද  –  බොහෝ විද්වතුන්ට අනුව  –  ඉස්ලාමය වැලඳ ගන්නා විට අනිවාර්ය වේ.',
   ),
   'three.ghusl.linkLabel': ml(
     'Learn about Ghusl',
@@ -280,6 +316,8 @@ export const TAHARAH_CONTENT = {
     'Узнайте о гусле',
     'Aprende sobre el ghusl',
     '구슬에 대해 알아보기',
+    'குஸ்ல் பற்றி அறிக',
+    'ගුස්ල් ගැන දැනගන්න',
   ),
   'three.tayamum.subtitle': ml(
     'Dry Purification with Clean Earth',
@@ -294,6 +332,8 @@ export const TAHARAH_CONTENT = {
     'Сухое очищение чистой землёй',
     'Purificación seca con tierra limpia',
     '깨끗한 흙으로 건식 정결',
+    'தூய்மையான மண்ணால் உலர் தூய்மை',
+    'පිරිසිදු පසින් වියළි පවිත්‍රකරණය',
   ),
   'three.tayamum.description': ml(
     "The substitute purification with clean earth or dust when water is unavailable or its use would cause harm. Tayamum replaces both wudu and ghusl. It was revealed in a verse specific to this ummah  –  a mercy not given to earlier nations.",
@@ -308,6 +348,8 @@ export const TAHARAH_CONTENT = {
     'Заменяющее очищение чистой землёй или пылью, когда вода недоступна или её использование причинит вред. Таяммум заменяет как вуду, так и гусль. Он был ниспослан в аяте, особом для данной уммы,  –  как милость, не данная прежним народам.',
     'La purificación sustituta con tierra o polvo limpio cuando el agua no está disponible o su uso causaría daño. El tayamum reemplaza tanto al wudu como al ghusl. Fue revelado en un versículo específico para esta ummah  –  una misericordia no otorgada a naciones anteriores.',
     '물을 사용할 수 없거나 사용이 해를 끼칠 때 깨끗한 흙이나 먼지로 하는 대체 정결. 타야뭄은 우두와 구슬 모두를 대체합니다. 이 움마를 위해 특별한 절에서 계시되었습니다  –  이전 민족들에게는 주어지지 않은 자비입니다.',
+    'தண்ணீர் கிடைக்காதபோது அல்லது அதன் பயன்பாடு தீங்கு விளைவிக்கும்போது தூய்மையான மண் அல்லது புழுதியால் செய்யப்படும் மாற்றுத் தூய்மை. தயம்மம் வுளூ மற்றும் குஸ்ல் இரண்டையும் மாற்றீடு செய்கிறது. இது இந்த உம்மாவுக்கென்று சிறப்பான வசனத்தில் இறக்கியருளப்பட்டது  –  முந்தைய சமூகங்களுக்கு வழங்கப்படாத ஒரு அருள்.',
+    'ජලය නොමැති විට හෝ එහි භාවිතය හානියක් වන විට පිරිසිදු පස් හෝ දූවිලි මගින් කරන විකල්ප පවිත්‍රකරණය. තයම්මුම් වුළූ සහ ගුස්ල් යන දෙකම ආදේශ කරයි. එය මෙම උම්මාහ් සඳහා විශේෂ වැකියකින් හෙළිදරව් කරන ලදී  –  පෙර ජාතීන්ට නොදුන් කරුණාවකි.',
   ),
   'three.tayamum.linkLabel': ml(
     'Learn about Tayamum',
@@ -322,6 +364,8 @@ export const TAHARAH_CONTENT = {
     'Узнайте о таяммуме',
     'Aprende sobre el tayamum',
     '타야뭄에 대해 알아보기',
+    'தயம்மம் பற்றி அறிக',
+    'තයම්මුම් ගැන දැනගන්න',
   ),
   'three.tayamum.nullifiers': ml(
     'Same nullifiers as wudu/ghusl; discovery of water (for the dry-purification substitute); removal of the excuse that permitted tayamum',
@@ -336,6 +380,8 @@ export const TAHARAH_CONTENT = {
     'Те же нарушители, что и при вуду/гусле; обнаружение воды (для замены сухого очищения); устранение причины, разрешавшей таяммум',
     'Los mismos anuladores que el wudu/ghusl; descubrimiento de agua (para el sustituto de la purificación seca); eliminación de la excusa que permitía el tayamum',
     '우두/구슬과 동일한 무효화 요인; 물 발견(건식 정결 대체의 경우); 타야뭄을 허용한 사유 제거',
+    'வுளூ/குஸ்லின் அதே செல்லாதாக்கும் காரணிகள்; தண்ணீர் கிடைத்தல் (உலர் தூய்மை மாற்றீட்டிற்கு); தயம்மத்தை அனுமதித்த காரணம் நீங்குதல்',
+    'වුළූ/ගුස්ල්හි එම අවලංගු කරන සාධක; ජලය හමුවීම (වියළි පවිත්‍රකරණ විකල්පය සඳහා); තයම්මුම්ට ඉඩ දුන් හේතුව ඉවත් වීම',
   ),
 
   /* ── Section: Najasah ────────────────────────────────────── */
@@ -352,6 +398,8 @@ export const TAHARAH_CONTENT = {
     'Виды физической нечистоты (наджаса)',
     'Tipos de impureza física (Najasah)',
     '물리적 불순의 유형(나자사)',
+    'உடல் அசுத்தத்தின் வகைகள் (நஜாஸா)',
+    'භෞතික අපවිත්‍රතාවේ වර්ග (නජාසා)',
   ),
   'najasah.heavy.subtitle': ml(
     'Heavy Impurity',
@@ -366,6 +414,8 @@ export const TAHARAH_CONTENT = {
     'Тяжёлая нечистота',
     'Impureza grave',
     '중도 불순',
+    'கடுமையான அசுத்தம்',
+    'බර අපවිත්‍රතාව',
   ),
   'najasah.heavy.examples': ml(
     "Najasah from dogs and pigs. Requires washing seven times, one of which uses dust (or clean soil), according to the hadith: 'If a dog licks a vessel of one of you, wash it seven times, once using dust.' (Muslim 279)",
@@ -380,6 +430,8 @@ export const TAHARAH_CONTENT = {
     "Наджаса от собаки и свиньи. Требует семикратного мытья, одно из которых с использованием пыли (или чистой земли), согласно хадису: «Если собака оближет посуду кого-либо из вас, вымойте её семь раз, один раз  –  с землёй». (Муслим 279)",
     "La najasah de los perros y los cerdos. Requiere lavarse siete veces, una de las cuales usa polvo (o tierra limpia), según el hadiz: 'Si un perro lame el recipiente de alguno de vosotros, lávalo siete veces, una de ellas con tierra.' (Muslim 279)",
     "개와 돼지의 불순물. 하디스에 따라 일곱 번 씻어야 하며, 그 중 한 번은 먼지(또는 깨끗한 흙)를 사용합니다: '개가 너희 중 누군가의 그릇을 핥으면 일곱 번 씻되, 한 번은 흙으로 씻으라.' (무슬림 279)",
+    "நாய் மற்றும் பன்றியின் நஜாஸா. ஹதீஸின்படி ஏழு முறை கழுவ வேண்டும், அதில் ஒரு முறை புழுதி (அல்லது தூய்மையான மண்) பயன்படுத்தப்படுகிறது: 'உங்களில் ஒருவரின் பாத்திரத்தை நாய் நக்கினால், அதை ஏழு முறை கழுவுங்கள், ஒரு முறை மண்ணைப் பயன்படுத்தி.' (முஸ்லிம் 279)",
+    "බල්ලන් සහ ඌරන්ගෙන් වන නජාසා. හදීසයට අනුව හත්වරක් සේදිය යුතු අතර, එයින් එක් වරක් දූවිලි (හෝ පිරිසිදු පස්) භාවිතා කරයි: 'ඔබගෙන් කෙනෙකුගේ භාජනයක් බල්ලෙකු ලෙවකෑවොත්, එය හත්වරක් සෝදන්න, එක් වරක් පස් භාවිතා කර.' (මුස්ලිම් 279)",
   ),
   'najasah.moderate.subtitle': ml(
     'Moderate Impurity',
@@ -394,6 +446,8 @@ export const TAHARAH_CONTENT = {
     'Умеренная нечистота',
     'Impureza moderada',
     '중간 불순',
+    'மிதமான அசுத்தம்',
+    'මධ්‍යම අපවිත්‍රතාව',
   ),
   'najasah.moderate.examples': ml(
     'Urine, blood, faeces, vomit, pre-seminal fluid (madhi), alcohol, and the carrion of land animals not slaughtered correctly. Must be washed until the substance, colour, and odour are removed.',
@@ -408,6 +462,8 @@ export const TAHARAH_CONTENT = {
     'Моча, кровь, фекалии, рвота, предсеменная жидкость (мази), алкоголь и туша наземных животных, не заколотых должным образом. Необходимо смывать до удаления субстанции, цвета и запаха.',
     'Orina, sangre, heces, vómito, líquido preseminal (madhi), alcohol y la carroña de animales terrestres no sacrificados correctamente. Debe lavarse hasta que se eliminen la sustancia, el color y el olor.',
     '소변, 혈액, 대변, 구토물, 선정액(마디), 알코올, 그리고 올바르게 도살되지 않은 육지 동물의 사체. 물질, 색상, 냄새가 제거될 때까지 씻어야 합니다.',
+    'சிறுநீர், இரத்தம், மலம், வாந்தி, மதீ (வெளிப்படும் திரவம்), மது, மற்றும் சரியாக அறுக்கப்படாத நிலவாழ் விலங்குகளின் பிணம். பொருள், நிறம், வாசனை நீங்கும் வரை கழுவ வேண்டும்.',
+    'මුත්‍රා, රුධිරය, මළ, වමනය, මදී (පූර්ව ශුක්‍ර තරලය), මත්පැන්, සහ නිසි ලෙස කපා නොමරන ලද ගොඩබිම් සතුන්ගේ මළකඳන්. ද්‍රව්‍යය, වර්ණය සහ ගන්ධය ඉවත් වන තෙක් සේදිය යුතුය.',
   ),
   'najasah.light.subtitle': ml(
     'Light Impurity',
@@ -422,6 +478,8 @@ export const TAHARAH_CONTENT = {
     'Лёгкая нечистота',
     'Impureza leve',
     '경미한 불순',
+    'லேசான அசுத்தம்',
+    'සැහැල්ලු අපවිත්‍රතාව',
   ),
   'najasah.light.examples': ml(
     "Urine of an infant boy who has consumed only mother's milk (not solid food). Sufficient to sprinkle water over the affected area without full washing, as per the Prophet's ﷺ practice. (Bukhari 223)",
@@ -436,6 +494,8 @@ export const TAHARAH_CONTENT = {
     'Моча грудного мальчика, питающегося исключительно молоком матери (без твёрдой пищи). Достаточно побрызгать водой на поражённое место, не промывая полностью,  –  согласно практике Пророка ﷺ. (Бухари 223)',
     "La orina de un bebé varón que solo ha consumido leche materna (no alimentos sólidos). Es suficiente rociar agua sobre el área afectada sin lavado completo, según la práctica del Profeta ﷺ. (Bukhari 223)",
     "모유만 먹은(고형식 아님) 남자아기의 소변. 예언자 ﷺ의 관행에 따라 완전히 씻지 않고 영향받은 부위에 물을 뿌리는 것으로 충분합니다. (부하리 223)",
+    "தாய்ப்பால் மட்டுமே அருந்திய (திட உணவு அல்ல) ஆண் குழந்தையின் சிறுநீர். நபி ﷺ அவர்களின் வழக்கப்படி, முழுமையாகக் கழுவாமல் பாதிக்கப்பட்ட இடத்தில் தண்ணீர் தெளிப்பது போதுமானது. (புகாரி 223)",
+    "මව්කිරි පමණක් පානය කළ (ඝන ආහාර නොවන) පිරිමි දරුවෙකුගේ මුත්‍රා. නබි ﷺ ගේ පිළිවෙතට අනුව, සම්පූර්ණයෙන් නොසේදා බලපෑමට ලක් වූ ස්ථානයට ජලය ඉසීම ප්‍රමාණවත් වේ. (බුහාරි 223)",
   ),
   'najasah.excused.type': ml(
     "Excused Amounts (Maf'u Anh)",
@@ -450,6 +510,8 @@ export const TAHARAH_CONTENT = {
     "Прощаемые количества (Мафу анх)",
     "Cantidades perdonadas (Maf'u Anh)",
     "용서되는 양 (마푸 안흐)",
+    "மன்னிக்கப்பட்ட அளவுகள் (மஃபூ அன்ஹு)",
+    "සමාව දෙන ලද ප්‍රමාණ (මෆ්ඌ අන්හු)",
   ),
   'najasah.excused.subtitle': ml(
     'Tolerated Traces',
@@ -464,6 +526,8 @@ export const TAHARAH_CONTENT = {
     'Допустимые следы',
     'Rastros tolerados',
     '용인되는 흔적',
+    'பொறுத்துக்கொள்ளப்படும் தடயங்கள்',
+    'ඉවසනු ලබන සලකුණු',
   ),
   'najasah.excused.examples': ml(
     "A small amount of impurity that is extremely difficult to avoid  –  such as trace amounts of blood inside meat, or the unavoidable splashing of public lavatories  –  is pardoned and does not invalidate prayer.",
@@ -478,6 +542,8 @@ export const TAHARAH_CONTENT = {
     'Небольшое количество нечистоты, которой крайне сложно избежать,  –  такое как следовые количества крови внутри мяса или неизбежные брызги в общественных туалетах  –  прощается и не делает намаз недействительным.',
     'Una pequeña cantidad de impureza que es extremadamente difícil de evitar  –  como trazas de sangre dentro de la carne, o las inevitables salpicaduras de los baños públicos  –  está perdonada y no invalida la oración.',
     '피하기 극히 어려운 소량의 불순물  –  예를 들어 고기 안의 미량의 혈흔이나 공중화장실의 불가피한 물 튐 등  –  은 용서되며 예배를 무효화하지 않습니다.',
+    'தவிர்ப்பதற்கு மிகவும் கடினமான சிறிதளவு அசுத்தம்  –  இறைச்சிக்குள் இருக்கும் சிறிதளவு இரத்தம், அல்லது பொது கழிப்பறைகளின் தவிர்க்க முடியாத தெறிப்பு போன்றவை  –  மன்னிக்கப்படுகிறது, தொழுகையை செல்லாததாக்காது.',
+    'වැළැක්වීමට අතිශය දුෂ්කර සුළු අපවිත්‍රතාවක්  –  මස් තුළ ඇති සුළු රුධිර ලප, හෝ පොදු වැසිකිළිවල වැළැක්විය නොහැකි ජල විසිරීම වැනි  –  සමාව දෙනු ලබන අතර යාඥාව අවලංගු නොකරයි.',
   ),
 
   /* ── Section: Closing hadith ─────────────────────────────── */
@@ -494,6 +560,8 @@ export const TAHARAH_CONTENT = {
     '«Чистота  –  половина веры». (Муслим 223)',
     '"La pureza es la mitad de la fe." (Muslim 223)',
     '"정결함은 신앙의 절반이니라." (무슬림 223)',
+    '"தூய்மை ஈமானின் பாதி." (முஸ்லிம் 223)',
+    '"පවිත්‍රත්වය ඊමානයේ අඩකි." (මුස්ලිම් 223)',
   ),
   'closing.nawawi.body': ml(
     "Imam al-Nawawi explains this hadith by noting that iman has an outward dimension (actions) and an inward dimension (belief). Taharah covers the outward half  –  the body's preparation for standing before Allah. The inner half is tawbah (repentance) and the purification of the heart from shirk, pride, and heedlessness. Together, outward and inward purity constitute complete iman.",
@@ -508,6 +576,8 @@ export const TAHARAH_CONTENT = {
     "Имам ан-Навави объясняет этот хадис, отмечая, что иман имеет внешнее измерение (деяния) и внутреннее (убеждение). Тахара охватывает внешнюю половину  –  подготовку тела к предстоянию пред Аллахом. Внутренняя половина  –  это тауба (покаяние) и очищение сердца от ширка, гордыни и небрежности. Вместе внешняя и внутренняя чистота составляют полный иман.",
     "El Imam al-Nawawi explica este hadiz señalando que el iman tiene una dimensión externa (acciones) y una dimensión interna (creencia). La taharah cubre la mitad externa  –  la preparación del cuerpo para pararse ante Alá. La mitad interna es la tawbah (arrepentimiento) y la purificación del corazón del shirk, el orgullo y la distracción. Juntas, la pureza externa e interna constituyen el iman completo.",
     "이맘 알-나와위는 이 하디스를 설명하면서 이만에는 외적 차원(행동)과 내적 차원(신앙)이 있다고 지적합니다. 타하라는 외적 절반을 포함합니다  –  알라 앞에 서기 위한 몸의 준비. 내적 절반은 타우바(회개)와 시르크, 교만, 방심으로부터 마음을 정화하는 것입니다. 함께, 외적 및 내적 순수함은 완전한 이만을 구성합니다.",
+    "இமாம் அல்-நவவீ இந்த ஹதீஸை விளக்கும்போது, ஈமானுக்கு ஒரு வெளிப்புற பரிமாணம் (செயல்கள்) மற்றும் ஒரு உள்ளார்ந்த பரிமாணம் (நம்பிக்கை) உள்ளது என்று குறிப்பிடுகிறார். தஹாரா வெளிப்புற பாதியை உள்ளடக்குகிறது  –  அல்லாஹ்வுக்கு முன் நிற்பதற்கான உடலின் தயாரிப்பு. உள் பாதி தவ்பா (மனந்திரும்புதல்) மற்றும் ஷிர்க், ஆணவம், அலட்சியம் ஆகியவற்றிலிருந்து இதயத்தைத் தூய்மைப்படுத்துவதாகும். வெளிப்புற மற்றும் உள்ளார்ந்த தூய்மை இணைந்து முழுமையான ஈமானை உருவாக்குகின்றன.",
+    "ඉමාම් අල්-නවවී මෙම හදීසය විස්තර කරමින්, ඊමානයට බාහිර මානයක් (ක්‍රියා) සහ අභ්‍යන්තර මානයක් (විශ්වාසය) ඇති බව සඳහන් කරයි. තහාරා බාහිර අඩ ආවරණය කරයි  –  අල්ලාහ් ඉදිරියේ සිටීමට සිරුර සූදානම් කිරීම. අභ්‍යන්තර අඩ වනුයේ තව්බා (පශ්චාත්තාපය) සහ ෂිර්ක්, අහංකාරය, නොසැලකිල්ල යන දෑයින් හදවත පවිත්‍ර කිරීමයි. බාහිර හා අභ්‍යන්තර පවිත්‍රත්වය එක්ව සම්පූර්ණ ඊමානය සාදයි.",
   ),
 } satisfies Record<string, ML>;
 
