@@ -21,15 +21,7 @@ const THREE_FORMS = [
     descriptionKey: 'three.wudu.description' as TaharahContentKey,
     href: '/prayer',
     linkLabelKey: 'three.wudu.linkLabel' as TaharahContentKey,
-    nullifiers: [
-      'Using the restroom',
-      'Passing gas',
-      'Deep sleep',
-      'Loss of consciousness',
-      'Touching the private parts directly (majority view)',
-      'Eating camel meat (Hanbali school)',
-    ],
-    nullifiersKeys: null,
+    nullifiersTranslatedKey: 'three.wudu.nullifiers' as TaharahContentKey,
   },
   {
     arabic: 'الغُسْل',
@@ -38,13 +30,7 @@ const THREE_FORMS = [
     descriptionKey: 'three.ghusl.description' as TaharahContentKey,
     href: '/ghusl',
     linkLabelKey: 'three.ghusl.linkLabel' as TaharahContentKey,
-    nullifiers: [
-      'Sexual intercourse (for both parties)',
-      'Ejaculation',
-      'End of menstrual period',
-      'End of postnatal bleeding (nifas)',
-    ],
-    nullifiersKeys: null,
+    nullifiersTranslatedKey: 'three.ghusl.nullifiers' as TaharahContentKey,
   },
   {
     arabic: 'التَّيَمُّم',
@@ -53,7 +39,6 @@ const THREE_FORMS = [
     descriptionKey: 'three.tayamum.description' as TaharahContentKey,
     href: '/tayamum',
     linkLabelKey: 'three.tayamum.linkLabel' as TaharahContentKey,
-    nullifiers: null,
     nullifiersTranslatedKey: 'three.tayamum.nullifiers' as TaharahContentKey,
   },
 ] as const;
@@ -174,21 +159,12 @@ export function TaharahContent() {
                   {tc('three.nullifiers.label')}
                 </p>
                 <ul className="space-y-1">
-                  {'nullifiers' in form && form.nullifiers
-                    ? form.nullifiers.map(n => (
-                        <li key={n} className="flex items-start gap-2 text-sm text-forest/60">
-                          <div className="w-1.5 h-1.5 rounded-full bg-gold/50 mt-1.5 flex-shrink-0" />
-                          {n}
-                        </li>
-                      ))
-                    : 'nullifiersTranslatedKey' in form && form.nullifiersTranslatedKey
-                    ? tc(form.nullifiersTranslatedKey).split(';').map(n => (
-                        <li key={n} className="flex items-start gap-2 text-sm text-forest/60">
-                          <div className="w-1.5 h-1.5 rounded-full bg-gold/50 mt-1.5 flex-shrink-0" />
-                          {n.trim()}
-                        </li>
-                      ))
-                    : null}
+                  {tc(form.nullifiersTranslatedKey).split(';').map(n => (
+                    <li key={n} className="flex items-start gap-2 text-sm text-forest/60">
+                      <div className="w-1.5 h-1.5 rounded-full bg-gold/50 mt-1.5 flex-shrink-0" />
+                      {n.trim()}
+                    </li>
+                  ))}
                 </ul>
               </div>
             </div>
