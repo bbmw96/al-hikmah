@@ -58,6 +58,12 @@ export function SurahDetailContent({ surah }: { surah: Surah }) {
         </div>
       </header>
 
+      {lang !== 'en' && !SURAH_CONTENT[surah.number] && (
+        <div className="bg-gold/10 border border-gold/30 rounded-xl p-4 mb-8 text-center">
+          <p className="text-forest/70 text-sm">{tc('coming_soon')}</p>
+        </div>
+      )}
+
       <div className="space-y-8">
         {/* Key facts */}
         <section className="grid grid-cols-2 sm:grid-cols-4 gap-4">
