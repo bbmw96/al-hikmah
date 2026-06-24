@@ -14,7 +14,7 @@ const PRINCIPLES = [
   { icon: Heart, titleKey: 'p_respect_t', descKey: 'p_respect_d' },
 ] as const;
 
-// Classical sources — author + work titles are proper nouns, the same in every language.
+// Classical sources – author + work titles are proper nouns, the same in every language.
 const SOURCES = [
   "Ibn Kathir's Al-Bidayah wa al-Nihayah",
   "Al-Nawawi's Riyadh al-Salihin and Commentary on Sahih Muslim",

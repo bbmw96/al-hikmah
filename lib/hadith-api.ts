@@ -54,7 +54,7 @@ export interface SingleHadithResponse {
 
 /**
  * Fetches the full hadith collection JSON for a given language.
- * Response is cached by Next.js for 24 hours — CDN is only hit once per day per collection.
+ * Response is cached by Next.js for 24 hours – CDN is only hit once per day per collection.
  * Language 'eng' fetches English text; 'ara' fetches Arabic text.
  */
 export async function fetchHadithList(
