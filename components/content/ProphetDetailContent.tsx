@@ -7,6 +7,7 @@ import { useLanguage } from '@/lib/i18n/context';
 import { PROPHETS, getProphetById } from '@/lib/data/prophets';
 import {
   getProphetDetail,
+  RELATION_LABELS,
   type ProphetLangMap,
   type PDFamilyMember,
 } from '@/lib/data/prophet-details';
@@ -38,14 +39,13 @@ export function ProphetDetailContent({ slug }: { slug: string }) {
     ? detail.keyStories.map(s => s[lang] ?? s.en)
     : prophet.keyStories;
 
-  const lineageRows: { arabicName: string; name: string; relation: string }[] =
-    detail?.lineage && detail.lineage.length > 0
-      ? detail.lineage.map(e => ({
-          arabicName: e.arabicName,
-          name: e.name[lang] ?? e.name.en,
-          relation: e.relation[lang] ?? e.relation.en,
-        }))
-      : prophet.lineage.map(e => ({ arabicName: e.arabicName, name: e.englishName, relation: e.relation }));
+  const relationLabel = (raw: string): string =>
+    RELATION_LABELS[raw]?.[lang] ?? RELATION_LABELS[raw]?.en ?? raw;
+  const lineageRows = prophet.lineage.map(e => ({
+    arabicName: e.arabicName,
+    name: e.englishName,
+    relation: relationLabel(e.relation),
+  }));
 
   const keyFacts = [
     { label: tc('detail_nation'), value: tl(detail?.nationSentTo, prophet.nationSentTo) },
