@@ -236,6 +236,37 @@ export function SeerahContent() {
           </div>
         </section>
 
+        {/* Farewell Pilgrimage and Death of the Prophet ﷺ */}
+        <section>
+          <div className="flex flex-wrap items-baseline gap-3 mb-6">
+            <h2 className="section-title font-garamond text-2xl md:text-3xl font-semibold text-forest">
+              {tc('wada_h')}
+            </h2>
+            <p dir="rtl" lang="ar" className="arabic-sm text-gold">
+              حجة الوداع ووفاة النبي ﷺ
+            </p>
+          </div>
+          <div className="space-y-4">
+            <p className="text-forest/75 leading-relaxed">
+              {tc('wada_journey')}
+            </p>
+            <p className="text-forest/75 leading-relaxed">
+              {tc('wada_sermon')}
+            </p>
+            <div className="card-forest rounded-2xl p-6">
+              <p className="text-cream/85 leading-relaxed">
+                {tc('wada_completion')}
+              </p>
+            </div>
+            <p className="text-forest/75 leading-relaxed">
+              {tc('death_illness')}
+            </p>
+            <p className="text-forest/75 leading-relaxed">
+              {tc('death_grief')}
+            </p>
+          </div>
+        </section>
+
         {/* Quick Timeline */}
         <section>
           <div className="flex flex-wrap items-baseline gap-3 mb-8">
