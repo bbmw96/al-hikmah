@@ -216,6 +216,26 @@ export function SeerahContent() {
           </div>
         </section>
 
+        {/* Year of Delegations */}
+        <section>
+          <div className="flex flex-wrap items-baseline gap-3 mb-6">
+            <h2 className="section-title font-garamond text-2xl md:text-3xl font-semibold text-forest">
+              {tc('wufud_h')}
+            </h2>
+            <p dir="rtl" lang="ar" className="arabic-sm text-gold">
+              سنة الوفود
+            </p>
+          </div>
+          <div className="space-y-4">
+            <p className="text-forest/75 leading-relaxed">
+              {tc('wufud_intro')}
+            </p>
+            <p className="text-forest/75 leading-relaxed">
+              {tc('wufud_examples')}
+            </p>
+          </div>
+        </section>
+
         {/* Quick Timeline */}
         <section>
           <div className="flex flex-wrap items-baseline gap-3 mb-8">
