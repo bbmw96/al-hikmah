@@ -56,6 +56,16 @@ const SECTIONS: SectionDef[] = [
     titleKey: 's7_h',
     paragraphKeys: ['s7_p1', 's7_p2'],
   },
+  {
+    arabicTitle: 'الإسراء والمعراج',
+    titleKey: 's8_h',
+    paragraphKeys: ['s8_p1'],
+  },
+  {
+    arabicTitle: 'بيعة العقبة والهجرة',
+    titleKey: 's9_h',
+    paragraphKeys: ['s9_p1', 's9_p2'],
+  },
 ];
 
 const TIMELINE = [
