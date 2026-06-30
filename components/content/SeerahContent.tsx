@@ -73,6 +73,18 @@ const SECTIONS: SectionDef[] = [
   },
 ];
 
+interface BattleDef {
+  arabicName: string;
+  bodyKey: SeerahContentKey;
+}
+
+const BATTLES: BattleDef[] = [
+  { arabicName: 'غزوة بدر', bodyKey: 'b_badr' },
+  { arabicName: 'غزوة أحد', bodyKey: 'b_uhud' },
+  { arabicName: 'إجلاء بني النضير', bodyKey: 'b_nadir' },
+  { arabicName: 'غزوة الخندق', bodyKey: 'b_khandaq' },
+];
+
 const TIMELINE = [
   { year: '570 CE', arabicLabel: 'عام الفيل', titleKey: 'e570_title' as SeerahContentKey, descKey: 'e570_desc' as SeerahContentKey },
   { year: '610 CE', arabicLabel: 'بدء الوحي', titleKey: 'e610_title' as SeerahContentKey, descKey: 'e610_desc' as SeerahContentKey },
@@ -130,6 +142,33 @@ export function SeerahContent() {
             </div>
           </section>
         ))}
+
+        {/* Major Battles */}
+        <section>
+          <div className="flex flex-wrap items-baseline gap-3 mb-4">
+            <h2 className="section-title font-garamond text-2xl md:text-3xl font-semibold text-forest">
+              {tc('s11_h')}
+            </h2>
+            <p dir="rtl" lang="ar" className="arabic-sm text-gold">
+              الغزوات الكبرى
+            </p>
+          </div>
+          <p className="text-forest/75 leading-relaxed mb-8">
+            {tc('s11_intro')}
+          </p>
+          <div className="space-y-5">
+            {BATTLES.map(battle => (
+              <article key={battle.bodyKey} className="card-islamic">
+                <p dir="rtl" lang="ar" className="arabic-sm text-gold mb-2">
+                  {battle.arabicName}
+                </p>
+                <p className="text-forest/75 leading-relaxed text-sm">
+                  {tc(battle.bodyKey)}
+                </p>
+              </article>
+            ))}
+          </div>
+        </section>
 
         {/* Quick Timeline */}
         <section>
