@@ -36,6 +36,16 @@ const SECTIONS: SectionDef[] = [
     titleKey: 's3_h',
     paragraphKeys: ['s3_p1', 's3_p2'],
   },
+  {
+    arabicTitle: 'غار حراء وأول الوحي',
+    titleKey: 's4_h',
+    paragraphKeys: ['s4_p1', 's4_p2'],
+  },
+  {
+    arabicTitle: 'الدعوة السرية',
+    titleKey: 's5_h',
+    paragraphKeys: ['s5_p1', 's5_p2'],
+  },
 ];
 
 const TIMELINE = [
