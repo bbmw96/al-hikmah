@@ -66,6 +66,11 @@ const SECTIONS: SectionDef[] = [
     titleKey: 's9_h',
     paragraphKeys: ['s9_p1', 's9_p2'],
   },
+  {
+    arabicTitle: 'سنوات المدينة وصحيفة المدينة',
+    titleKey: 's10_h',
+    paragraphKeys: ['s10_p1', 's10_p2'],
+  },
 ];
 
 const TIMELINE = [
