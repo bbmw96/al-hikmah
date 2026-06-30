@@ -1,5 +1,5 @@
 /**
- * Prayer mechanics content — wudu, the 14 step-by-step prayer postures, and
+ * Prayer mechanics content  –  wudu, the 14 step-by-step prayer postures, and
  * the after-prayer adhkar. Arabic dhikr stays hardcoded in the section
  * components; this file holds the narrative text only.
  *
@@ -7,7 +7,7 @@
  * consuming components use the standard `entry[lang] ?? entry.en` fallback,
  * matching how every other content file in this repo handles incremental
  * translation. The 13 remaining languages are added per-turn (see TaskCreate
- * "Translate prayer-steps-content to 13 langs" — multi-turn marathon).
+ * "Translate prayer-steps-content to 13 langs"  –  multi-turn marathon).
  */
 
 type Lang = 'en' | 'ms' | 'tur' | 'urd' | 'ben' | 'fas' | 'zh' | 'yue' | 'ja' | 'ru' | 'es' | 'ko' | 'ta' | 'si';

@@ -10,7 +10,7 @@ const PHRASES: { arabic: string; titleKey: AdhanIqamahContentKey; descKey: Adhan
   { arabic: 'أَشْهَدُ أَنَّ مُحَمَّدًا رَسُولُ اللَّهِ (×٢)',                              titleKey: 'phrase_shahada2_t',  descKey: 'phrase_shahada2_d' },
   { arabic: 'حَيَّ عَلَى الصَّلَاةِ (×٢)',                                        titleKey: 'phrase_hayya_salah_t', descKey: 'phrase_hayya_salah_d' },
   { arabic: 'حَيَّ عَلَى الْفَلَاحِ (×٢)',                                        titleKey: 'phrase_hayya_falah_t', descKey: 'phrase_hayya_falah_d' },
-  { arabic: 'الصَّلَاةُ خَيْرٌ مِنَ النَّوْمِ (×٢ — فجر)',                              titleKey: 'phrase_fajr_t',      descKey: 'phrase_fajr_d' },
+  { arabic: 'الصَّلَاةُ خَيْرٌ مِنَ النَّوْمِ (×٢  –  فجر)',                              titleKey: 'phrase_fajr_t',      descKey: 'phrase_fajr_d' },
   { arabic: 'اللَّهُ أَكْبَرُ (×٢) ... لَا إِلَٰهَ إِلَّا اللَّهُ',                              titleKey: 'phrase_closing_t',   descKey: 'phrase_closing_d' },
 ];
 

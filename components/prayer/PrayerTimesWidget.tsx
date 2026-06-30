@@ -178,7 +178,7 @@ export function PrayerTimesWidget() {
             }}
             className="bg-white/80 border border-forest/15 rounded-md px-3 py-2 text-sm text-forest focus:outline-none focus:ring-2 focus:ring-gold/40"
           >
-            {usingCustom && <option value="custom">— {tc('location_using')} —</option>}
+            {usingCustom && <option value="custom"> – {tc('location_using')} – </option>}
             {PRAYER_CITIES.map(c => (
               <option key={c.id} value={c.id}>{c.name}, {c.country}</option>
             ))}
