@@ -267,6 +267,40 @@ export function SeerahContent() {
           </div>
         </section>
 
+        {/* Physical Description and Character of the Prophet ﷺ */}
+        <section>
+          <div className="flex flex-wrap items-baseline gap-3 mb-6">
+            <h2 className="section-title font-garamond text-2xl md:text-3xl font-semibold text-forest">
+              {tc('desc_h')}
+            </h2>
+            <p dir="rtl" lang="ar" className="arabic-sm text-gold">
+              صفة النبي ﷺ وأخلاقه
+            </p>
+          </div>
+          <div className="space-y-4">
+            <p className="text-forest/75 leading-relaxed">
+              {tc('desc_physical')}
+            </p>
+            <p className="text-forest/75 leading-relaxed">
+              {tc('desc_humility')}
+            </p>
+            <p className="text-forest/75 leading-relaxed">
+              {tc('desc_mercy')}
+            </p>
+            <p className="text-forest/75 leading-relaxed">
+              {tc('desc_generosity')}
+            </p>
+            <p className="text-forest/75 leading-relaxed">
+              {tc('desc_courage')}
+            </p>
+            <div className="card-forest rounded-2xl p-6">
+              <p className="text-cream/85 leading-relaxed">
+                {tc('desc_closing')}
+              </p>
+            </div>
+          </div>
+        </section>
+
         {/* Quick Timeline */}
         <section>
           <div className="flex flex-wrap items-baseline gap-3 mb-8">
