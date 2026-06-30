@@ -155,6 +155,14 @@ export function Navbar() {
   const pathname = usePathname();
   const closeTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
 
+  // Reset the open menus when the route changes (React's adjust-state-during-render pattern).
+  const [prevPathname, setPrevPathname] = useState(pathname);
+  if (pathname !== prevPathname) {
+    setPrevPathname(pathname);
+    setMobileOpen(false);
+    setActiveDropdown(null);
+  }
+
   function openDropdown(label: string) {
     if (closeTimer.current) clearTimeout(closeTimer.current);
     setActiveDropdown(label);
@@ -169,11 +177,6 @@ export function Navbar() {
     window.addEventListener('scroll', handler, { passive: true });
     return () => window.removeEventListener('scroll', handler);
   }, []);
-
-  useEffect(() => {
-    setMobileOpen(false);
-    setActiveDropdown(null);
-  }, [pathname]);
 
   return (
     <header

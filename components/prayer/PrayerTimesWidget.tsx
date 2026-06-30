@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useMemo, useState } from 'react';
+import { useEffect, useMemo, useState, useSyncExternalStore } from 'react';
 import { Coordinates, PrayerTimes, Madhab, SunnahTimes } from 'adhan';
 import { MapPin } from 'lucide-react';
 import { useLanguage } from '@/lib/i18n/context';
@@ -75,13 +75,16 @@ export function PrayerTimesWidget() {
   const { lang } = useLanguage();
   const tc = (k: PrayerWidgetKey) => PRAYER_WIDGET_CONTENT[k][lang as keyof typeof PRAYER_WIDGET_CONTENT[typeof k]] ?? PRAYER_WIDGET_CONTENT[k].en;
 
-  const [prefs, setPrefs] = useState<Prefs>(DEFAULT_PREFS);
+  // Seed prefs from localStorage via a lazy initialiser (SSR-safe: loadPrefs returns
+  // defaults when there is no window). The render below is gated on `mounted`, so the
+  // server and first client render match regardless of the stored value.
+  const [prefs, setPrefs] = useState<Prefs>(loadPrefs);
   const [now, setNow] = useState<Date>(new Date());
-  const [mounted, setMounted] = useState(false);
+  // Client-only flag without setState-in-effect: false on the server (and during
+  // hydration), true afterwards. Gates the time-dependent render below.
+  const mounted = useSyncExternalStore(() => () => {}, () => true, () => false);
 
   useEffect(() => {
-    setPrefs(loadPrefs());
-    setMounted(true);
     const t = setInterval(() => setNow(new Date()), 60_000);
     return () => clearInterval(t);
   }, []);

@@ -216,7 +216,7 @@ export default function FiqhPage() {
         {/* ── Five Ahkam ── */}
         <section>
           <h2 className="section-title font-garamond text-2xl font-semibold text-forest mb-2">
-            The Five Categories of Ruling (Ahkam al-Shar'iyyah)
+            The Five Categories of Ruling (Ahkam al-Shar&#39;iyyah)
           </h2>
           <p dir="rtl" lang="ar" className="arabic text-gold mb-6">
             الأحكام الشرعية الخمسة
@@ -272,12 +272,12 @@ export default function FiqhPage() {
             The Hanafi Distinction: Fard vs Wajib
           </h2>
           <p className="text-forest/70 text-sm leading-relaxed mb-3">
-            The majority of scholars (Maliki, Shafi'i, Hanbali) use Fard and Wajib as synonyms, both meaning "obligatory." The Hanafi school alone makes a technical distinction:
+            The majority of scholars (Maliki, Shafi&#39;i, Hanbali) use Fard and Wajib as synonyms, both meaning &quot;obligatory.&quot; The Hanafi school alone makes a technical distinction:
           </p>
           <div className="grid sm:grid-cols-2 gap-4">
             <div className="bg-forest/5 rounded-xl p-3">
               <p className="font-medium text-forest text-sm mb-1">Fard (فرض): Hanafi</p>
-              <p className="text-forest/60 text-xs leading-relaxed">Established by a definitive (qat'i) text (overwhelmingly transmitted Quran or mutawatir hadith). Denying it is kufr. Example: five prayers, fasting.</p>
+              <p className="text-forest/60 text-xs leading-relaxed">Established by a definitive (qat&#39;i) text (overwhelmingly transmitted Quran or mutawatir hadith). Denying it is kufr. Example: five prayers, fasting.</p>
             </div>
             <div className="bg-forest/5 rounded-xl p-3">
               <p className="font-medium text-forest text-sm mb-1">Wajib (واجب): Hanafi</p>
@@ -299,7 +299,7 @@ export default function FiqhPage() {
           </p>
           <div className="bg-forest/5 border border-gold/20 rounded-xl p-5 mb-6">
             <p className="text-forest/75 text-sm leading-relaxed">
-              The four sources of Islamic law were systematised by Imam al-Shafi'i in his landmark work "al-Risalah" (approximately 820 CE). All four major schools accept these four sources, though they differ in how they apply and prioritise them in cases of conflict.
+              The four sources of Islamic law were systematised by Imam al-Shafi&#39;i in his landmark work &quot;al-Risalah&quot; (approximately 820 CE). All four major schools accept these four sources, though they differ in how they apply and prioritise them in cases of conflict.
             </p>
           </div>
           <div className="space-y-5">
@@ -326,7 +326,7 @@ export default function FiqhPage() {
         {/* ── Four Schools ── */}
         <section>
           <h2 className="section-title font-garamond text-2xl font-semibold text-forest mb-2">
-            The Four Schools of Jurisprudence (al-Madhahib al-Arba'ah)
+            The Four Schools of Jurisprudence (al-Madhahib al-Arba&#39;ah)
           </h2>
           <p dir="rtl" lang="ar" className="arabic text-gold mb-4">
             المذاهب الفقهية الأربعة

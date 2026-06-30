@@ -60,16 +60,26 @@ export function HadithDetail({
   const [loading, setLoading] = useState(false);
   const [notAvailable, setNotAvailable] = useState(false);
 
+  // Sync the selected translation language + tab when the global language changes
+  // (React's adjust-state-during-render pattern; the fetch itself stays in the effect below).
+  const [prevLang, setPrevLang] = useState(lang);
+  if (lang !== prevLang) {
+    setPrevLang(lang);
+    if (lang !== 'en') {
+      setLanguage(lang as LanguageCode);
+      setActiveTab('translation');
+    }
+  }
+
   useEffect(() => {
     if (hadithNumber > 1) router.prefetch(`/hadith/${collection.id}/${hadithNumber - 1}`);
     if (hadithNumber < collection.hadithCount) router.prefetch(`/hadith/${collection.id}/${hadithNumber + 1}`);
   }, [collection.id, collection.hadithCount, hadithNumber, router]);
 
+  /* eslint-disable react-hooks/set-state-in-effect -- loading/availability is set as part of the standard async data-fetch lifecycle */
   useEffect(() => {
     if (lang === 'en') return;
     const code = lang as LanguageCode;
-    setLanguage(code);
-    setActiveTab('translation');
     const apiPrefix = getApiPrefix(code);
     if (!apiPrefix) { setNotAvailable(true); return; }
     setNotAvailable(false);
@@ -90,6 +100,7 @@ export function HadithDetail({
       .finally(() => setLoading(false));
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [lang]);
+  /* eslint-enable react-hooks/set-state-in-effect */
 
   async function fetchTranslation(lang: LanguageCode) {
     if (lang === 'en') {
