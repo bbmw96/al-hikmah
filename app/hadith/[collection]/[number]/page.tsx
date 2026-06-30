@@ -1,20 +1,22 @@
 ﻿import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
-import { HADITH_COLLECTIONS, getCollectionById } from '@/lib/data/collections';
+import { getCollectionById } from '@/lib/data/collections';
 import { fetchHadith } from '@/lib/hadith-api';
 import { HadithDetail } from './HadithDetail';
 
 export const revalidate = 3600; // re-render at most once per hour; cached by Next.js CDN between renders
+export const dynamicParams = true; // allow on-demand generation of any hadith number
 
+// Skip build-time pre-rendering. The previous version pre-rendered ~262 pages,
+// each calling fetchHadith() which does 2 CDN fetches × 3 fallback hosts × 4-8s
+// timeouts = 500+ serialised network calls that regularly busted past the
+// build-worker 60s timeout. With an empty list, every page is generated on the
+// first request and cached for an hour by revalidate=3600.
+//
+// Reference: the HADITH_COLLECTIONS import is kept above for the metadata route
+// and other dependants — only the build-time enumeration is dropped.
 export async function generateStaticParams(): Promise<{ collection: string; number: string }[]> {
-  const params: { collection: string; number: string }[] = [];
-  for (const col of HADITH_COLLECTIONS.filter(c => c.available && c.apiCollection)) {
-    const limit = col.hadithCount <= 100 ? col.hadithCount : 20;
-    for (let i = 1; i <= limit; i++) {
-      params.push({ collection: col.id, number: String(i) });
-    }
-  }
-  return params;
+  return [];
 }
 
 interface Props {
