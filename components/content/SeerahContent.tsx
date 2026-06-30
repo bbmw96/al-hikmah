@@ -83,6 +83,10 @@ const BATTLES: BattleDef[] = [
   { arabicName: 'غزوة أحد', bodyKey: 'b_uhud' },
   { arabicName: 'إجلاء بني النضير', bodyKey: 'b_nadir' },
   { arabicName: 'غزوة الخندق', bodyKey: 'b_khandaq' },
+  { arabicName: 'غزوة بني قريظة', bodyKey: 'b_qurayzah' },
+  { arabicName: 'صلح الحديبية', bodyKey: 'b_hudaybiyyah' },
+  { arabicName: 'غزوة خيبر', bodyKey: 'b_khaybar' },
+  { arabicName: 'غزوة مؤتة', bodyKey: 'b_mutah' },
 ];
 
 const TIMELINE = [
