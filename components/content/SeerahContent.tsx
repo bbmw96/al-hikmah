@@ -92,6 +92,18 @@ const BATTLES: BattleDef[] = [
   { arabicName: 'غزوة تبوك', bodyKey: 'b_tabuk' },
 ];
 
+interface LetterDef {
+  arabicName: string;
+  bodyKey: SeerahContentKey;
+}
+
+const LETTERS: LetterDef[] = [
+  { arabicName: 'إلى هرقل قيصر الروم', bodyKey: 'letters_heraclius' },
+  { arabicName: 'إلى كسرى ملك الفرس', bodyKey: 'letters_khosrau' },
+  { arabicName: 'إلى النجاشي ملك الحبشة', bodyKey: 'letters_negus' },
+  { arabicName: 'إلى المقوقس عظيم القبط', bodyKey: 'letters_muqawqis' },
+];
+
 const TIMELINE = [
   { year: '570 CE', arabicLabel: 'عام الفيل', titleKey: 'e570_title' as SeerahContentKey, descKey: 'e570_desc' as SeerahContentKey },
   { year: '610 CE', arabicLabel: 'بدء الوحي', titleKey: 'e610_title' as SeerahContentKey, descKey: 'e610_desc' as SeerahContentKey },
@@ -171,6 +183,33 @@ export function SeerahContent() {
                 </p>
                 <p className="text-forest/75 leading-relaxed text-sm">
                   {tc(battle.bodyKey)}
+                </p>
+              </article>
+            ))}
+          </div>
+        </section>
+
+        {/* Letters to the Kings */}
+        <section>
+          <div className="flex flex-wrap items-baseline gap-3 mb-4">
+            <h2 className="section-title font-garamond text-2xl md:text-3xl font-semibold text-forest">
+              {tc('letters_h')}
+            </h2>
+            <p dir="rtl" lang="ar" className="arabic-sm text-gold">
+              كتب النبي ﷺ إلى الملوك
+            </p>
+          </div>
+          <p className="text-forest/75 leading-relaxed mb-8">
+            {tc('letters_intro')}
+          </p>
+          <div className="space-y-5">
+            {LETTERS.map(letter => (
+              <article key={letter.bodyKey} className="card-islamic">
+                <p dir="rtl" lang="ar" className="arabic-sm text-gold mb-2">
+                  {letter.arabicName}
+                </p>
+                <p className="text-forest/75 leading-relaxed text-sm">
+                  {tc(letter.bodyKey)}
                 </p>
               </article>
             ))}
