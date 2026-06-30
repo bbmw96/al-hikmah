@@ -46,6 +46,11 @@ const SECTIONS: SectionDef[] = [
     titleKey: 's5_h',
     paragraphKeys: ['s5_p1', 's5_p2'],
   },
+  {
+    arabicTitle: 'الدعوة الجهرية والاضطهاد والمقاطعة',
+    titleKey: 's6_h',
+    paragraphKeys: ['s6_p1', 's6_p2', 's6_p3'],
+  },
 ];
 
 const TIMELINE = [
