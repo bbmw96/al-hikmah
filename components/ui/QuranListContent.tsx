@@ -8,6 +8,7 @@ import { SURAHS, type SurahData } from '@/lib/data/quran';
 import { cn } from '@/lib/utils';
 import { useLanguage } from '@/lib/i18n/context';
 import { QURAN_UI, type QuranUiKey } from '@/lib/i18n/content/quran-content';
+import { QuranMeaningsSection } from '@/components/quran/QuranMeaningsSection';
 
 type Filter = 'all' | 'Makki' | 'Madani';
 
@@ -159,6 +160,8 @@ export function QuranListContent() {
         </div>
       )}
       </div>
+
+      <QuranMeaningsSection />
 
       <div className="bg-forest/5 border-t border-gold/10 py-12 mt-8">
         <div className="max-w-3xl mx-auto px-6 text-center">
