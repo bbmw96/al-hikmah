@@ -51,6 +51,11 @@ const SECTIONS: SectionDef[] = [
     titleKey: 's6_h',
     paragraphKeys: ['s6_p1', 's6_p2', 's6_p3'],
   },
+  {
+    arabicTitle: 'عام الحزن والرحلة إلى الطائف',
+    titleKey: 's7_h',
+    paragraphKeys: ['s7_p1', 's7_p2'],
+  },
 ];
 
 const TIMELINE = [
