@@ -14,6 +14,30 @@ function useSeerah() {
   };
 }
 
+interface SectionDef {
+  arabicTitle: string;
+  titleKey: SeerahContentKey;
+  paragraphKeys: SeerahContentKey[];
+}
+
+const SECTIONS: SectionDef[] = [
+  {
+    arabicTitle: 'النسب والولادة',
+    titleKey: 's1_h',
+    paragraphKeys: ['s1_p1', 's1_p2', 's1_p3'],
+  },
+  {
+    arabicTitle: 'حياته المبكرة وسنوات التجارة',
+    titleKey: 's2_h',
+    paragraphKeys: ['s2_p1', 's2_p2'],
+  },
+  {
+    arabicTitle: 'الزواج من خديجة رضي الله عنها',
+    titleKey: 's3_h',
+    paragraphKeys: ['s3_p1', 's3_p2'],
+  },
+];
+
 const TIMELINE = [
   { year: '570 CE', arabicLabel: 'عام الفيل', titleKey: 'e570_title' as SeerahContentKey, descKey: 'e570_desc' as SeerahContentKey },
   { year: '610 CE', arabicLabel: 'بدء الوحي', titleKey: 'e610_title' as SeerahContentKey, descKey: 'e610_desc' as SeerahContentKey },
@@ -37,55 +61,84 @@ export function SeerahContent() {
         subtitle={tc('page_subtitle')}
       />
 
-      <div className="max-w-4xl mx-auto px-6 py-16">
-        {/* Opening */}
-        <div className="text-center mb-16">
+      <div className="max-w-4xl mx-auto px-6 py-14 space-y-16">
+
+        {/* Opening verse */}
+        <section className="text-center">
           <ArabicText
             text="لَقَدْ كَانَ لَكُمْ فِي رَسُولِ اللَّهِ أُسْوَةٌ حَسَنَةٌ"
             size="lg"
             className="mb-4"
           />
-          <p className="text-forest/60 italic">
+          <p className="text-forest/60 italic text-sm">
             {tc('verse_intro')}
           </p>
-        </div>
+        </section>
 
-        {/* Timeline */}
-        <div className="relative">
-          {/* Vertical line */}
-          <div className="absolute left-6 top-0 bottom-0 w-0.5 bg-gold/20" aria-hidden="true" />
+        {/* Narrative sections */}
+        {SECTIONS.map(section => (
+          <section key={section.titleKey}>
+            <div className="flex flex-wrap items-baseline gap-3 mb-6">
+              <h2 className="section-title font-garamond text-2xl md:text-3xl font-semibold text-forest">
+                {tc(section.titleKey)}
+              </h2>
+              <p dir="rtl" lang="ar" className="arabic-sm text-gold">
+                {section.arabicTitle}
+              </p>
+            </div>
+            <div className="space-y-4">
+              {section.paragraphKeys.map(pk => (
+                <p key={pk} className="text-forest/75 leading-relaxed">
+                  {tc(pk)}
+                </p>
+              ))}
+            </div>
+          </section>
+        ))}
 
-          <div className="space-y-10">
-            {TIMELINE.map((event, i) => (
-              <article key={i} className="relative pl-16">
-                {/* Dot */}
-                <div
-                  className="absolute left-4 top-1 w-4 h-4 rounded-full bg-gold border-2 border-cream shadow"
-                  aria-hidden="true"
-                />
-
-                <div className="flex flex-wrap items-baseline gap-3 mb-3">
-                  <span className="badge-gold text-xs">{event.year}</span>
-                  <p
-                    dir="rtl"
-                    lang="ar"
-                    className="arabic-sm text-gold"
-                  >
-                    {event.arabicLabel}
-                  </p>
-                </div>
-
-                <h3 className="font-garamond text-xl font-semibold text-forest mb-3">
-                  {tc(event.titleKey)}
-                </h3>
-                <p className="text-forest/70 leading-relaxed text-sm">{tc(event.descKey)}</p>
-              </article>
-            ))}
+        {/* Quick Timeline */}
+        <section>
+          <div className="flex flex-wrap items-baseline gap-3 mb-8">
+            <h2 className="section-title font-garamond text-2xl md:text-3xl font-semibold text-forest">
+              Quick Timeline
+            </h2>
+            <p dir="rtl" lang="ar" className="arabic-sm text-gold">
+              الجدول الزمني
+            </p>
           </div>
-        </div>
+
+          <div className="relative">
+            <div className="absolute left-6 top-0 bottom-0 w-0.5 bg-gold/20" aria-hidden="true" />
+
+            <div className="space-y-10">
+              {TIMELINE.map((event, i) => (
+                <article key={i} className="relative pl-16">
+                  <div
+                    className="absolute left-4 top-1 w-4 h-4 rounded-full bg-gold border-2 border-cream shadow"
+                    aria-hidden="true"
+                  />
+
+                  <div className="flex flex-wrap items-baseline gap-3 mb-3">
+                    <span className="badge-gold text-xs">{event.year}</span>
+                    <p dir="rtl" lang="ar" className="arabic-sm text-gold">
+                      {event.arabicLabel}
+                    </p>
+                  </div>
+
+                  <h3 className="font-garamond text-xl font-semibold text-forest mb-3">
+                    {tc(event.titleKey)}
+                  </h3>
+                  <p className="text-forest/70 leading-relaxed text-sm">
+                    {tc(event.descKey)}
+                  </p>
+                </article>
+              ))}
+            </div>
+          </div>
+        </section>
 
         {/* Closing */}
-        <div className="mt-16 card-islamic text-center">
+        <div className="card-islamic text-center">
           <ArabicText
             text="صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ"
             size="lg"
