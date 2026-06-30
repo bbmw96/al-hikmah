@@ -38,8 +38,8 @@ export function CalendarContent() {
         subtitle={tc('page_subtitle')}
       />
 
-      <div className="max-w-5xl mx-auto px-6 py-16">
-        <div className="card-islamic bg-gold/5 mb-12 max-w-2xl mx-auto text-center">
+      <div className="max-w-5xl mx-auto px-6 py-16 space-y-12">
+        <div className="card-islamic bg-gold/5 max-w-2xl mx-auto text-center">
           <p
             dir="rtl"
             lang="ar"
@@ -50,6 +50,101 @@ export function CalendarContent() {
           </p>
           <p className="text-forest/60 italic text-sm">{tc('verse_trans')}</p>
         </div>
+
+        {/* What is the Hijri calendar */}
+        <section className="max-w-3xl mx-auto">
+          <h2 className="section-title font-garamond text-2xl md:text-3xl font-semibold text-forest mb-4">
+            {tc('intro_heading')}
+          </h2>
+          <div className="prose-islamic space-y-3">
+            <p className="text-forest/75 leading-relaxed">{tc('intro_p1')}</p>
+            <p className="text-forest/75 leading-relaxed">{tc('intro_p2')}</p>
+            <p className="text-forest/75 leading-relaxed">{tc('intro_p3')}</p>
+          </div>
+        </section>
+
+        {/* The Hijra event */}
+        <section className="max-w-3xl mx-auto">
+          <div className="flex flex-wrap items-baseline gap-3 mb-4">
+            <h2 className="section-title font-garamond text-2xl md:text-3xl font-semibold text-forest">
+              {tc('hijra_heading')}
+            </h2>
+            <p dir="rtl" lang="ar" className="arabic-sm text-gold" aria-hidden="true">
+              الهجرة
+            </p>
+          </div>
+          <div className="space-y-3">
+            <p className="text-forest/75 leading-relaxed">{tc('hijra_p1')}</p>
+            <p className="text-forest/75 leading-relaxed">{tc('hijra_p2')}</p>
+          </div>
+        </section>
+
+        {/* Umar instituting the calendar */}
+        <section className="max-w-3xl mx-auto">
+          <div className="flex flex-wrap items-baseline gap-3 mb-4">
+            <h2 className="section-title font-garamond text-2xl md:text-3xl font-semibold text-forest">
+              {tc('umar_heading')}
+            </h2>
+            <p dir="rtl" lang="ar" className="arabic-sm text-gold" aria-hidden="true">
+              تأسيس عمر للتقويم
+            </p>
+          </div>
+          <div className="space-y-3">
+            <p className="text-forest/75 leading-relaxed">{tc('umar_p1')}</p>
+            <p className="text-forest/75 leading-relaxed">{tc('umar_p2')}</p>
+          </div>
+        </section>
+
+        {/* The four sacred months */}
+        <section className="max-w-3xl mx-auto">
+          <div className="flex flex-wrap items-baseline gap-3 mb-4">
+            <h2 className="section-title font-garamond text-2xl md:text-3xl font-semibold text-forest">
+              {tc('sacred_heading')}
+            </h2>
+            <p dir="rtl" lang="ar" className="arabic-sm text-gold" aria-hidden="true">
+              الأشهر الحرم
+            </p>
+          </div>
+          <div className="card-forest rounded-2xl p-6 mb-4">
+            <p className="text-cream/85 leading-relaxed">{tc('sacred_p1')}</p>
+          </div>
+          <p className="text-forest/75 leading-relaxed mb-5">{tc('sacred_p2')}</p>
+          <p className="text-xs text-gold/70 font-medium uppercase tracking-wider mb-3">
+            {tc('sacred_list_label')}
+          </p>
+          <ul className="space-y-2">
+            <li className="card-islamic text-sm text-forest/70 leading-relaxed">{tc('sacred_dhul_qadah')}</li>
+            <li className="card-islamic text-sm text-forest/70 leading-relaxed">{tc('sacred_dhul_hijjah')}</li>
+            <li className="card-islamic text-sm text-forest/70 leading-relaxed">{tc('sacred_muharram')}</li>
+            <li className="card-islamic text-sm text-forest/70 leading-relaxed">{tc('sacred_rajab')}</li>
+          </ul>
+        </section>
+
+        {/* Determining the start of each month */}
+        <section className="max-w-3xl mx-auto">
+          <div className="flex flex-wrap items-baseline gap-3 mb-4">
+            <h2 className="section-title font-garamond text-2xl md:text-3xl font-semibold text-forest">
+              {tc('moonsight_heading')}
+            </h2>
+            <p dir="rtl" lang="ar" className="arabic-sm text-gold" aria-hidden="true">
+              رؤية الهلال
+            </p>
+          </div>
+          <div className="space-y-3">
+            <p className="text-forest/75 leading-relaxed">{tc('moonsight_p1')}</p>
+            <p className="text-forest/75 leading-relaxed">{tc('moonsight_p2')}</p>
+          </div>
+        </section>
+
+        {/* The twelve months heading */}
+        <section>
+          <div className="text-center mb-8">
+            <h2 className="section-title font-garamond text-2xl md:text-3xl font-semibold text-forest mb-2">
+              {tc('months_heading')}
+            </h2>
+            <p className="text-forest/60 text-sm italic">{tc('months_subheading')}</p>
+          </div>
+        </section>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {MONTH_LATIN.map((name, idx) => {
