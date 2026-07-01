@@ -1,4 +1,5 @@
-﻿import { HeroSection } from '@/components/ui/HeroSection';
+import { HeroSection } from '@/components/ui/HeroSection';
+import { SiteHighlights } from '@/components/ui/SiteHighlights';
 import { ExploreSection } from '@/components/ui/ExploreSection';
 import { FeaturedCollections } from '@/components/ui/FeaturedCollections';
 import { CTABanner } from '@/components/ui/CTABanner';
@@ -10,6 +11,9 @@ export default function HomePage() {
     <>
       {/* Hero */}
       <HeroSection />
+
+      {/* Site scale + depth at a glance */}
+      <SiteHighlights />
 
       {/* Quick access grid */}
       <ExploreSection />
