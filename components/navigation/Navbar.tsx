@@ -56,6 +56,7 @@ function useNavItems(): NavItem[] {
         { label: t('nav.ulumquran'), href: '/ulum-quran' },
         { label: t('nav.mustalah'),  href: '/mustalah-hadith' },
         { label: t('nav.seerah'),    href: '/seerah' },
+        { label: t('nav.prophetfamily'), href: '/prophet-family' },
         { label: t('nav.glossary'),  href: '/glossary' },
         { label: t('nav.calendar'),  href: '/calendar' },
       ],
