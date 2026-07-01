@@ -55,6 +55,22 @@ export function ProphetWarsContent() {
           </section>
         ))}
 
+        {/* In development */}
+        <section className="card-islamic bg-forest/5 border-l-4 border-gold">
+          <h2 className="section-title font-garamond text-xl md:text-2xl font-semibold text-forest mb-3">
+            {tc('indev_h')}
+          </h2>
+          <p className="text-forest/75 leading-relaxed text-sm mb-4 italic">{tc('indev_intro')}</p>
+          <ul className="space-y-2">
+            {[1, 2, 3, 4, 5, 6].map(n => (
+              <li key={n} className="flex gap-2 text-forest/75 text-sm leading-relaxed">
+                <span className="text-gold mt-1 flex-shrink-0" aria-hidden="true">•</span>
+                <span>{tc(k(`indev_${n}`))}</span>
+              </li>
+            ))}
+          </ul>
+        </section>
+
       </div>
     </>
   );
