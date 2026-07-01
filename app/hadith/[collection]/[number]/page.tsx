@@ -14,7 +14,7 @@ export const dynamicParams = true; // allow on-demand generation of any hadith n
 // first request and cached for an hour by revalidate=3600.
 //
 // Reference: the HADITH_COLLECTIONS import is kept above for the metadata route
-// and other dependants — only the build-time enumeration is dropped.
+// and other dependants – only the build-time enumeration is dropped.
 export async function generateStaticParams(): Promise<{ collection: string; number: string }[]> {
   return [];
 }
