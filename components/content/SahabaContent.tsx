@@ -9,7 +9,7 @@ import type { SahabaContentKey } from '@/lib/i18n/content/sahaba-content';
  * List of Ashara Mubashsharun indices for which cards are wired.
  * Grows as content is added (1 = Abu Bakr, 2 = Umar, 3 = Uthman, ...).
  */
-const ASHARA_WIRED: readonly number[] = [1, 2] as const;
+const ASHARA_WIRED: readonly number[] = [1, 2, 3] as const;
 
 export function SahabaContent() {
   const { lang } = useLanguage();
