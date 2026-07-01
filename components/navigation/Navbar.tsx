@@ -81,7 +81,7 @@ function DropdownMenu({
 }) {
   return (
     <div
-      className="absolute top-full left-0 mt-2 min-w-[13rem] rounded-xl shadow-2xl border border-gold/20 bg-cream overflow-hidden z-50 fade-up"
+      className="absolute top-full left-0 mt-2 min-w-[13rem] max-h-[calc(100vh-6rem)] overflow-y-auto rounded-xl shadow-2xl border border-gold/20 bg-cream z-50 fade-up"
       onMouseEnter={onMouseEnter}
       onMouseLeave={onMouseLeave}
     >
