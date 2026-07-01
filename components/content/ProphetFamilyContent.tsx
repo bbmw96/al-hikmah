@@ -118,7 +118,7 @@ export function ProphetFamilyContent() {
             ))}
           </div>
 
-          {/* Mariyah — noted separately per classical position */}
+          {/* Mariyah – noted separately per classical position */}
           <div className="mt-6 space-y-4">
             <h3 className="font-garamond text-xl font-semibold text-forest">
               {tc('concubine_h')}
