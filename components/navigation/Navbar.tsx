@@ -58,6 +58,7 @@ function useNavItems(): NavItem[] {
         { label: t('nav.seerah'),    href: '/seerah' },
         { label: t('nav.prophetfamily'), href: '/prophet-family' },
         { label: t('nav.sahaba'),    href: '/sahaba' },
+        { label: t('nav.tabiin'),    href: '/tabiin' },
         { label: t('nav.prophetwars'), href: '/prophet-wars' },
         { label: t('nav.glossary'),  href: '/glossary' },
         { label: t('nav.calendar'),  href: '/calendar' },

@@ -542,6 +542,14 @@ const UI = {
     ta: 'ஸஹாபாக்கள்', si: 'සහාබාවරු',
   },
 
+  /* ── Tabi'in (Successors) nav label ── */
+  'nav.tabiin': {
+    en: "The Tabi'in", ms: "Tabi'in", tur: "Tâbiîn", urd: 'تابعین',
+    ben: 'তাবিঈন', fas: 'تابعین', zh: '再传弟子', yue: '再傳弟子',
+    ja: 'ターバウーン', ru: 'Табиуны', es: "Los Tabi'in", ko: '타비운',
+    ta: 'தாபிஈன்கள்', si: 'තාබිඉන්',
+  },
+
   /* ── Prophet Wars nav label ── */
   'nav.prophetwars': {
     en: "Prophets' Wars", ms: "Peperangan Para Nabi", tur: "Peygamber Savaşları", urd: 'انبیاء کی جنگیں',
