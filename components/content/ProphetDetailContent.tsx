@@ -187,6 +187,15 @@ export function ProphetDetailContent({ slug }: { slug: string }) {
                 </div>
               ))}
             </div>
+            {prophet.id === 'muhammad' && (
+              <Link
+                href="/prophet-family"
+                className="mt-6 inline-flex items-center gap-2 text-sm text-gold hover:text-forest transition-colors font-garamond italic border-b border-gold/40 hover:border-forest/60 pb-0.5"
+              >
+                {tc('detail_family_full_tree_cta')}
+                <ChevronRight className="w-4 h-4" aria-hidden="true" />
+              </Link>
+            )}
           </section>
         )}
 
