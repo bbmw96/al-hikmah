@@ -169,6 +169,52 @@ export function ProphetFamilyContent() {
           </div>
         </section>
 
+        {/* Great-grandchildren and the surviving Prophetic line */}
+        <section>
+          <div className="flex flex-wrap items-baseline gap-3 mb-4">
+            <h2 className="section-title font-garamond text-2xl md:text-3xl font-semibold text-forest">
+              {tc('ggchildren_h')}
+            </h2>
+            <p dir="rtl" lang="ar" className="arabic-sm text-gold" aria-hidden="true">
+              الذُّرِّيَّةُ المُبَارَكَة
+            </p>
+          </div>
+          <p className="text-forest/75 leading-relaxed mb-6">{tc('ggchildren_intro')}</p>
+
+          <div className="space-y-6">
+            <div>
+              <h3 className="font-garamond text-xl font-semibold text-forest mb-3">{tc('ggc_hasan_line_h')}</h3>
+              <article className="card-islamic">
+                <p className="text-forest/75 leading-relaxed text-sm">{tc('ggc_hasan_line_p')}</p>
+              </article>
+            </div>
+            <div>
+              <h3 className="font-garamond text-xl font-semibold text-forest mb-3">{tc('ggc_husayn_line_h')}</h3>
+              <article className="card-islamic">
+                <p className="text-forest/75 leading-relaxed text-sm">{tc('ggc_husayn_line_p')}</p>
+              </article>
+            </div>
+            <div>
+              <h3 className="font-garamond text-xl font-semibold text-forest mb-3">{tc('ggc_sadat_h')}</h3>
+              <article className="card-islamic">
+                <p className="text-forest/75 leading-relaxed text-sm">{tc('ggc_sadat_p')}</p>
+              </article>
+            </div>
+            <div>
+              <h3 className="font-garamond text-xl font-semibold text-forest mb-3">{tc('ggc_notable_h')}</h3>
+              <article className="card-islamic">
+                <p className="text-forest/75 leading-relaxed text-sm">{tc('ggc_notable_p')}</p>
+              </article>
+            </div>
+            <div>
+              <h3 className="font-garamond text-xl font-semibold text-forest mb-3">{tc('ggc_closing_h')}</h3>
+              <article className="card-forest rounded-2xl p-6">
+                <p className="text-cream/85 leading-relaxed text-sm">{tc('ggc_closing_p')}</p>
+              </article>
+            </div>
+          </div>
+        </section>
+
         {/* Sources note */}
         <section>
           <h2 className="section-title font-garamond text-2xl md:text-3xl font-semibold text-forest mb-4">
