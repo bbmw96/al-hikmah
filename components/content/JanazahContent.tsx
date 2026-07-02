@@ -85,6 +85,32 @@ export function JanazahContent() {
           </h2>
           <p className="text-forest/75 leading-relaxed">{tc('takbir_4_p')}</p>
         </section>
+
+        {/* Procession */}
+        <section>
+          <h2 className="section-title font-garamond text-2xl md:text-3xl font-semibold text-forest mb-4">
+            {tc('procession_h')}
+          </h2>
+          <p className="text-forest/75 leading-relaxed">{tc('procession_p')}</p>
+        </section>
+
+        {/* Burial */}
+        <section>
+          <h2 className="section-title font-garamond text-2xl md:text-3xl font-semibold text-forest mb-4">
+            {tc('burial_h')}
+          </h2>
+          <p className="text-forest/75 leading-relaxed">{tc('burial_p')}</p>
+        </section>
+
+        {/* Sources */}
+        <section>
+          <h2 className="section-title font-garamond text-2xl md:text-3xl font-semibold text-forest mb-4">
+            {tc('sources_h')}
+          </h2>
+          <article className="card-forest rounded-2xl p-6">
+            <p className="text-cream/85 leading-relaxed text-sm">{tc('sources_p')}</p>
+          </article>
+        </section>
       </div>
     </>
   );
