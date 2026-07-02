@@ -49,6 +49,16 @@ export function SalawatsContent() {
           </article>
         </section>
 
+        {/* Duha */}
+        <section>
+          <h2 className="section-title font-garamond text-2xl md:text-3xl font-semibold text-forest mb-4">
+            {tc('duha_h')}
+          </h2>
+          <article className="card-islamic">
+            <p className="text-forest/75 leading-relaxed text-sm">{tc('duha_p')}</p>
+          </article>
+        </section>
+
         {/* In-Development notice */}
         <section>
           <article className="card-forest rounded-2xl p-6">
@@ -58,7 +68,6 @@ export function SalawatsContent() {
               include Arabic, transliteration, translation, hadith source and step-by-step method.
             </p>
             <ul className="text-cream/70 text-sm space-y-1 list-disc list-inside">
-              <li>Salat al-Duha  –  the mid-morning prayer</li>
               <li>Salat al-Tarawih  –  the Ramadan night prayer (cross-linked to /ramadan)</li>
               <li>Salat al-Musafir  –  the traveller's prayer (shortening and combining)</li>
               <li>Salat al-Kusuf / al-Khusuf  –  the eclipse prayer (solar and lunar)</li>
