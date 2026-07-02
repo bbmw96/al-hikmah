@@ -1,6 +1,7 @@
 'use client';
 
 import { PageHeader } from '@/components/ui/PageHeader';
+import { AqidahClusterNav } from '@/components/ui/AqidahClusterNav';
 import { useLanguage } from '@/lib/i18n/context';
 import { END_TIMES_CONTENT } from '@/lib/i18n/content/end-times-content';
 import type { EndTimesContentKey } from '@/lib/i18n/content/end-times-content';
@@ -20,6 +21,8 @@ export function EndTimesContent() {
         arabicTitle="أَشْرَاطُ السَّاعَة"
         subtitle={tc('header.subtitle')}
       />
+
+      <AqidahClusterNav />
 
       <div className="max-w-4xl mx-auto px-6 py-16 space-y-16">
 

@@ -1,6 +1,7 @@
 'use client';
 
 import { PageHeader } from '@/components/ui/PageHeader';
+import { AqidahClusterNav } from '@/components/ui/AqidahClusterNav';
 import { useLanguage } from '@/lib/i18n/context';
 import { DAJJAL_CONTENT } from '@/lib/i18n/content/dajjal-content';
 import type { DajjalContentKey } from '@/lib/i18n/content/dajjal-content';
@@ -20,6 +21,8 @@ export function DajjalContent() {
         arabicTitle="المَسِيحُ الدَّجَّال"
         subtitle={tc('header.subtitle')}
       />
+
+      <AqidahClusterNav />
 
       <div className="max-w-4xl mx-auto px-6 py-16 space-y-16">
 

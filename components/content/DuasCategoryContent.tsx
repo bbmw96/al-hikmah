@@ -3,6 +3,7 @@
 import Link from 'next/link';
 import { ChevronLeft } from 'lucide-react';
 import { ArabicText } from '@/components/ui/ArabicText';
+import { BookmarkButton } from '@/components/ui/BookmarkButton';
 import { getDuasByCategory, getCategoryById } from '@/lib/data/duas';
 import { useLanguage } from '@/lib/i18n/context';
 import { DUAS_CONTENT } from '@/lib/i18n/content/duas-content';
@@ -62,10 +63,14 @@ export function DuasCategoryContent({ categoryId }: { categoryId: string }) {
         {duas.map(dua => {
           const dk = idKey(dua.id);
           return (
-            <article key={dua.id} className="card-islamic space-y-5">
+            <article
+              key={dua.id}
+              id={dua.id}
+              className="card-islamic space-y-5 scroll-mt-24 target:ring-2 target:ring-gold/40 target:ring-offset-2 target:ring-offset-cream"
+            >
               {/* Title */}
               <div className="flex items-start justify-between gap-4 flex-wrap">
-                <div>
+                <div className="flex-1 min-w-0">
                   <h2 className="font-garamond text-xl font-semibold text-forest">
                     {tc(`dua_${dk}_title` as DuasContentKey)}
                   </h2>
@@ -75,7 +80,10 @@ export function DuasCategoryContent({ categoryId }: { categoryId: string }) {
                     </p>
                   )}
                 </div>
-                <span className="badge-gold text-xs flex-shrink-0">{dua.source}</span>
+                <div className="flex items-center gap-2 flex-shrink-0">
+                  <span className="badge-gold text-xs">{dua.source}</span>
+                  <BookmarkButton duaId={dua.id} />
+                </div>
               </div>
 
               {/* Arabic */}

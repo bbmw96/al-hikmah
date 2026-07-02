@@ -1,6 +1,7 @@
 'use client';
 
 import { PageHeader } from '@/components/ui/PageHeader';
+import { AqidahClusterNav } from '@/components/ui/AqidahClusterNav';
 import { useLanguage } from '@/lib/i18n/context';
 import { AFTERLIFE_CONTENT } from '@/lib/i18n/content/afterlife-content';
 import type { AfterlifeContentKey } from '@/lib/i18n/content/afterlife-content';
@@ -20,6 +21,8 @@ export function AfterlifeContent() {
         arabicTitle="مَا بَعْدَ المَوْتِ وَيَوْمُ القِيَامَة"
         subtitle={tc('header.subtitle')}
       />
+
+      <AqidahClusterNav />
 
       <div className="max-w-4xl mx-auto px-6 py-16 space-y-16">
 
