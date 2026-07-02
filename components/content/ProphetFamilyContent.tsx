@@ -38,6 +38,13 @@ const GRANDCHILDREN: ProphetFamilyContentKey[] = [
   'gc_umm_kulthum_ali',
 ];
 
+const UNCLES: ProphetFamilyContentKey[] = [
+  'uncle_abu_talib',
+  'uncle_hamza',
+  'uncle_abbas',
+  'uncle_abu_lahab',
+];
+
 export function ProphetFamilyContent() {
   const { lang } = useLanguage();
   const tc = (key: ProphetFamilyContentKey): string => {
@@ -126,6 +133,26 @@ export function ProphetFamilyContent() {
             <article className="card-forest rounded-2xl p-6">
               <p className="text-cream/85 leading-relaxed text-sm">{tc('concubine_mariyah')}</p>
             </article>
+          </div>
+        </section>
+
+        {/* Uncles */}
+        <section>
+          <div className="flex flex-wrap items-baseline gap-3 mb-4">
+            <h2 className="section-title font-garamond text-2xl md:text-3xl font-semibold text-forest">
+              {tc('uncles_h')}
+            </h2>
+            <p dir="rtl" lang="ar" className="arabic-sm text-gold" aria-hidden="true">
+              أَعْمَامُ النَّبِيِّ ﷺ
+            </p>
+          </div>
+          <p className="text-forest/75 leading-relaxed mb-6">{tc('uncles_intro')}</p>
+          <div className="space-y-4">
+            {UNCLES.map((k) => (
+              <article key={k} className="card-islamic">
+                <p className="text-forest/75 leading-relaxed text-sm">{tc(k)}</p>
+              </article>
+            ))}
           </div>
         </section>
 
