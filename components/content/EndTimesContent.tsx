@@ -2,6 +2,7 @@
 
 import { PageHeader } from '@/components/ui/PageHeader';
 import { AqidahClusterNav } from '@/components/ui/AqidahClusterNav';
+import { TenSignsTimeline } from '@/components/ui/TenSignsTimeline';
 import { useLanguage } from '@/lib/i18n/context';
 import { END_TIMES_CONTENT } from '@/lib/i18n/content/end-times-content';
 import type { EndTimesContentKey } from '@/lib/i18n/content/end-times-content';
@@ -34,6 +35,9 @@ export function EndTimesContent() {
             <p className="text-forest/75 leading-relaxed text-sm">{tc(k(`${n}.p1`))}</p>
           </section>
         ))}
+
+        {/* Ten Signs timeline diagram */}
+        <TenSignsTimeline />
 
         {/* In development */}
         <section className="card-islamic bg-forest/5 border-l-4 border-gold">
