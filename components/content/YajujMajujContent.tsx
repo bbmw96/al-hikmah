@@ -2,6 +2,7 @@
 
 import { PageHeader } from '@/components/ui/PageHeader';
 import { AqidahClusterNav } from '@/components/ui/AqidahClusterNav';
+import { BarrierIllustration } from '@/components/ui/BarrierIllustration';
 import { useLanguage } from '@/lib/i18n/context';
 import { YAJUJ_MAJUJ_CONTENT } from '@/lib/i18n/content/yajuj-majuj-content';
 import type { YajujMajujContentKey } from '@/lib/i18n/content/yajuj-majuj-content';
@@ -34,6 +35,9 @@ export function YajujMajujContent() {
             <p className="text-forest/75 leading-relaxed text-sm">{tc(k(`${n}.p1`))}</p>
           </section>
         ))}
+
+        {/* Barrier illustration */}
+        <BarrierIllustration />
 
         {/* In development */}
         <section className="card-islamic bg-forest/5 border-l-4 border-gold">
