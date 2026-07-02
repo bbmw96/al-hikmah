@@ -71,7 +71,7 @@ export function HadithListContent() {
                       {col.englishName}
                     </h3>
                     {!col.available && (
-                      <Lock className="w-4 h-4 text-forest/30 flex-shrink-0 mt-1" aria-label="Coming soon" />
+                      <Lock className="w-4 h-4 text-forest/30 flex-shrink-0 mt-1" aria-label={t('ui.comingsoon')} />
                     )}
                   </div>
                   <p className="text-forest/50 text-sm mb-2">{col.author} ({col.authorDates})</p>
