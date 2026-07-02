@@ -2,6 +2,7 @@
 
 import { PageHeader } from '@/components/ui/PageHeader';
 import { AqidahClusterNav } from '@/components/ui/AqidahClusterNav';
+import { SoulJourneyDiagram } from '@/components/ui/SoulJourneyDiagram';
 import { useLanguage } from '@/lib/i18n/context';
 import { AFTERLIFE_CONTENT } from '@/lib/i18n/content/afterlife-content';
 import type { AfterlifeContentKey } from '@/lib/i18n/content/afterlife-content';
@@ -37,6 +38,9 @@ export function AfterlifeContent() {
             )}
           </section>
         ))}
+
+        {/* Soul journey diagram */}
+        <SoulJourneyDiagram />
 
         {/* In development */}
         <section className="card-islamic bg-forest/5 border-l-4 border-gold">
