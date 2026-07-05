@@ -1,4 +1,4 @@
-﻿'use client';
+'use client';
 
 import { ArabicText } from '@/components/ui/ArabicText';
 import { useLanguage } from '@/lib/i18n/context';

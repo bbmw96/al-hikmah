@@ -1,4 +1,4 @@
-﻿export interface GlossaryEntry {
+export interface GlossaryEntry {
   id: string;
   term: string;
   arabicTerm: string;

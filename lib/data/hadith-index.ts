@@ -1,4 +1,4 @@
-﻿export interface HadithEntry {
+export interface HadithEntry {
   col: string;
   num: number;
   narrator: string;

@@ -1,4 +1,4 @@
-﻿import type { Metadata } from 'next';
+import type { Metadata } from 'next';
 import { HajjUmrahContent } from '@/components/content/HajjUmrahContent';
 
 export const dynamic = 'force-static';

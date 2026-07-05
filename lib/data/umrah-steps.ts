@@ -1,4 +1,4 @@
-﻿export interface UmrahStep {
+export interface UmrahStep {
   id: string;
   stepNumber: number;
   title: string;

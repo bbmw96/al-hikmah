@@ -1,4 +1,4 @@
-﻿export type Lang = 'en' | 'ms' | 'tur' | 'urd' | 'ben' | 'fas' | 'zh' | 'yue' | 'ja' | 'ru' | 'es' | 'ko' | 'ta' | 'si';
+export type Lang = 'en' | 'ms' | 'tur' | 'urd' | 'ben' | 'fas' | 'zh' | 'yue' | 'ja' | 'ru' | 'es' | 'ko' | 'ta' | 'si';
 
 export const LANGUAGE_META: Record<Lang, { label: string; nativeLabel: string; dir: 'ltr' | 'rtl'; htmlLang: string }> = {
   en:  { label: 'English',   nativeLabel: 'English',        dir: 'ltr', htmlLang: 'en-GB'       },

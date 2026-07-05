@@ -1,4 +1,4 @@
-﻿export interface SurahData {
+export interface SurahData {
   number: number;
   arabicName: string;
   englishName: string;

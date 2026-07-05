@@ -1,4 +1,4 @@
-﻿import type { Metadata } from 'next';
+import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import { getCollectionById } from '@/lib/data/collections';
 import { fetchHadith } from '@/lib/hadith-api';

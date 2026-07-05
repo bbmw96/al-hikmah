@@ -1,4 +1,4 @@
-﻿const CDN_BASES = [
+const CDN_BASES = [
   'https://cdn.jsdelivr.net/gh/fawazahmed0/hadith-api@1',
   'https://fastly.jsdelivr.net/gh/fawazahmed0/hadith-api@1',
   'https://raw.githubusercontent.com/fawazahmed0/hadith-api/1',

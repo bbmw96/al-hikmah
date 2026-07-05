@@ -1,4 +1,4 @@
-﻿import type { Metadata } from 'next';
+import type { Metadata } from 'next';
 import { EB_Garamond, Inter, Scheherazade_New } from 'next/font/google';
 import './globals.css';
 import { Navbar } from '@/components/navigation/Navbar';

@@ -1,4 +1,4 @@
-﻿import type { Lang } from '@/lib/i18n/translations';
+import type { Lang } from '@/lib/i18n/translations';
 
 type ML = Record<Lang, string>;
 

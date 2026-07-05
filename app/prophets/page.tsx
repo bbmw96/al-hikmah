@@ -1,4 +1,4 @@
-﻿import type { Metadata } from 'next';
+import type { Metadata } from 'next';
 import { ProphetsListContent } from '@/components/content/ProphetsListContent';
 
 export const dynamic = 'force-static';

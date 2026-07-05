@@ -1,4 +1,4 @@
-﻿import type { Metadata } from 'next';
+import type { Metadata } from 'next';
 import { PageHeader } from '@/components/ui/PageHeader';
 import { TaharahContent } from '@/components/content/TaharahContent';
 
