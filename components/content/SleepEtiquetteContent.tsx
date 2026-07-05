@@ -5,20 +5,20 @@ import { UnderConstructionCallout } from '@/components/ui/UnderConstructionCallo
 import { useLanguage } from '@/lib/i18n/context';
 
 const TITLE: Record<string, string> = {
-  en: `Adab al-Nawm  –  The Etiquettes of Sleep`,
-  ms: `Adab al-Nawm  –  Adab Tidur`,
-  tur: `Âdâbü'n-Nevm  –  Uyku Âdâbı`,
-  urd: `آدابِ نوم  –  سونے کے آداب`,
-  ben: `আদাব আল-নাওম  –  ঘুমের আদব`,
-  fas: `آداب نوم  –  آداب خواب`,
-  zh: `睡眠之礼节  –  「阿达布·纳乌姆」`,
-  yue: `睡眠之禮節  –  「阿達布·納烏姆」`,
-  ja: `眠りの作法  –  アダーブ・アン＝ナウム`,
-  ru: `Этикет сна  –  Адаб ан-Наум`,
-  es: `Adab al-Nawm  –  la etiqueta del sueño`,
-  ko: `잠의 예절  –  아다브 안나움`,
-  ta: `ஆதாப் அன்-நவ்ம்  –  தூக்கத்தின் நடத்தை`,
-  si: `අදාබ් අන්-නව්ම්  –  නින්දේ අදාබ්`,
+  en: `Adab al-Nawm, The Etiquettes of Sleep`,
+  ms: `Adab al-Nawm, Adab Tidur`,
+  tur: `Âdâbü'n-Nevm, Uyku Âdâbı`,
+  urd: `آدابِ نوم، سونے کے آداب`,
+  ben: `আদাব আল-নাওম, ঘুমের আদব`,
+  fas: `آداب نوم، آداب خواب`,
+  zh: `睡眠之礼节，「阿达布·纳乌姆」`,
+  yue: `睡眠之禮節，「阿達布·納烏姆」`,
+  ja: `眠りの作法，アダーブ・アン＝ナウム`,
+  ru: `Этикет сна, Адаб ан-Наум`,
+  es: `Adab al-Nawm, la etiqueta del sueño`,
+  ko: `잠의 예절, 아다브 안나움`,
+  ta: `ஆதாப் அன்-நவ்ம், தூக்கத்தின் நடத்தை`,
+  si: `අදාබ් අන්-නව්ම්, නින්දේ අදාබ්`,
 };
 
 const SUBTITLE: Record<string, string> = {

@@ -22,20 +22,20 @@ const TITLE: Record<string, string> = {
 };
 
 const SUBTITLE: Record<string, string> = {
-  en: `The Sunnah manners of entering, being in, and leaving the House of Allah  –  and the history of the masjid as an institution.`,
-  ms: `Adab Sunnah untuk masuk, berada di dalam, dan keluar dari Rumah Allah  –  serta sejarah masjid sebagai institusi.`,
-  tur: `Allah'ın Evine girişin, içinde bulunuşun ve çıkışın Sünnet âdâbı  –  ve müessese olarak mescidin tarihi.`,
-  urd: `اللہ کے گھر میں داخلے، وہاں رہنے اور نکلنے کے سنت آداب  –  اور مسجد کی ایک ادارے کے طور پر تاریخ۔`,
-  ben: `আল্লাহর ঘরে প্রবেশ, অবস্থান ও প্রস্থানের সুন্নাহ আদব  –  এবং প্রতিষ্ঠান হিসেবে মসজিদের ইতিহাস।`,
-  fas: `آداب سنت ورود، حضور و خروج از خانه‌ی خدا  –  و تاریخ مسجد به عنوان یک نهاد.`,
-  zh: `进入、留驻与离开真主之殿之圣行礼节  –  兼及作为宗教制度之清真寺之历史。`,
-  yue: `進入、留駐與離開真主之殿之聖行禮節  –  兼及作為宗教制度之清真寺之歷史。`,
-  ja: `アッラーの家に入る、留まる、そして去るときのスンナに則った作法  –  および制度としてのモスクの歴史。`,
-  ru: `Сунна этикета входа в Дом Аллаха, пребывания в нём и выхода из него  –  и история мечети как института.`,
-  es: `Los modales sunna al entrar, estar en, y salir de la Casa de Allah  –  y la historia de la masjid como institución.`,
+  en: `The Sunnah manners of entering, being in, and leaving the House of Allah, and the history of the masjid as an institution.`,
+  ms: `Adab Sunnah untuk masuk, berada di dalam, dan keluar dari Rumah Allah, serta sejarah masjid sebagai institusi.`,
+  tur: `Allah'ın Evine girişin, içinde bulunuşun ve çıkışın Sünnet âdâbı, ve müessese olarak mescidin tarihi.`,
+  urd: `اللہ کے گھر میں داخلے، وہاں رہنے اور نکلنے کے سنت آداب، اور مسجد کی ایک ادارے کے طور پر تاریخ۔`,
+  ben: `আল্লাহর ঘরে প্রবেশ, অবস্থান ও প্রস্থানের সুন্নাহ আদব, এবং প্রতিষ্ঠান হিসেবে মসজিদের ইতিহাস।`,
+  fas: `آداب سنت ورود، حضور و خروج از خانه‌ی خدا، و تاریخ مسجد به عنوان یک نهاد.`,
+  zh: `进入、留驻与离开真主之殿之圣行礼节，兼及作为宗教制度之清真寺之历史。`,
+  yue: `進入、留駐與離開真主之殿之聖行禮節，兼及作為宗教制度之清真寺之歷史。`,
+  ja: `アッラーの家に入る、留まる、そして去るときのスンナに則った作法，および制度としてのモスクの歴史。`,
+  ru: `Сунна этикета входа в Дом Аллаха, пребывания в нём и выхода из него, и история мечети как института.`,
+  es: `Los modales sunna al entrar, estar en, y salir de la Casa de Allah, y la historia de la masjid como institución.`,
   ko: `알라의 집에 들어가고, 머무르며, 나가는 순나의 예절과 제도로서의 모스크의 역사.`,
-  ta: `அல்லாஹ்வின் இல்லத்தினுள் நுழையும், தங்கும், வெளியேறும் ஸுன்னா ஆதாபுகள்  –  மற்றும் ஒரு நிறுவனமாக மசூதியின் வரலாறு.`,
-  si: `අල්ලාහ්ගේ නිවසට ඇතුළු වීම, එහි රැඳී සිටීම සහ පිටව යාමේ සුන්නා අදාබ්  –  සහ ආයතනයක් ලෙස මස්ජිද්හි ඉතිහාසය.`,
+  ta: `அல்லாஹ்வின் இல்லத்தினுள் நுழையும், தங்கும், வெளியேறும் ஸுன்னா ஆதாபுகள், மற்றும் ஒரு நிறுவனமாக மசூதியின் வரலாறு.`,
+  si: `අල්ලාහ්ගේ නිවසට ඇතුළු වීම, එහි රැඳී සිටීම සහ පිටව යාමේ සුන්නා අදාබ්, සහ ආයතනයක් ලෙස මස්ජිද්හි ඉතිහාසය.`,
 };
 
 const TOPIC: Record<string, string> = {
