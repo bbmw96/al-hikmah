@@ -11,9 +11,10 @@ import type { DuasContentKey } from '@/lib/i18n/content/duas-content';
 
 function useDuasText() {
   const { lang } = useLanguage();
-  return (key: DuasContentKey): string => {
-    const entry = DUAS_CONTENT[key] as Record<string, string | undefined>;
-    return entry[lang] ?? entry['en'] ?? key;
+  return (key: DuasContentKey, fallback?: string): string => {
+    const entry = DUAS_CONTENT[key] as Record<string, string | undefined> | undefined;
+    if (!entry) return fallback ?? '';
+    return entry[lang] ?? entry['en'] ?? fallback ?? '';
   };
 }
 
@@ -72,11 +73,11 @@ export function DuasCategoryContent({ categoryId }: { categoryId: string }) {
               <div className="flex items-start justify-between gap-4 flex-wrap">
                 <div className="flex-1 min-w-0">
                   <h2 className="font-garamond text-xl font-semibold text-forest">
-                    {tc(`dua_${dk}_title` as DuasContentKey)}
+                    {tc(`dua_${dk}_title` as DuasContentKey, dua.title)}
                   </h2>
                   {dua.occasion && (
                     <p className="text-gold/70 text-xs mt-1 italic">
-                      {tc(`dua_${dk}_occasion` as DuasContentKey)}
+                      {tc(`dua_${dk}_occasion` as DuasContentKey, dua.occasion)}
                     </p>
                   )}
                 </div>
@@ -105,7 +106,7 @@ export function DuasCategoryContent({ categoryId }: { categoryId: string }) {
                   {tc('label_meaning')}
                 </p>
                 <p className="text-forest text-sm leading-relaxed">
-                  {tc(`dua_${dk}_meaning` as DuasContentKey)}
+                  {tc(`dua_${dk}_meaning` as DuasContentKey, dua.meaning)}
                 </p>
               </div>
 
@@ -116,7 +117,7 @@ export function DuasCategoryContent({ categoryId }: { categoryId: string }) {
                     {tc('label_virtue')}
                   </p>
                   <p className="text-forest/60 text-sm italic">
-                    {tc(`dua_${dk}_virtue` as DuasContentKey)}
+                    {tc(`dua_${dk}_virtue` as DuasContentKey, dua.virtue)}
                   </p>
                 </div>
               )}
