@@ -83,7 +83,7 @@ export function BarrierIllustration() {
             <path d="M440 200 L500 90 L560 180 L520 210 L470 190 Z" fill="#245038" opacity="0.7" />
             <path d="M470 130 L500 90 L530 130 L515 160 L485 155 Z" fill="#F5F1E1" />
 
-            {/* Barrier — iron pattern */}
+            {/* Barrier - iron pattern */}
             <rect x="255" y="120" width="130" height="145" fill="url(#ironPattern)" stroke="#1F2937" strokeWidth="2" />
             {/* Molten copper cap */}
             <rect x="248" y="112" width="144" height="14" fill="url(#copperGrad)" stroke="#7C3E17" strokeWidth="1" />

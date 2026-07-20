@@ -3,14 +3,14 @@
 import { useLanguage } from '@/lib/i18n/context';
 import { ADHAN_IQAMAH_CONTENT, type AdhanIqamahContentKey } from '@/lib/i18n/content/adhan-iqamah-content';
 
-// The six adhan phrases  –  Arabic stays hardcoded, the description translates.
+// The six adhan phrases, Arabic stays hardcoded, the description translates.
 const PHRASES: { arabic: string; titleKey: AdhanIqamahContentKey; descKey: AdhanIqamahContentKey }[] = [
   { arabic: 'اللَّهُ أَكْبَرُ (×٤)',                                              titleKey: 'phrase_takbir_t',    descKey: 'phrase_takbir_d' },
   { arabic: 'أَشْهَدُ أَنْ لَا إِلَٰهَ إِلَّا اللَّهُ (×٢)',                                 titleKey: 'phrase_shahada1_t',  descKey: 'phrase_shahada1_d' },
   { arabic: 'أَشْهَدُ أَنَّ مُحَمَّدًا رَسُولُ اللَّهِ (×٢)',                              titleKey: 'phrase_shahada2_t',  descKey: 'phrase_shahada2_d' },
   { arabic: 'حَيَّ عَلَى الصَّلَاةِ (×٢)',                                        titleKey: 'phrase_hayya_salah_t', descKey: 'phrase_hayya_salah_d' },
   { arabic: 'حَيَّ عَلَى الْفَلَاحِ (×٢)',                                        titleKey: 'phrase_hayya_falah_t', descKey: 'phrase_hayya_falah_d' },
-  { arabic: 'الصَّلَاةُ خَيْرٌ مِنَ النَّوْمِ (×٢  –  فجر)',                              titleKey: 'phrase_fajr_t',      descKey: 'phrase_fajr_d' },
+  { arabic: 'الصَّلَاةُ خَيْرٌ مِنَ النَّوْمِ (×٢, فجر)',                              titleKey: 'phrase_fajr_t',      descKey: 'phrase_fajr_d' },
   { arabic: 'اللَّهُ أَكْبَرُ (×٢) ... لَا إِلَٰهَ إِلَّا اللَّهُ',                              titleKey: 'phrase_closing_t',   descKey: 'phrase_closing_d' },
 ];
 

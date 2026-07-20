@@ -69,15 +69,15 @@ export function SalawatsContent() {
               include Arabic, transliteration, translation, hadith source and step-by-step method.
             </p>
             <ul className="text-cream/70 text-sm space-y-1 list-disc list-inside">
-              <li>Salat al-Tarawih  –  the Ramadan night prayer (cross-linked to /ramadan)</li>
-              <li>Salat al-Musafir  –  the traveller's prayer (shortening and combining)</li>
-              <li>Salat al-Kusuf / al-Khusuf  –  the eclipse prayer (solar and lunar)</li>
-              <li>Salat al-Istisqa  –  the prayer for rain</li>
-              <li>Salat al-Hajah  –  the prayer of need</li>
-              <li>Salat al-Tawbah  –  the prayer of repentance</li>
-              <li>Salat al-Awwabin  –  the six rakat after Maghrib</li>
-              <li>Sujud al-Tilawah  –  prostration on reciting a verse of prostration</li>
-              <li>Sujud al-Shukr  –  prostration of gratitude</li>
+              <li>Salat al-Tarawih, the Ramadan night prayer (cross-linked to /ramadan)</li>
+              <li>Salat al-Musafir, the traveller's prayer (shortening and combining)</li>
+              <li>Salat al-Kusuf / al-Khusuf, the eclipse prayer (solar and lunar)</li>
+              <li>Salat al-Istisqa, the prayer for rain</li>
+              <li>Salat al-Hajah, the prayer of need</li>
+              <li>Salat al-Tawbah, the prayer of repentance</li>
+              <li>Salat al-Awwabin, the six rakat after Maghrib</li>
+              <li>Sujud al-Tilawah, prostration on reciting a verse of prostration</li>
+              <li>Sujud al-Shukr, prostration of gratitude</li>
             </ul>
           </article>
         </section>

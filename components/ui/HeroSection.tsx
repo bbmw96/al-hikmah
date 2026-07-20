@@ -115,7 +115,7 @@ export function HeroSection() {
         initial="hidden"
         animate="show"
       >
-        {/* Bismillah – the opening invocation */}
+        {/* Bismillah - the opening invocation */}
         <motion.p
           dir="rtl"
           lang="ar"
@@ -186,7 +186,7 @@ export function HeroSection() {
           </p>
           <p className="text-cream/60 text-sm italic">
             {t('hero.verse.text')}{' '}
-            <span className="not-italic text-gold/70">– Surah al-Baqarah 2:269</span>
+            <span className="not-italic text-gold/70">- Surah al-Baqarah 2:269</span>
           </p>
         </motion.div>
       </motion.div>

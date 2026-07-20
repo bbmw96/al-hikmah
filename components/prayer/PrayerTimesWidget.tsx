@@ -54,7 +54,7 @@ function savePrefs(prefs: Prefs) {
   try {
     window.localStorage.setItem(STORAGE_KEY, JSON.stringify(prefs));
   } catch {
-    /* quota / private mode  –  ignore */
+    /* quota / private mode, ignore */
   }
 }
 
@@ -129,7 +129,7 @@ export function PrayerTimesWidget() {
     if (typeof navigator === 'undefined' || !navigator.geolocation) return;
     navigator.geolocation.getCurrentPosition(
       pos => setPrefs(p => ({ ...p, cityId: 'custom', customLat: pos.coords.latitude, customLng: pos.coords.longitude })),
-      () => { /* permission denied  –  silent */ },
+      () => { /* permission denied, silent */ },
       { timeout: 10000 },
     );
   };
@@ -181,7 +181,7 @@ export function PrayerTimesWidget() {
             }}
             className="bg-white/80 border border-forest/15 rounded-md px-3 py-2 text-sm text-forest focus:outline-none focus:ring-2 focus:ring-gold/40"
           >
-            {usingCustom && <option value="custom"> – {tc('location_using')} – </option>}
+            {usingCustom && <option value="custom"> - {tc('location_using')} - </option>}
             {PRAYER_CITIES.map(c => (
               <option key={c.id} value={c.id}>{c.name}, {c.country}</option>
             ))}

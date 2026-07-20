@@ -42,7 +42,7 @@ export function TayamumContent() {
           <ArabicText text={QURAN_OPENING} size="lg" className="mb-4" />
           <p className="text-forest/70 italic text-sm leading-relaxed">
             {tc('opening.translation')}
-            <span className="not-italic text-forest/50 ml-1"> –  {tc('opening.source')}</span>
+            <span className="not-italic text-forest/50 ml-1"> -  {tc('opening.source')}</span>
           </p>
         </div>
 
@@ -232,7 +232,7 @@ export function TayamumContent() {
           <ArabicText text={CLOSING_AR} size="xl" className="mb-4" />
           <p className="text-cream/70 italic text-sm">
             {tc('closing.translation')}
-            <span className="not-italic ml-1"> –  {tc('closing.source')}</span>
+            <span className="not-italic ml-1"> -  {tc('closing.source')}</span>
           </p>
         </div>
 

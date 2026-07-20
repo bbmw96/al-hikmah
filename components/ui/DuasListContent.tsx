@@ -14,8 +14,9 @@ import type { DuasContentKey } from '@/lib/i18n/content/duas-content';
 function useDuasText() {
   const { lang } = useLanguage();
   return (key: DuasContentKey): string => {
-    const entry = DUAS_CONTENT[key] as Record<string, string | undefined>;
-    return entry[lang] ?? entry['en'] ?? key;
+    const entry = DUAS_CONTENT[key] as Record<string, string | undefined> | undefined;
+    if (!entry) return '';
+    return entry[lang] ?? entry['en'] ?? '';
   };
 }
 

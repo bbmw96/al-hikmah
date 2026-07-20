@@ -24,7 +24,7 @@ const FIELDS: FieldDef[] = [
 ];
 
 const FIELD_LABEL_KEYS: Record<string, SalaatFardKey> = {
-  when:         'uni_section_h',  // placeholder  –  individual labels below
+  when:         'uni_section_h',  // placeholder, individual labels below
   structure:    'uni_section_h',
   story:        'uni_section_h',
   significance: 'uni_section_h',
@@ -37,7 +37,7 @@ const FIELD_LABEL_KEYS: Record<string, SalaatFardKey> = {
   timing_notes: 'uni_section_h',
 };
 
-// Field-name labels in 14 languages (compact in-component map  –  these labels
+// Field-name labels in 14 languages (compact in-component map, these labels
 // repeat per-prayer so are kept here rather than in the salaat-fard file)
 const FIELD_LABELS: Record<string, Record<string, string>> = {
   when:         { en: 'When', ms: 'Bila', tur: 'Vakit', urd: 'وقت', ben: 'কখন', fas: 'وقت', zh: '時間', yue: '時間', ja: '時間', ru: 'Когда', es: 'Cuándo', ko: '시간', ta: 'எப்போது', si: 'කවදාද' },
