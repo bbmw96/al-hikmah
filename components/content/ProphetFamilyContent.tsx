@@ -45,6 +45,64 @@ const UNCLES: ProphetFamilyContentKey[] = [
   'uncle_abu_lahab',
 ];
 
+const AR_NAMES: Partial<Record<ProphetFamilyContentKey, string>> = {
+  parent_abdullah: 'عَبْدُ اللهِ بْنُ عَبْدِ المُطَّلِبِ',
+  parent_aminah: 'آمِنَةُ بِنْتُ وَهْبٍ',
+  wetnurse_thuwaybah: 'ثُوَيْبَةُ',
+  wetnurse_halimah: 'حَلِيمَةُ السَّعْدِيَّةُ',
+  guardian_abdmuttalib: 'عَبْدُ المُطَّلِبِ',
+  guardian_abutalib: 'أَبُو طَالِبٍ',
+  wife_khadijah: 'خَدِيجَةُ بِنْتُ خُوَيْلِدٍ',
+  wife_sawda: 'سَوْدَةُ بِنْتُ زَمْعَةَ',
+  wife_aisha: 'عَائِشَةُ بِنْتُ أَبِي بَكْرٍ',
+  wife_hafsa: 'حَفْصَةُ بِنْتُ عُمَرَ',
+  wife_zaynab_khuzaymah: 'زَيْنَبُ بِنْتُ خُزَيْمَةَ',
+  wife_umm_salama: 'أُمُّ سَلَمَةَ',
+  wife_zaynab_jahsh: 'زَيْنَبُ بِنْتُ جَحْشٍ',
+  wife_juwayriyya: 'جُوَيْرِيَةُ بِنْتُ الحَارِثِ',
+  wife_umm_habiba: 'أُمُّ حَبِيبَةَ',
+  wife_safiyya: 'صَفِيَّةُ بِنْتُ حُيَيٍّ',
+  wife_maymuna: 'مَيْمُونَةُ بِنْتُ الحَارِثِ',
+  concubine_mariyah: 'مَارِيَةُ القِبْطِيَّةُ',
+  uncle_abu_talib: 'أَبُو طَالِبٍ',
+  uncle_hamza: 'حَمْزَةُ بْنُ عَبْدِ المُطَّلِبِ',
+  uncle_abbas: 'العَبَّاسُ بْنُ عَبْدِ المُطَّلِبِ',
+  uncle_abu_lahab: 'أَبُو لَهَبٍ',
+  child_qasim: 'القَاسِمُ',
+  child_zaynab: 'زَيْنَبُ',
+  child_ruqayyah: 'رُقَيَّةُ',
+  child_umm_kulthum: 'أُمُّ كُلْثُومٍ',
+  child_fatimah: 'فَاطِمَةُ الزَّهْرَاءُ',
+  child_abdullah: 'عَبْدُ اللهِ (الطَّاهِرُ الطَّيِّبُ)',
+  child_ibrahim: 'إِبْرَاهِيمُ',
+  gc_umamah: 'أُمَامَةُ بِنْتُ زَيْنَبَ',
+  gc_abdullah_uthman: 'عَبْدُ اللهِ بْنُ عُثْمَانَ',
+  gc_hasan: 'الحَسَنُ بْنُ عَلِيٍّ',
+  gc_husayn: 'الحُسَيْنُ بْنُ عَلِيٍّ',
+  gc_zaynab_ali: 'زَيْنَبُ بِنْتُ عَلِيٍّ',
+  gc_umm_kulthum_ali: 'أُمُّ كُلْثُومٍ بِنْتُ عَلِيٍّ',
+};
+
+function PersonCard({ k, tc, tone = 'islamic' }: {
+  k: ProphetFamilyContentKey;
+  tc: (key: ProphetFamilyContentKey) => string;
+  tone?: 'islamic' | 'forest';
+}) {
+  const ar = AR_NAMES[k];
+  const cls = tone === 'forest' ? 'card-forest rounded-2xl p-6' : 'card-islamic';
+  const textCls = tone === 'forest' ? 'text-cream/85' : 'text-forest/75';
+  return (
+    <article className={cls}>
+      {ar && (
+        <p dir="rtl" lang="ar" className="arabic text-gold mb-2 leading-loose">
+          {ar}
+        </p>
+      )}
+      <p className={`${textCls} leading-relaxed text-sm`}>{tc(k)}</p>
+    </article>
+  );
+}
+
 export function ProphetFamilyContent() {
   const { lang } = useLanguage();
   const tc = (key: ProphetFamilyContentKey): string => {
@@ -77,12 +135,8 @@ export function ProphetFamilyContent() {
           </h2>
           <p className="text-forest/75 leading-relaxed mb-6">{tc('parents_intro')}</p>
           <div className="space-y-4">
-            <article className="card-islamic">
-              <p className="text-forest/75 leading-relaxed text-sm">{tc('parent_abdullah')}</p>
-            </article>
-            <article className="card-islamic">
-              <p className="text-forest/75 leading-relaxed text-sm">{tc('parent_aminah')}</p>
-            </article>
+            <PersonCard k="parent_abdullah" tc={tc} />
+            <PersonCard k="parent_aminah" tc={tc} />
           </div>
         </section>
 
@@ -92,18 +146,10 @@ export function ProphetFamilyContent() {
             {tc('guardians_h')}
           </h2>
           <div className="space-y-4">
-            <article className="card-islamic">
-              <p className="text-forest/75 leading-relaxed text-sm">{tc('wetnurse_thuwaybah')}</p>
-            </article>
-            <article className="card-islamic">
-              <p className="text-forest/75 leading-relaxed text-sm">{tc('wetnurse_halimah')}</p>
-            </article>
-            <article className="card-islamic">
-              <p className="text-forest/75 leading-relaxed text-sm">{tc('guardian_abdmuttalib')}</p>
-            </article>
-            <article className="card-islamic">
-              <p className="text-forest/75 leading-relaxed text-sm">{tc('guardian_abutalib')}</p>
-            </article>
+            <PersonCard k="wetnurse_thuwaybah" tc={tc} />
+            <PersonCard k="wetnurse_halimah" tc={tc} />
+            <PersonCard k="guardian_abdmuttalib" tc={tc} />
+            <PersonCard k="guardian_abutalib" tc={tc} />
           </div>
         </section>
 
@@ -120,9 +166,7 @@ export function ProphetFamilyContent() {
           <p className="text-forest/75 leading-relaxed mb-6">{tc('wives_intro')}</p>
           <div className="space-y-4">
             {WIVES.map((k) => (
-              <article key={k} className="card-islamic">
-                <p className="text-forest/75 leading-relaxed text-sm">{tc(k)}</p>
-              </article>
+              <PersonCard key={k} k={k} tc={tc} />
             ))}
           </div>
 
@@ -131,9 +175,7 @@ export function ProphetFamilyContent() {
             <h3 className="font-garamond text-xl font-semibold text-forest">
               {tc('concubine_h')}
             </h3>
-            <article className="card-forest rounded-2xl p-6">
-              <p className="text-cream/85 leading-relaxed text-sm">{tc('concubine_mariyah')}</p>
-            </article>
+            <PersonCard k="concubine_mariyah" tc={tc} tone="forest" />
           </div>
         </section>
 
@@ -150,9 +192,7 @@ export function ProphetFamilyContent() {
           <p className="text-forest/75 leading-relaxed mb-6">{tc('uncles_intro')}</p>
           <div className="space-y-4">
             {UNCLES.map((k) => (
-              <article key={k} className="card-islamic">
-                <p className="text-forest/75 leading-relaxed text-sm">{tc(k)}</p>
-              </article>
+              <PersonCard key={k} k={k} tc={tc} />
             ))}
           </div>
         </section>
@@ -170,9 +210,7 @@ export function ProphetFamilyContent() {
           <p className="text-forest/75 leading-relaxed mb-6">{tc('children_intro')}</p>
           <div className="space-y-4">
             {CHILDREN.map((k) => (
-              <article key={k} className="card-islamic">
-                <p className="text-forest/75 leading-relaxed text-sm">{tc(k)}</p>
-              </article>
+              <PersonCard key={k} k={k} tc={tc} />
             ))}
           </div>
         </section>
@@ -190,9 +228,7 @@ export function ProphetFamilyContent() {
           <p className="text-forest/75 leading-relaxed mb-6">{tc('grandchildren_intro')}</p>
           <div className="space-y-4">
             {GRANDCHILDREN.map((k) => (
-              <article key={k} className="card-islamic">
-                <p className="text-forest/75 leading-relaxed text-sm">{tc(k)}</p>
-              </article>
+              <PersonCard key={k} k={k} tc={tc} />
             ))}
           </div>
         </section>
