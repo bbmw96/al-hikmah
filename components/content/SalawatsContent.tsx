@@ -8,7 +8,8 @@ import type { SalawatsContentKey } from '@/lib/i18n/content/salawats-content';
 export function SalawatsContent() {
   const { lang } = useLanguage();
   const tc = (key: SalawatsContentKey): string => {
-    const entry = SALAWATS_CONTENT[key] as Record<string, string | undefined>;
+    const entry = SALAWATS_CONTENT[key] as Record<string, string | undefined> | undefined;
+    if (!entry) return key;
     return entry[lang] ?? entry.en ?? key;
   };
 

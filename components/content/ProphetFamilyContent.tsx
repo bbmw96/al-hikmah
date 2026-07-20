@@ -48,7 +48,8 @@ const UNCLES: ProphetFamilyContentKey[] = [
 export function ProphetFamilyContent() {
   const { lang } = useLanguage();
   const tc = (key: ProphetFamilyContentKey): string => {
-    const entry = PROPHET_FAMILY_CONTENT[key] as Record<string, string | undefined>;
+    const entry = PROPHET_FAMILY_CONTENT[key] as Record<string, string | undefined> | undefined;
+    if (!entry) return key;
     return entry[lang] ?? entry.en ?? key;
   };
 

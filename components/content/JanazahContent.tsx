@@ -8,7 +8,8 @@ import type { JanazahContentKey } from '@/lib/i18n/content/janazah-content';
 export function JanazahContent() {
   const { lang } = useLanguage();
   const tc = (key: JanazahContentKey): string => {
-    const entry = JANAZAH_CONTENT[key] as Record<string, string | undefined>;
+    const entry = JANAZAH_CONTENT[key] as Record<string, string | undefined> | undefined;
+    if (!entry) return key;
     return entry[lang] ?? entry.en ?? key;
   };
 
