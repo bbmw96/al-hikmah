@@ -9,7 +9,8 @@ type Lang = 'en' | 'ms' | 'tur' | 'urd' | 'ben' | 'fas' | 'zh' | 'yue' | 'ja' | 
 function useRamadan() {
   const { lang } = useLanguage();
   return (key: RamadanContentKey): string => {
-    const entry = RAMADAN_CONTENT[key] as Record<string, string | undefined>;
+    const entry = RAMADAN_CONTENT[key] as Record<string, string | undefined> | undefined;
+    if (!entry) return key;
     return entry[lang] ?? entry['en'] ?? key;
   };
 }

@@ -9,7 +9,8 @@ import type { EidContentKey } from '@/lib/i18n/content/eid-content';
 function useEid() {
   const { lang } = useLanguage();
   return (key: EidContentKey): string => {
-    const entry = EID_CONTENT[key] as Record<string, string | undefined>;
+    const entry = EID_CONTENT[key] as Record<string, string | undefined> | undefined;
+    if (!entry) return key;
     return entry[lang] ?? entry['en'] ?? key;
   };
 }

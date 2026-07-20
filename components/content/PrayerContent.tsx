@@ -13,7 +13,8 @@ import { AfterPrayerSection } from '@/components/prayer/AfterPrayerSection';
 export function PrayerContent() {
   const { lang } = useLanguage();
   const tc = (k: PrayerStepsContentKey): string => {
-    const entry = PRAYER_STEPS_CONTENT[k] as Record<string, string | undefined>;
+    const entry = PRAYER_STEPS_CONTENT[k] as Record<string, string | undefined> | undefined;
+    if (!entry) return k;
     return entry[lang] ?? entry.en ?? k;
   };
 

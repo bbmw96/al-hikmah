@@ -42,7 +42,8 @@ const ITEMS: {
 export function AfterPrayerSection() {
   const { lang } = useLanguage();
   const tc = (k: PrayerStepsContentKey) => {
-    const entry = PRAYER_STEPS_CONTENT[k] as Record<string, string | undefined>;
+    const entry = PRAYER_STEPS_CONTENT[k] as Record<string, string | undefined> | undefined;
+    if (!entry) return '';
     return entry[lang] ?? entry.en;
   };
 

@@ -9,7 +9,8 @@ import type { ProphetsContentKey } from '@/lib/i18n/content/prophets-content';
 function usePC() {
   const { lang } = useLanguage();
   return (key: ProphetsContentKey): string => {
-    const entry = PROPHETS_CONTENT[key] as Record<string, string | undefined>;
+    const entry = PROPHETS_CONTENT[key] as Record<string, string | undefined> | undefined;
+    if (!entry) return key;
     return entry[lang] ?? entry['en'] ?? key;
   };
 }

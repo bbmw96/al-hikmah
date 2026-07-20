@@ -9,7 +9,8 @@ import type { SeerahContentKey } from '@/lib/i18n/content/seerah-content';
 function useSeerah() {
   const { lang } = useLanguage();
   return (key: SeerahContentKey): string => {
-    const entry = SEERAH_CONTENT[key] as Record<string, string | undefined>;
+    const entry = SEERAH_CONTENT[key] as Record<string, string | undefined> | undefined;
+    if (!entry) return key;
     return entry[lang] ?? entry['en'] ?? key;
   };
 }

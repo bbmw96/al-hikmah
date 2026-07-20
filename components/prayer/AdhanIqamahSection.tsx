@@ -20,8 +20,8 @@ const IQAMAH_AR = 'قَدْ قَامَتِ الصَّلَاةُ';
 export function AdhanIqamahSection() {
   const { lang } = useLanguage();
   const tc = (k: AdhanIqamahContentKey) =>
-    (ADHAN_IQAMAH_CONTENT[k] as Record<string, string | undefined>)[lang] ??
-    (ADHAN_IQAMAH_CONTENT[k] as Record<string, string | undefined>).en ?? k;
+    (ADHAN_IQAMAH_CONTENT[k] as Record<string, string | undefined> | undefined)?.[lang] ??
+    (ADHAN_IQAMAH_CONTENT[k] as Record<string, string | undefined> | undefined)?.en ?? k;
 
   return (
     <section>

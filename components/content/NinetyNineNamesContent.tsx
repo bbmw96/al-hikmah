@@ -11,7 +11,8 @@ import type { NamesContentKey } from '@/lib/i18n/content/names-content';
 function useNC() {
   const { lang } = useLanguage();
   return (key: NamesContentKey): string => {
-    const entry = NAMES_CONTENT[key] as Record<string, string | undefined>;
+    const entry = NAMES_CONTENT[key] as Record<string, string | undefined> | undefined;
+    if (!entry) return key;
     return entry[lang] ?? entry['en'] ?? key;
   };
 }

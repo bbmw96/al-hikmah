@@ -37,7 +37,8 @@ const CMP_PREFIX: Record<string, string> = {
 function useTC() {
   const { lang } = useLanguage();
   return (key: HajjUmrahContentKey): string => {
-    const entry = HAJJ_UMRAH_CONTENT[key] as Record<string, string | undefined>;
+    const entry = HAJJ_UMRAH_CONTENT[key] as Record<string, string | undefined> | undefined;
+    if (!entry) return key;
     return entry[lang] ?? entry['en'] ?? key;
   };
 }

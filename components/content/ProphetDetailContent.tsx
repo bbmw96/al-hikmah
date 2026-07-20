@@ -21,7 +21,8 @@ export function ProphetDetailContent({ slug }: { slug: string }) {
   const detail = getProphetDetail(slug);
 
   const tc = (key: ProphetsContentKey): string => {
-    const entry = PROPHETS_CONTENT[key] as Record<string, string | undefined>;
+    const entry = PROPHETS_CONTENT[key] as Record<string, string | undefined> | undefined;
+    if (!entry) return key;
     return entry[lang] ?? entry['en'] ?? key;
   };
   const tl = (map: ProphetLangMap | undefined, fallback: string): string =>

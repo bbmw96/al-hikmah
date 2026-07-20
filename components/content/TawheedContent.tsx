@@ -9,7 +9,8 @@ import type { Lang } from '@/lib/i18n/translations';
 function useTawheed() {
   const { lang } = useLanguage();
   return (key: TawheedContentKey): string => {
-    const entry = TAWHEED_CONTENT[key] as Record<string, string | undefined>;
+    const entry = TAWHEED_CONTENT[key] as Record<string, string | undefined> | undefined;
+    if (!entry) return key;
     return entry[lang] ?? entry['en'] ?? key;
   };
 }

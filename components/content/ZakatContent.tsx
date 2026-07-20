@@ -9,7 +9,8 @@ import type { ZakatContentKey } from '@/lib/i18n/content/zakat-content';
 function useZakat() {
   const { lang } = useLanguage();
   return (key: ZakatContentKey): string => {
-    const entry = ZAKAT_CONTENT[key] as Record<string, string | undefined>;
+    const entry = ZAKAT_CONTENT[key] as Record<string, string | undefined> | undefined;
+    if (!entry) return key;
     return entry[lang] ?? entry['en'] ?? key;
   };
 }

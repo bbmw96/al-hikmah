@@ -9,7 +9,8 @@ import type { Lang } from '@/lib/i18n/translations';
 function useGhusl() {
   const { lang } = useLanguage();
   return (key: GhuslContentKey): string => {
-    const entry = GHUSL_CONTENT[key] as Record<string, string | undefined>;
+    const entry = GHUSL_CONTENT[key] as Record<string, string | undefined> | undefined;
+    if (!entry) return key;
     return entry[lang] ?? entry['en'] ?? key;
   };
 }

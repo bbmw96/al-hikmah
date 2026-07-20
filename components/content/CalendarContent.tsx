@@ -8,7 +8,8 @@ import type { CalendarContentKey } from '@/lib/i18n/content/calendar-content';
 function useCC() {
   const { lang } = useLanguage();
   return (key: CalendarContentKey): string => {
-    const entry = CALENDAR_CONTENT[key] as Record<string, string | undefined>;
+    const entry = CALENDAR_CONTENT[key] as Record<string, string | undefined> | undefined;
+    if (!entry) return key;
     return entry[lang] ?? entry['en'] ?? key;
   };
 }
