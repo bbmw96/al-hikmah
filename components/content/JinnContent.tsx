@@ -31,6 +31,25 @@ export function JinnContent() {
             <h2 className="section-title font-garamond text-2xl md:text-3xl font-semibold text-forest mb-6">
               {tc(k(`${n}.h`))}
             </h2>
+
+            {/* Arabic-first: anchor verses for section 1 (ar-Rahman 55:15 + al-Hijr 15:27) */}
+            {n === 1 && (
+              <blockquote className="bg-forest/5 border-l-4 border-gold rounded-r-xl px-5 py-4 mb-6">
+                <p dir="rtl" lang="ar" className="arabic text-forest leading-loose">
+                  وَخَلَقَ الْجَانَّ مِنْ مَارِجٍ مِنْ نَارٍ
+                </p>
+                <p className="text-forest/50 italic text-xs mt-1 text-right" dir="ltr">
+                  Surah ar-Rahman 55:15
+                </p>
+                <p dir="rtl" lang="ar" className="arabic text-forest leading-loose mt-4">
+                  وَالْجَانَّ خَلَقْنَاهُ مِنْ قَبْلُ مِنْ نَارِ السَّمُومِ
+                </p>
+                <p className="text-forest/50 italic text-xs mt-1 text-right" dir="ltr">
+                  Surah al-Hijr 15:27
+                </p>
+              </blockquote>
+            )}
+
             <p className="text-forest/75 leading-relaxed text-sm">{tc(k(`${n}.p1`))}</p>
           </section>
         ))}

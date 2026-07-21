@@ -31,6 +31,19 @@ export function DajjalContent() {
             <h2 className="section-title font-garamond text-2xl md:text-3xl font-semibold text-forest mb-6">
               {tc(k(`${n}.h`))}
             </h2>
+
+            {/* Arabic-first: anchor hadith for section 1 (Bukhari 7131 / Muslim 2933) */}
+            {n === 1 && (
+              <blockquote className="bg-forest/5 border-l-4 border-gold rounded-r-xl px-5 py-4 mb-6">
+                <p dir="rtl" lang="ar" className="arabic text-forest leading-loose">
+                  مَا مِنْ نَبِيٍّ إِلَّا وَقَدْ أَنْذَرَ الْأَعْوَرَ الْكَذَّابَ ، أَلَا إِنَّهُ أَعْوَرُ ، وَإِنَّ رَبَّكُمْ لَيْسَ بِأَعْوَرَ ، وَإِنَّ بَيْنَ عَيْنَيْهِ مَكْتُوبٌ كَافِرٌ
+                </p>
+                <p className="text-forest/50 italic text-xs mt-2 text-right" dir="ltr">
+                  Sahih al-Bukhari 7131, Sahih Muslim 2933
+                </p>
+              </blockquote>
+            )}
+
             <p className="text-forest/75 leading-relaxed text-sm">{tc(k(`${n}.p1`))}</p>
           </section>
         ))}

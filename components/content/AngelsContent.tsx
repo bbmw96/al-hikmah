@@ -31,6 +31,19 @@ export function AngelsContent() {
             <h2 className="section-title font-garamond text-2xl md:text-3xl font-semibold text-forest mb-6">
               {tc(k(`${n}.h`))}
             </h2>
+
+            {/* Arabic-first: the anchor hadith for section 1 (Muslim 2996) */}
+            {n === 1 && (
+              <blockquote className="bg-forest/5 border-l-4 border-gold rounded-r-xl px-5 py-4 mb-6">
+                <p dir="rtl" lang="ar" className="arabic text-forest leading-loose">
+                  خُلِقَتِ الْمَلَائِكَةُ مِنْ نُورٍ ، وَخُلِقَ الْجَانُّ مِنْ مَارِجٍ مِنْ نَارٍ ، وَخُلِقَ آدَمُ مِمَّا وُصِفَ لَكُمْ
+                </p>
+                <p className="text-forest/50 italic text-xs mt-2 text-right" dir="ltr">
+                  Sahih Muslim 2996 (Aisha ra)
+                </p>
+              </blockquote>
+            )}
+
             <p className="text-forest/75 leading-relaxed text-sm">{tc(k(`${n}.p1`))}</p>
           </section>
         ))}
