@@ -1,8 +1,23 @@
 'use client';
 
 import { PageHeader } from '@/components/ui/PageHeader';
-import { UnderConstructionCallout } from '@/components/ui/UnderConstructionCallout';
+import { ArabicText } from '@/components/ui/ArabicText';
 import { useLanguage } from '@/lib/i18n/context';
+
+const CURE_HADITH_AR =
+  'مَا أَنْزَلَ اللَّهُ دَاءً إِلَّا أَنْزَلَ لَهُ شِفَاءً، عَلِمَهُ مَنْ عَلِمَهُ، وَجَهِلَهُ مَنْ جَهِلَهُ.';
+const CURE_HADITH_EN =
+  'Allah has not sent down any disease without sending down its cure, known to whoever knows it and unknown to whoever does not.';
+
+const HONEY_VERSE_AR =
+  'يَخْرُجُ مِن بُطُونِهَا شَرَابٌ مُّخْتَلِفٌ أَلْوَانُهُ فِيهِ شِفَاءٌ لِّلنَّاسِ.';
+const HONEY_VERSE_EN =
+  'From within their bodies comes a drink of varying colours, in which is healing for people. (al-Nahl 16:69)';
+
+const BLACK_SEED_HADITH_AR =
+  'إِنَّ فِي الْحَبَّةِ السَّوْدَاءِ شِفَاءً مِنْ كُلِّ دَاءٍ إِلَّا السَّامَ.';
+const BLACK_SEED_HADITH_EN =
+  'In the black seed is a cure for every disease except death.';
 
 const TITLE: Record<string, string> = {
   en: `Prophetic Medicine, Fruits, Vegetables, Plants and Healing`,
@@ -64,8 +79,169 @@ export function PropheticMedicineContent() {
         arabicTitle="الطِّبُّ النَّبَوِيّ"
         subtitle={SUBTITLE[lang] ?? SUBTITLE.en}
       />
-      <div className="max-w-4xl mx-auto px-6 py-16">
-        <UnderConstructionCallout topic={TOPIC} />
+
+      <div className="max-w-3xl mx-auto px-6 py-16 space-y-12">
+        {/* Foundation */}
+        <section>
+          <h2 className="section-title font-garamond text-2xl md:text-3xl font-semibold text-forest mb-4">
+            The Foundation: For Every Disease, a Cure
+          </h2>
+          <article className="card-islamic space-y-4">
+            <ArabicText text={CURE_HADITH_AR} size="md" />
+            <p className="text-forest/75 text-sm leading-relaxed">{CURE_HADITH_EN}</p>
+            <p className="text-forest/70 text-sm leading-relaxed">
+              This hadith is the entire theology of medicine in Islam. Disease is real, cure is real, and both are from Allah. Seeking treatment is not a lack of faith, it is faith in action. The Prophet ﷺ said: <em>“Treat, O servants of Allah, for Allah has not placed a disease except that He has placed for it a cure, except one, old age.”</em> (Abu Dawud 3855). The umma is commanded to <strong>seek</strong>, and the sciences of medicine grew from this command.
+            </p>
+            <p className="text-xs text-gold/60 italic">Source: al-Bukhari 5678, Muslim 2204 (Abu Hurayra).</p>
+          </article>
+        </section>
+
+        {/* Honey */}
+        <section>
+          <h2 className="section-title font-garamond text-2xl md:text-3xl font-semibold text-forest mb-4">
+            Honey
+          </h2>
+          <article className="card-islamic space-y-4">
+            <ArabicText text={HONEY_VERSE_AR} size="md" />
+            <p className="text-forest/70 text-sm italic">{HONEY_VERSE_EN}</p>
+            <p className="text-forest/75 text-sm leading-relaxed">
+              The Qur’an names honey a <em>shifa’</em>, a healing. The Prophet ﷺ said: <em>“Healing is in three: a drink of honey, the cut of a cupping-glass, and cauterisation by fire; but I forbid my umma from cauterisation.”</em> (al-Bukhari 5680).
+            </p>
+            <p className="text-forest/70 text-sm leading-relaxed">
+              A man came to the Prophet ﷺ complaining that his brother had a stomach complaint. He ﷺ said: <em>“Give him honey.”</em> The man returned twice more; each time he ﷺ said: <em>“Give him honey.”</em> The fourth time he ﷺ said: <em>“Allah has spoken the truth, and your brother’s stomach has lied. Give him honey.”</em> The brother was cured.
+            </p>
+            <p className="text-xs text-gold/60 italic">Source: al-Bukhari 5684, Muslim 2217 (Abu Sa’id al-Khudri).</p>
+          </article>
+        </section>
+
+        {/* Black seed */}
+        <section>
+          <h2 className="section-title font-garamond text-2xl md:text-3xl font-semibold text-forest mb-4">
+            Black Seed (al-Habbah al-Sawda, Nigella sativa)
+          </h2>
+          <article className="card-islamic space-y-4">
+            <ArabicText text={BLACK_SEED_HADITH_AR} size="md" />
+            <p className="text-forest/75 text-sm leading-relaxed">{BLACK_SEED_HADITH_EN}</p>
+            <p className="text-forest/70 text-sm leading-relaxed">
+              <em>al-Sam</em>, translated “death,” is the classical Arabic word for a fatal, incurable end. The Prophet’s ﷺ statement therefore names black seed as an ally against every treatable illness. Classical scholars like Ibn al-Qayyim, in <em>al-Tibb al-Nabawi</em>, catalogued dozens of documented uses, from digestive complaints to respiratory relief.
+            </p>
+            <p className="text-xs text-gold/60 italic">Source: al-Bukhari 5688, Muslim 2215 (Abu Hurayra).</p>
+          </article>
+        </section>
+
+        {/* Dates */}
+        <section>
+          <h2 className="section-title font-garamond text-2xl md:text-3xl font-semibold text-forest mb-4">
+            Ajwa Dates
+          </h2>
+          <article className="card-islamic space-y-3">
+            <p className="text-forest/75 text-sm leading-relaxed">
+              The Prophet ﷺ said: <em>“Whoever eats seven ajwa dates in the morning, no poison and no magic will harm him that day.”</em>
+            </p>
+            <p className="text-forest/70 text-sm leading-relaxed">
+              Ajwa is the small, dark, soft date of the Madinan valley, prized in the Prophet’s ﷺ time. The number and the timing (morning, on an empty stomach) are specified. Fresh and dried dates in general are described in the Qur’an as the Prophet Maryam’s ﷺ post-natal food (Maryam 19:25), and the Prophet ﷺ broke his fast with a few dates and water before Maghrib.
+            </p>
+            <p className="text-xs text-gold/60 italic">Source: al-Bukhari 5445, 5768, Muslim 2047 (Sa’d ibn Abi Waqqas).</p>
+          </article>
+        </section>
+
+        {/* Olive oil */}
+        <section>
+          <h2 className="section-title font-garamond text-2xl md:text-3xl font-semibold text-forest mb-4">
+            Olive Oil
+          </h2>
+          <article className="card-islamic space-y-3">
+            <p className="text-forest/75 text-sm leading-relaxed">
+              The Prophet ﷺ said: <em>“Eat olive oil and anoint yourselves with it, for it is from a blessed tree.”</em>
+            </p>
+            <p className="text-forest/70 text-sm leading-relaxed">
+              The Qur’an calls the olive <em>shajaratin mubarakah</em>, a blessed tree (al-Nur 24:35), and Allah swears by it in the opening of Surat al-Tin. Its oil, in classical use, was food, lamp fuel, and topical treatment for skin and hair.
+            </p>
+            <p className="text-xs text-gold/60 italic">Source: al-Tirmidhi 1851, Ibn Majah 3319 (Zayd ibn Arqam, Abu Hurayra); Sahih al-Albani.</p>
+          </article>
+        </section>
+
+        {/* Siwak */}
+        <section>
+          <h2 className="section-title font-garamond text-2xl md:text-3xl font-semibold text-forest mb-4">
+            Siwak
+          </h2>
+          <article className="card-islamic space-y-3">
+            <p className="text-forest/75 text-sm leading-relaxed">
+              The Prophet ﷺ said: <em>“The siwak cleans the mouth and pleases the Lord.”</em>
+            </p>
+            <p className="text-forest/70 text-sm leading-relaxed">
+              He ﷺ said: <em>“Were it not that it would be a hardship on my umma, I would have commanded them to use the siwak with every prayer.”</em> The siwak (traditionally a twig of the Salvadora persica or <em>arak</em> tree) contains natural antimicrobial compounds and gently polishes the teeth. Modern research confirms significant reduction of dental plaque.
+            </p>
+            <p className="text-xs text-gold/60 italic">Sources: al-Nasa’i 5, Ibn Majah 289 (siwak pleases the Lord); al-Bukhari 887, Muslim 252 (with every prayer).</p>
+          </article>
+        </section>
+
+        {/* Cupping */}
+        <section>
+          <h2 className="section-title font-garamond text-2xl md:text-3xl font-semibold text-forest mb-4">
+            Hijamah (Wet Cupping)
+          </h2>
+          <article className="card-islamic space-y-3">
+            <p className="text-forest/75 text-sm leading-relaxed">
+              The Prophet ﷺ said: <em>“The best of what you treat yourselves with is hijamah.”</em> He ﷺ himself was cupped on the head, between the shoulders, and on the hips. He ﷺ recommended hijamah particularly on the 17th, 19th, and 21st of the lunar month.
+            </p>
+            <p className="text-forest/70 text-sm leading-relaxed">
+              Modern practitioners of Tibb al-Nabawi continue the practice with sterilised cups and disposable blades. It is not a substitute for medical treatment of serious conditions but a well-documented Sunnah recommended for general wellness, migraines, and musculoskeletal complaints.
+            </p>
+            <p className="text-xs text-gold/60 italic">Source: al-Bukhari 5697, Muslim 1577 (Ibn Abbas); al-Tirmidhi 2051 for the lunar dates.</p>
+          </article>
+        </section>
+
+        {/* Talbina */}
+        <section>
+          <h2 className="section-title font-garamond text-2xl md:text-3xl font-semibold text-forest mb-4">
+            Talbina (Barley Broth) for Grief
+          </h2>
+          <article className="card-islamic space-y-3">
+            <p className="text-forest/75 text-sm leading-relaxed">
+              ‘Aisha (ra) reported: <em>“Whenever anyone from the Prophet’s ﷺ family fell sick, or a loved one died, he would order that talbina be prepared, and he would say: it soothes the heart of the grieving and takes away some of the sorrow.”</em>
+            </p>
+            <p className="text-forest/70 text-sm leading-relaxed">
+              Talbina is a warm, milky barley porridge, so named because of its resemblance in colour to milk (<em>laban</em>). Modern nutrition credits barley’s beta-glucan and B-vitamin content with a genuine calming effect on the nervous system.
+            </p>
+            <p className="text-xs text-gold/60 italic">Source: al-Bukhari 5417, Muslim 2216 (‘Aisha).</p>
+          </article>
+        </section>
+
+        {/* Ruqyah and spiritual medicine */}
+        <section>
+          <h2 className="section-title font-garamond text-2xl md:text-3xl font-semibold text-forest mb-4">
+            Ruqyah and Qur’anic Healing
+          </h2>
+          <article className="card-islamic space-y-3">
+            <p className="text-forest/75 text-sm leading-relaxed">
+              The Qur’an describes itself: <em>“And We send down of the Qur’an that which is a healing and a mercy for the believers”</em> (al-Isra 17:82). Reciting al-Fatiha, Ayat al-Kursi, the last three surahs (al-Ikhlas, al-Falaq, al-Nas), and specific du’as over water or over the ailing, with the intention of Allah’s healing, is a well-established Sunnah.
+            </p>
+            <p className="text-forest/70 text-sm leading-relaxed">
+              The Prophet ﷺ used to blow on his own body during his final illness while reciting the three protective surahs (al-Bukhari 5016). ‘Aisha (ra) continued the practice for him at the end. Ruqyah is a recognised branch of Prophetic Medicine, not folk superstition.
+            </p>
+          </article>
+        </section>
+
+        {/* Wisdom */}
+        <section>
+          <h2 className="section-title font-garamond text-2xl md:text-3xl font-semibold text-forest mb-4">
+            Prophetic Medicine and Modern Medicine
+          </h2>
+          <article className="card-forest rounded-2xl p-6 space-y-3">
+            <p className="text-cream/85 text-sm leading-relaxed">
+              Classical scholars (Ibn al-Qayyim al-Jawziyya in <em>al-Tibb al-Nabawi</em>, and al-Suyuti in <em>al-Manhaj al-Sawi</em>) organised these remedies alongside the Greek and Persian medicine current in their day. They did not treat Prophetic Medicine as opposed to physicians’ medicine, but as its foundation and completion.
+            </p>
+            <p className="text-cream/85 text-sm leading-relaxed">
+              A Muslim seeking treatment today follows the same balance: use the Sunnah where it applies (honey for a sore throat, dates in the morning, black seed as a supplement, ruqyah for anxiety), and use qualified medical care for what qualified medical care is for. The Sunnah does not replace a surgeon; a surgeon does not replace tawakkul on Allah.
+            </p>
+            <p className="text-cream/85 text-sm leading-relaxed">
+              The Prophet ﷺ himself accepted the treatment of physicians. He ﷺ said: <em>“I have not seen anything I love more than health after faith.”</em> Health is a trust; the Sunnah tells us how to guard it.
+            </p>
+            <p className="text-xs text-gold/70 italic">Source of the final hadith: al-Tabarani, Sahih al-Jami’ 2666.</p>
+          </article>
+        </section>
       </div>
     </>
   );
