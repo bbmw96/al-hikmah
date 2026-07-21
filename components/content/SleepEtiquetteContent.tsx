@@ -1,7 +1,7 @@
 'use client';
 
 import { PageHeader } from '@/components/ui/PageHeader';
-import { UnderConstructionCallout } from '@/components/ui/UnderConstructionCallout';
+import { ArabicText } from '@/components/ui/ArabicText';
 import { useLanguage } from '@/lib/i18n/context';
 
 const TITLE: Record<string, string> = {
@@ -38,22 +38,18 @@ const SUBTITLE: Record<string, string> = {
   si: `නින්දට සූදානම් වීමේ සුන්නාව, නින්දට පෙර සහ අවදි වන විට දුආ, සෑම භාවිතයක්ම පිටුපස ඇති හේතූන්, සහ නබි ﷺ තුමා නින්දේදී ආත්මයේ තත්ත්වය ගැන පැවසූ දේ.`,
 };
 
-const TOPIC: Record<string, string> = {
-  en: `Coming: the wudu before sleeping (Bukhari 247), sleeping on the right side with the right hand under the cheek (Bukhari 6314), the du'a "Bismika Allahumma amutu wa ahya" (Bukhari 6324), reciting Ayat al-Kursi + last two verses of al-Baqarah + al-Ikhlas/Falaq/Nas three times each blowing into the palms (Bukhari 5017), what to do on waking from a bad dream, the du'a upon rising (Bukhari 6312), the ruling on sleeping face-down (forbidden per Abu Dawud 5040), and the classical fiqh on all of the above.`,
-  ms: `Akan datang: wudhu sebelum tidur (Bukhari 247), tidur di sisi kanan dengan tangan kanan di bawah pipi (Bukhari 6314), doa "Bismika Allahumma amutu wa ahya" (Bukhari 6324), membaca Ayat al-Kursi + dua ayat terakhir al-Baqarah + al-Ikhlas/Falaq/Nas tiga kali sambil meniup ke tapak tangan (Bukhari 5017), apa yang perlu dilakukan apabila terjaga dari mimpi buruk, doa ketika bangun (Bukhari 6312), hukum tidur meniarap (dilarang menurut Abu Dawud 5040), dan fiqh klasik mengenai semua di atas.`,
-  tur: `Yakında: uykudan önce abdest (Buhârî 247), sağ yanına yatıp sağ eli yanağının altına koymak (Buhârî 6314), "Bismike'l-Lāhümme emûtü ve ahyâ" duâsı (Buhârî 6324), Âyetü'l-Kürsî ile Bakara sonu iki âyet ve İhlâs/Felak/Nâs'ı üç kere avuçlara üfleyerek okumak (Buhârî 5017), kötü rüya gördüğünde yapılacaklar, uyanınca okunacak duâ (Buhârî 6312), yüzüstü uyumanın hükmü (Ebû Dâvud 5040'ta yasaklanmıştır) ve bütün bunlar üzerine klasik fıkıh.`,
-  urd: `آنے والا: سونے سے پہلے وضو (بخاری ۲۴۷)، دائیں کروٹ پر دائیں ہاتھ کو گال کے نیچے رکھ کر سونا (بخاری ۶۳۱۴)، دعا "بِسْمِكَ اللَّهُمَّ أَمُوتُ وَأَحْيَا" (بخاری ۶۳۲۴)، آیت الکرسی + سورۃ البقرہ کی آخری دو آیات + الاخلاص/الفلق/الناس تین تین بار ہتھیلیوں میں پھونک کر پڑھنا (بخاری ۵۰۱۷)، بری خواب سے جاگنے پر کیا کرنا، اٹھنے کی دعا (بخاری ۶۳۱۲)، منہ کے بل سونے کا حکم (ابو داود ۵۰۴۰ کے مطابق منع)، اور مذکورہ سب پر کلاسیکی فقہ۔`,
-  ben: `আসছে: ঘুমানোর আগে ওযু (বুখারি ২৪৭), ডান পাশে ডান হাত গালের নিচে রেখে ঘুমানো (বুখারি ৬৩১৪), দোয়া "বিসমিকা আল্লাহুম্মা আমুতু ওয়া আহইয়া" (বুখারি ৬৩২৪), আয়াতুল কুরসি + সূরা বাকারার শেষ দুই আয়াত + আল-ইখলাস/আল-ফালাক/আন-নাস তিনবার করে হাতের তালুতে ফুঁ দিয়ে পড়া (বুখারি ৫০১৭), দুঃস্বপ্ন থেকে জেগে উঠলে কী করতে হবে, উঠার দোয়া (বুখারি ৬৩১২), উপুড় হয়ে ঘুমানোর বিধান (আবু দাউদ ৫০৪০ অনুযায়ী নিষিদ্ধ), এবং উপরের সব বিষয়ে ধ্রুপদী ফিকহ।`,
-  fas: `به‌زودی: وضو پیش از خواب (بخاری ۲۴۷)، خوابیدن به پهلوی راست با دست راست زیر گونه (بخاری ۶۳۱۴)، دعای «بسمک اللهم أموت وأحیا» (بخاری ۶۳۲۴)، خواندن آیة الکرسی + دو آیه‌ی آخر بقره + اخلاص/فلق/ناس هر یک سه بار در کف دستان و دمیدن (بخاری ۵۰۱۷)، آنچه هنگام بیدار شدن از خواب بد باید کرد، دعای بیداری (بخاری ۶۳۱۲)، حکم خوابیدن به رو (طبق ابوداود ۵۰۴۰ ممنوع)، و فقه کلاسیک درباره‌ی همه‌ی موارد فوق.`,
-  zh: `即将推出：睡前之小净（布哈里 247）、右侧卧、右手垫脸颊（布哈里 6314）、诵「奉主之名，我死我生」之祷（布哈里 6324）、诵「宝座之节」＋黄牛章末二节＋三诚章·晨曦章·世人章各三遍，吹于双掌（布哈里 5017）；恶梦醒后当如何行、起身之祷（布哈里 6312）；俯睡之判决（依艾布·达乌德 5040 为禁止）；以及上述之古典教法。`,
-  yue: `即將推出：睡前之小淨（布哈里 247）、右側臥、右手墊臉頰（布哈里 6314）、誦「奉主之名，我死我生」之禱（布哈里 6324）、誦「寶座之節」＋黃牛章末二節＋三誠章·晨曦章·世人章各三遍，吹於雙掌（布哈里 5017）；惡夢醒後當如何行、起身之禱（布哈里 6312）；俯睡之判決（依艾布·達烏德 5040 為禁止）；以及上述之古典教法。`,
-  ja: `近日追加：眠る前のウドゥー（ブハーリー 247）、右を下にして右手を頬の下に置いて眠ること（ブハーリー 6314）、「ビスミカ・アッラーフンマ・アムートゥ・ワ・アフヤー」の祈願（ブハーリー 6324）、玉座の節＋牝牛章の最後の二節＋イフラース／ファラク／ナースをそれぞれ三度、両手のひらに吹いて唱えること（ブハーリー 5017）、悪夢から目覚めたときの行い、目覚めの祈願（ブハーリー 6312）、うつ伏せに眠ることの禁（アブー・ダーウード 5040）、そしてこれら全てに関する古典的フィクフ。`,
-  ru: `Скоро: омовение перед сном (аль-Бухари 247), сон на правом боку с правой рукой под щекой (аль-Бухари 6314), дуа "Би-сми-ка Аллахумма амуту ва ахья" (аль-Бухари 6324), чтение аят аль-Курси + двух последних аятов аль-Бакара + аль-Ихлас/аль-Фалак/ан-Нас по три раза с обдуванием ладоней (аль-Бухари 5017), что делать по пробуждении от дурного сна, дуа при пробуждении (аль-Бухари 6312), запрет сна лицом вниз (Абу Дауд 5040), а также классический фикх обо всём вышеперечисленном.`,
-  es: `Próximamente: la ablución antes de dormir (al-Bukhari 247), dormir del lado derecho con la mano derecha bajo la mejilla (al-Bukhari 6314), la du'a "Bismika Al-lahumma amutu wa ahya" (al-Bukhari 6324), recitar el Trono + los dos últimos versos de al-Baqarah + al-Ijlas/al-Falaq/al-Nas tres veces cada uno soplando en las palmas (al-Bukhari 5017), qué hacer al despertar de un mal sueño, la du'a al levantarse (al-Bukhari 6312), el fallo sobre dormir boca abajo (prohibido según Abu Dawud 5040), y la fiqh clásica sobre todo lo anterior.`,
-  ko: `공개 예정: 잠자기 전 우두(알부카리 247), 오른쪽으로 누워 오른손을 뺨 아래 두고 자기(알부카리 6314), "비스미카 알라훔마 아무투 와 아흐야" 두아(알부카리 6324), 아야트 알쿠르시 + 알바카라의 마지막 두 구절 + 알이클라스/알팔라크/알나스를 각각 세 번씩 두 손바닥에 불어 낭송하기(알부카리 5017), 악몽에서 깨어난 뒤 할 일, 일어날 때의 두아(알부카리 6312), 엎드려 자는 것의 규정(아부 다우드 5040에 의해 금지), 그리고 위 전체에 대한 고전 피크흐.`,
-  ta: `விரைவில் வரும்: உறங்குமுன் உளூ (புகாரி 247), வலப் புறமாக வலது கையை கன்னத்திற்கு அடியில் வைத்து உறங்குதல் (புகாரி 6314), "பிஸ்மிக அல்லாஹும்ம அமூது வ அஹ்யா" பிரார்த்தனை (புகாரி 6324), ஆயத்துல் குர்ஸி + அல்-பகராவின் இறுதி இரு வசனங்கள் + அல்-இக்லாஸ்/அல்-ஃபலக்/அன்-நாஸ் ஒவ்வொன்றையும் மூன்று முறை உள்ளங்கைகளில் ஊதி ஓதுதல் (புகாரி 5017), கெட்ட கனவிலிருந்து விழித்தபோது என்ன செய்ய வேண்டும், எழுந்திருக்கும் பிரார்த்தனை (புகாரி 6312), முகம் கீழ் நோக்கி உறங்குதல் தீர்ப்பு (அபூ தாவூத் 5040 படி தடைசெய்யப்பட்டது), மற்றும் மேற்கண்ட அனைத்திற்கும் செவ்வியல் ஃபிக்ஹ்.`,
-  si: `ඉදිරියේදී: නින්දට පෙර වුදූ (බුකාරි 247), දකුණු පැත්තට හැරී දකුණු අත කම්මුලට යටින් තබා නිදා ගැනීම (බුකාරි 6314), "බිස්මික අල්ලාහුම්ම අමූතු ව අහ්යා" දුආව (බුකාරි 6324), ආයතුල් කුර්සී + අල්-බකරාහ්ගේ අවසන් වාක්‍ය දෙක + අල්-ඉක්ලාස්/අල්-ෆලක්/අන්-නාස් තුන් වතාවක් තුන් වතාවක් අත්ල දෙකට පිඹීමෙන් කියවීම (බුකාරි 5017), නරක සිහිනයෙන් අවදි වූ විට කුමක් කළ යුතුද, අවදිවීමේ දුආව (බුකාරි 6312), මුහුණ පහළට තබා නිදා ගැනීමේ නීතිය (අබූ දාවූද් 5040 අනුව තහනම්), සහ ඉහත සියල්ල පිළිබඳ සම්භාව්‍ය ෆික්හ්.`,
-};
+const PRE_SLEEP_DUA_AR = 'بِاسْمِكَ اللَّهُمَّ أَمُوتُ وَأَحْيَا.';
+const PRE_SLEEP_DUA_TR = "Bismika Allahumma amutu wa ahya.";
+const PRE_SLEEP_DUA_EN = 'In Your name, O Allah, I die and I live.';
+
+const WAKE_DUA_AR = 'الْحَمْدُ لِلَّهِ الَّذِي أَحْيَانَا بَعْدَ مَا أَمَاتَنَا وَإِلَيْهِ النُّشُورُ.';
+const WAKE_DUA_TR = "Alhamdulillahi-l ladhi ahyana ba'da ma amatana wa ilayhi-n nushur.";
+const WAKE_DUA_EN = 'All praise is due to Allah who has given us life after having caused us to die, and to Him is the return.';
+
+const BAD_DREAM_DUA_AR = 'أَعُوذُ بِاللَّهِ مِنَ الشَّيْطَانِ الرَّجِيمِ.';
+const BAD_DREAM_DUA_TR = "A'udhu billahi mina-sh shaytani-r rajim.";
+
+const AYATUL_KURSI_TAG_AR = 'اللَّهُ لَا إِلَٰهَ إِلَّا هُوَ الْحَيُّ الْقَيُّومُ... (البقرة 255)';
 
 export function SleepEtiquetteContent() {
   const { lang } = useLanguage();
@@ -64,8 +60,164 @@ export function SleepEtiquetteContent() {
         arabicTitle="آدَابُ النَّوْم"
         subtitle={SUBTITLE[lang] ?? SUBTITLE.en}
       />
-      <div className="max-w-4xl mx-auto px-6 py-16">
-        <UnderConstructionCallout topic={TOPIC} />
+
+      <div className="max-w-3xl mx-auto px-6 py-16 space-y-12">
+        {/* Wudu before sleep */}
+        <section>
+          <h2 className="section-title font-garamond text-2xl md:text-3xl font-semibold text-forest mb-4">
+            Wudu Before Sleep
+          </h2>
+          <article className="card-islamic space-y-3">
+            <p className="text-forest/75 text-sm leading-relaxed">
+              The Prophet ﷺ said: <em>“When you go to your bed, perform wudu as you would for the prayer, then lie down on your right side.”</em>
+            </p>
+            <p className="text-forest/70 text-sm leading-relaxed">
+              Sleeping in a state of ritual purity is a Sunnah mu’akkadah. The scholars mention that the soul in sleep is presented before Allah, and being purified is a mark of honour for that state. If you cannot make wudu (illness, injury), tayamum suffices; if neither is possible, sleep in whatever state you are in, with no sin.
+            </p>
+            <p className="text-xs text-gold/60 italic">Source: al-Bukhari 247, Muslim 2710 (al-Bara ibn Azib).</p>
+          </article>
+        </section>
+
+        {/* Right side */}
+        <section>
+          <h2 className="section-title font-garamond text-2xl md:text-3xl font-semibold text-forest mb-4">
+            The Sunnah Posture: Right Side
+          </h2>
+          <article className="card-islamic space-y-3">
+            <p className="text-forest/75 text-sm leading-relaxed">
+              The Sunnah is to lie on the <strong>right</strong> side, placing the right hand under the right cheek. Sleeping on the back is permitted (and mentioned in some ahadith) but the initial posture on going to bed is the right side.
+            </p>
+            <p className="text-forest/70 text-sm leading-relaxed">
+              Hudhayfah (ra) said: <em>“When the Prophet ﷺ went to his bed at night he would place his hand under his cheek and say ‘Bismika Allahumma amutu wa ahya’ …”</em>
+            </p>
+            <p className="text-forest/70 text-sm leading-relaxed">
+              Sleeping face-down is explicitly discouraged. Abu Umama narrates the Prophet ﷺ passing a man lying on his stomach and saying: <em>“This is a posture Allah does not love.”</em>
+            </p>
+            <p className="text-xs text-gold/60 italic">Sources: al-Bukhari 6314 (Hudhayfah), Abu Dawud 5040 and Ibn Majah 3723 for the face-down prohibition.</p>
+          </article>
+        </section>
+
+        {/* Pre-sleep dua */}
+        <section>
+          <h2 className="section-title font-garamond text-2xl md:text-3xl font-semibold text-forest mb-4">
+            The Du'a Before Sleeping
+          </h2>
+          <article className="card-islamic space-y-4">
+            <ArabicText text={PRE_SLEEP_DUA_AR} size="lg" />
+            <div className="border-t border-gold/10 pt-3">
+              <p className="text-xs text-gold/70 font-medium uppercase tracking-wider mb-1">Transliteration</p>
+              <p className="text-forest/60 italic text-sm leading-relaxed">{PRE_SLEEP_DUA_TR}</p>
+              <p className="text-xs text-gold/70 font-medium uppercase tracking-wider mt-3 mb-1">Meaning</p>
+              <p className="text-forest/75 text-sm leading-relaxed">{PRE_SLEEP_DUA_EN}</p>
+            </div>
+            <p className="text-forest/70 text-sm leading-relaxed">
+              A concise du’a placing life and death, waking and sleep, entirely in Allah’s hand. The Prophet ﷺ used it every night.
+            </p>
+            <p className="text-xs text-gold/60 italic">Source: al-Bukhari 6314, 6324 (Hudhayfah); Bukhari 6312 has the waking counterpart.</p>
+          </article>
+        </section>
+
+        {/* Recitations */}
+        <section>
+          <h2 className="section-title font-garamond text-2xl md:text-3xl font-semibold text-forest mb-4">
+            The Prophetic Recitations at Bedtime
+          </h2>
+          <article className="card-islamic space-y-4">
+            <div>
+              <p className="text-xs text-gold/70 font-medium uppercase tracking-wider mb-1">1. Ayat al-Kursi</p>
+              <ArabicText text={AYATUL_KURSI_TAG_AR} size="sm" />
+              <p className="text-forest/70 text-sm leading-relaxed mt-2">
+                Whoever recites Ayat al-Kursi at night has an appointed guardian from Allah, and no shaytan comes near them until morning.
+              </p>
+              <p className="text-xs text-gold/60 italic">Source: al-Bukhari 5010 (Abu Hurayra).</p>
+            </div>
+
+            <div className="border-t border-gold/10 pt-3">
+              <p className="text-xs text-gold/70 font-medium uppercase tracking-wider mb-1">2. The Last Two Verses of al-Baqarah</p>
+              <p className="text-forest/70 text-sm leading-relaxed">
+                The Prophet ﷺ said: <em>“Whoever recites the two verses at the end of Surat al-Baqarah at night, they will suffice him.”</em>
+              </p>
+              <p className="text-xs text-gold/60 italic">Source: al-Bukhari 4008, Muslim 807 (Abu Mas’ud).</p>
+            </div>
+
+            <div className="border-t border-gold/10 pt-3">
+              <p className="text-xs text-gold/70 font-medium uppercase tracking-wider mb-1">3. al-Ikhlas + al-Falaq + al-Nas, three times each, blowing into the palms</p>
+              <p className="text-forest/70 text-sm leading-relaxed">
+                ‘Aisha (ra) reported that every night before sleep the Prophet ﷺ would join his palms, blow into them, and recite Qul huwa Allahu Ahad, Qul a’udhu bi rabbi-l falaq, and Qul a’udhu bi rabbi-n nas, then wipe them over as much of his body as he could reach, beginning with the head, face, and front of his body. He did this three times.
+              </p>
+              <p className="text-xs text-gold/60 italic">Source: al-Bukhari 5017 (‘Aisha).</p>
+            </div>
+
+            <div className="border-t border-gold/10 pt-3">
+              <p className="text-xs text-gold/70 font-medium uppercase tracking-wider mb-1">4. Dust off the bed three times</p>
+              <p className="text-forest/70 text-sm leading-relaxed">
+                Abu Hurayra (ra) reported: <em>“When any of you goes to his bed, let him take a corner of his lower garment and dust off his bed with it three times, and let him say ‘Bismillah’, for he does not know what has come onto it after him.”</em>
+              </p>
+              <p className="text-xs text-gold/60 italic">Source: al-Bukhari 6320, Muslim 2714.</p>
+            </div>
+          </article>
+        </section>
+
+        {/* Bad dream */}
+        <section>
+          <h2 className="section-title font-garamond text-2xl md:text-3xl font-semibold text-forest mb-4">
+            On Waking From a Bad Dream
+          </h2>
+          <article className="card-islamic space-y-4">
+            <p className="text-forest/75 text-sm leading-relaxed">
+              The Prophet ﷺ said: <em>“A good dream is from Allah, and a bad dream is from the shaytan. If any of you sees what he dislikes, let him spit lightly to his left three times when he wakes up, seek refuge in Allah from its evil, and not mention it to anyone. It will not harm him.”</em>
+            </p>
+            <ArabicText text={BAD_DREAM_DUA_AR} size="md" />
+            <div className="border-t border-gold/10 pt-3">
+              <p className="text-xs text-gold/70 font-medium uppercase tracking-wider mb-1">Transliteration</p>
+              <p className="text-forest/60 italic text-sm leading-relaxed">{BAD_DREAM_DUA_TR}</p>
+              <p className="text-xs text-gold/70 font-medium uppercase tracking-wider mt-3 mb-1">Meaning</p>
+              <p className="text-forest/75 text-sm leading-relaxed">I seek refuge with Allah from the accursed shaytan.</p>
+            </div>
+            <p className="text-forest/70 text-sm leading-relaxed">
+              He should also turn onto his other side, and if he wishes, pray two rakat. He should not mention or interpret the dream, for the shaytan hopes it will trouble him. A good dream, by contrast, may be shared only with those who love him.
+            </p>
+            <p className="text-xs text-gold/60 italic">Source: al-Bukhari 3292, Muslim 2261 (Abu Salama, Abu Qatada, Jabir).</p>
+          </article>
+        </section>
+
+        {/* Wake dua */}
+        <section>
+          <h2 className="section-title font-garamond text-2xl md:text-3xl font-semibold text-forest mb-4">
+            The Du'a on Waking
+          </h2>
+          <article className="card-islamic space-y-4">
+            <ArabicText text={WAKE_DUA_AR} size="lg" />
+            <div className="border-t border-gold/10 pt-3">
+              <p className="text-xs text-gold/70 font-medium uppercase tracking-wider mb-1">Transliteration</p>
+              <p className="text-forest/60 italic text-sm leading-relaxed">{WAKE_DUA_TR}</p>
+              <p className="text-xs text-gold/70 font-medium uppercase tracking-wider mt-3 mb-1">Meaning</p>
+              <p className="text-forest/75 text-sm leading-relaxed">{WAKE_DUA_EN}</p>
+            </div>
+            <p className="text-forest/70 text-sm leading-relaxed">
+              The Prophet ﷺ said this every morning, treating the daily cycle of sleep and waking as a rehearsal for the greater sleep and greater rising. Waking with hamd on the tongue turns an ordinary reflex into an act of worship.
+            </p>
+            <p className="text-xs text-gold/60 italic">Source: al-Bukhari 6312 (Hudhayfah).</p>
+          </article>
+        </section>
+
+        {/* Wisdom */}
+        <section>
+          <h2 className="section-title font-garamond text-2xl md:text-3xl font-semibold text-forest mb-4">
+            The Wisdom Behind the Sleep Sunnah
+          </h2>
+          <article className="card-forest rounded-2xl p-6 space-y-3">
+            <p className="text-cream/85 text-sm leading-relaxed">
+              The Qur’an calls sleep a <em>lesser death</em>: <em>“Allah takes the souls at the moment of their death, and those that have not died in their sleep. He keeps those upon which He has decreed death, and sends the rest back until an appointed term”</em> (al-Zumar 39:42).
+            </p>
+            <p className="text-cream/85 text-sm leading-relaxed">
+              The Prophet’s ﷺ etiquette for going to bed is thus not superstition but preparation: purify the body (wudu), fortify the soul with Qur’an (Ayat al-Kursi, the two ‘seeking-refuge’ surahs, the last verses of al-Baqarah), place life and death consciously in Allah’s hand (Bismika Allahumma…). If the soul is returned, one wakes to praise (Alhamdulillah alladhi ahyana…). If it is kept, one has died in the best state a servant can die in, purified, mentioning Allah, on the right side, facing the qiblah.
+            </p>
+            <p className="text-cream/85 text-sm leading-relaxed">
+              This is why the classical scholars called the bedtime Sunnah <em>“the equipment of the traveller,”</em> because every night is a rehearsal for the journey none of us can miss.
+            </p>
+          </article>
+        </section>
       </div>
     </>
   );
