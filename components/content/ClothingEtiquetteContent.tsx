@@ -1,8 +1,15 @@
 'use client';
 
 import { PageHeader } from '@/components/ui/PageHeader';
-import { UnderConstructionCallout } from '@/components/ui/UnderConstructionCallout';
+import { ArabicText } from '@/components/ui/ArabicText';
 import { useLanguage } from '@/lib/i18n/context';
+
+const NEW_CLOTHES_DUA_AR =
+  'الْحَمْدُ لِلَّهِ الَّذِي كَسَانِي هَذَا وَرَزَقَنِيهِ مِنْ غَيْرِ حَوْلٍ مِنِّي وَلَا قُوَّةٍ.';
+const NEW_CLOTHES_DUA_TR =
+  "Alhamdulillahi-l ladhi kasani hadha wa razaqanihi min ghayri hawlin minni wa la quwwah.";
+const NEW_CLOTHES_DUA_EN =
+  'All praise is due to Allah who has clothed me with this and provided it for me with no power or strength from myself.';
 
 const TITLE: Record<string, string> = {
   en: `Adab al-Libas, The Etiquettes of Dressing`,
@@ -64,8 +71,149 @@ export function ClothingEtiquetteContent() {
         arabicTitle="آدَابُ اللِّبَاس"
         subtitle={SUBTITLE[lang] ?? SUBTITLE.en}
       />
-      <div className="max-w-4xl mx-auto px-6 py-16">
-        <UnderConstructionCallout topic={TOPIC} />
+
+      <div className="max-w-3xl mx-auto px-6 py-16 space-y-12">
+        {/* Awrah */}
+        <section>
+          <h2 className="section-title font-garamond text-2xl md:text-3xl font-semibold text-forest mb-4">
+            The Purpose of Dress: Covering and Dignity
+          </h2>
+          <article className="card-islamic space-y-3">
+            <p className="text-forest/75 text-sm leading-relaxed">
+              The Qur’an anchors the whole subject in one verse: <em>“O children of Adam, We have sent down to you clothing to conceal your private parts and as adornment, but the clothing of taqwa, that is best. That is from the signs of Allah, that they may remember.”</em> (al-A’raf 7:26).
+            </p>
+            <p className="text-forest/75 text-sm leading-relaxed">
+              Islam’s teaching on clothing therefore serves two ends at once: to <strong>cover</strong> (the outward function) and to <strong>adorn with dignity</strong> (the inward function). Both are commanded, and both are worship.
+            </p>
+            <p className="text-forest/70 text-sm leading-relaxed">
+              The obligatory covering (<em>awrah</em>) for men is from the navel to the knee. For women in the presence of non-mahram men, the majority position covers everything except the face and hands; the Hanbali and some others require the face too. All schools agree the covering must be loose, not transparent, and not designed to attract attention.
+            </p>
+          </article>
+        </section>
+
+        {/* Right side first */}
+        <section>
+          <h2 className="section-title font-garamond text-2xl md:text-3xl font-semibold text-forest mb-4">
+            Right Side First When Putting On, Left When Removing
+          </h2>
+          <article className="card-islamic space-y-3">
+            <p className="text-forest/75 text-sm leading-relaxed">
+              ‘Aisha (ra) said: <em>“The Prophet ﷺ used to love to begin with the right side in his purification, in combing his hair, and in putting on his shoes.”</em>
+            </p>
+            <p className="text-forest/75 text-sm leading-relaxed">
+              For clothes: put on the right sleeve first, the right trouser-leg first, the right shoe first. When removing, do the reverse. This is one of the general rules of tayamun (preferring the right for what is honourable, and the left for what it is being removed from).
+            </p>
+            <p className="text-xs text-gold/60 italic">Source: al-Bukhari 168, Muslim 268; extended to clothing in Abu Dawud 4141.</p>
+          </article>
+        </section>
+
+        {/* New clothes dua */}
+        <section>
+          <h2 className="section-title font-garamond text-2xl md:text-3xl font-semibold text-forest mb-4">
+            The Du'a When Wearing a New Garment
+          </h2>
+          <article className="card-islamic space-y-4">
+            <ArabicText text={NEW_CLOTHES_DUA_AR} size="lg" />
+            <div className="border-t border-gold/10 pt-3">
+              <p className="text-xs text-gold/70 font-medium uppercase tracking-wider mb-1">Transliteration</p>
+              <p className="text-forest/60 italic text-sm leading-relaxed">{NEW_CLOTHES_DUA_TR}</p>
+              <p className="text-xs text-gold/70 font-medium uppercase tracking-wider mt-3 mb-1">Meaning</p>
+              <p className="text-forest/75 text-sm leading-relaxed">{NEW_CLOTHES_DUA_EN}</p>
+            </div>
+            <p className="text-forest/70 text-sm leading-relaxed">
+              The Prophet ﷺ said: <em>“Whoever wears a new garment and says this, then takes off the old garment and gives it away in charity, he is under the protection of Allah in this world and the next.”</em>
+            </p>
+            <p className="text-xs text-gold/60 italic">Source: Abu Dawud 4020, al-Tirmidhi 1767 (Mu’adh ibn Anas), Hasan.</p>
+          </article>
+        </section>
+
+        {/* White */}
+        <section>
+          <h2 className="section-title font-garamond text-2xl md:text-3xl font-semibold text-forest mb-4">
+            The Colour White
+          </h2>
+          <article className="card-islamic space-y-3">
+            <p className="text-forest/75 text-sm leading-relaxed">
+              The Prophet ﷺ said: <em>“Wear white clothes, for they are the best of your clothes, and shroud your dead in them.”</em>
+            </p>
+            <p className="text-forest/70 text-sm leading-relaxed">
+              White is not the only permissible colour, the Prophet ﷺ himself wore red-and-black striped Yemeni cloaks (al-hulla al-hamra), a green Yemeni cloak, and black turbans. The point is that white is the most beloved, not that others are forbidden.
+            </p>
+            <p className="text-xs text-gold/60 italic">Source: Abu Dawud 3878, 4061, al-Tirmidhi 994.</p>
+          </article>
+        </section>
+
+        {/* Isbal */}
+        <section>
+          <h2 className="section-title font-garamond text-2xl md:text-3xl font-semibold text-forest mb-4">
+            The Ruling on Isbal, Dragging the Garment
+          </h2>
+          <article className="card-islamic space-y-3">
+            <p className="text-forest/75 text-sm leading-relaxed">
+              The Prophet ﷺ said: <em>“Whatever of the lower garment is below the ankles is in the Fire.”</em> (al-Bukhari 5787).
+            </p>
+            <p className="text-forest/70 text-sm leading-relaxed">
+              And: <em>“Three whom Allah will not speak to on the Day of Resurrection, nor look at, nor purify, and theirs is a painful punishment: the one who lets his garment drag below the ankles, the one who reminds others of his favours, and the one who sells goods with false oaths.”</em> (Muslim 106, Abu Dharr).
+            </p>
+            <p className="text-forest/70 text-sm leading-relaxed">
+              When Abu Bakr al-Siddiq (ra) said his lower garment slipped below the ankles unless he was constantly aware of it, the Prophet ﷺ replied: <em>“You are not doing it out of pride.”</em> This anchors the majority interpretation: the sin is in the pride, not the fabric alone. But the safe practice, and the one closer to the Sunnah, is to keep the garment above the ankles.
+            </p>
+            <p className="text-xs text-gold/60 italic">Source: al-Bukhari 3665, 5788 for the Abu Bakr exception.</p>
+          </article>
+        </section>
+
+        {/* No arrogance */}
+        <section>
+          <h2 className="section-title font-garamond text-2xl md:text-3xl font-semibold text-forest mb-4">
+            No Arrogance in Dress
+          </h2>
+          <article className="card-islamic space-y-3">
+            <p className="text-forest/75 text-sm leading-relaxed">
+              The Prophet ﷺ said: <em>“He who has an atom’s weight of pride in his heart will not enter Paradise.”</em> A man said, <em>“What if a man loves to have beautiful clothes and beautiful shoes?”</em> He ﷺ replied: <em>“Allah is beautiful and loves beauty. Pride is rejecting the truth and looking down on people.”</em>
+            </p>
+            <p className="text-forest/70 text-sm leading-relaxed">
+              This hadith settles a common confusion: the Islamic warning is not against looking well but against wearing clothes to feel superior. Take care of appearance; drop the arrogance.
+            </p>
+            <p className="text-xs text-gold/60 italic">Source: Muslim 91 (Abdullah ibn Mas’ud).</p>
+          </article>
+        </section>
+
+        {/* Ihram */}
+        <section>
+          <h2 className="section-title font-garamond text-2xl md:text-3xl font-semibold text-forest mb-4">
+            The Ihram Garments
+          </h2>
+          <article className="card-islamic space-y-3">
+            <p className="text-forest/75 text-sm leading-relaxed">
+              For Hajj and Umrah, men enter ihram in two unstitched white pieces: an <em>izar</em> (wrap around the lower body) and a <em>rida</em> (draped over the upper body). No stitched clothes, no head-covering that touches the head, no scent applied after entering ihram, no sewn shoes for feet.
+            </p>
+            <p className="text-forest/75 text-sm leading-relaxed">
+              Women wear their normal modest clothing in ihram, of any colour that meets the general awrah standards. They do not cover the face with a niqab attached to the head during ihram itself, but may drop the veil when non-mahram men approach.
+            </p>
+            <p className="text-forest/70 text-sm leading-relaxed">
+              The wisdom is deep: at the greatest gathering of the servants, all outward markers of rank, wealth, and origin are stripped. Rich and poor, king and shepherd stand identically clothed, in the plain white that will one day be their shroud.
+            </p>
+            <p className="text-xs text-gold/60 italic">Cross-linked to /hajj-umrah for the full ihram rulings.</p>
+          </article>
+        </section>
+
+        {/* Wisdom */}
+        <section>
+          <h2 className="section-title font-garamond text-2xl md:text-3xl font-semibold text-forest mb-4">
+            The Wisdom of the Islamic Dress Code
+          </h2>
+          <article className="card-forest rounded-2xl p-6 space-y-3">
+            <p className="text-cream/85 text-sm leading-relaxed">
+              The Prophet ﷺ said: <em>“Eat and drink, and give charity and dress, without extravagance or arrogance.”</em> (al-Bukhari, ta’liq, and Ahmad 6695).
+            </p>
+            <p className="text-cream/85 text-sm leading-relaxed">
+              Islam’s dress code sits at the intersection of five concerns: <strong>covering</strong> (satr al-‘awrah), <strong>modesty</strong> (haya), <strong>gender distinction</strong> (see /prohibited-clothing), <strong>avoidance of ostentation</strong>, and <strong>identification with the believing community</strong>. When these five are met, the door to how one dresses is open, colour, material, cut, and style, are largely a matter of local custom and personal taste.
+            </p>
+            <p className="text-cream/85 text-sm leading-relaxed">
+              For the specific list of forbidden materials and colours (silk and gold for men, pure red in some views, imitation of the other gender, imitation of disbelievers in specifically religious dress), see the <a href="/prohibited-clothing" className="text-gold underline">Prohibited Clothing</a> page.
+            </p>
+          </article>
+        </section>
       </div>
     </>
   );
