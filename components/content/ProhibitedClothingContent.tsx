@@ -1,8 +1,18 @@
 'use client';
 
 import { PageHeader } from '@/components/ui/PageHeader';
-import { UnderConstructionCallout } from '@/components/ui/UnderConstructionCallout';
+import { ArabicText } from '@/components/ui/ArabicText';
 import { useLanguage } from '@/lib/i18n/context';
+
+const SILK_GOLD_HADITH_AR =
+  'هَذَانِ حَرَامٌ عَلَى ذُكُورِ أُمَّتِي، حِلٌّ لِإِنَاثِهَا.';
+const SILK_GOLD_HADITH_TR = 'Hadhani haramun ‘ala dhukuri ummati, hillun li inathiha.';
+const SILK_GOLD_HADITH_EN = 'These two are forbidden for the males of my nation, permitted for its females.';
+
+const IMITATION_HADITH_AR =
+  'لَعَنَ رَسُولُ اللَّهِ ﷺ الْمُتَشَبِّهِينَ مِنَ الرِّجَالِ بِالنِّسَاءِ، وَالْمُتَشَبِّهَاتِ مِنَ النِّسَاءِ بِالرِّجَالِ.';
+const IMITATION_HADITH_EN =
+  'The Messenger of Allah ﷺ cursed men who imitate women and women who imitate men.';
 
 const TITLE: Record<string, string> = {
   en: `Prohibited Materials and Colours in Clothing`,
@@ -64,8 +74,147 @@ export function ProhibitedClothingContent() {
         arabicTitle="المُحَرَّمَاتُ فِي اللِّبَاس"
         subtitle={SUBTITLE[lang] ?? SUBTITLE.en}
       />
-      <div className="max-w-4xl mx-auto px-6 py-16">
-        <UnderConstructionCallout topic={TOPIC} />
+
+      <div className="max-w-3xl mx-auto px-6 py-16 space-y-12">
+        {/* Framing */}
+        <section>
+          <h2 className="section-title font-garamond text-2xl md:text-3xl font-semibold text-forest mb-4">
+            The Prohibitions and Their Sources
+          </h2>
+          <article className="card-islamic space-y-3">
+            <p className="text-forest/75 text-sm leading-relaxed">
+              A short list of specific materials, colours, and forms of dress is forbidden in Islam, each grounded in an explicit ruling from the Prophet ﷺ. This page collects them with the actual hadith wording and the classical scholarly discussion.
+            </p>
+            <p className="text-forest/70 text-sm leading-relaxed">
+              For the general etiquettes and permitted range of dress, see the <a href="/clothing-etiquette" className="text-gold underline">Clothing Etiquette</a> page. Prohibitions apply to what men and women wear differently in each case, so this page is arranged by ruling, not by garment type.
+            </p>
+          </article>
+        </section>
+
+        {/* Silk and gold for men */}
+        <section>
+          <h2 className="section-title font-garamond text-2xl md:text-3xl font-semibold text-forest mb-4">
+            Silk and Gold for Men
+          </h2>
+          <article className="card-islamic space-y-4">
+            <ArabicText text={SILK_GOLD_HADITH_AR} size="md" />
+            <div className="border-t border-gold/10 pt-3">
+              <p className="text-xs text-gold/70 font-medium uppercase tracking-wider mb-1">Transliteration</p>
+              <p className="text-forest/60 italic text-sm leading-relaxed">{SILK_GOLD_HADITH_TR}</p>
+              <p className="text-xs text-gold/70 font-medium uppercase tracking-wider mt-3 mb-1">Meaning</p>
+              <p className="text-forest/75 text-sm leading-relaxed">{SILK_GOLD_HADITH_EN}</p>
+            </div>
+            <p className="text-forest/75 text-sm leading-relaxed">
+              The Prophet ﷺ raised silk in one hand and gold in the other, then spoke these words. This is the fundamental text on both prohibitions.
+            </p>
+            <p className="text-forest/70 text-sm leading-relaxed">
+              Concessions the fuqaha permit for men:
+            </p>
+            <ul className="text-forest/70 text-sm space-y-1 list-disc list-inside">
+              <li>Silk trim of up to four fingers’ width on a garment (per the Hanbali and Shafi’i mainstream, from Muslim 2069).</li>
+              <li>Silk in cases of medical necessity, based on the Prophet’s ﷺ permission to al-Zubayr and Abd al-Rahman ibn Awf who suffered an itching condition (al-Bukhari 2919).</li>
+              <li>Silver rings and silver-plated items (the Prophet ﷺ himself wore a silver signet ring, al-Bukhari 5866).</li>
+              <li>All gold and silk in general for women; the prohibition is specifically on men.</li>
+            </ul>
+            <p className="text-xs text-gold/60 italic">Sources: Abu Dawud 4057, al-Nasa’i 5144, Ibn Majah 3595 (Abu Musa al-Ash’ari); al-Bukhari 5426, Muslim 2069, 2078; al-Bukhari 2919 for the medical exception.</p>
+          </article>
+        </section>
+
+        {/* Imitation of the opposite gender */}
+        <section>
+          <h2 className="section-title font-garamond text-2xl md:text-3xl font-semibold text-forest mb-4">
+            Imitating the Opposite Gender
+          </h2>
+          <article className="card-islamic space-y-4">
+            <ArabicText text={IMITATION_HADITH_AR} size="md" />
+            <p className="text-forest/75 text-sm leading-relaxed">{IMITATION_HADITH_EN}</p>
+            <p className="text-forest/70 text-sm leading-relaxed">
+              The ruling applies to dress, gait, speech patterns, and general presentation. It is not about a woman wearing trousers (which many cultures adopt for both sexes) but about a specifically male or female presentation being imitated by the other in a manner that blurs the two.
+            </p>
+            <p className="text-forest/70 text-sm leading-relaxed">
+              Classical scholars grounded this in the Qur’anic principle of the distinct creation of male and female (<em>“And the male is not like the female,”</em> Al ‘Imran 3:36), and in the wisdom that Islamic law preserves the distinctions Allah has honoured.
+            </p>
+            <p className="text-xs text-gold/60 italic">Source: al-Bukhari 5885 (Ibn Abbas).</p>
+          </article>
+        </section>
+
+        {/* Pure red for men */}
+        <section>
+          <h2 className="section-title font-garamond text-2xl md:text-3xl font-semibold text-forest mb-4">
+            The Question of Pure Red Garments for Men
+          </h2>
+          <article className="card-islamic space-y-3">
+            <p className="text-forest/75 text-sm leading-relaxed">
+              A minority hadith reports that the Prophet ﷺ forbade men from wearing garments dyed with al-mu’asfar (the pure safflower orange-red). However, many other authentic reports describe him ﷺ wearing red-striped Yemeni cloaks (al-hulla al-hamra, al-Bukhari 5901) and coral-red garments.
+            </p>
+            <p className="text-forest/70 text-sm leading-relaxed">
+              The classical reconciliation across the four schools:
+            </p>
+            <ul className="text-forest/70 text-sm space-y-1 list-disc list-inside">
+              <li><strong>Red as a stripe, weft, or pattern:</strong> permitted for men by consensus.</li>
+              <li><strong>Garments entirely of pure red-orange (mu’asfar) dye:</strong> disliked for men in the majority view; forbidden per some (early Shafi’i, some Hanbali).</li>
+              <li><strong>Red garments for women:</strong> permitted without dispute.</li>
+            </ul>
+            <p className="text-xs text-gold/60 italic">Sources: Muslim 2077 (Abdullah ibn Amr) for the mu’asfar prohibition; al-Bukhari 5901 for the red-striped cloak.</p>
+          </article>
+        </section>
+
+        {/* Isbal already on clothing-etiquette */}
+        <section>
+          <h2 className="section-title font-garamond text-2xl md:text-3xl font-semibold text-forest mb-4">
+            Isbal Out of Pride
+          </h2>
+          <article className="card-islamic space-y-3">
+            <p className="text-forest/75 text-sm leading-relaxed">
+              Dragging the lower garment (izar, thawb, trousers, cloak) below the ankles specifically out of pride is a major sin. Where it happens without any element of pride (as with Abu Bakr al-Siddiq), the Prophet ﷺ excused him personally. But the safe and recommended practice for men is to keep the garment above the ankles.
+            </p>
+            <p className="text-forest/70 text-sm leading-relaxed">
+              This ruling is specific to men. Women are obliged to cover the feet, and their garments will naturally hang below the ankles.
+            </p>
+            <p className="text-xs text-gold/60 italic">See /clothing-etiquette for the full discussion.</p>
+          </article>
+        </section>
+
+        {/* Imitation of the disbelievers */}
+        <section>
+          <h2 className="section-title font-garamond text-2xl md:text-3xl font-semibold text-forest mb-4">
+            Imitation of the Disbelievers in Specifically Religious Dress
+          </h2>
+          <article className="card-islamic space-y-3">
+            <p className="text-forest/75 text-sm leading-relaxed">
+              The Prophet ﷺ said: <em>“Whoever imitates a people is one of them.”</em> (Abu Dawud 4031, Ahmad 5114, Sahih).
+            </p>
+            <p className="text-forest/70 text-sm leading-relaxed">
+              The classical position: prohibition attaches to dress that is <strong>distinctively religious to another faith</strong> (a cross, priestly vestments, a saffron monk’s robe, ceremonial ritual clothing of another religion). Ordinary secular styles shared by many cultures (a suit, jeans, a shirt) do not fall under this prohibition; scholars from Ibn Taymiyyah to Ibn al-Qayyim to the modern muftis of Egypt and the Gulf have written this explicitly.
+            </p>
+            <p className="text-forest/70 text-sm leading-relaxed">
+              The wisdom: outward similarity generates inward affinity. Islam wants Muslims to be distinguishable by dignity, not by strangeness, and specifically not to blur the religious markers of other faiths in the eyes of the ignorant.
+            </p>
+            <p className="text-xs text-gold/60 italic">Source: Abu Dawud 4031 (Ibn Umar); Ibn Taymiyyah, Iqtida’ al-Sirat al-Mustaqim, for the classical elaboration.</p>
+          </article>
+        </section>
+
+        {/* Wisdom */}
+        <section>
+          <h2 className="section-title font-garamond text-2xl md:text-3xl font-semibold text-forest mb-4">
+            The Wisdom Behind These Prohibitions
+          </h2>
+          <article className="card-forest rounded-2xl p-6 space-y-3">
+            <p className="text-cream/85 text-sm leading-relaxed">
+              Each prohibition serves an inner purpose:
+            </p>
+            <ul className="text-cream/80 text-sm space-y-2 list-disc list-inside">
+              <li><strong>Silk and gold for men:</strong> guards masculinity against softness and ostentation, reserves the finest for women, and reserves the ultimate finery for the next life (the people of Paradise wear silk, Fatir 35:33).</li>
+              <li><strong>Isbal:</strong> the outward remedy for the inward disease of arrogance.</li>
+              <li><strong>Gender imitation:</strong> preserves the distinctness Allah has honoured in the two sexes.</li>
+              <li><strong>Pure red mu’asfar:</strong> traditionally worn as a mark of status, so its avoidance guards against ostentation.</li>
+              <li><strong>Religious imitation of other faiths:</strong> preserves the outward identity of the Muslim, and prevents confusion about creed.</li>
+            </ul>
+            <p className="text-cream/85 text-sm leading-relaxed">
+              None of these rulings is arbitrary. Each carries an inner meaning, and each, when kept, aligns the outer skin of a person’s life with the inner tawhid of the heart.
+            </p>
+          </article>
+        </section>
       </div>
     </>
   );
