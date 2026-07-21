@@ -2455,7 +2455,7 @@ export const DUAS: Dua[] = [
     meaning: 'O Allah, cause it to rise upon us with security and faith, with safety and Islam. My Lord and your Lord is Allah.',
     source: 'Sunan at-Tirmidhi 3451, Musnad Ahmad (Sahih via Ibn Hibban); Talhah ibn Ubayd Allah',
     category: 'daily-life',
-    occasion: 'On seeing the crescent of a new Hijri month; especially recited for the moons of Rajab, Sha\\'ban, Ramadan, Shawwal, Dhul-Qa\\'dah, and Dhul-Hijjah, but Sunnah for every new month',
+    occasion: "On seeing the crescent of a new Hijri month; especially recited for the moons of Rajab, Sha'ban, Ramadan, Shawwal, Dhul-Qa'dah, and Dhul-Hijjah, but Sunnah for every new month",
     virtue: "Talhah ibn Ubayd Allah (ra) said: whenever the Prophet ﷺ saw the new crescent he said this. The dua contains four paired requests: security and faith (of the heart), safety and Islam (of the body and state); then addresses the moon itself: 'My Lord and your Lord is Allah', a stark rejection of every pre-Islamic Arab moon-veneration and a monotheistic anchor for a moment classical Arabs turned to ritual. It is why the Islamic calendar's new moon is a spiritual event, not merely astronomical.",
   },
 ];
