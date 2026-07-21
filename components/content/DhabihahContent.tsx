@@ -1,8 +1,17 @@
 'use client';
 
 import { PageHeader } from '@/components/ui/PageHeader';
-import { UnderConstructionCallout } from '@/components/ui/UnderConstructionCallout';
+import { ArabicText } from '@/components/ui/ArabicText';
 import { useLanguage } from '@/lib/i18n/context';
+
+const BISMILLAH_SLAUGHTER_AR = 'بِسْمِ اللَّهِ، وَاللَّهُ أَكْبَر.';
+const BISMILLAH_SLAUGHTER_TR = 'Bismillah, wa Allahu Akbar.';
+const BISMILLAH_SLAUGHTER_EN = 'In the name of Allah, and Allah is the Greatest.';
+
+const IHSAN_HADITH_AR =
+  'إِنَّ اللَّهَ كَتَبَ الْإِحْسَانَ عَلَى كُلِّ شَيْءٍ، فَإِذَا قَتَلْتُمْ فَأَحْسِنُوا الْقِتْلَةَ، وَإِذَا ذَبَحْتُمْ فَأَحْسِنُوا الذِّبْحَةَ، وَلْيُحِدَّ أَحَدُكُمْ شَفْرَتَهُ، وَلْيُرِحْ ذَبِيحَتَهُ.';
+const IHSAN_HADITH_EN =
+  'Allah has decreed ihsan (excellence) upon everything. So if you kill, kill well; and if you slaughter, slaughter well. Let each of you sharpen his blade, and let him give comfort to the animal he slaughters.';
 
 const TITLE: Record<string, string> = {
   en: `Dhabihah, Halal Slaughter and the Permissible Meats`,
@@ -64,8 +73,188 @@ export function DhabihahContent() {
         arabicTitle="الذَّبِيحَة"
         subtitle={SUBTITLE[lang] ?? SUBTITLE.en}
       />
-      <div className="max-w-4xl mx-auto px-6 py-16">
-        <UnderConstructionCallout topic={TOPIC} />
+
+      <div className="max-w-3xl mx-auto px-6 py-16 space-y-12">
+        {/* Ihsan */}
+        <section>
+          <h2 className="section-title font-garamond text-2xl md:text-3xl font-semibold text-forest mb-4">
+            The Foundational Principle: Ihsan
+          </h2>
+          <article className="card-islamic space-y-4">
+            <ArabicText text={IHSAN_HADITH_AR} size="md" />
+            <p className="text-forest/75 text-sm leading-relaxed">{IHSAN_HADITH_EN}</p>
+            <p className="text-forest/70 text-sm leading-relaxed">
+              This hadith of Shaddad ibn Aws is the foundation of the entire Islamic law of slaughter. Every rule that follows exists to fulfil these two commands: sharpen the blade, and give the animal comfort. Islamic slaughter is not merely a method for producing meat, it is an act of worship in which the animal is treated with mercy up to and including its last breath.
+            </p>
+            <p className="text-xs text-gold/60 italic">Source: Muslim 1955 (Shaddad ibn Aws).</p>
+          </article>
+        </section>
+
+        {/* The Four Conditions */}
+        <section>
+          <h2 className="section-title font-garamond text-2xl md:text-3xl font-semibold text-forest mb-4">
+            The Four Conditions of a Valid Slaughter
+          </h2>
+          <article className="card-islamic space-y-4">
+            <p className="text-forest/75 text-sm leading-relaxed">
+              For meat to be halal, four conditions must be met:
+            </p>
+
+            <div className="border-t border-gold/10 pt-3">
+              <p className="text-forest/75 text-sm font-medium mb-1"><strong>1. The slaughterer.</strong></p>
+              <p className="text-forest/70 text-sm leading-relaxed">
+                Must be a Muslim, or from the People of the Book (Jew or Christian) whose slaughter Allah has explicitly permitted: <em>“The food of those who were given the Scripture is lawful for you”</em> (al-Ma’ida 5:5). Muslim, sane, capable of intention, and pronouncing Allah’s name at the moment of slaughter.
+              </p>
+            </div>
+
+            <div className="border-t border-gold/10 pt-3">
+              <p className="text-forest/75 text-sm font-medium mb-1"><strong>2. The instrument.</strong></p>
+              <p className="text-forest/70 text-sm leading-relaxed">
+                A sharp implement that causes flowing blood: a knife, a sword, a sharpened stone or shell. The Prophet ﷺ forbade the use of a tooth (a bone) or a nail (a claw); these do not cut cleanly and would strangle the animal.
+              </p>
+              <p className="text-xs text-gold/60 italic mt-1">Source: al-Bukhari 5498, Muslim 1968 (Rafi’ ibn Khadij).</p>
+            </div>
+
+            <div className="border-t border-gold/10 pt-3">
+              <p className="text-forest/75 text-sm font-medium mb-1"><strong>3. The cut.</strong></p>
+              <p className="text-forest/70 text-sm leading-relaxed">
+                One continuous cut through the throat that severs the trachea (windpipe), the oesophagus (foodpipe), and at least one of the two jugular veins. The Hanafi school requires cutting at least three of the four (trachea, oesophagus, and two jugulars); the Shafi’i and Maliki, at least the trachea and oesophagus; the Hanbali, the trachea alone with blood-flow suffices. The safe practice combines all four.
+              </p>
+            </div>
+
+            <div className="border-t border-gold/10 pt-3">
+              <p className="text-forest/75 text-sm font-medium mb-1"><strong>4. The invocation of Allah's name (tasmiya).</strong></p>
+              <ArabicText text={BISMILLAH_SLAUGHTER_AR} size="md" />
+              <p className="text-forest/60 italic text-sm mt-1">{BISMILLAH_SLAUGHTER_TR}</p>
+              <p className="text-forest/70 text-sm leading-relaxed mt-2">{BISMILLAH_SLAUGHTER_EN}</p>
+              <p className="text-forest/70 text-sm leading-relaxed mt-2">
+                Said at the moment of the cut. The Qur’an is emphatic: <em>“Do not eat that over which the name of Allah has not been mentioned”</em> (al-An’am 6:121). The Hanafi and Maliki schools consider deliberate omission invalidating; the Shafi’i school holds it recommended but not strictly required; the Hanbali position varies. To err on the side of certainty, always say it.
+              </p>
+            </div>
+          </article>
+        </section>
+
+        {/* Method */}
+        <section>
+          <h2 className="section-title font-garamond text-2xl md:text-3xl font-semibold text-forest mb-4">
+            The Method
+          </h2>
+          <article className="card-islamic space-y-3">
+            <ol className="text-forest/75 text-sm space-y-2 list-decimal list-inside">
+              <li>Sharpen the blade out of sight of the animal (Muslim 1955).</li>
+              <li>Do not slaughter one animal in front of another.</li>
+              <li>Face the animal towards the qiblah, lying it on its left side (the classical practice, though not a strict validity condition).</li>
+              <li>Say <em>Bismillah, wa Allahu Akbar</em> at the moment of the cut.</li>
+              <li>Make a swift, single cut through the neck at the front (not from the back).</li>
+              <li>Do not press or manipulate the animal until it has stopped moving.</li>
+            </ol>
+            <p className="text-forest/70 text-sm leading-relaxed">
+              A hadith records that ‘Umar (ra) saw a man about to slaughter a sheep by dragging it by the foot to the killing place. ‘Umar struck him and said: <em>“Drive it to its death gently.”</em>
+            </p>
+          </article>
+        </section>
+
+        {/* Permitted and forbidden animals */}
+        <section>
+          <h2 className="section-title font-garamond text-2xl md:text-3xl font-semibold text-forest mb-4">
+            Which Animals Are Permitted and Which Are Not
+          </h2>
+          <article className="card-islamic space-y-3">
+            <p className="text-forest/75 text-sm leading-relaxed">
+              <strong>Explicitly forbidden</strong> in the Qur’an and Sunnah:
+            </p>
+            <ul className="text-forest/70 text-sm space-y-1 list-disc list-inside">
+              <li>Pork (al-Baqarah 2:173, al-Ma’ida 5:3, al-An’am 6:145, al-Nahl 16:115).</li>
+              <li>Blood (poured out, the same verses).</li>
+              <li>Carrion, strangled, beaten, fallen, gored, or partly-eaten-by-a-beast animals unless finished properly before death (al-Ma’ida 5:3).</li>
+              <li>Animals slaughtered for other than Allah, or on stone altars (al-Ma’ida 5:3).</li>
+              <li>Fanged predators (lion, tiger, wolf, dog, cat), per Muslim 1934.</li>
+              <li>Taloned birds of prey (eagle, hawk, falcon), same hadith.</li>
+              <li>Domestic donkey (al-Bukhari 4198, 5528).</li>
+              <li>Every creature the Sunnah forbade the killing of (frogs, ants, bees, hoopoe, shrike, per Abu Dawud 5267), which by extension are not eaten.</li>
+            </ul>
+            <p className="text-forest/70 text-sm leading-relaxed pt-2">
+              <strong>Permitted:</strong> sheep, goats, cattle, camel, chicken, and the general run of grazing livestock. The mule is disputed (majority: not permitted). The horse is disputed (Hanafi: makruh; the other three: permitted with karahah).
+            </p>
+          </article>
+        </section>
+
+        {/* Fish and locusts */}
+        <section>
+          <h2 className="section-title font-garamond text-2xl md:text-3xl font-semibold text-forest mb-4">
+            The Two Exceptions: Fish and Locusts
+          </h2>
+          <article className="card-islamic space-y-3">
+            <p className="text-forest/75 text-sm leading-relaxed">
+              The Prophet ﷺ said: <em>“Two dead animals and two bloods have been made lawful to us. As for the two dead animals, they are fish and locusts. As for the two bloods, they are the liver and the spleen.”</em>
+            </p>
+            <p className="text-forest/70 text-sm leading-relaxed">
+              Fish and locusts do not require ritual slaughter; they may be eaten however they die. Fish caught dead in the water is halal (Ibn Umar). The classical majority (Shafi’i, Maliki, Hanbali) permit all seafood; the Hanafi school restricts it to scaled fish specifically.
+            </p>
+            <p className="text-xs text-gold/60 italic">Source: Ibn Majah 3314, al-Bayhaqi (Ibn Umar).</p>
+          </article>
+        </section>
+
+        {/* Hunting */}
+        <section>
+          <h2 className="section-title font-garamond text-2xl md:text-3xl font-semibold text-forest mb-4">
+            Hunting
+          </h2>
+          <article className="card-islamic space-y-3">
+            <p className="text-forest/75 text-sm leading-relaxed">
+              For game where slaughter is impossible (a bird brought down mid-flight, a deer struck by an arrow), what is caught is halal if:
+            </p>
+            <ul className="text-forest/70 text-sm space-y-1 list-disc list-inside">
+              <li>The hunter is a Muslim (or People of the Book).</li>
+              <li>Says <em>Bismillah</em> at the moment of release (of the arrow, spear, bullet, or trained hunting animal).</li>
+              <li>The instrument penetrates and causes flowing blood.</li>
+              <li>If a trained hunting dog or falcon is used, it must be trained (does not eat what it catches) and released with the invocation.</li>
+            </ul>
+            <p className="text-forest/70 text-sm leading-relaxed">
+              <em>“They ask you what has been made lawful for them. Say: lawful for you are all good foods and what you have trained hunting animals to catch, teaching them of what Allah has taught you. So eat of what they catch for you, and mention the name of Allah upon it.”</em> (al-Ma’ida 5:4).
+            </p>
+          </article>
+        </section>
+
+        {/* Mechanical slaughter */}
+        <section>
+          <h2 className="section-title font-garamond text-2xl md:text-3xl font-semibold text-forest mb-4">
+            Mechanical Slaughter and Modern Abattoirs
+          </h2>
+          <article className="card-islamic space-y-3">
+            <p className="text-forest/75 text-sm leading-relaxed">
+              The classical conditions do not require the cutter to hold the knife personally. A rotating blade, a mechanical cutter, or an automated line is permitted <strong>if</strong>:
+            </p>
+            <ul className="text-forest/70 text-sm space-y-1 list-disc list-inside">
+              <li>A Muslim (or ahl al-kitab) operator initiates the run with tasmiya.</li>
+              <li>The blade meets the four-condition cut (throat vessels severed).</li>
+              <li>The animal is alive at the point of cut (post-mortem cutting does not make halal what died before it).</li>
+              <li>Pre-stunning, if used, must not kill the animal before the cut. Recoverable stunning (low-voltage electric) is permitted by many fatwa councils (South Africa, Malaysia, Egyptian Dar al-Ifta); irrecoverable stunning (bolt, high-voltage, gas) is not.</li>
+            </ul>
+            <p className="text-forest/70 text-sm leading-relaxed">
+              This is why halal certification exists: to audit the chain from stunning method to blade to invocation.
+            </p>
+          </article>
+        </section>
+
+        {/* Qurbani */}
+        <section>
+          <h2 className="section-title font-garamond text-2xl md:text-3xl font-semibold text-forest mb-4">
+            Udhiyah and Qurbani (The Eid al-Adha Slaughter)
+          </h2>
+          <article className="card-forest rounded-2xl p-6 space-y-3">
+            <p className="text-cream/85 text-sm leading-relaxed">
+              On the 10th, 11th, and 12th of Dhul-Hijjah, Muslims worldwide who can afford it slaughter a sheep, goat, cow, or camel in the tradition of the Prophet Ibrahim ﷺ. The Prophet Muhammad ﷺ said: <em>“Whoever can afford it and does not sacrifice, let him not come near our place of prayer.”</em>
+            </p>
+            <p className="text-cream/85 text-sm leading-relaxed">
+              The meat is divided into three: one third for the family, one third for friends and neighbours, one third for the poor. In modern times most Muslims pay a trusted charity to slaughter on their behalf in a country of need.
+            </p>
+            <p className="text-cream/85 text-sm leading-relaxed">
+              This is the ritual re-enactment of what Ibrahim ﷺ was ready to do with Isma’il ﷺ, and what Allah ransomed with a mighty sacrifice (al-Saffat 37:107). Every year the family gathers, the animal is treated with ihsan, and the poor eat meat perhaps for the only time that year.
+            </p>
+            <p className="text-xs text-gold/70 italic">Source: Ibn Majah 3123 (Abu Hurayra) for the warning; Fiqh across the four schools for the meat division.</p>
+          </article>
+        </section>
       </div>
     </>
   );
