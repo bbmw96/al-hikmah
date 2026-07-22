@@ -1,0 +1,46 @@
+import type { Lang } from '@/lib/i18n/translations';
+type LangMap = Record<Lang, string>;
+const E: Omit<LangMap, 'en'> = { ms: '', tur: '', urd: '', ben: '', fas: '', zh: '', yue: '', ja: '', ru: '', es: '', ko: '', ta: '', si: '' };
+
+export const MASJID_CONTENT = {
+  hist_h: { en: `The First Masjids`, ...E },
+  hist_p1: { en: `The Prophet ﷺ built the Masjid of Quba just outside Madinah in Rabi al-Awwal of the first Hijri year, on his stopover during the Hijra. Allah describes it in the Qur'an as "a masjid founded on taqwa from the first day" (al-Tawba 9:108). The Prophet ﷺ said whoever purifies themselves at home, then goes to Quba and prays there, receives the reward of an 'umrah.`, ...E },
+  hist_p2: { en: `Days later he began the Masjid al-Nabawi in the centre of Madinah, carrying its mud bricks himself. It was a plain space of palm-trunk pillars and a palm-frond roof, with a raised platform (al-Suffa) for the poor companions who lived in it. From this simple structure came the model of every masjid built since: a courtyard, a covered prayer hall, a mihrab indicating the qiblah, a minbar for the khutbah, and open access for every Muslim.`, ...E },
+  hist_source: { en: `Sources: al-Tawba 9:108; al-Tirmidhi 324 for the Quba merit (Sahl ibn Hunayf); al-Bukhari 428 for the building of al-Nabawi.`, ...E },
+  enter_h: { en: `On Entering: Right Foot and Du'a`, ...E },
+  enter_intro: { en: `Enter with the right foot. Send salat and salam upon the Prophet ﷺ, then recite:`, ...E },
+  enter_translit: { en: `Allahumma-ftah li abwaba rahmatik.`, ...E },
+  enter_meaning: { en: `O Allah, open for me the gates of Your mercy.`, ...E },
+  enter_source: { en: `Source: Muslim 713 (Abu Humayd or Abu Usayd al-Sa'idi).`, ...E },
+  tahiyya_h: { en: `Tahiyyat al-Masjid: Two Rakat Before Sitting`, ...E },
+  tahiyya_p1: { en: `The Prophet ﷺ said: "When any of you enters the masjid, let him not sit until he has prayed two rakat." This is tahiyyat al-masjid, the greeting of the masjid, and it is sunnah muakkadah in the Shafi'i, Maliki and Hanbali schools, and mustahabb in the Hanafi school.`, ...E },
+  tahiyya_p2: { en: `It is dropped in specific cases: if the congregation is already praying the fard, if entering at a forbidden time (sunrise, zenith, sunset) for the strict view, or if entering only to pass through. If the iqamah is called, you join the fard directly; the fard itself suffices for the greeting.`, ...E },
+  tahiyya_source: { en: `Source: al-Bukhari 444, Muslim 714 (Abu Qatada).`, ...E },
+  leave_h: { en: `On Leaving: Left Foot and Du'a`, ...E },
+  leave_intro: { en: `Leave with the left foot. Send salat and salam upon the Prophet ﷺ, then recite:`, ...E },
+  leave_translit: { en: `Allahumma inni as'aluka min fadlik.`, ...E },
+  leave_meaning: { en: `O Allah, I ask You of Your bounty.`, ...E },
+  leave_p: { en: `The reversal is deliberate: on entering you ask for mercy (the primary need in worship), on leaving you ask for provision (the primary need in worldly action).`, ...E },
+  leave_source: { en: `Source: Muslim 713.`, ...E },
+  salat_h: { en: `Salat Upon the Prophet ﷺ on Entering and Leaving`, ...E },
+  salat_p: { en: `Fatimah bint Muhammad ﷺ narrated: "When the Messenger of Allah ﷺ entered the masjid, he would say 'Bismillah wa-s salatu wa-s salamu 'ala rasul-illah, Allahumma-ghfir li dhunubi wa-ftah li abwaba rahmatik.' And when he left he would say the same, replacing 'abwaba rahmatik' with 'abwaba fadlik.'"`, ...E },
+  salat_translit: { en: `Allahumma salli 'ala Muhammadin wa 'ala ali Muhammad.`, ...E },
+  salat_source: { en: `Source: al-Tirmidhi 314, Ibn Majah 771; Sahih al-Albani.`, ...E },
+  beh_h: { en: `Behaviour Inside the Masjid`, ...E },
+  beh_1: { en: `No commerce. The Prophet ﷺ said: "If you see anyone buying or selling in the masjid, say: 'May Allah not grant profit to your trade.'" (al-Tirmidhi 1321).`, ...E },
+  beh_2: { en: `No announcing lost items. He ﷺ said: "If any of you hears someone in the masjid announcing a lost item, let him say: 'May Allah not return it to you,' for the masjids were not built for this." (Muslim 568).`, ...E },
+  beh_3: { en: `Silence, especially during recitation and the khutbah. The Prophet ﷺ said if you tell your companion during the Jumu'ah khutbah "be quiet," you have committed a wrong (al-Bukhari 934).`, ...E },
+  beh_4: { en: `No walking in front of one who is praying. Move behind them or wait; if unavoidable, the person praying should push gently against you (al-Bukhari 510).`, ...E },
+  beh_5: { en: `No strong smells. He ﷺ said: "Whoever has eaten garlic or onion, let him keep away from us, and from our masjid." Modern equivalents include strong smoke or heavy perfumes that carry (al-Bukhari 855, Muslim 564).`, ...E },
+  beh_6: { en: `Perfume for men is encouraged on Jumu'ah and in general; heavy perfume for women in mixed spaces is discouraged as it can attract attention.`, ...E },
+  beh_7: { en: `Children may attend. The Prophet ﷺ sometimes shortened his prayer because he heard a baby cry, out of consideration for the mother (al-Bukhari 707). Bringing children is a virtue, not a burden, when they are supervised.`, ...E },
+  beh_8: { en: `Cleanliness. He ﷺ said: "Spitting in the masjid is a sin, and its expiation is to bury it." (al-Bukhari 415). Extended today: no litter, no crumbs, mats and shoes cared for.`, ...E },
+  retreat_h: { en: `The Masjid as a Place of Retreat`, ...E },
+  retreat_p1: { en: `Beyond the five daily prayers, the masjid was, in the Prophet's ﷺ Madinah, the school, the parliament, the treasury, the courthouse, and the shelter of the destitute. He ﷺ himself performed i'tikaf in it every last ten nights of Ramadan.`, ...E },
+  retreat_p2: { en: `The Prophet ﷺ said: "The seven whom Allah will shade under His shade on a day when there is no shade but His" include "a man whose heart is attached to the masjid." (al-Bukhari 660, Muslim 1031).`, ...E },
+  retreat_p3: { en: `The full etiquette of the masjid, then, is not simply a checklist of what to do at the door. It is the disposition of one whose heart returns to the House of Allah between the prayers, whose peace lives there, and whose worldly business, worldly speech, worldly appearance, all quiet down when the sandals come off at the threshold.`, ...E },
+  label_transliteration: { en: `Transliteration`, ...E },
+  label_meaning: { en: `Meaning`, ...E },
+} as const satisfies Record<string, LangMap>;
+
+export type MasjidContentKey = keyof typeof MASJID_CONTENT;
