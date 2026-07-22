@@ -2,6 +2,9 @@ import { QURAN_112 } from './quran-112';
 import { QURAN_113 } from './quran-113';
 import { QURAN_114 } from './quran-114';
 import { QURAN_BATCH_1 } from './quran-batch1';
+import { applyFill } from './quran-batch1-fill';
+
+const QURAN_BATCH_1_FILLED = applyFill(QURAN_BATCH_1);
 
 type LangMap = { en: string; ms: string; tur: string; urd: string; ben: string; fas: string; zh: string; yue: string; ja: string; ru: string; es: string; ko: string; ta: string; si: string };
 
@@ -385,7 +388,7 @@ export interface SurahI18n {
 const EMPTY: LangMap = { en: ``, ms: ``, tur: ``, urd: ``, ben: ``, fas: ``, zh: ``, yue: ``, ja: ``, ru: ``, es: ``, ko: ``, ta: ``, si: `` };
 
 export const SURAH_CONTENT: Record<number, SurahI18n> = {
-  ...QURAN_BATCH_1,
+  ...QURAN_BATCH_1_FILLED,
   ...QURAN_112,
   ...QURAN_113,
   ...QURAN_114,
