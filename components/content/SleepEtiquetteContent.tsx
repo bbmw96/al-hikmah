@@ -3,6 +3,8 @@
 import { PageHeader } from '@/components/ui/PageHeader';
 import { ArabicText } from '@/components/ui/ArabicText';
 import { useLanguage } from '@/lib/i18n/context';
+import { SLEEP_CONTENT } from '@/lib/i18n/content/sleep-etiquette-content';
+import type { SleepContentKey } from '@/lib/i18n/content/sleep-etiquette-content';
 
 const TITLE: Record<string, string> = {
   en: `Adab al-Nawm, The Etiquettes of Sleep`,
@@ -39,20 +41,18 @@ const SUBTITLE: Record<string, string> = {
 };
 
 const PRE_SLEEP_DUA_AR = 'بِاسْمِكَ اللَّهُمَّ أَمُوتُ وَأَحْيَا.';
-const PRE_SLEEP_DUA_TR = "Bismika Allahumma amutu wa ahya.";
-const PRE_SLEEP_DUA_EN = 'In Your name, O Allah, I die and I live.';
-
 const WAKE_DUA_AR = 'الْحَمْدُ لِلَّهِ الَّذِي أَحْيَانَا بَعْدَ مَا أَمَاتَنَا وَإِلَيْهِ النُّشُورُ.';
-const WAKE_DUA_TR = "Alhamdulillahi-l ladhi ahyana ba'da ma amatana wa ilayhi-n nushur.";
-const WAKE_DUA_EN = 'All praise is due to Allah who has given us life after having caused us to die, and to Him is the return.';
-
 const BAD_DREAM_DUA_AR = 'أَعُوذُ بِاللَّهِ مِنَ الشَّيْطَانِ الرَّجِيمِ.';
-const BAD_DREAM_DUA_TR = "A'udhu billahi mina-sh shaytani-r rajim.";
-
 const AYATUL_KURSI_TAG_AR = 'اللَّهُ لَا إِلَٰهَ إِلَّا هُوَ الْحَيُّ الْقَيُّومُ... (البقرة 255)';
 
 export function SleepEtiquetteContent() {
   const { lang } = useLanguage();
+  const tc = (key: SleepContentKey): string => {
+    const entry = SLEEP_CONTENT[key] as Record<string, string | undefined> | undefined;
+    if (!entry) return key;
+    return entry[lang] ?? entry.en ?? key;
+  };
+
   return (
     <>
       <PageHeader
@@ -62,160 +62,104 @@ export function SleepEtiquetteContent() {
       />
 
       <div className="max-w-3xl mx-auto px-6 py-16 space-y-12">
-        {/* Wudu before sleep */}
         <section>
-          <h2 className="section-title font-garamond text-2xl md:text-3xl font-semibold text-forest mb-4">
-            Wudu Before Sleep
-          </h2>
+          <h2 className="section-title font-garamond text-2xl md:text-3xl font-semibold text-forest mb-4">{tc('wudu_h')}</h2>
           <article className="card-islamic space-y-3">
-            <p className="text-forest/75 text-sm leading-relaxed">
-              The Prophet ﷺ said: <em>“When you go to your bed, perform wudu as you would for the prayer, then lie down on your right side.”</em>
-            </p>
-            <p className="text-forest/70 text-sm leading-relaxed">
-              Sleeping in a state of ritual purity is a Sunnah mu’akkadah. The scholars mention that the soul in sleep is presented before Allah, and being purified is a mark of honour for that state. If you cannot make wudu (illness, injury), tayamum suffices; if neither is possible, sleep in whatever state you are in, with no sin.
-            </p>
-            <p className="text-xs text-gold/60 italic">Source: al-Bukhari 247, Muslim 2710 (al-Bara ibn Azib).</p>
+            <p className="text-forest/75 text-sm leading-relaxed">{tc('wudu_p1')}</p>
+            <p className="text-forest/70 text-sm leading-relaxed">{tc('wudu_p2')}</p>
+            <p className="text-xs text-gold/60 italic">{tc('wudu_source')}</p>
           </article>
         </section>
 
-        {/* Right side */}
         <section>
-          <h2 className="section-title font-garamond text-2xl md:text-3xl font-semibold text-forest mb-4">
-            The Sunnah Posture: Right Side
-          </h2>
+          <h2 className="section-title font-garamond text-2xl md:text-3xl font-semibold text-forest mb-4">{tc('right_h')}</h2>
           <article className="card-islamic space-y-3">
-            <p className="text-forest/75 text-sm leading-relaxed">
-              The Sunnah is to lie on the <strong>right</strong> side, placing the right hand under the right cheek. Sleeping on the back is permitted (and mentioned in some ahadith) but the initial posture on going to bed is the right side.
-            </p>
-            <p className="text-forest/70 text-sm leading-relaxed">
-              Hudhayfah (ra) said: <em>“When the Prophet ﷺ went to his bed at night he would place his hand under his cheek and say ‘Bismika Allahumma amutu wa ahya’ …”</em>
-            </p>
-            <p className="text-forest/70 text-sm leading-relaxed">
-              Sleeping face-down is explicitly discouraged. Abu Umama narrates the Prophet ﷺ passing a man lying on his stomach and saying: <em>“This is a posture Allah does not love.”</em>
-            </p>
-            <p className="text-xs text-gold/60 italic">Sources: al-Bukhari 6314 (Hudhayfah), Abu Dawud 5040 and Ibn Majah 3723 for the face-down prohibition.</p>
+            <p className="text-forest/75 text-sm leading-relaxed">{tc('right_p1')}</p>
+            <p className="text-forest/70 text-sm leading-relaxed">{tc('right_p2')}</p>
+            <p className="text-forest/70 text-sm leading-relaxed">{tc('right_p3')}</p>
+            <p className="text-xs text-gold/60 italic">{tc('right_source')}</p>
           </article>
         </section>
 
-        {/* Pre-sleep dua */}
         <section>
-          <h2 className="section-title font-garamond text-2xl md:text-3xl font-semibold text-forest mb-4">
-            The Du'a Before Sleeping
-          </h2>
+          <h2 className="section-title font-garamond text-2xl md:text-3xl font-semibold text-forest mb-4">{tc('pre_h')}</h2>
           <article className="card-islamic space-y-4">
             <ArabicText text={PRE_SLEEP_DUA_AR} size="lg" />
             <div className="border-t border-gold/10 pt-3">
-              <p className="text-xs text-gold/70 font-medium uppercase tracking-wider mb-1">Transliteration</p>
-              <p className="text-forest/60 italic text-sm leading-relaxed">{PRE_SLEEP_DUA_TR}</p>
-              <p className="text-xs text-gold/70 font-medium uppercase tracking-wider mt-3 mb-1">Meaning</p>
-              <p className="text-forest/75 text-sm leading-relaxed">{PRE_SLEEP_DUA_EN}</p>
+              <p className="text-xs text-gold/70 font-medium uppercase tracking-wider mb-1">{tc('label_transliteration')}</p>
+              <p className="text-forest/60 italic text-sm leading-relaxed">{tc('pre_translit')}</p>
+              <p className="text-xs text-gold/70 font-medium uppercase tracking-wider mt-3 mb-1">{tc('label_meaning')}</p>
+              <p className="text-forest/75 text-sm leading-relaxed">{tc('pre_meaning')}</p>
             </div>
-            <p className="text-forest/70 text-sm leading-relaxed">
-              A concise du’a placing life and death, waking and sleep, entirely in Allah’s hand. The Prophet ﷺ used it every night.
-            </p>
-            <p className="text-xs text-gold/60 italic">Source: al-Bukhari 6314, 6324 (Hudhayfah); Bukhari 6312 has the waking counterpart.</p>
+            <p className="text-forest/70 text-sm leading-relaxed">{tc('pre_p')}</p>
+            <p className="text-xs text-gold/60 italic">{tc('pre_source')}</p>
           </article>
         </section>
 
-        {/* Recitations */}
         <section>
-          <h2 className="section-title font-garamond text-2xl md:text-3xl font-semibold text-forest mb-4">
-            The Prophetic Recitations at Bedtime
-          </h2>
+          <h2 className="section-title font-garamond text-2xl md:text-3xl font-semibold text-forest mb-4">{tc('recite_h')}</h2>
           <article className="card-islamic space-y-4">
             <div>
-              <p className="text-xs text-gold/70 font-medium uppercase tracking-wider mb-1">1. Ayat al-Kursi</p>
+              <p className="text-xs text-gold/70 font-medium uppercase tracking-wider mb-1">{tc('recite_1_label')}</p>
               <ArabicText text={AYATUL_KURSI_TAG_AR} size="sm" />
-              <p className="text-forest/70 text-sm leading-relaxed mt-2">
-                Whoever recites Ayat al-Kursi at night has an appointed guardian from Allah, and no shaytan comes near them until morning.
-              </p>
-              <p className="text-xs text-gold/60 italic">Source: al-Bukhari 5010 (Abu Hurayra).</p>
+              <p className="text-forest/70 text-sm leading-relaxed mt-2">{tc('recite_1_body')}</p>
+              <p className="text-xs text-gold/60 italic">{tc('recite_1_source')}</p>
             </div>
-
             <div className="border-t border-gold/10 pt-3">
-              <p className="text-xs text-gold/70 font-medium uppercase tracking-wider mb-1">2. The Last Two Verses of al-Baqarah</p>
-              <p className="text-forest/70 text-sm leading-relaxed">
-                The Prophet ﷺ said: <em>“Whoever recites the two verses at the end of Surat al-Baqarah at night, they will suffice him.”</em>
-              </p>
-              <p className="text-xs text-gold/60 italic">Source: al-Bukhari 4008, Muslim 807 (Abu Mas’ud).</p>
+              <p className="text-xs text-gold/70 font-medium uppercase tracking-wider mb-1">{tc('recite_2_label')}</p>
+              <p className="text-forest/70 text-sm leading-relaxed">{tc('recite_2_body')}</p>
+              <p className="text-xs text-gold/60 italic">{tc('recite_2_source')}</p>
             </div>
-
             <div className="border-t border-gold/10 pt-3">
-              <p className="text-xs text-gold/70 font-medium uppercase tracking-wider mb-1">3. al-Ikhlas + al-Falaq + al-Nas, three times each, blowing into the palms</p>
-              <p className="text-forest/70 text-sm leading-relaxed">
-                ‘Aisha (ra) reported that every night before sleep the Prophet ﷺ would join his palms, blow into them, and recite Qul huwa Allahu Ahad, Qul a’udhu bi rabbi-l falaq, and Qul a’udhu bi rabbi-n nas, then wipe them over as much of his body as he could reach, beginning with the head, face, and front of his body. He did this three times.
-              </p>
-              <p className="text-xs text-gold/60 italic">Source: al-Bukhari 5017 (‘Aisha).</p>
+              <p className="text-xs text-gold/70 font-medium uppercase tracking-wider mb-1">{tc('recite_3_label')}</p>
+              <p className="text-forest/70 text-sm leading-relaxed">{tc('recite_3_body')}</p>
+              <p className="text-xs text-gold/60 italic">{tc('recite_3_source')}</p>
             </div>
-
             <div className="border-t border-gold/10 pt-3">
-              <p className="text-xs text-gold/70 font-medium uppercase tracking-wider mb-1">4. Dust off the bed three times</p>
-              <p className="text-forest/70 text-sm leading-relaxed">
-                Abu Hurayra (ra) reported: <em>“When any of you goes to his bed, let him take a corner of his lower garment and dust off his bed with it three times, and let him say ‘Bismillah’, for he does not know what has come onto it after him.”</em>
-              </p>
-              <p className="text-xs text-gold/60 italic">Source: al-Bukhari 6320, Muslim 2714.</p>
+              <p className="text-xs text-gold/70 font-medium uppercase tracking-wider mb-1">{tc('recite_4_label')}</p>
+              <p className="text-forest/70 text-sm leading-relaxed">{tc('recite_4_body')}</p>
+              <p className="text-xs text-gold/60 italic">{tc('recite_4_source')}</p>
             </div>
           </article>
         </section>
 
-        {/* Bad dream */}
         <section>
-          <h2 className="section-title font-garamond text-2xl md:text-3xl font-semibold text-forest mb-4">
-            On Waking From a Bad Dream
-          </h2>
+          <h2 className="section-title font-garamond text-2xl md:text-3xl font-semibold text-forest mb-4">{tc('bad_h')}</h2>
           <article className="card-islamic space-y-4">
-            <p className="text-forest/75 text-sm leading-relaxed">
-              The Prophet ﷺ said: <em>“A good dream is from Allah, and a bad dream is from the shaytan. If any of you sees what he dislikes, let him spit lightly to his left three times when he wakes up, seek refuge in Allah from its evil, and not mention it to anyone. It will not harm him.”</em>
-            </p>
+            <p className="text-forest/75 text-sm leading-relaxed">{tc('bad_p1')}</p>
             <ArabicText text={BAD_DREAM_DUA_AR} size="md" />
             <div className="border-t border-gold/10 pt-3">
-              <p className="text-xs text-gold/70 font-medium uppercase tracking-wider mb-1">Transliteration</p>
-              <p className="text-forest/60 italic text-sm leading-relaxed">{BAD_DREAM_DUA_TR}</p>
-              <p className="text-xs text-gold/70 font-medium uppercase tracking-wider mt-3 mb-1">Meaning</p>
-              <p className="text-forest/75 text-sm leading-relaxed">I seek refuge with Allah from the accursed shaytan.</p>
+              <p className="text-xs text-gold/70 font-medium uppercase tracking-wider mb-1">{tc('label_transliteration')}</p>
+              <p className="text-forest/60 italic text-sm leading-relaxed">{tc('bad_translit')}</p>
+              <p className="text-xs text-gold/70 font-medium uppercase tracking-wider mt-3 mb-1">{tc('label_meaning')}</p>
+              <p className="text-forest/75 text-sm leading-relaxed">{tc('bad_meaning')}</p>
             </div>
-            <p className="text-forest/70 text-sm leading-relaxed">
-              He should also turn onto his other side, and if he wishes, pray two rakat. He should not mention or interpret the dream, for the shaytan hopes it will trouble him. A good dream, by contrast, may be shared only with those who love him.
-            </p>
-            <p className="text-xs text-gold/60 italic">Source: al-Bukhari 3292, Muslim 2261 (Abu Salama, Abu Qatada, Jabir).</p>
+            <p className="text-forest/70 text-sm leading-relaxed">{tc('bad_p2')}</p>
+            <p className="text-xs text-gold/60 italic">{tc('bad_source')}</p>
           </article>
         </section>
 
-        {/* Wake dua */}
         <section>
-          <h2 className="section-title font-garamond text-2xl md:text-3xl font-semibold text-forest mb-4">
-            The Du'a on Waking
-          </h2>
+          <h2 className="section-title font-garamond text-2xl md:text-3xl font-semibold text-forest mb-4">{tc('wake_h')}</h2>
           <article className="card-islamic space-y-4">
             <ArabicText text={WAKE_DUA_AR} size="lg" />
             <div className="border-t border-gold/10 pt-3">
-              <p className="text-xs text-gold/70 font-medium uppercase tracking-wider mb-1">Transliteration</p>
-              <p className="text-forest/60 italic text-sm leading-relaxed">{WAKE_DUA_TR}</p>
-              <p className="text-xs text-gold/70 font-medium uppercase tracking-wider mt-3 mb-1">Meaning</p>
-              <p className="text-forest/75 text-sm leading-relaxed">{WAKE_DUA_EN}</p>
+              <p className="text-xs text-gold/70 font-medium uppercase tracking-wider mb-1">{tc('label_transliteration')}</p>
+              <p className="text-forest/60 italic text-sm leading-relaxed">{tc('wake_translit')}</p>
+              <p className="text-xs text-gold/70 font-medium uppercase tracking-wider mt-3 mb-1">{tc('label_meaning')}</p>
+              <p className="text-forest/75 text-sm leading-relaxed">{tc('wake_meaning')}</p>
             </div>
-            <p className="text-forest/70 text-sm leading-relaxed">
-              The Prophet ﷺ said this every morning, treating the daily cycle of sleep and waking as a rehearsal for the greater sleep and greater rising. Waking with hamd on the tongue turns an ordinary reflex into an act of worship.
-            </p>
-            <p className="text-xs text-gold/60 italic">Source: al-Bukhari 6312 (Hudhayfah).</p>
+            <p className="text-forest/70 text-sm leading-relaxed">{tc('wake_p')}</p>
+            <p className="text-xs text-gold/60 italic">{tc('wake_source')}</p>
           </article>
         </section>
 
-        {/* Wisdom */}
         <section>
-          <h2 className="section-title font-garamond text-2xl md:text-3xl font-semibold text-forest mb-4">
-            The Wisdom Behind the Sleep Sunnah
-          </h2>
+          <h2 className="section-title font-garamond text-2xl md:text-3xl font-semibold text-forest mb-4">{tc('wisdom_h')}</h2>
           <article className="card-forest rounded-2xl p-6 space-y-3">
-            <p className="text-cream/85 text-sm leading-relaxed">
-              The Qur’an calls sleep a <em>lesser death</em>: <em>“Allah takes the souls at the moment of their death, and those that have not died in their sleep. He keeps those upon which He has decreed death, and sends the rest back until an appointed term”</em> (al-Zumar 39:42).
-            </p>
-            <p className="text-cream/85 text-sm leading-relaxed">
-              The Prophet’s ﷺ etiquette for going to bed is thus not superstition but preparation: purify the body (wudu), fortify the soul with Qur’an (Ayat al-Kursi, the two ‘seeking-refuge’ surahs, the last verses of al-Baqarah), place life and death consciously in Allah’s hand (Bismika Allahumma…). If the soul is returned, one wakes to praise (Alhamdulillah alladhi ahyana…). If it is kept, one has died in the best state a servant can die in, purified, mentioning Allah, on the right side, facing the qiblah.
-            </p>
-            <p className="text-cream/85 text-sm leading-relaxed">
-              This is why the classical scholars called the bedtime Sunnah <em>“the equipment of the traveller,”</em> because every night is a rehearsal for the journey none of us can miss.
-            </p>
+            <p className="text-cream/85 text-sm leading-relaxed">{tc('wisdom_p1')}</p>
+            <p className="text-cream/85 text-sm leading-relaxed">{tc('wisdom_p2')}</p>
+            <p className="text-cream/85 text-sm leading-relaxed">{tc('wisdom_p3')}</p>
           </article>
         </section>
       </div>
