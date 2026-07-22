@@ -2,12 +2,15 @@
 
 import { FadeIn } from '@/components/ui/FadeIn';
 import { useLanguage } from '@/lib/i18n/context';
+import { DUAS } from '@/lib/data/duas';
+
+const DUA_COUNT = `${Math.floor(DUAS.length / 10) * 10}+`;
 
 const HIGHLIGHTS = [
   { count: '14', labelKey: 'stats.languages' as const },
   { count: '114', labelKey: 'stats.surahs' as const },
   { count: '25', labelKey: 'stats.prophets' as const },
-  { count: '270+', labelKey: 'stats.duas' as const },
+  { count: DUA_COUNT, labelKey: 'stats.duas' as const },
   { count: '6', labelKey: 'stats.hadith' as const },
   { count: '30+', labelKey: 'stats.companions' as const },
 ] as const;
