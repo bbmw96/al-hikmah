@@ -2,6 +2,8 @@
 
 import { PageHeader } from '@/components/ui/PageHeader';
 import { useLanguage } from '@/lib/i18n/context';
+import { AHKAM_CONTENT } from '@/lib/i18n/content/ahkam-content';
+import type { AhkamContentKey } from '@/lib/i18n/content/ahkam-content';
 
 const TITLE: Record<string, string> = {
   en: `The Five Ahkam, Halal, Haram, Makruh, Wajib, Mustahabb, Mubah`,
@@ -45,25 +47,17 @@ interface HukmProps {
   reward: string;
   penalty: string;
   examples: string[];
-  toneAccent: string;
+  labelDoing: string;
+  labelLeaving: string;
+  labelExamples: string;
 }
 
-function HukmCard({
-  arabic,
-  translit,
-  english,
-  definition,
-  reward,
-  penalty,
-  examples,
-}: HukmProps) {
+function HukmCard({ arabic, translit, english, definition, reward, penalty, examples, labelDoing, labelLeaving, labelExamples }: HukmProps) {
   return (
     <article className="card-islamic space-y-4">
       <div className="flex items-baseline justify-between gap-3 flex-wrap">
         <div>
-          <p dir="rtl" lang="ar" className="arabic text-3xl text-gold leading-loose">
-            {arabic}
-          </p>
+          <p dir="rtl" lang="ar" className="arabic text-3xl text-gold leading-loose">{arabic}</p>
           <p className="text-forest/60 italic text-sm mt-1">{translit}</p>
         </div>
         <h3 className="font-garamond text-2xl font-semibold text-forest">{english}</h3>
@@ -71,16 +65,16 @@ function HukmCard({
       <p className="text-forest/75 text-sm leading-relaxed">{definition}</p>
       <div className="grid sm:grid-cols-2 gap-3">
         <div className="bg-forest/5 rounded-xl p-3">
-          <p className="text-xs text-gold/70 font-medium uppercase tracking-wider mb-1">Doing it</p>
+          <p className="text-xs text-gold/70 font-medium uppercase tracking-wider mb-1">{labelDoing}</p>
           <p className="text-forest/75 text-sm leading-relaxed">{reward}</p>
         </div>
         <div className="bg-forest/5 rounded-xl p-3">
-          <p className="text-xs text-gold/70 font-medium uppercase tracking-wider mb-1">Leaving it</p>
+          <p className="text-xs text-gold/70 font-medium uppercase tracking-wider mb-1">{labelLeaving}</p>
           <p className="text-forest/75 text-sm leading-relaxed">{penalty}</p>
         </div>
       </div>
       <div className="border-t border-gold/10 pt-3">
-        <p className="text-xs text-gold/70 font-medium uppercase tracking-wider mb-1">Examples</p>
+        <p className="text-xs text-gold/70 font-medium uppercase tracking-wider mb-1">{labelExamples}</p>
         <ul className="text-forest/70 text-sm space-y-1 list-disc list-inside">
           {examples.map((ex, i) => <li key={i}>{ex}</li>)}
         </ul>
@@ -91,6 +85,16 @@ function HukmCard({
 
 export function AhkamContent() {
   const { lang } = useLanguage();
+  const tc = (key: AhkamContentKey): string => {
+    const entry = AHKAM_CONTENT[key] as Record<string, string | undefined> | undefined;
+    if (!entry) return key;
+    return entry[lang] ?? entry.en ?? key;
+  };
+
+  const labelDoing = tc('label_doing');
+  const labelLeaving = tc('label_leaving');
+  const labelExamples = tc('label_examples');
+
   return (
     <>
       <PageHeader
@@ -100,141 +104,96 @@ export function AhkamContent() {
       />
 
       <div className="max-w-3xl mx-auto px-6 py-16 space-y-12">
-        {/* Introduction */}
         <section>
-          <h2 className="section-title font-garamond text-2xl md:text-3xl font-semibold text-forest mb-4">
-            The Framework
-          </h2>
+          <h2 className="section-title font-garamond text-2xl md:text-3xl font-semibold text-forest mb-4">{tc('frame_h')}</h2>
           <article className="card-islamic space-y-3">
-            <p className="text-forest/75 text-sm leading-relaxed">
-              Classical Islamic scholarship classifies every human action into one of five categories, called <em>al-ahkam al-khamsa</em>, the five rulings. Every action, from praying to eating a date to opening a business, sits in one of them. The five are: <strong>Fard</strong> or <strong>Wajib</strong> (obligatory), <strong>Mustahabb</strong> or <strong>Sunnah</strong> (recommended), <strong>Mubah</strong> (permitted), <strong>Makruh</strong> (disliked), and <strong>Haram</strong> (forbidden).
-            </p>
-            <p className="text-forest/75 text-sm leading-relaxed">
-              The rulings are derived from four classical sources (<em>usul al-fiqh</em>): the Qur’an, the Sunnah, the consensus of the scholars (<em>ijma’</em>), and analogical reasoning (<em>qiyas</em>). Understanding this framework is the entry-point to fiqh, and to understanding how Islamic law describes rather than legislates every corner of a Muslim’s day.
-            </p>
+            <p className="text-forest/75 text-sm leading-relaxed">{tc('frame_p1')}</p>
+            <p className="text-forest/75 text-sm leading-relaxed">{tc('frame_p2')}</p>
           </article>
         </section>
 
         <HukmCard
           arabic="فَرْض / وَاجِب"
-          translit="Fard / Wajib"
-          english="Obligatory"
-          definition="A command from Allah or His Messenger ﷺ, established by definitive proof (Qur'an, mutawatir Sunnah, or ijma'). The Hanafi school distinguishes fard (definitive proof) from wajib (strong but non-definitive proof); the other three schools treat them as synonyms."
-          reward="Reward, and the act itself is part of faith. Rejecting a fard entirely puts a person outside Islam."
-          penalty="Sin, punishable in the next life. Omitting a fard without valid excuse is a major sin."
-          examples={[
-            'The five daily prayers.',
-            'Fasting the month of Ramadan.',
-            "Zakat when its conditions are met.",
-            'Hajj once in a lifetime for those who can afford it.',
-            'Believing in Allah, His angels, books, messengers, the Day of Judgement, and destiny.',
-          ]}
-          toneAccent=""
+          translit={tc('fard_translit')}
+          english={tc('fard_english')}
+          definition={tc('fard_def')}
+          reward={tc('fard_reward')}
+          penalty={tc('fard_penalty')}
+          examples={[tc('fard_ex_1'), tc('fard_ex_2'), tc('fard_ex_3'), tc('fard_ex_4'), tc('fard_ex_5')]}
+          labelDoing={labelDoing}
+          labelLeaving={labelLeaving}
+          labelExamples={labelExamples}
         />
 
         <HukmCard
           arabic="مُسْتَحَبّ / مَنْدُوب / سُنَّة"
-          translit="Mustahabb / Mandub / Sunnah"
-          english="Recommended"
-          definition="An act the Prophet ﷺ did or encouraged that is not obligatory. Subcategories: sunnah mu'akkadah (strongly emphasised, such as the rawatib prayers), and sunnah ghayr mu'akkadah (encouraged but less emphasised, such as fasting on Mondays and Thursdays)."
-          reward="Reward, love from Allah, closeness through the nawafil."
-          penalty="No sin for leaving it, but a lost opportunity for reward and closeness."
-          examples={[
-            'The 12 rakat of rawatib around the five daily prayers.',
-            'Fasting on Mondays and Thursdays, or the three white days each month.',
-            'Using siwak before wudu and prayer.',
-            'Greeting with as-salamu alaykum first.',
-            'Visiting the sick, attending funerals.',
-          ]}
-          toneAccent=""
+          translit={tc('must_translit')}
+          english={tc('must_english')}
+          definition={tc('must_def')}
+          reward={tc('must_reward')}
+          penalty={tc('must_penalty')}
+          examples={[tc('must_ex_1'), tc('must_ex_2'), tc('must_ex_3'), tc('must_ex_4'), tc('must_ex_5')]}
+          labelDoing={labelDoing}
+          labelLeaving={labelLeaving}
+          labelExamples={labelExamples}
         />
 
         <HukmCard
           arabic="مُبَاح / حَلَال"
-          translit="Mubah / Halal"
-          english="Permitted, Neutral"
-          definition="An act on which the Shari'ah is silent, or has been made explicitly permissible without preference. Neither rewarded for doing nor for leaving in itself, though intention can transform it (eating with the intention of strength for worship becomes rewarded)."
-          reward="No inherent reward, but blessed if made a means to a good end."
-          penalty="No sin for doing or for leaving."
-          examples={[
-            'Choosing what colour clothes to wear (within the permitted range).',
-            'Choosing what type of halal food to eat.',
-            'The kind of work or trade one pursues, so long as it is lawful.',
-            'Sleeping in a particular room, sitting in a particular chair.',
-          ]}
-          toneAccent=""
+          translit={tc('mubah_translit')}
+          english={tc('mubah_english')}
+          definition={tc('mubah_def')}
+          reward={tc('mubah_reward')}
+          penalty={tc('mubah_penalty')}
+          examples={[tc('mubah_ex_1'), tc('mubah_ex_2'), tc('mubah_ex_3'), tc('mubah_ex_4')]}
+          labelDoing={labelDoing}
+          labelLeaving={labelLeaving}
+          labelExamples={labelExamples}
         />
 
         <HukmCard
           arabic="مَكْرُوه"
-          translit="Makruh"
-          english="Disliked"
-          definition="Something Allah or His Messenger ﷺ disliked without prohibiting definitively. Subcategories in the Hanafi school: makruh tanzihi (mild dislike, closer to permitted) and makruh tahrimi (strong dislike, closer to forbidden, whose deliberate performance is sinful)."
-          reward="Reward for leaving it out of taqwa."
-          penalty="No sin for a single occurrence, but persistent makruh acts weaken faith and can lead to haram."
-          examples={[
-            'Speaking during actual acts of worship without need.',
-            'Facing the qiblah while relieving oneself in an open place.',
-            'Eating with the left hand out of habit.',
-            'Sleeping face-down.',
-            'Wasting water even for wudu.',
-          ]}
-          toneAccent=""
+          translit={tc('mak_translit')}
+          english={tc('mak_english')}
+          definition={tc('mak_def')}
+          reward={tc('mak_reward')}
+          penalty={tc('mak_penalty')}
+          examples={[tc('mak_ex_1'), tc('mak_ex_2'), tc('mak_ex_3'), tc('mak_ex_4'), tc('mak_ex_5')]}
+          labelDoing={labelDoing}
+          labelLeaving={labelLeaving}
+          labelExamples={labelExamples}
         />
 
         <HukmCard
           arabic="حَرَام"
-          translit="Haram"
-          english="Forbidden"
-          definition="A prohibition established by definitive proof from Qur'an or Sunnah or ijma'. Doing it is sinful. Denying a well-known haram (like the prohibition of wine, adultery, or interest) puts a person outside Islam."
-          reward="Reward for leaving it, especially when tempted."
-          penalty="Sin, punishable in the next life. Major haram acts (kabair) can be graver than others."
-          examples={[
-            'Shirk (associating partners with Allah), the only sin never forgiven if died upon.',
-            'Killing an innocent soul, adultery, false witness, disobedience to parents.',
-            'Consuming intoxicants, pork, blood, unlawful meat.',
-            'Ribā (interest) in transactions.',
-            'Backbiting, lying, breaking trusts.',
-            'Wearing silk and gold for men, imitating the opposite gender in dress.',
-          ]}
-          toneAccent=""
+          translit={tc('haram_translit')}
+          english={tc('haram_english')}
+          definition={tc('haram_def')}
+          reward={tc('haram_reward')}
+          penalty={tc('haram_penalty')}
+          examples={[tc('haram_ex_1'), tc('haram_ex_2'), tc('haram_ex_3'), tc('haram_ex_4'), tc('haram_ex_5'), tc('haram_ex_6')]}
+          labelDoing={labelDoing}
+          labelLeaving={labelLeaving}
+          labelExamples={labelExamples}
         />
 
-        {/* Subcategories */}
         <section>
-          <h2 className="section-title font-garamond text-2xl md:text-3xl font-semibold text-forest mb-4">
-            Fard ‘Ayn versus Fard Kifayah
-          </h2>
+          <h2 className="section-title font-garamond text-2xl md:text-3xl font-semibold text-forest mb-4">{tc('sub_h')}</h2>
           <article className="card-islamic space-y-3">
-            <p className="text-forest/75 text-sm leading-relaxed">
-              A fard is further divided into two:
-            </p>
+            <p className="text-forest/75 text-sm leading-relaxed">{tc('sub_intro')}</p>
             <ul className="text-forest/75 text-sm space-y-2 list-disc list-inside">
-              <li>
-                <strong>Fard ‘ayn</strong>, obligatory on every individual. Missing it is a personal sin. Example: the five daily prayers, fasting Ramadan.
-              </li>
-              <li>
-                <strong>Fard kifayah</strong>, a communal obligation. If enough Muslims fulfil it, the rest are absolved; if none do, the entire community is sinful. Example: the janazah prayer over a Muslim who has died, learning the sciences the umma needs (medicine, engineering, Islamic scholarship), calling to Islam, defending Muslim lands.
-              </li>
+              <li>{tc('sub_1')}</li>
+              <li>{tc('sub_2')}</li>
             </ul>
           </article>
         </section>
 
-        {/* Wisdom */}
         <section>
-          <h2 className="section-title font-garamond text-2xl md:text-3xl font-semibold text-forest mb-4">
-            Why This Framework Matters
-          </h2>
+          <h2 className="section-title font-garamond text-2xl md:text-3xl font-semibold text-forest mb-4">{tc('wisdom_h')}</h2>
           <article className="card-forest rounded-2xl p-6 space-y-3">
-            <p className="text-cream/85 text-sm leading-relaxed">
-              Islam does not divide life into <em>“religious”</em> and <em>“secular.”</em> Every moment of a Muslim’s day falls under one of the five rulings. This is not a burden; it is a mercy. It tells the servant: your entire life can be worship, or your entire life can be heedlessness, and Allah has told you the difference.
-            </p>
-            <p className="text-cream/85 text-sm leading-relaxed">
-              Ibn Taymiyyah wrote: <em>“The whole of the religion returns to two things: doing what Allah loves, and leaving what Allah hates. The five ahkam simply arrange these two into degrees so that a person always knows where he is.”</em>
-            </p>
-            <p className="text-cream/80 text-sm leading-relaxed">
-              For the beginner: keep the fard, guard against the haram, and let the mustahabb be the training ground of the heart. The mubah is your rest. The makruh is a warning bell. That is Islam, arranged for the whole life.
-            </p>
+            <p className="text-cream/85 text-sm leading-relaxed">{tc('wisdom_p1')}</p>
+            <p className="text-cream/85 text-sm leading-relaxed">{tc('wisdom_p2')}</p>
+            <p className="text-cream/80 text-sm leading-relaxed">{tc('wisdom_p3')}</p>
           </article>
         </section>
       </div>
