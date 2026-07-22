@@ -3,16 +3,8 @@
 import { PageHeader } from '@/components/ui/PageHeader';
 import { ArabicText } from '@/components/ui/ArabicText';
 import { useLanguage } from '@/lib/i18n/context';
-
-const SILK_GOLD_HADITH_AR =
-  'هَذَانِ حَرَامٌ عَلَى ذُكُورِ أُمَّتِي، حِلٌّ لِإِنَاثِهَا.';
-const SILK_GOLD_HADITH_TR = 'Hadhani haramun ‘ala dhukuri ummati, hillun li inathiha.';
-const SILK_GOLD_HADITH_EN = 'These two are forbidden for the males of my nation, permitted for its females.';
-
-const IMITATION_HADITH_AR =
-  'لَعَنَ رَسُولُ اللَّهِ ﷺ الْمُتَشَبِّهِينَ مِنَ الرِّجَالِ بِالنِّسَاءِ، وَالْمُتَشَبِّهَاتِ مِنَ النِّسَاءِ بِالرِّجَالِ.';
-const IMITATION_HADITH_EN =
-  'The Messenger of Allah ﷺ cursed men who imitate women and women who imitate men.';
+import { PROHIBITED_CLOTHING_CONTENT } from '@/lib/i18n/content/prohibited-clothing-content';
+import type { ProhibitedClothingContentKey } from '@/lib/i18n/content/prohibited-clothing-content';
 
 const TITLE: Record<string, string> = {
   en: `Prohibited Materials and Colours in Clothing`,
@@ -48,25 +40,17 @@ const SUBTITLE: Record<string, string> = {
   si: `පිරිමින්ට සිල්ක්, පිරිමින්ට රන් ආභරණ, ආඩම්බර ඇඳුම්, විරුද්ධ ලිංගිකත්වයට අනුකරණය, සහ පිරිසිදු රතු ඇඳුම, නිශ්චිත හදීස් තහනම් සහ ඒ එක් එක් පිටුපස ඇති ප්‍රඥාව.`,
 };
 
-const TOPIC: Record<string, string> = {
-  en: `Coming: the Prophet's ﷺ two-fold hadith holding silk and gold in one hand, then saying "These two are haram for the males of my nation, halal for its females" (Abu Dawud 4057, Nasa'i 5144); the ruling on silk-blend and small silk trim (permitted per some, limited by hadith); gold jewellery of any kind haram for men (rings, chains, Muslim 2078), but silver is permitted (the Prophet ﷺ wore a silver ring, Bukhari 5866); the fierce condemnation of isbal, letting the garment drag below the ankle out of pride (three men Allah will not speak to on Judgement Day, Muslim 106); the prohibition of the pure red garment for men in some narrations (Abu Dawud 4067, though scholars differ) versus the general permission of red and orange dyed fabrics (Bukhari 5811); the prohibition of imitating the opposite gender in dress (Bukhari 5885, cursing men who imitate women and vice versa); the prohibition of imitating the disbelievers in specifically religious dress; and the reason behind each of these, humility, distinction from paganism, gender-role clarity, avoidance of ostentation, and preservation of male masculinity and female modesty.`,
-  ms: `Akan datang: hadis Nabi ﷺ mengangkat sutera dan emas dalam satu tangan lalu bersabda "Kedua-dua ini haram untuk lelaki umatku, halal untuk perempuannya" (Abu Dawud 4057, Nasa'i 5144); hukum campuran sutera dan sedikit hiasan sutera (dibenarkan menurut sebahagian, terhad oleh hadis); barangan emas jenis apa pun haram bagi lelaki (cincin, rantai, Muslim 2078), tetapi perak dibenarkan (Nabi ﷺ memakai cincin perak, Bukhari 5866); kecaman keras terhadap isbal, menjulur pakaian di bawah buku lali kerana sombong (tiga lelaki yang Allah tidak akan bercakap dengan mereka pada Hari Kiamat, Muslim 106); larangan pakaian merah tulen untuk lelaki dalam beberapa riwayat (Abu Dawud 4067, walaupun ulama berbeza pendapat) berbanding izin umum bagi kain berwarna merah dan oren (Bukhari 5811); larangan meniru jantina lawan dalam pakaian (Bukhari 5885, laknat kepada lelaki yang meniru perempuan dan sebaliknya); larangan meniru orang bukan Islam dalam pakaian keagamaan khusus; dan sebab di sebalik setiap satu, kerendahan hati, pembezaan daripada paganisme, kejelasan peranan jantina, mengelakkan pameran, dan pemeliharaan kejantanan lelaki dan kesopanan wanita.`,
-  tur: `Yakında: Hz. Peygamber'in ﷺ ipek ve altını bir elde tutup "Bu ikisi ümmetimin erkeklerine haram, kadınlarına helâldir" buyurduğu hadis (Ebû Dâvud 4057, Nesâî 5144); ipek karışımlı kumaş ve az miktarda ipek şeridin hükmü (bir kısmına göre câiz, hadîs ile sınırlı); her türlü altın takının erkeğe haramlığı (yüzük, zincir, Müslim 2078), gümüşün ise cevâzı (Hz. Peygamber ﷺ gümüş yüzük takmıştır, Buhârî 5866); kibirle eteği topuklardan aşağı sarkıtmaya karşı şiddetli kınama (Kıyamet Günü Allah'ın kendileriyle konuşmayacağı üç kişiden biri, Müslim 106); bazı rivayetlerde erkek için safi kırmızı elbisenin yasağı (Ebû Dâvud 4067, âlimler ihtilâflıdır) ile kırmızı ve turuncuya boyanmış kumaşların umum cevâzı (Buhârî 5811) arasındaki nüans; kılıkta karşı cinse benzemenin yasaklanışı (Buhârî 5885, kadına benzeyen erkeğe ve erkeğe benzeyen kadına lânet); kâfirlere özellikle dini kılık kıyafette benzemenin yasaklanışı; ve her birinin ardındaki sebep, tevazu, putperestlikten ayrışma, cinsiyet rollerinin netliği, gösterişten kaçınma ve erkeklik ile kadın haya-tesettürünün korunması.`,
-  urd: `آنے والا: نبی ﷺ نے ایک ہاتھ میں ریشم اور سونا اٹھا کر فرمایا "یہ دونوں میری امت کے مردوں پر حرام اور عورتوں پر حلال ہیں" (ابو داود ۴۰۵۷، نسائی ۵۱۴۴)؛ ریشمی آمیزش اور معمولی ریشمی حاشیے کا حکم (بعض کے مطابق جائز، حدیث سے محدود)؛ ہر قسم کے سونے کے زیورات مردوں کے لیے حرام (انگوٹھی، زنجیر، مسلم ۲۰۷۸)، مگر چاندی جائز (نبی ﷺ نے چاندی کی انگوٹھی پہنی، بخاری ۵۸۶۶)؛ اسبال کی سخت مذمت، تکبر سے کپڑا ٹخنوں سے نیچے گھسیٹنا (تین آدمی جن سے اللہ قیامت کے دن بات نہ کرے گا، مسلم ۱۰۶)؛ مردوں کے لیے خالص سرخ لباس کی ممانعت بعض روایات میں (ابو داود ۴۰۶۷، اگرچہ علماء کا اختلاف)، جبکہ سرخ اور نارنجی رنگے کپڑوں کی عمومی اجازت (بخاری ۵۸۱۱)؛ لباس میں مخالف جنس کی نقل کی ممانعت (بخاری ۵۸۸۵، عورتوں کی نقل کرنے والے مردوں اور برعکس پر لعنت)؛ خصوصاً دینی لباس میں کافروں کی نقل کی ممانعت؛ اور ہر ایک کے پیچھے سبب، عاجزی، شرک سے تمیز، جنسی کردار کی وضاحت، دکھاوے سے بچنا، اور مردانگی و نسوانی حیا کا تحفظ۔`,
-  ben: `আসছে: নবী ﷺ এক হাতে সিল্ক ও স্বর্ণ ধরে বলেছেন "এই দুটি আমার উম্মতের পুরুষদের জন্য হারাম, নারীদের জন্য হালাল" (আবু দাউদ ৪০৫৭, নাসাঈ ৫১৪৪); সিল্ক-মিশ্রণ ও সামান্য সিল্ক কিনারার বিধান (কিছুর মতে অনুমোদিত, হাদিস অনুযায়ী সীমিত); যেকোনো ধরনের স্বর্ণালঙ্কার পুরুষদের জন্য হারাম (আংটি, চেইন, মুসলিম ২০৭৮), কিন্তু রূপা অনুমোদিত (নবী ﷺ রূপার আংটি পরেছেন, বুখারি ৫৮৬৬); ইসবালের কঠোর নিন্দা, অহংকারে গোড়ালির নিচে পোশাক টেনে রাখা (কিয়ামতের দিন যেসব তিনজনের সাথে আল্লাহ কথা বলবেন না, মুসলিম ১০৬); কিছু বর্ণনায় পুরুষদের জন্য খাঁটি লাল পোশাকের নিষেধ (আবু দাউদ ৪০৬৭, যদিও আলিমদের মধ্যে মতভেদ) বনাম লাল ও কমলা রঙের কাপড়ের সাধারণ অনুমতি (বুখারি ৫৮১১); পোশাকে বিপরীত লিঙ্গের অনুকরণের নিষেধ (বুখারি ৫৮৮৫, নারীদের অনুকরণকারী পুরুষ ও উল্টো লানত); বিশেষত ধর্মীয় পোশাকে অমুসলিমদের অনুকরণের নিষেধ; এবং প্রত্যেকটির পিছনের কারণ, বিনয়, পৌত্তলিকতা থেকে পার্থক্য, লিঙ্গ ভূমিকার স্পষ্টতা, লোক দেখানো থেকে বিরত থাকা, এবং পুরুষত্ব ও নারীর শালীনতার সংরক্ষণ।`,
-  fas: `به‌زودی: حدیث پیامبر ﷺ که ابریشم و طلا را در یک دست گرفت و فرمود «این دو بر مردان امتم حرام و بر زنانش حلال است» (ابوداود ۴۰۵۷، نسائی ۵۱۴۴)؛ حکم پارچه‌ی ابریشمی مخلوط و حاشیه‌ی ابریشمی اندک (به عقیده‌ی برخی جایز، محدود به حدیث)؛ هر گونه زیور طلا برای مردان حرام (انگشتر، زنجیر، مسلم ۲۰۷۸)، اما نقره جایز است (پیامبر ﷺ انگشتر نقره داشتند، بخاری ۵۸۶۶)؛ نکوهش شدید اسبال، کشیدن لباس از سر تکبر تا زیر قوزک (سه کس که خدا در قیامت با آنان سخن نمی‌گوید، مسلم ۱۰۶)؛ نهی از پوشیدن جامه‌ی سرخ خالص برای مردان در برخی روایات (ابوداود ۴۰۶۷، هرچند علما اختلاف دارند) در مقابل جواز عمومی پارچه‌های سرخ و نارنجی رنگ‌شده (بخاری ۵۸۱۱)؛ نهی از شبیه‌سازی به جنس مخالف در پوشش (بخاری ۵۸۸۵، لعن مردان مانند زنان و بالعکس)؛ نهی از شبیه‌سازی به کافران در پوشش خاص دینی؛ و سبب هر یک، فروتنی، تمایز از شرک، شفافیت نقش‌های جنسیتی، پرهیز از خودنمایی، و حفظ مردانگی مردان و عفاف زنان.`,
-  zh: `即将推出：先知 ﷺ 一手同持丝绸与金，云「此二者，我教之男者哈拉姆，女者哈拉勒」（艾布·达乌德 4057，奈萨仪 5144）；混纺与少量丝边之判决（部分认为可，依圣训受限）；一切金饰对男子皆禁（戒指、项链，穆斯林 2078），而银则许可（先知 ﷺ 曾戴银戒，布哈里 5866）；对「伊斯巴勒」（骄矜曳衣过踝）之严厉谴责（复生日安拉不与之言的三人之一，穆斯林 106）；某些传述中禁男子着纯红衣（艾布·达乌德 4067，然学者意见有别）与红橙染物之一般允许（布哈里 5811）之别；服饰上禁效异性（布哈里 5885，效女之男与效男之女皆蒙诅咒）；尤其宗教服饰上禁效非穆斯林；及各项背后之原因，谦卑、与偶像崇拜有别、性别角色清晰、避免炫耀、以及男子之阳刚与女子之端庄之维护。`,
-  yue: `即將推出：先知 ﷺ 一手同持絲綢與金，云「此二者，我教之男者哈拉姆，女者哈拉勒」（艾布·達烏德 4057，奈薩儀 5144）；混紡同少量絲邊之判決（部分認為可，依聖訓受限）；一切金飾對男子皆禁（戒指、項鏈，穆斯林 2078），而銀則許可（先知 ﷺ 曾戴銀戒，布哈里 5866）；對「伊斯巴勒」（驕矜曳衣過踝）之嚴厲譴責（復生日安拉不與之言嘅三人之一，穆斯林 106）；某些傳述中禁男子著純紅衣（艾布·達烏德 4067，然學者意見有別）與紅橙染物之一般允許（布哈里 5811）之別；服飾上禁效異性（布哈里 5885，效女之男同效男之女皆蒙詛咒）；尤其宗教服飾上禁效非穆斯林；及各項背後之原因，謙卑、與偶像崇拜有別、性別角色清晰、避免炫耀、以及男子之陽剛同女子之端莊之維護。`,
-  ja: `近日追加：預言者 ﷺ が絹と金を一方の手に持ち、「この二つは私の共同体の男には禁じられ、女には許される」と仰せられたハディース（アブー・ダーウード 4057、ナサーイー 5144）、絹の混紡や少量の絹の縁取りの規定（一部で許容、ハディースにより制限）、あらゆる金の装身具は男に禁（指輪、鎖，ムスリム 2078）、しかし銀は許される（預言者 ﷺ は銀の指輪を用いられた，ブハーリー 5866）、傲慢からくるイスバール（衣を踝より下に引きずる）への厳しい叱責（復活の日にアッラーが語りかけない三人の一つ，ムスリム 106）、一部の伝えにおける男性の純赤の衣の禁（アブー・ダーウード 4067、学者見解の相違あり）と、赤や橙に染めた布の一般的な許可（ブハーリー 5811）の対比、装いにおける異性の模倣の禁（ブハーリー 5885、女装の男・男装の女への呪詛）、特に宗教的装いにおける不信仰者の模倣の禁、そしてそれぞれの背後にある理由，謙虚、偶像崇拝との差別、ジェンダー役割の明瞭さ、誇示の回避、男らしさと女の慎みの保持。`,
-  ru: `Скоро: хадис Пророка ﷺ, взявшего в одну руку шёлк и золото и сказавшего "Эти два запретны для мужчин моей общины, разрешены для её женщин" (Абу Дауд 4057, Насаи 5144); правило о смесовых тканях и небольшой шёлковой отделке (по некоторым разрешено, по хадису ограничено); любые золотые украшения запретны мужчинам (перстни, цепочки, Муслим 2078), но серебро разрешено (Пророк ﷺ носил серебряный перстень, аль-Бухари 5866); жёсткое осуждение исбал, волочения одежды ниже щиколотки из гордыни (одни из трёх, с которыми Аллах не заговорит в Судный день, Муслим 106); запрет чисто-красной одежды для мужчин в некоторых передачах (Абу Дауд 4067, есть расхождение), при общем разрешении красной и оранжевой окраски (аль-Бухари 5811); запрет подражания противоположному полу в одежде (аль-Бухари 5885, проклятие мужчинам, уподобляющимся женщинам, и наоборот); запрет уподобления неверующим именно в религиозной одежде; и мудрость каждого, смирение, отличение от язычества, ясность гендерных ролей, отказ от показного и сохранение мужественности мужчин и скромности женщин.`,
-  es: `Próximamente: el hadiz del Profeta ﷺ que tomó seda y oro en una mano y dijo «Estos dos son haram para los varones de mi nación, halal para sus mujeres» (Abu Dawud 4057, Nasa'i 5144); el fallo sobre las mezclas de seda y los pequeños ribetes de seda (permitido según algunos, limitado por el hadiz); las joyas de oro de cualquier tipo son haram para el varón (anillos, cadenas, Muslim 2078), pero la plata está permitida (el Profeta ﷺ llevó un anillo de plata, al-Bukhari 5866); la condena severa del isbal, arrastrar la prenda por debajo del tobillo por soberbia (uno de los tres a quienes Al-lah no hablará el Día del Juicio, Muslim 106); la prohibición de la prenda de rojo puro para el varón en algunas narraciones (Abu Dawud 4067, aunque los sabios difieren) frente al permiso general de las telas teñidas de rojo y naranja (al-Bukhari 5811); la prohibición de imitar al sexo opuesto en el vestir (al-Bukhari 5885, maldición sobre los hombres que imitan a las mujeres y viceversa); la prohibición de imitar a los no creyentes específicamente en el vestir religioso; y la razón detrás de cada una, humildad, distinción del paganismo, claridad en los roles de género, evitar la ostentación y la preservación de la masculinidad del varón y el pudor de la mujer.`,
-  ko: `공개 예정: 예언자 ﷺ 께서 한 손에 비단과 금을 쥐고 "이 두 가지는 내 공동체의 남자들에게 하람이며, 여자들에게 할랄이다"라고 하신 하디스(아부 다우드 4057, 나사이 5144); 비단 혼방과 소량의 비단 장식에 관한 규정(일부 견해로는 허용, 하디스에 의해 제한); 모든 종류의 금 장신구는 남성에게 하람(반지, 목걸이, 무슬림 2078); 그러나 은은 허용됨(예언자 ﷺ 께서 은반지를 착용하심, 알부카리 5866); 이스발, 교만하게 옷자락을 발목 아래로 끄는 것에 대한 강한 규탄(심판의 날에 알라께서 말씀하지 않으실 세 사람 중 하나, 무슬림 106); 일부 전승에서 남성의 순수 붉은 옷 금지(아부 다우드 4067, 학자들 견해 상이) 대 일반적으로 붉은색·주황색 염색 옷 허용(알부카리 5811); 이성 모방 금지(알부카리 5885, 여자를 흉내내는 남자와 남자를 흉내내는 여자에 대한 저주); 특히 종교적 의복에서 불신자를 모방하는 것의 금지; 그리고 각 규정의 이유, 겸손, 우상 숭배와의 구별, 성 역할의 명확성, 과시 회피, 그리고 남자의 남성성과 여자의 정숙함의 보존.`,
-  ta: `விரைவில் வரும்: நபி ﷺ ஒரு கையில் பட்டு மற்றும் தங்கத்தை பிடித்து "இவை இரண்டும் என் சமூகத்தின் ஆண்களுக்கு ஹராம், பெண்களுக்கு ஹலால்" என்று கூறிய ஹதீஸ் (அபூ தாவூத் 4057, நஸாயீ 5144); பட்டு கலப்பு மற்றும் சிறிய பட்டு விளிம்பின் விதி (சிலரின் படி அனுமதி, ஹதீஸ் மூலம் வரம்புகள்); எந்த வகையான தங்க நகைகளும் ஆண்களுக்கு ஹராம் (மோதிரம், சங்கிலி, முஸ்லிம் 2078), ஆனால் வெள்ளி அனுமதிக்கப்பட்டது (நபி ﷺ வெள்ளி மோதிரம் அணிந்தார், புகாரி 5866); இஸ்பாலின் கடுமையான கண்டனம், ஆடையை ஆடம்பரத்தால் கணுக்காலுக்குக் கீழே இழுத்தல் (இறுதி நாளில் அல்லாஹ் பேசாத மூவரில் ஒருவர், முஸ்லிம் 106); சில அறிவிப்புகளில் ஆண்களுக்கு தூய சிவப்பு ஆடையின் தடை (அபூ தாவூத் 4067, அறிஞர்கள் மாறுபட்டு உள்ளனர்) மற்றும் சிவப்பு-ஆரஞ்சு நிற ஆடைகளின் பொது அனுமதி (புகாரி 5811) இடையேயான வேறுபாடு; ஆடையில் எதிர் பாலினத்தை போன்று செயல்படுவது தடை (புகாரி 5885, பெண்களைப் போன்று மாறும் ஆண்கள் மற்றும் நேர்மாறாக சபிக்கப்பட்டவர்கள்); குறிப்பாக மத ஆடையில் நம்பிக்கை கொள்ளாதவர்களை போன்று செயல்படுவது தடை; மற்றும் ஒவ்வொன்றின் பின்னாலுள்ள காரணம், பணிவு, பாகனிசத்திலிருந்து வேறுபாடு, பாலின பாத்திரங்களின் தெளிவு, ஆடம்பரத்தைத் தவிர்த்தல், மற்றும் ஆண்களின் ஆண்மை மற்றும் பெண்களின் கண்ணியத்தின் பாதுகாப்பு.`,
-  si: `ඉදිරියේදී: නබි ﷺ තුමා එක් අතකින් සිල්ක් සහ රත්‍රන් ගෙන "මේ දෙක මාගේ ජාතියේ පිරිමින්ට හරාම්, කාන්තාවන්ට හලාල්" යැයි වදාළ හදීසය (අබූ දාවූද් 4057, නසාඉ 5144); සිල්ක් මිශ්‍රණ සහ කුඩා සිල්ක් දාරයේ නීතිය (සමහරන්ට අනුව අනුමතයි, හදීසය මගින් සීමා කර ඇත); ඕනෑම වර්ගයක රන් ආභරණ පිරිමින්ට හරාම් (මුදු, දාම්, මුස්ලිම් 2078), නමුත් රිදී අනුමතයි (නබි ﷺ තුමා රිදී මුද්දක් පැළඳූහ, බුකාරි 5866); ඉස්බාල් සඳහා දැඩි හෙළා දැක්වීම, ආඩම්බරයෙන් ඇඳුම වළලුකරට පහළින් ඇදගෙන යාම (විනිශ්චය දිනයේ අල්ලාහ් කථා නොකරන පුද්ගලයන් තිදෙනාගෙන් එකෙකි, මුස්ලිම් 106); සමහර වාර්තාවල පිරිමින්ට පිරිසිදු රතු ඇඳුම තහනම් (අබූ දාවූද් 4067, විද්වතුන් වෙනස් වේ) සහ රතු සහ තැඹිලි පැහැති රෙදිවලට පොදු අවසරය (බුකාරි 5811) අතර වෙනස; ඇඳුමින් විරුද්ධ ලිංගිකත්වයට අනුකරණය කිරීමේ තහනම (බුකාරි 5885, කාන්තාවන් අනුකරණය කරන පිරිමින්ට සහ පිරිමින් අනුකරණය කරන කාන්තාවන්ට ශාප); විශේෂයෙන් ආගමික ඇඳුමින් අවිශ්වාසිකයන් අනුකරණය කිරීමේ තහනම; සහ එක් එක්කම පිටුපස ඇති හේතුව, නිහතමානිත්වය, පෞරාණික ආගම්වලින් වෙනස්කම, ලිංගික භූමිකා පැහැදිලිකම, ආඩම්බර ප්‍රදර්ශනය වළක්වා ගැනීම, සහ පිරිමින්ගේ පුරුෂ ස්වභාවය සහ කාන්තාවන්ගේ ලජ්ජාව ආරක්‍ෂා කිරීම.`,
-};
+const SILK_GOLD_HADITH_AR = 'هَذَانِ حَرَامٌ عَلَى ذُكُورِ أُمَّتِي، حِلٌّ لِإِنَاثِهَا.';
+const IMITATION_HADITH_AR = 'لَعَنَ رَسُولُ اللَّهِ ﷺ الْمُتَشَبِّهِينَ مِنَ الرِّجَالِ بِالنِّسَاءِ، وَالْمُتَشَبِّهَاتِ مِنَ النِّسَاءِ بِالرِّجَالِ.';
 
 export function ProhibitedClothingContent() {
   const { lang } = useLanguage();
+  const tc = (key: ProhibitedClothingContentKey): string => {
+    const entry = PROHIBITED_CLOTHING_CONTENT[key] as Record<string, string | undefined> | undefined;
+    if (!entry) return key;
+    return entry[lang] ?? entry.en ?? key;
+  };
+
   return (
     <>
       <PageHeader
@@ -78,141 +62,99 @@ export function ProhibitedClothingContent() {
       <div className="max-w-3xl mx-auto px-6 py-16 space-y-12">
         {/* Framing */}
         <section>
-          <h2 className="section-title font-garamond text-2xl md:text-3xl font-semibold text-forest mb-4">
-            The Prohibitions and Their Sources
-          </h2>
+          <h2 className="section-title font-garamond text-2xl md:text-3xl font-semibold text-forest mb-4">{tc('framing_h')}</h2>
           <article className="card-islamic space-y-3">
-            <p className="text-forest/75 text-sm leading-relaxed">
-              A short list of specific materials, colours, and forms of dress is forbidden in Islam, each grounded in an explicit ruling from the Prophet ﷺ. This page collects them with the actual hadith wording and the classical scholarly discussion.
-            </p>
+            <p className="text-forest/75 text-sm leading-relaxed">{tc('framing_p1')}</p>
             <p className="text-forest/70 text-sm leading-relaxed">
-              For the general etiquettes and permitted range of dress, see the <a href="/clothing-etiquette" className="text-gold underline">Clothing Etiquette</a> page. Prohibitions apply to what men and women wear differently in each case, so this page is arranged by ruling, not by garment type.
+              {tc('framing_p2_pre')} <a href="/clothing-etiquette" className="text-gold underline">{tc('framing_p2_link')}</a> {tc('framing_p2_post')}
             </p>
           </article>
         </section>
 
-        {/* Silk and gold for men */}
+        {/* Silk & gold */}
         <section>
-          <h2 className="section-title font-garamond text-2xl md:text-3xl font-semibold text-forest mb-4">
-            Silk and Gold for Men
-          </h2>
+          <h2 className="section-title font-garamond text-2xl md:text-3xl font-semibold text-forest mb-4">{tc('silk_h')}</h2>
           <article className="card-islamic space-y-4">
             <ArabicText text={SILK_GOLD_HADITH_AR} size="md" />
             <div className="border-t border-gold/10 pt-3">
-              <p className="text-xs text-gold/70 font-medium uppercase tracking-wider mb-1">Transliteration</p>
-              <p className="text-forest/60 italic text-sm leading-relaxed">{SILK_GOLD_HADITH_TR}</p>
-              <p className="text-xs text-gold/70 font-medium uppercase tracking-wider mt-3 mb-1">Meaning</p>
-              <p className="text-forest/75 text-sm leading-relaxed">{SILK_GOLD_HADITH_EN}</p>
+              <p className="text-xs text-gold/70 font-medium uppercase tracking-wider mb-1">{tc('label_transliteration')}</p>
+              <p className="text-forest/60 italic text-sm leading-relaxed">{tc('silk_translit')}</p>
+              <p className="text-xs text-gold/70 font-medium uppercase tracking-wider mt-3 mb-1">{tc('label_meaning')}</p>
+              <p className="text-forest/75 text-sm leading-relaxed">{tc('silk_meaning')}</p>
             </div>
-            <p className="text-forest/75 text-sm leading-relaxed">
-              The Prophet ﷺ raised silk in one hand and gold in the other, then spoke these words. This is the fundamental text on both prohibitions.
-            </p>
-            <p className="text-forest/70 text-sm leading-relaxed">
-              Concessions the fuqaha permit for men:
-            </p>
+            <p className="text-forest/75 text-sm leading-relaxed">{tc('silk_p')}</p>
+            <p className="text-forest/70 text-sm leading-relaxed">{tc('silk_concessions_intro')}</p>
             <ul className="text-forest/70 text-sm space-y-1 list-disc list-inside">
-              <li>Silk trim of up to four fingers’ width on a garment (per the Hanbali and Shafi’i mainstream, from Muslim 2069).</li>
-              <li>Silk in cases of medical necessity, based on the Prophet’s ﷺ permission to al-Zubayr and Abd al-Rahman ibn Awf who suffered an itching condition (al-Bukhari 2919).</li>
-              <li>Silver rings and silver-plated items (the Prophet ﷺ himself wore a silver signet ring, al-Bukhari 5866).</li>
-              <li>All gold and silk in general for women; the prohibition is specifically on men.</li>
+              <li>{tc('silk_c_1')}</li>
+              <li>{tc('silk_c_2')}</li>
+              <li>{tc('silk_c_3')}</li>
+              <li>{tc('silk_c_4')}</li>
             </ul>
-            <p className="text-xs text-gold/60 italic">Sources: Abu Dawud 4057, al-Nasa’i 5144, Ibn Majah 3595 (Abu Musa al-Ash’ari); al-Bukhari 5426, Muslim 2069, 2078; al-Bukhari 2919 for the medical exception.</p>
+            <p className="text-xs text-gold/60 italic">{tc('silk_source')}</p>
           </article>
         </section>
 
-        {/* Imitation of the opposite gender */}
+        {/* Gender imitation */}
         <section>
-          <h2 className="section-title font-garamond text-2xl md:text-3xl font-semibold text-forest mb-4">
-            Imitating the Opposite Gender
-          </h2>
+          <h2 className="section-title font-garamond text-2xl md:text-3xl font-semibold text-forest mb-4">{tc('gender_h')}</h2>
           <article className="card-islamic space-y-4">
             <ArabicText text={IMITATION_HADITH_AR} size="md" />
-            <p className="text-forest/75 text-sm leading-relaxed">{IMITATION_HADITH_EN}</p>
-            <p className="text-forest/70 text-sm leading-relaxed">
-              The ruling applies to dress, gait, speech patterns, and general presentation. It is not about a woman wearing trousers (which many cultures adopt for both sexes) but about a specifically male or female presentation being imitated by the other in a manner that blurs the two.
-            </p>
-            <p className="text-forest/70 text-sm leading-relaxed">
-              Classical scholars grounded this in the Qur’anic principle of the distinct creation of male and female (<em>“And the male is not like the female,”</em> Al ‘Imran 3:36), and in the wisdom that Islamic law preserves the distinctions Allah has honoured.
-            </p>
-            <p className="text-xs text-gold/60 italic">Source: al-Bukhari 5885 (Ibn Abbas).</p>
+            <p className="text-forest/75 text-sm leading-relaxed">{tc('gender_p_translit_body')}</p>
+            <p className="text-forest/70 text-sm leading-relaxed">{tc('gender_p1')}</p>
+            <p className="text-forest/70 text-sm leading-relaxed">{tc('gender_p2')}</p>
+            <p className="text-xs text-gold/60 italic">{tc('gender_source')}</p>
           </article>
         </section>
 
-        {/* Pure red for men */}
+        {/* Red */}
         <section>
-          <h2 className="section-title font-garamond text-2xl md:text-3xl font-semibold text-forest mb-4">
-            The Question of Pure Red Garments for Men
-          </h2>
+          <h2 className="section-title font-garamond text-2xl md:text-3xl font-semibold text-forest mb-4">{tc('red_h')}</h2>
           <article className="card-islamic space-y-3">
-            <p className="text-forest/75 text-sm leading-relaxed">
-              A minority hadith reports that the Prophet ﷺ forbade men from wearing garments dyed with al-mu’asfar (the pure safflower orange-red). However, many other authentic reports describe him ﷺ wearing red-striped Yemeni cloaks (al-hulla al-hamra, al-Bukhari 5901) and coral-red garments.
-            </p>
-            <p className="text-forest/70 text-sm leading-relaxed">
-              The classical reconciliation across the four schools:
-            </p>
+            <p className="text-forest/75 text-sm leading-relaxed">{tc('red_p1')}</p>
+            <p className="text-forest/70 text-sm leading-relaxed">{tc('red_reconciliation_intro')}</p>
             <ul className="text-forest/70 text-sm space-y-1 list-disc list-inside">
-              <li><strong>Red as a stripe, weft, or pattern:</strong> permitted for men by consensus.</li>
-              <li><strong>Garments entirely of pure red-orange (mu’asfar) dye:</strong> disliked for men in the majority view; forbidden per some (early Shafi’i, some Hanbali).</li>
-              <li><strong>Red garments for women:</strong> permitted without dispute.</li>
+              <li>{tc('red_r_1')}</li>
+              <li>{tc('red_r_2')}</li>
+              <li>{tc('red_r_3')}</li>
             </ul>
-            <p className="text-xs text-gold/60 italic">Sources: Muslim 2077 (Abdullah ibn Amr) for the mu’asfar prohibition; al-Bukhari 5901 for the red-striped cloak.</p>
+            <p className="text-xs text-gold/60 italic">{tc('red_source')}</p>
           </article>
         </section>
 
-        {/* Isbal already on clothing-etiquette */}
+        {/* Isbal */}
         <section>
-          <h2 className="section-title font-garamond text-2xl md:text-3xl font-semibold text-forest mb-4">
-            Isbal Out of Pride
-          </h2>
+          <h2 className="section-title font-garamond text-2xl md:text-3xl font-semibold text-forest mb-4">{tc('isbal_h')}</h2>
           <article className="card-islamic space-y-3">
-            <p className="text-forest/75 text-sm leading-relaxed">
-              Dragging the lower garment (izar, thawb, trousers, cloak) below the ankles specifically out of pride is a major sin. Where it happens without any element of pride (as with Abu Bakr al-Siddiq), the Prophet ﷺ excused him personally. But the safe and recommended practice for men is to keep the garment above the ankles.
-            </p>
-            <p className="text-forest/70 text-sm leading-relaxed">
-              This ruling is specific to men. Women are obliged to cover the feet, and their garments will naturally hang below the ankles.
-            </p>
-            <p className="text-xs text-gold/60 italic">See /clothing-etiquette for the full discussion.</p>
+            <p className="text-forest/75 text-sm leading-relaxed">{tc('isbal_p1')}</p>
+            <p className="text-forest/70 text-sm leading-relaxed">{tc('isbal_p2')}</p>
+            <p className="text-xs text-gold/60 italic">{tc('isbal_source')}</p>
           </article>
         </section>
 
-        {/* Imitation of the disbelievers */}
+        {/* Disbelievers */}
         <section>
-          <h2 className="section-title font-garamond text-2xl md:text-3xl font-semibold text-forest mb-4">
-            Imitation of the Disbelievers in Specifically Religious Dress
-          </h2>
+          <h2 className="section-title font-garamond text-2xl md:text-3xl font-semibold text-forest mb-4">{tc('kuffar_h')}</h2>
           <article className="card-islamic space-y-3">
-            <p className="text-forest/75 text-sm leading-relaxed">
-              The Prophet ﷺ said: <em>“Whoever imitates a people is one of them.”</em> (Abu Dawud 4031, Ahmad 5114, Sahih).
-            </p>
-            <p className="text-forest/70 text-sm leading-relaxed">
-              The classical position: prohibition attaches to dress that is <strong>distinctively religious to another faith</strong> (a cross, priestly vestments, a saffron monk’s robe, ceremonial ritual clothing of another religion). Ordinary secular styles shared by many cultures (a suit, jeans, a shirt) do not fall under this prohibition; scholars from Ibn Taymiyyah to Ibn al-Qayyim to the modern muftis of Egypt and the Gulf have written this explicitly.
-            </p>
-            <p className="text-forest/70 text-sm leading-relaxed">
-              The wisdom: outward similarity generates inward affinity. Islam wants Muslims to be distinguishable by dignity, not by strangeness, and specifically not to blur the religious markers of other faiths in the eyes of the ignorant.
-            </p>
-            <p className="text-xs text-gold/60 italic">Source: Abu Dawud 4031 (Ibn Umar); Ibn Taymiyyah, Iqtida’ al-Sirat al-Mustaqim, for the classical elaboration.</p>
+            <p className="text-forest/75 text-sm leading-relaxed">{tc('kuffar_p1')}</p>
+            <p className="text-forest/70 text-sm leading-relaxed">{tc('kuffar_p2')}</p>
+            <p className="text-forest/70 text-sm leading-relaxed">{tc('kuffar_p3')}</p>
+            <p className="text-xs text-gold/60 italic">{tc('kuffar_source')}</p>
           </article>
         </section>
 
         {/* Wisdom */}
         <section>
-          <h2 className="section-title font-garamond text-2xl md:text-3xl font-semibold text-forest mb-4">
-            The Wisdom Behind These Prohibitions
-          </h2>
+          <h2 className="section-title font-garamond text-2xl md:text-3xl font-semibold text-forest mb-4">{tc('wisdom_h')}</h2>
           <article className="card-forest rounded-2xl p-6 space-y-3">
-            <p className="text-cream/85 text-sm leading-relaxed">
-              Each prohibition serves an inner purpose:
-            </p>
+            <p className="text-cream/85 text-sm leading-relaxed">{tc('wisdom_intro')}</p>
             <ul className="text-cream/80 text-sm space-y-2 list-disc list-inside">
-              <li><strong>Silk and gold for men:</strong> guards masculinity against softness and ostentation, reserves the finest for women, and reserves the ultimate finery for the next life (the people of Paradise wear silk, Fatir 35:33).</li>
-              <li><strong>Isbal:</strong> the outward remedy for the inward disease of arrogance.</li>
-              <li><strong>Gender imitation:</strong> preserves the distinctness Allah has honoured in the two sexes.</li>
-              <li><strong>Pure red mu’asfar:</strong> traditionally worn as a mark of status, so its avoidance guards against ostentation.</li>
-              <li><strong>Religious imitation of other faiths:</strong> preserves the outward identity of the Muslim, and prevents confusion about creed.</li>
+              <li>{tc('wisdom_1')}</li>
+              <li>{tc('wisdom_2')}</li>
+              <li>{tc('wisdom_3')}</li>
+              <li>{tc('wisdom_4')}</li>
+              <li>{tc('wisdom_5')}</li>
             </ul>
-            <p className="text-cream/85 text-sm leading-relaxed">
-              None of these rulings is arbitrary. Each carries an inner meaning, and each, when kept, aligns the outer skin of a person’s life with the inner tawhid of the heart.
-            </p>
+            <p className="text-cream/85 text-sm leading-relaxed">{tc('wisdom_close')}</p>
           </article>
         </section>
       </div>
