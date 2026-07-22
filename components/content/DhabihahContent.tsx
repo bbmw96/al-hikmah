@@ -3,6 +3,42 @@
 import { PageHeader } from '@/components/ui/PageHeader';
 import { ArabicText } from '@/components/ui/ArabicText';
 import { useLanguage } from '@/lib/i18n/context';
+import { DHABIHAH_CONTENT } from '@/lib/i18n/content/dhabihah-content';
+import type { DhabihahContentKey } from '@/lib/i18n/content/dhabihah-content';
+
+const TITLE: Record<string, string> = {
+  en: `Dhabihah, Halal Slaughter and Permissible Meats`,
+  ms: `Dhabihah, Sembelihan Halal dan Daging yang Halal`,
+  tur: `Zebiha, Helâl Kesim ve Helâl Etler`,
+  urd: `ذبیحہ، حلال ذبح اور جائز گوشت`,
+  ben: `যবীহাহ, হালাল যবাই ও অনুমোদিত মাংস`,
+  fas: `ذبیحه، ذبح حلال و گوشت‌های مجاز`,
+  zh: `扎比哈，合法宰牲与许可之肉`,
+  yue: `扎比哈，合法宰牲同許可之肉`,
+  ja: `ザビーハ，ハラール屠畜と許された肉`,
+  ru: `Забиха, халяльный забой и разрешённое мясо`,
+  es: `Dhabihah, sacrificio halal y carnes permitidas`,
+  ko: `자비하, 할랄 도축과 허용되는 육류`,
+  ta: `தபீஹா, ஹலால் அறுத்தல் மற்றும் அனுமதிக்கப்பட்ட இறைச்சி`,
+  si: `ඡබීහා, හලාල් කැපීම සහ අනුමත මස්`,
+};
+
+const SUBTITLE: Record<string, string> = {
+  en: `How to render an animal halal to eat: the exact method of slaughter, the conditions on the slaughterer, the invocation of Allah's name, and which animals may or may not be eaten.`,
+  ms: `Bagaimana menjadikan haiwan halal untuk dimakan: kaedah sembelihan yang tepat, syarat penyembelih, penyebutan nama Allah, dan haiwan yang boleh atau tidak boleh dimakan.`,
+  tur: `Bir hayvanı helâl yapmanın yolu: kesimin usulü, kesenin şartları, Allah'ın isminin anılması ve hangi hayvanların yenilip yenilemeyeceği.`,
+  urd: `کسی جانور کو کھانے کے لیے حلال کیسے بنایا جائے: ذبح کا صحیح طریقہ، ذبح کرنے والے پر شرائط، اللہ کے نام کا ذکر، اور کون سے جانور کھائے جا سکتے ہیں یا نہیں۔`,
+  ben: `কীভাবে কোনো প্রাণীকে খাদ্যের জন্য হালাল করা যায়: যবাই এর সঠিক পদ্ধতি, যবাইকারীর শর্ত, আল্লাহর নাম উচ্চারণ, এবং কোন কোন প্রাণী খাওয়া যাবে বা যাবে না।`,
+  fas: `چگونه یک حیوان را برای خوردن حلال کنیم: روش دقیق ذبح، شرایط ذبح‌کننده، ذکر نام خدا و اینکه چه حیواناتی خورده می‌شوند یا نه.`,
+  zh: `如何使动物合法可食：宰牲之精确方法、宰者之条件、真主之名之诵念，以及何等动物可食或不可食。`,
+  yue: `如何使動物合法可食：宰牲之精確方法、宰者之條件、真主之名之誦念，以及何等動物可食或不可食。`,
+  ja: `動物を食用にハラールとする方法，屠畜の正確な手順、屠畜者の条件、アッラーの御名の唱念、そしてどの動物が食べられ、または食べられないか。`,
+  ru: `Как сделать животное халяльным для употребления: точный метод забоя, условия к забойщику, произнесение имени Аллаха, и какие животные можно или нельзя есть.`,
+  es: `Cómo hacer un animal halal para comer: el método exacto de sacrificio, las condiciones al sacrificador, la invocación del nombre de Al-lah, y qué animales pueden o no comerse.`,
+  ko: `동물을 먹기 위해 할랄로 만드는 법: 정확한 도축 방식, 도축자의 조건, 알라의 이름 호명, 그리고 어떤 동물을 먹을 수 있고 없는지.`,
+  ta: `ஒரு விலங்கை உண்பதற்கு ஹலால் ஆக்குவது எப்படி: அறுத்தலின் சரியான முறை, அறுக்கும் நபருக்கான நிபந்தனைகள், அல்லாஹ்வின் பெயர் உச்சரிப்பு, மற்றும் எந்த விலங்குகள் உண்ணத்தக்கவை அல்லது தகாதவை.`,
+  si: `සතෙකු ආහාරයට හලාල් කරන ආකාරය: නිශ්චිත කැපීමේ ක්‍රමය, කපන්නා පිළිබඳ කොන්දේසි, අල්ලාහ්ගේ නාමය ප්‍රකාශ කිරීම, සහ කුමන සතුන් අනුභවයට යෝග්‍ය හෝ නොවේද.`,
+};
 
 const BISMILLAH_SLAUGHTER_AR = 'بِسْمِ اللَّهِ، وَاللَّهُ أَكْبَر.';
 const BISMILLAH_SLAUGHTER_TR = 'Bismillah, wa Allahu Akbar.';
@@ -10,62 +46,15 @@ const BISMILLAH_SLAUGHTER_EN = 'In the name of Allah, and Allah is the Greatest.
 
 const IHSAN_HADITH_AR =
   'إِنَّ اللَّهَ كَتَبَ الْإِحْسَانَ عَلَى كُلِّ شَيْءٍ، فَإِذَا قَتَلْتُمْ فَأَحْسِنُوا الْقِتْلَةَ، وَإِذَا ذَبَحْتُمْ فَأَحْسِنُوا الذِّبْحَةَ، وَلْيُحِدَّ أَحَدُكُمْ شَفْرَتَهُ، وَلْيُرِحْ ذَبِيحَتَهُ.';
-const IHSAN_HADITH_EN =
-  'Allah has decreed ihsan (excellence) upon everything. So if you kill, kill well; and if you slaughter, slaughter well. Let each of you sharpen his blade, and let him give comfort to the animal he slaughters.';
-
-const TITLE: Record<string, string> = {
-  en: `Dhabihah, Halal Slaughter and the Permissible Meats`,
-  ms: `Sembelihan Halal (Dhabihah) dan Daging-daging yang Dibenarkan`,
-  tur: `Zebih (Kesim) ve Yenmesi Helâl Etler`,
-  urd: `ذبیحہ، حلال ذبح اور جائز گوشت`,
-  ben: `যবিহাহ, হালাল যবাই ও অনুমোদিত মাংস`,
-  fas: `ذبیحه، ذبح حلال و گوشت‌های مجاز`,
-  zh: `合法之宰牲（宰比哈）与准食之肉`,
-  yue: `合法之宰牲（宰比哈）與准食之肉`,
-  ja: `ザビーハ，ハラール屠殺と食して良い肉`,
-  ru: `Забиха, халяльный забой и разрешённые виды мяса`,
-  es: `Dhabihah, el sacrificio halal y las carnes permitidas`,
-  ko: `자비하, 할랄 도축과 허용된 육류`,
-  ta: `தபீஹா, ஹலால் அறுத்தல் மற்றும் அனுமதிக்கப்பட்ட இறைச்சிகள்`,
-  si: `ඡබීහා, හලාල් කැපීම සහ අනුමැති මස්`,
-};
-
-const SUBTITLE: Record<string, string> = {
-  en: `How to render an animal halal to eat, the exact method of slaughter, the conditions on the slaughterer, the invocation of Allah's name, and which animals may or may not be eaten.`,
-  ms: `Bagaimana menjadikan haiwan halal untuk dimakan, cara sembelihan yang tepat, syarat penyembelih, sebutan nama Allah, dan haiwan mana yang boleh atau tidak boleh dimakan.`,
-  tur: `Bir hayvanı yenmeye helâl kılmanın usûlü, kesimin tam şekli, kesenin şartları, Allah adını anma ve hangi hayvanların yenip yenmeyeceği.`,
-  urd: `کسی جانور کو کھانے کے لیے حلال کیسے کریں، ذبح کا صحیح طریقہ، ذبح کرنے والے کی شرائط، اللہ کے نام کا ذکر، اور کون سے جانور کھائے جا سکتے ہیں یا نہیں۔`,
-  ben: `কীভাবে একটি প্রাণীকে খাওয়ার জন্য হালাল করা হয়, যবাইর সঠিক পদ্ধতি, যবাইকারীর শর্ত, আল্লাহর নাম উচ্চারণ, এবং কোন প্রাণী খাওয়া যাবে বা যাবে না।`,
-  fas: `چگونه یک حیوان را برای خوردن حلال کنیم، روش دقیق ذبح، شرایط ذابح، ذکر نام خدا، و اینکه چه حیواناتی قابل خوردن هستند یا نه.`,
-  zh: `使动物合法可食之法，宰牲之精确方法、宰牲者所应具之条件、诵真主之名，以及何种动物可食或不可食。`,
-  yue: `使動物合法可食之法，宰牲之精確方法、宰牲者所應具之條件、誦真主之名，以及何種動物可食或不可食。`,
-  ja: `動物を食するにハラールとする方法，屠殺の正確な手順、屠殺者の要件、アッラーの御名の唱え、そしてどの動物が食して良いか否か。`,
-  ru: `Как сделать животное халялем для употребления в пищу, точный порядок забоя, условия, предъявляемые к забойщику, произнесение имени Аллаха и какие животные разрешены или запрещены.`,
-  es: `Cómo hacer que un animal sea halal para comer, el método exacto del sacrificio, las condiciones sobre quien lo realiza, la invocación del nombre de Al-lah, y qué animales pueden o no comerse.`,
-  ko: `동물을 먹기에 할랄이 되게 하는 법, 정확한 도축 방법, 도축자에 대한 조건, 알라의 이름을 외침, 그리고 어떤 동물이 먹을 수 있고 없는지.`,
-  ta: `ஒரு விலங்கை உண்பதற்கு ஹலால் ஆக்குவது எப்படி, அறுப்பின் சரியான முறை, அறுப்பவரின் நிபந்தனைகள், அல்லாஹ்வின் பெயரை உச்சரித்தல், மற்றும் எந்த விலங்குகளை உண்ணலாம் அல்லது உண்ணக்கூடாது.`,
-  si: `සතෙකු අනුභවයට හලාල් කරන ආකාරය, කැපීමේ නිවැරදි ක්‍රමය, කපන්නාගේ කොන්දේසි, අල්ලාහ්ගේ නාමය ඉදිරිපත් කිරීම, සහ කුමන සතුන් අනුභව කළ හැකි හෝ නොහැකි ද.`,
-};
-
-const TOPIC: Record<string, string> = {
-  en: `Coming: the four conditions of valid dhabihah, (1) sharp instrument that draws blood without crushing (Muslim 1955); (2) severing the throat, oesophagus and at least one of the two jugular veins in one continuous stroke; (3) mentioning Allah's name (Bismillah, Allahu akbar per Anas ibn Malik in Bukhari 5558); (4) the slaughterer being Muslim or from the People of the Book (al-Ma'ida 5:5). The animal must be facing the qiblah, laid on its left side. Prohibited animals per Quran and Sunnah: pork (al-Baqara 2:173), carrion, blood, meat dedicated to other than Allah, strangled/beaten/head-butted animals, predatory beasts with fangs, birds with talons (Muslim 1934), animals slaughtered for idols; also donkeys (Bukhari 5528) per majority but not mules per some. Special cases: fish and locusts (no dhabihah needed, Ibn Majah 3218); hunted game (with Bismillah at release, al-Ma'ida 5:4); machine slaughter across the four schools; and udhiyah/qurbani for Eid al-Adha.`,
-  ms: `Akan datang: empat syarat sembelihan sah, (1) alat tajam yang mengalirkan darah tanpa menghancurkan (Muslim 1955); (2) memutuskan halkum, saluran makanan, dan sekurang-kurangnya satu daripada dua urat leher dalam satu gerakan berterusan; (3) menyebut nama Allah (Bismillah, Allahu akbar menurut Anas ibn Malik dalam Bukhari 5558); (4) penyembelih adalah Muslim atau Ahli Kitab (al-Ma'idah 5:5). Haiwan mesti mengadap kiblat, dibaringkan di sisi kiri. Haiwan yang diharamkan dalam al-Quran dan Sunnah: babi (al-Baqarah 2:173), bangkai, darah, daging yang didedikasikan selain Allah, haiwan yang dicekik/dipukul/ditanduk, binatang buas bertaring, burung yang bercakar (Muslim 1934), haiwan yang disembelih untuk berhala; keldai juga (Bukhari 5528) menurut majoriti tetapi tidak baghal menurut sebahagian. Kes khas: ikan dan belalang (tidak perlu sembelihan, Ibn Majah 3218); haiwan buruan (dengan Bismillah semasa dilepaskan, al-Ma'idah 5:4); sembelihan mesin dalam empat mazhab; dan qurban Eid al-Adha.`,
-  tur: `Yakında: geçerli zebîhin dört şartı, (1) ezmeden kan akıtan keskin âlet (Müslim 1955); (2) boğazın, yemek borusunun ve iki şah damardan en az birinin bir sürekli hareketle kesilmesi; (3) Allah'ın adının anılması (Bismillâh, Allāhu Ekber; Enes b. Mâlik, Buhârî 5558); (4) kesenin Müslüman veya Ehl-i Kitâb olması (Mâide 5:5). Hayvan kıbleye yönlendirilir ve sol yanına yatırılır. Kur'an ve Sünnete göre haram olan hayvanlar: domuz (Bakara 2:173), murdar, kan, Allah'tan başkası için kesilen, boğulmuş/darbe ile ölen/toslamış hayvanlar, azı dişli yırtıcılar, pençeli kuşlar (Müslim 1934), putlar için kesilenler; cumhura göre eşek (Buhârî 5528) da, ancak bazılarına göre katır değil. Özel durumlar: balık ve çekirge (kesim gerekmez, İbn Mâce 3218); avlanan hayvan (salıverilirken Bismillâh, Mâide 5:4); dört mezhepte makina kesimi; ve Kurban Bayramı için udhiye.`,
-  urd: `آنے والا: صحیح ذبیحہ کے چار شرائط، (۱) تیز آلہ جو کچلے بغیر خون بہائے (مسلم ۱۹۵۵)؛ (۲) حلق، خوراک کی نالی، اور دو رگوں میں سے کم از کم ایک کو ایک مسلسل حرکت میں کاٹنا؛ (۳) اللہ کا نام لینا (بسم اللہ، اللہ اکبر، انس بن مالک، بخاری ۵۵۵۸)؛ (۴) ذبح کرنے والا مسلمان یا اہل کتاب سے ہو (المائدہ ۵:۵)۔ جانور کو قبلہ رخ رکھا جائے، بائیں پہلو پر لٹایا جائے۔ قرآن و سنت کے مطابق حرام جانور: سور (البقرہ ۲:۱۷۳)، مردار، خون، غیر اللہ کے نام پر ذبح کردہ گوشت، گلا گھٹا/مارا ہوا/سینگ سے ٹکرایا ہوا جانور، دانتوں والے درندے، پنجوں والے پرندے (مسلم ۱۹۳۴)، بتوں کے لیے ذبح کیا ہوا؛ نیز جمہور کے مطابق گدھا (بخاری ۵۵۲۸) مگر بعض کے مطابق خچر نہیں۔ خصوصی صورتیں: مچھلی اور ٹڈی (ذبیحہ کی ضرورت نہیں، ابن ماجہ ۳۲۱۸)؛ شکار (چھوڑتے وقت بسم اللہ، المائدہ ۵:۴)؛ چار مذاہب میں مشین ذبیحہ؛ اور عید الاضحیٰ کے لیے قربانی۔`,
-  ben: `আসছে: বৈধ যবাইর চারটি শর্ত, (১) ধারালো যন্ত্র যা চূর্ণ না করে রক্ত প্রবাহিত করে (মুসলিম ১৯৫৫); (২) গলা, খাদ্যনালী, এবং দুটি শিরার অন্তত একটি একটানা স্ট্রোকে কাটা; (৩) আল্লাহর নাম উচ্চারণ (বিসমিল্লাহ, আল্লাহু আকবার, আনাস ইবন মালিক, বুখারি ৫৫৫৮); (৪) যবাইকারী মুসলিম বা আহলে কিতাব থেকে হওয়া (আল-মায়িদা ৫:৫)। প্রাণীটি অবশ্যই কিবলার দিকে মুখ করা এবং বাম পাশে শোয়ানো থাকতে হবে। কুরআন ও সুন্নাহ অনুযায়ী নিষিদ্ধ প্রাণী: শূকর (আল-বাকারা ২:১৭৩), মৃতদেহ, রক্ত, আল্লাহ ব্যতীত অন্যের নামে যবাই করা মাংস, শ্বাসরোধকৃত/মারধরকৃত/শিং দিয়ে আঘাতপ্রাপ্ত প্রাণী, দাঁতযুক্ত হিংস্র প্রাণী, নখরযুক্ত পাখি (মুসলিম ১৯৩৪), মূর্তির জন্য যবাইকৃত প্রাণী; সংখ্যাগরিষ্ঠ মতে গাধাও (বুখারি ৫৫২৮) কিন্তু কিছু মতে খচ্চর নয়। বিশেষ ক্ষেত্র: মাছ ও পঙ্গপাল (যবাইর প্রয়োজন নেই, ইবন মাজাহ ৩২১৮); শিকার (ছেড়ে দেওয়ার সময় বিসমিল্লাহ, আল-মায়িদা ৫:৪); চার মাযহাব জুড়ে যন্ত্রে যবাই; এবং ঈদুল আযহার কুরবানি।`,
-  fas: `به‌زودی: چهار شرط ذبح شرعی، (۱) ابزار تیز که خون را بدون له کردن جاری کند (مسلم ۱۹۵۵)؛ (۲) بریدن حلق، مری، و دست‌کم یکی از دو رگ گردن در یک حرکت پیوسته؛ (۳) ذکر نام خدا (بسم الله، الله اکبر، انس بن مالک، بخاری ۵۵۵۸)؛ (۴) ذابح مسلمان یا از اهل کتاب باشد (مائده ۵:۵). حیوان باید رو به قبله و بر پهلوی چپ خوابانده شود. حیوانات حرام بر پایه‌ی قرآن و سنت: خوک (بقره ۲:۱۷۳)، مردار، خون، گوشت ذبح‌شده برای غیر خدا، حیوانات خفه‌شده/زده‌شده/شاخ‌زده‌شده، درنده‌های دندان‌دار، پرندگان چنگال‌دار (مسلم ۱۹۳۴)، حیوانات ذبح‌شده برای بت‌ها؛ همچنین بنا بر مشهور خر (بخاری ۵۵۲۸) اما بنا بر برخی نه استر. موارد خاص: ماهی و ملخ (نیاز به ذبح ندارند، ابن ماجه ۳۲۱۸)؛ صید (با گفتن بسم الله هنگام رها کردن، مائده ۵:۴)؛ ذبح ماشینی در چهار مذهب؛ و قربانی عید قربان.`,
-  zh: `即将推出：合法宰牲之四条件，（一）不压碎而使血流之利器（穆斯林 1955）；（二）以一持续之动作切断咽喉、食道，及两颈动脉至少其一；（三）诵真主之名（「以真主之名，安拉至大」，艾奈斯·本·马立克，布哈里 5558）；（四）宰牲者为穆斯林或有经人（筵席章 5:5）。牲畜须面向基卜莱，卧于左侧。依古兰与圣行禁食：猪（黄牛章 2:173）、自死物、血、非以真主之名所宰之肉、扼死／被击打／被抵死之兽、有獠牙之猛兽、有利爪之猛禽（穆斯林 1934）、为偶像所宰者；依大多数派，驴亦然（布哈里 5528），然依部分派别，骡则不然。特例：鱼与蝗（无须宰牲，伊本·马哲 3218）；猎物（放矢时诵「以真主之名」，筵席章 5:4）；四大教法学派对机械宰牲之判决；以及宰牲节之古尔巴尼。`,
-  yue: `即將推出：合法宰牲之四條件，（一）不壓碎而使血流之利器（穆斯林 1955）；（二）以一持續之動作切斷咽喉、食道，及兩頸動脈至少其一；（三）誦真主之名（「以真主之名，安拉至大」，艾奈斯·本·馬立克，布哈里 5558）；（四）宰牲者為穆斯林或有經人（筵席章 5:5）。牲畜須面向基卜萊，臥於左側。依古蘭與聖行禁食：豬（黃牛章 2:173）、自死物、血、非以真主之名所宰之肉、扼死／被擊打／被抵死之獸、有獠牙之猛獸、有利爪之猛禽（穆斯林 1934）、為偶像所宰者；依大多數派，驢亦然（布哈里 5528），然依部分派別，騾則不然。特例：魚與蝗（無須宰牲，伊本·馬哲 3218）；獵物（放矢時誦「以真主之名」，筵席章 5:4）；四大教法學派對機械宰牲之判決；以及宰牲節之古爾巴尼。`,
-  ja: `近日追加：有効なザビーハの四条件，（一）押し潰さずに血を流す鋭利な器具（ムスリム 1955）、（二）喉、食道、および二本の頸静脈のうち少なくとも一本を、一度の連続した動作で切断すること、（三）アッラーの御名を唱えること（ビスミッラー、アッラーフ・アクバル，アナス・イブン・マーリク、ブハーリー 5558）、（四）屠殺者がムスリムまたは啓典の民であること（食卓章 5:5）。動物はキブラに向け、左側を下にする。クルアーンとスンナで禁じられる動物：豚（雌牛章 2:173）、死肉、血、アッラー以外の名で屠られた肉、絞殺・打撃・角突きで死んだ動物、牙のある肉食獣、鉤爪のある鳥（ムスリム 1934）、偶像のために屠られたもの、多数説によればロバ（ブハーリー 5528）、ただし一部見解ではラバは含まない。特例：魚とバッタ（屠殺不要，イブン・マージャ 3218）、狩猟（放つ際に「ビスミッラー」，食卓章 5:4）、四法学派における機械屠殺、そして犠牲祭のウドヒヤ／クルバーニー。`,
-  ru: `Скоро: четыре условия действительной забихи, (1) острый инструмент, вызывающий обильное истечение крови без раздавливания (Муслим 1955); (2) перерезание горла, пищевода и хотя бы одной из двух яремных вен одним непрерывным движением; (3) произнесение имени Аллаха (Бисмиллях, Аллаху Акбар, Анас ибн Малик, аль-Бухари 5558); (4) забойщик должен быть мусульманином или из людей Писания (аль-Маида 5:5). Животное должно быть обращено к кибле, положено на левый бок. Запретные виды пищи по Корану и Сунне: свинья (аль-Бакара 2:173), падаль, кровь, мясо, посвящённое не Аллаху, задушенное/забитое/забодавшееся животное, хищники с клыками, птицы с когтями (Муслим 1934), заклатое ради идолов; также осёл (аль-Бухари 5528) по мнению большинства, но не мул по мнению некоторых. Особые случаи: рыба и саранча (забиха не требуется, Ибн Маджа 3218); охотничья добыча (с "Бисмиллях" при пускании стрелы/собаки, аль-Маида 5:4); машинный забой у четырёх мазхабов; и удхия/курбани в Ид аль-Адху.`,
-  es: `Próximamente: las cuatro condiciones de una dhabihah válida, (1) instrumento afilado que hace fluir la sangre sin aplastar (Muslim 1955); (2) cortar la garganta, el esófago y al menos una de las dos yugulares en un único trazo continuo; (3) mencionar el nombre de Al-lah (Bismil-lah, Al-lahu akbar, Anas ibn Malik, al-Bukhari 5558); (4) que el sacrificador sea musulmán o de la Gente del Libro (al-Ma'ida 5:5). El animal debe estar orientado hacia la qiblah, tumbado sobre su costado izquierdo. Animales prohibidos según el Corán y la Sunna: el cerdo (al-Baqara 2:173), la carroña, la sangre, la carne consagrada a otro que Al-lah, el animal estrangulado/golpeado/corneado, las fieras con colmillos, las aves con garras (Muslim 1934), lo sacrificado para ídolos; también el burro (al-Bukhari 5528) según la mayoría, aunque no la mula según algunos. Casos especiales: pescado y langostas (no requieren dhabihah, Ibn Maja 3218); pieza de caza (con «Bismil-lah» al soltar, al-Ma'ida 5:4); el sacrificio mecánico según las cuatro escuelas; y la udhiya/qurbani del Eid al-Adha.`,
-  ko: `공개 예정: 유효한 자비하의 네 조건, (1) 짓눌리지 않게 피를 흐르게 하는 예리한 도구(무슬림 1955); (2) 목, 식도, 그리고 두 경정맥 중 적어도 하나를 한 번의 연속된 동작으로 절단; (3) 알라의 이름을 낭송(비스밀라, 알라후 아크바르, 아나스 이븐 말리크, 알부카리 5558); (4) 도축자가 무슬림 또는 성서의 백성이어야 함(알마이다 5:5). 동물은 키블라를 향해 왼쪽으로 눕힌다. 꾸란과 순나에 따라 금지된 것들: 돼지(알바카라 2:173), 죽은 고기, 피, 알라 외의 이름으로 도살된 고기, 목이 졸리거나 얻어맞거나 뿔에 받힌 동물, 송곳니 있는 맹수, 발톱 있는 조류(무슬림 1934), 우상을 위해 도살된 것; 다수설상 당나귀(알부카리 5528), 그러나 일부는 노새 제외. 특별한 경우: 물고기와 메뚜기(자비하 불필요, 이븐 마자 3218); 사냥감("비스밀라"라 부르며 놓아줌, 알마이다 5:4); 네 법학파의 기계 도축 판결; 이드 알아드하의 우드히야/쿠르바니.`,
-  ta: `விரைவில் வரும்: செல்லுபடியாகும் தபீஹாவின் நான்கு நிபந்தனைகள், (1) நசுக்காமல் இரத்தத்தை பாய வைக்கும் கூர்மையான கருவி (முஸ்லிம் 1955); (2) தொண்டை, உணவுக்குழல், மற்றும் இரு கழுத்து இரத்தக்குழல்களில் குறைந்தது ஒன்றை ஒரே தொடர்ச்சியான வெட்டில் அறுத்தல்; (3) அல்லாஹ்வின் பெயரை உச்சரித்தல் (பிஸ்மில்லாஹ், அல்லாஹு அக்பர், அனஸ் இப்னு மாலிக், புகாரி 5558); (4) அறுப்பவர் முஸ்லிமாகவோ அல்லது வேதம் கொடுக்கப்பட்டவர்களில் ஒருவராகவோ இருத்தல் (அல்-மாஇதா 5:5). விலங்கு கிப்லாவை நோக்கியிருக்க வேண்டும், இடப் புறமாக படுக்க வைக்கப்பட வேண்டும். குர்ஆன் மற்றும் ஸுன்னாவின்படி தடைசெய்யப்பட்டவை: பன்றி (அல்-பகரா 2:173), செத்த மாமிசம், இரத்தம், அல்லாஹ்-அல்லாதவற்றின் பெயரால் அறுக்கப்பட்ட இறைச்சி, மூச்சுத் திணற/அடிக்க/கொம்பினால் மோதிக் கொல்லப்பட்ட விலங்கு, கோரப் பற்கள் உள்ள கொடிய விலங்குகள், நகங்களுடன் கூடிய பறவைகள் (முஸ்லிம் 1934), சிலைகளுக்காக அறுக்கப்பட்டவை; பெரும்பான்மையினர் படி கழுதை (புகாரி 5528) ஆனால் சிலரின் படி கோவேறு கழுதை இல்லை. சிறப்பு நிகழ்வுகள்: மீன் மற்றும் வெட்டுக்கிளி (தபீஹா தேவையில்லை, இப்னு மாஜா 3218); வேட்டையாடப்பட்டவை (விடும்போது பிஸ்மில்லாஹ், அல்-மாஇதா 5:4); நான்கு மத்ஹபுகளில் இயந்திர அறுப்பு; ஈதுல் அள்ஹாவின் உள்ஹியா/குர்பானி.`,
-  si: `ඉදිරියේදී: වලංගු ඡබීහාවේ කොන්දේසි හතර, (1) පොඩි නොකර රුධිරය ගලා යාමට හේතු වන තියුණු මෙවලමක් (මුස්ලිම් 1955); (2) එක් අඛණ්ඩ ක්‍රියාවෙන් උගුර, ආහාර නාළය සහ ග්‍රීවා නහර දෙකෙන් අවම වශයෙන් එකක් කැපීම; (3) අල්ලාහ්ගේ නාමය සඳහන් කිරීම (බිස්මිල්ලාහ්, අල්ලාහු අක්බර්, අනස් ඉබ්න් මාලික්, බුකාරි 5558); (4) කපන්නා මුස්ලිම්වරයෙකු හෝ පොත් ලද්දවුන්ගෙන් වීම (අල්-මාඉදා 5:5). සත්වයා කිබ්ලා දෙසට මුහුණ දී වම් පැත්තට තැබිය යුතුය. කුර්ආනය සහ සුන්නාවට අනුව තහනම් සතුන්: හූරන් (අල්-බකරා 2:173), මිය ගිය සතුන්, රුධිරය, අල්ලාහ් හැර වෙනත් අයෙකුට කැප කරන ලද මස්, සිර කරන ලද/පහර දෙන ලද/අං වලින් පහර දෙන ලද සතුන්, දළ ඇති කෘර සතුන්, නියපොතු ඇති කුරුල්ලන් (මුස්ලිම් 1934), පිළිම වෙනුවෙන් කැපූ දේවල්; බහුතරයට අනුව බූරුවා ද (බුකාරි 5528), නමුත් සමහරන්ට අනුව කොටළුවා නොවේ. විශේෂ අවස්ථා: මාළු සහ පළඟැටියා (ඡබීහා අවශ්‍ය නොවේ, ඉබ්න් මාජා 3218); දඩයම් කරන ලද දේ (මුදා හරින විට "බිස්මිල්ලාහ්", අල්-මාඉදා 5:4); සුන්නි මධ්හබ් හතරෙන් යන්ත්‍රකරණ කැපීම; සහ ඊදුල් අද්හාහි උද්හියා/කුර්බානි.`,
-};
 
 export function DhabihahContent() {
   const { lang } = useLanguage();
+  const tc = (key: DhabihahContentKey): string => {
+    const entry = DHABIHAH_CONTENT[key] as Record<string, string | undefined> | undefined;
+    if (!entry) return key;
+    return entry[lang] ?? entry.en ?? key;
+  };
+
   return (
     <>
       <PageHeader
@@ -77,182 +66,130 @@ export function DhabihahContent() {
       <div className="max-w-3xl mx-auto px-6 py-16 space-y-12">
         {/* Ihsan */}
         <section>
-          <h2 className="section-title font-garamond text-2xl md:text-3xl font-semibold text-forest mb-4">
-            The Foundational Principle: Ihsan
-          </h2>
+          <h2 className="section-title font-garamond text-2xl md:text-3xl font-semibold text-forest mb-4">{tc('ihsan_h')}</h2>
           <article className="card-islamic space-y-4">
             <ArabicText text={IHSAN_HADITH_AR} size="md" />
-            <p className="text-forest/75 text-sm leading-relaxed">{IHSAN_HADITH_EN}</p>
-            <p className="text-forest/70 text-sm leading-relaxed">
-              This hadith of Shaddad ibn Aws is the foundation of the entire Islamic law of slaughter. Every rule that follows exists to fulfil these two commands: sharpen the blade, and give the animal comfort. Islamic slaughter is not merely a method for producing meat, it is an act of worship in which the animal is treated with mercy up to and including its last breath.
-            </p>
-            <p className="text-xs text-gold/60 italic">Source: Muslim 1955 (Shaddad ibn Aws).</p>
+            <p className="text-forest/75 text-sm leading-relaxed">{tc('ihsan_hadith_en')}</p>
+            <p className="text-forest/70 text-sm leading-relaxed">{tc('ihsan_p')}</p>
+            <p className="text-xs text-gold/60 italic">{tc('ihsan_source')}</p>
           </article>
         </section>
 
-        {/* The Four Conditions */}
+        {/* Four Conditions */}
         <section>
-          <h2 className="section-title font-garamond text-2xl md:text-3xl font-semibold text-forest mb-4">
-            The Four Conditions of a Valid Slaughter
-          </h2>
+          <h2 className="section-title font-garamond text-2xl md:text-3xl font-semibold text-forest mb-4">{tc('conditions_h')}</h2>
           <article className="card-islamic space-y-4">
-            <p className="text-forest/75 text-sm leading-relaxed">
-              For meat to be halal, four conditions must be met:
-            </p>
+            <p className="text-forest/75 text-sm leading-relaxed">{tc('conditions_intro')}</p>
 
             <div className="border-t border-gold/10 pt-3">
-              <p className="text-forest/75 text-sm font-medium mb-1"><strong>1. The slaughterer.</strong></p>
-              <p className="text-forest/70 text-sm leading-relaxed">
-                Must be a Muslim, or from the People of the Book (Jew or Christian) whose slaughter Allah has explicitly permitted: <em>“The food of those who were given the Scripture is lawful for you”</em> (al-Ma’ida 5:5). Muslim, sane, capable of intention, and pronouncing Allah’s name at the moment of slaughter.
-              </p>
+              <p className="text-forest/75 text-sm font-medium mb-1"><strong>{tc('cond_1_label')}</strong></p>
+              <p className="text-forest/70 text-sm leading-relaxed">{tc('cond_1_body')}</p>
             </div>
 
             <div className="border-t border-gold/10 pt-3">
-              <p className="text-forest/75 text-sm font-medium mb-1"><strong>2. The instrument.</strong></p>
-              <p className="text-forest/70 text-sm leading-relaxed">
-                A sharp implement that causes flowing blood: a knife, a sword, a sharpened stone or shell. The Prophet ﷺ forbade the use of a tooth (a bone) or a nail (a claw); these do not cut cleanly and would strangle the animal.
-              </p>
-              <p className="text-xs text-gold/60 italic mt-1">Source: al-Bukhari 5498, Muslim 1968 (Rafi’ ibn Khadij).</p>
+              <p className="text-forest/75 text-sm font-medium mb-1"><strong>{tc('cond_2_label')}</strong></p>
+              <p className="text-forest/70 text-sm leading-relaxed">{tc('cond_2_body')}</p>
+              <p className="text-xs text-gold/60 italic mt-1">{tc('cond_2_source')}</p>
             </div>
 
             <div className="border-t border-gold/10 pt-3">
-              <p className="text-forest/75 text-sm font-medium mb-1"><strong>3. The cut.</strong></p>
-              <p className="text-forest/70 text-sm leading-relaxed">
-                One continuous cut through the throat that severs the trachea (windpipe), the oesophagus (foodpipe), and at least one of the two jugular veins. The Hanafi school requires cutting at least three of the four (trachea, oesophagus, and two jugulars); the Shafi’i and Maliki, at least the trachea and oesophagus; the Hanbali, the trachea alone with blood-flow suffices. The safe practice combines all four.
-              </p>
+              <p className="text-forest/75 text-sm font-medium mb-1"><strong>{tc('cond_3_label')}</strong></p>
+              <p className="text-forest/70 text-sm leading-relaxed">{tc('cond_3_body')}</p>
             </div>
 
             <div className="border-t border-gold/10 pt-3">
-              <p className="text-forest/75 text-sm font-medium mb-1"><strong>4. The invocation of Allah's name (tasmiya).</strong></p>
+              <p className="text-forest/75 text-sm font-medium mb-1"><strong>{tc('cond_4_label')}</strong></p>
               <ArabicText text={BISMILLAH_SLAUGHTER_AR} size="md" />
               <p className="text-forest/60 italic text-sm mt-1">{BISMILLAH_SLAUGHTER_TR}</p>
               <p className="text-forest/70 text-sm leading-relaxed mt-2">{BISMILLAH_SLAUGHTER_EN}</p>
-              <p className="text-forest/70 text-sm leading-relaxed mt-2">
-                Said at the moment of the cut. The Qur’an is emphatic: <em>“Do not eat that over which the name of Allah has not been mentioned”</em> (al-An’am 6:121). The Hanafi and Maliki schools consider deliberate omission invalidating; the Shafi’i school holds it recommended but not strictly required; the Hanbali position varies. To err on the side of certainty, always say it.
-              </p>
+              <p className="text-forest/70 text-sm leading-relaxed mt-2">{tc('cond_4_body')}</p>
             </div>
           </article>
         </section>
 
         {/* Method */}
         <section>
-          <h2 className="section-title font-garamond text-2xl md:text-3xl font-semibold text-forest mb-4">
-            The Method
-          </h2>
+          <h2 className="section-title font-garamond text-2xl md:text-3xl font-semibold text-forest mb-4">{tc('method_h')}</h2>
           <article className="card-islamic space-y-3">
             <ol className="text-forest/75 text-sm space-y-2 list-decimal list-inside">
-              <li>Sharpen the blade out of sight of the animal (Muslim 1955).</li>
-              <li>Do not slaughter one animal in front of another.</li>
-              <li>Face the animal towards the qiblah, lying it on its left side (the classical practice, though not a strict validity condition).</li>
-              <li>Say <em>Bismillah, wa Allahu Akbar</em> at the moment of the cut.</li>
-              <li>Make a swift, single cut through the neck at the front (not from the back).</li>
-              <li>Do not press or manipulate the animal until it has stopped moving.</li>
+              <li>{tc('method_step_1')}</li>
+              <li>{tc('method_step_2')}</li>
+              <li>{tc('method_step_3')}</li>
+              <li>{tc('method_step_4')}</li>
+              <li>{tc('method_step_5')}</li>
+              <li>{tc('method_step_6')}</li>
             </ol>
-            <p className="text-forest/70 text-sm leading-relaxed">
-              A hadith records that ‘Umar (ra) saw a man about to slaughter a sheep by dragging it by the foot to the killing place. ‘Umar struck him and said: <em>“Drive it to its death gently.”</em>
-            </p>
+            <p className="text-forest/70 text-sm leading-relaxed">{tc('method_umar_p')}</p>
           </article>
         </section>
 
-        {/* Permitted and forbidden animals */}
+        {/* Animals */}
         <section>
-          <h2 className="section-title font-garamond text-2xl md:text-3xl font-semibold text-forest mb-4">
-            Which Animals Are Permitted and Which Are Not
-          </h2>
+          <h2 className="section-title font-garamond text-2xl md:text-3xl font-semibold text-forest mb-4">{tc('animals_h')}</h2>
           <article className="card-islamic space-y-3">
-            <p className="text-forest/75 text-sm leading-relaxed">
-              <strong>Explicitly forbidden</strong> in the Qur’an and Sunnah:
-            </p>
+            <p className="text-forest/75 text-sm leading-relaxed"><strong>{tc('animals_forbidden_intro')}</strong></p>
             <ul className="text-forest/70 text-sm space-y-1 list-disc list-inside">
-              <li>Pork (al-Baqarah 2:173, al-Ma’ida 5:3, al-An’am 6:145, al-Nahl 16:115).</li>
-              <li>Blood (poured out, the same verses).</li>
-              <li>Carrion, strangled, beaten, fallen, gored, or partly-eaten-by-a-beast animals unless finished properly before death (al-Ma’ida 5:3).</li>
-              <li>Animals slaughtered for other than Allah, or on stone altars (al-Ma’ida 5:3).</li>
-              <li>Fanged predators (lion, tiger, wolf, dog, cat), per Muslim 1934.</li>
-              <li>Taloned birds of prey (eagle, hawk, falcon), same hadith.</li>
-              <li>Domestic donkey (al-Bukhari 4198, 5528).</li>
-              <li>Every creature the Sunnah forbade the killing of (frogs, ants, bees, hoopoe, shrike, per Abu Dawud 5267), which by extension are not eaten.</li>
+              <li>{tc('animals_pork')}</li>
+              <li>{tc('animals_blood')}</li>
+              <li>{tc('animals_carrion')}</li>
+              <li>{tc('animals_altar')}</li>
+              <li>{tc('animals_fanged')}</li>
+              <li>{tc('animals_taloned')}</li>
+              <li>{tc('animals_donkey')}</li>
+              <li>{tc('animals_creatures')}</li>
             </ul>
-            <p className="text-forest/70 text-sm leading-relaxed pt-2">
-              <strong>Permitted:</strong> sheep, goats, cattle, camel, chicken, and the general run of grazing livestock. The mule is disputed (majority: not permitted). The horse is disputed (Hanafi: makruh; the other three: permitted with karahah).
-            </p>
+            <p className="text-forest/70 text-sm leading-relaxed pt-2">{tc('animals_permitted_p')}</p>
           </article>
         </section>
 
-        {/* Fish and locusts */}
+        {/* Fish */}
         <section>
-          <h2 className="section-title font-garamond text-2xl md:text-3xl font-semibold text-forest mb-4">
-            The Two Exceptions: Fish and Locusts
-          </h2>
+          <h2 className="section-title font-garamond text-2xl md:text-3xl font-semibold text-forest mb-4">{tc('fish_h')}</h2>
           <article className="card-islamic space-y-3">
-            <p className="text-forest/75 text-sm leading-relaxed">
-              The Prophet ﷺ said: <em>“Two dead animals and two bloods have been made lawful to us. As for the two dead animals, they are fish and locusts. As for the two bloods, they are the liver and the spleen.”</em>
-            </p>
-            <p className="text-forest/70 text-sm leading-relaxed">
-              Fish and locusts do not require ritual slaughter; they may be eaten however they die. Fish caught dead in the water is halal (Ibn Umar). The classical majority (Shafi’i, Maliki, Hanbali) permit all seafood; the Hanafi school restricts it to scaled fish specifically.
-            </p>
-            <p className="text-xs text-gold/60 italic">Source: Ibn Majah 3314, al-Bayhaqi (Ibn Umar).</p>
+            <p className="text-forest/75 text-sm leading-relaxed">{tc('fish_hadith')}</p>
+            <p className="text-forest/70 text-sm leading-relaxed">{tc('fish_p')}</p>
+            <p className="text-xs text-gold/60 italic">{tc('fish_source')}</p>
           </article>
         </section>
 
         {/* Hunting */}
         <section>
-          <h2 className="section-title font-garamond text-2xl md:text-3xl font-semibold text-forest mb-4">
-            Hunting
-          </h2>
+          <h2 className="section-title font-garamond text-2xl md:text-3xl font-semibold text-forest mb-4">{tc('hunting_h')}</h2>
           <article className="card-islamic space-y-3">
-            <p className="text-forest/75 text-sm leading-relaxed">
-              For game where slaughter is impossible (a bird brought down mid-flight, a deer struck by an arrow), what is caught is halal if:
-            </p>
+            <p className="text-forest/75 text-sm leading-relaxed">{tc('hunting_intro')}</p>
             <ul className="text-forest/70 text-sm space-y-1 list-disc list-inside">
-              <li>The hunter is a Muslim (or People of the Book).</li>
-              <li>Says <em>Bismillah</em> at the moment of release (of the arrow, spear, bullet, or trained hunting animal).</li>
-              <li>The instrument penetrates and causes flowing blood.</li>
-              <li>If a trained hunting dog or falcon is used, it must be trained (does not eat what it catches) and released with the invocation.</li>
+              <li>{tc('hunting_c_1')}</li>
+              <li>{tc('hunting_c_2')}</li>
+              <li>{tc('hunting_c_3')}</li>
+              <li>{tc('hunting_c_4')}</li>
             </ul>
-            <p className="text-forest/70 text-sm leading-relaxed">
-              <em>“They ask you what has been made lawful for them. Say: lawful for you are all good foods and what you have trained hunting animals to catch, teaching them of what Allah has taught you. So eat of what they catch for you, and mention the name of Allah upon it.”</em> (al-Ma’ida 5:4).
-            </p>
+            <p className="text-forest/70 text-sm leading-relaxed">{tc('hunting_verse')}</p>
           </article>
         </section>
 
-        {/* Mechanical slaughter */}
+        {/* Mechanical */}
         <section>
-          <h2 className="section-title font-garamond text-2xl md:text-3xl font-semibold text-forest mb-4">
-            Mechanical Slaughter and Modern Abattoirs
-          </h2>
+          <h2 className="section-title font-garamond text-2xl md:text-3xl font-semibold text-forest mb-4">{tc('mech_h')}</h2>
           <article className="card-islamic space-y-3">
-            <p className="text-forest/75 text-sm leading-relaxed">
-              The classical conditions do not require the cutter to hold the knife personally. A rotating blade, a mechanical cutter, or an automated line is permitted <strong>if</strong>:
-            </p>
+            <p className="text-forest/75 text-sm leading-relaxed">{tc('mech_intro')}</p>
             <ul className="text-forest/70 text-sm space-y-1 list-disc list-inside">
-              <li>A Muslim (or ahl al-kitab) operator initiates the run with tasmiya.</li>
-              <li>The blade meets the four-condition cut (throat vessels severed).</li>
-              <li>The animal is alive at the point of cut (post-mortem cutting does not make halal what died before it).</li>
-              <li>Pre-stunning, if used, must not kill the animal before the cut. Recoverable stunning (low-voltage electric) is permitted by many fatwa councils (South Africa, Malaysia, Egyptian Dar al-Ifta); irrecoverable stunning (bolt, high-voltage, gas) is not.</li>
+              <li>{tc('mech_c_1')}</li>
+              <li>{tc('mech_c_2')}</li>
+              <li>{tc('mech_c_3')}</li>
+              <li>{tc('mech_c_4')}</li>
             </ul>
-            <p className="text-forest/70 text-sm leading-relaxed">
-              This is why halal certification exists: to audit the chain from stunning method to blade to invocation.
-            </p>
+            <p className="text-forest/70 text-sm leading-relaxed">{tc('mech_certification')}</p>
           </article>
         </section>
 
         {/* Qurbani */}
         <section>
-          <h2 className="section-title font-garamond text-2xl md:text-3xl font-semibold text-forest mb-4">
-            Udhiyah and Qurbani (The Eid al-Adha Slaughter)
-          </h2>
+          <h2 className="section-title font-garamond text-2xl md:text-3xl font-semibold text-forest mb-4">{tc('qurbani_h')}</h2>
           <article className="card-forest rounded-2xl p-6 space-y-3">
-            <p className="text-cream/85 text-sm leading-relaxed">
-              On the 10th, 11th, and 12th of Dhul-Hijjah, Muslims worldwide who can afford it slaughter a sheep, goat, cow, or camel in the tradition of the Prophet Ibrahim ﷺ. The Prophet Muhammad ﷺ said: <em>“Whoever can afford it and does not sacrifice, let him not come near our place of prayer.”</em>
-            </p>
-            <p className="text-cream/85 text-sm leading-relaxed">
-              The meat is divided into three: one third for the family, one third for friends and neighbours, one third for the poor. In modern times most Muslims pay a trusted charity to slaughter on their behalf in a country of need.
-            </p>
-            <p className="text-cream/85 text-sm leading-relaxed">
-              This is the ritual re-enactment of what Ibrahim ﷺ was ready to do with Isma’il ﷺ, and what Allah ransomed with a mighty sacrifice (al-Saffat 37:107). Every year the family gathers, the animal is treated with ihsan, and the poor eat meat perhaps for the only time that year.
-            </p>
-            <p className="text-xs text-gold/70 italic">Source: Ibn Majah 3123 (Abu Hurayra) for the warning; Fiqh across the four schools for the meat division.</p>
+            <p className="text-cream/85 text-sm leading-relaxed">{tc('qurbani_p1')}</p>
+            <p className="text-cream/85 text-sm leading-relaxed">{tc('qurbani_p2')}</p>
+            <p className="text-cream/85 text-sm leading-relaxed">{tc('qurbani_p3')}</p>
+            <p className="text-xs text-gold/70 italic">{tc('qurbani_source')}</p>
           </article>
         </section>
       </div>
