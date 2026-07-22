@@ -54,11 +54,11 @@ export function SalawatsContent() {
           <article className="card-islamic space-y-4">
             <ArabicText text={ISTIKHARAH_DUA_AR} size="md" />
             <div className="border-t border-gold/10 pt-3">
-              <p className="text-xs text-gold/70 font-medium uppercase tracking-wider mb-1">Transliteration</p>
+              <p className="text-xs text-gold/70 font-medium uppercase tracking-wider mb-1">{tc('label_transliteration')}</p>
               <p className="text-forest/60 italic text-sm leading-relaxed">{ISTIKHARAH_DUA_TR}</p>
             </div>
             <p className="text-forest/75 leading-relaxed text-sm">{tc('istikharah_p')}</p>
-            <p className="text-xs text-gold/60 italic">Source: al-Bukhari 1162, 6382.</p>
+            <p className="text-xs text-gold/60 italic">{tc('istikharah_source')}</p>
           </article>
         </section>
 
@@ -70,11 +70,11 @@ export function SalawatsContent() {
           <article className="card-islamic space-y-4">
             <ArabicText text={TAHAJJUD_OPEN_AR} size="md" />
             <div className="border-t border-gold/10 pt-3">
-              <p className="text-xs text-gold/70 font-medium uppercase tracking-wider mb-1">Transliteration</p>
+              <p className="text-xs text-gold/70 font-medium uppercase tracking-wider mb-1">{tc('label_transliteration')}</p>
               <p className="text-forest/60 italic text-sm leading-relaxed">{TAHAJJUD_OPEN_TR}</p>
             </div>
             <p className="text-forest/75 leading-relaxed text-sm">{tc('tahajjud_p')}</p>
-            <p className="text-xs text-gold/60 italic">Source: al-Bukhari 1120, Muslim 769.</p>
+            <p className="text-xs text-gold/60 italic">{tc('tahajjud_source')}</p>
           </article>
         </section>
 
@@ -86,32 +86,29 @@ export function SalawatsContent() {
           <article className="card-islamic space-y-4">
             <ArabicText text={DUHA_DUA_AR} size="md" />
             <div className="border-t border-gold/10 pt-3">
-              <p className="text-xs text-gold/70 font-medium uppercase tracking-wider mb-1">Transliteration</p>
+              <p className="text-xs text-gold/70 font-medium uppercase tracking-wider mb-1">{tc('label_transliteration')}</p>
               <p className="text-forest/60 italic text-sm leading-relaxed">{DUHA_DUA_TR}</p>
             </div>
             <p className="text-forest/75 leading-relaxed text-sm">{tc('duha_p')}</p>
-            <p className="text-xs text-gold/60 italic">Note: this specific Duha du'a is narrated as a supplication of the righteous; the salat itself is confirmed in al-Bukhari 1178 and Muslim 720.</p>
+            <p className="text-xs text-gold/60 italic">{tc('duha_source_note')}</p>
           </article>
         </section>
 
         {/* In-Development notice */}
         <section>
           <article className="card-forest rounded-2xl p-6">
-            <h3 className="font-garamond text-lg font-semibold text-gold mb-3">In Development</h3>
-            <p className="text-cream/85 leading-relaxed text-sm mb-3">
-              The following voluntary and occasional prayers are being written into all 14 languages. Each will
-              include Arabic, transliteration, translation, hadith source and step-by-step method.
-            </p>
+            <h3 className="font-garamond text-lg font-semibold text-gold mb-3">{tc('indev_h')}</h3>
+            <p className="text-cream/85 leading-relaxed text-sm mb-3">{tc('indev_intro')}</p>
             <ul className="text-cream/70 text-sm space-y-1 list-disc list-inside">
-              <li>Salat al-Tarawih, the Ramadan night prayer (cross-linked to /ramadan)</li>
-              <li>Salat al-Musafir, the traveller's prayer (shortening and combining)</li>
-              <li>Salat al-Kusuf / al-Khusuf, the eclipse prayer (solar and lunar)</li>
-              <li>Salat al-Istisqa, the prayer for rain</li>
-              <li>Salat al-Hajah, the prayer of need</li>
-              <li>Salat al-Tawbah, the prayer of repentance</li>
-              <li>Salat al-Awwabin, the six rakat after Maghrib</li>
-              <li>Sujud al-Tilawah, prostration on reciting a verse of prostration</li>
-              <li>Sujud al-Shukr, prostration of gratitude</li>
+              <li>{tc('indev_tarawih')}</li>
+              <li>{tc('indev_musafir')}</li>
+              <li>{tc('indev_kusuf')}</li>
+              <li>{tc('indev_istisqa')}</li>
+              <li>{tc('indev_hajah')}</li>
+              <li>{tc('indev_tawbah')}</li>
+              <li>{tc('indev_awwabin')}</li>
+              <li>{tc('indev_tilawah')}</li>
+              <li>{tc('indev_shukr')}</li>
             </ul>
           </article>
         </section>
