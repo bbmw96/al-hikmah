@@ -121,7 +121,7 @@ export function MustalahHadithContent() {
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                   {[1, 2].map(i => (
                     <div key={i} className="bg-gold/5 rounded-xl p-3">
-                      <h4 className="text-forest font-semibold text-xs mb-1">{tc(k(`grades.${g.key}.sub${i}.name`))}</h4>
+                      <p className="text-forest font-semibold text-xs mb-1">{tc(k(`grades.${g.key}.sub${i}.name`))}</p>
                       <p className="text-forest/60 text-xs leading-relaxed">{tc(k(`grades.${g.key}.sub${i}.detail`))}</p>
                     </div>
                   ))}
