@@ -39,7 +39,10 @@ export function DuasListContent() {
   const trimmed = query.trim();
   const active = trimmed.length > 0 || selectedCat !== 'all';
 
-  // Build search index that responds to language + bookmark set
+  // Build search index that responds to language + bookmark set.
+  // Haystack includes every rich content field, both the localized rendition
+  // (when a translation exists for `lang`) and the English source as fallback,
+  // so partial-word / small-description queries always match.
   const results = useMemo(() => {
     if (!active) return [];
     const bookmarkSet = new Set(bookmarkIds);
@@ -52,15 +55,40 @@ export function DuasListContent() {
       if (needle.length === 0) return true;
 
       const dk = d.id.replace(/-/g, '_');
-      const title =
-        (DUAS_CONTENT[`dua_${dk}_title` as DuasContentKey] as Record<string, string | undefined> | undefined)?.[lang] ??
-        d.title;
-      const meaning =
-        (DUAS_CONTENT[`dua_${dk}_meaning` as DuasContentKey] as Record<string, string | undefined> | undefined)?.[lang] ??
-        d.meaning;
-      const occasion = d.occasion ?? '';
+      const pick = (k: string): string => {
+        const entry = DUAS_CONTENT[k as DuasContentKey] as Record<string, string | undefined> | undefined;
+        if (!entry) return '';
+        // Include BOTH the localized rendition and the English fallback so users
+        // typing in either their display language or English still match.
+        const parts = [entry[lang], entry['en']].filter(Boolean) as string[];
+        return parts.join('\n');
+      };
 
-      const hay = normalise(`${title}\n${meaning}\n${occasion}\n${d.transliteration}`);
+      const cat = DUA_CATEGORIES.find(c => c.id === d.category);
+      const catKeyStr = cat ? cat.id.replace(/-/g, '_') : '';
+      const catLocalized = cat ? pick(`cat_${catKeyStr}_name`) : '';
+      const catDesc = cat ? pick(`cat_${catKeyStr}_desc`) : '';
+
+      const hay = normalise(
+        [
+          pick(`dua_${dk}_title`),
+          d.title,
+          pick(`dua_${dk}_meaning`),
+          d.meaning,
+          pick(`dua_${dk}_occasion`),
+          d.occasion ?? '',
+          pick(`dua_${dk}_virtue`),
+          d.virtue ?? '',
+          d.transliteration,
+          d.arabic,
+          d.source,
+          d.id.replace(/-/g, ' '),
+          catLocalized,
+          cat?.title ?? '',
+          cat?.arabicTitle ?? '',
+          catDesc,
+        ].join('\n'),
+      );
       return hay.includes(needle);
     });
   }, [active, trimmed, selectedCat, bookmarkIds, lang]);

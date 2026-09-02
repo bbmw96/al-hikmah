@@ -465,11 +465,22 @@ export function getGlossaryEntry(id: string): GlossaryEntry | undefined {
 }
 
 export function searchGlossary(query: string): GlossaryEntry[] {
-  const q = query.toLowerCase();
-  return GLOSSARY.filter(
-    e =>
-      e.term.toLowerCase().includes(q) ||
-      e.transliteration.toLowerCase().includes(q) ||
-      e.definition.toLowerCase().includes(q),
-  );
+  const trimmed = query.trim();
+  if (!trimmed) return GLOSSARY;
+  // Latin haystack lower-cased + NFD-stripped for diacritic tolerance;
+  // Arabic terms compared raw so users typing Arabic still match.
+  const needleLatin = trimmed.toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '');
+  return GLOSSARY.filter(e => {
+    const latinHay = [
+      e.term,
+      e.transliteration,
+      e.definition,
+      e.context ?? '',
+      (e.relatedTerms ?? []).join(' '),
+      e.category,
+      e.id.replace(/-/g, ' '),
+    ].join('\n').toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '');
+    if (latinHay.includes(needleLatin)) return true;
+    return e.arabicTerm.includes(trimmed);
+  });
 }

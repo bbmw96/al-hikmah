@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useMemo, useState } from 'react';
 import { Search } from 'lucide-react';
 import { PageHeader } from '@/components/ui/PageHeader';
 import { useLanguage } from '@/lib/i18n/context';
@@ -17,18 +17,35 @@ function useNC() {
   };
 }
 
+// Strip Latin diacritics and lower-case for tolerant search. Arabic is left
+// intact because NFD-stripping combining marks would remove Arabic tashkeel.
+function normaliseLatin(s: string): string {
+  return s.toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '');
+}
+
 export function NinetyNineNamesContent() {
   const tc = useNC();
   const [query, setQuery] = useState('');
 
-  const filtered = query
-    ? NINETY_NINE_NAMES.filter(
-        n =>
-          n.transliteration.toLowerCase().includes(query.toLowerCase()) ||
-          n.meaning.toLowerCase().includes(query.toLowerCase()) ||
-          n.arabic.includes(query),
-      )
-    : NINETY_NINE_NAMES;
+  const filtered = useMemo(() => {
+    const trimmed = query.trim();
+    if (!trimmed) return NINETY_NINE_NAMES;
+    const needleLatin = normaliseLatin(trimmed);
+    return NINETY_NINE_NAMES.filter(n => {
+      const hay = normaliseLatin(
+        [
+          String(n.number),
+          n.transliteration,
+          n.meaning,
+          n.explanation,
+          n.quranRef ?? '',
+        ].join('\n'),
+      );
+      if (hay.includes(needleLatin)) return true;
+      // Arabic includes intact so users typing Arabic still match.
+      return n.arabic.includes(trimmed);
+    });
+  }, [query]);
 
   return (
     <>
