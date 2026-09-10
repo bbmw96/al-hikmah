@@ -3,6 +3,7 @@ import { QURAN_113 } from './quran-113';
 import { QURAN_114 } from './quran-114';
 import { QURAN_BATCH_1 } from './quran-batch1';
 import { applyFill } from './quran-batch1-fill';
+import { QURAN_BATCH_2 } from './quran-batch2';
 
 const QURAN_BATCH_1_FILLED = applyFill(QURAN_BATCH_1);
 
@@ -389,6 +390,7 @@ const EMPTY: LangMap = { en: ``, ms: ``, tur: ``, urd: ``, ben: ``, fas: ``, zh:
 
 export const SURAH_CONTENT: Record<number, SurahI18n> = {
   ...QURAN_BATCH_1_FILLED,
+  ...QURAN_BATCH_2,
   ...QURAN_112,
   ...QURAN_113,
   ...QURAN_114,
