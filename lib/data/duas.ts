@@ -2557,6 +2557,17 @@ export const DUAS: Dua[] = [
     occasion: 'When placing your hands over your children (or any child) as a nightly blessing, or at any moment you sense the need for their protection; also transmitted for a single child as U\'idhuka (masculine) or U\'idhuki (feminine) instead of U\'idhukuma',
     virtue: "Ibn Abbas (ra) reported that the Prophet ﷺ would seek this refuge for al-Hasan and al-Husayn (ra), saying: 'Verily your father [Ibrahim ﷺ] sought refuge with these very words for Isma'il ﷺ and Ishaq ﷺ.' Three refuges are named: from every shaytan (the deliberate spiritual harm), every hammah (a general term the classical scholars applied to snakes, scorpions, and creeping vermin that might harm a sleeping child), and every 'aynin lammah (the evil eye that strikes down suddenly). It links parenthood in every generation back through the Prophet ﷺ, through Ibrahim ﷺ, all the way to the first family; a father or mother saying this over their child today is holding the same rope Ibrahim ﷺ held over Isma'il ﷺ.",
   },
+  {
+    id: 'daily-rain-excessive-redirect',
+    title: 'When Rain Becomes Too Much (Redirecting the Downpour)',
+    arabic: "اللَّهُمَّ حَوَالَيْنَا وَلَا عَلَيْنَا ، اللَّهُمَّ عَلَى الْآكَامِ وَالظِّرَابِ ، وَبُطُونِ الْأَوْدِيَةِ وَمَنَابِتِ الشَّجَرِ",
+    transliteration: "Allahumma hawalayna wa la 'alayna, Allahumma 'alal-akami wa z-zirabi, wa butuni l-awdiyati wa manabiti sh-shajar.",
+    meaning: 'O Allah, [let it fall] around us and not upon us. O Allah, upon the hills, the hillocks, the bellies of the valleys, and the places where trees grow.',
+    source: "Sahih al-Bukhari 1013, 1014; Sahih Muslim 897 (Anas ibn Malik)",
+    category: 'daily-life',
+    occasion: "When rain that first fell as a welcomed mercy becomes dangerous or excessive, threatening flooding, collapsing roofs, or blocking streets and movement in the community. Distinct from the du'a said as rain first begins (Allahumma sayyiban nafi'an) and from the Istisqa prayer asking for rain during drought.",
+    virtue: "This du'a is a request to REDIRECT a mercy, not to cancel it: the rain itself remains a gift, so the words steer its excess away from homes and streets toward hills, valley-floors, and groves, where it does good instead of harm. During a severe drought, a Bedouin interrupted the Prophet's ﷺ Friday sermon to ask him to pray for rain. He raised his hands, and before the congregation had dispersed the sky had opened; rain fell without a single dry day for an entire week, so heavily that dwellings began to collapse and the streets became impassable. The following Friday the same man stood again, this time to complain of the opposite problem: 'The buildings have collapsed and property has been swept away, so pray to Allah to hold it back from us.' The Prophet ﷺ smiled, raised his hands, and simply pointed to the sky in a circle, saying this du'a. Anas (ra), who witnessed it, said the clouds parted 'like a hole opening in a garment,' forming a visible ring around Madinah while the sun shone directly overhead for as long as the Prophet ﷺ spoke, with rain continuing to fall on the surrounding hills and valleys. Ibn Hajar (Fath al-Bari) names this among the clearest sensory miracles witnessed communally rather than by a single narrator. Its lasting lesson: a believer may ask Allah to moderate even a mercy when it threatens harm, directing it toward where it benefits rather than where it destroys.",
+  },
 ];
 
 export function getDuasByCategory(categoryId: string): Dua[] {
