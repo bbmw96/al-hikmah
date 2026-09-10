@@ -37,7 +37,7 @@ export function SiteHighlights() {
                 {h.count}
               </p>
               <div className="mt-2 h-px w-8 bg-gold/40 mx-auto" aria-hidden="true" />
-              <p className="text-forest/65 text-xs md:text-sm mt-3 leading-snug">
+              <p className="text-forest/70 text-xs md:text-sm mt-3 leading-snug">
                 {t(h.labelKey)}
               </p>
             </div>

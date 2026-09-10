@@ -70,7 +70,7 @@ export function QuranListContent() {
       <div className="max-w-7xl mx-auto px-6 py-12">
       {/* Search */}
       <div className="relative max-w-xl mx-auto mb-4">
-        <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-4 h-4 text-forest/40" aria-hidden="true" />
+        <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-4 h-4 text-forest/70" aria-hidden="true" />
         <input
           type="search"
           value={query}
@@ -81,7 +81,7 @@ export function QuranListContent() {
         />
       </div>
       {ql && (
-        <p className="text-center text-forest/50 text-sm mb-6">
+        <p className="text-center text-forest/70 text-sm mb-6">
           {displayed.length} {t('ui.searchresults')}
         </p>
       )}
@@ -111,7 +111,7 @@ export function QuranListContent() {
 
       {/* Surah grid */}
       {displayed.length === 0 ? (
-        <p className="text-center text-forest/50 py-16">{t('ui.nosurahs')}</p>
+        <p className="text-center text-forest/70 py-16">{t('ui.nosurahs')}</p>
       ) : (
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
           {displayed.map(surah => (
@@ -121,7 +121,7 @@ export function QuranListContent() {
               className="card-islamic group flex flex-col gap-2 hover:-translate-y-1 transition-transform duration-200"
             >
               <div className="flex items-start justify-between">
-                <span className="w-8 h-8 rounded-full bg-gold/15 text-gold text-xs font-semibold flex items-center justify-center flex-shrink-0">
+                <span className="w-8 h-8 rounded-full bg-gold/15 text-gold-deep text-xs font-semibold flex items-center justify-center flex-shrink-0">
                   {surah.number}
                 </span>
                 <span className={cn(
@@ -147,12 +147,12 @@ export function QuranListContent() {
                 <h2 className="font-garamond text-lg font-semibold text-forest group-hover:text-gold transition-colors">
                   {surah.englishName}
                 </h2>
-                <p className="text-gold/60 text-xs italic">
+                <p className="text-gold-deep text-xs italic">
                   {surah.transliteration.split('-').map(w => w.charAt(0).toUpperCase() + w.slice(1)).join('-')}
                 </p>
               </div>
 
-              <p className="text-forest/50 text-xs mt-auto">
+              <p className="text-forest/70 text-xs mt-auto">
                 {surah.verses} {t('ui.verses')} · {surah.period}
               </p>
             </Link>

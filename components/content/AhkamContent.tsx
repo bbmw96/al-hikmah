@@ -57,24 +57,24 @@ function HukmCard({ arabic, translit, english, definition, reward, penalty, exam
     <article className="card-islamic space-y-4">
       <div className="flex items-baseline justify-between gap-3 flex-wrap">
         <div>
-          <p dir="rtl" lang="ar" className="arabic text-3xl text-gold leading-loose">{arabic}</p>
-          <p className="text-forest/60 italic text-sm mt-1">{translit}</p>
+          <p dir="rtl" lang="ar" className="arabic text-3xl text-gold-deep leading-loose">{arabic}</p>
+          <p className="text-forest/70 italic text-sm mt-1">{translit}</p>
         </div>
         <h3 className="font-garamond text-2xl font-semibold text-forest">{english}</h3>
       </div>
       <p className="text-forest/75 text-sm leading-relaxed">{definition}</p>
       <div className="grid sm:grid-cols-2 gap-3">
         <div className="bg-forest/5 rounded-xl p-3">
-          <p className="text-xs text-gold/70 font-medium uppercase tracking-wider mb-1">{labelDoing}</p>
+          <p className="text-xs text-gold-deep font-medium uppercase tracking-wider mb-1">{labelDoing}</p>
           <p className="text-forest/75 text-sm leading-relaxed">{reward}</p>
         </div>
         <div className="bg-forest/5 rounded-xl p-3">
-          <p className="text-xs text-gold/70 font-medium uppercase tracking-wider mb-1">{labelLeaving}</p>
+          <p className="text-xs text-gold-deep font-medium uppercase tracking-wider mb-1">{labelLeaving}</p>
           <p className="text-forest/75 text-sm leading-relaxed">{penalty}</p>
         </div>
       </div>
       <div className="border-t border-gold/10 pt-3">
-        <p className="text-xs text-gold/70 font-medium uppercase tracking-wider mb-1">{labelExamples}</p>
+        <p className="text-xs text-gold-deep font-medium uppercase tracking-wider mb-1">{labelExamples}</p>
         <ul className="text-forest/70 text-sm space-y-1 list-disc list-inside">
           {examples.map((ex, i) => <li key={i}>{ex}</li>)}
         </ul>

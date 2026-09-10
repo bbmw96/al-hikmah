@@ -66,13 +66,13 @@ export function ToiletEtiquetteContent() {
           <article className="card-islamic space-y-4">
             <ArabicText text={DUA_ENTER_AR} size="lg" />
             <div className="border-t border-gold/10 pt-3">
-              <p className="text-xs text-gold/70 font-medium uppercase tracking-wider mb-1">{tc('label_transliteration')}</p>
-              <p className="text-forest/60 italic text-sm leading-relaxed">{tc('dua_enter_translit')}</p>
-              <p className="text-xs text-gold/70 font-medium uppercase tracking-wider mt-3 mb-1">{tc('label_meaning')}</p>
+              <p className="text-xs text-gold-deep font-medium uppercase tracking-wider mb-1">{tc('label_transliteration')}</p>
+              <p className="text-forest/70 italic text-sm leading-relaxed">{tc('dua_enter_translit')}</p>
+              <p className="text-xs text-gold-deep font-medium uppercase tracking-wider mt-3 mb-1">{tc('label_meaning')}</p>
               <p className="text-forest/75 text-sm leading-relaxed">{tc('dua_enter_meaning')}</p>
             </div>
             <p className="text-forest/75 text-sm leading-relaxed">{tc('dua_enter_p')}</p>
-            <p className="text-xs text-gold/60 italic">{tc('dua_enter_source')}</p>
+            <p className="text-xs text-gold-deep italic">{tc('dua_enter_source')}</p>
           </article>
         </section>
 
@@ -81,13 +81,13 @@ export function ToiletEtiquetteContent() {
           <article className="card-islamic space-y-4">
             <ArabicText text={DUA_EXIT_AR} size="lg" />
             <div className="border-t border-gold/10 pt-3">
-              <p className="text-xs text-gold/70 font-medium uppercase tracking-wider mb-1">{tc('label_transliteration')}</p>
-              <p className="text-forest/60 italic text-sm leading-relaxed">{tc('dua_exit_translit')}</p>
-              <p className="text-xs text-gold/70 font-medium uppercase tracking-wider mt-3 mb-1">{tc('label_meaning')}</p>
+              <p className="text-xs text-gold-deep font-medium uppercase tracking-wider mb-1">{tc('label_transliteration')}</p>
+              <p className="text-forest/70 italic text-sm leading-relaxed">{tc('dua_exit_translit')}</p>
+              <p className="text-xs text-gold-deep font-medium uppercase tracking-wider mt-3 mb-1">{tc('label_meaning')}</p>
               <p className="text-forest/75 text-sm leading-relaxed">{tc('dua_exit_meaning')}</p>
             </div>
             <p className="text-forest/75 text-sm leading-relaxed">{tc('dua_exit_p')}</p>
-            <p className="text-xs text-gold/60 italic">{tc('dua_exit_source')}</p>
+            <p className="text-xs text-gold-deep italic">{tc('dua_exit_source')}</p>
           </article>
         </section>
 
@@ -96,7 +96,7 @@ export function ToiletEtiquetteContent() {
           <article className="card-islamic space-y-3">
             <p className="text-forest/75 text-sm leading-relaxed">{tc('foot_p1')}</p>
             <p className="text-forest/75 text-sm leading-relaxed">{tc('foot_p2')}</p>
-            <p className="text-xs text-gold/60 italic">{tc('foot_source')}</p>
+            <p className="text-xs text-gold-deep italic">{tc('foot_source')}</p>
           </article>
         </section>
 
@@ -106,7 +106,7 @@ export function ToiletEtiquetteContent() {
             <ArabicText text={QIBLA_HADITH_AR} size="md" />
             <p className="text-forest/75 text-sm leading-relaxed">{tc('qibla_translation')}</p>
             <p className="text-forest/70 text-sm leading-relaxed">{tc('qibla_p')}</p>
-            <p className="text-xs text-gold/60 italic">{tc('qibla_source')}</p>
+            <p className="text-xs text-gold-deep italic">{tc('qibla_source')}</p>
           </article>
         </section>
 
@@ -130,7 +130,7 @@ export function ToiletEtiquetteContent() {
             <p className="text-forest/75 text-sm leading-relaxed">{tc('speech_p1')}</p>
             <p className="text-forest/75 text-sm leading-relaxed">{tc('speech_p2')}</p>
             <p className="text-forest/75 text-sm leading-relaxed">{tc('speech_p3')}</p>
-            <p className="text-xs text-gold/60 italic">{tc('speech_source')}</p>
+            <p className="text-xs text-gold-deep italic">{tc('speech_source')}</p>
           </article>
         </section>
 
@@ -140,7 +140,7 @@ export function ToiletEtiquetteContent() {
             <p className="text-forest/75 text-sm leading-relaxed">{tc('istinja_p1')}</p>
             <p className="text-forest/75 text-sm leading-relaxed">{tc('istinja_p2')}</p>
             <p className="text-forest/75 text-sm leading-relaxed">{tc('istinja_p3')}</p>
-            <p className="text-xs text-gold/60 italic">{tc('istinja_source')}</p>
+            <p className="text-xs text-gold-deep italic">{tc('istinja_source')}</p>
           </article>
         </section>
 
@@ -156,7 +156,7 @@ export function ToiletEtiquetteContent() {
               <li>{tc('wisdom_5')}</li>
             </ul>
             <p className="text-cream/85 text-sm leading-relaxed">{tc('wisdom_close')}</p>
-            <p className="text-xs text-gold/70 italic">{tc('wisdom_source')}</p>
+            <p className="text-xs text-gold italic">{tc('wisdom_source')}</p>
           </article>
         </section>
       </div>

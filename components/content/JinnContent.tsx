@@ -38,13 +38,13 @@ export function JinnContent() {
                 <p dir="rtl" lang="ar" className="arabic text-forest leading-loose">
                   وَخَلَقَ الْجَانَّ مِنْ مَارِجٍ مِنْ نَارٍ
                 </p>
-                <p className="text-forest/50 italic text-xs mt-1 text-right" dir="ltr">
+                <p className="text-forest/70 italic text-xs mt-1 text-right" dir="ltr">
                   Surah ar-Rahman 55:15
                 </p>
                 <p dir="rtl" lang="ar" className="arabic text-forest leading-loose mt-4">
                   وَالْجَانَّ خَلَقْنَاهُ مِنْ قَبْلُ مِنْ نَارِ السَّمُومِ
                 </p>
-                <p className="text-forest/50 italic text-xs mt-1 text-right" dir="ltr">
+                <p className="text-forest/70 italic text-xs mt-1 text-right" dir="ltr">
                   Surah al-Hijr 15:27
                 </p>
               </blockquote>

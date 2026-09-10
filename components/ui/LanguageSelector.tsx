@@ -55,7 +55,7 @@ export function LanguageSelector({ value, onChange, className, label = 'Language
               )}
             >
               <span>{lang.label}</span>
-              <span className="text-xs text-gold/70" dir={lang.dir === 'rtl' ? 'rtl' : 'ltr'} lang={lang.code}>
+              <span className="text-xs text-gold-deep dark:text-gold/70" dir={lang.dir === 'rtl' ? 'rtl' : 'ltr'} lang={lang.code}>
                 {lang.nativeLabel}
               </span>
             </button>

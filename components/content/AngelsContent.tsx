@@ -38,7 +38,7 @@ export function AngelsContent() {
                 <p dir="rtl" lang="ar" className="arabic text-forest leading-loose">
                   خُلِقَتِ الْمَلَائِكَةُ مِنْ نُورٍ ، وَخُلِقَ الْجَانُّ مِنْ مَارِجٍ مِنْ نَارٍ ، وَخُلِقَ آدَمُ مِمَّا وُصِفَ لَكُمْ
                 </p>
-                <p className="text-forest/50 italic text-xs mt-2 text-right" dir="ltr">
+                <p className="text-forest/70 italic text-xs mt-2 text-right" dir="ltr">
                   Sahih Muslim 2996 (Aisha ra)
                 </p>
               </blockquote>

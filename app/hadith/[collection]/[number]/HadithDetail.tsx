@@ -170,12 +170,12 @@ export function HadithDetail({
       {/* Collection + number badge */}
       <div className="flex items-center gap-3 mb-6 flex-wrap">
         <span className="badge-forest text-xs">{collection.shortName}</span>
-        <span className="text-forest/40 text-sm">Hadith #{hadithNumber}</span>
+        <span className="text-forest/70 text-sm">Hadith #{hadithNumber}</span>
         {grade && (
           <span className={cn(
             'text-xs px-2 py-0.5 rounded border font-medium',
             grade.grade === 'Sahih' || grade.grade === 'Sahih '
-              ? 'bg-gold/10 text-gold border-gold/30'
+              ? 'bg-gold/10 text-gold-deep border-gold/30'
               : 'bg-forest/10 text-forest border-forest/30',
           )}>
             {grade.graded_by}: {grade.grade}
@@ -230,7 +230,7 @@ export function HadithDetail({
       <div className="card-islamic min-h-[180px] flex flex-col" role="tabpanel">
         {activeTab === 'meaning' ? (
           <div>
-            <p className="text-xs text-gold/70 uppercase tracking-wider font-medium mb-3">
+            <p className="text-xs text-gold-deep uppercase tracking-wider font-medium mb-3">
               {t('hadith.english')}
             </p>
             <p className="text-forest/80 leading-relaxed">
@@ -245,23 +245,23 @@ export function HadithDetail({
         ) : notAvailable ? (
           <div className="flex-1 flex items-center justify-center py-12 text-center">
             <div>
-              <p className="text-forest/40 text-sm mb-2">{t('hadith.notavail')}</p>
+              <p className="text-forest/70 text-sm mb-2">{t('hadith.notavail')}</p>
               <p className="text-forest/30 text-xs">{t('hadith.tryother')}</p>
             </div>
           </div>
         ) : language === 'en' ? (
           <div>
-            <p className="text-xs text-gold/70 uppercase tracking-wider font-medium mb-3">{t('hadith.english')}</p>
+            <p className="text-xs text-gold-deep uppercase tracking-wider font-medium mb-3">{t('hadith.english')}</p>
             <p className="text-forest/80 leading-relaxed">{englishText}</p>
           </div>
         ) : translations.has(language) ? (
           <div>
-            <p className="text-xs text-gold/70 uppercase tracking-wider font-medium mb-3">{t('hadith.translation')}</p>
+            <p className="text-xs text-gold-deep uppercase tracking-wider font-medium mb-3">{t('hadith.translation')}</p>
             <p className="text-forest/80 leading-relaxed whitespace-pre-line">{translations.get(language)}</p>
           </div>
         ) : (
           <div className="flex-1 flex items-center justify-center py-12">
-            <p className="text-forest/40 text-sm text-center">
+            <p className="text-forest/70 text-sm text-center">
               {t('hadith.selectlang')}
             </p>
           </div>
@@ -281,7 +281,7 @@ export function HadithDetail({
         ) : <div />}
         <Link
           href={`/hadith/${collection.id}`}
-          className="text-sm text-forest/50 hover:text-forest transition-colors"
+          className="text-sm text-forest/70 hover:text-forest transition-colors"
         >
           All {collection.shortName}
         </Link>

@@ -66,7 +66,7 @@ export function MasjidEtiquetteContent() {
           <article className="card-islamic space-y-3">
             <p className="text-forest/75 text-sm leading-relaxed">{tc('hist_p1')}</p>
             <p className="text-forest/75 text-sm leading-relaxed">{tc('hist_p2')}</p>
-            <p className="text-xs text-gold/60 italic">{tc('hist_source')}</p>
+            <p className="text-xs text-gold-deep italic">{tc('hist_source')}</p>
           </article>
         </section>
 
@@ -76,12 +76,12 @@ export function MasjidEtiquetteContent() {
             <p className="text-forest/75 text-sm leading-relaxed">{tc('enter_intro')}</p>
             <ArabicText text={ENTRY_DUA_AR} size="lg" />
             <div className="border-t border-gold/10 pt-3">
-              <p className="text-xs text-gold/70 font-medium uppercase tracking-wider mb-1">{tc('label_transliteration')}</p>
-              <p className="text-forest/60 italic text-sm leading-relaxed">{tc('enter_translit')}</p>
-              <p className="text-xs text-gold/70 font-medium uppercase tracking-wider mt-3 mb-1">{tc('label_meaning')}</p>
+              <p className="text-xs text-gold-deep font-medium uppercase tracking-wider mb-1">{tc('label_transliteration')}</p>
+              <p className="text-forest/70 italic text-sm leading-relaxed">{tc('enter_translit')}</p>
+              <p className="text-xs text-gold-deep font-medium uppercase tracking-wider mt-3 mb-1">{tc('label_meaning')}</p>
               <p className="text-forest/75 text-sm leading-relaxed">{tc('enter_meaning')}</p>
             </div>
-            <p className="text-xs text-gold/60 italic">{tc('enter_source')}</p>
+            <p className="text-xs text-gold-deep italic">{tc('enter_source')}</p>
           </article>
         </section>
 
@@ -90,7 +90,7 @@ export function MasjidEtiquetteContent() {
           <article className="card-islamic space-y-3">
             <p className="text-forest/75 text-sm leading-relaxed">{tc('tahiyya_p1')}</p>
             <p className="text-forest/70 text-sm leading-relaxed">{tc('tahiyya_p2')}</p>
-            <p className="text-xs text-gold/60 italic">{tc('tahiyya_source')}</p>
+            <p className="text-xs text-gold-deep italic">{tc('tahiyya_source')}</p>
           </article>
         </section>
 
@@ -100,13 +100,13 @@ export function MasjidEtiquetteContent() {
             <p className="text-forest/75 text-sm leading-relaxed">{tc('leave_intro')}</p>
             <ArabicText text={EXIT_DUA_AR} size="lg" />
             <div className="border-t border-gold/10 pt-3">
-              <p className="text-xs text-gold/70 font-medium uppercase tracking-wider mb-1">{tc('label_transliteration')}</p>
-              <p className="text-forest/60 italic text-sm leading-relaxed">{tc('leave_translit')}</p>
-              <p className="text-xs text-gold/70 font-medium uppercase tracking-wider mt-3 mb-1">{tc('label_meaning')}</p>
+              <p className="text-xs text-gold-deep font-medium uppercase tracking-wider mb-1">{tc('label_transliteration')}</p>
+              <p className="text-forest/70 italic text-sm leading-relaxed">{tc('leave_translit')}</p>
+              <p className="text-xs text-gold-deep font-medium uppercase tracking-wider mt-3 mb-1">{tc('label_meaning')}</p>
               <p className="text-forest/75 text-sm leading-relaxed">{tc('leave_meaning')}</p>
             </div>
             <p className="text-forest/70 text-sm leading-relaxed">{tc('leave_p')}</p>
-            <p className="text-xs text-gold/60 italic">{tc('leave_source')}</p>
+            <p className="text-xs text-gold-deep italic">{tc('leave_source')}</p>
           </article>
         </section>
 
@@ -116,10 +116,10 @@ export function MasjidEtiquetteContent() {
             <p className="text-forest/75 text-sm leading-relaxed">{tc('salat_p')}</p>
             <ArabicText text={SALAT_ALA_NABI_AR} size="md" />
             <div className="border-t border-gold/10 pt-3">
-              <p className="text-xs text-gold/70 font-medium uppercase tracking-wider mb-1">{tc('label_transliteration')}</p>
-              <p className="text-forest/60 italic text-sm leading-relaxed">{tc('salat_translit')}</p>
+              <p className="text-xs text-gold-deep font-medium uppercase tracking-wider mb-1">{tc('label_transliteration')}</p>
+              <p className="text-forest/70 italic text-sm leading-relaxed">{tc('salat_translit')}</p>
             </div>
-            <p className="text-xs text-gold/60 italic">{tc('salat_source')}</p>
+            <p className="text-xs text-gold-deep italic">{tc('salat_source')}</p>
           </article>
         </section>
 

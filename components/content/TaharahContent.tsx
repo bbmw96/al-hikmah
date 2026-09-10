@@ -109,7 +109,7 @@ export function TaharahContent() {
             <h3 className="font-garamond text-lg font-semibold text-forest mb-3">
               {tc('types.physical.heading')}
             </h3>
-            <p className="text-forest/60 text-sm leading-relaxed">
+            <p className="text-forest/70 text-sm leading-relaxed">
               {tc('types.physical.body')}
             </p>
           </div>
@@ -117,7 +117,7 @@ export function TaharahContent() {
             <h3 className="font-garamond text-lg font-semibold text-forest mb-3">
               {tc('types.ritual.heading')}
             </h3>
-            <p className="text-forest/60 text-sm leading-relaxed">
+            <p className="text-forest/70 text-sm leading-relaxed">
               {tc('types.ritual.body')}
             </p>
           </div>
@@ -143,11 +143,11 @@ export function TaharahContent() {
                     {form.arabic}
                   </p>
                   <h3 className="font-garamond text-xl font-semibold text-forest">{form.nameEn}</h3>
-                  <p className="text-gold text-xs font-medium uppercase tracking-wide">{tc(form.subtitleKey)}</p>
+                  <p className="text-gold-deep text-xs font-medium uppercase tracking-wide">{tc(form.subtitleKey)}</p>
                 </div>
                 <Link
                   href={form.href}
-                  className="flex items-center gap-1.5 text-sm font-medium text-gold hover:text-gold/80 transition-colors flex-shrink-0"
+                  className="flex items-center gap-1.5 text-sm font-medium text-gold-deep hover:underline transition-colors flex-shrink-0"
                 >
                   {tc(form.linkLabelKey)}
                   <ArrowRight className="w-4 h-4" aria-hidden="true" />
@@ -155,12 +155,12 @@ export function TaharahContent() {
               </div>
               <p className="text-forest/70 text-sm leading-relaxed mb-4">{tc(form.descriptionKey)}</p>
               <div>
-                <p className="text-forest/50 text-xs font-semibold uppercase tracking-wide mb-2">
+                <p className="text-forest/70 text-xs font-semibold uppercase tracking-wide mb-2">
                   {tc('three.nullifiers.label')}
                 </p>
                 <ul className="space-y-1">
                   {tc(form.nullifiersTranslatedKey).split(';').map(n => (
-                    <li key={n} className="flex items-start gap-2 text-sm text-forest/60">
+                    <li key={n} className="flex items-start gap-2 text-sm text-forest/70">
                       <div className="w-1.5 h-1.5 rounded-full bg-gold/50 mt-1.5 flex-shrink-0" />
                       {n.trim()}
                     </li>
@@ -193,10 +193,10 @@ export function TaharahContent() {
                   <h3 className="font-garamond text-base font-semibold text-forest">
                     {'typeKey' in n && n.typeKey ? tc(n.typeKey) : n.type}
                   </h3>
-                  <p className="text-gold text-xs">{tc(n.subtitleKey)}</p>
+                  <p className="text-gold-deep text-xs">{tc(n.subtitleKey)}</p>
                 </div>
               </div>
-              <p className="text-forest/60 text-sm leading-relaxed">{tc(n.examplesKey)}</p>
+              <p className="text-forest/70 text-sm leading-relaxed">{tc(n.examplesKey)}</p>
             </div>
           ))}
         </div>
@@ -212,7 +212,7 @@ export function TaharahContent() {
           <p className="text-forest/70 text-sm mt-4 mb-4 leading-relaxed font-medium">
             {tc('closing.hadith.translation')}
           </p>
-          <p className="text-forest/60 text-sm leading-relaxed">
+          <p className="text-forest/70 text-sm leading-relaxed">
             {tc('closing.nawawi.body')}
           </p>
         </div>

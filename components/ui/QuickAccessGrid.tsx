@@ -94,7 +94,7 @@ export function QuickAccessGrid() {
                 </h3>
                 <p className="text-forest/60 text-sm leading-relaxed">{t(item.descKey)}</p>
               </div>
-              <div className="flex items-center gap-1 text-gold text-sm font-medium mt-auto">
+              <div className="flex items-center gap-1 text-gold-deep text-sm font-medium mt-auto">
                 <span>{t('ui.explore')}</span>
                 <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" aria-hidden="true" />
               </div>

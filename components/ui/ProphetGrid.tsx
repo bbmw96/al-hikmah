@@ -31,7 +31,7 @@ export function ProphetGrid() {
   return (
     <div>
       <div className="relative max-w-xl mx-auto mb-8">
-        <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-4 h-4 text-forest/40" aria-hidden="true" />
+        <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-4 h-4 text-forest/70" aria-hidden="true" />
         <input
           type="search"
           value={query}
@@ -42,12 +42,12 @@ export function ProphetGrid() {
         />
       </div>
       {ql && (
-        <p className="text-center text-forest/50 text-sm mb-6">
+        <p className="text-center text-forest/70 text-sm mb-6">
           {displayed.length} {t('ui.searchresults')}
         </p>
       )}
       {displayed.length === 0 ? (
-        <p className="text-center text-forest/50 py-16">{t('ui.noresults')}</p>
+        <p className="text-center text-forest/70 py-16">{t('ui.noresults')}</p>
       ) : (
     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5">
       {displayed.map((prophet) => (
@@ -57,7 +57,7 @@ export function ProphetGrid() {
           className="card-islamic group text-center flex flex-col items-center gap-3 hover:-translate-y-1 transition-transform duration-200"
         >
           {/* Sequence number */}
-          <span className="w-8 h-8 rounded-full bg-gold/15 text-gold text-xs font-semibold flex items-center justify-center">
+          <span className="w-8 h-8 rounded-full bg-gold/15 text-gold-deep text-xs font-semibold flex items-center justify-center">
             {prophet.prophetNumber}
           </span>
 
@@ -77,10 +77,10 @@ export function ProphetGrid() {
           </h2>
 
           {prophet.title && (
-            <p className="text-gold/70 text-xs italic">{prophet.title}</p>
+            <p className="text-gold-deep text-xs italic">{prophet.title}</p>
           )}
 
-          <p className="text-forest/50 text-xs leading-relaxed mt-auto">
+          <p className="text-forest/70 text-xs leading-relaxed mt-auto">
             {t('prophets.sentto')} {prophet.nationSentTo}
           </p>
         </Link>

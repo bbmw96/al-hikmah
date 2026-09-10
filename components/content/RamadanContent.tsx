@@ -130,16 +130,16 @@ export function RamadanContent() {
         <h2 className="section-title font-garamond text-2xl font-semibold text-forest mb-2">
           {tc('section_prescribed')}
         </h2>
-        <p dir="rtl" lang="ar" className="arabic text-gold mb-4">
+        <p dir="rtl" lang="ar" className="arabic text-gold-deep mb-4">
           فريضة الصيام
         </p>
         <article className="card-islamic">
           <span className="badge-gold text-xs mb-4 inline-block">{tc('verses_ref')}</span>
           <ArabicText text={RAMADAN_VERSES.arabic} size="md" />
           <div className="border-t border-gold/10 pt-3 mt-3 space-y-2">
-            <p className="text-xs text-gold/60 uppercase tracking-wider font-medium">{tc('label_transliteration')}</p>
-            <p className="text-forest/60 italic text-sm leading-relaxed">{RAMADAN_VERSES.transliteration}</p>
-            <p className="text-xs text-gold/60 uppercase tracking-wider font-medium mt-2">{tc('label_meaning')}</p>
+            <p className="text-xs text-gold-deep uppercase tracking-wider font-medium">{tc('label_transliteration')}</p>
+            <p className="text-forest/70 italic text-sm leading-relaxed">{RAMADAN_VERSES.transliteration}</p>
+            <p className="text-xs text-gold-deep uppercase tracking-wider font-medium mt-2">{tc('label_meaning')}</p>
             <p className="text-forest/70 text-sm leading-relaxed">{tc('verses_meaning')}</p>
           </div>
         </article>
@@ -150,7 +150,7 @@ export function RamadanContent() {
         <h2 className="section-title font-garamond text-2xl font-semibold text-forest mb-2">
           {tc('section_hilal')}
         </h2>
-        <p dir="rtl" lang="ar" className="arabic text-gold mb-4">
+        <p dir="rtl" lang="ar" className="arabic text-gold-deep mb-4">
           رؤية الهلال
         </p>
         <div className="bg-forest/5 border-l-4 border-gold rounded-r-xl p-5 mb-5">
@@ -171,7 +171,7 @@ export function RamadanContent() {
         <h2 className="section-title font-garamond text-2xl font-semibold text-forest mb-2">
           {tc('section_conditions')}
         </h2>
-        <p dir="rtl" lang="ar" className="arabic text-gold mb-4">
+        <p dir="rtl" lang="ar" className="arabic text-gold-deep mb-4">
           شروط وجوب الصيام
         </p>
         <div className="space-y-3">
@@ -182,7 +182,7 @@ export function RamadanContent() {
               </div>
               <div>
                 <p className="font-medium text-forest text-sm">{tc(item.nameKey)}</p>
-                <p className="text-forest/60 text-xs leading-relaxed mt-0.5">{tc(item.descKey)}</p>
+                <p className="text-forest/70 text-xs leading-relaxed mt-0.5">{tc(item.descKey)}</p>
               </div>
             </div>
           ))}
@@ -194,7 +194,7 @@ export function RamadanContent() {
         <h2 className="section-title font-garamond text-2xl font-semibold text-forest mb-2">
           {tc('section_invalidators')}
         </h2>
-        <p dir="rtl" lang="ar" className="arabic text-gold mb-4">
+        <p dir="rtl" lang="ar" className="arabic text-gold-deep mb-4">
           مفسدات الصوم وما لا يفسده
         </p>
         <div className="grid md:grid-cols-2 gap-6">
@@ -206,7 +206,7 @@ export function RamadanContent() {
               {INVALIDATORS.map((item, i) => (
                 <article key={i} className="card-islamic py-3 px-4">
                   <p className="font-medium text-forest text-sm mb-1">{tc(item.itemKey)}</p>
-                  <p className="text-forest/60 text-xs leading-relaxed">{tc(item.noteKey)}</p>
+                  <p className="text-forest/70 text-xs leading-relaxed">{tc(item.noteKey)}</p>
                 </article>
               ))}
             </div>
@@ -232,7 +232,7 @@ export function RamadanContent() {
         <h2 className="section-title font-garamond text-2xl font-semibold text-forest mb-2">
           {tc('section_suhur_iftar')}
         </h2>
-        <p dir="rtl" lang="ar" className="arabic text-gold mb-4">
+        <p dir="rtl" lang="ar" className="arabic text-gold-deep mb-4">
           السحور والإفطار
         </p>
         <div className="space-y-6">
@@ -256,23 +256,23 @@ export function RamadanContent() {
             <p className="text-forest/70 text-sm leading-relaxed mb-5">{tc('iftar_text')}</p>
 
             <div className="bg-forest/5 rounded-xl p-4 space-y-3 mb-4">
-              <p className="text-xs text-gold/70 uppercase tracking-wider font-medium">
+              <p className="text-xs text-gold-deep uppercase tracking-wider font-medium">
                 {tc('label_dua_iftar')} ({tc('iftar_dua_source')})
               </p>
               <ArabicText text={SUHUR_IFTAR.iftar.dua.arabic} size="md" />
               <div className="border-t border-gold/10 pt-3 space-y-2">
-                <p className="text-forest/60 italic text-sm">{SUHUR_IFTAR.iftar.dua.transliteration}</p>
+                <p className="text-forest/70 italic text-sm">{SUHUR_IFTAR.iftar.dua.transliteration}</p>
                 <p className="text-forest/70 text-sm">{tc('iftar_dua_meaning')}</p>
               </div>
             </div>
 
             <div className="bg-gold/10 border border-gold/25 rounded-xl p-4 space-y-3">
-              <p className="text-xs text-gold/70 uppercase tracking-wider font-medium">
+              <p className="text-xs text-gold-deep uppercase tracking-wider font-medium">
                 {tc('label_dua_alternative')} ({tc('iftar_dua2_source')})
               </p>
               <ArabicText text={SUHUR_IFTAR.iftar.dua2.arabic} size="md" />
               <div className="border-t border-gold/15 pt-3 space-y-2">
-                <p className="text-forest/60 italic text-sm">{SUHUR_IFTAR.iftar.dua2.transliteration}</p>
+                <p className="text-forest/70 italic text-sm">{SUHUR_IFTAR.iftar.dua2.transliteration}</p>
                 <p className="text-forest/70 text-sm">{tc('iftar_dua2_meaning')}</p>
               </div>
             </div>
@@ -285,7 +285,7 @@ export function RamadanContent() {
         <h2 className="section-title font-garamond text-2xl font-semibold text-forest mb-2">
           {tc('section_taraweeh')}
         </h2>
-        <p dir="rtl" lang="ar" className="arabic text-gold mb-4">
+        <p dir="rtl" lang="ar" className="arabic text-gold-deep mb-4">
           صلاة التراويح
         </p>
         <div className="bg-forest/5 border border-gold/20 rounded-xl p-5 mb-6">
@@ -309,7 +309,7 @@ export function RamadanContent() {
         <h2 className="section-title font-garamond text-2xl font-semibold text-forest mb-2">
           {tc('section_laylatul_qadr')}
         </h2>
-        <p dir="rtl" lang="ar" className="arabic text-gold mb-4">
+        <p dir="rtl" lang="ar" className="arabic text-gold-deep mb-4">
           لَيْلَةُ الْقَدْر
         </p>
         <div className="bg-forest/5 border-l-4 border-gold rounded-r-xl p-5 mb-6">
@@ -320,20 +320,20 @@ export function RamadanContent() {
           <span className="badge-gold text-xs mb-4 inline-block">{tc('qadr_verse_ref')}</span>
           <ArabicText text={LAYLATUL_QADR.verse.arabic} size="md" />
           <div className="border-t border-gold/10 pt-3 mt-3 space-y-2">
-            <p className="text-xs text-gold/60 uppercase tracking-wider font-medium">{tc('label_transliteration')}</p>
-            <p className="text-forest/60 italic text-sm leading-relaxed">{LAYLATUL_QADR.verse.transliteration}</p>
-            <p className="text-xs text-gold/60 uppercase tracking-wider font-medium mt-2">{tc('label_meaning')}</p>
+            <p className="text-xs text-gold-deep uppercase tracking-wider font-medium">{tc('label_transliteration')}</p>
+            <p className="text-forest/70 italic text-sm leading-relaxed">{LAYLATUL_QADR.verse.transliteration}</p>
+            <p className="text-xs text-gold-deep uppercase tracking-wider font-medium mt-2">{tc('label_meaning')}</p>
             <p className="text-forest/70 text-sm leading-relaxed">{tc('qadr_verse_meaning')}</p>
           </div>
         </article>
 
         <div className="card-islamic mb-6">
-          <p className="text-xs text-gold/70 uppercase tracking-wider font-medium mb-3">
+          <p className="text-xs text-gold-deep uppercase tracking-wider font-medium mb-3">
             {tc('label_dua_laylatul_qadr')} ({tc('qadr_dua_source')})
           </p>
           <ArabicText text={LAYLATUL_QADR.dua.arabic} size="lg" />
           <div className="border-t border-gold/10 pt-3 mt-3 space-y-2">
-            <p className="text-forest/60 italic text-sm">{LAYLATUL_QADR.dua.transliteration}</p>
+            <p className="text-forest/70 italic text-sm">{LAYLATUL_QADR.dua.transliteration}</p>
             <p className="text-forest/70 text-sm">{tc('qadr_dua_meaning')}</p>
           </div>
         </div>
@@ -356,7 +356,7 @@ export function RamadanContent() {
         <h2 className="section-title font-garamond text-2xl font-semibold text-forest mb-2">
           {tc('section_itikaf')}
         </h2>
-        <p dir="rtl" lang="ar" className="arabic text-gold mb-4">
+        <p dir="rtl" lang="ar" className="arabic text-gold-deep mb-4">
           الاعتكاف
         </p>
         <div className="bg-forest/5 border border-gold/20 rounded-xl p-5 mb-5">
@@ -378,7 +378,7 @@ export function RamadanContent() {
         <h2 className="section-title font-garamond text-2xl font-semibold text-forest mb-2">
           {tc('section_zakat_fitr')}
         </h2>
-        <p dir="rtl" lang="ar" className="arabic text-gold mb-4">
+        <p dir="rtl" lang="ar" className="arabic text-gold-deep mb-4">
           زكاة الفطر
         </p>
         <div className="space-y-4">
@@ -387,7 +387,7 @@ export function RamadanContent() {
             <div className="grid sm:grid-cols-2 gap-4">
               {zakatRows.map((row, i) => (
                 <div key={i} className="bg-forest/5 rounded-xl p-3">
-                  <p className="text-xs text-gold/70 uppercase tracking-wider font-medium mb-1">{tc(row.labelKey)}</p>
+                  <p className="text-xs text-gold-deep uppercase tracking-wider font-medium mb-1">{tc(row.labelKey)}</p>
                   <p className="text-forest/70 text-sm leading-relaxed">{row.value}</p>
                 </div>
               ))}
@@ -401,12 +401,12 @@ export function RamadanContent() {
         <h2 className="section-title font-garamond text-2xl font-semibold text-forest mb-2">
           {tc('section_eid')}
         </h2>
-        <p dir="rtl" lang="ar" className="arabic text-gold mb-4">
+        <p dir="rtl" lang="ar" className="arabic text-gold-deep mb-4">
           عيد الفطر
         </p>
         <div className="bg-gold/10 border border-gold/25 rounded-xl p-5 mb-5">
           <ArabicText text="اللَّهُ أَكْبَرُ اللَّهُ أَكْبَرُ لَا إِلَهَ إِلَّا اللَّهُ اللَّهُ أَكْبَرُ اللَّهُ أَكْبَرُ وَلِلَّهِ الْحَمْد" size="md" />
-          <p className="text-forest/60 italic text-xs mt-2 text-center">{tc('eid_takbir_caption')}</p>
+          <p className="text-forest/70 italic text-xs mt-2 text-center">{tc('eid_takbir_caption')}</p>
         </div>
         <div className="space-y-2">
           {EID_PRACTICES.map((practice, i) => (
@@ -425,7 +425,7 @@ export function RamadanContent() {
         <h2 className="section-title font-garamond text-2xl font-semibold text-forest mb-2">
           {tc('section_spiritual')}
         </h2>
-        <p dir="rtl" lang="ar" className="arabic text-gold mb-4">
+        <p dir="rtl" lang="ar" className="arabic text-gold-deep mb-4">
           الحكمة من الصيام
         </p>
         <div className="space-y-5">
@@ -440,11 +440,11 @@ export function RamadanContent() {
 
       {/* ── Closing ── */}
       <section className="card-islamic bg-forest/5 text-center">
-        <p dir="rtl" lang="ar" className="arabic text-gold mb-4">
+        <p dir="rtl" lang="ar" className="arabic text-gold-deep mb-4">
           إِذَا دَخَلَ رَمَضَانُ فُتِّحَتْ أَبْوَابُ الْجَنَّةِ وَغُلِّقَتْ أَبْوَابُ جَهَنَّمَ وَسُلْسِلَتِ الشَّيَاطِينُ
         </p>
         <p className="text-forest/70 text-sm italic mb-1">{tc('closing_hadith')}</p>
-        <p className="text-forest/50 text-xs">{tc('closing_source')}</p>
+        <p className="text-forest/70 text-xs">{tc('closing_source')}</p>
       </section>
 
     </div>

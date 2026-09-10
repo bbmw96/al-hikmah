@@ -82,21 +82,21 @@ export function EidContent() {
             <table className="w-full border-collapse">
               <thead>
                 <tr className="border-b border-gold/20">
-                  <th className="text-left py-3 px-4 text-forest/50 text-xs font-semibold uppercase tracking-wide">{tc('col_aspect')}</th>
+                  <th className="text-left py-3 px-4 text-forest/70 text-xs font-semibold uppercase tracking-wide">{tc('col_aspect')}</th>
                   <th className="text-left py-3 px-4 text-forest text-sm font-garamond font-semibold">
                     {tc('col_fitr')}
-                    <span className="block arabic-sm text-gold/60" dir="rtl" lang="ar">عيد الفطر</span>
+                    <span className="block arabic-sm text-gold-deep" dir="rtl" lang="ar">عيد الفطر</span>
                   </th>
                   <th className="text-left py-3 px-4 text-forest text-sm font-garamond font-semibold">
                     {tc('col_adha')}
-                    <span className="block arabic-sm text-gold/60" dir="rtl" lang="ar">عيد الأضحى</span>
+                    <span className="block arabic-sm text-gold-deep" dir="rtl" lang="ar">عيد الأضحى</span>
                   </th>
                 </tr>
               </thead>
               <tbody>
                 {COMPARISON.map(row => (
                   <tr key={row.aspect} className="border-b border-gold/10">
-                    <td className="py-3 px-4 text-forest/50 text-xs font-semibold">{tc(row.aspect)}</td>
+                    <td className="py-3 px-4 text-forest/70 text-xs font-semibold">{tc(row.aspect)}</td>
                     <td className="py-3 px-4 text-forest/70 text-sm leading-relaxed">{tc(row.fitr)}</td>
                     <td className="py-3 px-4 text-forest/70 text-sm leading-relaxed">{tc(row.adha)}</td>
                   </tr>
@@ -124,7 +124,7 @@ export function EidContent() {
                 </span>
                 <div>
                   <h3 className="font-garamond text-base font-semibold text-forest mb-1">{tc(step.name)}</h3>
-                  <p className="text-forest/60 text-sm leading-relaxed">{tc(step.detail)}</p>
+                  <p className="text-forest/70 text-sm leading-relaxed">{tc(step.detail)}</p>
                 </div>
               </div>
             ))}
@@ -188,7 +188,7 @@ export function EidContent() {
             {RULES.map(r => (
               <div key={r.name} className="card-islamic">
                 <h3 className="font-garamond text-base font-semibold text-forest mb-1">{tc(r.name)}</h3>
-                <p className="text-forest/60 text-sm leading-relaxed">{tc(r.detail)}</p>
+                <p className="text-forest/70 text-sm leading-relaxed">{tc(r.detail)}</p>
               </div>
             ))}
           </div>

@@ -113,7 +113,7 @@ export function DuasListContent() {
         {/* Search box */}
         <div className="max-w-2xl mx-auto mb-6">
           <div className="relative">
-            <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-4 h-4 text-forest/40" aria-hidden="true" />
+            <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-4 h-4 text-forest/70" aria-hidden="true" />
             <input
               type="search"
               value={query}
@@ -127,7 +127,7 @@ export function DuasListContent() {
                 type="button"
                 onClick={() => setQuery('')}
                 aria-label="Clear search"
-                className="absolute right-3 top-1/2 -translate-y-1/2 w-6 h-6 rounded-full inline-flex items-center justify-center text-forest/40 hover:text-forest hover:bg-forest/5"
+                className="absolute right-3 top-1/2 -translate-y-1/2 w-6 h-6 rounded-full inline-flex items-center justify-center text-forest/70 hover:text-forest hover:bg-forest/5"
               >
                 <X className="w-3.5 h-3.5" aria-hidden="true" />
               </button>
@@ -290,7 +290,7 @@ function ResultsList({
                     {cat && (
                       <Link
                         href={`/duas/${cat.id}`}
-                        className="inline-flex items-center gap-1 text-[11px] uppercase tracking-wider font-medium text-gold/80 hover:text-gold"
+                        className="inline-flex items-center gap-1 text-[11px] uppercase tracking-wider font-medium text-gold-deep hover:underline"
                       >
                         <span aria-hidden="true">{cat.icon}</span>
                         <span>{catName}</span>
@@ -319,7 +319,7 @@ function ResultsList({
           );
         })}
       </div>
-      <p className="text-center text-xs text-forest/40 mt-8 italic">
+      <p className="text-center text-xs text-forest/70 mt-8 italic">
         {duas.length} {tc('results_label').toLowerCase()}
       </p>
     </div>

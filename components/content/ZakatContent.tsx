@@ -88,7 +88,7 @@ export function ZakatContent() {
             {CONDITIONS.map(item => (
               <div key={item.titleKey} className="card-islamic">
                 <h3 className="font-garamond text-lg font-semibold text-forest mb-2">{tc(item.titleKey)}</h3>
-                <p className="text-forest/60 text-sm leading-relaxed">{tc(item.detailKey)}</p>
+                <p className="text-forest/70 text-sm leading-relaxed">{tc(item.detailKey)}</p>
               </div>
             ))}
           </div>
@@ -112,7 +112,7 @@ export function ZakatContent() {
                 </div>
                 <div>
                   <h3 className="font-garamond text-lg font-semibold text-forest mb-1">{tc(asset.catKey)}</h3>
-                  <p className="text-forest/60 text-sm leading-relaxed">{tc(asset.detailKey)}</p>
+                  <p className="text-forest/70 text-sm leading-relaxed">{tc(asset.detailKey)}</p>
                 </div>
               </div>
             ))}
@@ -136,7 +136,7 @@ export function ZakatContent() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
             {RECIPIENTS.map(r => (
               <div key={r.n} className="card-islamic flex gap-4">
-                <span className="w-8 h-8 rounded-full bg-gold/15 text-gold text-sm font-semibold flex items-center justify-center flex-shrink-0 mt-1">
+                <span className="w-8 h-8 rounded-full bg-gold/15 text-gold-deep text-sm font-semibold flex items-center justify-center flex-shrink-0 mt-1">
                   {r.n}
                 </span>
                 <div>
@@ -149,7 +149,7 @@ export function ZakatContent() {
                     {r.arabic}
                   </p>
                   <h3 className="font-garamond text-base font-semibold text-forest mb-1">{tc(r.nameKey)}</h3>
-                  <p className="text-forest/60 text-xs leading-relaxed">{tc(r.bodyKey)}</p>
+                  <p className="text-forest/70 text-xs leading-relaxed">{tc(r.bodyKey)}</p>
                 </div>
               </div>
             ))}

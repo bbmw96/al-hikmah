@@ -10,7 +10,7 @@ const HADITH_AR = `مَنْ كَذَبَ عَلَيَّ مُتَعَمِّدًا
 const CONDITION_AR = [`اتصال السند`, `العدالة`, `الضبط`, `عدم الشذوذ`, `عدم العلة`];
 
 const GRADES = [
-  { key: 'sahih', label: 'Sahih', ar: `الصحيح`, colour: 'bg-gold/15 text-gold border-gold/30' },
+  { key: 'sahih', label: 'Sahih', ar: `الصحيح`, colour: 'bg-gold/15 text-gold-deep border-gold/30' },
   { key: 'hasan', label: 'Hasan', ar: `الحسن`, colour: 'bg-teal-50 text-teal-700 border-teal-200' },
   { key: 'daif', label: "Da'if", ar: `الضعيف`, colour: 'bg-red-50 text-red-700 border-red-200' },
 ] as const;
@@ -63,12 +63,12 @@ export function MustalahHadithContent() {
             <div className="card-islamic">
               <p dir="rtl" lang="ar" className="arabic text-gold/70 mb-2 block" aria-hidden="true">الإسناد</p>
               <h3 className="font-garamond text-lg font-semibold text-forest mb-2">{tc('structure.isnad.heading')}</h3>
-              <p className="text-forest/60 text-sm leading-relaxed">{tc('structure.isnad.body')}</p>
+              <p className="text-forest/70 text-sm leading-relaxed">{tc('structure.isnad.body')}</p>
             </div>
             <div className="card-islamic">
               <p dir="rtl" lang="ar" className="arabic text-gold/70 mb-2 block" aria-hidden="true">المتن</p>
               <h3 className="font-garamond text-lg font-semibold text-forest mb-2">{tc('structure.matn.heading')}</h3>
-              <p className="text-forest/60 text-sm leading-relaxed">{tc('structure.matn.body')}</p>
+              <p className="text-forest/70 text-sm leading-relaxed">{tc('structure.matn.body')}</p>
             </div>
           </div>
           <div className="gold-border-left pl-5">
@@ -84,7 +84,7 @@ export function MustalahHadithContent() {
             {[1, 2, 3, 4, 5, 6].map(n => (
               <div key={n} className="card-islamic">
                 <h3 className="font-garamond text-sm font-semibold text-forest mb-1">{tc(k(`rijal.${n}.level`))}</h3>
-                <p className="text-forest/60 text-xs leading-relaxed">{tc(k(`rijal.${n}.detail`))}</p>
+                <p className="text-forest/70 text-xs leading-relaxed">{tc(k(`rijal.${n}.detail`))}</p>
               </div>
             ))}
           </div>
@@ -96,11 +96,11 @@ export function MustalahHadithContent() {
           <div className="space-y-4">
             {[1, 2, 3, 4, 5].map(n => (
               <div key={n} className="card-islamic flex gap-4">
-                <span className="w-8 h-8 rounded-full bg-gold/15 text-gold text-sm font-semibold flex items-center justify-center flex-shrink-0">{n}</span>
+                <span className="w-8 h-8 rounded-full bg-gold/15 text-gold-deep text-sm font-semibold flex items-center justify-center flex-shrink-0">{n}</span>
                 <div>
                   <p dir="rtl" lang="ar" className="arabic-sm text-gold mb-1.5" aria-hidden="true">{CONDITION_AR[n - 1]}</p>
                   <h3 className="font-garamond text-base font-semibold text-forest mb-1">{tc(k(`conditions.${n}.title`))}</h3>
-                  <p className="text-forest/60 text-sm leading-relaxed">{tc(k(`conditions.${n}.body`))}</p>
+                  <p className="text-forest/70 text-sm leading-relaxed">{tc(k(`conditions.${n}.body`))}</p>
                 </div>
               </div>
             ))}
@@ -122,7 +122,7 @@ export function MustalahHadithContent() {
                   {[1, 2].map(i => (
                     <div key={i} className="bg-gold/5 rounded-xl p-3">
                       <p className="text-forest font-semibold text-xs mb-1">{tc(k(`grades.${g.key}.sub${i}.name`))}</p>
-                      <p className="text-forest/60 text-xs leading-relaxed">{tc(k(`grades.${g.key}.sub${i}.detail`))}</p>
+                      <p className="text-forest/70 text-xs leading-relaxed">{tc(k(`grades.${g.key}.sub${i}.detail`))}</p>
                     </div>
                   ))}
                 </div>
@@ -138,12 +138,12 @@ export function MustalahHadithContent() {
             <div className="card-islamic">
               <p dir="rtl" lang="ar" className="arabic text-gold/70 mb-2 block" aria-hidden="true">المتواتر</p>
               <h3 className="font-garamond text-lg font-semibold text-forest mb-2">{tc('tawatur.mutawatir.heading')}</h3>
-              <p className="text-forest/60 text-sm leading-relaxed">{tc('tawatur.mutawatir.body')}</p>
+              <p className="text-forest/70 text-sm leading-relaxed">{tc('tawatur.mutawatir.body')}</p>
             </div>
             <div className="card-islamic">
               <p dir="rtl" lang="ar" className="arabic text-gold/70 mb-2 block" aria-hidden="true">الآحاد</p>
               <h3 className="font-garamond text-lg font-semibold text-forest mb-2">{tc('tawatur.ahad.heading')}</h3>
-              <p className="text-forest/60 text-sm leading-relaxed">{tc('tawatur.ahad.body')}</p>
+              <p className="text-forest/70 text-sm leading-relaxed">{tc('tawatur.ahad.body')}</p>
             </div>
           </div>
         </section>
@@ -157,8 +157,8 @@ export function MustalahHadithContent() {
                 <div>
                   <p dir="rtl" lang="ar" className="arabic-sm text-gold mb-1.5" aria-hidden="true">{book.ar}</p>
                   <h3 className="font-garamond text-lg font-semibold text-forest mb-0.5">{book.name}</h3>
-                  <p className="text-forest/50 text-xs mb-2">{book.author} · {tc(k(`sixbooks.${i + 1}.count`))}</p>
-                  <p className="text-forest/60 text-sm leading-relaxed">{tc(k(`sixbooks.${i + 1}.note`))}</p>
+                  <p className="text-forest/70 text-xs mb-2">{book.author} · {tc(k(`sixbooks.${i + 1}.count`))}</p>
+                  <p className="text-forest/70 text-sm leading-relaxed">{tc(k(`sixbooks.${i + 1}.note`))}</p>
                 </div>
               </div>
             ))}
@@ -173,8 +173,8 @@ export function MustalahHadithContent() {
               <div key={s.name} className="card-islamic">
                 <p dir="rtl" lang="ar" className="arabic-sm text-gold mb-1.5" aria-hidden="true">{s.ar}</p>
                 <h3 className="font-garamond text-base font-semibold text-forest">{s.name}</h3>
-                <p className="text-gold text-xs italic mb-1">{s.title} ({s.dates})</p>
-                <p className="text-forest/60 text-xs leading-relaxed">{tc(k(`scholars.${i + 1}.note`))}</p>
+                <p className="text-gold-deep text-xs italic mb-1">{s.title} ({s.dates})</p>
+                <p className="text-forest/70 text-xs leading-relaxed">{tc(k(`scholars.${i + 1}.note`))}</p>
               </div>
             ))}
           </div>

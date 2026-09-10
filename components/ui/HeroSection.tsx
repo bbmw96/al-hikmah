@@ -148,7 +148,7 @@ export function HeroSection() {
             >
               Al-Hikmah
             </span>
-            <span className="text-gold text-sm md:text-base font-garamond tracking-[0.45em] uppercase opacity-80">
+            <span className="text-gold text-sm md:text-base font-garamond tracking-[0.45em] uppercase">
               الحِكْمَة
             </span>
           </motion.h1>
@@ -186,7 +186,7 @@ export function HeroSection() {
           </p>
           <p className="text-cream/60 text-sm italic">
             {t('hero.verse.text')}{' '}
-            <span className="not-italic text-gold/70">- Surah al-Baqarah 2:269</span>
+            <span className="not-italic text-gold">- Surah al-Baqarah 2:269</span>
           </p>
         </motion.div>
       </motion.div>

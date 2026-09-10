@@ -67,7 +67,7 @@ export function PropheticMedicineContent() {
             <ArabicText text={CURE_HADITH_AR} size="md" />
             <p className="text-forest/75 text-sm leading-relaxed">{tc('found_hadith_en')}</p>
             <p className="text-forest/70 text-sm leading-relaxed">{tc('found_p')}</p>
-            <p className="text-xs text-gold/60 italic">{tc('found_source')}</p>
+            <p className="text-xs text-gold-deep italic">{tc('found_source')}</p>
           </article>
         </section>
 
@@ -78,7 +78,7 @@ export function PropheticMedicineContent() {
             <p className="text-forest/70 text-sm italic">{tc('honey_verse_en')}</p>
             <p className="text-forest/75 text-sm leading-relaxed">{tc('honey_p1')}</p>
             <p className="text-forest/70 text-sm leading-relaxed">{tc('honey_p2')}</p>
-            <p className="text-xs text-gold/60 italic">{tc('honey_source')}</p>
+            <p className="text-xs text-gold-deep italic">{tc('honey_source')}</p>
           </article>
         </section>
 
@@ -88,7 +88,7 @@ export function PropheticMedicineContent() {
             <ArabicText text={BLACK_SEED_HADITH_AR} size="md" />
             <p className="text-forest/75 text-sm leading-relaxed">{tc('black_hadith_en')}</p>
             <p className="text-forest/70 text-sm leading-relaxed">{tc('black_p')}</p>
-            <p className="text-xs text-gold/60 italic">{tc('black_source')}</p>
+            <p className="text-xs text-gold-deep italic">{tc('black_source')}</p>
           </article>
         </section>
 
@@ -97,7 +97,7 @@ export function PropheticMedicineContent() {
           <article className="card-islamic space-y-3">
             <p className="text-forest/75 text-sm leading-relaxed">{tc('dates_p1')}</p>
             <p className="text-forest/70 text-sm leading-relaxed">{tc('dates_p2')}</p>
-            <p className="text-xs text-gold/60 italic">{tc('dates_source')}</p>
+            <p className="text-xs text-gold-deep italic">{tc('dates_source')}</p>
           </article>
         </section>
 
@@ -106,7 +106,7 @@ export function PropheticMedicineContent() {
           <article className="card-islamic space-y-3">
             <p className="text-forest/75 text-sm leading-relaxed">{tc('olive_p1')}</p>
             <p className="text-forest/70 text-sm leading-relaxed">{tc('olive_p2')}</p>
-            <p className="text-xs text-gold/60 italic">{tc('olive_source')}</p>
+            <p className="text-xs text-gold-deep italic">{tc('olive_source')}</p>
           </article>
         </section>
 
@@ -115,7 +115,7 @@ export function PropheticMedicineContent() {
           <article className="card-islamic space-y-3">
             <p className="text-forest/75 text-sm leading-relaxed">{tc('siwak_p1')}</p>
             <p className="text-forest/70 text-sm leading-relaxed">{tc('siwak_p2')}</p>
-            <p className="text-xs text-gold/60 italic">{tc('siwak_source')}</p>
+            <p className="text-xs text-gold-deep italic">{tc('siwak_source')}</p>
           </article>
         </section>
 
@@ -124,7 +124,7 @@ export function PropheticMedicineContent() {
           <article className="card-islamic space-y-3">
             <p className="text-forest/75 text-sm leading-relaxed">{tc('hijamah_p1')}</p>
             <p className="text-forest/70 text-sm leading-relaxed">{tc('hijamah_p2')}</p>
-            <p className="text-xs text-gold/60 italic">{tc('hijamah_source')}</p>
+            <p className="text-xs text-gold-deep italic">{tc('hijamah_source')}</p>
           </article>
         </section>
 
@@ -133,7 +133,7 @@ export function PropheticMedicineContent() {
           <article className="card-islamic space-y-3">
             <p className="text-forest/75 text-sm leading-relaxed">{tc('talbina_p1')}</p>
             <p className="text-forest/70 text-sm leading-relaxed">{tc('talbina_p2')}</p>
-            <p className="text-xs text-gold/60 italic">{tc('talbina_source')}</p>
+            <p className="text-xs text-gold-deep italic">{tc('talbina_source')}</p>
           </article>
         </section>
 
@@ -151,7 +151,7 @@ export function PropheticMedicineContent() {
             <p className="text-cream/85 text-sm leading-relaxed">{tc('wisdom_p1')}</p>
             <p className="text-cream/85 text-sm leading-relaxed">{tc('wisdom_p2')}</p>
             <p className="text-cream/85 text-sm leading-relaxed">{tc('wisdom_p3')}</p>
-            <p className="text-xs text-gold/70 italic">{tc('wisdom_source')}</p>
+            <p className="text-xs text-gold italic">{tc('wisdom_source')}</p>
           </article>
         </section>
       </div>

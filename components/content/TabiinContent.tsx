@@ -104,7 +104,7 @@ export function TabiinContent() {
                     <h3 className="font-garamond text-lg md:text-xl font-semibold text-forest leading-tight">
                       {tc(entry.nameKey)}
                     </h3>
-                    <p className="text-xs text-gold/80 font-medium uppercase tracking-wider mt-1">
+                    <p className="text-xs text-gold-deep font-medium uppercase tracking-wider mt-1">
                       {tc(entry.datesKey)}
                     </p>
                   </div>
@@ -159,7 +159,7 @@ export function TabiinContent() {
                     <h3 className="font-garamond text-lg md:text-xl font-semibold text-forest leading-tight">
                       {tc(entry.nameKey)}
                     </h3>
-                    <p className="text-xs text-gold/80 font-medium uppercase tracking-wider mt-1">
+                    <p className="text-xs text-gold-deep font-medium uppercase tracking-wider mt-1">
                       {tc(entry.datesKey)}
                     </p>
                   </div>

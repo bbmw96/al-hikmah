@@ -73,7 +73,7 @@ export function ClothingEtiquetteContent() {
           <article className="card-islamic space-y-3">
             <p className="text-forest/75 text-sm leading-relaxed">{tc('right_p1')}</p>
             <p className="text-forest/75 text-sm leading-relaxed">{tc('right_p2')}</p>
-            <p className="text-xs text-gold/60 italic">{tc('right_source')}</p>
+            <p className="text-xs text-gold-deep italic">{tc('right_source')}</p>
           </article>
         </section>
 
@@ -82,13 +82,13 @@ export function ClothingEtiquetteContent() {
           <article className="card-islamic space-y-4">
             <ArabicText text={NEW_CLOTHES_DUA_AR} size="lg" />
             <div className="border-t border-gold/10 pt-3">
-              <p className="text-xs text-gold/70 font-medium uppercase tracking-wider mb-1">{tc('label_transliteration')}</p>
-              <p className="text-forest/60 italic text-sm leading-relaxed">{tc('newg_translit')}</p>
-              <p className="text-xs text-gold/70 font-medium uppercase tracking-wider mt-3 mb-1">{tc('label_meaning')}</p>
+              <p className="text-xs text-gold-deep font-medium uppercase tracking-wider mb-1">{tc('label_transliteration')}</p>
+              <p className="text-forest/70 italic text-sm leading-relaxed">{tc('newg_translit')}</p>
+              <p className="text-xs text-gold-deep font-medium uppercase tracking-wider mt-3 mb-1">{tc('label_meaning')}</p>
               <p className="text-forest/75 text-sm leading-relaxed">{tc('newg_meaning')}</p>
             </div>
             <p className="text-forest/70 text-sm leading-relaxed">{tc('newg_p')}</p>
-            <p className="text-xs text-gold/60 italic">{tc('newg_source')}</p>
+            <p className="text-xs text-gold-deep italic">{tc('newg_source')}</p>
           </article>
         </section>
 
@@ -97,7 +97,7 @@ export function ClothingEtiquetteContent() {
           <article className="card-islamic space-y-3">
             <p className="text-forest/75 text-sm leading-relaxed">{tc('white_p1')}</p>
             <p className="text-forest/70 text-sm leading-relaxed">{tc('white_p2')}</p>
-            <p className="text-xs text-gold/60 italic">{tc('white_source')}</p>
+            <p className="text-xs text-gold-deep italic">{tc('white_source')}</p>
           </article>
         </section>
 
@@ -107,7 +107,7 @@ export function ClothingEtiquetteContent() {
             <p className="text-forest/75 text-sm leading-relaxed">{tc('isbal_p1')}</p>
             <p className="text-forest/70 text-sm leading-relaxed">{tc('isbal_p2')}</p>
             <p className="text-forest/70 text-sm leading-relaxed">{tc('isbal_p3')}</p>
-            <p className="text-xs text-gold/60 italic">{tc('isbal_source')}</p>
+            <p className="text-xs text-gold-deep italic">{tc('isbal_source')}</p>
           </article>
         </section>
 
@@ -116,7 +116,7 @@ export function ClothingEtiquetteContent() {
           <article className="card-islamic space-y-3">
             <p className="text-forest/75 text-sm leading-relaxed">{tc('narrog_p1')}</p>
             <p className="text-forest/70 text-sm leading-relaxed">{tc('narrog_p2')}</p>
-            <p className="text-xs text-gold/60 italic">{tc('narrog_source')}</p>
+            <p className="text-xs text-gold-deep italic">{tc('narrog_source')}</p>
           </article>
         </section>
 
@@ -126,7 +126,7 @@ export function ClothingEtiquetteContent() {
             <p className="text-forest/75 text-sm leading-relaxed">{tc('ihram_p1')}</p>
             <p className="text-forest/75 text-sm leading-relaxed">{tc('ihram_p2')}</p>
             <p className="text-forest/70 text-sm leading-relaxed">{tc('ihram_p3')}</p>
-            <p className="text-xs text-gold/60 italic">{tc('ihram_source')}</p>
+            <p className="text-xs text-gold-deep italic">{tc('ihram_source')}</p>
           </article>
         </section>
 

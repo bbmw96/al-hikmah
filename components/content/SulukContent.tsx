@@ -63,7 +63,7 @@ export function SulukContent() {
         {/* Introduction */}
         <section>
           <h2 className="section-title font-garamond text-2xl font-semibold text-forest mb-2">{tc('intro.heading')}</h2>
-          <p dir="rtl" lang="ar" className="arabic text-gold mb-4">{SUB_AR.intro}</p>
+          <p dir="rtl" lang="ar" className="arabic text-gold-deep mb-4">{SUB_AR.intro}</p>
           <div className="bg-forest/5 border-l-4 border-gold rounded-r-xl p-5">
             <p className="text-forest/75 text-sm leading-relaxed whitespace-pre-line">{tc('intro.text')}</p>
           </div>
@@ -72,15 +72,15 @@ export function SulukContent() {
         {/* Tazkiyah */}
         <section>
           <h2 className="section-title font-garamond text-2xl font-semibold text-forest mb-2">{tc('tazkiyah.heading')}</h2>
-          <p dir="rtl" lang="ar" className="arabic text-gold mb-4">{SUB_AR.tazkiyah}</p>
+          <p dir="rtl" lang="ar" className="arabic text-gold-deep mb-4">{SUB_AR.tazkiyah}</p>
 
           <article className="card-islamic mb-6">
             <span className="badge-gold text-xs mb-4 inline-block">{tc('tazkiyah.verse.ref')}</span>
             <ArabicText text={TAZKIYAH_VERSE_AR} size="lg" />
             <div className="border-t border-gold/10 pt-3 mt-3 space-y-2">
-              <p className="text-xs text-gold/60 uppercase tracking-wider font-medium">{tl}</p>
-              <p className="text-forest/60 italic text-sm">{TAZKIYAH_VERSE_TR}</p>
-              <p className="text-xs text-gold/60 uppercase tracking-wider font-medium mt-2">{ml}</p>
+              <p className="text-xs text-gold-deep uppercase tracking-wider font-medium">{tl}</p>
+              <p className="text-forest/70 italic text-sm">{TAZKIYAH_VERSE_TR}</p>
+              <p className="text-xs text-gold-deep uppercase tracking-wider font-medium mt-2">{ml}</p>
               <p className="text-forest/70 text-sm">{tc('tazkiyah.verse.meaning')}</p>
             </div>
           </article>
@@ -101,7 +101,7 @@ export function SulukContent() {
                     <p className="font-medium text-forest text-sm">{tc(k(`tazkiyah.level.${n}.name`))}</p>
                     <p dir="rtl" lang="ar" className="arabic-sm text-gold/60" aria-hidden="true">{TAZKIYAH_LEVELS_AR[n - 1]}</p>
                   </div>
-                  <p className="text-forest/60 text-xs leading-relaxed mt-0.5">{tc(k(`tazkiyah.level.${n}.desc`))}</p>
+                  <p className="text-forest/70 text-xs leading-relaxed mt-0.5">{tc(k(`tazkiyah.level.${n}.desc`))}</p>
                 </div>
               </div>
             ))}
@@ -111,7 +111,7 @@ export function SulukContent() {
         {/* Three Levels of the Deen */}
         <section>
           <h2 className="section-title font-garamond text-2xl font-semibold text-forest mb-2">{tc('three.heading')}</h2>
-          <p dir="rtl" lang="ar" className="arabic text-gold mb-4">{SUB_AR.three}</p>
+          <p dir="rtl" lang="ar" className="arabic text-gold-deep mb-4">{SUB_AR.three}</p>
 
           <div className="bg-forest/5 border border-gold/20 rounded-xl p-5 mb-6">
             <p className="text-forest/75 text-sm leading-relaxed">{tc('three.hadithIntro')}</p>
@@ -127,15 +127,15 @@ export function SulukContent() {
                   <div>
                     <p dir="rtl" lang="ar" className="arabic text-gold/80" aria-hidden="true">{THREE_AR[n - 1]}</p>
                     <h3 className="font-garamond text-xl font-semibold text-forest">{tc(k(`three.${n}.name`))}</h3>
-                    <span className="text-xs text-gold/60 italic">{tc(k(`three.${n}.subtitle`))}</span>
+                    <span className="text-xs text-gold-deep italic">{tc(k(`three.${n}.subtitle`))}</span>
                   </div>
                 </div>
                 <div className="bg-forest/5 rounded-xl p-3 mb-3">
-                  <p className="text-xs text-gold/60 uppercase tracking-wider font-medium mb-1">{tc('three.questionLabel')}</p>
-                  <p className="text-forest/60 text-sm italic">{tc(k(`three.${n}.question`))}</p>
+                  <p className="text-xs text-gold-deep uppercase tracking-wider font-medium mb-1">{tc('three.questionLabel')}</p>
+                  <p className="text-forest/70 text-sm italic">{tc(k(`three.${n}.question`))}</p>
                   <p className="text-forest/75 text-sm mt-2">{tc(k(`three.${n}.answer`))}</p>
                 </div>
-                <p className="text-forest/65 text-sm leading-relaxed">{tc(k(`three.${n}.explanation`))}</p>
+                <p className="text-forest/70 text-sm leading-relaxed">{tc(k(`three.${n}.explanation`))}</p>
               </article>
             ))}
           </div>
@@ -144,8 +144,8 @@ export function SulukContent() {
         {/* Diseases of the Heart */}
         <section>
           <h2 className="section-title font-garamond text-2xl font-semibold text-forest mb-2">{tc('diseases.heading')}</h2>
-          <p dir="rtl" lang="ar" className="arabic text-gold mb-4">{SUB_AR.diseases}</p>
-          <p className="text-forest/60 text-sm mb-8">{tc('diseases.intro')}</p>
+          <p dir="rtl" lang="ar" className="arabic text-gold-deep mb-4">{SUB_AR.diseases}</p>
+          <p className="text-forest/70 text-sm mb-8">{tc('diseases.intro')}</p>
           <div className="space-y-6">
             {[1, 2, 3, 4, 5].map(n => (
               <article key={n} className="card-islamic">
@@ -154,21 +154,21 @@ export function SulukContent() {
                     <span className="text-forest font-semibold text-xs">{n}</span>
                   </div>
                   <div>
-                    <p dir="rtl" lang="ar" className="arabic-sm text-gold mb-1">{DISEASES_AR[n - 1]}</p>
+                    <p dir="rtl" lang="ar" className="arabic-sm text-gold-deep mb-1">{DISEASES_AR[n - 1]}</p>
                     <h3 className="font-garamond text-xl font-semibold text-forest">{tc(k(`diseases.${n}.name`))}</h3>
                   </div>
                 </div>
                 <div className="space-y-4">
                   <div>
-                    <p className="text-xs text-gold/70 uppercase tracking-wider font-medium mb-1">{tc('diseases.defLabel')}</p>
+                    <p className="text-xs text-gold-deep uppercase tracking-wider font-medium mb-1">{tc('diseases.defLabel')}</p>
                     <p className="text-forest/75 text-sm leading-relaxed">{tc(k(`diseases.${n}.definition`))}</p>
                   </div>
                   <div>
-                    <p className="text-xs text-gold/70 uppercase tracking-wider font-medium mb-1">{tc('diseases.dangerLabel')}</p>
+                    <p className="text-xs text-gold-deep uppercase tracking-wider font-medium mb-1">{tc('diseases.dangerLabel')}</p>
                     <p className="text-forest/70 text-sm leading-relaxed">{tc(k(`diseases.${n}.danger`))}</p>
                   </div>
                   <div className="bg-gold/10 border border-gold/20 rounded-xl p-4">
-                    <p className="text-xs text-gold/70 uppercase tracking-wider font-medium mb-1">{tc('diseases.cureLabel')}</p>
+                    <p className="text-xs text-gold-deep uppercase tracking-wider font-medium mb-1">{tc('diseases.cureLabel')}</p>
                     <p className="text-forest/70 text-sm leading-relaxed">{tc(k(`diseases.${n}.cure`))}</p>
                   </div>
                 </div>
@@ -180,13 +180,13 @@ export function SulukContent() {
         {/* Virtues of Dhikr */}
         <section>
           <h2 className="section-title font-garamond text-2xl font-semibold text-forest mb-2">{tc('dhikr.heading')}</h2>
-          <p dir="rtl" lang="ar" className="arabic text-gold mb-4">{SUB_AR.dhikr}</p>
+          <p dir="rtl" lang="ar" className="arabic text-gold-deep mb-4">{SUB_AR.dhikr}</p>
 
           <article className="card-islamic mb-6">
             <span className="badge-gold text-xs mb-4 inline-block">{tc('dhikr.verse.ref')}</span>
             <ArabicText text={DHIKR_VERSE_AR} size="lg" />
             <div className="border-t border-gold/10 pt-3 mt-3 space-y-2">
-              <p className="text-forest/60 italic text-sm">{DHIKR_VERSE_TR}</p>
+              <p className="text-forest/70 italic text-sm">{DHIKR_VERSE_TR}</p>
               <p className="text-forest/70 text-sm">{tc('dhikr.verse.meaning')}</p>
             </div>
           </article>
@@ -206,8 +206,8 @@ export function SulukContent() {
               <div key={n} className="bg-forest/5 rounded-xl p-4">
                 <ArabicText text={DHIKR_REC_AR[n - 1]} size="md" />
                 <div className="border-t border-gold/10 pt-3 mt-3 space-y-1">
-                  <p className="text-forest/60 italic text-sm">{DHIKR_REC_TR[n - 1]}</p>
-                  <p className="text-forest/65 text-xs leading-relaxed">{tc(k(`dhikr.rec.${n}.meaning`))}</p>
+                  <p className="text-forest/70 italic text-sm">{DHIKR_REC_TR[n - 1]}</p>
+                  <p className="text-forest/70 text-xs leading-relaxed">{tc(k(`dhikr.rec.${n}.meaning`))}</p>
                 </div>
               </div>
             ))}
@@ -217,7 +217,7 @@ export function SulukContent() {
         {/* Key Practices */}
         <section>
           <h2 className="section-title font-garamond text-2xl font-semibold text-forest mb-2">{tc('practices.heading')}</h2>
-          <p dir="rtl" lang="ar" className="arabic text-gold mb-4">{SUB_AR.practices}</p>
+          <p dir="rtl" lang="ar" className="arabic text-gold-deep mb-4">{SUB_AR.practices}</p>
           <div className="space-y-5">
             {[1, 2, 3, 4, 5].map(n => (
               <article key={n} className="card-islamic">
@@ -234,7 +234,7 @@ export function SulukContent() {
         {/* Tawbah */}
         <section>
           <h2 className="section-title font-garamond text-2xl font-semibold text-forest mb-2">{tc('tawbah.heading')}</h2>
-          <p dir="rtl" lang="ar" className="arabic text-gold mb-4">{SUB_AR.tawbah}</p>
+          <p dir="rtl" lang="ar" className="arabic text-gold-deep mb-4">{SUB_AR.tawbah}</p>
 
           <div className="bg-forest/5 border-l-4 border-gold rounded-r-xl p-5 mb-6">
             <p className="text-forest/75 text-sm leading-relaxed">{tc('tawbah.intro')}</p>
@@ -244,7 +244,7 @@ export function SulukContent() {
             <span className="badge-gold text-xs mb-4 inline-block">{tc('tawbah.verse.ref')}</span>
             <ArabicText text={TAWBAH_VERSE_AR} size="md" />
             <div className="border-t border-gold/10 pt-3 mt-3 space-y-2">
-              <p className="text-forest/60 italic text-sm">{TAWBAH_VERSE_TR}</p>
+              <p className="text-forest/70 italic text-sm">{TAWBAH_VERSE_TR}</p>
               <p className="text-forest/70 text-sm">{tc('tawbah.verse.meaning')}</p>
             </div>
           </article>
@@ -258,7 +258,7 @@ export function SulukContent() {
                 </div>
                 <div>
                   <p className="font-medium text-forest text-sm">{tc(k(`tawbah.cond.${n}.name`))}</p>
-                  <p className="text-forest/60 text-xs leading-relaxed mt-0.5">{tc(k(`tawbah.cond.${n}.desc`))}</p>
+                  <p className="text-forest/70 text-xs leading-relaxed mt-0.5">{tc(k(`tawbah.cond.${n}.desc`))}</p>
                 </div>
               </div>
             ))}
@@ -272,7 +272,7 @@ export function SulukContent() {
             <span className="badge-gold text-xs mb-4 inline-block">{tc('tawbah.verse2.ref')}</span>
             <ArabicText text={TAWBAH_VERSE2_AR} size="md" />
             <div className="border-t border-gold/10 pt-3 mt-3 space-y-2">
-              <p className="text-forest/60 italic text-sm">{TAWBAH_VERSE2_TR}</p>
+              <p className="text-forest/70 italic text-sm">{TAWBAH_VERSE2_TR}</p>
               <p className="text-forest/70 text-sm">{tc('tawbah.verse2.meaning')}</p>
             </div>
           </article>
@@ -282,7 +282,7 @@ export function SulukContent() {
         <section className="card-islamic bg-forest/5 text-center">
           <ArabicText text={CLOSING_AR} size="md" className="mb-4" />
           <p className="text-forest/70 text-sm italic mb-1">{tc('closing.meaning')}</p>
-          <p className="text-forest/50 text-xs mt-3">{tc('closing.text')}</p>
+          <p className="text-forest/70 text-xs mt-3">{tc('closing.text')}</p>
         </section>
       </div>
     </>

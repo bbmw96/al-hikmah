@@ -50,7 +50,7 @@ export default async function CollectionPage({ params, searchParams }: Props) {
   if (hadiths.length === 0) {
     return (
       <div className="max-w-4xl mx-auto px-6 py-24 text-center">
-        <p className="text-forest/50">Unable to load hadith at this time. Please try again shortly.</p>
+        <p className="text-forest/70">Unable to load hadith at this time. Please try again shortly.</p>
       </div>
     );
   }
@@ -80,7 +80,7 @@ export default async function CollectionPage({ params, searchParams }: Props) {
               href={`/hadith/${collection}/${hadith.hadithnumber}`}
               className="card-islamic group flex gap-4 hover:-translate-y-0.5 transition-transform duration-150"
             >
-              <span className="w-10 h-10 rounded-full bg-gold/15 text-gold text-sm font-semibold flex items-center justify-center flex-shrink-0 mt-0.5">
+              <span className="w-10 h-10 rounded-full bg-gold/15 text-gold-deep text-sm font-semibold flex items-center justify-center flex-shrink-0 mt-0.5">
                 {hadith.hadithnumber}
               </span>
               <div className="flex-1 min-w-0">
@@ -97,7 +97,7 @@ export default async function CollectionPage({ params, searchParams }: Props) {
                   {hadith.text}
                 </p>
                 {hadith.grades && hadith.grades.length > 0 && (
-                  <p className="text-xs text-gold/60 mt-1.5">
+                  <p className="text-xs text-gold-deep mt-1.5">
                     {hadith.grades[0].graded_by}: {hadith.grades[0].grade}
                   </p>
                 )}
@@ -121,7 +121,7 @@ export default async function CollectionPage({ params, searchParams }: Props) {
             ) : (
               <div />
             )}
-            <p className="text-forest/50 text-sm">
+            <p className="text-forest/70 text-sm">
               Page {page} of {pages} &middot; {total.toLocaleString()} hadiths
             </p>
             {page < pages ? (

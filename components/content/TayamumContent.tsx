@@ -42,7 +42,7 @@ export function TayamumContent() {
           <ArabicText text={QURAN_OPENING} size="lg" className="mb-4" />
           <p className="text-forest/70 italic text-sm leading-relaxed">
             {tc('opening.translation')}
-            <span className="not-italic text-forest/50 ml-1"> -  {tc('opening.source')}</span>
+            <span className="not-italic text-forest/70 ml-1"> -  {tc('opening.source')}</span>
           </p>
         </div>
 
@@ -60,13 +60,13 @@ export function TayamumContent() {
         {/* The Story */}
         <section className="bg-forest/5 border border-forest/10 rounded-2xl p-8">
           <h2 className="font-garamond text-2xl font-semibold text-forest mb-1">{tc('story.heading')}</h2>
-          <p className="font-garamond italic text-gold text-sm mb-6">{tc('story.subtitle')}</p>
+          <p className="font-garamond italic text-gold-deep text-sm mb-6">{tc('story.subtitle')}</p>
 
           <div className="bg-cream border border-gold/20 rounded-xl p-6 mb-6">
             <p className="text-forest/75 text-sm leading-relaxed italic mb-3">{tc('story.quote1')}</p>
             <p className="text-forest/75 text-sm leading-relaxed italic mb-3">{tc('story.quote2')}</p>
             <p className="text-forest/75 text-sm leading-relaxed italic mb-3">{tc('story.quote3')}</p>
-            <p className="text-forest/45 text-xs mt-3">{tc('story.attribution')}</p>
+            <p className="text-forest/70 text-xs mt-3">{tc('story.attribution')}</p>
           </div>
 
           <div className="space-y-3 text-forest/80 text-sm leading-relaxed">
@@ -83,10 +83,10 @@ export function TayamumContent() {
           <div className="space-y-6">
             <div className="card-islamic">
               <div className="flex items-center gap-3 mb-5 flex-wrap">
-                <span className="px-3 py-1 rounded-full bg-gold/15 text-gold text-xs font-semibold border border-gold/25">
+                <span className="px-3 py-1 rounded-full bg-gold/15 text-gold-deep text-xs font-semibold border border-gold/25">
                   {tc('opening.source')}
                 </span>
-                <span className="text-forest/50 text-xs italic">{tc('quran.maidah.tag')}</span>
+                <span className="text-forest/70 text-xs italic">{tc('quran.maidah.tag')}</span>
               </div>
               <ArabicText text={QURAN_MAIDAH} size="lg" className="mb-4" />
               <p className="text-forest/70 text-sm italic leading-relaxed">{tc('quran.maidah.translation')}</p>
@@ -97,7 +97,7 @@ export function TayamumContent() {
                 <span className="px-3 py-1 rounded-full bg-forest/15 text-forest text-xs font-semibold border border-forest/20">
                   {tc('quran.nisa.label')}
                 </span>
-                <span className="text-forest/50 text-xs italic">{tc('quran.nisa.tag')}</span>
+                <span className="text-forest/70 text-xs italic">{tc('quran.nisa.tag')}</span>
               </div>
               <ArabicText text={QURAN_NISA} size="lg" className="mb-4" />
               <p className="text-forest/70 text-sm italic leading-relaxed">{tc('quran.nisa.translation')}</p>
@@ -156,13 +156,13 @@ export function TayamumContent() {
           <div className="space-y-4 mb-8">
             {[1, 2, 3, 4, 5].map(n => (
               <div key={n} className="card-islamic flex gap-4">
-                <div className="w-10 h-10 rounded-full bg-gold/15 border border-gold/30 flex items-center justify-center flex-shrink-0 font-garamond font-semibold text-gold">
+                <div className="w-10 h-10 rounded-full bg-gold/15 border border-gold/30 flex items-center justify-center flex-shrink-0 font-garamond font-semibold text-gold-deep">
                   {n}
                 </div>
                 <div className="flex-1">
                   <h3 className="font-garamond text-lg font-semibold text-forest mb-1">{tc(k(`steps.${n}.title`))}</h3>
                   {STEP_ARABIC[n] && (
-                    <p dir="rtl" lang="ar" className="arabic text-gold text-right mb-2">
+                    <p dir="rtl" lang="ar" className="arabic text-gold-deep text-right mb-2">
                       {STEP_ARABIC[n]}
                     </p>
                   )}
@@ -220,8 +220,8 @@ export function TayamumContent() {
               <div key={h.key} className="card-islamic gold-border-left">
                 <ArabicText text={h.ar} size="md" className="mb-3" />
                 <p className="text-forest/70 text-sm italic leading-relaxed mb-2">{tc(k(`${h.key}.translation`))}</p>
-                <p className="text-forest/45 text-xs mb-3">{tc(k(`${h.key}.attribution`))}</p>
-                <p className="text-forest/65 text-sm leading-relaxed">{tc(k(`${h.key}.commentary`))}</p>
+                <p className="text-forest/70 text-xs mb-3">{tc(k(`${h.key}.attribution`))}</p>
+                <p className="text-forest/70 text-sm leading-relaxed">{tc(k(`${h.key}.commentary`))}</p>
               </div>
             ))}
           </div>

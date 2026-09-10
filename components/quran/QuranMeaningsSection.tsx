@@ -101,7 +101,7 @@ export function QuranMeaningsSection() {
               className="card-islamic group flex flex-col gap-2 hover:-translate-y-1 transition-transform duration-200"
             >
               <div className="flex items-start justify-between gap-2">
-                <span className="w-8 h-8 rounded-full bg-gold/15 text-gold text-xs font-semibold flex items-center justify-center flex-shrink-0">
+                <span className="w-8 h-8 rounded-full bg-gold/15 text-gold-deep text-xs font-semibold flex items-center justify-center flex-shrink-0">
                   {surah.number}
                 </span>
                 <p

@@ -79,7 +79,7 @@ export function ProphetDetailContent({ slug }: { slug: string }) {
       {/* Back */}
       <Link
         href="/prophets"
-        className="inline-flex items-center gap-1.5 text-sm text-forest/60 hover:text-forest mb-8 transition-colors"
+        className="inline-flex items-center gap-1.5 text-sm text-forest/70 hover:text-forest mb-8 transition-colors"
       >
         <ChevronLeft className="w-4 h-4" aria-hidden="true" />
         {tc('detail_back')}
@@ -97,7 +97,7 @@ export function ProphetDetailContent({ slug }: { slug: string }) {
             {title && <span className="block text-gold text-xl font-normal mt-1">{title}</span>}
           </h1>
           {altNames && altNames.length > 0 && (
-            <p className="text-cream/50 text-sm">
+            <p className="text-cream/70 text-sm">
               {tc('detail_also_known')} {altNames.join(', ')}
             </p>
           )}
@@ -109,7 +109,7 @@ export function ProphetDetailContent({ slug }: { slug: string }) {
         <section className="grid grid-cols-1 sm:grid-cols-2 gap-4">
           {keyFacts.map(fact => (
             <div key={fact.label} className="card-islamic">
-              <p className="text-xs text-gold/70 font-medium uppercase tracking-wider mb-1">{fact.label}</p>
+              <p className="text-xs text-gold-deep font-medium uppercase tracking-wider mb-1">{fact.label}</p>
               <p className="text-forest font-medium text-sm">{fact.value}</p>
             </div>
           ))}
@@ -125,19 +125,19 @@ export function ProphetDetailContent({ slug }: { slug: string }) {
         <section>
           <h2 className="section-title font-garamond text-xl font-semibold text-forest mb-4">{tc('detail_lineage')}</h2>
           {lineageRows.length === 0 ? (
-            <div className="card-islamic text-center text-forest/50 text-sm py-6">{tc('detail_adam_no_lineage')}</div>
+            <div className="card-islamic text-center text-forest/70 text-sm py-6">{tc('detail_adam_no_lineage')}</div>
           ) : (
             <div className="flex flex-col items-center gap-0">
               {[...lineageRows].reverse().map((entry, i) => (
                 <div key={i} className="flex flex-col items-center w-full max-w-sm">
                   <div className="w-full border border-gold/30 bg-white rounded-xl px-5 py-3 text-center shadow-sm">
                     {entry.arabicName && (
-                      <p dir="rtl" lang="ar" className="arabic-sm text-forest/60 leading-tight mb-0.5">
+                      <p dir="rtl" lang="ar" className="arabic-sm text-forest/70 leading-tight mb-0.5">
                         {entry.arabicName}
                       </p>
                     )}
                     <p className="font-garamond font-semibold text-forest text-base">{entry.name}</p>
-                    <p className="text-xs text-gold/80 font-medium uppercase tracking-wide mt-0.5">{entry.relation}</p>
+                    <p className="text-xs text-gold-deep font-medium uppercase tracking-wide mt-0.5">{entry.relation}</p>
                   </div>
                   <div className="flex flex-col items-center">
                     <div className="w-px h-5 bg-gold/40" />
@@ -151,7 +151,7 @@ export function ProphetDetailContent({ slug }: { slug: string }) {
                   {prophet.arabicName}
                 </p>
                 <p className="font-garamond font-bold text-cream text-lg">{name}</p>
-                <p className="text-gold/80 text-xs font-medium uppercase tracking-wide mt-0.5">{tc('detail_prophet_pbuh')}</p>
+                <p className="text-gold text-xs font-medium uppercase tracking-wide mt-0.5">{tc('detail_prophet_pbuh')}</p>
               </div>
             </div>
           )}
@@ -161,16 +161,16 @@ export function ProphetDetailContent({ slug }: { slug: string }) {
         {familyGroups.length > 0 && (
           <section>
             <h2 className="section-title font-garamond text-xl font-semibold text-forest mb-1">{tc('detail_family')}</h2>
-            <p className="text-forest/50 text-xs mb-4">{tc('detail_family_intro')}</p>
+            <p className="text-forest/70 text-xs mb-4">{tc('detail_family_intro')}</p>
             <div className="space-y-4">
               {familyGroups.map(group => (
                 <div key={group.key}>
-                  <p className="text-xs text-gold/80 font-medium uppercase tracking-wider mb-2">{tc(group.key)}</p>
+                  <p className="text-xs text-gold-deep font-medium uppercase tracking-wider mb-2">{tc(group.key)}</p>
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                     {group.members.map((member, i) => (
                       <div key={i} className="card-islamic">
                         {member.arabicName && (
-                          <p dir="rtl" lang="ar" className="arabic-sm text-forest/60 leading-tight mb-0.5">
+                          <p dir="rtl" lang="ar" className="arabic-sm text-forest/70 leading-tight mb-0.5">
                             {member.arabicName}
                           </p>
                         )}
@@ -178,7 +178,7 @@ export function ProphetDetailContent({ slug }: { slug: string }) {
                           {member.name[lang] ?? member.name.en}
                         </p>
                         {member.note && (
-                          <p className="text-forest/60 text-xs leading-relaxed mt-1">
+                          <p className="text-forest/70 text-xs leading-relaxed mt-1">
                             {member.note[lang] ?? member.note.en}
                           </p>
                         )}
@@ -191,7 +191,7 @@ export function ProphetDetailContent({ slug }: { slug: string }) {
             {prophet.id === 'muhammad' && (
               <Link
                 href="/prophet-family"
-                className="mt-6 inline-flex items-center gap-2 text-sm text-gold hover:text-forest transition-colors font-garamond italic border-b border-gold/40 hover:border-forest/60 pb-0.5"
+                className="mt-6 inline-flex items-center gap-2 text-sm text-gold-deep hover:text-forest transition-colors font-garamond italic border-b border-gold/40 hover:border-forest/60 pb-0.5"
               >
                 {tc('detail_family_full_tree_cta')}
                 <ChevronRight className="w-4 h-4" aria-hidden="true" />
@@ -258,11 +258,11 @@ export function ProphetDetailContent({ slug }: { slug: string }) {
         {prev ? (
           <Link
             href={`/prophets/${prev.id}`}
-            className="flex items-center gap-2 text-sm text-forest/60 hover:text-forest transition-colors"
+            className="flex items-center gap-2 text-sm text-forest/70 hover:text-forest transition-colors"
           >
             <ChevronLeft className="w-4 h-4" aria-hidden="true" />
             <span>
-              <span className="block text-xs text-forest/40">{tc('detail_previous')}</span>
+              <span className="block text-xs text-forest/70">{tc('detail_previous')}</span>
               {navName(prev)}
             </span>
           </Link>
@@ -270,10 +270,10 @@ export function ProphetDetailContent({ slug }: { slug: string }) {
         {next ? (
           <Link
             href={`/prophets/${next.id}`}
-            className="flex items-center gap-2 text-sm text-forest/60 hover:text-forest transition-colors text-right"
+            className="flex items-center gap-2 text-sm text-forest/70 hover:text-forest transition-colors text-right"
           >
             <span>
-              <span className="block text-xs text-forest/40">{tc('detail_next')}</span>
+              <span className="block text-xs text-forest/70">{tc('detail_next')}</span>
               {navName(next)}
             </span>
             <ChevronRight className="w-4 h-4" aria-hidden="true" />

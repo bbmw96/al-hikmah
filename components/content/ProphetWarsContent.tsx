@@ -44,7 +44,7 @@ export function ProphetWarsContent() {
             <h2 className="section-title font-garamond text-2xl md:text-3xl font-semibold text-forest mb-4">
               {tc(k(`pw_${n}_h`))}
             </h2>
-            <p className="text-xs text-gold/70 italic mb-5">{tc(k(`pw_${n}_verse`))}</p>
+            <p className="text-xs text-gold-deep italic mb-5">{tc(k(`pw_${n}_verse`))}</p>
             <p className="text-forest/75 leading-relaxed text-sm mb-4">{tc(k(`pw_${n}_p1`))}</p>
             <p className="text-forest/75 leading-relaxed text-sm mb-4">{tc(k(`pw_${n}_p2`))}</p>
             {PW_WITH_NOTE.includes(n) && (

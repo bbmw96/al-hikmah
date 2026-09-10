@@ -62,10 +62,10 @@ export function SoulJourneyDiagram() {
           <span className="text-[10px] uppercase tracking-widest text-forest/60">Jannah</span>
         </div>
         <div className="flex flex-col items-center gap-1">
-          <svg viewBox="0 0 32 32" className="w-8 h-8 text-forest/50" fill="none" stroke="currentColor" strokeWidth="1.5">
+          <svg viewBox="0 0 32 32" className="w-8 h-8 text-forest/70" fill="none" stroke="currentColor" strokeWidth="1.5">
             <path d="M8 28 Q4 20 10 14 Q6 8 16 4 Q16 12 22 10 Q20 20 26 16 Q26 24 22 28 Z" />
           </svg>
-          <span className="text-[10px] uppercase tracking-widest text-forest/40">Jahannam</span>
+          <span className="text-[10px] uppercase tracking-widest text-forest/70">Jahannam</span>
         </div>
       </div>
     </section>

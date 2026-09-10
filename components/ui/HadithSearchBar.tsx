@@ -47,7 +47,7 @@ export function HadithSearchBar({ collection }: { collection: string }) {
     <div className="mb-10">
       <div className="relative max-w-2xl mx-auto">
         <Search
-          className="absolute left-4 top-1/2 -translate-y-1/2 w-4 h-4 text-forest/40"
+          className="absolute left-4 top-1/2 -translate-y-1/2 w-4 h-4 text-forest/70"
           aria-hidden="true"
         />
         <input
@@ -84,10 +84,10 @@ export function HadithSearchBar({ collection }: { collection: string }) {
       {searched && results !== null && (
         <div className="max-w-2xl mx-auto mt-4">
           {results.length === 0 ? (
-            <p className="text-center text-forest/50 text-sm py-6">{t('ui.noresults')}</p>
+            <p className="text-center text-forest/70 text-sm py-6">{t('ui.noresults')}</p>
           ) : (
             <>
-              <p className="text-forest/50 text-sm mb-4">
+              <p className="text-forest/70 text-sm mb-4">
                 {results.length} {t('ui.searchresults')}
               </p>
               <div className="space-y-3">
@@ -97,7 +97,7 @@ export function HadithSearchBar({ collection }: { collection: string }) {
                     href={`/hadith/${collection}/${hadith.hadithnumber}`}
                     className="card-islamic group flex gap-4 hover:-translate-y-0.5 transition-transform duration-150"
                   >
-                    <span className="w-9 h-9 rounded-full bg-gold/15 text-gold text-xs font-semibold flex items-center justify-center flex-shrink-0 mt-0.5">
+                    <span className="w-9 h-9 rounded-full bg-gold/15 text-gold-deep text-xs font-semibold flex items-center justify-center flex-shrink-0 mt-0.5">
                       {hadith.hadithnumber}
                     </span>
                     <div className="flex-1 min-w-0">
@@ -105,7 +105,7 @@ export function HadithSearchBar({ collection }: { collection: string }) {
                         {hadith.text}
                       </p>
                       {hadith.grades && hadith.grades.length > 0 && (
-                        <p className="text-xs text-gold/60 mt-1.5">
+                        <p className="text-xs text-gold-deep mt-1.5">
                           {hadith.grades[0].graded_by}: {hadith.grades[0].grade}
                         </p>
                       )}

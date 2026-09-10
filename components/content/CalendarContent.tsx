@@ -49,7 +49,7 @@ export function CalendarContent() {
           >
             إِنَّ عِدَّةَ الشُّهُورِ عِندَ اللَّهِ اثْنَا عَشَرَ شَهْرًا
           </p>
-          <p className="text-forest/60 italic text-sm">{tc('verse_trans')}</p>
+          <p className="text-forest/70 italic text-sm">{tc('verse_trans')}</p>
         </div>
 
         {/* What is the Hijri calendar */}
@@ -110,7 +110,7 @@ export function CalendarContent() {
             <p className="text-cream/85 leading-relaxed">{tc('sacred_p1')}</p>
           </div>
           <p className="text-forest/75 leading-relaxed mb-5">{tc('sacred_p2')}</p>
-          <p className="text-xs text-gold/70 font-medium uppercase tracking-wider mb-3">
+          <p className="text-xs text-gold-deep font-medium uppercase tracking-wider mb-3">
             {tc('sacred_list_label')}
           </p>
           <ul className="space-y-2">
@@ -143,7 +143,7 @@ export function CalendarContent() {
             <h2 className="section-title font-garamond text-2xl md:text-3xl font-semibold text-forest mb-2">
               {tc('months_heading')}
             </h2>
-            <p className="text-forest/60 text-sm italic">{tc('months_subheading')}</p>
+            <p className="text-forest/70 text-sm italic">{tc('months_subheading')}</p>
           </div>
         </section>
 
@@ -177,16 +177,16 @@ export function CalendarContent() {
                   </div>
                 </div>
 
-                <p className="text-forest/60 text-sm leading-relaxed">{tc(sigKey)}</p>
+                <p className="text-forest/70 text-sm leading-relaxed">{tc(sigKey)}</p>
 
                 {dates.length > 0 && (
                   <div className="border-t border-gold/10 pt-3">
-                    <p className="text-xs text-gold/70 font-medium uppercase tracking-wider mb-2">
+                    <p className="text-xs text-gold-deep font-medium uppercase tracking-wider mb-2">
                       {tc('key_dates_label')}
                     </p>
                     <ul className="space-y-1">
                       {dates.map((date, i) => (
-                        <li key={i} className="flex items-start gap-2 text-xs text-forest/60">
+                        <li key={i} className="flex items-start gap-2 text-xs text-forest/70">
                           <span
                             className="w-1 h-1 rounded-full bg-gold flex-shrink-0 mt-1.5"
                             aria-hidden="true"

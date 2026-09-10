@@ -24,7 +24,7 @@ const GRADE_KEY: Record<string, keyof typeof HADITH_LIST_UI> = {
 function GradeTag({ grade, label }: { grade: string; label: string }) {
   const colour =
     grade === 'Most Authentic'
-      ? 'bg-gold/15 text-gold border-gold/30'
+      ? 'bg-gold/15 text-gold-deep border-gold/30'
       : grade === 'Highly Authentic'
       ? 'bg-forest/15 text-forest border-forest/30'
       : 'bg-midnight/10 text-midnight border-midnight/20';
@@ -74,20 +74,20 @@ export function HadithListContent() {
                       <Lock className="w-4 h-4 text-forest/30 flex-shrink-0 mt-1" aria-label={t('ui.comingsoon')} />
                     )}
                   </div>
-                  <p className="text-forest/50 text-sm mb-2">{col.author} ({col.authorDates})</p>
+                  <p className="text-forest/70 text-sm mb-2">{col.author} ({col.authorDates})</p>
                   <GradeTag grade={col.grade} label={ui(GRADE_KEY[col.grade])} />
                 </div>
 
                 <p className="text-forest/60 text-sm leading-relaxed flex-1">{desc(col.id, col.description)}</p>
 
                 <div className="flex items-center justify-between mt-auto pt-3 border-t border-gold/10">
-                  <span className="text-forest/40 text-xs">
+                  <span className="text-forest/70 text-xs">
                     {col.hadithCount.toLocaleString()} {t('ui.hadiths')}
                   </span>
                   {col.available ? (
                     <Link
                       href={`/hadith/${col.id}`}
-                      className="flex items-center gap-1.5 text-sm font-medium text-gold hover:text-gold/80 transition-colors"
+                      className="flex items-center gap-1.5 text-sm font-medium text-gold-deep hover:underline transition-colors"
                     >
                       <BookOpen className="w-4 h-4" aria-hidden="true" />
                       {t('ui.browse')}
@@ -109,7 +109,7 @@ export function HadithListContent() {
         <p className="text-forest/70 leading-relaxed text-sm mb-4">
           {ui('aside_body')}
         </p>
-        <p className="text-forest/50 text-xs">
+        <p className="text-forest/70 text-xs">
           {ui('aside_note')}
         </p>
       </aside>

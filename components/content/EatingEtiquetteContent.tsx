@@ -75,12 +75,12 @@ export function EatingEtiquetteContent() {
             <ArabicText text={BISMILLAH_AR} size="lg" />
             <p className="text-forest/75 text-sm leading-relaxed">{tc('bismillah_p1')}</p>
             <div className="border-t border-gold/10 pt-3">
-              <p className="text-xs text-gold/70 font-medium uppercase tracking-wider mb-1">{tc('bismillah_forgot_label')}</p>
+              <p className="text-xs text-gold-deep font-medium uppercase tracking-wider mb-1">{tc('bismillah_forgot_label')}</p>
               <ArabicText text={BISMILLAH_FORGOT_AR} size="md" />
-              <p className="text-forest/60 italic text-sm mt-2">{BISMILLAH_FORGOT_TR}</p>
+              <p className="text-forest/70 italic text-sm mt-2">{BISMILLAH_FORGOT_TR}</p>
               <p className="text-forest/75 text-sm leading-relaxed mt-2">{tc('bismillah_forgot_p')}</p>
             </div>
-            <p className="text-xs text-gold/60 italic">{tc('bismillah_source')}</p>
+            <p className="text-xs text-gold-deep italic">{tc('bismillah_source')}</p>
           </article>
         </section>
 
@@ -91,7 +91,7 @@ export function EatingEtiquetteContent() {
             <p className="text-forest/75 text-sm leading-relaxed">{tc('right_p1')}</p>
             <p className="text-forest/75 text-sm leading-relaxed">{tc('right_p2')}</p>
             <p className="text-forest/70 text-sm leading-relaxed">{tc('right_p3')}</p>
-            <p className="text-xs text-gold/60 italic">{tc('right_source')}</p>
+            <p className="text-xs text-gold-deep italic">{tc('right_source')}</p>
           </article>
         </section>
 
@@ -101,7 +101,7 @@ export function EatingEtiquetteContent() {
           <article className="card-islamic space-y-3">
             <p className="text-forest/75 text-sm leading-relaxed">{tc('sit_p1')}</p>
             <p className="text-forest/75 text-sm leading-relaxed">{tc('sit_p2')}</p>
-            <p className="text-xs text-gold/60 italic">{tc('sit_source')}</p>
+            <p className="text-xs text-gold-deep italic">{tc('sit_source')}</p>
           </article>
         </section>
 
@@ -111,7 +111,7 @@ export function EatingEtiquetteContent() {
           <article className="card-islamic space-y-3">
             <p className="text-forest/75 text-sm leading-relaxed">{tc('thirds_p1')}</p>
             <p className="text-forest/70 text-sm leading-relaxed">{tc('thirds_p2')}</p>
-            <p className="text-xs text-gold/60 italic">{tc('thirds_source')}</p>
+            <p className="text-xs text-gold-deep italic">{tc('thirds_source')}</p>
           </article>
         </section>
 
@@ -145,13 +145,13 @@ export function EatingEtiquetteContent() {
           <article className="card-islamic space-y-4">
             <ArabicText text={ALHAMDU_AR} size="lg" />
             <div className="border-t border-gold/10 pt-3">
-              <p className="text-xs text-gold/70 font-medium uppercase tracking-wider mb-1">{tc('label_transliteration')}</p>
-              <p className="text-forest/60 italic text-sm leading-relaxed">{ALHAMDU_TR}</p>
-              <p className="text-xs text-gold/70 font-medium uppercase tracking-wider mt-3 mb-1">{tc('label_meaning')}</p>
+              <p className="text-xs text-gold-deep font-medium uppercase tracking-wider mb-1">{tc('label_transliteration')}</p>
+              <p className="text-forest/70 italic text-sm leading-relaxed">{ALHAMDU_TR}</p>
+              <p className="text-xs text-gold-deep font-medium uppercase tracking-wider mt-3 mb-1">{tc('label_meaning')}</p>
               <p className="text-forest/75 text-sm leading-relaxed">{ALHAMDU_EN}</p>
             </div>
             <p className="text-forest/70 text-sm leading-relaxed">{tc('alhamdu_p')}</p>
-            <p className="text-xs text-gold/60 italic">{tc('alhamdu_source')}</p>
+            <p className="text-xs text-gold-deep italic">{tc('alhamdu_source')}</p>
           </article>
         </section>
 

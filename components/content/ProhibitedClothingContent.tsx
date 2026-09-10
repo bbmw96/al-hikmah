@@ -66,7 +66,7 @@ export function ProhibitedClothingContent() {
           <article className="card-islamic space-y-3">
             <p className="text-forest/75 text-sm leading-relaxed">{tc('framing_p1')}</p>
             <p className="text-forest/70 text-sm leading-relaxed">
-              {tc('framing_p2_pre')} <a href="/clothing-etiquette" className="text-gold underline">{tc('framing_p2_link')}</a> {tc('framing_p2_post')}
+              {tc('framing_p2_pre')} <a href="/clothing-etiquette" className="text-gold-deep underline">{tc('framing_p2_link')}</a> {tc('framing_p2_post')}
             </p>
           </article>
         </section>
@@ -77,9 +77,9 @@ export function ProhibitedClothingContent() {
           <article className="card-islamic space-y-4">
             <ArabicText text={SILK_GOLD_HADITH_AR} size="md" />
             <div className="border-t border-gold/10 pt-3">
-              <p className="text-xs text-gold/70 font-medium uppercase tracking-wider mb-1">{tc('label_transliteration')}</p>
-              <p className="text-forest/60 italic text-sm leading-relaxed">{tc('silk_translit')}</p>
-              <p className="text-xs text-gold/70 font-medium uppercase tracking-wider mt-3 mb-1">{tc('label_meaning')}</p>
+              <p className="text-xs text-gold-deep font-medium uppercase tracking-wider mb-1">{tc('label_transliteration')}</p>
+              <p className="text-forest/70 italic text-sm leading-relaxed">{tc('silk_translit')}</p>
+              <p className="text-xs text-gold-deep font-medium uppercase tracking-wider mt-3 mb-1">{tc('label_meaning')}</p>
               <p className="text-forest/75 text-sm leading-relaxed">{tc('silk_meaning')}</p>
             </div>
             <p className="text-forest/75 text-sm leading-relaxed">{tc('silk_p')}</p>
@@ -90,7 +90,7 @@ export function ProhibitedClothingContent() {
               <li>{tc('silk_c_3')}</li>
               <li>{tc('silk_c_4')}</li>
             </ul>
-            <p className="text-xs text-gold/60 italic">{tc('silk_source')}</p>
+            <p className="text-xs text-gold-deep italic">{tc('silk_source')}</p>
           </article>
         </section>
 
@@ -102,7 +102,7 @@ export function ProhibitedClothingContent() {
             <p className="text-forest/75 text-sm leading-relaxed">{tc('gender_p_translit_body')}</p>
             <p className="text-forest/70 text-sm leading-relaxed">{tc('gender_p1')}</p>
             <p className="text-forest/70 text-sm leading-relaxed">{tc('gender_p2')}</p>
-            <p className="text-xs text-gold/60 italic">{tc('gender_source')}</p>
+            <p className="text-xs text-gold-deep italic">{tc('gender_source')}</p>
           </article>
         </section>
 
@@ -117,7 +117,7 @@ export function ProhibitedClothingContent() {
               <li>{tc('red_r_2')}</li>
               <li>{tc('red_r_3')}</li>
             </ul>
-            <p className="text-xs text-gold/60 italic">{tc('red_source')}</p>
+            <p className="text-xs text-gold-deep italic">{tc('red_source')}</p>
           </article>
         </section>
 
@@ -127,7 +127,7 @@ export function ProhibitedClothingContent() {
           <article className="card-islamic space-y-3">
             <p className="text-forest/75 text-sm leading-relaxed">{tc('isbal_p1')}</p>
             <p className="text-forest/70 text-sm leading-relaxed">{tc('isbal_p2')}</p>
-            <p className="text-xs text-gold/60 italic">{tc('isbal_source')}</p>
+            <p className="text-xs text-gold-deep italic">{tc('isbal_source')}</p>
           </article>
         </section>
 
@@ -138,7 +138,7 @@ export function ProhibitedClothingContent() {
             <p className="text-forest/75 text-sm leading-relaxed">{tc('kuffar_p1')}</p>
             <p className="text-forest/70 text-sm leading-relaxed">{tc('kuffar_p2')}</p>
             <p className="text-forest/70 text-sm leading-relaxed">{tc('kuffar_p3')}</p>
-            <p className="text-xs text-gold/60 italic">{tc('kuffar_source')}</p>
+            <p className="text-xs text-gold-deep italic">{tc('kuffar_source')}</p>
           </article>
         </section>
 

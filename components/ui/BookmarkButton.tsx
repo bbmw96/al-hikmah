@@ -36,8 +36,8 @@ export function BookmarkButton({ duaId }: { duaId: string }) {
       aria-pressed={bookmarked}
       className={
         bookmarked
-          ? 'w-9 h-9 rounded-full inline-flex items-center justify-center bg-gold/15 text-gold hover:bg-gold/25 transition-colors'
-          : 'w-9 h-9 rounded-full inline-flex items-center justify-center bg-forest/5 text-forest/40 hover:bg-forest/10 hover:text-forest transition-colors'
+          ? 'w-9 h-9 rounded-full inline-flex items-center justify-center bg-gold/15 text-gold-deep hover:bg-gold/25 transition-colors'
+          : 'w-9 h-9 rounded-full inline-flex items-center justify-center bg-forest/5 text-forest/70 hover:bg-forest/10 hover:text-forest transition-colors'
       }
     >
       <Heart

@@ -89,7 +89,7 @@ export function JumuahContent() {
             {OBLIGATED.map(item => (
               <div key={item.labelKey} className="card-islamic">
                 <h3 className="font-garamond text-base font-semibold text-forest mb-1">{tc(item.labelKey)}</h3>
-                <p className="text-forest/60 text-sm leading-relaxed">{tc(item.descKey)}</p>
+                <p className="text-forest/70 text-sm leading-relaxed">{tc(item.descKey)}</p>
               </div>
             ))}
           </div>
@@ -103,12 +103,12 @@ export function JumuahContent() {
           <div className="space-y-4">
             {CONDITIONS_VALID.map((c, i) => (
               <div key={c.titleKey} className="card-islamic flex gap-4">
-                <span className="w-7 h-7 rounded-full bg-gold/15 text-gold text-xs font-semibold flex items-center justify-center flex-shrink-0 mt-1">
+                <span className="w-7 h-7 rounded-full bg-gold/15 text-gold-deep text-xs font-semibold flex items-center justify-center flex-shrink-0 mt-1">
                   {i + 1}
                 </span>
                 <div>
                   <h3 className="font-garamond text-base font-semibold text-forest mb-1">{tc(c.titleKey)}</h3>
-                  <p className="text-forest/60 text-sm leading-relaxed">{tc(c.detailKey)}</p>
+                  <p className="text-forest/70 text-sm leading-relaxed">{tc(c.detailKey)}</p>
                 </div>
               </div>
             ))}
@@ -127,7 +127,7 @@ export function JumuahContent() {
             <h3 className="font-garamond text-lg font-semibold text-forest mb-4">{tc('s4_req_h')}</h3>
             <ul className="space-y-2">
               {KHUTBAH_ELEMENTS.map(el => (
-                <li key={el} className="flex items-start gap-2 text-sm text-forest/60">
+                <li key={el} className="flex items-start gap-2 text-sm text-forest/70">
                   <div className="w-1.5 h-1.5 rounded-full bg-gold mt-1.5 flex-shrink-0" />
                   {tc(el)}
                 </li>
@@ -195,7 +195,7 @@ export function JumuahContent() {
                   {item.arabic}
                 </p>
                 <h3 className="font-garamond text-base font-semibold text-forest mb-2">{tc(item.actKey)}</h3>
-                <p className="text-forest/60 text-xs leading-relaxed">{tc(item.hadithKey)}</p>
+                <p className="text-forest/70 text-xs leading-relaxed">{tc(item.hadithKey)}</p>
               </div>
             ))}
           </div>

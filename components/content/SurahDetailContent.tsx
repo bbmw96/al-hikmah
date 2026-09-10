@@ -25,7 +25,7 @@ export function SurahDetailContent({ surah }: { surah: Surah }) {
       {/* Back */}
       <Link
         href="/quran"
-        className="inline-flex items-center gap-1.5 text-sm text-forest/60 hover:text-forest mb-8 transition-colors"
+        className="inline-flex items-center gap-1.5 text-sm text-forest/70 hover:text-forest mb-8 transition-colors"
       >
         <ChevronLeft className="w-4 h-4" aria-hidden="true" />
         {tc('back_all_surahs')}
@@ -49,9 +49,9 @@ export function SurahDetailContent({ surah }: { surah: Surah }) {
           <h1 className="font-garamond text-4xl font-semibold text-cream mb-1">
             {sc?.name?.[lang] ?? surah.englishName}
           </h1>
-          <p className="text-gold/70 italic text-lg">{surah.transliteration.split('-').map((w: string) => w.charAt(0).toUpperCase() + w.slice(1)).join(' ')}</p>
+          <p className="text-gold italic text-lg">{surah.transliteration.split('-').map((w: string) => w.charAt(0).toUpperCase() + w.slice(1)).join(' ')}</p>
           {surah.alternativeNames && surah.alternativeNames.length > 0 && (
-            <p className="text-cream/40 text-sm mt-2">
+            <p className="text-cream/70 text-sm mt-2">
               {tc('also_known_as')} {surah.alternativeNames.join(', ')}
             </p>
           )}
@@ -74,7 +74,7 @@ export function SurahDetailContent({ surah }: { surah: Surah }) {
             { label: tc('fact_surah_no'), value: String(surah.number) + ' / 114' },
           ].map(fact => (
             <div key={fact.label} className="card-islamic text-center">
-              <p className="text-xs text-gold/70 font-medium uppercase tracking-wider mb-1">{fact.label}</p>
+              <p className="text-xs text-gold-deep font-medium uppercase tracking-wider mb-1">{fact.label}</p>
               <p className="text-forest font-semibold text-sm">{fact.value}</p>
             </div>
           ))}
@@ -94,7 +94,7 @@ export function SurahDetailContent({ surah }: { surah: Surah }) {
           <p
             dir="rtl"
             lang="ar"
-            className="arabic-sm text-gold mb-1.5"
+            className="arabic-sm text-gold-deep mb-1.5"
           >
             أسباب النزول
           </p>
@@ -140,7 +140,7 @@ export function SurahDetailContent({ surah }: { surah: Surah }) {
                     &ldquo;{sc?.verses?.[i]?.translation?.[lang] ?? v.translation}&rdquo;
                   </p>
                   {v.context && (
-                    <p className="text-forest/55 text-xs leading-relaxed">{sc?.verses?.[i]?.context?.[lang] ?? v.context}</p>
+                    <p className="text-forest/70 text-xs leading-relaxed">{sc?.verses?.[i]?.context?.[lang] ?? v.context}</p>
                   )}
                 </article>
               ))}
@@ -165,11 +165,11 @@ export function SurahDetailContent({ surah }: { surah: Surah }) {
         {prev ? (
           <Link
             href={`/quran/${prev.transliteration}`}
-            className="flex items-center gap-2 text-sm text-forest/60 hover:text-forest transition-colors"
+            className="flex items-center gap-2 text-sm text-forest/70 hover:text-forest transition-colors"
           >
             <ChevronLeft className="w-4 h-4" aria-hidden="true" />
             <span>
-              <span className="block text-xs text-forest/40">{tc('nav_previous')}</span>
+              <span className="block text-xs text-forest/70">{tc('nav_previous')}</span>
               {surahName(prev)}
             </span>
           </Link>
@@ -177,10 +177,10 @@ export function SurahDetailContent({ surah }: { surah: Surah }) {
         {next ? (
           <Link
             href={`/quran/${next.transliteration}`}
-            className="flex items-center gap-2 text-sm text-forest/60 hover:text-forest transition-colors text-right"
+            className="flex items-center gap-2 text-sm text-forest/70 hover:text-forest transition-colors text-right"
           >
             <span>
-              <span className="block text-xs text-forest/40">{tc('nav_next')}</span>
+              <span className="block text-xs text-forest/70">{tc('nav_next')}</span>
               {surahName(next)}
             </span>
             <ChevronRight className="w-4 h-4" aria-hidden="true" />

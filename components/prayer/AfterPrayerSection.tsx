@@ -59,16 +59,16 @@ export function AfterPrayerSection() {
           <article key={i} className="card-islamic">
             <div className="flex items-baseline justify-between gap-3 mb-3 flex-wrap">
               <h3 className="font-garamond text-base font-semibold text-forest">{tc(item.titleKey)}</h3>
-              <span className="text-xs text-gold/70 uppercase tracking-wider font-medium">{tc(item.srcKey)}</span>
+              <span className="text-xs text-gold-deep uppercase tracking-wider font-medium">{tc(item.srcKey)}</span>
             </div>
             <ArabicText text={item.arabic} size="md" />
             <div className="border-t border-gold/10 pt-3 mt-3 space-y-2">
-              <p className="text-xs text-gold/60 uppercase tracking-wider font-medium">{tc('transliteration_label')}</p>
+              <p className="text-xs text-gold-deep uppercase tracking-wider font-medium">{tc('transliteration_label')}</p>
               <p className="text-forest/60 italic text-sm leading-relaxed">{tc(item.translitKey)}</p>
-              <p className="text-xs text-gold/60 uppercase tracking-wider font-medium mt-2">{tc('meaning_label')}</p>
+              <p className="text-xs text-gold-deep uppercase tracking-wider font-medium mt-2">{tc('meaning_label')}</p>
               <p className="text-forest/70 text-sm leading-relaxed">{tc(item.meaningKey)}</p>
               {item.noteKey && (
-                <p className="text-forest/50 text-xs leading-relaxed italic mt-3">{tc(item.noteKey)}</p>
+                <p className="text-forest/70 text-xs leading-relaxed italic mt-3">{tc(item.noteKey)}</p>
               )}
             </div>
           </article>

@@ -35,7 +35,7 @@ export function DuasCategoryContent({ categoryId }: { categoryId: string }) {
       {/* Back */}
       <Link
         href="/duas"
-        className="inline-flex items-center gap-1.5 text-sm text-forest/60 hover:text-forest mb-8 transition-colors"
+        className="inline-flex items-center gap-1.5 text-sm text-forest/70 hover:text-forest mb-8 transition-colors"
       >
         <ChevronLeft className="w-4 h-4" aria-hidden="true" />
         {tc('back_to_categories')}
@@ -55,7 +55,7 @@ export function DuasCategoryContent({ categoryId }: { categoryId: string }) {
         <h1 className="font-garamond text-3xl md:text-4xl font-semibold text-forest mb-3">
           {tc(`cat_${ck}_name` as DuasContentKey)}
         </h1>
-        <p className="text-forest/60 text-lg max-w-xl mx-auto">
+        <p className="text-forest/70 text-lg max-w-xl mx-auto">
           {tc(`cat_${ck}_desc` as DuasContentKey)}
         </p>
       </header>
@@ -76,7 +76,7 @@ export function DuasCategoryContent({ categoryId }: { categoryId: string }) {
                     {tc(`dua_${dk}_title` as DuasContentKey, dua.title)}
                   </h2>
                   {dua.occasion && (
-                    <p className="text-gold/70 text-xs mt-1 italic">
+                    <p className="text-gold-deep text-xs mt-1 italic">
                       {tc(`dua_${dk}_occasion` as DuasContentKey, dua.occasion)}
                     </p>
                   )}
@@ -94,7 +94,7 @@ export function DuasCategoryContent({ categoryId }: { categoryId: string }) {
 
               {/* Transliteration */}
               <div>
-                <p className="text-xs font-medium text-gold/70 uppercase tracking-wider mb-1">
+                <p className="text-xs font-medium text-gold-deep uppercase tracking-wider mb-1">
                   {tc('label_transliteration')}
                 </p>
                 <p className="text-forest/70 italic text-sm leading-relaxed">{dua.transliteration}</p>
@@ -102,7 +102,7 @@ export function DuasCategoryContent({ categoryId }: { categoryId: string }) {
 
               {/* Meaning */}
               <div>
-                <p className="text-xs font-medium text-gold/70 uppercase tracking-wider mb-1">
+                <p className="text-xs font-medium text-gold-deep uppercase tracking-wider mb-1">
                   {tc('label_meaning')}
                 </p>
                 <p className="text-forest text-sm leading-relaxed">
@@ -113,10 +113,10 @@ export function DuasCategoryContent({ categoryId }: { categoryId: string }) {
               {/* Virtue */}
               {dua.virtue && (
                 <div className="bg-gold/5 border-l-4 border-gold/40 rounded-r-xl px-4 py-3">
-                  <p className="text-xs font-medium text-gold/70 uppercase tracking-wider mb-1">
+                  <p className="text-xs font-medium text-gold-deep uppercase tracking-wider mb-1">
                     {tc('label_virtue')}
                   </p>
-                  <p className="text-forest/60 text-sm italic">
+                  <p className="text-forest/70 text-sm italic">
                     {tc(`dua_${dk}_virtue` as DuasContentKey, dua.virtue)}
                   </p>
                 </div>

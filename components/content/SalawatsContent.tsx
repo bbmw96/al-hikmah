@@ -54,11 +54,11 @@ export function SalawatsContent() {
           <article className="card-islamic space-y-4">
             <ArabicText text={ISTIKHARAH_DUA_AR} size="md" />
             <div className="border-t border-gold/10 pt-3">
-              <p className="text-xs text-gold/70 font-medium uppercase tracking-wider mb-1">{tc('label_transliteration')}</p>
-              <p className="text-forest/60 italic text-sm leading-relaxed">{ISTIKHARAH_DUA_TR}</p>
+              <p className="text-xs text-gold-deep font-medium uppercase tracking-wider mb-1">{tc('label_transliteration')}</p>
+              <p className="text-forest/70 italic text-sm leading-relaxed">{ISTIKHARAH_DUA_TR}</p>
             </div>
             <p className="text-forest/75 leading-relaxed text-sm">{tc('istikharah_p')}</p>
-            <p className="text-xs text-gold/60 italic">{tc('istikharah_source')}</p>
+            <p className="text-xs text-gold-deep italic">{tc('istikharah_source')}</p>
           </article>
         </section>
 
@@ -70,11 +70,11 @@ export function SalawatsContent() {
           <article className="card-islamic space-y-4">
             <ArabicText text={TAHAJJUD_OPEN_AR} size="md" />
             <div className="border-t border-gold/10 pt-3">
-              <p className="text-xs text-gold/70 font-medium uppercase tracking-wider mb-1">{tc('label_transliteration')}</p>
-              <p className="text-forest/60 italic text-sm leading-relaxed">{TAHAJJUD_OPEN_TR}</p>
+              <p className="text-xs text-gold-deep font-medium uppercase tracking-wider mb-1">{tc('label_transliteration')}</p>
+              <p className="text-forest/70 italic text-sm leading-relaxed">{TAHAJJUD_OPEN_TR}</p>
             </div>
             <p className="text-forest/75 leading-relaxed text-sm">{tc('tahajjud_p')}</p>
-            <p className="text-xs text-gold/60 italic">{tc('tahajjud_source')}</p>
+            <p className="text-xs text-gold-deep italic">{tc('tahajjud_source')}</p>
           </article>
         </section>
 
@@ -86,11 +86,11 @@ export function SalawatsContent() {
           <article className="card-islamic space-y-4">
             <ArabicText text={DUHA_DUA_AR} size="md" />
             <div className="border-t border-gold/10 pt-3">
-              <p className="text-xs text-gold/70 font-medium uppercase tracking-wider mb-1">{tc('label_transliteration')}</p>
-              <p className="text-forest/60 italic text-sm leading-relaxed">{DUHA_DUA_TR}</p>
+              <p className="text-xs text-gold-deep font-medium uppercase tracking-wider mb-1">{tc('label_transliteration')}</p>
+              <p className="text-forest/70 italic text-sm leading-relaxed">{DUHA_DUA_TR}</p>
             </div>
             <p className="text-forest/75 leading-relaxed text-sm">{tc('duha_p')}</p>
-            <p className="text-xs text-gold/60 italic">{tc('duha_source_note')}</p>
+            <p className="text-xs text-gold-deep italic">{tc('duha_source_note')}</p>
           </article>
         </section>
 

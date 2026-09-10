@@ -46,10 +46,10 @@ export function FeaturedCollections() {
                 <h3 className="font-garamond text-lg font-semibold text-cream mb-1 group-hover:text-gold transition-colors">
                   {col.englishName}
                 </h3>
-                <p className="text-cream/50 text-xs mb-3">{col.author.split('Imam ')[1] ?? col.author}</p>
+                <p className="text-cream/70 text-xs mb-3">{col.author.split('Imam ')[1] ?? col.author}</p>
                 <div className="flex items-center justify-between mt-auto">
                   <span className="badge-gold text-xs">{col.grade}</span>
-                  <span className="text-cream/40 text-xs">
+                  <span className="text-cream/70 text-xs">
                     {col.hadithCount.toLocaleString()} {t('ui.hadiths')}
                   </span>
                 </div>

@@ -60,7 +60,7 @@ export function Footer() {
         {/* Brand */}
         <div className="mb-10 flex flex-col items-start gap-3 max-w-xs">
           <LogoMark />
-          <p className="text-cream/50 text-sm leading-relaxed">
+          <p className="text-cream/70 text-sm leading-relaxed">
             {t('footer.brand.desc')}
           </p>
         </div>
@@ -77,7 +77,7 @@ export function Footer() {
                   <li key={link.href}>
                     <Link
                       href={link.href}
-                      className="text-cream/50 hover:text-cream/80 text-sm transition-colors"
+                      className="text-cream/70 hover:text-cream/80 text-sm transition-colors"
                     >
                       {link.label}
                     </Link>
@@ -90,10 +90,10 @@ export function Footer() {
 
         {/* Bottom bar */}
         <div className="border-t border-gold/15 pt-8 flex flex-col sm:flex-row items-center justify-between gap-4">
-          <p className="text-cream/40 text-sm">
+          <p className="text-cream/70 text-sm">
             &copy; {new Date().getFullYear()} {t('footer.copyright')}
           </p>
-          <p className="text-cream/40 text-sm flex items-center gap-1.5">
+          <p className="text-cream/70 text-sm flex items-center gap-1.5">
             {t('footer.compiled')}
             <Heart className="w-3.5 h-3.5 text-gold/60 fill-gold/30 ml-1 flex-shrink-0" aria-hidden="true" />
           </p>
@@ -108,7 +108,7 @@ export function Footer() {
           <p
             dir="rtl"
             lang="ar"
-            className="arabic-sm text-gold/40"
+            className="arabic-sm text-gold/70"
             aria-label="And He taught you what you did not know"
           >
             وَعَلَّمَكَ مَا لَمْ تَكُنْ تَعْلَمُ

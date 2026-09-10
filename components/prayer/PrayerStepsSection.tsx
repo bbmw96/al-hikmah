@@ -135,7 +135,7 @@ export function PrayerStepsSection() {
 
             {step.extra && (
               <div className="mt-4 border-t border-gold/10 pt-4">
-                <p className="text-xs text-gold/70 uppercase tracking-wider font-medium mb-3">
+                <p className="text-xs text-gold-deep uppercase tracking-wider font-medium mb-3">
                   {tc(step.extra.labelKey)}
                 </p>
                 <div className="bg-forest/5 rounded-lg p-4">

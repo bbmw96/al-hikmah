@@ -159,7 +159,7 @@ function LangSwitcher() {
               aria-pressed={code === lang}
             >
               <span>{meta.label}</span>
-              <span className="text-xs text-gold/70" dir={meta.dir} lang={code}>{meta.nativeLabel}</span>
+              <span className="text-xs text-gold-deep" dir={meta.dir} lang={code}>{meta.nativeLabel}</span>
             </button>
           ))}
         </div>

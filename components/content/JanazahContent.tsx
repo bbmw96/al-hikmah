@@ -75,33 +75,33 @@ export function JanazahContent() {
             <article className="card-islamic space-y-4">
               <div className="flex items-baseline justify-between gap-3 flex-wrap">
                 <h3 className="font-garamond text-xl font-semibold text-forest">{tc('takbir_1_h')}</h3>
-                <p dir="rtl" lang="ar" className="arabic text-gold">{TAKBIR_AR}</p>
+                <p dir="rtl" lang="ar" className="arabic text-gold-deep">{TAKBIR_AR}</p>
               </div>
               <ArabicText text={FATIHAH_AR} size="md" />
               <p className="text-forest/75 leading-relaxed text-sm">{tc('takbir_1_p')}</p>
-              <p className="text-xs text-gold/60 italic">Source: al-Bukhari 1335 (Talha ibn Abdillah ibn Awf).</p>
+              <p className="text-xs text-gold-deep italic">Source: al-Bukhari 1335 (Talha ibn Abdillah ibn Awf).</p>
             </article>
 
             {/* Takbir 2: Ibrahimic Salawat */}
             <article className="card-islamic space-y-4">
               <div className="flex items-baseline justify-between gap-3 flex-wrap">
                 <h3 className="font-garamond text-xl font-semibold text-forest">{tc('takbir_2_h')}</h3>
-                <p dir="rtl" lang="ar" className="arabic text-gold">{TAKBIR_AR}</p>
+                <p dir="rtl" lang="ar" className="arabic text-gold-deep">{TAKBIR_AR}</p>
               </div>
               <ArabicText text={IBRAHIMIC_SALAWAT_AR} size="md" />
               <div className="border-t border-gold/10 pt-3">
-                <p className="text-xs text-gold/70 font-medium uppercase tracking-wider mb-1">Transliteration</p>
-                <p className="text-forest/60 italic text-sm leading-relaxed">{IBRAHIMIC_SALAWAT_TR}</p>
+                <p className="text-xs text-gold-deep font-medium uppercase tracking-wider mb-1">Transliteration</p>
+                <p className="text-forest/70 italic text-sm leading-relaxed">{IBRAHIMIC_SALAWAT_TR}</p>
               </div>
               <p className="text-forest/75 leading-relaxed text-sm">{tc('takbir_2_p')}</p>
-              <p className="text-xs text-gold/60 italic">Source: al-Bukhari 3370, Muslim 406.</p>
+              <p className="text-xs text-gold-deep italic">Source: al-Bukhari 3370, Muslim 406.</p>
             </article>
 
             {/* Takbir 3: du'a for the deceased */}
             <article className="card-islamic space-y-4">
               <div className="flex items-baseline justify-between gap-3 flex-wrap">
                 <h3 className="font-garamond text-xl font-semibold text-forest">{tc('takbir_3_h')}</h3>
-                <p dir="rtl" lang="ar" className="arabic text-gold">{TAKBIR_AR}</p>
+                <p dir="rtl" lang="ar" className="arabic text-gold-deep">{TAKBIR_AR}</p>
               </div>
               <p className="text-forest/75 leading-relaxed text-sm">{tc('takbir_3_p')}</p>
             </article>
@@ -126,7 +126,7 @@ export function JanazahContent() {
               <p className="text-cream/70 italic text-sm leading-relaxed">{DUA_ADULT_TR}</p>
             </div>
             <p className="text-cream/85 leading-relaxed text-sm">{tc('dua_adult')}</p>
-            <p className="text-xs text-gold/70 italic">Source: Muslim 963 (Awf ibn Malik).</p>
+            <p className="text-xs text-gold italic">Source: Muslim 963 (Awf ibn Malik).</p>
           </article>
 
           {/* Child du'a */}
@@ -137,7 +137,7 @@ export function JanazahContent() {
               <p className="text-cream/70 italic text-sm leading-relaxed">{DUA_CHILD_TR}</p>
             </div>
             <p className="text-cream/85 leading-relaxed text-sm">{tc('dua_child')}</p>
-            <p className="text-xs text-gold/70 italic">Source: al-Bayhaqi (Sunan al-Kubra), classical Hanbali and Shafi'i wording.</p>
+            <p className="text-xs text-gold italic">Source: al-Bayhaqi (Sunan al-Kubra), classical Hanbali and Shafi'i wording.</p>
           </article>
         </section>
 
@@ -149,12 +149,12 @@ export function JanazahContent() {
           <article className="card-islamic space-y-4 mb-4">
             <div className="flex items-baseline justify-between gap-3 flex-wrap">
               <h3 className="font-garamond text-lg font-semibold text-forest">Taslim</h3>
-              <p dir="rtl" lang="ar" className="arabic text-gold">{TAKBIR_AR}</p>
+              <p dir="rtl" lang="ar" className="arabic text-gold-deep">{TAKBIR_AR}</p>
             </div>
             <ArabicText text={TASLIM_AR} size="md" />
             <div className="border-t border-gold/10 pt-3">
-              <p className="text-xs text-gold/70 font-medium uppercase tracking-wider mb-1">Transliteration</p>
-              <p className="text-forest/60 italic text-sm leading-relaxed">{TASLIM_TR}</p>
+              <p className="text-xs text-gold-deep font-medium uppercase tracking-wider mb-1">Transliteration</p>
+              <p className="text-forest/70 italic text-sm leading-relaxed">{TASLIM_TR}</p>
             </div>
           </article>
           <p className="text-forest/75 leading-relaxed">{tc('takbir_4_p')}</p>

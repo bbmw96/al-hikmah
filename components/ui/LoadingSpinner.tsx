@@ -22,7 +22,7 @@ export function LoadingSpinner({ size = 'md', className, label = 'Loading...' }:
         )}
         aria-hidden="true"
       />
-      <span className="text-sm text-forest/60 dark:text-cream/50">{label}</span>
+      <span className="text-sm text-forest/60 dark:text-cream/70">{label}</span>
     </div>
   );
 }

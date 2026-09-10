@@ -104,7 +104,7 @@ export function TawheedContent() {
         <h2 className="section-title font-garamond text-2xl font-semibold text-forest mb-2">
           {tc('section_whatIs')}
         </h2>
-        <p dir="rtl" lang="ar" className="arabic text-gold mb-4">معنى التوحيد</p>
+        <p dir="rtl" lang="ar" className="arabic text-gold-deep mb-4">معنى التوحيد</p>
         <div className="bg-forest/5 border-l-4 border-gold rounded-r-xl p-5 mb-6">
           <p className="text-forest/80 text-sm leading-relaxed">
             {tc('intro_text')}
@@ -117,7 +117,7 @@ export function TawheedContent() {
         <h2 className="section-title font-garamond text-2xl font-semibold text-forest mb-2">
           {tc('section_three')}
         </h2>
-        <p dir="rtl" lang="ar" className="arabic text-gold mb-6">أقسام التوحيد الثلاثة</p>
+        <p dir="rtl" lang="ar" className="arabic text-gold-deep mb-6">أقسام التوحيد الثلاثة</p>
         <div className="space-y-8">
           {TAWHEED_CATEGORIES.map(cat => (
             <article key={cat.number} className="card-islamic">
@@ -126,22 +126,22 @@ export function TawheedContent() {
                   <span className="text-gold font-semibold text-sm">{cat.number}</span>
                 </div>
                 <div>
-                  <p dir="rtl" lang="ar" className="arabic-sm text-gold mb-1">{cat.arabic}</p>
+                  <p dir="rtl" lang="ar" className="arabic-sm text-gold-deep mb-1">{cat.arabic}</p>
                   <h3 className="font-garamond text-xl font-semibold text-forest">{tc(cat.nameKey)}</h3>
-                  <p className="text-gold/80 text-sm font-medium">{tc(cat.subtitleKey)}</p>
+                  <p className="text-gold-deep text-sm font-medium">{tc(cat.subtitleKey)}</p>
                 </div>
               </div>
               <p className="text-forest/75 text-sm leading-relaxed mb-3">{tc(cat.explanationKey)}</p>
-              <p className="text-forest/60 text-sm leading-relaxed mb-5">{tc(cat.detailKey)}</p>
+              <p className="text-forest/70 text-sm leading-relaxed mb-5">{tc(cat.detailKey)}</p>
               <div className="space-y-4">
                 {cat.verses.map((v, i) => (
                   <div key={i} className="bg-forest/5 rounded-xl p-4">
                     <span className="badge-gold text-xs mb-3 inline-block">{tc(v.refKey)}</span>
                     <ArabicText text={v.arabic} size="md" />
                     <div className="border-t border-gold/10 pt-3 mt-3 space-y-2">
-                      <p className="text-xs text-gold/60 uppercase tracking-wider font-medium">{tc('label_transliteration')}</p>
-                      <p className="text-forest/60 italic text-sm">{v.transliteration}</p>
-                      <p className="text-xs text-gold/60 uppercase tracking-wider font-medium mt-2">{tc('label_meaning')}</p>
+                      <p className="text-xs text-gold-deep uppercase tracking-wider font-medium">{tc('label_transliteration')}</p>
+                      <p className="text-forest/70 italic text-sm">{v.transliteration}</p>
+                      <p className="text-xs text-gold-deep uppercase tracking-wider font-medium mt-2">{tc('label_meaning')}</p>
                       <p className="text-forest/70 text-sm">{tc(v.meaningKey)}</p>
                     </div>
                   </div>
@@ -157,17 +157,17 @@ export function TawheedContent() {
         <h2 className="section-title font-garamond text-2xl font-semibold text-forest mb-2">
           {tc('section_shahada')}
         </h2>
-        <p dir="rtl" lang="ar" className="arabic text-gold mb-4">الشهادة وشروطها</p>
+        <p dir="rtl" lang="ar" className="arabic text-gold-deep mb-4">الشهادة وشروطها</p>
         <div className="card-islamic mb-6">
           <ArabicText text={SHAHADA.arabic} size="lg" />
           <div className="border-t border-gold/10 pt-4 mt-4 space-y-2">
-            <p className="text-xs text-gold/60 uppercase tracking-wider font-medium">{tc('label_transliteration')}</p>
-            <p className="text-forest/60 italic text-sm">{SHAHADA.transliteration}</p>
-            <p className="text-xs text-gold/60 uppercase tracking-wider font-medium mt-3">{tc('label_meaning')}</p>
+            <p className="text-xs text-gold-deep uppercase tracking-wider font-medium">{tc('label_transliteration')}</p>
+            <p className="text-forest/70 italic text-sm">{SHAHADA.transliteration}</p>
+            <p className="text-xs text-gold-deep uppercase tracking-wider font-medium mt-3">{tc('label_meaning')}</p>
             <p className="text-forest/75 text-sm leading-relaxed">{tc('shahada_meaning')}</p>
           </div>
         </div>
-        <p className="text-forest/60 text-sm mb-5">{tc('label_conditions_intro')}</p>
+        <p className="text-forest/70 text-sm mb-5">{tc('label_conditions_intro')}</p>
         <div className="space-y-3">
           {SHAHADA.conditions.map((cond, i) => (
             <div key={i} className="flex gap-3 items-start">
@@ -176,7 +176,7 @@ export function TawheedContent() {
               </div>
               <div>
                 <p className="font-medium text-forest text-sm">{tc(cond.nameKey)}</p>
-                <p className="text-forest/60 text-xs leading-relaxed mt-0.5">{tc(cond.descKey)}</p>
+                <p className="text-forest/70 text-xs leading-relaxed mt-0.5">{tc(cond.descKey)}</p>
               </div>
             </div>
           ))}
@@ -188,18 +188,18 @@ export function TawheedContent() {
         <h2 className="section-title font-garamond text-2xl font-semibold text-forest mb-2">
           {tc('section_keyVerses')}
         </h2>
-        <p dir="rtl" lang="ar" className="arabic text-gold mb-4">آيات التوحيد</p>
+        <p dir="rtl" lang="ar" className="arabic text-gold-deep mb-4">آيات التوحيد</p>
         <div className="space-y-5">
           {KEY_VERSES.map((v, i) => (
             <article key={i} className="card-islamic">
               <span className="badge-gold text-xs mb-4 inline-block">{tc(v.refKey)}</span>
               <ArabicText text={v.arabic} size="md" />
               <div className="border-t border-gold/10 pt-3 mt-3 space-y-2">
-                <p className="text-xs text-gold/60 uppercase tracking-wider font-medium">{tc('label_transliteration')}</p>
-                <p className="text-forest/60 italic text-sm">{v.transliteration}</p>
-                <p className="text-xs text-gold/60 uppercase tracking-wider font-medium mt-2">{tc('label_meaning')}</p>
+                <p className="text-xs text-gold-deep uppercase tracking-wider font-medium">{tc('label_transliteration')}</p>
+                <p className="text-forest/70 italic text-sm">{v.transliteration}</p>
+                <p className="text-xs text-gold-deep uppercase tracking-wider font-medium mt-2">{tc('label_meaning')}</p>
                 <p className="text-forest/70 text-sm">{tc(v.meaningKey)}</p>
-                {'noteKey' in v && v.noteKey && <p className="text-xs text-gold/55 italic mt-2 leading-relaxed">{tc(v.noteKey)}</p>}
+                {'noteKey' in v && v.noteKey && <p className="text-xs text-gold-deep italic mt-2 leading-relaxed">{tc(v.noteKey)}</p>}
               </div>
             </article>
           ))}
@@ -211,14 +211,14 @@ export function TawheedContent() {
         <h2 className="section-title font-garamond text-2xl font-semibold text-forest mb-2">
           {tc('section_shirk')}
         </h2>
-        <p dir="rtl" lang="ar" className="arabic text-gold mb-4">الشِّرْك وأقسامه</p>
+        <p dir="rtl" lang="ar" className="arabic text-gold-deep mb-4">الشِّرْك وأقسامه</p>
         <div className="bg-forest/5 border border-gold/20 rounded-xl p-5 mb-6">
           <p className="text-forest/75 text-sm leading-relaxed mb-4">{tc('shirk_definition')}</p>
           <div className="bg-gold/10 border border-gold/25 rounded-xl p-4">
             <span className="badge-gold text-xs mb-3 inline-block">{tc('shirk_verse_ref')}</span>
             <ArabicText text={SHIRK.verse.arabic} size="md" />
             <div className="border-t border-gold/10 pt-3 mt-3 space-y-1">
-              <p className="text-forest/60 italic text-sm">{SHIRK.verse.transliteration}</p>
+              <p className="text-forest/70 italic text-sm">{SHIRK.verse.transliteration}</p>
               <p className="text-forest/70 text-sm">{tc('shirk_verse_meaning')}</p>
             </div>
           </div>
@@ -229,7 +229,7 @@ export function TawheedContent() {
             <p className="text-forest/70 text-sm leading-relaxed mb-3">{tc('shirk_major_desc')}</p>
             <ul className="space-y-1.5">
               {SHIRK.major.examples.map((ex, i) => (
-                <li key={i} className="text-forest/60 text-xs flex gap-2">
+                <li key={i} className="text-forest/70 text-xs flex gap-2">
                   <span className="text-gold flex-shrink-0">&#x2022;</span>
                   <span>{tc(ex)}</span>
                 </li>
@@ -241,7 +241,7 @@ export function TawheedContent() {
             <p className="text-forest/70 text-sm leading-relaxed mb-3">{tc('shirk_minor_desc')}</p>
             <ul className="space-y-1.5">
               {SHIRK.minor.examples.map((ex, i) => (
-                <li key={i} className="text-forest/60 text-xs flex gap-2">
+                <li key={i} className="text-forest/70 text-xs flex gap-2">
                   <span className="text-gold flex-shrink-0">&#x2022;</span>
                   <span>{tc(ex)}</span>
                 </li>
@@ -256,7 +256,7 @@ export function TawheedContent() {
         <h2 className="section-title font-garamond text-2xl font-semibold text-forest mb-2">
           {tc('section_foundation')}
         </h2>
-        <p dir="rtl" lang="ar" className="arabic text-gold mb-4">أهمية التوحيد</p>
+        <p dir="rtl" lang="ar" className="arabic text-gold-deep mb-4">أهمية التوحيد</p>
         <div className="space-y-5">
           {FOUNDATION_POINTS.map((point, i) => (
             <article key={i} className="card-islamic">
@@ -269,9 +269,9 @@ export function TawheedContent() {
 
       {/* Closing */}
       <section className="card-islamic bg-forest/5 text-center">
-        <p dir="rtl" lang="ar" className="arabic text-gold mb-4">فَاعْلَمْ أَنَّهُ لَا إِلَٰهَ إِلَّا اللَّهُ</p>
+        <p dir="rtl" lang="ar" className="arabic text-gold-deep mb-4">فَاعْلَمْ أَنَّهُ لَا إِلَٰهَ إِلَّا اللَّهُ</p>
         <p className="text-forest/70 text-sm italic mb-1">{tc('closing_verse')}</p>
-        <p className="text-forest/50 text-xs">{tc('closing_note')}</p>
+        <p className="text-forest/70 text-xs">{tc('closing_note')}</p>
       </section>
 
     </div>

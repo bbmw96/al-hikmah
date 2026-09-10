@@ -57,7 +57,7 @@ export function TenSignsTimeline() {
                 {cross && (
                   <Link
                     href={cross.href}
-                    className="inline-flex items-center gap-1 mt-2 text-xs font-medium text-gold hover:text-forest transition-colors"
+                    className="inline-flex items-center gap-1 mt-2 text-xs font-medium text-gold-deep hover:text-forest transition-colors"
                   >
                     <span>{tc(cross.key)}</span>
                     <ArrowRight className="w-3 h-3" aria-hidden="true" />

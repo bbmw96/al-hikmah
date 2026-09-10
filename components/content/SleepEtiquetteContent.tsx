@@ -67,7 +67,7 @@ export function SleepEtiquetteContent() {
           <article className="card-islamic space-y-3">
             <p className="text-forest/75 text-sm leading-relaxed">{tc('wudu_p1')}</p>
             <p className="text-forest/70 text-sm leading-relaxed">{tc('wudu_p2')}</p>
-            <p className="text-xs text-gold/60 italic">{tc('wudu_source')}</p>
+            <p className="text-xs text-gold-deep italic">{tc('wudu_source')}</p>
           </article>
         </section>
 
@@ -77,7 +77,7 @@ export function SleepEtiquetteContent() {
             <p className="text-forest/75 text-sm leading-relaxed">{tc('right_p1')}</p>
             <p className="text-forest/70 text-sm leading-relaxed">{tc('right_p2')}</p>
             <p className="text-forest/70 text-sm leading-relaxed">{tc('right_p3')}</p>
-            <p className="text-xs text-gold/60 italic">{tc('right_source')}</p>
+            <p className="text-xs text-gold-deep italic">{tc('right_source')}</p>
           </article>
         </section>
 
@@ -86,13 +86,13 @@ export function SleepEtiquetteContent() {
           <article className="card-islamic space-y-4">
             <ArabicText text={PRE_SLEEP_DUA_AR} size="lg" />
             <div className="border-t border-gold/10 pt-3">
-              <p className="text-xs text-gold/70 font-medium uppercase tracking-wider mb-1">{tc('label_transliteration')}</p>
-              <p className="text-forest/60 italic text-sm leading-relaxed">{tc('pre_translit')}</p>
-              <p className="text-xs text-gold/70 font-medium uppercase tracking-wider mt-3 mb-1">{tc('label_meaning')}</p>
+              <p className="text-xs text-gold-deep font-medium uppercase tracking-wider mb-1">{tc('label_transliteration')}</p>
+              <p className="text-forest/70 italic text-sm leading-relaxed">{tc('pre_translit')}</p>
+              <p className="text-xs text-gold-deep font-medium uppercase tracking-wider mt-3 mb-1">{tc('label_meaning')}</p>
               <p className="text-forest/75 text-sm leading-relaxed">{tc('pre_meaning')}</p>
             </div>
             <p className="text-forest/70 text-sm leading-relaxed">{tc('pre_p')}</p>
-            <p className="text-xs text-gold/60 italic">{tc('pre_source')}</p>
+            <p className="text-xs text-gold-deep italic">{tc('pre_source')}</p>
           </article>
         </section>
 
@@ -100,25 +100,25 @@ export function SleepEtiquetteContent() {
           <h2 className="section-title font-garamond text-2xl md:text-3xl font-semibold text-forest mb-4">{tc('recite_h')}</h2>
           <article className="card-islamic space-y-4">
             <div>
-              <p className="text-xs text-gold/70 font-medium uppercase tracking-wider mb-1">{tc('recite_1_label')}</p>
+              <p className="text-xs text-gold-deep font-medium uppercase tracking-wider mb-1">{tc('recite_1_label')}</p>
               <ArabicText text={AYATUL_KURSI_TAG_AR} size="sm" />
               <p className="text-forest/70 text-sm leading-relaxed mt-2">{tc('recite_1_body')}</p>
-              <p className="text-xs text-gold/60 italic">{tc('recite_1_source')}</p>
+              <p className="text-xs text-gold-deep italic">{tc('recite_1_source')}</p>
             </div>
             <div className="border-t border-gold/10 pt-3">
-              <p className="text-xs text-gold/70 font-medium uppercase tracking-wider mb-1">{tc('recite_2_label')}</p>
+              <p className="text-xs text-gold-deep font-medium uppercase tracking-wider mb-1">{tc('recite_2_label')}</p>
               <p className="text-forest/70 text-sm leading-relaxed">{tc('recite_2_body')}</p>
-              <p className="text-xs text-gold/60 italic">{tc('recite_2_source')}</p>
+              <p className="text-xs text-gold-deep italic">{tc('recite_2_source')}</p>
             </div>
             <div className="border-t border-gold/10 pt-3">
-              <p className="text-xs text-gold/70 font-medium uppercase tracking-wider mb-1">{tc('recite_3_label')}</p>
+              <p className="text-xs text-gold-deep font-medium uppercase tracking-wider mb-1">{tc('recite_3_label')}</p>
               <p className="text-forest/70 text-sm leading-relaxed">{tc('recite_3_body')}</p>
-              <p className="text-xs text-gold/60 italic">{tc('recite_3_source')}</p>
+              <p className="text-xs text-gold-deep italic">{tc('recite_3_source')}</p>
             </div>
             <div className="border-t border-gold/10 pt-3">
-              <p className="text-xs text-gold/70 font-medium uppercase tracking-wider mb-1">{tc('recite_4_label')}</p>
+              <p className="text-xs text-gold-deep font-medium uppercase tracking-wider mb-1">{tc('recite_4_label')}</p>
               <p className="text-forest/70 text-sm leading-relaxed">{tc('recite_4_body')}</p>
-              <p className="text-xs text-gold/60 italic">{tc('recite_4_source')}</p>
+              <p className="text-xs text-gold-deep italic">{tc('recite_4_source')}</p>
             </div>
           </article>
         </section>
@@ -129,13 +129,13 @@ export function SleepEtiquetteContent() {
             <p className="text-forest/75 text-sm leading-relaxed">{tc('bad_p1')}</p>
             <ArabicText text={BAD_DREAM_DUA_AR} size="md" />
             <div className="border-t border-gold/10 pt-3">
-              <p className="text-xs text-gold/70 font-medium uppercase tracking-wider mb-1">{tc('label_transliteration')}</p>
-              <p className="text-forest/60 italic text-sm leading-relaxed">{tc('bad_translit')}</p>
-              <p className="text-xs text-gold/70 font-medium uppercase tracking-wider mt-3 mb-1">{tc('label_meaning')}</p>
+              <p className="text-xs text-gold-deep font-medium uppercase tracking-wider mb-1">{tc('label_transliteration')}</p>
+              <p className="text-forest/70 italic text-sm leading-relaxed">{tc('bad_translit')}</p>
+              <p className="text-xs text-gold-deep font-medium uppercase tracking-wider mt-3 mb-1">{tc('label_meaning')}</p>
               <p className="text-forest/75 text-sm leading-relaxed">{tc('bad_meaning')}</p>
             </div>
             <p className="text-forest/70 text-sm leading-relaxed">{tc('bad_p2')}</p>
-            <p className="text-xs text-gold/60 italic">{tc('bad_source')}</p>
+            <p className="text-xs text-gold-deep italic">{tc('bad_source')}</p>
           </article>
         </section>
 
@@ -144,13 +144,13 @@ export function SleepEtiquetteContent() {
           <article className="card-islamic space-y-4">
             <ArabicText text={WAKE_DUA_AR} size="lg" />
             <div className="border-t border-gold/10 pt-3">
-              <p className="text-xs text-gold/70 font-medium uppercase tracking-wider mb-1">{tc('label_transliteration')}</p>
-              <p className="text-forest/60 italic text-sm leading-relaxed">{tc('wake_translit')}</p>
-              <p className="text-xs text-gold/70 font-medium uppercase tracking-wider mt-3 mb-1">{tc('label_meaning')}</p>
+              <p className="text-xs text-gold-deep font-medium uppercase tracking-wider mb-1">{tc('label_transliteration')}</p>
+              <p className="text-forest/70 italic text-sm leading-relaxed">{tc('wake_translit')}</p>
+              <p className="text-xs text-gold-deep font-medium uppercase tracking-wider mt-3 mb-1">{tc('label_meaning')}</p>
               <p className="text-forest/75 text-sm leading-relaxed">{tc('wake_meaning')}</p>
             </div>
             <p className="text-forest/70 text-sm leading-relaxed">{tc('wake_p')}</p>
-            <p className="text-xs text-gold/60 italic">{tc('wake_source')}</p>
+            <p className="text-xs text-gold-deep italic">{tc('wake_source')}</p>
           </article>
         </section>
 

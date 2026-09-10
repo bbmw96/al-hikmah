@@ -55,7 +55,7 @@ export function UlumQuranContent() {
                 </div>
                 <div>
                   <h3 className="font-garamond text-base font-semibold text-forest mb-1">{tc(k(`wahy.${n}.mode`))}</h3>
-                  <p className="text-forest/60 text-sm leading-relaxed">{tc(k(`wahy.${n}.detail`))}</p>
+                  <p className="text-forest/70 text-sm leading-relaxed">{tc(k(`wahy.${n}.detail`))}</p>
                 </div>
               </div>
             ))}
@@ -70,7 +70,7 @@ export function UlumQuranContent() {
               <div key={n} className="card-islamic">
                 <p dir="rtl" lang="ar" className="arabic-sm text-gold mb-1.5" aria-hidden="true">{COMPILATION_AR[n - 1]}</p>
                 <h3 className="font-garamond text-lg font-semibold text-forest mb-3">{tc(k(`compilation.${n}.caliph`))}</h3>
-                <p className="text-forest/60 text-sm leading-relaxed">{tc(k(`compilation.${n}.detail`))}</p>
+                <p className="text-forest/70 text-sm leading-relaxed">{tc(k(`compilation.${n}.detail`))}</p>
               </div>
             ))}
           </div>
@@ -83,18 +83,18 @@ export function UlumQuranContent() {
             <div className="card-islamic">
               <h3 className="font-garamond text-lg font-semibold text-forest mb-3">
                 {tc('makki.makki.heading')}
-                <span className="arabic-sm text-gold/60 block" dir="rtl" lang="ar">السور المكية</span>
+                <span className="arabic-sm text-gold-deep block" dir="rtl" lang="ar">السور المكية</span>
               </h3>
-              <p className="text-forest/60 text-sm leading-relaxed mb-3">{tc('makki.makki.body')}</p>
-              <p className="text-forest/50 text-xs">{tc('makki.makki.count')}</p>
+              <p className="text-forest/70 text-sm leading-relaxed mb-3">{tc('makki.makki.body')}</p>
+              <p className="text-forest/70 text-xs">{tc('makki.makki.count')}</p>
             </div>
             <div className="card-islamic">
               <h3 className="font-garamond text-lg font-semibold text-forest mb-3">
                 {tc('makki.madani.heading')}
-                <span className="arabic-sm text-gold/60 block" dir="rtl" lang="ar">السور المدنية</span>
+                <span className="arabic-sm text-gold-deep block" dir="rtl" lang="ar">السور المدنية</span>
               </h3>
-              <p className="text-forest/60 text-sm leading-relaxed mb-3">{tc('makki.madani.body')}</p>
-              <p className="text-forest/50 text-xs">{tc('makki.madani.count')}</p>
+              <p className="text-forest/70 text-sm leading-relaxed mb-3">{tc('makki.madani.body')}</p>
+              <p className="text-forest/70 text-xs">{tc('makki.madani.count')}</p>
             </div>
           </div>
           <div className="gold-border-left pl-5">
@@ -120,17 +120,17 @@ export function UlumQuranContent() {
             <table className="w-full border-collapse text-sm">
               <thead>
                 <tr className="border-b border-gold/20 text-left">
-                  <th className="py-3 px-4 text-forest/50 text-xs font-semibold uppercase">{tc('qiraat.th.imam')}</th>
-                  <th className="py-3 px-4 text-forest/50 text-xs font-semibold uppercase">{tc('qiraat.th.transmission')}</th>
-                  <th className="py-3 px-4 text-forest/50 text-xs font-semibold uppercase">{tc('qiraat.th.region')}</th>
+                  <th className="py-3 px-4 text-forest/70 text-xs font-semibold uppercase">{tc('qiraat.th.imam')}</th>
+                  <th className="py-3 px-4 text-forest/70 text-xs font-semibold uppercase">{tc('qiraat.th.transmission')}</th>
+                  <th className="py-3 px-4 text-forest/70 text-xs font-semibold uppercase">{tc('qiraat.th.region')}</th>
                 </tr>
               </thead>
               <tbody>
                 {QIRAAT.map((q, i) => (
                   <tr key={q.name} className="border-b border-gold/10">
                     <td className="py-3 px-4 text-forest font-medium text-sm">{q.name}</td>
-                    <td className="py-3 px-4 text-forest/60 text-sm">{q.students}</td>
-                    <td className="py-3 px-4 text-forest/60 text-sm">{tc(k(`qiraat.${i + 1}.region`))}</td>
+                    <td className="py-3 px-4 text-forest/70 text-sm">{q.students}</td>
+                    <td className="py-3 px-4 text-forest/70 text-sm">{tc(k(`qiraat.${i + 1}.region`))}</td>
                   </tr>
                 ))}
               </tbody>
@@ -148,7 +148,7 @@ export function UlumQuranContent() {
               <div key={n} className="card-islamic">
                 <p dir="rtl" lang="ar" className="arabic-sm text-gold mb-1.5" aria-hidden="true">{TAJWEED_AR[n - 1]}</p>
                 <h3 className="font-garamond text-base font-semibold text-forest mb-2">{tc(k(`tajweed.${n}.rule`))}</h3>
-                <p className="text-forest/60 text-sm leading-relaxed">{tc(k(`tajweed.${n}.detail`))}</p>
+                <p className="text-forest/70 text-sm leading-relaxed">{tc(k(`tajweed.${n}.detail`))}</p>
               </div>
             ))}
           </div>
@@ -162,7 +162,7 @@ export function UlumQuranContent() {
             {[1, 2, 3, 4].map(n => (
               <div key={n} className="card-islamic">
                 <h3 className="font-garamond text-base font-semibold text-forest mb-2">{tc(k(`ijaz.${n}.aspect`))}</h3>
-                <p className="text-forest/60 text-sm leading-relaxed">{tc(k(`ijaz.${n}.detail`))}</p>
+                <p className="text-forest/70 text-sm leading-relaxed">{tc(k(`ijaz.${n}.detail`))}</p>
               </div>
             ))}
           </div>

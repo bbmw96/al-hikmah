@@ -53,7 +53,7 @@ export function SahabaContent() {
                     <h3 className="font-garamond text-xl font-semibold text-forest">
                       {tc(k(`ashara_${n}_name`))}
                     </h3>
-                    <p className="text-forest/60 text-xs italic mt-1">{tc(k(`ashara_${n}_kunya`))}</p>
+                    <p className="text-forest/70 text-xs italic mt-1">{tc(k(`ashara_${n}_kunya`))}</p>
                   </div>
                 </div>
 

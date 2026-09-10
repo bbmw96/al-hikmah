@@ -71,7 +71,7 @@ export function DhabihahContent() {
             <ArabicText text={IHSAN_HADITH_AR} size="md" />
             <p className="text-forest/75 text-sm leading-relaxed">{tc('ihsan_hadith_en')}</p>
             <p className="text-forest/70 text-sm leading-relaxed">{tc('ihsan_p')}</p>
-            <p className="text-xs text-gold/60 italic">{tc('ihsan_source')}</p>
+            <p className="text-xs text-gold-deep italic">{tc('ihsan_source')}</p>
           </article>
         </section>
 
@@ -89,7 +89,7 @@ export function DhabihahContent() {
             <div className="border-t border-gold/10 pt-3">
               <p className="text-forest/75 text-sm font-medium mb-1"><strong>{tc('cond_2_label')}</strong></p>
               <p className="text-forest/70 text-sm leading-relaxed">{tc('cond_2_body')}</p>
-              <p className="text-xs text-gold/60 italic mt-1">{tc('cond_2_source')}</p>
+              <p className="text-xs text-gold-deep italic mt-1">{tc('cond_2_source')}</p>
             </div>
 
             <div className="border-t border-gold/10 pt-3">
@@ -100,7 +100,7 @@ export function DhabihahContent() {
             <div className="border-t border-gold/10 pt-3">
               <p className="text-forest/75 text-sm font-medium mb-1"><strong>{tc('cond_4_label')}</strong></p>
               <ArabicText text={BISMILLAH_SLAUGHTER_AR} size="md" />
-              <p className="text-forest/60 italic text-sm mt-1">{BISMILLAH_SLAUGHTER_TR}</p>
+              <p className="text-forest/70 italic text-sm mt-1">{BISMILLAH_SLAUGHTER_TR}</p>
               <p className="text-forest/70 text-sm leading-relaxed mt-2">{BISMILLAH_SLAUGHTER_EN}</p>
               <p className="text-forest/70 text-sm leading-relaxed mt-2">{tc('cond_4_body')}</p>
             </div>
@@ -148,7 +148,7 @@ export function DhabihahContent() {
           <article className="card-islamic space-y-3">
             <p className="text-forest/75 text-sm leading-relaxed">{tc('fish_hadith')}</p>
             <p className="text-forest/70 text-sm leading-relaxed">{tc('fish_p')}</p>
-            <p className="text-xs text-gold/60 italic">{tc('fish_source')}</p>
+            <p className="text-xs text-gold-deep italic">{tc('fish_source')}</p>
           </article>
         </section>
 
@@ -189,7 +189,7 @@ export function DhabihahContent() {
             <p className="text-cream/85 text-sm leading-relaxed">{tc('qurbani_p1')}</p>
             <p className="text-cream/85 text-sm leading-relaxed">{tc('qurbani_p2')}</p>
             <p className="text-cream/85 text-sm leading-relaxed">{tc('qurbani_p3')}</p>
-            <p className="text-xs text-gold/70 italic">{tc('qurbani_source')}</p>
+            <p className="text-xs text-gold italic">{tc('qurbani_source')}</p>
           </article>
         </section>
       </div>

@@ -62,15 +62,15 @@ export function NikahContent() {
         {/* Marriage in Islam */}
         <section>
           <h2 className="section-title font-garamond text-2xl font-semibold text-forest mb-2">{tc('intro.heading')}</h2>
-          <p dir="rtl" lang="ar" className="arabic text-gold mb-4">{SUB_AR.intro}</p>
+          <p dir="rtl" lang="ar" className="arabic text-gold-deep mb-4">{SUB_AR.intro}</p>
 
           <article className="card-islamic mb-6">
             <span className="badge-gold text-xs mb-4 inline-block">{tc('intro.verse.ref')}</span>
             <ArabicText text={INTRO_VERSE_AR} size="md" />
             <div className="border-t border-gold/10 pt-3 mt-3 space-y-2">
-              <p className="text-xs text-gold/60 uppercase tracking-wider font-medium">{tl}</p>
-              <p className="text-forest/60 italic text-sm leading-relaxed">{INTRO_VERSE_TR}</p>
-              <p className="text-xs text-gold/60 uppercase tracking-wider font-medium mt-2">{ml}</p>
+              <p className="text-xs text-gold-deep uppercase tracking-wider font-medium">{tl}</p>
+              <p className="text-forest/70 italic text-sm leading-relaxed">{INTRO_VERSE_TR}</p>
+              <p className="text-xs text-gold-deep uppercase tracking-wider font-medium mt-2">{ml}</p>
               <p className="text-forest/70 text-sm leading-relaxed">{tc('intro.verse.meaning')}</p>
             </div>
           </article>
@@ -83,7 +83,7 @@ export function NikahContent() {
         {/* Conditions of Nikah */}
         <section>
           <h2 className="section-title font-garamond text-2xl font-semibold text-forest mb-2">{tc('conditions.heading')}</h2>
-          <p dir="rtl" lang="ar" className="arabic text-gold mb-4">{SUB_AR.conditions}</p>
+          <p dir="rtl" lang="ar" className="arabic text-gold-deep mb-4">{SUB_AR.conditions}</p>
           <div className="space-y-5">
             {[1, 2, 3, 4].map(n => (
               <article key={n} className="card-islamic">
@@ -92,13 +92,13 @@ export function NikahContent() {
                     <span className="text-forest font-semibold text-xs">{n}</span>
                   </div>
                   <div>
-                    <p dir="rtl" lang="ar" className="arabic-sm text-gold mb-1">{CONDITIONS_AR[n - 1]}</p>
+                    <p dir="rtl" lang="ar" className="arabic-sm text-gold-deep mb-1">{CONDITIONS_AR[n - 1]}</p>
                     <h3 className="font-garamond text-lg font-semibold text-forest">{tc(k(`conditions.${n}.name`))}</h3>
                   </div>
                 </div>
                 <p className="text-forest/75 text-sm leading-relaxed mb-3">{tc(k(`conditions.${n}.desc`))}</p>
                 <div className="bg-gold/10 border border-gold/20 rounded-lg p-3">
-                  <p className="text-xs text-gold/70 italic">{tc(k(`conditions.${n}.note`))}</p>
+                  <p className="text-xs text-gold-deep italic">{tc(k(`conditions.${n}.note`))}</p>
                 </div>
               </article>
             ))}
@@ -108,15 +108,15 @@ export function NikahContent() {
         {/* The Mahr */}
         <section>
           <h2 className="section-title font-garamond text-2xl font-semibold text-forest mb-2">{tc('mahr.heading')}</h2>
-          <p dir="rtl" lang="ar" className="arabic text-gold mb-4">{SUB_AR.mahr}</p>
+          <p dir="rtl" lang="ar" className="arabic text-gold-deep mb-4">{SUB_AR.mahr}</p>
 
           <article className="card-islamic mb-6">
             <span className="badge-gold text-xs mb-4 inline-block">{tc('mahr.verse.ref')}</span>
             <ArabicText text={MAHR_VERSE_AR} size="md" />
             <div className="border-t border-gold/10 pt-3 mt-3 space-y-2">
-              <p className="text-xs text-gold/60 uppercase tracking-wider font-medium">{tl}</p>
-              <p className="text-forest/60 italic text-sm">{MAHR_VERSE_TR}</p>
-              <p className="text-xs text-gold/60 uppercase tracking-wider font-medium mt-2">{ml}</p>
+              <p className="text-xs text-gold-deep uppercase tracking-wider font-medium">{tl}</p>
+              <p className="text-forest/70 italic text-sm">{MAHR_VERSE_TR}</p>
+              <p className="text-xs text-gold-deep uppercase tracking-wider font-medium mt-2">{ml}</p>
               <p className="text-forest/70 text-sm">{tc('mahr.verse.meaning')}</p>
             </div>
           </article>
@@ -136,7 +136,7 @@ export function NikahContent() {
               {[1, 2, 3].map(n => (
                 <div key={n} className="flex gap-3 items-start">
                   <span className="text-gold mt-1 flex-shrink-0 text-xs">&#x2022;</span>
-                  <p className="text-forest/65 text-sm leading-relaxed italic">{tc(k(`mahr.ex.${n}`))}</p>
+                  <p className="text-forest/70 text-sm leading-relaxed italic">{tc(k(`mahr.ex.${n}`))}</p>
                 </div>
               ))}
             </div>
@@ -146,19 +146,19 @@ export function NikahContent() {
         {/* Khutbah al-Nikah */}
         <section>
           <h2 className="section-title font-garamond text-2xl font-semibold text-forest mb-2">{tc('khutbah.heading')}</h2>
-          <p dir="rtl" lang="ar" className="arabic text-gold mb-4">{SUB_AR.khutbah}</p>
+          <p dir="rtl" lang="ar" className="arabic text-gold-deep mb-4">{SUB_AR.khutbah}</p>
 
           <div className="bg-forest/5 border border-gold/20 rounded-xl p-5 mb-5">
             <p className="text-forest/75 text-sm leading-relaxed">{tc('khutbah.intro')}</p>
           </div>
 
           <div className="card-islamic mb-5">
-            <p className="text-xs text-gold/70 uppercase tracking-wider font-medium mb-4">{tc('khutbah.openingLabel')}</p>
+            <p className="text-xs text-gold-deep uppercase tracking-wider font-medium mb-4">{tc('khutbah.openingLabel')}</p>
             <ArabicText text={KHUTBAH_AR} size="md" />
             <div className="border-t border-gold/10 pt-3 mt-3 space-y-2">
-              <p className="text-xs text-gold/60 uppercase tracking-wider font-medium">{tl}</p>
-              <p className="text-forest/60 italic text-sm leading-relaxed">{KHUTBAH_TR}</p>
-              <p className="text-xs text-gold/60 uppercase tracking-wider font-medium mt-2">{ml}</p>
+              <p className="text-xs text-gold-deep uppercase tracking-wider font-medium">{tl}</p>
+              <p className="text-forest/70 italic text-sm leading-relaxed">{KHUTBAH_TR}</p>
+              <p className="text-xs text-gold-deep uppercase tracking-wider font-medium mt-2">{ml}</p>
               <p className="text-forest/70 text-sm leading-relaxed">{tc('khutbah.text.meaning')}</p>
             </div>
           </div>
@@ -175,7 +175,7 @@ export function NikahContent() {
         {/* Marriage Duas */}
         <section>
           <h2 className="section-title font-garamond text-2xl font-semibold text-forest mb-2">{tc('duas.heading')}</h2>
-          <p dir="rtl" lang="ar" className="arabic text-gold mb-4">{SUB_AR.duas}</p>
+          <p dir="rtl" lang="ar" className="arabic text-gold-deep mb-4">{SUB_AR.duas}</p>
           <div className="space-y-5">
             {[1, 2, 3].map(n => (
               <article key={n} className="card-islamic">
@@ -183,14 +183,14 @@ export function NikahContent() {
                   <h3 className="font-garamond text-lg font-semibold text-forest">{tc(k(`duas.${n}.title`))}</h3>
                   <span className="badge-gold text-xs flex-shrink-0">{tc(k(`duas.${n}.source`))}</span>
                 </div>
-                <p className="text-forest/60 text-xs italic mb-4">{tc(k(`duas.${n}.note`))}</p>
+                <p className="text-forest/70 text-xs italic mb-4">{tc(k(`duas.${n}.note`))}</p>
                 <ArabicText text={DUAS_AR[n - 1]} size="md" />
                 <div className="border-t border-gold/10 pt-3 mt-3 space-y-2">
-                  <p className="text-xs text-gold/60 uppercase tracking-wider font-medium">{tl}</p>
-                  <p className="text-forest/60 italic text-sm">{DUAS_TR[n - 1]}</p>
-                  <p className="text-xs text-gold/60 uppercase tracking-wider font-medium mt-2">{ml}</p>
+                  <p className="text-xs text-gold-deep uppercase tracking-wider font-medium">{tl}</p>
+                  <p className="text-forest/70 italic text-sm">{DUAS_TR[n - 1]}</p>
+                  <p className="text-xs text-gold-deep uppercase tracking-wider font-medium mt-2">{ml}</p>
                   <p className="text-forest/70 text-sm">{tc(k(`duas.${n}.meaning`))}</p>
-                  <p className="text-xs text-gold/55 italic mt-2 leading-relaxed">{tc(k(`duas.${n}.detail`))}</p>
+                  <p className="text-xs text-gold-deep italic mt-2 leading-relaxed">{tc(k(`duas.${n}.detail`))}</p>
                 </div>
               </article>
             ))}
@@ -200,16 +200,16 @@ export function NikahContent() {
         {/* Forbidden Marriages */}
         <section>
           <h2 className="section-title font-garamond text-2xl font-semibold text-forest mb-2">{tc('forbidden.heading')}</h2>
-          <p dir="rtl" lang="ar" className="arabic text-gold mb-4">{SUB_AR.forbidden}</p>
+          <p dir="rtl" lang="ar" className="arabic text-gold-deep mb-4">{SUB_AR.forbidden}</p>
           <div className="space-y-5">
             <article className="card-islamic border-l-4 border-red-700/40">
               <h3 className="font-garamond text-lg font-semibold text-forest mb-3">{tc('forbidden.permanent.title')}</h3>
-              <p className="text-forest/60 text-xs mb-4">{tc('forbidden.permanent.intro')}</p>
+              <p className="text-forest/70 text-xs mb-4">{tc('forbidden.permanent.intro')}</p>
               <div className="space-y-3">
                 {[1, 2, 3].map(n => (
                   <div key={n} className="bg-forest/5 rounded-xl p-3">
                     <p className="font-medium text-forest text-sm mb-1">{tc(k(`forbidden.perm.${n}.category`))}</p>
-                    <p className="text-forest/65 text-xs leading-relaxed">{tc(k(`forbidden.perm.${n}.examples`))}</p>
+                    <p className="text-forest/70 text-xs leading-relaxed">{tc(k(`forbidden.perm.${n}.examples`))}</p>
                   </div>
                 ))}
               </div>
@@ -232,13 +232,13 @@ export function NikahContent() {
         {/* Rights and Responsibilities */}
         <section>
           <h2 className="section-title font-garamond text-2xl font-semibold text-forest mb-2">{tc('rights.heading')}</h2>
-          <p dir="rtl" lang="ar" className="arabic text-gold mb-4">{SUB_AR.rights}</p>
+          <p dir="rtl" lang="ar" className="arabic text-gold-deep mb-4">{SUB_AR.rights}</p>
 
           <article className="card-islamic mb-5">
             <span className="badge-gold text-xs mb-4 inline-block">{tc('rights.verse.ref')}</span>
             <ArabicText text={RIGHTS_VERSE_AR} size="md" />
             <div className="border-t border-gold/10 pt-3 mt-3 space-y-2">
-              <p className="text-forest/60 italic text-sm">{RIGHTS_VERSE_TR}</p>
+              <p className="text-forest/70 italic text-sm">{RIGHTS_VERSE_TR}</p>
               <p className="text-forest/70 text-sm">{tc('rights.verse.meaning')}</p>
             </div>
           </article>
@@ -269,7 +269,7 @@ export function NikahContent() {
           </div>
 
           <div className="bg-gold/10 border border-gold/25 rounded-xl p-5">
-            <p className="text-xs text-gold/70 uppercase tracking-wider font-medium mb-2">{tc('rights.prophetExampleLabel')}</p>
+            <p className="text-xs text-gold-deep uppercase tracking-wider font-medium mb-2">{tc('rights.prophetExampleLabel')}</p>
             <p className="text-forest/70 text-sm leading-relaxed italic">{tc('rights.prophets_example')}</p>
           </div>
         </section>
@@ -277,7 +277,7 @@ export function NikahContent() {
         {/* The Walimah */}
         <section>
           <h2 className="section-title font-garamond text-2xl font-semibold text-forest mb-2">{tc('walimah.heading')}</h2>
-          <p dir="rtl" lang="ar" className="arabic text-gold mb-4">{SUB_AR.walimah}</p>
+          <p dir="rtl" lang="ar" className="arabic text-gold-deep mb-4">{SUB_AR.walimah}</p>
           <div className="bg-forest/5 border-l-4 border-gold rounded-r-xl p-5 mb-5">
             <p className="text-forest/75 text-sm leading-relaxed">{tc('walimah.definition')}</p>
           </div>
@@ -290,8 +290,8 @@ export function NikahContent() {
             ))}
           </div>
           <div className="card-islamic bg-forest/5">
-            <p className="text-xs text-gold/70 uppercase tracking-wider font-medium mb-2">{tc('walimah.noteLabel')}</p>
-            <p className="text-forest/65 text-sm leading-relaxed italic">{tc('walimah.note')}</p>
+            <p className="text-xs text-gold-deep uppercase tracking-wider font-medium mb-2">{tc('walimah.noteLabel')}</p>
+            <p className="text-forest/70 text-sm leading-relaxed italic">{tc('walimah.note')}</p>
           </div>
         </section>
 
@@ -299,7 +299,7 @@ export function NikahContent() {
         <section className="card-islamic bg-forest/5 text-center">
           <ArabicText text={CLOSING_AR} size="lg" className="mb-4" />
           <p className="text-forest/70 text-sm italic mb-1">{tc('closing.meaning')}</p>
-          <p className="text-forest/50 text-xs mt-3">{tc('closing.text')}</p>
+          <p className="text-forest/70 text-xs mt-3">{tc('closing.text')}</p>
         </section>
       </div>
     </>

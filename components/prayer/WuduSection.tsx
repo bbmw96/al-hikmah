@@ -40,7 +40,7 @@ export function WuduSection() {
         <p className="text-forest/70 text-sm leading-relaxed">
           {tc('wudu_intro')}
         </p>
-        <Link href="/taharah" className="inline-block mt-3 text-gold hover:text-gold-darker text-sm font-medium underline-offset-4 hover:underline">
+        <Link href="/taharah" className="inline-block mt-3 text-gold-deep text-sm font-medium underline-offset-4 hover:underline">
           {tc('wudu_more')} →
         </Link>
       </div>
@@ -60,16 +60,16 @@ export function WuduSection() {
       </div>
 
       <div className="card-islamic">
-        <p className="text-xs text-gold/70 uppercase tracking-wider font-medium mb-3">
+        <p className="text-xs text-gold-deep uppercase tracking-wider font-medium mb-3">
           {tc('wudu_dua_h')}
         </p>
         <ArabicText text={WUDU_DUA_AR} size="md" />
         <div className="border-t border-gold/10 pt-3 mt-3 space-y-2">
-          <p className="text-xs text-gold/60 uppercase tracking-wider font-medium">{tc('transliteration_label')}</p>
+          <p className="text-xs text-gold-deep uppercase tracking-wider font-medium">{tc('transliteration_label')}</p>
           <p className="text-forest/60 italic text-sm">{tc('wudu_dua_translit')}</p>
-          <p className="text-xs text-gold/60 uppercase tracking-wider font-medium mt-2">{tc('meaning_label')}</p>
+          <p className="text-xs text-gold-deep uppercase tracking-wider font-medium mt-2">{tc('meaning_label')}</p>
           <p className="text-forest/70 text-sm leading-relaxed">{tc('wudu_dua_meaning')}</p>
-          <p className="text-forest/50 text-xs italic mt-3">{tc('wudu_dua_note')}</p>
+          <p className="text-forest/70 text-xs italic mt-3">{tc('wudu_dua_note')}</p>
         </div>
       </div>
     </section>

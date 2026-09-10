@@ -64,7 +64,7 @@ export function AboutContent() {
                     <Icon className="w-5 h-5 text-gold" aria-hidden="true" />
                   </div>
                   <h3 className="font-garamond text-lg font-semibold text-forest">{tc(p.titleKey)}</h3>
-                  <p className="text-forest/60 text-sm leading-relaxed">{tc(p.descKey)}</p>
+                  <p className="text-forest/70 text-sm leading-relaxed">{tc(p.descKey)}</p>
                 </div>
               );
             })}

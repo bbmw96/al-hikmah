@@ -91,10 +91,11 @@ function PersonCard({ k, tc, tone = 'islamic' }: {
   const ar = AR_NAMES[k];
   const cls = tone === 'forest' ? 'card-forest rounded-2xl p-6' : 'card-islamic';
   const textCls = tone === 'forest' ? 'text-cream/85' : 'text-forest/75';
+  const arCls = tone === 'forest' ? 'text-gold' : 'text-gold-deep';
   return (
     <article className={cls}>
       {ar && (
-        <p dir="rtl" lang="ar" className="arabic text-gold mb-2 leading-loose">
+        <p dir="rtl" lang="ar" className={`arabic ${arCls} mb-2 leading-loose`}>
           {ar}
         </p>
       )}

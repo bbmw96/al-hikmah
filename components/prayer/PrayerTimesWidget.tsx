@@ -139,7 +139,7 @@ export function PrayerTimesWidget() {
     return (
       <section className="card-islamic">
         <h2 className="font-garamond text-xl font-semibold text-forest mb-2">{tc('widget_h')}</h2>
-        <p className="text-forest/50 text-sm">…</p>
+        <p className="text-forest/70 text-sm">…</p>
       </section>
     );
   }
@@ -221,7 +221,7 @@ export function PrayerTimesWidget() {
         <button
           type="button"
           onClick={handleGeolocate}
-          className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-md bg-gold/15 hover:bg-gold/25 text-gold-darker font-medium transition-colors"
+          className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-md bg-gold/15 hover:bg-gold/25 text-gold-deep font-medium transition-colors"
         >
           <MapPin className="w-3.5 h-3.5" aria-hidden="true" />
           {tc('geolocate')}
@@ -272,7 +272,7 @@ export function PrayerTimesWidget() {
                 (isNext
                   ? 'bg-gold/15 border border-gold/40'
                   : isPast
-                  ? 'bg-forest/5 text-forest/50'
+                  ? 'bg-forest/5 text-forest/70'
                   : 'bg-forest/5')
               }
             >

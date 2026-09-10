@@ -10,13 +10,13 @@ import { UMRAH_STEPS, UMRAH_DIFFERENCES_FROM_HAJJ, type UmrahStep } from '@/lib/
 import { cn } from '@/lib/utils';
 
 const PHASE_COLOURS: Record<string, string> = {
-  preparation: 'bg-gold/20 text-gold',
+  preparation: 'bg-gold/20 text-gold-deep',
   'makkah-arrival': 'bg-forest/20 text-forest',
   mina: 'bg-midnight/20 text-midnight',
   arafah: 'bg-red-100 text-red-700',
   muzdalifah: 'bg-purple-100 text-purple-700',
   'mina-eid': 'bg-green-100 text-green-700',
-  completion: 'bg-gold/20 text-gold',
+  completion: 'bg-gold/20 text-gold-deep',
 };
 
 const HAJJ_TYPE_KEYS: Record<string, { name: HajjUmrahContentKey; desc: HajjUmrahContentKey }> = {
@@ -81,7 +81,7 @@ function StepCard({ step, tc }: StepCardProps) {
               </span>
             )}
             {'day' in step && step.day && (
-              <span className="text-xs text-gold/70">{step.day}</span>
+              <span className="text-xs text-gold-deep">{step.day}</span>
             )}
             {'obligatoryNote' in step && step.obligatoryNote && (
               <span className="text-xs bg-red-50 text-red-600 border border-red-200 px-2 py-0.5 rounded-full">
@@ -94,7 +94,7 @@ function StepCard({ step, tc }: StepCardProps) {
           </p>
           <h3 className="font-garamond text-xl font-semibold text-forest">{title}</h3>
           {location && (
-            <p className="text-forest/50 text-xs mt-0.5">📍 {location}</p>
+            <p className="text-forest/70 text-xs mt-0.5">📍 {location}</p>
           )}
         </div>
       </div>
@@ -129,7 +129,7 @@ function StepCard({ step, tc }: StepCardProps) {
 
       <div className="bg-gold/5 border-l-4 border-gold/50 rounded-r-xl p-4">
         <h4 className="font-garamond text-base font-semibold text-forest mb-2">{tc('label_wisdom')}</h4>
-        <p className="text-forest/60 text-sm leading-relaxed italic">{wisdom}</p>
+        <p className="text-forest/70 text-sm leading-relaxed italic">{wisdom}</p>
       </div>
 
       {step.duas && step.duas.length > 0 && (
@@ -166,7 +166,7 @@ export function HajjUmrahContent() {
             size="lg"
             className="mb-4"
           />
-          <p className="text-forest/60 italic text-sm">{tc('opening_verse')}</p>
+          <p className="text-forest/70 italic text-sm">{tc('opening_verse')}</p>
         </div>
 
         <section>
@@ -189,7 +189,7 @@ export function HajjUmrahContent() {
                       <span className="badge-gold text-xs ml-auto">{tc('label_recommended')}</span>
                     )}
                   </div>
-                  <p className="text-forest/60 text-sm leading-relaxed">
+                  <p className="text-forest/70 text-sm leading-relaxed">
                     {keys ? tc(keys.desc) : type.description}
                   </p>
                 </div>

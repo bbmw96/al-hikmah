@@ -38,7 +38,7 @@ export function DajjalContent() {
                 <p dir="rtl" lang="ar" className="arabic text-forest leading-loose">
                   مَا مِنْ نَبِيٍّ إِلَّا وَقَدْ أَنْذَرَ الْأَعْوَرَ الْكَذَّابَ ، أَلَا إِنَّهُ أَعْوَرُ ، وَإِنَّ رَبَّكُمْ لَيْسَ بِأَعْوَرَ ، وَإِنَّ بَيْنَ عَيْنَيْهِ مَكْتُوبٌ كَافِرٌ
                 </p>
-                <p className="text-forest/50 italic text-xs mt-2 text-right" dir="ltr">
+                <p className="text-forest/70 italic text-xs mt-2 text-right" dir="ltr">
                   Sahih al-Bukhari 7131, Sahih Muslim 2933
                 </p>
               </blockquote>

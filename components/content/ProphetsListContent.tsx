@@ -31,10 +31,10 @@ export function ProphetsListContent() {
           <p className="text-forest/80 text-sm leading-relaxed mb-3">
             {tc('note_quran_count')}
           </p>
-          <p className="text-forest/60 text-sm leading-relaxed">
+          <p className="text-forest/70 text-sm leading-relaxed">
             {tc('note_124k')}
           </p>
-          <p className="text-forest/40 text-xs italic mt-4">
+          <p className="text-forest/70 text-xs italic mt-4">
             {tc('note_verse')}
           </p>
         </div>

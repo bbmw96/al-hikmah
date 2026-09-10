@@ -67,7 +67,7 @@ export function GlossaryContent() {
               setActiveCategory('all');
             }}
             placeholder={tc('search_placeholder')}
-            className="w-full pl-11 pr-4 py-3 rounded-full bg-white/15 border border-gold/30 text-cream placeholder:text-cream/40 text-sm focus:outline-none focus:ring-2 focus:ring-gold/50"
+            className="w-full pl-11 pr-4 py-3 rounded-full bg-white/15 border border-gold/30 text-cream placeholder:text-cream/70 text-sm focus:outline-none focus:ring-2 focus:ring-gold/50"
             aria-label={tc('search_aria')}
           />
         </div>
@@ -105,7 +105,7 @@ export function GlossaryContent() {
         )}
 
         {displayed.length === 0 ? (
-          <p className="text-center text-forest/50 py-16">{tc('no_results')}</p>
+          <p className="text-center text-forest/70 py-16">{tc('no_results')}</p>
         ) : (
           <div className="space-y-6">
             {displayed.map(entry => (
@@ -119,7 +119,7 @@ export function GlossaryContent() {
                     <h2 className="font-garamond text-2xl font-semibold text-forest">
                       {entry.term}
                     </h2>
-                    <p className="text-gold/70 text-sm">{entry.transliteration}</p>
+                    <p className="text-gold-deep text-sm">{entry.transliteration}</p>
                   </div>
                   <p
                     dir="rtl"
@@ -132,15 +132,15 @@ export function GlossaryContent() {
                 </div>
                 <p className="text-forest/70 leading-relaxed">{entry.definition}</p>
                 {entry.context && (
-                  <p className="text-forest/50 text-sm italic border-l-2 border-gold/30 pl-4">
+                  <p className="text-forest/70 text-sm italic border-l-2 border-gold/30 pl-4">
                     {entry.context}
                   </p>
                 )}
                 {entry.relatedTerms && entry.relatedTerms.length > 0 && (
                   <div className="flex items-center gap-2 flex-wrap">
-                    <span className="text-forest/40 text-xs">{tc('see_also')}</span>
+                    <span className="text-forest/70 text-xs">{tc('see_also')}</span>
                     {entry.relatedTerms.map(t => (
-                      <a key={t} href={`#${t}`} className="text-xs text-gold hover:underline">
+                      <a key={t} href={`#${t}`} className="text-xs text-gold-deep hover:underline">
                         {t.charAt(0).toUpperCase() + t.slice(1).replace(/-/g, ' ')}
                       </a>
                     ))}

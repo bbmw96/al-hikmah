@@ -137,7 +137,7 @@ export function SeerahContent() {
             size="lg"
             className="mb-4"
           />
-          <p className="text-forest/60 italic text-sm">
+          <p className="text-forest/70 italic text-sm">
             {tc('verse_intro')}
           </p>
         </section>
@@ -149,7 +149,7 @@ export function SeerahContent() {
               <h2 className="section-title font-garamond text-2xl md:text-3xl font-semibold text-forest">
                 {tc(section.titleKey)}
               </h2>
-              <p dir="rtl" lang="ar" className="arabic-sm text-gold">
+              <p dir="rtl" lang="ar" className="arabic-sm text-gold-deep">
                 {section.arabicTitle}
               </p>
             </div>
@@ -169,7 +169,7 @@ export function SeerahContent() {
             <h2 className="section-title font-garamond text-2xl md:text-3xl font-semibold text-forest">
               {tc('s11_h')}
             </h2>
-            <p dir="rtl" lang="ar" className="arabic-sm text-gold">
+            <p dir="rtl" lang="ar" className="arabic-sm text-gold-deep">
               الغزوات الكبرى
             </p>
           </div>
@@ -179,7 +179,7 @@ export function SeerahContent() {
           <div className="space-y-5">
             {BATTLES.map(battle => (
               <article key={battle.bodyKey} className="card-islamic">
-                <p dir="rtl" lang="ar" className="arabic-sm text-gold mb-2">
+                <p dir="rtl" lang="ar" className="arabic-sm text-gold-deep mb-2">
                   {battle.arabicName}
                 </p>
                 <p className="text-forest/75 leading-relaxed text-sm">
@@ -196,7 +196,7 @@ export function SeerahContent() {
             <h2 className="section-title font-garamond text-2xl md:text-3xl font-semibold text-forest">
               {tc('letters_h')}
             </h2>
-            <p dir="rtl" lang="ar" className="arabic-sm text-gold">
+            <p dir="rtl" lang="ar" className="arabic-sm text-gold-deep">
               كتب النبي ﷺ إلى الملوك
             </p>
           </div>
@@ -206,7 +206,7 @@ export function SeerahContent() {
           <div className="space-y-5">
             {LETTERS.map(letter => (
               <article key={letter.bodyKey} className="card-islamic">
-                <p dir="rtl" lang="ar" className="arabic-sm text-gold mb-2">
+                <p dir="rtl" lang="ar" className="arabic-sm text-gold-deep mb-2">
                   {letter.arabicName}
                 </p>
                 <p className="text-forest/75 leading-relaxed text-sm">
@@ -223,7 +223,7 @@ export function SeerahContent() {
             <h2 className="section-title font-garamond text-2xl md:text-3xl font-semibold text-forest">
               {tc('wufud_h')}
             </h2>
-            <p dir="rtl" lang="ar" className="arabic-sm text-gold">
+            <p dir="rtl" lang="ar" className="arabic-sm text-gold-deep">
               سنة الوفود
             </p>
           </div>
@@ -243,7 +243,7 @@ export function SeerahContent() {
             <h2 className="section-title font-garamond text-2xl md:text-3xl font-semibold text-forest">
               {tc('wada_h')}
             </h2>
-            <p dir="rtl" lang="ar" className="arabic-sm text-gold">
+            <p dir="rtl" lang="ar" className="arabic-sm text-gold-deep">
               حجة الوداع ووفاة النبي ﷺ
             </p>
           </div>
@@ -274,7 +274,7 @@ export function SeerahContent() {
             <h2 className="section-title font-garamond text-2xl md:text-3xl font-semibold text-forest">
               {tc('desc_h')}
             </h2>
-            <p dir="rtl" lang="ar" className="arabic-sm text-gold">
+            <p dir="rtl" lang="ar" className="arabic-sm text-gold-deep">
               صفة النبي ﷺ وأخلاقه
             </p>
           </div>
@@ -308,7 +308,7 @@ export function SeerahContent() {
             <h2 className="section-title font-garamond text-2xl md:text-3xl font-semibold text-forest">
               Quick Timeline
             </h2>
-            <p dir="rtl" lang="ar" className="arabic-sm text-gold">
+            <p dir="rtl" lang="ar" className="arabic-sm text-gold-deep">
               الجدول الزمني
             </p>
           </div>
@@ -326,7 +326,7 @@ export function SeerahContent() {
 
                   <div className="flex flex-wrap items-baseline gap-3 mb-3">
                     <span className="badge-gold text-xs">{event.year}</span>
-                    <p dir="rtl" lang="ar" className="arabic-sm text-gold">
+                    <p dir="rtl" lang="ar" className="arabic-sm text-gold-deep">
                       {event.arabicLabel}
                     </p>
                   </div>
@@ -350,7 +350,7 @@ export function SeerahContent() {
             size="lg"
             className="mb-4"
           />
-          <p className="text-forest/60 text-sm italic">
+          <p className="text-forest/70 text-sm italic">
             {tc('closing_line')}
           </p>
         </div>

@@ -205,7 +205,7 @@ export default function FiqhPage() {
           <h2 className="section-title font-garamond text-2xl font-semibold text-forest mb-2">
             What is Fiqh?
           </h2>
-          <p dir="rtl" lang="ar" className="arabic text-gold mb-4">
+          <p dir="rtl" lang="ar" className="arabic text-gold-deep mb-4">
             تعريف الفقه
           </p>
           <div className="bg-forest/5 border-l-4 border-gold rounded-r-xl p-5">
@@ -218,7 +218,7 @@ export default function FiqhPage() {
           <h2 className="section-title font-garamond text-2xl font-semibold text-forest mb-2">
             The Five Categories of Ruling (Ahkam al-Shar&#39;iyyah)
           </h2>
-          <p dir="rtl" lang="ar" className="arabic text-gold mb-6">
+          <p dir="rtl" lang="ar" className="arabic text-gold-deep mb-6">
             الأحكام الشرعية الخمسة
           </p>
           <div className="space-y-8">
@@ -229,7 +229,7 @@ export default function FiqhPage() {
                     <span className="text-gold font-semibold text-sm">{ahkam.number}</span>
                   </div>
                   <div>
-                    <p dir="rtl" lang="ar" className="arabic-sm text-gold mb-1">
+                    <p dir="rtl" lang="ar" className="arabic-sm text-gold-deep mb-1">
                       {ahkam.arabic}
                     </p>
                     <h3 className="font-garamond text-xl font-semibold text-forest">{ahkam.name}</h3>
@@ -238,7 +238,7 @@ export default function FiqhPage() {
                 </div>
 
                 <p className="text-forest/80 text-sm leading-relaxed font-medium mb-3">{ahkam.definition}</p>
-                <p className="text-forest/65 text-sm leading-relaxed mb-4 whitespace-pre-line">{ahkam.detail}</p>
+                <p className="text-forest/70 text-sm leading-relaxed mb-4 whitespace-pre-line">{ahkam.detail}</p>
 
                 {ahkam.subcategories.length > 0 && (
                   <div className="space-y-3 mb-4">
@@ -252,7 +252,7 @@ export default function FiqhPage() {
                 )}
 
                 <div>
-                  <p className="text-xs text-gold/70 uppercase tracking-wider font-medium mb-2">Examples</p>
+                  <p className="text-xs text-gold-deep uppercase tracking-wider font-medium mb-2">Examples</p>
                   <div className="flex flex-wrap gap-2">
                     {ahkam.examples.map((ex, i) => (
                       <span key={i} className="bg-gold/10 border border-gold/20 text-forest/70 text-xs px-2.5 py-1 rounded-full">
@@ -284,7 +284,7 @@ export default function FiqhPage() {
               <p className="text-forest/60 text-xs leading-relaxed">Established by a probable (zanni) text, such as a solitary hadith. Obligatory to perform, but denying it is not kufr. Example: Witr prayer, Eid prayer, reciting Surah al-Fatiha in prayer.</p>
             </div>
           </div>
-          <p className="text-forest/50 text-xs mt-3 italic">
+          <p className="text-forest/70 text-xs mt-3 italic">
             For practical purposes, all four schools agree on the obligation of the five pillars and the major acts of worship. The distinction matters in specific cases of doubt and in legal methodology.
           </p>
         </section>
@@ -294,7 +294,7 @@ export default function FiqhPage() {
           <h2 className="section-title font-garamond text-2xl font-semibold text-forest mb-2">
             The Sources of Islamic Law (Usul al-Fiqh)
           </h2>
-          <p dir="rtl" lang="ar" className="arabic text-gold mb-4">
+          <p dir="rtl" lang="ar" className="arabic text-gold-deep mb-4">
             مصادر الفقه الإسلامي
           </p>
           <div className="bg-forest/5 border border-gold/20 rounded-xl p-5 mb-6">
@@ -310,11 +310,11 @@ export default function FiqhPage() {
                     <span className="text-forest font-semibold text-xs">{source.number}</span>
                   </div>
                   <div>
-                    <p dir="rtl" lang="ar" className="arabic-sm text-gold mb-1">
+                    <p dir="rtl" lang="ar" className="arabic-sm text-gold-deep mb-1">
                       {source.arabic}
                     </p>
                     <h3 className="font-garamond text-lg font-semibold text-forest">{source.name}</h3>
-                    <span className="text-xs text-gold/60 italic">{source.type}</span>
+                    <span className="text-xs text-gold-deep italic">{source.type}</span>
                   </div>
                 </div>
                 <p className="text-forest/70 text-sm leading-relaxed">{source.desc}</p>
@@ -328,7 +328,7 @@ export default function FiqhPage() {
           <h2 className="section-title font-garamond text-2xl font-semibold text-forest mb-2">
             The Four Schools of Jurisprudence (al-Madhahib al-Arba&#39;ah)
           </h2>
-          <p dir="rtl" lang="ar" className="arabic text-gold mb-4">
+          <p dir="rtl" lang="ar" className="arabic text-gold-deep mb-4">
             المذاهب الفقهية الأربعة
           </p>
           <div className="bg-forest/5 border border-gold/20 rounded-xl p-5 mb-6">
@@ -345,17 +345,17 @@ export default function FiqhPage() {
                   </p>
                   <div>
                     <h3 className="font-garamond text-xl font-semibold text-forest">{madhab.name} School</h3>
-                    <p className="text-xs text-gold/60 italic">{madhab.founder}</p>
+                    <p className="text-xs text-gold-deep italic">{madhab.founder}</p>
                   </div>
                 </div>
                 <div className="space-y-2 mb-3">
                   <div className="flex gap-2">
-                    <span className="text-xs text-gold/70 font-medium w-16 flex-shrink-0">Region:</span>
-                    <span className="text-forest/65 text-xs leading-relaxed">{madhab.region}</span>
+                    <span className="text-xs text-gold-deep font-medium w-16 flex-shrink-0">Region:</span>
+                    <span className="text-forest/70 text-xs leading-relaxed">{madhab.region}</span>
                   </div>
                 </div>
                 <p className="text-forest/70 text-sm leading-relaxed mb-2">{madhab.characteristics}</p>
-                <p className="text-xs text-gold/55 italic">{madhab.note}</p>
+                <p className="text-xs text-gold-deep italic">{madhab.note}</p>
               </article>
             ))}
           </div>
@@ -367,7 +367,7 @@ export default function FiqhPage() {
           <p className="text-forest/70 text-sm italic mb-1">
             {'"And of knowledge, you have been given only a little."'} (Quran 17:85)
           </p>
-          <p className="text-forest/50 text-xs mt-3">
+          <p className="text-forest/70 text-xs mt-3">
             The great scholars who built these schools spent their lives in this science and still considered themselves students. Humility before Allah&apos;s law and respect for all four schools is the mark of the serious student.
           </p>
         </section>

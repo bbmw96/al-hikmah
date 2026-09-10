@@ -130,17 +130,17 @@ export function GhuslContent() {
         <div className="space-y-5">
           {OBLIGATORY_CAUSES.map(cause => (
             <div key={cause.n} className="card-islamic flex gap-4">
-              <span className="w-8 h-8 rounded-full bg-gold/15 text-gold text-sm font-semibold flex items-center justify-center flex-shrink-0 mt-1">
+              <span className="w-8 h-8 rounded-full bg-gold/15 text-gold-deep text-sm font-semibold flex items-center justify-center flex-shrink-0 mt-1">
                 {cause.n}
               </span>
               <div>
-                <p dir="rtl" lang="ar" className="arabic text-gold mb-1.5">
+                <p dir="rtl" lang="ar" className="arabic text-gold-deep mb-1.5">
                   {cause.arabic}
                 </p>
                 <h3 className="font-garamond text-lg font-semibold text-forest mb-1">
                   {tc(cause.titleKey)}
                 </h3>
-                <p className="text-forest/60 text-sm leading-relaxed">{tc(cause.bodyKey)}</p>
+                <p className="text-forest/70 text-sm leading-relaxed">{tc(cause.bodyKey)}</p>
               </div>
             </div>
           ))}
@@ -164,13 +164,13 @@ export function GhuslContent() {
                 {step.step}
               </div>
               <div>
-                <p dir="rtl" lang="ar" className="arabic text-gold mb-1.5">
+                <p dir="rtl" lang="ar" className="arabic text-gold-deep mb-1.5">
                   {step.arabic}
                 </p>
                 <h3 className="font-garamond text-lg font-semibold text-forest mb-1">
                   {tc(step.titleKey)}
                 </h3>
-                <p className="text-forest/60 text-sm leading-relaxed">{tc(step.bodyKey)}</p>
+                <p className="text-forest/70 text-sm leading-relaxed">{tc(step.bodyKey)}</p>
               </div>
             </div>
           ))}
