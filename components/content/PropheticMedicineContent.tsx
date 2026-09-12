@@ -146,6 +146,80 @@ export function PropheticMedicineContent() {
         </section>
 
         <section>
+          <h2 className="section-title font-garamond text-2xl md:text-3xl font-semibold text-forest mb-4">{tc('fever_h')}</h2>
+          <article className="card-islamic space-y-3">
+            <p className="text-forest/75 text-sm leading-relaxed">{tc('fever_p1')}</p>
+            <p className="text-forest/70 text-sm leading-relaxed">{tc('fever_p2')}</p>
+            <p className="text-xs text-gold-deep italic">{tc('fever_source')}</p>
+          </article>
+        </section>
+
+        <section>
+          <h2 className="section-title font-garamond text-2xl md:text-3xl font-semibold text-forest mb-4">{tc('kohl_h')}</h2>
+          <article className="card-islamic space-y-3">
+            <p className="text-forest/75 text-sm leading-relaxed">{tc('kohl_p1')}</p>
+            <p className="text-forest/70 text-sm leading-relaxed">{tc('kohl_p2')}</p>
+            <p className="text-xs text-gold-deep italic">{tc('kohl_source')}</p>
+          </article>
+        </section>
+
+        <section>
+          <h2 className="section-title font-garamond text-2xl md:text-3xl font-semibold text-forest mb-4">{tc('vinegar_h')}</h2>
+          <article className="card-islamic space-y-3">
+            <p className="text-forest/75 text-sm leading-relaxed">{tc('vinegar_p1')}</p>
+            <p className="text-forest/70 text-sm leading-relaxed">{tc('vinegar_p2')}</p>
+            <p className="text-xs text-gold-deep italic">{tc('vinegar_source')}</p>
+          </article>
+        </section>
+
+        <section>
+          <h2 className="section-title font-garamond text-2xl md:text-3xl font-semibold text-forest mb-4">{tc('fly_h')}</h2>
+          <article className="card-islamic space-y-3">
+            <p className="text-forest/75 text-sm leading-relaxed">{tc('fly_p1')}</p>
+            <p className="text-forest/70 text-sm leading-relaxed">{tc('fly_p2')}</p>
+            <p className="text-xs text-gold-deep italic">{tc('fly_source')}</p>
+          </article>
+        </section>
+
+        <section>
+          <h2 className="section-title font-garamond text-2xl md:text-3xl font-semibold text-forest mb-4">{tc('plague_h')}</h2>
+          <article className="card-islamic space-y-3">
+            <p className="text-forest/75 text-sm leading-relaxed">{tc('plague_p1')}</p>
+            <p className="text-forest/70 text-sm leading-relaxed">{tc('plague_p2')}</p>
+            <p className="text-forest/70 text-sm leading-relaxed">{tc('plague_p3')}</p>
+            <p className="text-xs text-gold-deep italic">{tc('plague_source')}</p>
+          </article>
+        </section>
+
+        <section>
+          <h2 className="section-title font-garamond text-2xl md:text-3xl font-semibold text-forest mb-4">{tc('adwa_h')}</h2>
+          <article className="card-islamic space-y-3">
+            <p className="text-forest/75 text-sm leading-relaxed">{tc('adwa_p1')}</p>
+            <p className="text-forest/70 text-sm leading-relaxed">{tc('adwa_p2')}</p>
+            <p className="text-xs text-gold-deep italic">{tc('adwa_source')}</p>
+          </article>
+        </section>
+
+        <section>
+          <h2 className="section-title font-garamond text-2xl md:text-3xl font-semibold text-forest mb-4">{tc('forbidden_h')}</h2>
+          <article className="card-islamic space-y-3">
+            <p className="text-forest/75 text-sm leading-relaxed">{tc('forbidden_p1')}</p>
+            <p className="text-forest/70 text-sm leading-relaxed">{tc('forbidden_p2')}</p>
+            <p className="text-xs text-gold-deep italic">{tc('forbidden_source')}</p>
+          </article>
+        </section>
+
+        <section>
+          <h2 className="section-title font-garamond text-2xl md:text-3xl font-semibold text-forest mb-4">{tc('zamzam_h')}</h2>
+          <article className="card-islamic space-y-3">
+            <p className="text-forest/75 text-sm leading-relaxed">{tc('zamzam_p1')}</p>
+            <p className="text-forest/70 text-sm leading-relaxed">{tc('zamzam_p2')}</p>
+            <p className="text-forest/70 text-sm leading-relaxed">{tc('zamzam_p3')}</p>
+            <p className="text-xs text-gold-deep italic">{tc('zamzam_source')}</p>
+          </article>
+        </section>
+
+        <section>
           <h2 className="section-title font-garamond text-2xl md:text-3xl font-semibold text-forest mb-4">{tc('wisdom_h')}</h2>
           <article className="card-forest rounded-2xl p-6 space-y-3">
             <p className="text-cream/85 text-sm leading-relaxed">{tc('wisdom_p1')}</p>
