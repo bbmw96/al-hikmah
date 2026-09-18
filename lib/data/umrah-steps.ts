@@ -141,7 +141,7 @@ export const UMRAH_DIFFERENCES_FROM_HAJJ = [
   {
     aspect: 'Duration',
     umrah: 'Can be completed in a few hours to one day',
-    hajj: 'Five days minimum (8th – 12th Dhul Hijjah)',
+    hajj: 'Five days minimum (8th, 12th Dhul Hijjah)',
   },
   {
     aspect: 'Time',

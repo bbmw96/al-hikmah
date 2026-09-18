@@ -31,7 +31,7 @@ export function SiteHighlights() {
 
       <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
         {HIGHLIGHTS.map((h, i) => (
-          <FadeIn key={h.labelKey} delay={i * 60}>
+          <FadeIn key={h.labelKey} delay={i * 0.08}>
             <div className="h-full text-center rounded-2xl bg-cream p-5 md:p-6 shadow-sm border border-gold/20 hover:border-gold/60 hover:shadow-md transition-all">
               <p className="text-4xl md:text-5xl font-garamond font-bold text-forest">
                 {h.count}

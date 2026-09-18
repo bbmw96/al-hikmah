@@ -277,7 +277,7 @@ export const GLOSSARY: GlossaryEntry[] = [
     transliteration: 'al-Qur-AAN al-Ka-REEM',
     category: 'quran',
     definition:
-      "The sacred scripture of Islam: the word of Allah revealed to the Prophet Muhammad ﷺ through the Angel Jibril over approximately 23 years (610–632 CE). It consists of 114 chapters (surahs) and 6,236 verses (ayat). The Quran is the primary source of Islamic theology and law and is considered linguistically inimitable. Unlike the Bible or Torah, Muslims believe the Quran exists today in its original, unaltered Arabic text.",
+      "The sacred scripture of Islam: the word of Allah revealed to the Prophet Muhammad ﷺ through the Angel Jibril over approximately 23 years (610, 632 CE). It consists of 114 chapters (surahs) and 6,236 verses (ayat). The Quran is the primary source of Islamic theology and law and is considered linguistically inimitable. Unlike the Bible or Torah, Muslims believe the Quran exists today in its original, unaltered Arabic text.",
     relatedTerms: ['tafseer', 'ayah', 'surah', 'tajweed'],
   },
   {

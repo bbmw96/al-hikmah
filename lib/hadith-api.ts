@@ -54,7 +54,7 @@ export interface SingleHadithResponse {
 
 /**
  * Fetches the full hadith collection JSON for a given language.
- * Response is cached by Next.js for 24 hours – CDN is only hit once per day per collection.
+ * Response is cached by Next.js for 24 hours, CDN is only hit once per day per collection.
  * Language 'eng' fetches English text; 'ara' fetches Arabic text.
  */
 export async function fetchHadithList(
@@ -117,7 +117,7 @@ export async function fetchHadith(
 
 /**
  * @deprecated DO NOT USE. Downloads the entire collection JSON just to get the count.
- * Use col.hadithCount from lib/data/collections.ts instead  –  it is already correct.
+ * Use col.hadithCount from lib/data/collections.ts instead, it is already correct.
  */
 /**
  * Fetches the edition index to get the total hadith count for a collection.
