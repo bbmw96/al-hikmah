@@ -3283,10 +3283,16 @@ export const SURAHS: SurahData[] = [
     ],
     notableVerses: [
       {
-        reference: '103:1-3',
-        arabic: 'وَالْعَصْرِ ۝ إِنَّ الْإِنسَانَ لَفِي خُسْرٍ ۝ إِلَّا الَّذِينَ آمَنُوا وَعَمِلُوا الصَّالِحَاتِ وَتَوَاصَوْا بِالْحَقِّ وَتَوَاصَوْا بِالصَّبْرِ',
-        translation: 'By time  –  indeed, mankind is in loss, except for those who have believed and done righteous deeds and advised each other to truth and advised each other to patience.',
-        context: 'The entire surah is a single argument: humanity is in loss unless it possesses all four qualities simultaneously. Imam al-Shafi\'i declared this alone sufficient for human salvation if properly reflected upon.'
+        reference: '103:2',
+        arabic: 'إِنَّ ٱلْإِنسَٰنَ لَفِى خُسْرٍ',
+        translation: 'Indeed, mankind is in loss.',
+        context: 'A verdict on the whole human race before the exception is named. Time is the capital each person is given; most people spend it and receive nothing lasting in return.'
+      },
+      {
+        reference: '103:3',
+        arabic: 'إِلَّا ٱلَّذِينَ ءَامَنُوا۟ وَعَمِلُوا۟ ٱلصَّٰلِحَٰتِ وَتَوَاصَوْا۟ بِٱلْحَقِّ وَتَوَاصَوْا۟ بِٱلصَّبْرِ',
+        translation: 'Except those who believe and do righteous deeds and counsel one another to truth and counsel one another to patience.',
+        context: 'The four conditions are cumulative, not alternatives. Faith without action is insufficient; action without faith is misdirected; private piety without communal counsel is incomplete; counsel without patience collapses under opposition. Only all four together exit a soul from universal loss.'
       }
     ],
     virtues: 'Imam al-Shafi\'i said: "If people reflected only upon this surah, it would be sufficient for them." The Companions would not part company until one had recited it to the other.'
@@ -3311,9 +3317,15 @@ export const SURAHS: SurahData[] = [
     notableVerses: [
       {
         reference: '104:1-3',
-        arabic: 'وَيْلٌ لِّكُلِّ هُمَزَةٍ لُّمَزَةٍ ۝ الَّذِي جَمَعَ مَالًا وَعَدَّدَهُ ۝ يَحْسَبُ أَنَّ مَالَهُ أَخْلَدَهُ',
-        translation: 'Woe to every scorner and mocker  –  who collects wealth and counts it. He thinks that his wealth will make him immortal.',
-        context: 'The double condemnation (humaza + lumaza) covers both verbal slander and physical mockery. The connection to wealth-hoarding reveals the surah\'s target: those whose material security breeds contemptuous cruelty toward others.'
+        arabic: 'وَيْلٌۭ لِّكُلِّ هُمَزَةٍۢ لُّمَزَةٍ ۝ ٱلَّذِى جَمَعَ مَالًۭا وَعَدَّدَهُۥ ۝ يَحْسَبُ أَنَّ مَالَهُۥٓ أَخْلَدَهُۥ',
+        translation: 'Woe to every scorner and mocker, who collects wealth and counts it, thinking that his wealth will make him immortal.',
+        context: 'Al-Qurtubi distinguishes humazah, one who disparages to the face with word and gesture, from lumazah, one who slanders behind the back, and notes the surah condemns both as one figure, since the two behaviours usually accompany each other. The verb counts, from a root meaning to enumerate and hoard, pictures a man returning again and again to tally his fortune, treating the number itself as a source of security rather than what it is used for.'
+      },
+      {
+        reference: '104:4-9',
+        arabic: 'كَلَّا ۖ لَيُنۢبَذَنَّ فِى ٱلْحُطَمَةِ ۝ وَمَآ أَدْرَىٰكَ مَا ٱلْحُطَمَةُ ۝ نَارُ ٱللَّهِ ٱلْمُوقَدَةُ ۝ ٱلَّتِى تَطَّلِعُ عَلَى ٱلْأَفْـِٔدَةِ ۝ إِنَّهَا عَلَيْهِم مُّؤْصَدَةٌۭ ۝ فِى عَمَدٍۢ مُّمَدَّدَةٍۭ',
+        translation: 'No! He will surely be thrown into the Crusher. And what will make you know what the Crusher is? It is the fire of Allah, kindled, which mounts up over the hearts. Indeed, it will be closed down upon them in extended columns.',
+        context: 'Ibn Abbas is reported to have said that of all the names given to Hellfire in the Quran, only this one is described as reaching the hearts, since it is the heart that conceived the malice and the greed. Al-Razi reads extended columns as the pillars of the Fire closing over the condemned so that no relief and no escape reaches them from any side, an image of total enclosure matching the total moral closure of a life spent counting wealth instead of preparing to meet Allah.'
       }
     ]
   },
@@ -3336,10 +3348,16 @@ export const SURAHS: SurahData[] = [
     ],
     notableVerses: [
       {
-        reference: '105:1-2',
-        arabic: 'أَلَمْ تَرَ كَيْفَ فَعَلَ رَبُّكَ بِأَصْحَابِ الْفِيلِ ۝ أَلَمْ يَجْعَلْ كَيْدَهُمْ فِي تَضْلِيلٍ',
-        translation: 'Have you not considered how your Lord dealt with the companions of the elephant? Did He not make their plan into misguidance?',
-        context: 'The rhetorical opening assumes that the Quraysh know this history well  –  it was fifty years before the revelation. The question transforms a political-military memory into a theological proof: Allah thwarted the greatest army of its day to protect His House.'
+        reference: '105:1',
+        arabic: 'أَلَمْ تَرَ كَيْفَ فَعَلَ رَبُّكَ بِأَصْحَٰبِ ٱلْفِيلِ',
+        translation: 'Have you not seen how your Lord dealt with the companions of the elephant?',
+        context: 'The question is addressed to the Prophet ﷺ and through him to Quraysh, who knew this history within living memory. It is rhetorical, not a request for information; the evidence stood in front of them, and the Kaaba they circled was itself the proof.'
+      },
+      {
+        reference: '105:5',
+        arabic: 'فَجَعَلَهُمْ كَعَصْفٍۢ مَّأْكُولٍۭ',
+        translation: 'And He made them like eaten straw.',
+        context: 'The closing image reduces the mightiest army the Arabs had seen to chewed husks scattered on the ground. Al-Tabari notes the word denotes straw already eaten and voided, the most worthless residue imaginable. Power without Allah\'s sanction ends as debris.'
       }
     ]
   },
@@ -3362,10 +3380,16 @@ export const SURAHS: SurahData[] = [
     ],
     notableVerses: [
       {
-        reference: '106:3-4',
-        arabic: 'فَلْيَعْبُدُوا رَبَّ هَٰذَا الْبَيْتِ ۝ الَّذِي أَطْعَمَهُم مِّن جُوعٍ وَآمَنَهُم مِّنْ خَوْفٍ',
-        translation: 'Let them worship the Lord of this House, who fed them, preventing hunger, and made them safe, shielding them from fear.',
-        context: 'The surah\'s conclusion delivers both command and argument simultaneously: worship is obligated because of the two gifts of provision (food) and safety  –  the material foundations of Qurayshi civilization, both sourced entirely from Allah.'
+        reference: '106:1-3',
+        arabic: 'لِإِيلَٰفِ قُرَيْشٍ ۝ إِۦلَٰفِهِمْ رِحْلَةَ ٱلشِّتَآءِ وَٱلصَّيْفِ ۝ فَلْيَعْبُدُوا۟ رَبَّ هَٰذَا ٱلْبَيْتِ',
+        translation: 'For the accustomed security of Quraysh, their security during winter and summer journeys, let them worship the Lord of this House.',
+        context: 'Al-Tabari and Ibn Kathir read verses 1 and 2 as one grammatical unit leading into verse 3: the security of the caravans is presented as the reason worship is owed. The winter journey went south to Yemen, the summer journey north to Syria, and both depended on Quraysh\'s unmolested reputation as guardians of the Kaaba.'
+      },
+      {
+        reference: '106:4',
+        arabic: 'ٱلَّذِىٓ أَطْعَمَهُم مِّن جُوعٍۢ وَءَامَنَهُم مِّنْ خَوْفٍۭ',
+        translation: 'Who has fed them against hunger and made them safe from fear.',
+        context: 'The closing verse names two blessings that frame the whole Makkan condition: material sustenance despite a barren valley with no agriculture, and physical safety despite being surrounded by warring tribes. Both trace back to the Kaaba\'s sanctity, which Allah established and which this surah calls Quraysh to honour by worshipping Him alone.'
       }
     ]
   },
@@ -3389,9 +3413,15 @@ export const SURAHS: SurahData[] = [
     notableVerses: [
       {
         reference: '107:1-3',
-        arabic: 'أَرَأَيْتَ الَّذِي يُكَذِّبُ بِالدِّينِ ۝ فَذَٰلِكَ الَّذِي يَدُعُّ الْيَتِيمَ ۝ وَلَا يَحُضُّ عَلَىٰ طَعَامِ الْمِسْكِينِ',
-        translation: 'Have you seen the one who denies the religion? For that is the one who drives away the orphan and does not encourage the feeding of the poor.',
-        context: 'A revolutionary redefinition: denial of the religion (din) is demonstrated not only by rejecting theology but by mistreating the vulnerable. Social injustice is a form of kufr.'
+        arabic: 'أَرَءَيْتَ ٱلَّذِى يُكَذِّبُ بِٱلدِّينِ ۝ فَذَٰلِكَ ٱلَّذِى يَدُعُّ ٱلْيَتِيمَ ۝ وَلَا يَحُضُّ عَلَىٰ طَعَامِ ٱلْمِسْكِينِ',
+        translation: 'Have you seen the one who denies the Recompense? That is the one who repulses the orphan and does not urge the feeding of the poor.',
+        context: 'Ibn Kathir observes that the surah defines the denier of the Judgement by two social sins before it mentions worship at all: harshness to the orphan, who cannot repay, and failing even to encourage others to feed the hungry. Al-Razi notes the phrase is not that he fails to feed the poor himself but that he does not urge it, a still lower bar, so that indifference to the plight of others is itself a mark of the hard heart.'
+      },
+      {
+        reference: '107:4-7',
+        arabic: 'فَوَيْلٌۭ لِّلْمُصَلِّينَ ۝ ٱلَّذِينَ هُمْ عَن صَلَاتِهِمْ سَاهُونَ ۝ ٱلَّذِينَ هُمْ يُرَآءُونَ ۝ وَيَمْنَعُونَ ٱلْمَاعُونَ',
+        translation: 'So woe to those who pray, but who are heedless of their prayer, those who make a show of it, and withhold small kindnesses.',
+        context: 'The wording is precise: not woe to those who miss prayer, but woe to those who pray while heedless of it, praying with the body while the heart is absent. Ibn al-Qayyim treats this verse as a warning that the most dangerous negligence wears the outward form of devotion. Sahl al-Tustari and later Sufi commentators read the closing phrase widely: withholding al-Ma\'un is withholding zakat for some, and for others the refusal of any small help, a cup, a tool, a moment of time.'
       }
     ]
   },
@@ -3415,9 +3445,15 @@ export const SURAHS: SurahData[] = [
     notableVerses: [
       {
         reference: '108:1',
-        arabic: 'إِنَّا أَعْطَيْنَاكَ الْكَوْثَرَ',
-        translation: 'Indeed, We have granted you al-Kawthar.',
-        context: 'The river Al-Kawthar in Paradise is described in hadith as whiter than milk, sweeter than honey, and cooler than ice. Its vessels number more than the stars of the sky. Beyond the literal river, Al-Kawthar represents the boundless good  –  prophetic legacy, the Quran, the intercession  –  bestowed on the Prophet.'
+        arabic: 'إِنَّآ أَعْطَيْنَٰكَ ٱلْكَوْثَرَ',
+        translation: 'Indeed, We have given you Al-Kawthar.',
+        context: 'Al-Kawthar is an intensive form meaning overwhelming abundance. The Prophet ﷺ defined it as a river in Paradise whiter than milk and sweeter than honey. Classical scholars also read it as prophethood, the Quran, and his countless followers.'
+      },
+      {
+        reference: '108:3',
+        arabic: 'إِنَّ شَانِئَكَ هُوَ ٱلْأَبْتَرُ',
+        translation: 'Indeed, your hater, he is the cut off one.',
+        context: 'The mocker had called the Prophet ﷺ abtar, cut off. Allah turns the word back on him. History confirmed it: the mocker\'s name survives only as a footnote, while the Prophet ﷺ has nearly two billion followers and his name is invoked daily across the earth.'
       }
     ],
     virtues: 'The shortest surah in the Quran by both verse count and word count, yet among the most profound in theological meaning  –  demonstrating that Quranic brevity does not diminish depth.'
@@ -3441,10 +3477,16 @@ export const SURAHS: SurahData[] = [
     ],
     notableVerses: [
       {
+        reference: '109:1-3',
+        arabic: 'قُلْ يَٰٓأَيُّهَا ٱلْكَٰفِرُونَ ۝ لَآ أَعْبُدُ مَا تَعْبُدُونَ ۝ وَلَآ أَنتُمْ عَٰبِدُونَ مَآ أَعْبُدُ',
+        translation: 'Say: O disbelievers, I do not worship what you worship, nor do you worship what I worship.',
+        context: 'Al-Zamakhshari and al-Razi devote long passages to the apparent repetition in verses 2 to 5. The dominant reading is that verses 2 and 3 deny the present act of worship and verses 4 and 5 deny any future change, closing every door: not now and not later, neither in the object nor in the manner. The command opens with Qul, Say, so the words are a fixed formula the believer is taught to state plainly, not an insult to hurl.'
+      },
+      {
         reference: '109:6',
-        arabic: 'لَكُمْ دِينُكُمْ وَلِيَ دِينِ',
+        arabic: 'لَكُمْ دِينُكُمْ وَلِىَ دِينِ',
         translation: 'For you is your religion, and for me is my religion.',
-        context: 'The concluding verse has been cited in interfaith discourse for fourteen centuries. Scholars clarify it is not relativism but a declaration of absolute non-compromise: I will not adopt your religion, you will not adopt mine  –  peaceful separation, not doctrinal equivalence.'
+        context: 'Classical scholars are careful that this verse does not endorse religious relativism, the idea that all paths are equally true. It states a fact of separation, not an equivalence: you have chosen your way and will bear its outcome, I have mine. Al-Tabari records that it was revealed before the verses on fighting and does not abrogate the later rulings on jihad or dawah; it defines the line between belief and disbelief, and leaves the reckoning to Allah.'
       }
     ],
     virtues: 'The Prophet (peace be upon him) called this surah "the surah of disavowal from shirk" and recommended reciting it before sleeping, saying it is equivalent to a quarter of the Quran. He recited it in the two rak\'ahs of Fajr sunnah and tawaf prayer.',
@@ -3469,10 +3511,16 @@ export const SURAHS: SurahData[] = [
     ],
     notableVerses: [
       {
-        reference: '110:1-2',
-        arabic: 'إِذَا جَاءَ نَصْرُ اللَّهِ وَالْفَتْحُ ۝ وَرَأَيْتَ النَّاسَ يَدْخُلُونَ فِي دِينِ اللَّهِ أَفْوَاجًا',
-        translation: 'When the victory of Allah has come and the conquest, and you see the people entering into the religion of Allah in multitudes...',
-        context: 'The prophecy of the Conquest of Makkah (8 AH) and the mass conversions across Arabia  –  fulfilled within two years of the surah\'s revelation. The phrase "afwajan" (in multitudes/crowds) captured the historical reality of tens of thousands embracing Islam.'
+        reference: '110:1',
+        arabic: 'إِذَا جَآءَ نَصْرُ ٱللَّهِ وَٱلْفَتْحُ',
+        translation: 'When the help of Allah and the conquest comes.',
+        context: 'The conquest is Fath Makkah, the bloodless opening of the city that had persecuted the Prophet ﷺ for thirteen years. The help belongs to Allah, not to armies.'
+      },
+      {
+        reference: '110:3',
+        arabic: 'فَسَبِّحْ بِحَمْدِ رَبِّكَ وَٱسْتَغْفِرْهُ ۚ إِنَّهُۥ كَانَ تَوَّابًۢا',
+        translation: 'Then glorify your Lord with His praise and seek His forgiveness. Indeed, He is ever Accepting of repentance.',
+        context: 'At the height of worldly victory Allah commands not triumph but tasbih, praise and istighfar. Success is the most spiritually dangerous condition, where pride creeps in. The more Allah grants you, the more you should humble yourself before Him.'
       }
     ],
     virtues: 'The last complete surah revealed to the Prophet. Ibn Abbas said: "It is the announcement of the Prophet\'s death." Omar ibn al-Khattab understood this and wept when the Prophet recited it to the senior Companions.',
@@ -3498,9 +3546,15 @@ export const SURAHS: SurahData[] = [
     notableVerses: [
       {
         reference: '111:1-3',
-        arabic: 'تَبَّتْ يَدَا أَبِي لَهَبٍ وَتَبَّ ۝ مَا أَغْنَىٰ عَنْهُ مَالُهُ وَمَا كَسَبَ ۝ سَيَصْلَىٰ نَارًا ذَاتَ لَهَبٍ',
-        translation: 'May the hands of Abu Lahab be ruined, and ruined is he. His wealth and his earnings will not avail him. He will burn in a flaming Fire.',
-        context: 'The early revelation of this condemnation and Abu Lahab\'s subsequent death in disbelief (having never accepted Islam) is cited by scholars as one of the Quran\'s own internal proofs of prophethood  –  a direct, named prediction fulfilled precisely.'
+        arabic: 'تَبَّتْ يَدَآ أَبِى لَهَبٍۢ وَتَبَّ ۝ مَآ أَغْنَىٰ عَنْهُ مَالُهُۥ وَمَا كَسَبَ ۝ سَيَصْلَىٰ نَارًۭا ذَاتَ لَهَبٍۢ',
+        translation: 'May the hands of Abu Lahab perish, and may he perish. His wealth will not avail him, nor what he has earned. He will burn in a Fire of blazing flame.',
+        context: 'The name Abu Lahab, father of flame, was a byname given for his glowing complexion, and the surah turns it against him: the father of flame goes to a flame. Al-Tabari and Ibn Kathir note that Allah names him by the byname rather than his given name Abd al-Uzza, servant of al-Uzza, perhaps because that name itself carried the shame of an idol. The phrase what he has earned is read by many as his children, since a Prophetic report calls a person\'s child part of their earning.'
+      },
+      {
+        reference: '111:4-5',
+        arabic: 'وَٱمْرَأَتُهُۥ حَمَّالَةَ ٱلْحَطَبِ ۝ فِى جِيدِهَا حَبْلٌۭ مِّن مَّسَدٍۭ',
+        translation: 'And his wife, the carrier of firewood. Around her neck a rope of twisted palm fibre.',
+        context: 'The carrier of firewood is read two ways. Literally, Umm Jamil gathered thorn branches to injure the Prophet ﷺ, and so in the Fire she carries fuel for her own punishment. Figuratively, the Arabs used carrier of firewood for one who spreads slander between people to inflame them, which she did. Al-Qurtubi records that the rope of palm fibre, a coarse cord worn by the poor, replaces in the next life the jewelled necklace she wore in this one and once swore she would sell to fund hostility to the Prophet ﷺ.'
       }
     ],
     alternativeNames: ['Al-Lahab', 'Al-Masad']
