@@ -16,7 +16,7 @@ function useDuasText() {
   return (key: DuasContentKey): string => {
     const entry = DUAS_CONTENT[key] as Record<string, string | undefined> | undefined;
     if (!entry) return '';
-    return entry[lang] ?? entry['en'] ?? '';
+    return entry[lang] || entry['en'] || '';
   };
 }
 
@@ -272,13 +272,13 @@ function ResultsList({
           const dk = d.id.replace(/-/g, '_');
           const cat = DUA_CATEGORIES.find(c => c.id === d.category);
           const title =
-            (DUAS_CONTENT[`dua_${dk}_title` as DuasContentKey] as Record<string, string | undefined> | undefined)?.[lang] ??
+            (DUAS_CONTENT[`dua_${dk}_title` as DuasContentKey] as Record<string, string | undefined> | undefined)?.[lang] ||
             d.title;
           const meaning =
-            (DUAS_CONTENT[`dua_${dk}_meaning` as DuasContentKey] as Record<string, string | undefined> | undefined)?.[lang] ??
+            (DUAS_CONTENT[`dua_${dk}_meaning` as DuasContentKey] as Record<string, string | undefined> | undefined)?.[lang] ||
             d.meaning;
           const catName = cat
-            ? (DUAS_CONTENT[`cat_${catKey(cat.id)}_name` as DuasContentKey] as Record<string, string | undefined> | undefined)?.[lang] ??
+            ? (DUAS_CONTENT[`cat_${catKey(cat.id)}_name` as DuasContentKey] as Record<string, string | undefined> | undefined)?.[lang] ||
               cat.title
             : d.category;
 

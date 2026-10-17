@@ -47,15 +47,15 @@ export function ClothingEtiquetteContent() {
   const tc = (key: ClothingContentKey): string => {
     const entry = CLOTHING_CONTENT[key] as Record<string, string | undefined> | undefined;
     if (!entry) return key;
-    return entry[lang] ?? entry.en ?? key;
+    return entry[lang] || entry.en || key;
   };
 
   return (
     <>
       <PageHeader
-        title={TITLE[lang] ?? TITLE.en}
+        title={TITLE[lang] || TITLE.en}
         arabicTitle="آدَابُ اللِّبَاس"
-        subtitle={SUBTITLE[lang] ?? SUBTITLE.en}
+        subtitle={SUBTITLE[lang] || SUBTITLE.en}
       />
 
       <div className="max-w-3xl mx-auto px-6 py-16 space-y-12">

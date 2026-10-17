@@ -4,7 +4,7 @@
  * components; this file holds the narrative text only.
  *
  * The structure uses PartialLangMap (only `en` required, others optional). The
- * consuming components use the standard `entry[lang] ?? entry.en` fallback,
+ * consuming components use the standard `entry[lang] || entry.en` fallback,
  * matching how every other content file in this repo handles incremental
  * translation. The 13 remaining languages are added per-turn (see TaskCreate
  * "Translate prayer-steps-content to 13 langs", multi-turn marathon).

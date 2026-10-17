@@ -13,7 +13,7 @@ function useNC() {
   return (key: NamesContentKey): string => {
     const entry = NAMES_CONTENT[key] as Record<string, string | undefined> | undefined;
     if (!entry) return key;
-    return entry[lang] ?? entry['en'] ?? key;
+    return entry[lang] || entry['en'] || key;
   };
 }
 

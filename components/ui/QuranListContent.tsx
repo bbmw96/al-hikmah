@@ -36,7 +36,7 @@ function scoreSurah(s: SurahData, ql: string): number {
 
 export function QuranListContent() {
   const { t, lang } = useLanguage();
-  const tc = (k: QuranUiKey) => QURAN_UI[k][lang] ?? QURAN_UI[k].en;
+  const tc = (k: QuranUiKey) => QURAN_UI[k][lang] || QURAN_UI[k].en;
   const [query, setQuery] = useState('');
   const [filter, setFilter] = useState<Filter>('all');
 

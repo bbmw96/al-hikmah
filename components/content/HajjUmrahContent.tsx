@@ -39,7 +39,7 @@ function useTC() {
   return (key: HajjUmrahContentKey): string => {
     const entry = HAJJ_UMRAH_CONTENT[key] as Record<string, string | undefined> | undefined;
     if (!entry) return key;
-    return entry[lang] ?? entry['en'] ?? key;
+    return entry[lang] || entry['en'] || key;
   };
 }
 

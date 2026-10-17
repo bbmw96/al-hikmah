@@ -12,9 +12,9 @@ type Surah = (typeof SURAHS)[number];
 
 export function SurahDetailContent({ surah }: { surah: Surah }) {
   const { lang } = useLanguage();
-  const tc = (k: QuranUiKey) => QURAN_UI[k][lang] ?? QURAN_UI[k].en;
+  const tc = (k: QuranUiKey) => QURAN_UI[k][lang] || QURAN_UI[k].en;
   const sc = SURAH_CONTENT[surah.number];
-  const surahName = (s: Surah) => SURAH_CONTENT[s.number]?.name?.[lang] ?? s.englishName;
+  const surahName = (s: Surah) => SURAH_CONTENT[s.number]?.name?.[lang] || s.englishName;
 
   const currentIndex = SURAHS.findIndex(s => s.transliteration === surah.transliteration);
   const prev = currentIndex > 0 ? SURAHS[currentIndex - 1] : null;
@@ -47,7 +47,7 @@ export function SurahDetailContent({ surah }: { surah: Surah }) {
           </div>
           <ArabicText text={surah.arabicName} size="xl" className="mb-4 text-cream" />
           <h1 className="font-garamond text-4xl font-semibold text-cream mb-1">
-            {sc?.name?.[lang] ?? surah.englishName}
+            {sc?.name?.[lang] || surah.englishName}
           </h1>
           <p className="text-gold italic text-lg">{surah.transliteration.split('-').map((w: string) => w.charAt(0).toUpperCase() + w.slice(1)).join(' ')}</p>
           {surah.alternativeNames && surah.alternativeNames.length > 0 && (
@@ -86,7 +86,7 @@ export function SurahDetailContent({ surah }: { surah: Surah }) {
             <BookOpen className="w-5 h-5 text-gold" aria-hidden="true" />
             {tc('heading_overview')}
           </h2>
-          <p className="text-forest/70 leading-relaxed">{sc?.overview?.[lang] ?? surah.overview}</p>
+          <p className="text-forest/70 leading-relaxed">{sc?.overview?.[lang] || surah.overview}</p>
         </section>
 
         {/* Asbab al-Nuzul */}
@@ -101,7 +101,7 @@ export function SurahDetailContent({ surah }: { surah: Surah }) {
           <h2 className="font-garamond text-xl font-semibold text-forest mb-4">
             {tc('heading_asbab')}
           </h2>
-          <p className="text-forest/70 leading-relaxed">{sc?.asbab?.[lang] ?? surah.asbabalNuzul}</p>
+          <p className="text-forest/70 leading-relaxed">{sc?.asbab?.[lang] || surah.asbabalNuzul}</p>
         </section>
 
         {/* Key Themes */}
@@ -111,7 +111,7 @@ export function SurahDetailContent({ surah }: { surah: Surah }) {
           </h2>
           <div className="flex flex-wrap gap-2">
             {surah.keyThemes.map((theme: string, i: number) => (
-              <span key={theme} className="badge-gold text-xs">{sc?.themes?.[i]?.[lang] ?? theme}</span>
+              <span key={theme} className="badge-gold text-xs">{sc?.themes?.[i]?.[lang] || theme}</span>
             ))}
           </div>
         </section>
@@ -137,10 +137,10 @@ export function SurahDetailContent({ surah }: { surah: Surah }) {
                     {v.arabic}
                   </p>
                   <p className="text-forest/80 italic text-sm leading-relaxed border-l-2 border-gold/40 pl-4">
-                    &ldquo;{sc?.verses?.[i]?.translation?.[lang] ?? v.translation}&rdquo;
+                    &ldquo;{sc?.verses?.[i]?.translation?.[lang] || v.translation}&rdquo;
                   </p>
                   {v.context && (
-                    <p className="text-forest/70 text-xs leading-relaxed">{sc?.verses?.[i]?.context?.[lang] ?? v.context}</p>
+                    <p className="text-forest/70 text-xs leading-relaxed">{sc?.verses?.[i]?.context?.[lang] || v.context}</p>
                   )}
                 </article>
               ))}

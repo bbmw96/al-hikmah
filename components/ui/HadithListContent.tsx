@@ -37,8 +37,8 @@ function GradeTag({ grade, label }: { grade: string; label: string }) {
 
 export function HadithListContent() {
   const { t, lang } = useLanguage();
-  const ui = (key: keyof typeof HADITH_LIST_UI) => HADITH_LIST_UI[key][lang] ?? HADITH_LIST_UI[key].en;
-  const desc = (id: string, fallback: string) => HADITH_DESCRIPTIONS[id]?.[lang] ?? fallback;
+  const ui = (key: keyof typeof HADITH_LIST_UI) => HADITH_LIST_UI[key][lang] || HADITH_LIST_UI[key].en;
+  const desc = (id: string, fallback: string) => HADITH_DESCRIPTIONS[id]?.[lang] || fallback;
 
   return (
     <>

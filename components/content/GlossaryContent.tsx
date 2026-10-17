@@ -20,7 +20,7 @@ function useGC() {
   return (key: GlossaryContentKey): string => {
     const entry = GLOSSARY_CONTENT[key] as Record<string, string | undefined> | undefined;
     if (!entry) return key;
-    return entry[lang] ?? entry['en'] ?? key;
+    return entry[lang] || entry['en'] || key;
   };
 }
 

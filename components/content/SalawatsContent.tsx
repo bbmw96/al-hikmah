@@ -26,7 +26,7 @@ export function SalawatsContent() {
   const tc = (key: SalawatsContentKey): string => {
     const entry = SALAWATS_CONTENT[key] as Record<string, string | undefined> | undefined;
     if (!entry) return key;
-    return entry[lang] ?? entry.en ?? key;
+    return entry[lang] || entry.en || key;
   };
 
   return (

@@ -11,7 +11,7 @@ function useSeerah() {
   return (key: SeerahContentKey): string => {
     const entry = SEERAH_CONTENT[key] as Record<string, string | undefined> | undefined;
     if (!entry) return key;
-    return entry[lang] ?? entry['en'] ?? key;
+    return entry[lang] || entry['en'] || key;
   };
 }
 

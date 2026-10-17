@@ -26,7 +26,7 @@ const SOURCES = [
 
 export function AboutContent() {
   const { lang } = useLanguage();
-  const tc = (k: AboutContentKey) => ABOUT_CONTENT[k][lang] ?? ABOUT_CONTENT[k].en;
+  const tc = (k: AboutContentKey) => ABOUT_CONTENT[k][lang] || ABOUT_CONTENT[k].en;
   const languageChips = ['العربية', ...Object.values(LANGUAGE_META).map(m => m.nativeLabel)];
 
   return (

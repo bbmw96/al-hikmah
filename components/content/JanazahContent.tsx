@@ -35,7 +35,7 @@ export function JanazahContent() {
   const tc = (key: JanazahContentKey): string => {
     const entry = JANAZAH_CONTENT[key] as Record<string, string | undefined> | undefined;
     if (!entry) return key;
-    return entry[lang] ?? entry.en ?? key;
+    return entry[lang] || entry.en || key;
   };
 
   return (

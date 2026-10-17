@@ -44,9 +44,9 @@ interface Props {
 
 export function UnderConstructionCallout({ topic }: Props) {
   const { lang } = useLanguage();
-  const heading = HEADING[lang] ?? HEADING.en;
-  const intro = INTRO[lang] ?? INTRO.en;
-  const topicText = topic[lang] ?? topic.en;
+  const heading = HEADING[lang] || HEADING.en;
+  const intro = INTRO[lang] || INTRO.en;
+  const topicText = topic[lang] || topic.en;
 
   return (
     <article className="card-forest rounded-2xl p-8 max-w-3xl mx-auto">

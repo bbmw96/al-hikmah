@@ -68,7 +68,7 @@ function localeForLang(lang: string): string {
     fas: 'fa-IR', zh: 'zh-CN', yue: 'zh-HK', ja: 'ja-JP', ru: 'ru-RU',
     es: 'es-ES', ko: 'ko-KR', ta: 'ta-IN', si: 'si-LK',
   };
-  return map[lang] ?? 'en-GB';
+  return map[lang] || 'en-GB';
 }
 
 export function PrayerTimesWidget() {

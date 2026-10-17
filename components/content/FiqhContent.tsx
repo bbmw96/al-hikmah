@@ -62,7 +62,7 @@ export function FiqhContent() {
   const tc = (k: string): string => {
     const entry = FIQH_CONTENT[k as FiqhContentKey] as Record<string, string | undefined> | undefined;
     if (!entry) return k;
-    return entry[lang] ?? entry.en ?? k;
+    return entry[lang] || entry.en || k;
   };
 
   return (

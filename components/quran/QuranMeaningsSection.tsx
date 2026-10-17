@@ -63,10 +63,10 @@ const PER_SURAH_TITLE: LangMap = {
 
 export function QuranMeaningsSection() {
   const { lang } = useLanguage();
-  const overall = QURAN_OVERALL_MEANING[lang] ?? QURAN_OVERALL_MEANING.en;
-  const sectionTitle = SECTION_TITLE[lang] ?? SECTION_TITLE.en;
-  const overallTitle = OVERALL_TITLE[lang] ?? OVERALL_TITLE.en;
-  const perSurahTitle = PER_SURAH_TITLE[lang] ?? PER_SURAH_TITLE.en;
+  const overall = QURAN_OVERALL_MEANING[lang] || QURAN_OVERALL_MEANING.en;
+  const sectionTitle = SECTION_TITLE[lang] || SECTION_TITLE.en;
+  const overallTitle = OVERALL_TITLE[lang] || OVERALL_TITLE.en;
+  const perSurahTitle = PER_SURAH_TITLE[lang] || PER_SURAH_TITLE.en;
 
   return (
     <section className="max-w-7xl mx-auto px-6 py-12">
@@ -92,8 +92,8 @@ export function QuranMeaningsSection() {
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
         {SURAHS.map(surah => {
           const entry = QURAN_114_MEANINGS[surah.number];
-          const translatedName = entry ? (entry.name[lang] ?? entry.name.en) : surah.englishName;
-          const meaning = entry ? (entry.meaning[lang] ?? entry.meaning.en) : '';
+          const translatedName = entry ? (entry.name[lang] || entry.name.en) : surah.englishName;
+          const meaning = entry ? (entry.meaning[lang] || entry.meaning.en) : '';
           return (
             <Link
               key={surah.number}

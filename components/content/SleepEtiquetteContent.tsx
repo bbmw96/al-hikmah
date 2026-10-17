@@ -50,15 +50,15 @@ export function SleepEtiquetteContent() {
   const tc = (key: SleepContentKey): string => {
     const entry = SLEEP_CONTENT[key] as Record<string, string | undefined> | undefined;
     if (!entry) return key;
-    return entry[lang] ?? entry.en ?? key;
+    return entry[lang] || entry.en || key;
   };
 
   return (
     <>
       <PageHeader
-        title={TITLE[lang] ?? TITLE.en}
+        title={TITLE[lang] || TITLE.en}
         arabicTitle="آدَابُ النَّوْم"
-        subtitle={SUBTITLE[lang] ?? SUBTITLE.en}
+        subtitle={SUBTITLE[lang] || SUBTITLE.en}
       />
 
       <div className="max-w-3xl mx-auto px-6 py-16 space-y-12">

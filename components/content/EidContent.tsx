@@ -11,7 +11,7 @@ function useEid() {
   return (key: EidContentKey): string => {
     const entry = EID_CONTENT[key] as Record<string, string | undefined> | undefined;
     if (!entry) return key;
-    return entry[lang] ?? entry['en'] ?? key;
+    return entry[lang] || entry['en'] || key;
   };
 }
 

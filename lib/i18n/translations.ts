@@ -602,7 +602,7 @@ export type T = typeof UI;
 export function t(key: keyof T, lang: Lang): string {
   const entry = UI[key];
   if (!entry) return key;
-  return (entry as Record<string, string>)[lang] ?? (entry as Record<string, string>)['en'] ?? key;
+  return (entry as Record<string, string>)[lang] || (entry as Record<string, string>)['en'] || key;
 }
 
 export { UI };

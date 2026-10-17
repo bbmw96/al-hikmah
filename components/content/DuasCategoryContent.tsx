@@ -14,7 +14,7 @@ function useDuasText() {
   return (key: DuasContentKey, fallback?: string): string => {
     const entry = DUAS_CONTENT[key] as Record<string, string | undefined> | undefined;
     if (!entry) return fallback ?? '';
-    return entry[lang] ?? entry['en'] ?? fallback ?? '';
+    return entry[lang] || entry['en'] || fallback || '';
   };
 }
 

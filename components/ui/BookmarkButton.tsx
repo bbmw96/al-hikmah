@@ -25,7 +25,7 @@ export function BookmarkButton({ duaId }: { duaId: string }) {
   const bookmarked = isBookmarked(duaId);
   const labelKey = bookmarked ? 'bookmark_remove' : 'bookmark_add';
   const entry = DUAS_CONTENT[labelKey] as Record<string, string | undefined> | undefined;
-  const label = entry?.[lang] ?? entry?.['en'] ?? 'Bookmark';
+  const label = entry?.[lang] || entry?.['en'] || 'Bookmark';
 
   return (
     <button

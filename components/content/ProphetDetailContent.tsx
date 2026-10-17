@@ -23,25 +23,25 @@ export function ProphetDetailContent({ slug }: { slug: string }) {
   const tc = (key: ProphetsContentKey): string => {
     const entry = PROPHETS_CONTENT[key] as Record<string, string | undefined> | undefined;
     if (!entry) return key;
-    return entry[lang] ?? entry['en'] ?? key;
+    return entry[lang] || entry['en'] || key;
   };
   const tl = (map: ProphetLangMap | undefined, fallback: string): string =>
-    (map ? (map[lang] ?? map.en) : '') || fallback;
+    (map ? (map[lang] || map.en) : '') || fallback;
 
   const name = tl(detail?.name, prophet.englishName);
   const title = tl(detail?.title, prophet.title);
   const altNames = detail?.alternativeNames
-    ? detail.alternativeNames.map(a => a[lang] ?? a.en)
+    ? detail.alternativeNames.map(a => a[lang] || a.en)
     : prophet.alternativeNames;
   const miracles = detail?.keyMiracles
-    ? detail.keyMiracles.map(m => m[lang] ?? m.en)
+    ? detail.keyMiracles.map(m => m[lang] || m.en)
     : prophet.keyMiracles;
   const stories = detail?.keyStories
-    ? detail.keyStories.map(s => s[lang] ?? s.en)
+    ? detail.keyStories.map(s => s[lang] || s.en)
     : prophet.keyStories;
 
   const relationLabel = (raw: string): string =>
-    RELATION_LABELS[raw]?.[lang] ?? RELATION_LABELS[raw]?.en ?? raw;
+    RELATION_LABELS[raw]?.[lang] || RELATION_LABELS[raw]?.en || raw;
   const lineageRows = prophet.lineage.map(e => ({
     arabicName: e.arabicName,
     name: e.englishName,
@@ -175,11 +175,11 @@ export function ProphetDetailContent({ slug }: { slug: string }) {
                           </p>
                         )}
                         <p className="font-garamond font-semibold text-forest text-sm">
-                          {member.name[lang] ?? member.name.en}
+                          {member.name[lang] || member.name.en}
                         </p>
                         {member.note && (
                           <p className="text-forest/70 text-xs leading-relaxed mt-1">
-                            {member.note[lang] ?? member.note.en}
+                            {member.note[lang] || member.note.en}
                           </p>
                         )}
                       </div>

@@ -70,16 +70,16 @@ const SECTION_CLASS: Record<SectionEmphasis, string> = {
 export function FiveFardSection() {
   const { lang } = useLanguage();
   const tc = (k: SalaatFardKey) =>
-    (SALAAT_FARD_CONTENT[k] as Record<string, string | undefined> | undefined)?.[lang] ??
-    (SALAAT_FARD_CONTENT[k] as Record<string, string | undefined> | undefined)?.en ?? k;
-  const fl = (suffix: string) => FIELD_LABELS[suffix][lang] ?? FIELD_LABELS[suffix].en;
+    (SALAAT_FARD_CONTENT[k] as Record<string, string | undefined> | undefined)?.[lang] ||
+    (SALAAT_FARD_CONTENT[k] as Record<string, string | undefined> | undefined)?.en || k;
+  const fl = (suffix: string) => FIELD_LABELS[suffix][lang] || FIELD_LABELS[suffix].en;
 
   const fardPrayers = SALAAT_BY_CATEGORY('fard');
 
   return (
     <section>
       <h2 className="section-title font-garamond text-2xl md:text-3xl font-semibold text-forest mb-6">
-        {TITLE_FIVE[lang] ?? TITLE_FIVE.en}
+        {TITLE_FIVE[lang] || TITLE_FIVE.en}
       </h2>
 
       {/* Universal intro */}
