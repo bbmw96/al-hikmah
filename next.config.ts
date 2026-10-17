@@ -1,7 +1,12 @@
 import type { NextConfig } from "next";
 
+// Hosted on GitHub Pages: the whole site is pre-built to static files in out/.
+// Pages serves files only, so there are no API routes, no on-demand rendering
+// and no custom response headers; anything dynamic runs in the browser.
 const nextConfig: NextConfig = {
-  compress: true,
+  output: 'export',
+  // Every page is written as <path>/index.html, which GitHub Pages always resolves.
+  trailingSlash: true,
   poweredByHeader: false,
   experimental: {
     staleTimes: {
@@ -14,53 +19,7 @@ const nextConfig: NextConfig = {
     cpus: 1,
   },
   images: {
-    formats: ['image/avif', 'image/webp'],
-    minimumCacheTTL: 31536000,
-  },
-  async headers() {
-    return [
-      {
-        // Applies to every route. Standard hardening headers: none of these
-        // hide page source (browsers must always be able to read what they
-        // render), they guard against clickjacking, MIME-sniffing, and
-        // unneeded browser feature access from embedded/third-party content.
-        source: '/:path*',
-        headers: [
-          { key: 'X-Content-Type-Options', value: 'nosniff' },
-          { key: 'X-Frame-Options', value: 'SAMEORIGIN' },
-          { key: 'Referrer-Policy', value: 'strict-origin-when-cross-origin' },
-          { key: 'Permissions-Policy', value: 'camera=(), microphone=(), geolocation=(), interest-cohort=()' },
-          { key: 'Strict-Transport-Security', value: 'max-age=63072000; includeSubDomains; preload' },
-        ],
-      },
-      {
-        source: '/hadith/:path*',
-        headers: [
-          {
-            key: 'Cache-Control',
-            value: 'public, s-maxage=3600, stale-while-revalidate=86400',
-          },
-        ],
-      },
-      {
-        source: '/api/hadith-search',
-        headers: [
-          {
-            key: 'Cache-Control',
-            value: 'public, s-maxage=300, stale-while-revalidate=3600',
-          },
-        ],
-      },
-      {
-        source: '/_next/static/:path*',
-        headers: [
-          {
-            key: 'Cache-Control',
-            value: 'public, max-age=31536000, immutable',
-          },
-        ],
-      },
-    ];
+    unoptimized: true,
   },
 };
 

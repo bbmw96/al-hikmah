@@ -2,7 +2,6 @@
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { useRouter } from 'next/navigation';
 import { ChevronLeft, ChevronRight, BookOpen, Globe, Loader2 } from 'lucide-react';
 import { ArabicText } from '@/components/ui/ArabicText';
 import { LanguageSelector } from '@/components/ui/LanguageSelector';
@@ -11,6 +10,7 @@ import type { LanguageCode } from '@/lib/utils';
 import { useLanguage } from '@/lib/i18n/context';
 import type { HadithCollection } from '@/lib/data/collections';
 import type { HadithGrade } from '@/lib/hadith-api';
+import { hadithHref } from '@/lib/hadith-links';
 
 const CDN_MIRRORS = [
   'https://cdn.jsdelivr.net/gh/fawazahmed0/hadith-api@1',
@@ -52,7 +52,6 @@ export function HadithDetail({
   arabicText,
   grades,
 }: HadithDetailProps) {
-  const router = useRouter();
   const { t, lang } = useLanguage();
   const [activeTab, setActiveTab] = useState<Tab>(() => (lang !== 'en' ? 'translation' : 'meaning'));
   const [language, setLanguage] = useState<LanguageCode>(() => lang as LanguageCode);
@@ -70,11 +69,6 @@ export function HadithDetail({
       setActiveTab('translation');
     }
   }
-
-  useEffect(() => {
-    if (hadithNumber > 1) router.prefetch(`/hadith/${collection.id}/${hadithNumber - 1}`);
-    if (hadithNumber < collection.hadithCount) router.prefetch(`/hadith/${collection.id}/${hadithNumber + 1}`);
-  }, [collection.id, collection.hadithCount, hadithNumber, router]);
 
   /* eslint-disable react-hooks/set-state-in-effect -- loading/availability is set as part of the standard async data-fetch lifecycle */
   useEffect(() => {
@@ -272,7 +266,7 @@ export function HadithDetail({
       <nav className="flex items-center justify-between mt-8" aria-label="Hadith navigation">
         {hadithNumber > 1 ? (
           <Link
-            href={`/hadith/${collection.id}/${hadithNumber - 1}`}
+            href={hadithHref(collection.id, hadithNumber - 1)}
             className="btn-outline flex items-center gap-1.5 text-sm"
           >
             <ChevronLeft className="w-4 h-4" aria-hidden="true" />
@@ -286,7 +280,7 @@ export function HadithDetail({
           All {collection.shortName}
         </Link>
         <Link
-          href={`/hadith/${collection.id}/${hadithNumber + 1}`}
+          href={hadithHref(collection.id, hadithNumber + 1)}
           className="btn-outline flex items-center gap-1.5 text-sm"
         >
           {t('ui.next')}

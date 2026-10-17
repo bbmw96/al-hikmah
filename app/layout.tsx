@@ -25,6 +25,8 @@ const scheherazade = Scheherazade_New({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://al-hikmah.bbmw0.com'),
+  referrer: 'strict-origin-when-cross-origin',
   title: {
     template: '%s | Al-Hikmah',
     default: 'Al-Hikmah - Islamic Knowledge & Hadith Resource',

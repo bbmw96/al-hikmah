@@ -4,6 +4,7 @@ import { useState, useCallback } from 'react';
 import Link from 'next/link';
 import { Search, ChevronRight, X } from 'lucide-react';
 import { useLanguage } from '@/lib/i18n/context';
+import { hadithHref } from '@/lib/hadith-links';
 
 interface SearchHadith {
   hadithnumber: number;
@@ -23,11 +24,8 @@ export function HadithSearchBar({ collection }: { collection: string }) {
     if (trimmed.length < 2) { setResults(null); setSearched(false); return; }
     setSearching(true);
     try {
-      const res = await fetch(
-        `/api/hadith-search?collection=${collection}&q=${encodeURIComponent(trimmed)}&lang=${lang}`,
-      );
-      const data = await res.json();
-      setResults(data.hadiths ?? []);
+      const { searchHadiths } = await import('@/lib/hadith-search');
+      setResults(searchHadiths(collection, trimmed, lang));
       setSearched(true);
     } catch {
       setResults([]);
@@ -35,7 +33,7 @@ export function HadithSearchBar({ collection }: { collection: string }) {
     } finally {
       setSearching(false);
     }
-  }, [collection]);
+  }, [collection, lang]);
 
   function handleKeyDown(e: React.KeyboardEvent<HTMLInputElement>) {
     if (e.key === 'Enter') runSearch(query);
@@ -94,7 +92,7 @@ export function HadithSearchBar({ collection }: { collection: string }) {
                 {results.map(hadith => (
                   <Link
                     key={hadith.hadithnumber}
-                    href={`/hadith/${collection}/${hadith.hadithnumber}`}
+                    href={hadithHref(collection, hadith.hadithnumber)}
                     className="card-islamic group flex gap-4 hover:-translate-y-0.5 transition-transform duration-150"
                   >
                     <span className="w-9 h-9 rounded-full bg-gold/15 text-gold-deep text-xs font-semibold flex items-center justify-center flex-shrink-0 mt-0.5">

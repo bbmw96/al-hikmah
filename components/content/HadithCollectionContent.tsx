@@ -1,13 +1,14 @@
 'use client';
 
 import Link from 'next/link';
-import { ChevronLeft, ChevronRight } from 'lucide-react';
+import { ChevronLeft, ChevronRight, Loader2 } from 'lucide-react';
 import { PageHeader } from '@/components/ui/PageHeader';
 import { HadithSearchBar } from '@/components/ui/HadithSearchBar';
 import { useLanguage } from '@/lib/i18n/context';
 import { t } from '@/lib/i18n/translations';
 import type { HadithCollection } from '@/lib/data/collections';
 import type { HadithEntry } from '@/lib/hadith-api';
+import { hadithHref } from '@/lib/hadith-links';
 
 interface Props {
   collectionId: string;
@@ -16,12 +17,13 @@ interface Props {
   page: number;
   pages: number;
   total: number;
+  loading?: boolean;
 }
 
-export function HadithCollectionContent({ collectionId, col, hadiths, page, pages, total }: Props) {
+export function HadithCollectionContent({ collectionId, col, hadiths, page, pages, total, loading = false }: Props) {
   const { lang } = useLanguage();
 
-  if (hadiths.length === 0) {
+  if (hadiths.length === 0 && !loading) {
     return (
       <div className="max-w-4xl mx-auto px-6 py-24 text-center">
         <p className="text-forest/70">{t('hadith.unable_to_load', lang)}</p>
@@ -47,11 +49,17 @@ export function HadithCollectionContent({ collectionId, col, hadiths, page, page
         <HadithSearchBar collection={collectionId} />
 
         {/* Hadith list */}
+        {loading ? (
+          <div className="flex items-center justify-center py-16" role="status">
+            <Loader2 className="w-6 h-6 text-gold animate-spin" aria-hidden="true" />
+            <span className="ml-2 text-forest/70 text-sm">{t('ui.loading', lang)}</span>
+          </div>
+        ) : (
         <div className="space-y-4">
           {hadiths.map(hadith => (
             <Link
               key={hadith.hadithnumber}
-              href={`/hadith/${collectionId}/${hadith.hadithnumber}`}
+              href={hadithHref(collectionId, hadith.hadithnumber)}
               className="card-islamic group flex gap-4 hover:-translate-y-0.5 transition-transform duration-150"
             >
               <span className="w-10 h-10 rounded-full bg-gold/15 text-gold-deep text-sm font-semibold flex items-center justify-center flex-shrink-0 mt-0.5">
@@ -81,12 +89,14 @@ export function HadithCollectionContent({ collectionId, col, hadiths, page, page
           ))}
         </div>
 
+        )}
+
         {/* Pagination */}
-        {pages > 1 && (
+        {pages > 1 && !loading && (
           <nav className="flex items-center justify-between mt-10" aria-label={t('pagination.aria', lang)}>
             {page > 1 ? (
               <Link
-                href={`/hadith/${collectionId}?page=${page - 1}`}
+                href={`/hadith/${collectionId}/?page=${page - 1}`}
                 className="btn-outline flex items-center gap-1.5 text-sm"
               >
                 <ChevronLeft className="w-4 h-4" aria-hidden="true" />
@@ -102,7 +112,7 @@ export function HadithCollectionContent({ collectionId, col, hadiths, page, page
             </p>
             {page < pages ? (
               <Link
-                href={`/hadith/${collectionId}?page=${page + 1}`}
+                href={`/hadith/${collectionId}/?page=${page + 1}`}
                 className="btn-outline flex items-center gap-1.5 text-sm"
               >
                 {t('pagination.next', lang)}

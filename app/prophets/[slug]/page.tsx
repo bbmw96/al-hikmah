@@ -1,14 +1,17 @@
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
-import { getProphetById } from '@/lib/data/prophets';
+import { PROPHETS, getProphetById } from '@/lib/data/prophets';
 import { ProphetDetailContent } from '@/components/content/ProphetDetailContent';
 
 interface Props {
   params: Promise<{ slug: string }>;
 }
 
-export const revalidate = 3600;
-export const dynamicParams = true;
+export const dynamicParams = false;
+
+export function generateStaticParams() {
+  return PROPHETS.map(p => ({ slug: p.id }));
+}
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
