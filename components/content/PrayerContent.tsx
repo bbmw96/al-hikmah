@@ -9,6 +9,9 @@ import { FiveFardSection } from '@/components/prayer/FiveFardSection';
 import { WuduSection } from '@/components/prayer/WuduSection';
 import { PrayerStepsSection } from '@/components/prayer/PrayerStepsSection';
 import { AfterPrayerSection } from '@/components/prayer/AfterPrayerSection';
+import { WuduWisdomSection } from '@/components/prayer/WuduWisdomSection';
+import { SalahFoundationsSection } from '@/components/prayer/SalahFoundationsSection';
+import { SalahRulingsSection } from '@/components/prayer/SalahRulingsSection';
 
 export function PrayerContent() {
   const { lang } = useLanguage();
@@ -31,7 +34,10 @@ export function PrayerContent() {
         <AdhanIqamahSection />
         <FiveFardSection />
         <WuduSection />
+        <WuduWisdomSection />
+        <SalahFoundationsSection />
         <PrayerStepsSection />
+        <SalahRulingsSection />
         <AfterPrayerSection />
       </div>
     </>
