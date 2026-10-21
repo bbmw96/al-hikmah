@@ -462,7 +462,7 @@ export const DUAS: Dua[] = [
     source: 'Quran, Surah Hud 11:45',
     category: 'from-prophets',
     occasion: 'A dua to reflect on when family members oppose the truth and one\'s heart aches for them',
-    virtue: "Nuh ﷺ made this dua as the Flood rose and his son refused to embark. Allah replied: 'O Nuh, he is not of your family; he is a work of a different nature' (11:46). Family in blood does not always mean family in faith. Nuh ﷺ then said: 'My Lord, I seek refuge in You from asking for that of which I have no knowledge.' A model of self-correction when a dua is redirected by Allah.",
+    virtue: "Nuh ﷺ made this dua as the Flood rose and his son refused to embark. Allah replied: 'O Nuh, he is not of your family; he is [one whose] conduct is other than righteous' (11:46). Family in blood does not always mean family in faith. Nuh ﷺ then said: 'My Lord, I seek refuge in You from asking for that of which I have no knowledge.' A model of self-correction when a dua is redirected by Allah.",
   },
   {
     id: 'prophet-muhammad-day',
@@ -681,7 +681,7 @@ export const DUAS: Dua[] = [
     arabic: "اللَّهُ أَكْبَرُ ، لَا إِلَهَ إِلَّا اللَّهُ ، الْحَمْدُ لِلَّهِ ، سُبْحَانَ اللَّهِ",
     transliteration: "Allahu Akbar, La ilaha illallah, Alhamdulillah, Subhanallah, along with personal supplications.",
     meaning: 'Allah is the Greatest, there is no god but Allah, all praise is for Allah, glory be to Allah.',
-    source: 'Sahih Muslim 1218, the Prophet ﷺ prayed Maghrib and Isha combined at Muzdalifah, slept, prayed Fajr early, then supplicated at al-Mash\'ar al-Haram until it was almost bright',
+    source: 'Sahih Muslim 1218, the Prophet ﷺ prayed Maghrib and Isha combined at Muzdalifah, slept, prayed Fajr early, then supplicated at al-Mash\'ar al-Haram until it was very bright',
     category: 'hajj-umrah',
     occasion: 'On the morning of Eid al-Adha at Muzdalifah, between Fajr and departure for Mina, facing the qiblah',
     virtue: "A time and place of accepted supplication; the Prophet ﷺ raised his hands and made dua until the daylight was well-established, then departed for Mina before sunrise.",
@@ -694,8 +694,8 @@ export const DUAS: Dua[] = [
     meaning: 'Allah is the Greatest (said with each of the seven pebbles thrown at each Jamarah).',
     source: 'Sahih al-Bukhari 1750',
     category: 'hajj-umrah',
-    occasion: 'When throwing pebbles at each of the three Jamarat during the Days of Tashriq (10th-13th Dhul-Hijjah)',
-    virtue: "The Prophet ﷺ said Allahu Akbar with the throw of each pebble. After stoning the small Jamarah and middle Jamarah, he moved aside, faced the qiblah, raised his hands, and made a long supplication. Only after the large Jamarah (Jamrat al-Aqabah) on Eid day did he not stop, it was the moment to move to sacrifice.",
+    occasion: 'When throwing pebbles at the Jamarat: at Jamrat al-Aqabah alone on the 10th of Dhul-Hijjah (Eid day), then at all three Jamarat on the Days of Tashriq (11th-13th Dhul-Hijjah)',
+    virtue: "The Prophet ﷺ said Allahu Akbar with the throw of each pebble. After stoning the small Jamarah and middle Jamarah, he moved aside, faced the qiblah, raised his hands, and made a long supplication. After the large Jamarah (Jamrat al-Aqabah) on Eid day he did not stop to supplicate, as it was time to move on to the sacrifice.",
   },
   {
     id: 'hajj-sacrifice',
@@ -785,7 +785,7 @@ export const DUAS: Dua[] = [
     source: 'Sunan Abi Dawud 2357, hasan; the Prophet ﷺ used to say this when breaking the fast',
     category: 'ramadan',
     occasion: 'Immediately after breaking the fast (traditionally with dates and water)',
-    virtue: "The Prophet ﷺ said: 'The fasting person has two joys: joy at his iftar and joy when he meets his Lord' (Bukhari 1904). Also: 'The dua of the fasting person at iftar is not rejected' (Ibn Majah 1753). The fast is broken then this dua is said; supplications are made just before.",
+    virtue: "The Prophet ﷺ said: 'The fasting person has two joys: joy at his iftar and joy when he meets his Lord' (Bukhari 1904). Also: 'The dua of the fasting person at iftar is not rejected' (Ibn Majah 1753). This dua is said after breaking the fast, while other supplications are made just before it.",
   },
   {
     id: 'ramadan-iftar-alternate',
@@ -807,7 +807,7 @@ export const DUAS: Dua[] = [
     source: 'Jami at-Tirmidhi 3513, Sunan Ibn Majah 3850, sahih',
     category: 'ramadan',
     occasion: 'The last ten nights of Ramadan, particularly the odd nights (21st, 23rd, 25th, 27th, 29th) which include Laylat al-Qadr',
-    virtue: "Aisha (ra) asked the Prophet ﷺ: 'O Messenger of Allah, if I know which night is Laylat al-Qadr, what should I say in it?' He replied: 'Say: Allahumma innaka 'Afuwwun Karim...' This is the ultimate dua for the night that is better than a thousand months (Quran 97:3).",
+    virtue: "Aisha (ra) asked the Prophet ﷺ: 'O Messenger of Allah, if I know which night is Laylat al-Qadr, what should I say in it?' He replied: 'Say: Allahumma innaka 'Afuwwun Karimun tuhibbul-'afwa fa'fu 'anni' (O Allah, You are the Pardoning, the Generous, You love pardon, so pardon me). Some narrations omit the word Karim (Tirmidhi 3513). This is the ultimate dua for the night that is better than a thousand months (Quran 97:3).",
   },
   {
     id: 'ramadan-taraweeh',
