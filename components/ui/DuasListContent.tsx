@@ -30,7 +30,7 @@ function normalise(s: string): string {
 
 export function DuasListContent() {
   const tc = useDuasText();
-  const { lang } = useLanguage();
+  const { lang, t: tUi } = useLanguage();
   const { ids: bookmarkIds } = useDuaBookmarks();
 
   const [query, setQuery] = useState('');
@@ -126,7 +126,7 @@ export function DuasListContent() {
               <button
                 type="button"
                 onClick={() => setQuery('')}
-                aria-label="Clear search"
+                aria-label={tUi('aria.clear_search')}
                 className="absolute right-3 top-1/2 -translate-y-1/2 w-6 h-6 rounded-full inline-flex items-center justify-center text-forest/70 hover:text-forest hover:bg-forest/5"
               >
                 <X className="w-3.5 h-3.5" aria-hidden="true" />

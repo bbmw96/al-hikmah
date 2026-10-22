@@ -11,7 +11,7 @@ import { QURAN_UI, SURAH_CONTENT, type QuranUiKey } from '@/lib/i18n/content/qur
 type Surah = (typeof SURAHS)[number];
 
 export function SurahDetailContent({ surah }: { surah: Surah }) {
-  const { lang } = useLanguage();
+  const { lang, t: tUi } = useLanguage();
   const tc = (k: QuranUiKey) => QURAN_UI[k][lang] || QURAN_UI[k].en;
   const sc = SURAH_CONTENT[surah.number];
   const surahName = (s: Surah) => SURAH_CONTENT[s.number]?.name?.[lang] || s.englishName;
@@ -160,7 +160,7 @@ export function SurahDetailContent({ surah }: { surah: Surah }) {
       {/* Navigation */}
       <nav
         className="flex items-center justify-between mt-12 pt-6 border-t border-gold/20"
-        aria-label="Surah navigation"
+        aria-label={tUi('aria.surah_nav')}
       >
         {prev ? (
           <Link

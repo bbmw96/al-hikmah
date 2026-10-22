@@ -63,7 +63,7 @@ export function HadithSearchBar({ collection }: { collection: string }) {
               type="button"
               onClick={clear}
               className="p-1 text-forest/30 hover:text-forest/60 transition-colors"
-              aria-label="Clear search"
+              aria-label={t('aria.clear_search')}
             >
               <X className="w-3.5 h-3.5" />
             </button>

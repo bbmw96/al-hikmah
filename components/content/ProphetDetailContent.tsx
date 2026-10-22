@@ -15,7 +15,7 @@ import { PROPHETS_CONTENT } from '@/lib/i18n/content/prophets-content';
 import type { ProphetsContentKey } from '@/lib/i18n/content/prophets-content';
 
 export function ProphetDetailContent({ slug }: { slug: string }) {
-  const { lang } = useLanguage();
+  const { lang, t: tUi } = useLanguage();
   const prophet = getProphetById(slug);
   if (!prophet) return null;
   const detail = getProphetDetail(slug);
@@ -254,7 +254,7 @@ export function ProphetDetailContent({ slug }: { slug: string }) {
       </div>
 
       {/* Navigation */}
-      <nav className="flex items-center justify-between mt-12 pt-6 border-t border-gold/20" aria-label="Prophet navigation">
+      <nav className="flex items-center justify-between mt-12 pt-6 border-t border-gold/20" aria-label={tUi('aria.prophet_nav')}>
         {prev ? (
           <Link
             href={`/prophets/${prev.id}`}

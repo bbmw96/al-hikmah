@@ -3,14 +3,16 @@
 import Link from 'next/link';
 import { BookOpen } from 'lucide-react';
 import { cn } from '@/lib/utils';
+import { useLanguage } from '@/lib/i18n/context';
 
 export function LogoMark({ className, size = 'md' }: { className?: string; size?: 'sm' | 'md' }) {
+  const { t } = useLanguage();
   const isSmall = size === 'sm';
   return (
     <Link
       href="/"
       className={cn('flex items-center gap-2.5 group', className)}
-      aria-label="Al-Hikmah, Home"
+      aria-label={t('aria.home')}
     >
       <div
         className={cn(

@@ -16,7 +16,7 @@ export function CTABanner() {
           dir="rtl"
           lang="ar"
           className="arabic-xl text-gold mb-6"
-          aria-label="Quran verse"
+          aria-label={t('aria.quran_verse')}
         >
           وَمَا أُوتِيتُم مِّنَ الْعِلْمِ إِلَّا قَلِيلًا
         </p>

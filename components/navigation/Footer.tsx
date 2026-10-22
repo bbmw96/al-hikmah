@@ -109,7 +109,7 @@ export function Footer() {
             dir="rtl"
             lang="ar"
             className="arabic-sm text-gold/70"
-            aria-label="And He taught you what you did not know"
+            aria-label={t('aria.motto')}
           >
             وَعَلَّمَكَ مَا لَمْ تَكُنْ تَعْلَمُ
           </p>

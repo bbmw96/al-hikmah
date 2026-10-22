@@ -22,7 +22,6 @@ export function ArabicText({ text, size = 'md', className, showBismillah }: Arab
           dir="rtl"
           lang="ar"
           className="arabic text-gold text-center opacity-80"
-          aria-label="Bismillah ir-Rahman ir-Raheem"
         >
           بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ
         </p>

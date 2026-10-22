@@ -120,7 +120,7 @@ export function HeroSection() {
           dir="rtl"
           lang="ar"
           className="arabic-xl text-gold mb-3 drop-shadow-[0_0_24px_rgba(201,168,76,0.4)]"
-          aria-label="Bismillah ir-Rahman ir-Raheem. In the name of Allah, the Most Gracious, the Most Merciful."
+          aria-label={t('aria.bismillah')}
           variants={scaleIn}
         >
           بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ

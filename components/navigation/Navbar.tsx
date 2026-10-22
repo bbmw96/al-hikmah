@@ -169,6 +169,7 @@ function LangSwitcher() {
 }
 
 export function Navbar() {
+  const { t } = useLanguage();
   const navItems = useNavItems();
   const [mobileOpen, setMobileOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
@@ -208,7 +209,7 @@ export function Navbar() {
           : 'bg-forest',
       )}
     >
-      <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" aria-label="Main navigation">
+      <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" aria-label={t('aria.main_nav')}>
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <LogoMark />
@@ -272,7 +273,7 @@ export function Navbar() {
             className="lg:hidden p-2 rounded-lg text-cream/80 hover:text-cream hover:bg-white/10 transition-colors"
             onClick={() => setMobileOpen(o => !o)}
             aria-expanded={mobileOpen}
-            aria-label={mobileOpen ? 'Close menu' : 'Open menu'}
+            aria-label={mobileOpen ? t('aria.menu_close') : t('aria.menu_open')}
           >
             {mobileOpen ? (
               <X className="w-6 h-6" aria-hidden="true" />

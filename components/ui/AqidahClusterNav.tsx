@@ -20,7 +20,7 @@ export function AqidahClusterNav() {
 
   return (
     <nav
-      aria-label="Aqidah cluster"
+      aria-label={t('aria.aqidah_nav')}
       className="max-w-4xl mx-auto px-6 pt-8"
     >
       <div className="flex flex-wrap items-center gap-2 justify-center">

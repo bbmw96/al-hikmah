@@ -164,7 +164,7 @@ export function HadithDetail({
       {/* Collection + number badge */}
       <div className="flex items-center gap-3 mb-6 flex-wrap">
         <span className="badge-forest text-xs">{collection.shortName}</span>
-        <span className="text-forest/70 text-sm">Hadith #{hadithNumber}</span>
+        <span className="text-forest/70 text-sm">{t('hadith.number').replace('{n}', String(hadithNumber))}</span>
         {grade && (
           <span className={cn(
             'text-xs px-2 py-0.5 rounded border font-medium',
@@ -263,7 +263,7 @@ export function HadithDetail({
       </div>
 
       {/* Navigation */}
-      <nav className="flex items-center justify-between mt-8" aria-label="Hadith navigation">
+      <nav className="flex items-center justify-between mt-8" aria-label={t('aria.hadith_nav')}>
         {hadithNumber > 1 ? (
           <Link
             href={hadithHref(collection.id, hadithNumber - 1)}
@@ -277,7 +277,7 @@ export function HadithDetail({
           href={`/hadith/${collection.id}`}
           className="text-sm text-forest/70 hover:text-forest transition-colors"
         >
-          All {collection.shortName}
+          {t('hadith.all_of').replace('{name}', collection.shortName)}
         </Link>
         <Link
           href={hadithHref(collection.id, hadithNumber + 1)}
